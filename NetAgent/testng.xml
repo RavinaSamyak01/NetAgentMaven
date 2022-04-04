@@ -1,0 +1,61 @@
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="NASuite">
+	<test thread-count="5" name="NASmoke">
+		<classes>
+			<class name="NetAgentSmoke.NetAgentProcess">
+				<methods>
+					<!--<include name="Login" /> -->
+
+					<!-- Home screens-->
+					<include name="ContactUs" />
+					<include name="AgentTSA" />
+					<include name="AgentRisk" />
+
+					<!-- Operations screens-->
+					<include name="OrderSearch" />
+					<include name="replenish" />
+					<include name="CycleCount" />
+					<include name="Courier" />
+
+					<!-- Inventory screens-->
+					<include name="parts" />
+					<include name="FSLStorage" />
+					<include name="FSLSetup" />
+					<include name="CycleCountBIN" />
+					<include name="PutAway" />
+					<include name="ASNLog" />
+
+					<!-- Reports screens-->
+					<include name="AgentActivityReport" />
+					<include name="AgentActivityChartReport" />
+					<include name="quarantineReport" />
+					<include name="AgentActivityDetailReport" />
+					<include name="ReceiptReport" />
+					<include name="PullReport" />
+					<include name="TransactionReport" />
+					<include name="OnHandReport" />
+
+
+					<!-- Admin screens-->
+					<include name="Userprofile" />
+					<include name="Userlist" />
+
+					<!-- Tools screens-->
+					<!--<include name="AgentConsole" />-->
+					<include name="MNXDoc" />
+					<include name="MileageCalc" />
+
+					<!-- Preference screens-->
+					<include name="UserPreference" />
+
+					<!--TaskLog-->
+					<include name="TaskLog" />
+					<include name="orderProcessing" />
+
+
+					<!--<include name="SendEmail" /> -->
+				</methods>
+			</class>
+		</classes>
+	</test> <!-- NASmoke -->
+</suite> <!-- NASuite -->
