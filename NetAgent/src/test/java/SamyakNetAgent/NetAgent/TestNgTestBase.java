@@ -12,6 +12,7 @@ import org.testng.annotations.BeforeSuite;
 
 import ru.stqa.selenium.factory.WebDriverPool;
 
+
 /**
  * Base class for TestNG-based test classes
  */

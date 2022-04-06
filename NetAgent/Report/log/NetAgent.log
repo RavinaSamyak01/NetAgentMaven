@@ -1,0 +1,137 @@
+2022-04-06 15:30:01,411 - Courier -INFO - initialization of the properties file is done
+2022-04-06 15:30:01,657 - io.github.bonigarcia.wdm.WebDriverManager -INFO - Using chromedriver 100.0.4896.60 (since Google Chrome 100 is installed in your machine)
+2022-04-06 15:30:01,672 - io.github.bonigarcia.wdm.WebDriverManager -INFO - Exporting webdriver.chrome.driver as C:\Users\rprajapati\.m2\repository\webdriver\chromedriver\win32\100.0.4896.60\chromedriver.exe
+2022-04-06 15:30:07,825 - Courier -INFO - Url opened
+2022-04-06 15:30:17,880 - Courier -INFO - =======Courier Test Start=======
+2022-04-06 15:30:18,122 - Courier -INFO - Clicked on Operations
+2022-04-06 15:30:18,246 - Courier -INFO - Clicked on Courier
+2022-04-06 15:30:20,169 - Courier -INFO - CourierID is==34769
+2022-04-06 15:30:20,171 - Courier -INFO - Status : Agent Id is right.
+2022-04-06 15:30:20,236 - Courier -INFO - Status : Agent Id is displayed.
+2022-04-06 15:30:20,263 - Courier -INFO - Status : Agent Id is Enabled.==FAIL
+2022-04-06 15:30:20,343 - Courier -INFO - Status : AgentCode is displayed.
+2022-04-06 15:30:20,372 - Courier -INFO - Status : AgentCode is Enabled.==FAIL
+2022-04-06 15:30:20,462 - Courier -INFO - Status : Vendor is displayed.
+2022-04-06 15:30:20,491 - Courier -INFO - Status : Vendor is Enabled.==FAIL
+2022-04-06 15:30:20,573 - Courier -INFO - Status : Name is displayed.
+2022-04-06 15:30:20,595 - Courier -INFO - Status : Name is Enabled.==FAIL
+2022-04-06 15:30:20,646 - Courier -INFO - Status : ValidFrom is displayed.
+2022-04-06 15:30:20,659 - Courier -INFO - Status : ValidFrom is Enabled.==FAIL
+2022-04-06 15:30:20,713 - Courier -INFO - Status : ValidTo is displayed.
+2022-04-06 15:30:20,732 - Courier -INFO - Status : ValidTo is Enabled.==FAIL
+2022-04-06 15:30:20,797 - Courier -INFO - Status : Country is displayed.
+2022-04-06 15:30:20,825 - Courier -INFO - Status : Country is Enabled.==FAIL
+2022-04-06 15:30:20,903 - Courier -INFO - Status : Zip is displayed.
+2022-04-06 15:30:20,930 - Courier -INFO - Status : Zip is Enabled.==FAIL
+2022-04-06 15:30:21,005 - Courier -INFO - Status : City is displayed.
+2022-04-06 15:30:21,031 - Courier -INFO - Status : City is Enabled.==FAIL
+2022-04-06 15:30:21,119 - Courier -INFO - Status : State is displayed.
+2022-04-06 15:30:21,144 - Courier -INFO - Status : State is Enabled.==FAIL
+2022-04-06 15:30:21,227 - Courier -INFO - Status : add1 is displayed.
+2022-04-06 15:30:21,247 - Courier -INFO - Status : add1 is Enabled.==FAIL
+2022-04-06 15:30:21,301 - Courier -INFO - Status : Dept is displayed.
+2022-04-06 15:30:21,321 - Courier -INFO - Status : Dept is Enabled.==FAIL
+2022-04-06 15:30:21,396 - Courier -INFO - Status : Phone is displayed.
+2022-04-06 15:30:21,424 - Courier -INFO - Status : Phone is Enabled.==FAIL
+2022-04-06 15:30:21,499 - Courier -INFO - Status : PhoneExt is displayed.
+2022-04-06 15:30:21,529 - Courier -INFO - Status : PhoneExt is Enabled.==FAIL
+2022-04-06 15:30:21,613 - Courier -INFO - Status : Fax is displayed.
+2022-04-06 15:30:21,639 - Courier -INFO - Status : Fax is Enabled.==FAIL
+2022-04-06 15:30:21,708 - Courier -INFO - Status : Email is displayed.
+2022-04-06 15:30:21,732 - Courier -INFO - Status : Email is Enabled.==FAIL
+2022-04-06 15:30:21,802 - Courier -INFO - Status : AfterFname is displayed.
+2022-04-06 15:30:21,828 - Courier -INFO - Status : AfterFname is Enabled.==FAIL
+2022-04-06 15:30:21,905 - Courier -INFO - Status : AfterLname is displayed.
+2022-04-06 15:30:21,932 - Courier -INFO - Status : AfterLname is Enabled.==FAIL
+2022-04-06 15:30:22,003 - Courier -INFO - Status : AfterPhone is displayed.
+2022-04-06 15:30:22,029 - Courier -INFO - Status : AfterPhone is Enabled.==FAIL
+2022-04-06 15:30:22,100 - Courier -INFO - Status : AfterPhoneExt is displayed.
+2022-04-06 15:30:22,124 - Courier -INFO - Status : AfterPhoneExt is Enabled.==FAIL
+2022-04-06 15:30:22,198 - Courier -INFO - Status : EmrgFname is displayed.
+2022-04-06 15:30:22,225 - Courier -INFO - Status : EmrgFname is Enabled.==FAIL
+2022-04-06 15:30:22,298 - Courier -INFO - Status : EmrgLname is displayed.
+2022-04-06 15:30:22,322 - Courier -INFO - Status : EmrgLname is Enabled.==FAIL
+2022-04-06 15:30:22,395 - Courier -INFO - Status : EmrgPhone is displayed.
+2022-04-06 15:30:22,420 - Courier -INFO - Status : EmrgPhone is Enabled.==FAIL
+2022-04-06 15:30:22,492 - Courier -INFO - Status : EmrgPhoneExt is displayed.
+2022-04-06 15:30:22,516 - Courier -INFO - Status : EmrgPhoneExt is Enabled.==FAIL
+2022-04-06 15:30:22,587 - Courier -INFO - Status : APAcct1 is displayed.
+2022-04-06 15:30:22,614 - Courier -INFO - Status : APAcct1 is Enabled.==FAIL
+2022-04-06 15:30:22,690 - Courier -INFO - Status : APAcct2 is displayed.
+2022-04-06 15:30:22,715 - Courier -INFO - Status : APAcct2 is Enabled.==FAIL
+2022-04-06 15:30:22,780 - Courier -INFO - Status : CashAcct1 is displayed.
+2022-04-06 15:30:22,796 - Courier -INFO - Status : CashAcct1 is Enabled.==FAIL
+2022-04-06 15:30:22,854 - Courier -INFO - Status : CashAcct2 is displayed.
+2022-04-06 15:30:22,874 - Courier -INFO - Status : CashAcct2 is Enabled.==FAIL
+2022-04-06 15:30:22,925 - Courier -INFO - Status : ExpAcct1 is displayed.
+2022-04-06 15:30:22,941 - Courier -INFO - Status : ExpAcct1 is Enabled.==FAIL
+2022-04-06 15:30:22,990 - Courier -INFO - Status : ExpAcct2 is displayed.
+2022-04-06 15:30:23,008 - Courier -INFO - Status : ExpAcct2 is Enabled.==FAIL
+2022-04-06 15:30:23,076 - Courier -INFO - Status : Type is displayed.
+2022-04-06 15:30:23,095 - Courier -INFO - Status : Type is Enabled.==FAIL
+2022-04-06 15:30:23,146 - Courier -INFO - Status : BillingPOC is displayed.
+2022-04-06 15:30:23,163 - Courier -INFO - Status : BillingPOC is Enabled.==FAIL
+2022-04-06 15:30:23,214 - Courier -INFO - Status : OperationsPOC is displayed.
+2022-04-06 15:30:23,231 - Courier -INFO - Status : OperationsPOC is Enabled.==FAIL
+2022-04-06 15:30:23,291 - Courier -INFO - Status : MangPOC is displayed.
+2022-04-06 15:30:23,313 - Courier -INFO - Status : MangPOC is Enabled.==FAIL
+2022-04-06 15:30:23,377 - Courier -INFO - Status : CompPOC is displayed.
+2022-04-06 15:30:23,400 - Courier -INFO - Status : CompPOC is Enabled.==FAIL
+2022-04-06 15:30:23,467 - Courier -INFO - Status : DrvReq is displayed.
+2022-04-06 15:30:23,490 - Courier -INFO - Status : DrvReq is Disabled.==PASS
+2022-04-06 15:30:23,552 - Courier -INFO - Status : AlertType is displayed.
+2022-04-06 15:30:23,569 - Courier -INFO - Status : AlertType is Enabled.==FAIL
+2022-04-06 15:30:23,617 - Courier -INFO - Status : ReceivedOn1 is displayed.
+2022-04-06 15:30:23,635 - Courier -INFO - Status : ReceivedOn1 is Enabled.==FAIL
+2022-04-06 15:30:23,685 - Courier -INFO - Status : ReceivedOn2 is displayed.
+2022-04-06 15:30:23,704 - Courier -INFO - Status : ReceivedOn2 is Enabled.==FAIL
+2022-04-06 15:30:23,754 - Courier -INFO - Status : GenLiab is displayed.
+2022-04-06 15:30:23,772 - Courier -INFO - Status : GenLiab is Enabled.==FAIL
+2022-04-06 15:30:23,825 - Courier -INFO - Status : Auto is displayed.
+2022-04-06 15:30:23,842 - Courier -INFO - Status : Auto is Enabled.==FAIL
+2022-04-06 15:30:23,895 - Courier -INFO - Status : WareHouse is displayed.
+2022-04-06 15:30:23,917 - Courier -INFO - Status : WareHouse is Enabled.==FAIL
+2022-04-06 15:30:23,977 - Courier -INFO - Status : Cargo is displayed.
+2022-04-06 15:30:24,003 - Courier -INFO - Status : Cargo is Enabled.==FAIL
+2022-04-06 15:30:24,070 - Courier -INFO - Status : WorkerCo is displayed.
+2022-04-06 15:30:24,093 - Courier -INFO - Status : WorkerCo is Enabled.==FAIL
+2022-04-06 15:30:24,159 - Courier -INFO - Status : ReceivedOn3 is displayed.
+2022-04-06 15:30:24,181 - Courier -INFO - Status : ReceivedOn3 is Enabled.==FAIL
+2022-04-06 15:30:24,247 - Courier -INFO - Status : ReceivedOn4 is displayed.
+2022-04-06 15:30:24,273 - Courier -INFO - Status : ReceivedOn4 is Enabled.==FAIL
+2022-04-06 15:30:24,348 - Courier -INFO - Status : AftHrStrt is displayed.
+2022-04-06 15:30:24,373 - Courier -INFO - Status : AftHrStrt is Enabled.==FAIL
+2022-04-06 15:30:24,438 - Courier -INFO - Status : AftHrEnd is displayed.
+2022-04-06 15:30:24,458 - Courier -INFO - Status : AftHrEnd is Enabled.==FAIL
+2022-04-06 15:30:24,521 - Courier -INFO - Status : RecSerAgr is displayed.
+2022-04-06 15:30:24,541 - Courier -INFO - Status : RecSerAgr is Disabled.==PASS
+2022-04-06 15:30:24,608 - Courier -INFO - Status : Rec9 is displayed.
+2022-04-06 15:30:24,629 - Courier -INFO - Status : Rec9 is Disabled.==PASS
+2022-04-06 15:30:24,694 - Courier -INFO - Status : RecPrfIns is displayed.
+2022-04-06 15:30:24,715 - Courier -INFO - Status : RecPrfIns is Disabled.==PASS
+2022-04-06 15:30:24,778 - Courier -INFO - Status : RecTSARos is displayed.
+2022-04-06 15:30:24,802 - Courier -INFO - Status : RecTSARos is Disabled.==PASS
+2022-04-06 15:30:24,863 - Courier -INFO - Status : RecTSAAck is displayed.
+2022-04-06 15:30:24,886 - Courier -INFO - Status : RecTSAAck is Disabled.==PASS
+2022-04-06 15:30:24,949 - Courier -INFO - Status : Note is displayed.
+2022-04-06 15:30:24,971 - Courier -INFO - Status : Note is Enabled.==FAIL
+2022-04-06 15:30:25,033 - Courier -INFO - Status : CompType is displayed.
+2022-04-06 15:30:25,057 - Courier -INFO - Status : CompType is Enabled.==FAIL
+2022-04-06 15:30:25,126 - Courier -INFO - Status : ShipLableKey is displayed.
+2022-04-06 15:30:25,149 - Courier -INFO - Status : ShipLableKey is Enabled.==FAIL
+2022-04-06 15:30:25,215 - Courier -INFO - Status : FDXTSA is displayed.
+2022-04-06 15:30:25,236 - Courier -INFO - Status : FDXTSA is Disabled.==PASS
+2022-04-06 15:30:25,293 - Courier -INFO - Status : TSACert is displayed.
+2022-04-06 15:30:25,316 - Courier -INFO - Status : TSACert is Disabled.==PASS
+2022-04-06 15:30:25,384 - Courier -INFO - Status : HAZCert is displayed.
+2022-04-06 15:30:25,408 - Courier -INFO - Status : HAZCert is Disabled.==PASS
+2022-04-06 15:30:25,472 - Courier -INFO - Status : CCFS is displayed.
+2022-04-06 15:30:25,495 - Courier -INFO - Status : CCFS is Disabled.==PASS
+2022-04-06 15:30:25,558 - Courier -INFO - Status : Elev is displayed.
+2022-04-06 15:30:25,582 - Courier -INFO - Status : Elev is Disabled.==PASS
+2022-04-06 15:30:25,646 - Courier -INFO - Status : PC is displayed.
+2022-04-06 15:30:25,667 - Courier -INFO - Status : PC is Disabled.==PASS
+2022-04-06 15:30:26,284 - Courier -INFO - Clicked on MNX Logo
+2022-04-06 15:30:26,946 - Courier -INFO - =======Courier Test End=======
+2022-04-06 15:30:27,379 - Courier -INFO - Clicked on LogOut
+2022-04-06 15:30:31,117 - Courier -INFO - ====Sending Email=====

@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite parallel="none" name="Failed suite [NetAgentSmokeTest]">
+  <test parallel="none" name="AgentTSATraining(failed)">
+    <classes>
+      <class name="netAgent_LogOutDiv.ContactUS">
+        <methods>
+          <include name="getResult"/>
+          <include name="testMethodName"/>
+          <include name="Login"/>
+        </methods>
+      </class> <!-- netAgent_LogOutDiv.ContactUS -->
+      <class name="netAgent_LogOutDiv.AgentElevatesRiskTraining">
+        <methods>
+          <include name="beforeMethod"/>
+          <include name="Login"/>
+        </methods>
+      </class> <!-- netAgent_LogOutDiv.AgentElevatesRiskTraining -->
+      <class name="netAgent_LogOutDiv.AgentTSATraining">
+        <methods>
+          <include name="Login"/>
+          <include name="AgentTSA"/>
+        </methods>
+      </class> <!-- netAgent_LogOutDiv.AgentTSATraining -->
+    </classes>
+  </test> <!-- AgentTSATraining(failed) -->
+  <test parallel="none" name="AgentElevatedTraining(failed)">
+    <classes>
+      <class name="netAgent_LogOutDiv.ContactUS">
+        <methods>
+          <include name="getResult"/>
+          <include name="testMethodName"/>
+          <include name="Login"/>
+        </methods>
+      </class> <!-- netAgent_LogOutDiv.ContactUS -->
+      <class name="netAgent_LogOutDiv.AgentElevatesRiskTraining">
+        <methods>
+          <include name="beforeMethod"/>
+          <include name="AgentRisk"/>
+          <include name="Login"/>
+        </methods>
+      </class> <!-- netAgent_LogOutDiv.AgentElevatesRiskTraining -->
+      <class name="netAgent_LogOutDiv.AgentTSATraining">
+        <methods>
+          <include name="Login"/>
+        </methods>
+      </class> <!-- netAgent_LogOutDiv.AgentTSATraining -->
+    </classes>
+  </test> <!-- AgentElevatedTraining(failed) -->
+</suite> <!-- Failed suite [NetAgentSmokeTest] -->
