@@ -14,41 +14,87 @@ public class FSLStorage extends BaseInit {
 	public void fSLStorage() throws Exception {
 		WebDriverWait wait = new WebDriverWait(Driver, 50);
 
+		logger.info("=======FSL Storage Test Start=======");
+		msg.append("=======FSL Storage Test Start=======" + "\n\n");
+
 		// --Click on Inventory
 		wait.until(ExpectedConditions.elementToBeClickable(By.id("idInventory")));
 		Driver.findElement(By.id("idInventory")).click();
+		logger.info("Clicked on Inventory");
 		wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//*[@aria-labelledby=\"idInventory\"]")));
 
 		// --Click on FSL Storage
 		wait.until(ExpectedConditions.elementToBeClickable(By.id("idFSLStorage")));
 		Driver.findElement(By.id("idFSLStorage")).click();
+		logger.info("Clicked on FSL Storage");
 		wait.until(ExpectedConditions.invisibilityOfElementLocated(By.xpath("//*[@class=\"ajax-loadernew\"]")));
 		System.out.println(Driver.getTitle());
+		logger.info("Title of the Screen is==" + Driver.getTitle());
+
+		WebElement Nodata = Driver.findElement(By.className("dx-datagrid-nodata"));
+		if (Nodata.isDisplayed()) {
+			logger.info("There is no data with selected Month and year");
+
+		} else {
+			logger.info("Data is/are exist with selected Month and year");
+
+		}
+
+		getScreenshot(Driver, "FSLStorage");
 
 		// --Month dropdown
 		Select monthname = new Select(Driver.findElement(By.id("ddlmonth")));
 		String selectedComboValue = monthname.getFirstSelectedOption().getText();
 		System.out.println("Default Current Month Displayed in Combo : " + selectedComboValue);
+		logger.info("Default Current Month Displayed in Combo : " + selectedComboValue);
+
+		/*
+		 * // Get current month Date date = new Date(); SimpleDateFormat formatter = new
+		 * SimpleDateFormat("MMMMMMMMM"); String CurrentMonth = formatter.format(date);
+		 */
 
 		WebElement month = Driver.findElement(By.id("ddlmonth"));
 		Select opt = new Select(month);
-		opt.selectByVisibleText("August");
+		opt.selectByVisibleText("February");
+		logger.info("Selected Month");
 		Driver.findElement(By.id("idSearchFsl")).click();
+		logger.info("Clicked on Search button");
 		wait.until(ExpectedConditions.invisibilityOfElementLocated(By.xpath("//*[@class=\"ajax-loadernew\"]")));
 
+		Nodata = Driver.findElement(By.className("dx-datagrid-nodata"));
+		if (Nodata.isDisplayed()) {
+			logger.info("There is no data with selected Month and year");
+
+		} else {
+			logger.info("Data is/are exist with selected Month and year");
+
+		}
 		// Year dropdown
 		Select yrname = new Select(Driver.findElement(By.id("ddlyear")));
 		String selectedComboValue1 = yrname.getFirstSelectedOption().getText();
 		System.out.println("Default Current Year Displayed in Combo : " + selectedComboValue1);
+		logger.info("Default Current Year Displayed in Combo : " + selectedComboValue1);
 
 		getScreenshot(Driver, "FSLStorage");
 
+		// --Current Year
+		/* String thisYear = new SimpleDateFormat("yyyy").format(new Date()); */
+
 		WebElement year = Driver.findElement(By.id("ddlyear"));
 		Select opt1 = new Select(year);
-		opt1.selectByVisibleText("2019");
+		opt1.selectByVisibleText("2022");
+		logger.info("Selected Year");
 		Driver.findElement(By.id("idSearchFsl")).click();
+		logger.info("Clicked on Search button");
 		wait.until(ExpectedConditions.invisibilityOfElementLocated(By.xpath("//*[@class=\"ajax-loadernew\"]")));
+		Nodata = Driver.findElement(By.className("dx-datagrid-nodata"));
+		if (Nodata.isDisplayed()) {
+			logger.info("There is no data with selected Month and year");
 
+		} else {
+			logger.info("Data is/are exist with selected Month and year");
+
+		}
 		// --nothing to edit and save in the screen
 		/*
 		 * Driver.findElement(By.xpath(
@@ -65,11 +111,11 @@ public class FSLStorage extends BaseInit {
 		 * Driver.findElement(By.id("success")).getText(); Thread.sleep(5000);
 		 */
 
-		getScreenshot(Driver, "FSLStorage");
-
 		Driver.findElement(By.id("imgNGLLogo")).click();
+		logger.info("Clicked on MNX Logo");
 		wait.until(ExpectedConditions.invisibilityOfElementLocated(By.xpath("//*[@class=\"ajax-loadernew\"]")));
 		wait.until(ExpectedConditions.visibilityOfAllElementsLocatedBy(By.className("welcomecontent")));
-
+		logger.info("=======FSL Storage Test End=======");
+		msg.append("=======FSL Storage Test End=======" + "\n\n");
 	}
 }

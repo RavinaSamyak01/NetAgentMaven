@@ -17,21 +17,28 @@ public class AgentActivity extends BaseInit {
 	@Test
 	public void AgentActivityReport() throws Exception {
 		WebDriverWait wait = new WebDriverWait(Driver, 50);
+		logger.info("=======Agent Activity Report Test Start=======");
+		msg.append("=======Agent Activity Report Test Start=======" + "\n\n");
 
 		wait.until(ExpectedConditions.elementToBeClickable(By.id("idReports")));
 		Driver.findElement(By.id("idReports")).click();
+		logger.info("Clicked on Reports");
 
 		wait.until(ExpectedConditions.elementToBeClickable(By.id("idAgent")));
 		Driver.findElement(By.id("idAgent")).click();
+		logger.info("Clicked on Agent Activity");
 		wait.until(ExpectedConditions.invisibilityOfElementLocated(By.xpath("//*[@class=\"ajax-loadernew\"]")));
 
 		// select all agent
 		Driver.findElement(By.id("btn_ddlCourierclass=")).click();
+		logger.info("Clicked on Courier dropdown");
 		//// button[contains(.,'Select')]
 		Thread.sleep(2000);
 		// --selected all courier
 		Driver.findElement(By.id("chkAllddlCourier")).click();
+		logger.info("Select all");
 		Driver.findElement(By.id("btn_ddlCourierclass=")).click();
+		logger.info("Close Courier dropdown");
 
 		// from date
 		DateFormat dateFormatAgAcRp = new SimpleDateFormat("MM/dd/yyyy");
@@ -40,7 +47,9 @@ public class AgentActivity extends BaseInit {
 		String FromDateAgAcRp = dateFormatAgAcRp.format(frmdt1AgAcRp);
 
 		Driver.findElement(By.id("txtValidFrom")).clear();
+		logger.info("Cleared Valid From");
 		Driver.findElement(By.id("txtValidFrom")).sendKeys(FromDateAgAcRp);
+		logger.info("Enter Valid From");
 		WebElement AgAcRpfdate = Driver.findElement(By.id("txtValidFrom"));
 		AgAcRpfdate.sendKeys(Keys.TAB);
 
@@ -49,18 +58,22 @@ public class AgentActivity extends BaseInit {
 		String ToDateAgAcRp = dateFormatAgAcRp.format(todtAgAcRp);
 
 		Driver.findElement(By.id("txtValidTo")).clear();
+		logger.info("Cleared Valid To");
 		Driver.findElement(By.id("txtValidTo")).sendKeys(ToDateAgAcRp);
+		logger.info("Cleared Valid To");
 		WebElement AgAcRptdate = Driver.findElement(By.id("txtValidTo"));
 		AgAcRptdate.sendKeys(Keys.TAB);
 
 		// click on view report
 		Driver.findElement(By.id("btnView")).click();
+		logger.info("Click on View button");
 		wait.until(ExpectedConditions.invisibilityOfElementLocated(By.xpath("//*[@class=\"ajax-loadernew\"]")));
 
 		// --wait to get the notification message
 		wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//label[@id=\"idwait\"]")));
 		String WaitMsg = Driver.findElement(By.xpath("//label[@id=\"idwait\"]")).getText();
 		System.out.println("Wait Message is==" + WaitMsg);
+		logger.info("Wait Message is==" + WaitMsg);
 
 		wait.until(ExpectedConditions.invisibilityOfElementLocated(By.xpath("//label[@id=\"idwait\"]")));
 
@@ -73,8 +86,11 @@ public class AgentActivity extends BaseInit {
 		getScreenshot(Driver, "AgentActivityReport");
 
 		Driver.findElement(By.id("imgNGLLogo")).click();
+		logger.info("Click on MNX Logo");
 		wait.until(ExpectedConditions.invisibilityOfElementLocated(By.xpath("//*[@class=\"ajax-loadernew\"]")));
 		wait.until(ExpectedConditions.visibilityOfAllElementsLocatedBy(By.className("welcomecontent")));
+		logger.info("=======Agent Activity Report Test End=======");
+		msg.append("=======Agent Activity Report Test End=======" + "\n\n");
 	}
 
 }

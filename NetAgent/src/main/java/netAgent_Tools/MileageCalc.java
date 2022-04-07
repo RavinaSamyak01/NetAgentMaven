@@ -1,12 +1,5 @@
 package netAgent_Tools;
 
-import java.io.File;
-import java.io.FileInputStream;
-
-import org.apache.poi.ss.usermodel.DataFormatter;
-import org.apache.poi.ss.usermodel.Sheet;
-import org.apache.poi.ss.usermodel.Workbook;
-import org.apache.poi.ss.usermodel.WorkbookFactory;
 import org.openqa.selenium.By;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
@@ -19,11 +12,16 @@ public class MileageCalc extends BaseInit {
 	public void mileageCalc() throws Exception {
 		WebDriverWait wait = new WebDriverWait(Driver, 50);
 
+		logger.info("=======Mileage Calculation Test Start=======");
+		msg.append("======Mileage Calculation Test Start=======" + "\n\n");
+
 		wait.until(ExpectedConditions.elementToBeClickable(By.partialLinkText("Tools")));
 		Driver.findElement(By.partialLinkText("Tools")).click();
+		logger.info("Click on Tools");
 
 		wait.until(ExpectedConditions.elementToBeClickable(By.linkText("MileageCalc")));
 		Driver.findElement(By.linkText("MileageCalc")).click();
+		logger.info("Click on MileageCalc");
 		wait.until(ExpectedConditions.invisibilityOfElementLocated(By.xpath("//*[@class=\"ajax-loadernew\"]")));
 		System.out.println("Title of the screen is==" + Driver.getTitle());
 
@@ -34,70 +32,80 @@ public class MileageCalc extends BaseInit {
 		// Search with Pickup
 
 		Driver.findElement(By.id("txtpickupid")).clear();
+		logger.info("Cleared PickupID");
 		Driver.findElement(By.id("txtpickupid")).sendKeys("1234567");
+		logger.info("Entered PickupID");
 
 		Driver.findElement(By.id("btngetdetails")).click();
+		logger.info("Click on GetDetails button");
 		wait.until(ExpectedConditions.invisibilityOfElementLocated(By.xpath("//*[@class=\"ajax-loadernew\"]")));
 
-		String RNF = Driver.findElement(By.id("errorid")).getText();
-		System.out.println("RNF : " + RNF);
+		String NoData = Driver.findElement(By.id("errorid")).getText();
+		System.out.println("Records::" + NoData);
+		logger.info("Records::" + NoData);
 
 		String CalMsg = Driver.findElement(By.xpath("//label/strong")).getText();
-		/// html/body/div[2]/section/div[2]/div/div/div[2]/div[1]/form/div[2]/div/div[3]/div/div/label/strong
+		logger.info("Message==" + CalMsg);
 
 		// Reset
 		Driver.findElement(By.id("btnReset")).click();
+		logger.info("Click on Reset button");
 		wait.until(ExpectedConditions.invisibilityOfElementLocated(By.xpath("//*[@class=\"ajax-loadernew\"]")));
 
 		// Search with JobId
 		Driver.findElement(By.id("txtJobid")).clear();
+		logger.info("Clear JobID");
 		Driver.findElement(By.id("txtJobid")).sendKeys(JobId);
+		logger.info("Entered JobID");
 
 		Driver.findElement(By.id("btngetdetails")).click();
+		logger.info("Click on GetDetails button");
 		wait.until(ExpectedConditions.invisibilityOfElementLocated(By.xpath("//*[@class=\"ajax-loadernew\"]")));
 
-		String CalMsg2 = Driver.findElement(By.xpath("//label/strong")).getText();
+		CalMsg = Driver.findElement(By.xpath("//label/strong")).getText();
+		logger.info("Message==" + CalMsg);
 
 		Driver.findElement(By.id("btnReset")).click();
+		logger.info("Click on Reset button");
 		wait.until(ExpectedConditions.invisibilityOfElementLocated(By.xpath("//*[@class=\"ajax-loadernew\"]")));
 
-		String RNF2 = Driver.findElement(By.id("errorid")).getText();
-		System.out.println("RNF2 : " + RNF2);
+		NoData = Driver.findElement(By.id("errorid")).getText();
+		System.out.println("Records::" + NoData);
+		logger.info("Records::" + NoData);
 
 		Driver.findElement(By.id("txtpickupid")).clear();
+		logger.info("Clear PickUpID");
 		Driver.findElement(By.id("txtpickupid")).sendKeys(PUId);
+		logger.info("Enter PickUpID");
 
 		Driver.findElement(By.id("btngetdetails")).click();
+		logger.info("Click on GetDetails button");
 		wait.until(ExpectedConditions.invisibilityOfElementLocated(By.xpath("//*[@class=\"ajax-loadernew\"]")));
 
 		String act = Driver.findElement(By.xpath("//label/strong/span")).getText();
 		System.out.println(act);
+		logger.info("Message==" + act);
 
-		File src0 = new File(".\\NA_DEV.xls");
-		FileInputStream fis0 = new FileInputStream(src0);
-		Workbook workbook = WorkbookFactory.create(fis0);
-		Sheet sh0 = workbook.getSheet("Sheet1");
-		// int rcount = sh0.getLastRowNum();
-
-		DataFormatter formatter = new DataFormatter();
-
-		String Exp = formatter.formatCellValue(sh0.getRow(2).getCell(21));
+		String Exp = getData("Sheet1", 2, 21);
 
 		if (act.contains(Exp)) {
 			System.out.println("Miles Comparison is PASS");
+			logger.info("Miles Comparison is PASS");
 		}
 
 		else {
 			System.out.println("Miles Comparison is FAIL");
+			logger.info("Miles Comparison is FAIL");
 		}
 
 		// Click on Calculate
 		// Driver.findElement(By.id("btCalculate")).click();
 		// Thread.sleep(10000);
 		System.out.println("Mileage Calculation : " + CalMsg);
-		System.out.println("Mileage Calculation : " + CalMsg2);
-		// Click on Get Direction
+		logger.info("Mileage Calculation : " + CalMsg);
+// Click on Get Direction
 		Driver.findElement(By.id("btnDirection")).click();
+		logger.info("Click on Direction");
 		wait.until(ExpectedConditions.invisibilityOfElementLocated(By.xpath("//*[@class=\"ajax-loadernew\"]")));
 
 		boolean mapcheck = Driver.findElement(By.xpath(".//*[@id='mapLoad']")).isDisplayed();
@@ -112,17 +120,24 @@ public class MileageCalc extends BaseInit {
 
 		// Expand and Collapse Note
 		Driver.findElement(By.id("imgData")).click();
+		logger.info("Expand Note");
 		Thread.sleep(2000);
 
 		Driver.findElement(By.id("imgData")).click();
+		logger.info("Collapse Note");
 
 		// Reset
 		Driver.findElement(By.id("btnReset")).click();
+		logger.info("Click on Reset button");
 		wait.until(ExpectedConditions.invisibilityOfElementLocated(By.xpath("//*[@class=\"ajax-loadernew\"]")));
 
 		Driver.findElement(By.id("imgNGLLogo")).click();
+		logger.info("Click on MNX Logo");
 		wait.until(ExpectedConditions.invisibilityOfElementLocated(By.xpath("//*[@class=\"ajax-loadernew\"]")));
 		wait.until(ExpectedConditions.visibilityOfAllElementsLocatedBy(By.className("welcomecontent")));
+
+		logger.info("=======Mileage Calculation Test End=======");
+		msg.append("======Mileage Calculation Test End=======" + "\n\n");
 
 	}
 

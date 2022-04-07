@@ -1,137 +1,98 @@
-2022-04-06 15:30:01,411 - Courier -INFO - initialization of the properties file is done
-2022-04-06 15:30:01,657 - io.github.bonigarcia.wdm.WebDriverManager -INFO - Using chromedriver 100.0.4896.60 (since Google Chrome 100 is installed in your machine)
-2022-04-06 15:30:01,672 - io.github.bonigarcia.wdm.WebDriverManager -INFO - Exporting webdriver.chrome.driver as C:\Users\rprajapati\.m2\repository\webdriver\chromedriver\win32\100.0.4896.60\chromedriver.exe
-2022-04-06 15:30:07,825 - Courier -INFO - Url opened
-2022-04-06 15:30:17,880 - Courier -INFO - =======Courier Test Start=======
-2022-04-06 15:30:18,122 - Courier -INFO - Clicked on Operations
-2022-04-06 15:30:18,246 - Courier -INFO - Clicked on Courier
-2022-04-06 15:30:20,169 - Courier -INFO - CourierID is==34769
-2022-04-06 15:30:20,171 - Courier -INFO - Status : Agent Id is right.
-2022-04-06 15:30:20,236 - Courier -INFO - Status : Agent Id is displayed.
-2022-04-06 15:30:20,263 - Courier -INFO - Status : Agent Id is Enabled.==FAIL
-2022-04-06 15:30:20,343 - Courier -INFO - Status : AgentCode is displayed.
-2022-04-06 15:30:20,372 - Courier -INFO - Status : AgentCode is Enabled.==FAIL
-2022-04-06 15:30:20,462 - Courier -INFO - Status : Vendor is displayed.
-2022-04-06 15:30:20,491 - Courier -INFO - Status : Vendor is Enabled.==FAIL
-2022-04-06 15:30:20,573 - Courier -INFO - Status : Name is displayed.
-2022-04-06 15:30:20,595 - Courier -INFO - Status : Name is Enabled.==FAIL
-2022-04-06 15:30:20,646 - Courier -INFO - Status : ValidFrom is displayed.
-2022-04-06 15:30:20,659 - Courier -INFO - Status : ValidFrom is Enabled.==FAIL
-2022-04-06 15:30:20,713 - Courier -INFO - Status : ValidTo is displayed.
-2022-04-06 15:30:20,732 - Courier -INFO - Status : ValidTo is Enabled.==FAIL
-2022-04-06 15:30:20,797 - Courier -INFO - Status : Country is displayed.
-2022-04-06 15:30:20,825 - Courier -INFO - Status : Country is Enabled.==FAIL
-2022-04-06 15:30:20,903 - Courier -INFO - Status : Zip is displayed.
-2022-04-06 15:30:20,930 - Courier -INFO - Status : Zip is Enabled.==FAIL
-2022-04-06 15:30:21,005 - Courier -INFO - Status : City is displayed.
-2022-04-06 15:30:21,031 - Courier -INFO - Status : City is Enabled.==FAIL
-2022-04-06 15:30:21,119 - Courier -INFO - Status : State is displayed.
-2022-04-06 15:30:21,144 - Courier -INFO - Status : State is Enabled.==FAIL
-2022-04-06 15:30:21,227 - Courier -INFO - Status : add1 is displayed.
-2022-04-06 15:30:21,247 - Courier -INFO - Status : add1 is Enabled.==FAIL
-2022-04-06 15:30:21,301 - Courier -INFO - Status : Dept is displayed.
-2022-04-06 15:30:21,321 - Courier -INFO - Status : Dept is Enabled.==FAIL
-2022-04-06 15:30:21,396 - Courier -INFO - Status : Phone is displayed.
-2022-04-06 15:30:21,424 - Courier -INFO - Status : Phone is Enabled.==FAIL
-2022-04-06 15:30:21,499 - Courier -INFO - Status : PhoneExt is displayed.
-2022-04-06 15:30:21,529 - Courier -INFO - Status : PhoneExt is Enabled.==FAIL
-2022-04-06 15:30:21,613 - Courier -INFO - Status : Fax is displayed.
-2022-04-06 15:30:21,639 - Courier -INFO - Status : Fax is Enabled.==FAIL
-2022-04-06 15:30:21,708 - Courier -INFO - Status : Email is displayed.
-2022-04-06 15:30:21,732 - Courier -INFO - Status : Email is Enabled.==FAIL
-2022-04-06 15:30:21,802 - Courier -INFO - Status : AfterFname is displayed.
-2022-04-06 15:30:21,828 - Courier -INFO - Status : AfterFname is Enabled.==FAIL
-2022-04-06 15:30:21,905 - Courier -INFO - Status : AfterLname is displayed.
-2022-04-06 15:30:21,932 - Courier -INFO - Status : AfterLname is Enabled.==FAIL
-2022-04-06 15:30:22,003 - Courier -INFO - Status : AfterPhone is displayed.
-2022-04-06 15:30:22,029 - Courier -INFO - Status : AfterPhone is Enabled.==FAIL
-2022-04-06 15:30:22,100 - Courier -INFO - Status : AfterPhoneExt is displayed.
-2022-04-06 15:30:22,124 - Courier -INFO - Status : AfterPhoneExt is Enabled.==FAIL
-2022-04-06 15:30:22,198 - Courier -INFO - Status : EmrgFname is displayed.
-2022-04-06 15:30:22,225 - Courier -INFO - Status : EmrgFname is Enabled.==FAIL
-2022-04-06 15:30:22,298 - Courier -INFO - Status : EmrgLname is displayed.
-2022-04-06 15:30:22,322 - Courier -INFO - Status : EmrgLname is Enabled.==FAIL
-2022-04-06 15:30:22,395 - Courier -INFO - Status : EmrgPhone is displayed.
-2022-04-06 15:30:22,420 - Courier -INFO - Status : EmrgPhone is Enabled.==FAIL
-2022-04-06 15:30:22,492 - Courier -INFO - Status : EmrgPhoneExt is displayed.
-2022-04-06 15:30:22,516 - Courier -INFO - Status : EmrgPhoneExt is Enabled.==FAIL
-2022-04-06 15:30:22,587 - Courier -INFO - Status : APAcct1 is displayed.
-2022-04-06 15:30:22,614 - Courier -INFO - Status : APAcct1 is Enabled.==FAIL
-2022-04-06 15:30:22,690 - Courier -INFO - Status : APAcct2 is displayed.
-2022-04-06 15:30:22,715 - Courier -INFO - Status : APAcct2 is Enabled.==FAIL
-2022-04-06 15:30:22,780 - Courier -INFO - Status : CashAcct1 is displayed.
-2022-04-06 15:30:22,796 - Courier -INFO - Status : CashAcct1 is Enabled.==FAIL
-2022-04-06 15:30:22,854 - Courier -INFO - Status : CashAcct2 is displayed.
-2022-04-06 15:30:22,874 - Courier -INFO - Status : CashAcct2 is Enabled.==FAIL
-2022-04-06 15:30:22,925 - Courier -INFO - Status : ExpAcct1 is displayed.
-2022-04-06 15:30:22,941 - Courier -INFO - Status : ExpAcct1 is Enabled.==FAIL
-2022-04-06 15:30:22,990 - Courier -INFO - Status : ExpAcct2 is displayed.
-2022-04-06 15:30:23,008 - Courier -INFO - Status : ExpAcct2 is Enabled.==FAIL
-2022-04-06 15:30:23,076 - Courier -INFO - Status : Type is displayed.
-2022-04-06 15:30:23,095 - Courier -INFO - Status : Type is Enabled.==FAIL
-2022-04-06 15:30:23,146 - Courier -INFO - Status : BillingPOC is displayed.
-2022-04-06 15:30:23,163 - Courier -INFO - Status : BillingPOC is Enabled.==FAIL
-2022-04-06 15:30:23,214 - Courier -INFO - Status : OperationsPOC is displayed.
-2022-04-06 15:30:23,231 - Courier -INFO - Status : OperationsPOC is Enabled.==FAIL
-2022-04-06 15:30:23,291 - Courier -INFO - Status : MangPOC is displayed.
-2022-04-06 15:30:23,313 - Courier -INFO - Status : MangPOC is Enabled.==FAIL
-2022-04-06 15:30:23,377 - Courier -INFO - Status : CompPOC is displayed.
-2022-04-06 15:30:23,400 - Courier -INFO - Status : CompPOC is Enabled.==FAIL
-2022-04-06 15:30:23,467 - Courier -INFO - Status : DrvReq is displayed.
-2022-04-06 15:30:23,490 - Courier -INFO - Status : DrvReq is Disabled.==PASS
-2022-04-06 15:30:23,552 - Courier -INFO - Status : AlertType is displayed.
-2022-04-06 15:30:23,569 - Courier -INFO - Status : AlertType is Enabled.==FAIL
-2022-04-06 15:30:23,617 - Courier -INFO - Status : ReceivedOn1 is displayed.
-2022-04-06 15:30:23,635 - Courier -INFO - Status : ReceivedOn1 is Enabled.==FAIL
-2022-04-06 15:30:23,685 - Courier -INFO - Status : ReceivedOn2 is displayed.
-2022-04-06 15:30:23,704 - Courier -INFO - Status : ReceivedOn2 is Enabled.==FAIL
-2022-04-06 15:30:23,754 - Courier -INFO - Status : GenLiab is displayed.
-2022-04-06 15:30:23,772 - Courier -INFO - Status : GenLiab is Enabled.==FAIL
-2022-04-06 15:30:23,825 - Courier -INFO - Status : Auto is displayed.
-2022-04-06 15:30:23,842 - Courier -INFO - Status : Auto is Enabled.==FAIL
-2022-04-06 15:30:23,895 - Courier -INFO - Status : WareHouse is displayed.
-2022-04-06 15:30:23,917 - Courier -INFO - Status : WareHouse is Enabled.==FAIL
-2022-04-06 15:30:23,977 - Courier -INFO - Status : Cargo is displayed.
-2022-04-06 15:30:24,003 - Courier -INFO - Status : Cargo is Enabled.==FAIL
-2022-04-06 15:30:24,070 - Courier -INFO - Status : WorkerCo is displayed.
-2022-04-06 15:30:24,093 - Courier -INFO - Status : WorkerCo is Enabled.==FAIL
-2022-04-06 15:30:24,159 - Courier -INFO - Status : ReceivedOn3 is displayed.
-2022-04-06 15:30:24,181 - Courier -INFO - Status : ReceivedOn3 is Enabled.==FAIL
-2022-04-06 15:30:24,247 - Courier -INFO - Status : ReceivedOn4 is displayed.
-2022-04-06 15:30:24,273 - Courier -INFO - Status : ReceivedOn4 is Enabled.==FAIL
-2022-04-06 15:30:24,348 - Courier -INFO - Status : AftHrStrt is displayed.
-2022-04-06 15:30:24,373 - Courier -INFO - Status : AftHrStrt is Enabled.==FAIL
-2022-04-06 15:30:24,438 - Courier -INFO - Status : AftHrEnd is displayed.
-2022-04-06 15:30:24,458 - Courier -INFO - Status : AftHrEnd is Enabled.==FAIL
-2022-04-06 15:30:24,521 - Courier -INFO - Status : RecSerAgr is displayed.
-2022-04-06 15:30:24,541 - Courier -INFO - Status : RecSerAgr is Disabled.==PASS
-2022-04-06 15:30:24,608 - Courier -INFO - Status : Rec9 is displayed.
-2022-04-06 15:30:24,629 - Courier -INFO - Status : Rec9 is Disabled.==PASS
-2022-04-06 15:30:24,694 - Courier -INFO - Status : RecPrfIns is displayed.
-2022-04-06 15:30:24,715 - Courier -INFO - Status : RecPrfIns is Disabled.==PASS
-2022-04-06 15:30:24,778 - Courier -INFO - Status : RecTSARos is displayed.
-2022-04-06 15:30:24,802 - Courier -INFO - Status : RecTSARos is Disabled.==PASS
-2022-04-06 15:30:24,863 - Courier -INFO - Status : RecTSAAck is displayed.
-2022-04-06 15:30:24,886 - Courier -INFO - Status : RecTSAAck is Disabled.==PASS
-2022-04-06 15:30:24,949 - Courier -INFO - Status : Note is displayed.
-2022-04-06 15:30:24,971 - Courier -INFO - Status : Note is Enabled.==FAIL
-2022-04-06 15:30:25,033 - Courier -INFO - Status : CompType is displayed.
-2022-04-06 15:30:25,057 - Courier -INFO - Status : CompType is Enabled.==FAIL
-2022-04-06 15:30:25,126 - Courier -INFO - Status : ShipLableKey is displayed.
-2022-04-06 15:30:25,149 - Courier -INFO - Status : ShipLableKey is Enabled.==FAIL
-2022-04-06 15:30:25,215 - Courier -INFO - Status : FDXTSA is displayed.
-2022-04-06 15:30:25,236 - Courier -INFO - Status : FDXTSA is Disabled.==PASS
-2022-04-06 15:30:25,293 - Courier -INFO - Status : TSACert is displayed.
-2022-04-06 15:30:25,316 - Courier -INFO - Status : TSACert is Disabled.==PASS
-2022-04-06 15:30:25,384 - Courier -INFO - Status : HAZCert is displayed.
-2022-04-06 15:30:25,408 - Courier -INFO - Status : HAZCert is Disabled.==PASS
-2022-04-06 15:30:25,472 - Courier -INFO - Status : CCFS is displayed.
-2022-04-06 15:30:25,495 - Courier -INFO - Status : CCFS is Disabled.==PASS
-2022-04-06 15:30:25,558 - Courier -INFO - Status : Elev is displayed.
-2022-04-06 15:30:25,582 - Courier -INFO - Status : Elev is Disabled.==PASS
-2022-04-06 15:30:25,646 - Courier -INFO - Status : PC is displayed.
-2022-04-06 15:30:25,667 - Courier -INFO - Status : PC is Disabled.==PASS
-2022-04-06 15:30:26,284 - Courier -INFO - Clicked on MNX Logo
-2022-04-06 15:30:26,946 - Courier -INFO - =======Courier Test End=======
-2022-04-06 15:30:27,379 - Courier -INFO - Clicked on LogOut
-2022-04-06 15:30:31,117 - Courier -INFO - ====Sending Email=====
+2022-04-07 14:02:57,424 - ASNLog -INFO - initialization of the properties file is done
+2022-04-07 14:02:57,717 - io.github.bonigarcia.wdm.WebDriverManager -INFO - Using chromedriver 100.0.4896.60 (since Google Chrome 100 is installed in your machine)
+2022-04-07 14:02:57,739 - io.github.bonigarcia.wdm.WebDriverManager -INFO - Exporting webdriver.chrome.driver as C:\Users\rprajapati\.m2\repository\webdriver\chromedriver\win32\100.0.4896.60\chromedriver.exe
+2022-04-07 14:03:05,347 - ASNLog -INFO - Url opened
+2022-04-07 14:03:23,543 - ASNLog -INFO - =======ASN Log Test Start=======
+2022-04-07 14:03:23,651 - ASNLog -INFO - Clicked on Inventory
+2022-04-07 14:03:23,779 - ASNLog -INFO - Clicked on ASN Log
+2022-04-07 14:03:28,523 - ASNLog -INFO - Enter value in ASN
+2022-04-07 14:03:28,590 - ASNLog -INFO - Clicked on Search button
+2022-04-07 14:03:31,306 - ASNLog -INFO - Title of the screen isNetAgent : ASN
+2022-04-07 14:03:31,340 - ASNLog -INFO - Entered ASN==255640
+2022-04-07 14:03:31,340 - ASNLog -INFO - Searched ASN==
+2022-04-07 14:03:31,341 - ASNLog -INFO - ASN Number search result is FAIL
+2022-04-07 14:03:31,414 - ASNLog -INFO - Expand ASN Detail
+2022-04-07 14:03:33,593 - ASNLog -INFO - Collapse ASN Detail
+2022-04-07 14:03:36,672 - ASNLog -INFO - Click on Back button
+2022-04-07 14:03:39,635 - ASNLog -INFO - Cleared ASN
+2022-04-07 14:03:39,692 - ASNLog -INFO - Click on Search
+2022-04-07 14:03:40,973 - ASNLog -INFO - Click on ASNType dropdown
+2022-04-07 14:03:43,059 - ASNLog -INFO - Select all
+2022-04-07 14:03:43,109 - ASNLog -INFO - Close ASNType dropdown
+2022-04-07 14:03:43,166 - ASNLog -INFO - Click on Search button
+2022-04-07 14:03:44,497 - ASNLog -INFO - Click on ASNType dropdown
+2022-04-07 14:03:46,607 - ASNLog -INFO - Deselect all
+2022-04-07 14:03:46,644 - ASNLog -INFO - Close ASNType dropdown
+2022-04-07 14:03:46,693 - ASNLog -INFO - Click on Search button
+2022-04-07 14:03:48,016 - ASNLog -INFO - Click on ASN Status dropdown
+2022-04-07 14:03:50,128 - ASNLog -INFO - Select all
+2022-04-07 14:03:50,171 - ASNLog -INFO - Close ASN Status dropdown
+2022-04-07 14:03:50,222 - ASNLog -INFO - Click on Search button
+2022-04-07 14:03:50,954 - ASNLog -INFO - Click on ASN Status dropdown
+2022-04-07 14:03:54,030 - ASNLog -INFO - Deselect all
+2022-04-07 14:03:54,067 - ASNLog -INFO - Close ASN Status dropdown
+2022-04-07 14:03:54,117 - ASNLog -INFO - Click on Search button
+2022-04-07 14:03:55,448 - ASNLog -INFO - Select Location
+2022-04-07 14:03:57,568 - ASNLog -INFO - Click on Search button
+2022-04-07 14:03:58,922 - ASNLog -INFO - Entered Location==
+                                    AUTOMATION-FSL (F5386)                                
+2022-04-07 14:03:58,923 - ASNLog -INFO - Searched Location==SFO - NCM DIRECT DELIVERY (F1052)
+2022-04-07 14:03:58,923 - ASNLog -INFO - Location search result is FAIL
+2022-04-07 14:03:59,055 - ASNLog -INFO - Select Account
+2022-04-07 14:04:01,155 - ASNLog -INFO - Click on Search button
+2022-04-07 14:04:01,788 - ASNLog -INFO - Deselect Location
+2022-04-07 14:04:03,917 - ASNLog -INFO - Click on Search button
+2022-04-07 14:04:05,091 - ASNLog -INFO - Valid From Date :- 3/8/2022
+2022-04-07 14:04:05,091 - ASNLog -INFO - Valid To Date :- 3/8/2022
+2022-04-07 14:04:05,243 - ASNLog -INFO - Enter From Est. Arrival
+2022-04-07 14:04:05,468 - ASNLog -INFO - Clear ASN
+2022-04-07 14:04:05,736 - ASNLog -INFO - Click on Search button
+2022-04-07 14:04:06,342 - ASNLog -INFO - There is no data with enetered date
+2022-04-07 14:04:06,403 - ASNLog -INFO - Cleared FromESTArrival
+2022-04-07 14:04:06,444 - ASNLog -INFO - Cleared ToESTArrival
+2022-04-07 14:04:06,494 - ASNLog -INFO - Click on Search button
+2022-04-07 14:04:07,807 - ASNLog -INFO - Enter ASNFromDate
+2022-04-07 14:04:07,922 - ASNLog -INFO - Enter ASNToDate
+2022-04-07 14:04:08,011 - ASNLog -INFO - Click on Search button
+2022-04-07 14:04:11,372 - ASNLog -INFO - Click on Back button
+2022-04-07 14:04:14,987 - ASNLog -INFO - Cleared ASNFromDate
+2022-04-07 14:04:15,030 - ASNLog -INFO - Cleared ASNToDate
+2022-04-07 14:04:15,092 - ASNLog -INFO - Click on Search button
+2022-04-07 14:04:17,068 - ASNLog -INFO - Enter Tracking No
+2022-04-07 14:04:17,121 - ASNLog -INFO - Click on Search button
+2022-04-07 14:04:17,148 - ASNLog -INFO - Records==
+2022-04-07 14:04:17,190 - ASNLog -INFO - Cleared Tracking
+2022-04-07 14:04:17,278 - ASNLog -INFO - Enter WorkOrder
+2022-04-07 14:04:17,635 - ASNLog -INFO - Click on Search button
+2022-04-07 14:04:17,679 - ASNLog -INFO - Records==No Records found!
+2022-04-07 14:04:17,717 - ASNLog -INFO - Clear WorkOrder
+2022-04-07 14:04:17,815 - ASNLog -INFO - Enter ASN
+2022-04-07 14:04:18,110 - ASNLog -INFO - Click on Search button
+2022-04-07 14:04:18,131 - ASNLog -INFO - Records==No Records found!
+2022-04-07 14:04:18,172 - ASNLog -INFO - Clear ASN
+2022-04-07 14:04:18,252 - ASNLog -INFO - Enter ASN ref
+2022-04-07 14:04:18,669 - ASNLog -INFO - Click on Search button
+2022-04-07 14:04:18,687 - ASNLog -INFO - Records==No Records found!
+2022-04-07 14:04:18,727 - ASNLog -INFO - Clear ASN Ref
+2022-04-07 14:04:19,226 - ASNLog -INFO - Click on Search button
+2022-04-07 14:04:20,395 - ASNLog -INFO - Testing Pagination
+2022-04-07 14:04:23,964 - ASNLog -INFO - Click on ASN No
+2022-04-07 14:04:25,665 - ASNLog -INFO - ASNNo. field is Non-editable
+2022-04-07 14:04:25,690 - ASNLog -INFO - ASNType field is Non-editable
+2022-04-07 14:04:25,711 - ASNLog -INFO - Account Number field is Non-editable
+2022-04-07 14:04:25,730 - ASNLog -INFO - Location field is Non-editable
+2022-04-07 14:04:25,748 - ASNLog -INFO - ASN Reference field is Non-editable
+2022-04-07 14:04:25,769 - ASNLog -INFO - Carrier Name field is Non-editable
+2022-04-07 14:04:25,789 - ASNLog -INFO - Tracking Number field is Non-editable
+2022-04-07 14:04:25,813 - ASNLog -INFO - RefURL field is Non-editable
+2022-04-07 14:04:25,837 - ASNLog -INFO - Note field is Non-editable
+2022-04-07 14:04:26,862 - ASNLog -INFO - Click on Back button
+2022-04-07 14:04:29,981 - ASNLog -INFO - Click on next page
+2022-04-07 14:04:30,719 - ASNLog -INFO - No.Of Records==Page 2 of 6 (127 items)
+2022-04-07 14:04:30,899 - ASNLog -INFO - Click on Previous Page
+2022-04-07 14:04:31,019 - ASNLog -INFO - No.Of Records==Page 1 of 6 (127 items)
+2022-04-07 14:04:31,889 - ASNLog -INFO - Click on Export button
+2022-04-07 14:04:43,250 - ASNLog -INFO - Clicked on MNX Logo
+2022-04-07 14:04:43,896 - ASNLog -INFO - =======ASN Log Test End=======
+2022-04-07 14:04:44,155 - ASNLog -INFO - Clicked on LogOut
+2022-04-07 14:04:46,876 - ASNLog -INFO - ====Sending Email=====
