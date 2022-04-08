@@ -1,98 +1,52 @@
-2022-04-07 14:02:57,424 [main] INFO ASNLog - initialization of the properties file is done
-2022-04-07 14:02:57,717 [main] INFO io.github.bonigarcia.wdm.WebDriverManager - Using chromedriver 100.0.4896.60 (since Google Chrome 100 is installed in your machine)
-2022-04-07 14:02:57,739 [main] INFO io.github.bonigarcia.wdm.WebDriverManager - Exporting webdriver.chrome.driver as C:\Users\rprajapati\.m2\repository\webdriver\chromedriver\win32\100.0.4896.60\chromedriver.exe
-2022-04-07 14:03:05,347 [main] INFO ASNLog - Url opened
-2022-04-07 14:03:23,543 [main] INFO ASNLog - =======ASN Log Test Start=======
-2022-04-07 14:03:23,651 [main] INFO ASNLog - Clicked on Inventory
-2022-04-07 14:03:23,779 [main] INFO ASNLog - Clicked on ASN Log
-2022-04-07 14:03:28,523 [main] INFO ASNLog - Enter value in ASN
-2022-04-07 14:03:28,590 [main] INFO ASNLog - Clicked on Search button
-2022-04-07 14:03:31,306 [main] INFO ASNLog - Title of the screen isNetAgent : ASN
-2022-04-07 14:03:31,340 [main] INFO ASNLog - Entered ASN==255640
-2022-04-07 14:03:31,340 [main] INFO ASNLog - Searched ASN==
-2022-04-07 14:03:31,341 [main] INFO ASNLog - ASN Number search result is FAIL
-2022-04-07 14:03:31,414 [main] INFO ASNLog - Expand ASN Detail
-2022-04-07 14:03:33,593 [main] INFO ASNLog - Collapse ASN Detail
-2022-04-07 14:03:36,672 [main] INFO ASNLog - Click on Back button
-2022-04-07 14:03:39,635 [main] INFO ASNLog - Cleared ASN
-2022-04-07 14:03:39,692 [main] INFO ASNLog - Click on Search
-2022-04-07 14:03:40,973 [main] INFO ASNLog - Click on ASNType dropdown
-2022-04-07 14:03:43,059 [main] INFO ASNLog - Select all
-2022-04-07 14:03:43,109 [main] INFO ASNLog - Close ASNType dropdown
-2022-04-07 14:03:43,166 [main] INFO ASNLog - Click on Search button
-2022-04-07 14:03:44,497 [main] INFO ASNLog - Click on ASNType dropdown
-2022-04-07 14:03:46,607 [main] INFO ASNLog - Deselect all
-2022-04-07 14:03:46,644 [main] INFO ASNLog - Close ASNType dropdown
-2022-04-07 14:03:46,693 [main] INFO ASNLog - Click on Search button
-2022-04-07 14:03:48,016 [main] INFO ASNLog - Click on ASN Status dropdown
-2022-04-07 14:03:50,128 [main] INFO ASNLog - Select all
-2022-04-07 14:03:50,171 [main] INFO ASNLog - Close ASN Status dropdown
-2022-04-07 14:03:50,222 [main] INFO ASNLog - Click on Search button
-2022-04-07 14:03:50,954 [main] INFO ASNLog - Click on ASN Status dropdown
-2022-04-07 14:03:54,030 [main] INFO ASNLog - Deselect all
-2022-04-07 14:03:54,067 [main] INFO ASNLog - Close ASN Status dropdown
-2022-04-07 14:03:54,117 [main] INFO ASNLog - Click on Search button
-2022-04-07 14:03:55,448 [main] INFO ASNLog - Select Location
-2022-04-07 14:03:57,568 [main] INFO ASNLog - Click on Search button
-2022-04-07 14:03:58,922 [main] INFO ASNLog - Entered Location==
-                                    AUTOMATION-FSL (F5386)                                
-2022-04-07 14:03:58,923 [main] INFO ASNLog - Searched Location==SFO - NCM DIRECT DELIVERY (F1052)
-2022-04-07 14:03:58,923 [main] INFO ASNLog - Location search result is FAIL
-2022-04-07 14:03:59,055 [main] INFO ASNLog - Select Account
-2022-04-07 14:04:01,155 [main] INFO ASNLog - Click on Search button
-2022-04-07 14:04:01,788 [main] INFO ASNLog - Deselect Location
-2022-04-07 14:04:03,917 [main] INFO ASNLog - Click on Search button
-2022-04-07 14:04:05,091 [main] INFO ASNLog - Valid From Date :- 3/8/2022
-2022-04-07 14:04:05,091 [main] INFO ASNLog - Valid To Date :- 3/8/2022
-2022-04-07 14:04:05,243 [main] INFO ASNLog - Enter From Est. Arrival
-2022-04-07 14:04:05,468 [main] INFO ASNLog - Clear ASN
-2022-04-07 14:04:05,736 [main] INFO ASNLog - Click on Search button
-2022-04-07 14:04:06,342 [main] INFO ASNLog - There is no data with enetered date
-2022-04-07 14:04:06,403 [main] INFO ASNLog - Cleared FromESTArrival
-2022-04-07 14:04:06,444 [main] INFO ASNLog - Cleared ToESTArrival
-2022-04-07 14:04:06,494 [main] INFO ASNLog - Click on Search button
-2022-04-07 14:04:07,807 [main] INFO ASNLog - Enter ASNFromDate
-2022-04-07 14:04:07,922 [main] INFO ASNLog - Enter ASNToDate
-2022-04-07 14:04:08,011 [main] INFO ASNLog - Click on Search button
-2022-04-07 14:04:11,372 [main] INFO ASNLog - Click on Back button
-2022-04-07 14:04:14,987 [main] INFO ASNLog - Cleared ASNFromDate
-2022-04-07 14:04:15,030 [main] INFO ASNLog - Cleared ASNToDate
-2022-04-07 14:04:15,092 [main] INFO ASNLog - Click on Search button
-2022-04-07 14:04:17,068 [main] INFO ASNLog - Enter Tracking No
-2022-04-07 14:04:17,121 [main] INFO ASNLog - Click on Search button
-2022-04-07 14:04:17,148 [main] INFO ASNLog - Records==
-2022-04-07 14:04:17,190 [main] INFO ASNLog - Cleared Tracking
-2022-04-07 14:04:17,278 [main] INFO ASNLog - Enter WorkOrder
-2022-04-07 14:04:17,635 [main] INFO ASNLog - Click on Search button
-2022-04-07 14:04:17,679 [main] INFO ASNLog - Records==No Records found!
-2022-04-07 14:04:17,717 [main] INFO ASNLog - Clear WorkOrder
-2022-04-07 14:04:17,815 [main] INFO ASNLog - Enter ASN
-2022-04-07 14:04:18,110 [main] INFO ASNLog - Click on Search button
-2022-04-07 14:04:18,131 [main] INFO ASNLog - Records==No Records found!
-2022-04-07 14:04:18,172 [main] INFO ASNLog - Clear ASN
-2022-04-07 14:04:18,252 [main] INFO ASNLog - Enter ASN ref
-2022-04-07 14:04:18,669 [main] INFO ASNLog - Click on Search button
-2022-04-07 14:04:18,687 [main] INFO ASNLog - Records==No Records found!
-2022-04-07 14:04:18,727 [main] INFO ASNLog - Clear ASN Ref
-2022-04-07 14:04:19,226 [main] INFO ASNLog - Click on Search button
-2022-04-07 14:04:20,395 [main] INFO ASNLog - Testing Pagination
-2022-04-07 14:04:23,964 [main] INFO ASNLog - Click on ASN No
-2022-04-07 14:04:25,665 [main] INFO ASNLog - ASNNo. field is Non-editable
-2022-04-07 14:04:25,690 [main] INFO ASNLog - ASNType field is Non-editable
-2022-04-07 14:04:25,711 [main] INFO ASNLog - Account Number field is Non-editable
-2022-04-07 14:04:25,730 [main] INFO ASNLog - Location field is Non-editable
-2022-04-07 14:04:25,748 [main] INFO ASNLog - ASN Reference field is Non-editable
-2022-04-07 14:04:25,769 [main] INFO ASNLog - Carrier Name field is Non-editable
-2022-04-07 14:04:25,789 [main] INFO ASNLog - Tracking Number field is Non-editable
-2022-04-07 14:04:25,813 [main] INFO ASNLog - RefURL field is Non-editable
-2022-04-07 14:04:25,837 [main] INFO ASNLog - Note field is Non-editable
-2022-04-07 14:04:26,862 [main] INFO ASNLog - Click on Back button
-2022-04-07 14:04:29,981 [main] INFO ASNLog - Click on next page
-2022-04-07 14:04:30,719 [main] INFO ASNLog - No.Of Records==Page 2 of 6 (127 items)
-2022-04-07 14:04:30,899 [main] INFO ASNLog - Click on Previous Page
-2022-04-07 14:04:31,019 [main] INFO ASNLog - No.Of Records==Page 1 of 6 (127 items)
-2022-04-07 14:04:31,889 [main] INFO ASNLog - Click on Export button
-2022-04-07 14:04:43,250 [main] INFO ASNLog - Clicked on MNX Logo
-2022-04-07 14:04:43,896 [main] INFO ASNLog - =======ASN Log Test End=======
-2022-04-07 14:04:44,155 [main] INFO ASNLog - Clicked on LogOut
-2022-04-07 14:04:46,876 [main] INFO ASNLog - ====Sending Email=====
+2022-04-08 11:02:03,973 [main] INFO AgentConsole - initialization of the properties file is done
+2022-04-08 11:02:04,584 [main] INFO io.github.bonigarcia.wdm.WebDriverManager - Using chromedriver 100.0.4896.60 (since Google Chrome 100 is installed in your machine)
+2022-04-08 11:02:04,617 [main] INFO io.github.bonigarcia.wdm.WebDriverManager - Exporting webdriver.chrome.driver as C:\Users\rprajapati\.m2\repository\webdriver\chromedriver\win32\100.0.4896.60\chromedriver.exe
+2022-04-08 11:02:12,787 [main] INFO AgentConsole - Url opened
+2022-04-08 11:02:28,403 [main] INFO AgentConsole - =======Agent Console Test Start=======
+2022-04-08 11:02:28,609 [main] INFO AgentConsole - Clicked on Tools
+2022-04-08 11:02:28,920 [main] INFO AgentConsole - Clicked on Agent Console
+2022-04-08 11:02:30,464 [main] INFO AgentConsole - Click on Check Flight Path
+2022-04-08 11:02:30,608 [main] INFO AgentConsole - Validation Displayed==Airline Id is required.
+Flight No is required.
+2022-04-08 11:02:30,695 [main] INFO AgentConsole - Clear AirlineID
+2022-04-08 11:02:30,946 [main] INFO AgentConsole - Enter AirlineID
+2022-04-08 11:02:33,149 [main] INFO AgentConsole - Validation Displayed==No Results Found
+2022-04-08 11:02:33,243 [main] INFO AgentConsole - Clicked on Remove button
+2022-04-08 11:02:33,270 [main] INFO AgentConsole - No Results Found is removed=PASS
+2022-04-08 11:02:33,332 [main] INFO AgentConsole - Clear AirlineID
+2022-04-08 11:02:33,402 [main] INFO AgentConsole - Clear AirportID
+2022-04-08 11:02:33,637 [main] INFO AgentConsole - Enter AirportID
+2022-04-08 11:02:35,941 [main] INFO AgentConsole - Validation Displayed==No Results Found
+2022-04-08 11:02:36,044 [main] INFO AgentConsole - Clear AirportID
+2022-04-08 11:02:36,138 [main] INFO AgentConsole - Clear AirlineID
+2022-04-08 11:02:36,350 [main] INFO AgentConsole - Enter AirlineID
+2022-04-08 11:02:40,675 [main] INFO AgentConsole - Clear FlightNo
+2022-04-08 11:02:40,826 [main] INFO AgentConsole - Enter FlightNo
+2022-04-08 11:02:40,911 [main] INFO AgentConsole - Clear AirportID
+2022-04-08 11:02:41,100 [main] INFO AgentConsole - Enter AirportID
+2022-04-08 11:02:45,486 [main] INFO AgentConsole - Click on Check Flight Path
+2022-04-08 11:02:47,725 [main] INFO AgentConsole - Switched to Flight Path Map
+2022-04-08 11:02:49,346 [main] INFO AgentConsole - Switched to Flight Path Map
+2022-04-08 11:02:49,394 [main] INFO AgentConsole - Close Flight Path Map window
+2022-04-08 11:02:54,424 [main] INFO AgentConsole - Switched to Main window
+2022-04-08 11:02:54,629 [main] INFO AgentConsole - Clear ZipCode
+2022-04-08 11:02:54,770 [main] INFO AgentConsole - Enter ZipCode
+2022-04-08 11:02:54,873 [main] INFO AgentConsole - Click on Reset button
+2022-04-08 11:02:54,922 [main] INFO AgentConsole - Clear ZipCode
+2022-04-08 11:02:55,012 [main] INFO AgentConsole - Click on Submit button
+2022-04-08 11:02:55,093 [main] INFO AgentConsole - Validation Displayed==Please Enter Zip Code
+2022-04-08 11:02:55,160 [main] INFO AgentConsole - Clear ZipCode
+2022-04-08 11:02:55,295 [main] INFO AgentConsole - Enter ZipCode
+2022-04-08 11:02:55,399 [main] INFO AgentConsole - Click on Submit button
+2022-04-08 11:02:57,532 [main] INFO AgentConsole - Validation Displayed==The remote server returned an error: (401) Unauthorized.
+2022-04-08 11:02:57,532 [main] INFO AgentConsole - Unable to get Weather==FAIL
+2022-04-08 11:02:57,852 [main] INFO AgentConsole - Clicked on close button of message
+2022-04-08 11:02:57,939 [main] INFO AgentConsole - Unable to get Weather==FAIL
+2022-04-08 11:02:58,355 [main] INFO AgentConsole - Switched to Click Here page
+2022-04-08 11:03:08,334 [main] INFO AgentConsole - Switched to Click Here page
+2022-04-08 11:03:08,433 [main] INFO AgentConsole - Close Click Here page
+2022-04-08 11:03:13,451 [main] INFO AgentConsole - Switched to Main window
+2022-04-08 11:03:14,010 [main] INFO AgentConsole - Click on MNX Logo
+2022-04-08 11:03:14,730 [main] INFO AgentConsole - =======Agent Console Test End=======
+2022-04-08 11:03:15,207 [main] INFO AgentConsole - Clicked on LogOut
+2022-04-08 11:03:19,428 [main] INFO AgentConsole - ====Sending Email=====

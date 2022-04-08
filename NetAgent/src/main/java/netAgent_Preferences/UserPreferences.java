@@ -15,15 +15,20 @@ public class UserPreferences extends BaseInit {
 		WebDriverWait wait = new WebDriverWait(Driver, 50);
 		Actions act = new Actions(Driver);
 
+		logger.info("=======User Preferences Test Start=======");
+		msg.append("=======User Preferences Test Start=======" + "\n\n");
+
 		// --Clicked on Preferences
 		wait.until(ExpectedConditions.elementToBeClickable(By.id("idPreferences")));
 		WebElement Preference = Driver.findElement(By.id("idPreferences"));
 		act.moveToElement(Preference).click().perform();
+		logger.info("Clicked on Preferences");
 		Thread.sleep(2000);
 
 		// --UserPreference
 		wait.until(ExpectedConditions.elementToBeClickable(By.linkText("User Preferences")));
 		Driver.findElement(By.linkText("User Preferences")).click();
+		logger.info("Clicked on User Preferences");
 		wait.until(ExpectedConditions.invisibilityOfElementLocated(By.xpath("//*[@class=\"ajax-loadernew\"]")));
 		wait.until(ExpectedConditions.visibilityOfAllElementsLocatedBy(By.className("panel-body")));
 
@@ -96,12 +101,16 @@ public class UserPreferences extends BaseInit {
 
 		// --Click on save
 		Driver.findElement(By.id("btnSave")).click();
+		logger.info("Clicked on Save button");
 		wait.until(ExpectedConditions.invisibilityOfElementLocated(By.xpath("//*[@class=\"ajax-loadernew\"]")));
 		getScreenshot(Driver, "UserPreference");
 
 		Driver.findElement(By.id("imgNGLLogo")).click();
+		logger.info("Clicked on MNX Logo");
 		wait.until(ExpectedConditions.invisibilityOfElementLocated(By.xpath("//*[@class=\"ajax-loadernew\"]")));
 		wait.until(ExpectedConditions.visibilityOfAllElementsLocatedBy(By.className("welcomecontent")));
 
+		logger.info("=======User Preferences Test End=======");
+		msg.append("=======User Preferences Test End=======" + "\n\n");
 	}
 }
