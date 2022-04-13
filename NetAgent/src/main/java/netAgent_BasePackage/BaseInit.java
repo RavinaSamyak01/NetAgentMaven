@@ -2,6 +2,8 @@ package netAgent_BasePackage;
 
 import java.io.File;
 import java.io.FileInputStream;
+import java.io.FileNotFoundException;
+import java.io.FileOutputStream;
 import java.io.IOException;
 import java.lang.reflect.Method;
 import java.text.DateFormat;
@@ -38,7 +40,6 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.ITestResult;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.AfterSuite;
-import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.BeforeSuite;
 import org.testng.annotations.BeforeTest;
@@ -71,7 +72,7 @@ public class BaseInit {
 	public static ExtentTest test;
 
 	@BeforeSuite
-	public void beforeMethod() throws IOException {
+	public void beforeMethod() throws Exception {
 		if (Driver == null) {
 			String logFilename = this.getClass().getSimpleName();
 			logger = Logger.getLogger(logFilename);
@@ -106,6 +107,8 @@ public class BaseInit {
 			System.out.println("Current height: " + height);
 			System.out.println("Current width: " + width);
 			System.out.println("window size==" + Driver.manage().window().getSize());
+
+			Login();
 
 		}
 	}
@@ -247,7 +250,6 @@ public class BaseInit {
 	}
 
 	// --Updated by Ravina
-	@BeforeTest
 	public void Login() throws Exception {
 		WebDriverWait wait = new WebDriverWait(Driver, 50);
 		Driver.get(baseUrl);
@@ -295,7 +297,6 @@ public class BaseInit {
 
 	}
 
-	@AfterTest
 	public void logOut() throws InterruptedException, IOException {
 		WebDriverWait wait = new WebDriverWait(Driver, 5000);
 		isElementPresent("LogOutDiv_xpath").click();
@@ -406,6 +407,21 @@ public class BaseInit {
 		return Cell;
 	}
 
+	public static void setData(String sheetName, int row, int col, String value)
+			throws EncryptedDocumentException, InvalidFormatException, IOException {
+		String FilePath = storage.getProperty("File");
+
+		File src = new File(FilePath);
+		FileInputStream fis = new FileInputStream(src);
+		Workbook workbook = WorkbookFactory.create(fis);
+		FileOutputStream fisO = new FileOutputStream(src);
+		Sheet sh = workbook.getSheet(sheetName);
+
+		sh.getRow(row).createCell(col).setCellValue(value);
+		workbook.write(fisO);
+		fisO.close();
+	}
+
 	public static int getTotalRow(String sheetName)
 			throws EncryptedDocumentException, InvalidFormatException, IOException {
 		String FilePath = storage.getProperty("File");
@@ -439,6 +455,7 @@ public class BaseInit {
 
 	@AfterSuite
 	public void SendEmail() throws Exception {
+		logOut();
 		report.flush();
 		// --Close browser
 		Complete();
@@ -447,7 +464,7 @@ public class BaseInit {
 		// Send Details email
 
 		msg.append("*** This is automated generated email and send through automation script ***" + "\n");
-		msg.append("Process URL : " + baseUrl+"\n");
+		msg.append("Process URL : " + baseUrl + "\n");
 		msg.append("Please find attached file of Report and Log");
 
 		String subject = "Selenium Automation Script: Staging NetAgent Portal";

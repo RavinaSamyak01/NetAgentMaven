@@ -101,12 +101,28 @@ public class PutAway extends BaseInit {
 					if (GreenTick.isDisplayed()) {
 						System.out.println("Part is moved to DEFAULTBIN");
 						logger.info("Part is moved to DEFAULTBIN");
+						break;
+
 					}
 
 				} catch (Exception wrong) {
-					System.out.println("Something unexpected happened");
-					logger.info("Something unexpected happenedFS");
+					List<WebElement> stockIDSNew = Driver
+							.findElements(By.xpath("//*[contains(@aria-label,'Stock ID,')]/span"));
+					System.out.println("Total records are==" + stockIDSNew.size());
+					logger.info("Total records are==" + stockIDSNew.size());
+					for (int sID1 = sID; sID1 < stockIDSNew.size();) {
+						String stockID1 = stockIDSNew.get(sID1).getText();
+						String xpath = "//*[@id=\"gridProcessPutaway\"]//tbody/tr[" + sID1 + 1 + "]//i";
+						WebElement GreenTick = Driver.findElement(By.xpath(xpath));
+						if (GreenTick.isDisplayed()) {
+							System.out.println("Part is moved to DEFAULTBIN");
+							logger.info("Part is moved to DEFAULTBIN");
+							break;
+
+						}
+					}
 				}
+				break;
 
 			}
 		}

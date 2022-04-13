@@ -12,7 +12,7 @@ import netAgent_BasePackage.BaseInit;
 
 public class Parts extends BaseInit {
 	@Test
-	public void parts() throws Exception {
+	public static void parts() throws Exception {
 		WebDriverWait wait = new WebDriverWait(Driver, 50);
 
 		logger.info("=======Parts Test Start=======");

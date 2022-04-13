@@ -2,6 +2,7 @@ package netAgent_BasePackage;
 
 import org.testng.annotations.Test;
 
+import netAgent_Inventory.Parts;
 import netAgent_LogOutDiv.AgentElevatesRiskTraining;
 import netAgent_LogOutDiv.AgentTSATraining;
 import netAgent_LogOutDiv.ContactUS;
@@ -22,23 +23,34 @@ public class NetAgentSmoke extends BaseInit {
 		// --AgentTSA
 		AgentTSATraining.AgentTSA();
 
-		// --Contact US
+		// --Agent Risk
 		AgentElevatesRiskTraining.AgentRisk();
 
-		// --Contact US
+		// --Task Log
 		TaskLog.taskLog();
 
-		// --Contact US
+		// --Order Search
 		OrderSearch.orderSearch();
 
-		// --Contact US
+		// --Replenish
 		Replenish.replenish();
 
-		// --Contact US
+		// --Cycle Count
 		CycleCount.cycleCount();
 
-		// --Contact US
+		// --Courier
 		Courier.courier();
+		
+		//Parts
+		Parts.parts();
+		
+		//FSL Storage
+		
+		//FSL Setup
+		//Cycle Count BIN
+		//PutAway
+		//ASN Log
+		
 
 	}
 

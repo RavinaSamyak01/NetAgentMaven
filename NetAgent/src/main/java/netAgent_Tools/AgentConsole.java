@@ -130,25 +130,32 @@ public class AgentConsole extends BaseInit {
 		logger.info("Click on Check Flight Path");
 		wait.until(ExpectedConditions.invisibilityOfElementLocated(By.xpath("//*[@class=\"ajax-loadernew\"]")));
 
-		String winHandleBefore = Driver.getWindowHandle();
-		System.out.println("Main window title==" + Driver.switchTo().window(winHandleBefore).getTitle());
+		try {
+			wait.until(ExpectedConditions.visibilityOfElementLocated(By.id("lblValidateFlight")));
+			String FlighVal = Driver.findElement(By.id("lblValidateFlight")).getText();
+			logger.info("Fight validation==" + FlighVal);
+		} catch (Exception NoFlight) {
+			String winHandleBefore = Driver.getWindowHandle();
+			System.out.println("Main window title==" + Driver.switchTo().window(winHandleBefore).getTitle());
 
-		for (String winHandle : Driver.getWindowHandles()) {
-			Driver.switchTo().window(winHandle);
-			System.out.println("Child window title==" + Driver.switchTo().window(winHandle).getTitle());
-			getScreenshot(Driver, "AgentConsole_FlightPath");
-			logger.info("Switched to Flight Path Map");
+			for (String winHandle : Driver.getWindowHandles()) {
+				Driver.switchTo().window(winHandle);
+				System.out.println("Child window title==" + Driver.switchTo().window(winHandle).getTitle());
+				getScreenshot(Driver, "AgentConsole_FlightPath");
+				logger.info("Switched to Flight Path Map");
+			}
+			// Close new window
+			Driver.close();
+			logger.info("Close Flight Path Map window");
+
+			Thread.sleep(5000);
+
+			// Switch back to original browser (first window)
+			Driver.switchTo().window(winHandleBefore);
+			logger.info("Switched to Main window");
+			wait.until(ExpectedConditions.invisibilityOfElementLocated(By.xpath("//*[@class=\"ajax-loadernew\"]")));
+
 		}
-		// Close new window
-		Driver.close();
-		logger.info("Close Flight Path Map window");
-
-		Thread.sleep(5000);
-
-		// Switch back to original browser (first window)
-		Driver.switchTo().window(winHandleBefore);
-		logger.info("Switched to Main window");
-		wait.until(ExpectedConditions.invisibilityOfElementLocated(By.xpath("//*[@class=\"ajax-loadernew\"]")));
 
 		// Weather info
 		// --Reset button

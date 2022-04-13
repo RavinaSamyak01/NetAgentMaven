@@ -76,6 +76,7 @@ public class FSLSetUp extends BaseInit {
 		logger.info("Clicked on Reset button");
 		wait.until(ExpectedConditions.invisibilityOfElementLocated(By.xpath("//*[@class=\"ajax-loadernew\"]")));
 
+		wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//*[@class=\"dx-info\"]")));
 		String pagecnt = Driver.findElement(By.xpath("//*[@class=\"dx-info\"]")).getText();
 		System.out.println(pagecnt);
 		logger.info("Records==" + pagecnt);

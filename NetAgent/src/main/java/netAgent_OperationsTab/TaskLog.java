@@ -984,15 +984,42 @@ public class TaskLog extends BaseInit {
 		System.out.println("Total No of job in Inventory Tab is/are==" + TotalJob);
 		logger.info("Total No of job in Inventory Tab is/are==" + TotalJob);
 
-		// --Combined Tab
-		isElementPresent("TLCombinedTab_id").click();
-		logger.info("Click on Combined Tab");
 		wait.until(ExpectedConditions.invisibilityOfElementLocated(By.xpath("//*[@class=\"ajax-loadernew\"]")));
 		wait.until(ExpectedConditions.visibilityOfAllElementsLocatedBy(By.id("GXNLWOBOTH")));
 		getScreenshot(Driver, "CombinedTab");
 		TotalJob = isElementPresent("TLTotalJob_xpath").getText();
 		logger.info("Total No of job in Combined Tab is/are==" + TotalJob);
 		System.out.println("Total No of job in Combined Tab is/are==" + TotalJob);
+
+		// --CCAttempt 1 Scenario
+		logger.info("==Testing CCAttempt1==");
+		String WorderID = getData("OrderSearch", 1, 13);
+		logger.info("WorkOrderID is==" + WorderID);
+		isElementPresent("TLInvSearch_id").clear();
+		logger.info("Clear Search box");
+		isElementPresent("TLInvSearch_id").sendKeys(WorderID);
+		logger.info("Enter value in search input");
+		isElementPresent("TLInvSearchBTN_id").click();
+		logger.info("Clicked on Search");
+
+		WebElement Stage = isElementPresent("CCATTStage_xpath");
+		logger.info("Stage is==" + Stage);
+		String TotalParts = isElementPresent("CCATotalParts_xpath").getText();
+		String[] TotalPts = TotalParts.split(":");
+		String TotalPart = TotalPts[1].trim();
+		int TParts = Integer.parseInt(TotalPart);
+		if (TParts > 0) {
+			logger.info("Parts is available");
+			
+
+		} else {
+			isElementPresent("RemoveZrQTY_id").click();
+			logger.info("Uncheck the checkbox of Remove Zero Stock Parts");
+		}
+
+		// --Combined Tab
+		isElementPresent("TLCombinedTab_id").click();
+		logger.info("Click on Combined Tab");
 
 		// --RTE Tab
 		isElementPresent("TLRTETab_xpath").click();
@@ -1115,6 +1142,7 @@ public class TaskLog extends BaseInit {
 			System.out.println("Switched to main window");
 			logger.info("Switched to main window");
 		}
+
 		// Go to main screen.
 		isElementPresent("MNXLogo_id").click();
 		wait.until(ExpectedConditions.invisibilityOfElementLocated(By.xpath("//*[@class=\"ajax-loadernew\"]")));

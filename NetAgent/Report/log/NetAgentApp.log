@@ -1,52 +1,24 @@
-2022-04-08 11:02:03,973 [main] INFO AgentConsole - initialization of the properties file is done
-2022-04-08 11:02:04,584 [main] INFO io.github.bonigarcia.wdm.WebDriverManager - Using chromedriver 100.0.4896.60 (since Google Chrome 100 is installed in your machine)
-2022-04-08 11:02:04,617 [main] INFO io.github.bonigarcia.wdm.WebDriverManager - Exporting webdriver.chrome.driver as C:\Users\rprajapati\.m2\repository\webdriver\chromedriver\win32\100.0.4896.60\chromedriver.exe
-2022-04-08 11:02:12,787 [main] INFO AgentConsole - Url opened
-2022-04-08 11:02:28,403 [main] INFO AgentConsole - =======Agent Console Test Start=======
-2022-04-08 11:02:28,609 [main] INFO AgentConsole - Clicked on Tools
-2022-04-08 11:02:28,920 [main] INFO AgentConsole - Clicked on Agent Console
-2022-04-08 11:02:30,464 [main] INFO AgentConsole - Click on Check Flight Path
-2022-04-08 11:02:30,608 [main] INFO AgentConsole - Validation Displayed==Airline Id is required.
-Flight No is required.
-2022-04-08 11:02:30,695 [main] INFO AgentConsole - Clear AirlineID
-2022-04-08 11:02:30,946 [main] INFO AgentConsole - Enter AirlineID
-2022-04-08 11:02:33,149 [main] INFO AgentConsole - Validation Displayed==No Results Found
-2022-04-08 11:02:33,243 [main] INFO AgentConsole - Clicked on Remove button
-2022-04-08 11:02:33,270 [main] INFO AgentConsole - No Results Found is removed=PASS
-2022-04-08 11:02:33,332 [main] INFO AgentConsole - Clear AirlineID
-2022-04-08 11:02:33,402 [main] INFO AgentConsole - Clear AirportID
-2022-04-08 11:02:33,637 [main] INFO AgentConsole - Enter AirportID
-2022-04-08 11:02:35,941 [main] INFO AgentConsole - Validation Displayed==No Results Found
-2022-04-08 11:02:36,044 [main] INFO AgentConsole - Clear AirportID
-2022-04-08 11:02:36,138 [main] INFO AgentConsole - Clear AirlineID
-2022-04-08 11:02:36,350 [main] INFO AgentConsole - Enter AirlineID
-2022-04-08 11:02:40,675 [main] INFO AgentConsole - Clear FlightNo
-2022-04-08 11:02:40,826 [main] INFO AgentConsole - Enter FlightNo
-2022-04-08 11:02:40,911 [main] INFO AgentConsole - Clear AirportID
-2022-04-08 11:02:41,100 [main] INFO AgentConsole - Enter AirportID
-2022-04-08 11:02:45,486 [main] INFO AgentConsole - Click on Check Flight Path
-2022-04-08 11:02:47,725 [main] INFO AgentConsole - Switched to Flight Path Map
-2022-04-08 11:02:49,346 [main] INFO AgentConsole - Switched to Flight Path Map
-2022-04-08 11:02:49,394 [main] INFO AgentConsole - Close Flight Path Map window
-2022-04-08 11:02:54,424 [main] INFO AgentConsole - Switched to Main window
-2022-04-08 11:02:54,629 [main] INFO AgentConsole - Clear ZipCode
-2022-04-08 11:02:54,770 [main] INFO AgentConsole - Enter ZipCode
-2022-04-08 11:02:54,873 [main] INFO AgentConsole - Click on Reset button
-2022-04-08 11:02:54,922 [main] INFO AgentConsole - Clear ZipCode
-2022-04-08 11:02:55,012 [main] INFO AgentConsole - Click on Submit button
-2022-04-08 11:02:55,093 [main] INFO AgentConsole - Validation Displayed==Please Enter Zip Code
-2022-04-08 11:02:55,160 [main] INFO AgentConsole - Clear ZipCode
-2022-04-08 11:02:55,295 [main] INFO AgentConsole - Enter ZipCode
-2022-04-08 11:02:55,399 [main] INFO AgentConsole - Click on Submit button
-2022-04-08 11:02:57,532 [main] INFO AgentConsole - Validation Displayed==The remote server returned an error: (401) Unauthorized.
-2022-04-08 11:02:57,532 [main] INFO AgentConsole - Unable to get Weather==FAIL
-2022-04-08 11:02:57,852 [main] INFO AgentConsole - Clicked on close button of message
-2022-04-08 11:02:57,939 [main] INFO AgentConsole - Unable to get Weather==FAIL
-2022-04-08 11:02:58,355 [main] INFO AgentConsole - Switched to Click Here page
-2022-04-08 11:03:08,334 [main] INFO AgentConsole - Switched to Click Here page
-2022-04-08 11:03:08,433 [main] INFO AgentConsole - Close Click Here page
-2022-04-08 11:03:13,451 [main] INFO AgentConsole - Switched to Main window
-2022-04-08 11:03:14,010 [main] INFO AgentConsole - Click on MNX Logo
-2022-04-08 11:03:14,730 [main] INFO AgentConsole - =======Agent Console Test End=======
-2022-04-08 11:03:15,207 [main] INFO AgentConsole - Clicked on LogOut
-2022-04-08 11:03:19,428 [main] INFO AgentConsole - ====Sending Email=====
+2022-04-12 17:30:43,526 [main] INFO CycleCount - initialization of the properties file is done
+2022-04-12 17:30:43,767 [main] INFO io.github.bonigarcia.wdm.WebDriverManager - Using chromedriver 100.0.4896.60 (since Google Chrome 100 is installed in your machine)
+2022-04-12 17:30:43,791 [main] INFO io.github.bonigarcia.wdm.WebDriverManager - Exporting webdriver.chrome.driver as C:\Users\rprajapati\.m2\repository\webdriver\chromedriver\win32\100.0.4896.60\chromedriver.exe
+2022-04-12 17:30:50,871 [main] INFO CycleCount - Url opened
+2022-04-12 17:31:08,682 [main] INFO CycleCount - =======CycleCount Test Start=======
+2022-04-12 17:31:08,894 [main] INFO CycleCount - Click on Operations
+2022-04-12 17:31:09,046 [main] INFO CycleCount - Click on CycleCount
+2022-04-12 17:31:11,632 [main] INFO CycleCount - If action column is not empty
+2022-04-12 17:31:11,940 [main] INFO CycleCount - Click on Start button
+2022-04-12 17:31:13,692 [main] INFO CycleCount - WorkOrderID after start==Work Order Id : 1685112
+2022-04-12 17:31:13,710 [main] INFO CycleCount - If Reset button is exist
+2022-04-12 17:31:14,004 [main] INFO CycleCount - Click on Reset button
+2022-04-12 17:31:15,737 [main] INFO CycleCount - WorkOrderID after Reset==Cycle Count of Work Order Id :1685112 is Reset
+2022-04-12 17:31:15,750 [main] INFO CycleCount - If action column is not empty
+2022-04-12 17:31:15,920 [main] INFO CycleCount - Total number of cycles==2
+2022-04-12 17:31:16,035 [main] INFO CycleCount - Click on Start button
+2022-04-12 17:31:17,792 [main] INFO CycleCount - WorkOrderID after start==1685113
+2022-04-12 17:31:17,870 [main] INFO CycleCount - Inserted workorderID in excel
+2022-04-12 17:31:17,903 [main] INFO CycleCount - Total number of cycles==1
+2022-04-12 17:31:18,017 [main] INFO CycleCount - Click on Start button
+2022-04-12 17:32:08,945 [main] INFO CycleCount - Part validation is displayed==Part(s) not found.
+2022-04-12 17:32:10,321 [main] INFO CycleCount - =======CycleCount Test End=======
+2022-04-12 17:32:10,775 [main] INFO CycleCount - Clicked on LogOut
+2022-04-12 17:32:14,828 [main] INFO CycleCount - ====Sending Email=====

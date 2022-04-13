@@ -3,17 +3,15 @@
 <suite parallel="none" name="Failed suite [Default suite]">
   <test parallel="none" name="Default test(failed)">
     <classes>
-      <class name="netAgent_Tools.AgentConsole">
+      <class name="netAgent_OperationsTab.CycleCount">
         <methods>
+          <include name="cycleCount"/>
           <include name="getResult"/>
           <include name="testMethodName"/>
           <include name="beforeMethod"/>
-          <include name="agentConsole"/>
           <include name="SendEmail"/>
-          <include name="Login"/>
-          <include name="logOut"/>
         </methods>
-      </class> <!-- netAgent_Tools.AgentConsole -->
+      </class> <!-- netAgent_OperationsTab.CycleCount -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

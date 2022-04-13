@@ -1,50 +1,179 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
 <suite parallel="none" name="Failed suite [NetAgentSmokeTest]">
-  <test parallel="none" name="AgentTSATraining(failed)">
+  <test parallel="none" name="TaskLog(failed)">
     <classes>
+      <class name="netAgent_Reports.AgentActivity">
+        <methods>
+          <include name="getResult"/>
+          <include name="testMethodName"/>
+        </methods>
+      </class> <!-- netAgent_Reports.AgentActivity -->
+      <class name="netAgent_Admin.UserProfile">
+        <methods>
+          <include name="getResult"/>
+          <include name="testMethodName"/>
+        </methods>
+      </class> <!-- netAgent_Admin.UserProfile -->
+      <class name="netAgent_LogOutDiv.AgentTSATraining">
+        <methods>
+          <include name="getResult"/>
+          <include name="testMethodName"/>
+        </methods>
+      </class> <!-- netAgent_LogOutDiv.AgentTSATraining -->
+      <class name="netAgent_Reports.InventoryOnHandReport">
+        <methods>
+          <include name="getResult"/>
+          <include name="testMethodName"/>
+        </methods>
+      </class> <!-- netAgent_Reports.InventoryOnHandReport -->
+      <class name="netAgent_OperationsTab.Courier">
+        <methods>
+          <include name="getResult"/>
+          <include name="testMethodName"/>
+        </methods>
+      </class> <!-- netAgent_OperationsTab.Courier -->
+      <class name="netAgent_Tools.MNXDocuments">
+        <methods>
+          <include name="getResult"/>
+          <include name="testMethodName"/>
+        </methods>
+      </class> <!-- netAgent_Tools.MNXDocuments -->
+      <class name="netAgent_Inventory.PutAway">
+        <methods>
+          <include name="getResult"/>
+          <include name="testMethodName"/>
+        </methods>
+      </class> <!-- netAgent_Inventory.PutAway -->
+      <class name="netAgent_Inventory.Parts">
+        <methods>
+          <include name="getResult"/>
+          <include name="testMethodName"/>
+        </methods>
+      </class> <!-- netAgent_Inventory.Parts -->
+      <class name="netAgent_Inventory.ASNLog">
+        <methods>
+          <include name="getResult"/>
+          <include name="testMethodName"/>
+        </methods>
+      </class> <!-- netAgent_Inventory.ASNLog -->
+      <class name="netAgent_Reports.AgentActivityChart">
+        <methods>
+          <include name="getResult"/>
+          <include name="testMethodName"/>
+        </methods>
+      </class> <!-- netAgent_Reports.AgentActivityChart -->
+      <class name="netAgent_Inventory.FSLSetUp">
+        <methods>
+          <include name="getResult"/>
+          <include name="testMethodName"/>
+        </methods>
+      </class> <!-- netAgent_Inventory.FSLSetUp -->
+      <class name="netAgent_Preferences.UserPreferences">
+        <methods>
+          <include name="getResult"/>
+          <include name="testMethodName"/>
+          <include name="beforeMethod"/>
+          <include name="SendEmail"/>
+        </methods>
+      </class> <!-- netAgent_Preferences.UserPreferences -->
+      <class name="netAgent_Reports.InventoryReceiptReport">
+        <methods>
+          <include name="getResult"/>
+          <include name="testMethodName"/>
+        </methods>
+      </class> <!-- netAgent_Reports.InventoryReceiptReport -->
+      <class name="netAgent_Tools.AgentConsole">
+        <methods>
+          <include name="getResult"/>
+          <include name="testMethodName"/>
+        </methods>
+      </class> <!-- netAgent_Tools.AgentConsole -->
+      <class name="netAgent_OperationsTab.CycleCount">
+        <methods>
+          <include name="getResult"/>
+          <include name="testMethodName"/>
+        </methods>
+      </class> <!-- netAgent_OperationsTab.CycleCount -->
+      <class name="netAgent_Reports.InventoryPullReport">
+        <methods>
+          <include name="getResult"/>
+          <include name="testMethodName"/>
+        </methods>
+      </class> <!-- netAgent_Reports.InventoryPullReport -->
+      <class name="netAgent_OperationsTab.Replenish">
+        <methods>
+          <include name="getResult"/>
+          <include name="testMethodName"/>
+        </methods>
+      </class> <!-- netAgent_OperationsTab.Replenish -->
+      <class name="netAgent_Tools.MileageCalc">
+        <methods>
+          <include name="getResult"/>
+          <include name="testMethodName"/>
+        </methods>
+      </class> <!-- netAgent_Tools.MileageCalc -->
+      <class name="netAgent_Reports.AgentActivityDetail">
+        <methods>
+          <include name="getResult"/>
+          <include name="testMethodName"/>
+        </methods>
+      </class> <!-- netAgent_Reports.AgentActivityDetail -->
+      <class name="netAgent_OperationsTab.TaskLog">
+        <methods>
+          <include name="getResult"/>
+          <include name="testMethodName"/>
+          <include name="taskLog"/>
+        </methods>
+      </class> <!-- netAgent_OperationsTab.TaskLog -->
+      <class name="netAgent_Reports.InventoryTransactionReport">
+        <methods>
+          <include name="getResult"/>
+          <include name="testMethodName"/>
+        </methods>
+      </class> <!-- netAgent_Reports.InventoryTransactionReport -->
       <class name="netAgent_LogOutDiv.ContactUS">
         <methods>
           <include name="getResult"/>
           <include name="testMethodName"/>
-          <include name="Login"/>
         </methods>
       </class> <!-- netAgent_LogOutDiv.ContactUS -->
-      <class name="netAgent_LogOutDiv.AgentElevatesRiskTraining">
-        <methods>
-          <include name="beforeMethod"/>
-          <include name="Login"/>
-        </methods>
-      </class> <!-- netAgent_LogOutDiv.AgentElevatesRiskTraining -->
-      <class name="netAgent_LogOutDiv.AgentTSATraining">
-        <methods>
-          <include name="Login"/>
-          <include name="AgentTSA"/>
-        </methods>
-      </class> <!-- netAgent_LogOutDiv.AgentTSATraining -->
-    </classes>
-  </test> <!-- AgentTSATraining(failed) -->
-  <test parallel="none" name="AgentElevatedTraining(failed)">
-    <classes>
-      <class name="netAgent_LogOutDiv.ContactUS">
+      <class name="netAgent_Inventory.CycleCountBin">
         <methods>
           <include name="getResult"/>
           <include name="testMethodName"/>
-          <include name="Login"/>
         </methods>
-      </class> <!-- netAgent_LogOutDiv.ContactUS -->
+      </class> <!-- netAgent_Inventory.CycleCountBin -->
       <class name="netAgent_LogOutDiv.AgentElevatesRiskTraining">
         <methods>
-          <include name="beforeMethod"/>
-          <include name="AgentRisk"/>
-          <include name="Login"/>
+          <include name="getResult"/>
+          <include name="testMethodName"/>
         </methods>
       </class> <!-- netAgent_LogOutDiv.AgentElevatesRiskTraining -->
-      <class name="netAgent_LogOutDiv.AgentTSATraining">
+      <class name="netAgent_Reports.QuarantineReport">
         <methods>
-          <include name="Login"/>
+          <include name="getResult"/>
+          <include name="testMethodName"/>
         </methods>
-      </class> <!-- netAgent_LogOutDiv.AgentTSATraining -->
+      </class> <!-- netAgent_Reports.QuarantineReport -->
+      <class name="netAgent_OperationsTab.OrderSearch">
+        <methods>
+          <include name="getResult"/>
+          <include name="testMethodName"/>
+        </methods>
+      </class> <!-- netAgent_OperationsTab.OrderSearch -->
+      <class name="netAgent_Inventory.FSLStorage">
+        <methods>
+          <include name="getResult"/>
+          <include name="testMethodName"/>
+        </methods>
+      </class> <!-- netAgent_Inventory.FSLStorage -->
+      <class name="netAgent_Admin.UserList">
+        <methods>
+          <include name="getResult"/>
+          <include name="testMethodName"/>
+        </methods>
+      </class> <!-- netAgent_Admin.UserList -->
     </classes>
-  </test> <!-- AgentElevatedTraining(failed) -->
+  </test> <!-- TaskLog(failed) -->
 </suite> <!-- Failed suite [NetAgentSmokeTest] -->

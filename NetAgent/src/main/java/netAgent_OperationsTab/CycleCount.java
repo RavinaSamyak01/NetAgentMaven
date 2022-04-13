@@ -1,5 +1,7 @@
 package netAgent_OperationsTab;
 
+import java.util.List;
+
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
@@ -39,10 +41,24 @@ public class CycleCount extends BaseInit {
 			logger.info("Click on Start button");
 			wait.until(ExpectedConditions.invisibilityOfElementLocated(By.xpath("//*[@class=\"ajax-loadernew\"]")));
 
-			// --Wait for workOrder ID
-			WebElement WorkOID = Driver.findElement(By.id("workid"));
-			wait.until(ExpectedConditions.visibilityOf(WorkOID));
-			logger.info("WorkOrderID after start==" + WorkOID.getText());
+			try {
+				// --Wait for workOrder ID
+				WebElement WorkOID = Driver.findElement(By.id("workid"));
+				wait.until(ExpectedConditions.visibilityOf(WorkOID));
+				logger.info("WorkOrderID after start==" + WorkOID.getText());
+
+			} catch (Exception Part) {
+				WebElement PartError = Driver.findElement(By.id("CycleNoGrid"));
+				if (PartError.isDisplayed()) {
+					logger.info("Part validation is displayed==" + PartError.getText());
+
+				} else {
+					logger.info("Unable to start cycle");
+					getScreenshot(Driver, "CycleCountStartError");
+
+				}
+			}
+
 		}
 
 		// --if Reset button is exist
@@ -60,10 +76,86 @@ public class CycleCount extends BaseInit {
 			logger.info("WorkOrderID after Reset==" + WorkOID.getText());
 		}
 
+		// --Start both the cycle count
+		if (!Driver.findElements(By.xpath("//a[@class=\"dx-link\"]")).isEmpty()) {
+			logger.info("If action column is not empty");
+			getScreenshot(Driver, "CycleCountStart");
+
+			// --Click on start button of first row
+
+			List<WebElement> multistart = Driver.findElements(By.xpath("//a[@class='dx-link' and text()='Start']"));
+			logger.info("Total number of cycles==" + multistart.size());
+
+			for (int cycle = 0; cycle < multistart.size(); cycle++) {
+				try {
+					multistart.get(cycle).click();
+					logger.info("Click on Start button");
+					wait.until(ExpectedConditions
+							.invisibilityOfElementLocated(By.xpath("//*[@class=\"ajax-loadernew\"]")));
+					try {
+						// --Wait for workOrder ID
+						WebElement WorkOID = Driver.findElement(By.id("workid"));
+						wait.until(ExpectedConditions.visibilityOf(WorkOID));
+						String[] WOID = WorkOID.getText().split(":");
+						String wOID = WOID[1].trim();
+						logger.info("WorkOrderID after start==" + wOID);
+						setData("OrderSearch", cycle + 1, 13, wOID);
+						logger.info("Inserted workorderID in excel");
+
+					} catch (Exception Part) {
+						WebElement PartError = Driver.findElement(By.id("CycleNoGrid"));
+						if (PartError.isDisplayed()) {
+							logger.info("Part validation is displayed==" + PartError.getText());
+
+						} else {
+							logger.info("Unable to start cycle");
+							getScreenshot(Driver, "CycleCountStartError");
+
+						}
+					}
+				} catch (Exception staleelement) {
+					List<WebElement> multistart1 = Driver
+							.findElements(By.xpath("//a[@class='dx-link' and text()='Start']"));
+					logger.info("Total number of cycles==" + multistart1.size());
+
+					for (int cycle1 = 0; cycle1 < multistart1.size(); cycle1++) {
+						multistart1.get(cycle1).click();
+						logger.info("Click on Start button");
+						wait.until(ExpectedConditions
+								.invisibilityOfElementLocated(By.xpath("//*[@class=\"ajax-loadernew\"]")));
+						try {
+							// --Wait for workOrder ID
+							WebElement WorkOID = Driver.findElement(By.id("workid"));
+							wait.until(ExpectedConditions.visibilityOf(WorkOID));
+							String[] WOID = WorkOID.getText().split(":");
+							String wOID = WOID[1].trim();
+							logger.info("WorkOrderID after start==" + wOID);
+							setData("OrderSearch", cycle1 + 1, 13, wOID);
+							logger.info("Inserted workorderID in excel");
+
+						} catch (Exception Part) {
+							WebElement PartError = Driver.findElement(By.id("CycleNoGrid"));
+							if (PartError.isDisplayed()) {
+								logger.info("Part validation is displayed==" + PartError.getText());
+
+							} else {
+								logger.info("Unable to start cycle");
+								getScreenshot(Driver, "CycleCountStartError");
+
+							}
+						}
+
+					}
+				}
+			}
+
+		}
+
 		Driver.findElement(By.id("imgNGLLogo")).click();
 		wait.until(ExpectedConditions.invisibilityOfElementLocated(By.xpath("//*[@class=\"ajax-loadernew\"]")));
 		wait.until(ExpectedConditions.visibilityOfAllElementsLocatedBy(By.className("welcomecontent")));
 		logger.info("=======CycleCount Test End=======");
 		msg.append("=======CycleCount Test End=======" + "\n\n");
+
 	}
 }

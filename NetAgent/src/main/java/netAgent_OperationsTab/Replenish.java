@@ -110,6 +110,8 @@ public class Replenish extends BaseInit {
 		logger.info("Click on Save Location");
 
 		// --Cancel Add Location
+		wait.until(ExpectedConditions
+				.elementToBeClickable(By.xpath("//*[@id=\"idsavelocationprocess\"]/i[@id=\"idiconsave\"]")));
 		Driver.findElement(By.xpath("//*[@id=\"idsavelocationprocess\"]/i[@id=\"idiconsave\"]")).click();
 		logger.info("Click on Cancel Location");
 		Thread.sleep(2000);
