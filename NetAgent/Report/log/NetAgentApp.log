@@ -1,24 +1,49 @@
-2022-04-12 17:30:43,526 [main] INFO CycleCount - initialization of the properties file is done
-2022-04-12 17:30:43,767 [main] INFO io.github.bonigarcia.wdm.WebDriverManager - Using chromedriver 100.0.4896.60 (since Google Chrome 100 is installed in your machine)
-2022-04-12 17:30:43,791 [main] INFO io.github.bonigarcia.wdm.WebDriverManager - Exporting webdriver.chrome.driver as C:\Users\rprajapati\.m2\repository\webdriver\chromedriver\win32\100.0.4896.60\chromedriver.exe
-2022-04-12 17:30:50,871 [main] INFO CycleCount - Url opened
-2022-04-12 17:31:08,682 [main] INFO CycleCount - =======CycleCount Test Start=======
-2022-04-12 17:31:08,894 [main] INFO CycleCount - Click on Operations
-2022-04-12 17:31:09,046 [main] INFO CycleCount - Click on CycleCount
-2022-04-12 17:31:11,632 [main] INFO CycleCount - If action column is not empty
-2022-04-12 17:31:11,940 [main] INFO CycleCount - Click on Start button
-2022-04-12 17:31:13,692 [main] INFO CycleCount - WorkOrderID after start==Work Order Id : 1685112
-2022-04-12 17:31:13,710 [main] INFO CycleCount - If Reset button is exist
-2022-04-12 17:31:14,004 [main] INFO CycleCount - Click on Reset button
-2022-04-12 17:31:15,737 [main] INFO CycleCount - WorkOrderID after Reset==Cycle Count of Work Order Id :1685112 is Reset
-2022-04-12 17:31:15,750 [main] INFO CycleCount - If action column is not empty
-2022-04-12 17:31:15,920 [main] INFO CycleCount - Total number of cycles==2
-2022-04-12 17:31:16,035 [main] INFO CycleCount - Click on Start button
-2022-04-12 17:31:17,792 [main] INFO CycleCount - WorkOrderID after start==1685113
-2022-04-12 17:31:17,870 [main] INFO CycleCount - Inserted workorderID in excel
-2022-04-12 17:31:17,903 [main] INFO CycleCount - Total number of cycles==1
-2022-04-12 17:31:18,017 [main] INFO CycleCount - Click on Start button
-2022-04-12 17:32:08,945 [main] INFO CycleCount - Part validation is displayed==Part(s) not found.
-2022-04-12 17:32:10,321 [main] INFO CycleCount - =======CycleCount Test End=======
-2022-04-12 17:32:10,775 [main] INFO CycleCount - Clicked on LogOut
-2022-04-12 17:32:14,828 [main] INFO CycleCount - ====Sending Email=====
+2022-04-14 17:52:52,534 [main] INFO CCAttempt - initialization of the properties file is done
+2022-04-14 17:52:52,730 [main] INFO io.github.bonigarcia.wdm.WebDriverManager - Using chromedriver 100.0.4896.60 (since Google Chrome 100 is installed in your machine)
+2022-04-14 17:52:52,744 [main] INFO io.github.bonigarcia.wdm.WebDriverManager - Exporting webdriver.chrome.driver as C:\Users\rprajapati\.m2\repository\webdriver\chromedriver\win32\100.0.4896.60\chromedriver.exe
+2022-04-14 17:52:57,999 [main] INFO CCAttempt - Url opened
+2022-04-14 17:53:06,973 [main] INFO CCAttempt - Clicked on Operations
+2022-04-14 17:53:07,042 [main] INFO CCAttempt - Clicked on TaskLog
+2022-04-14 17:53:09,656 [main] INFO CCAttempt - ===CCAttempt Test Start===
+2022-04-14 17:53:09,793 [main] INFO CCAttempt - Click on Inventory Tab
+2022-04-14 17:53:10,771 [main] INFO CCAttempt - Total No of job in Inventory Tab is/are==65
+2022-04-14 17:53:10,802 [main] INFO CCAttempt - WorkOrderID is==1685235
+2022-04-14 17:53:10,849 [main] INFO CCAttempt - Clear Search box
+2022-04-14 17:53:10,908 [main] INFO CCAttempt - Enter value in search input
+2022-04-14 17:53:10,977 [main] INFO CCAttempt - Clicked on Search
+2022-04-14 17:53:13,207 [main] INFO CCAttempt - Stage is==Cycle Count Attempt
+2022-04-14 17:53:13,235 [main] INFO CCAttempt - Parts is available, Total Parts==1
+2022-04-14 17:53:13,262 [main] INFO CCAttempt - Total number of records==Page 1 of 1 (51 items)
+2022-04-14 17:53:13,289 [main] INFO CCAttempt - It is CCAttempt1
+2022-04-14 17:53:13,289 [main] INFO CCAttempt - ==Testing CCAttempt1==
+2022-04-14 17:53:13,352 [main] INFO CCAttempt - Clicked on Export button
+2022-04-14 17:53:14,020 [main] INFO CCAttempt - Clicked on Import button
+2022-04-14 17:53:15,054 [main] INFO CCAttempt - Send file to input file
+2022-04-14 17:53:17,138 [main] INFO CCAttempt - Click on Upload button
+2022-04-14 17:53:17,181 [main] INFO CCAttempt - File is uploaded successfully
+2022-04-14 17:53:17,234 [main] INFO CCAttempt - Clicked on Exception View
+2022-04-14 17:53:19,057 [main] INFO CCAttempt - Clear Email input
+2022-04-14 17:53:19,133 [main] INFO CCAttempt - Enter value in Email input
+2022-04-14 17:53:19,192 [main] INFO CCAttempt - Click on Send button
+2022-04-14 17:53:19,271 [main] INFO CCAttempt - EmailID validation is displayed==Please enter valid email.
+2022-04-14 17:53:19,307 [main] INFO CCAttempt - Clear Email input
+2022-04-14 17:53:19,385 [main] INFO CCAttempt - Enter value in Email input
+2022-04-14 17:53:19,427 [main] INFO CCAttempt - Click on Send button
+2022-04-14 17:53:19,491 [main] INFO CCAttempt - Valid EmailID validation is displayed==Please enter valid email.
+2022-04-14 17:53:19,526 [main] INFO CCAttempt - Clear Email input
+2022-04-14 17:53:19,657 [main] INFO CCAttempt - Enter value in Email input
+2022-04-14 17:53:20,258 [main] INFO CCAttempt - Click on Send button
+2022-04-14 17:53:22,714 [main] INFO CCAttempt - Email successfully send==Email Sent successfully!
+2022-04-14 17:53:23,273 [main] INFO CCAttempt - Click on Export button of Exception View
+2022-04-14 17:53:34,993 [main] INFO CCAttempt - Click on Close button of Exception View
+2022-04-14 17:53:35,069 [main] INFO CCAttempt - Total parts are==52
+2022-04-14 17:53:35,105 [main] INFO CCAttempt - Value of Result of 1 Part is==FAIL
+2022-04-14 17:53:35,134 [main] INFO CCAttempt - Stock Qty for Part 1 is==1
+2022-04-14 17:53:35,166 [main] INFO CCAttempt - CC Qty for Part 1 is==0
+2022-04-14 17:53:35,166 [main] INFO CCAttempt - Stock Qty and CC Qty are different, Result is actually FAIL
+2022-04-14 17:53:35,274 [main] INFO CCAttempt - Clicked on CCQty
+2022-04-14 17:53:35,340 [main] INFO CCAttempt - Total parts are==52
+2022-04-14 17:53:35,369 [main] INFO CCAttempt - Clicked on CCQty
+2022-04-14 17:53:35,808 [main] INFO CCAttempt - Entered CC Qty equal to Stock Qty
+2022-04-14 17:53:36,315 [main] INFO CCAttempt - Clicked on LogOut
+2022-04-14 17:54:14,392 [main] INFO CCAttempt - ====Sending Email=====
