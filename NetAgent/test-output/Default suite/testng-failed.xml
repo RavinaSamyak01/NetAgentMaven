@@ -3,15 +3,15 @@
 <suite parallel="none" name="Failed suite [Default suite]">
   <test parallel="none" name="Default test(failed)">
     <classes>
-      <class name="netAgent_OperationsTab.CCAttempt">
+      <class name="netAgent_OperationsTab.CycleCount">
         <methods>
+          <include name="cycleCount"/>
           <include name="getResult"/>
           <include name="testMethodName"/>
-          <include name="ccAttempt"/>
           <include name="beforeMethod"/>
           <include name="SendEmail"/>
         </methods>
-      </class> <!-- netAgent_OperationsTab.CCAttempt -->
+      </class> <!-- netAgent_OperationsTab.CycleCount -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

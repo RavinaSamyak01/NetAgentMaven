@@ -99,7 +99,7 @@ public class CycleCount extends BaseInit {
 						String[] WOID = WorkOID.getText().split(":");
 						String wOID = WOID[1].trim();
 						logger.info("WorkOrderID after start==" + wOID);
-						setData("OrderSearch", cycle + 1, 13, wOID);
+						setData("OrderSearch", 1, 13, wOID);
 						logger.info("Inserted workorderID in excel");
 
 					} catch (Exception Part) {
@@ -118,7 +118,7 @@ public class CycleCount extends BaseInit {
 							.findElements(By.xpath("//a[@class='dx-link' and text()='Start']"));
 					logger.info("Total number of cycles==" + multistart1.size());
 
-					for (int cycle1 = 0; cycle1 < multistart1.size(); cycle1++) {
+					for (int cycle1 = cycle; cycle1 < multistart1.size(); cycle1++) {
 						multistart1.get(cycle1).click();
 						logger.info("Click on Start button");
 						wait.until(ExpectedConditions
@@ -130,8 +130,9 @@ public class CycleCount extends BaseInit {
 							String[] WOID = WorkOID.getText().split(":");
 							String wOID = WOID[1].trim();
 							logger.info("WorkOrderID after start==" + wOID);
-							setData("OrderSearch", cycle1 + 1, 13, wOID);
+							setData("OrderSearch", 1, 13, wOID);
 							logger.info("Inserted workorderID in excel");
+							break;
 
 						} catch (Exception Part) {
 							WebElement PartError = Driver.findElement(By.id("CycleNoGrid"));

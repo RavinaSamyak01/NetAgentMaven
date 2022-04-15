@@ -414,12 +414,12 @@ public class BaseInit {
 		File src = new File(FilePath);
 		FileInputStream fis = new FileInputStream(src);
 		Workbook workbook = WorkbookFactory.create(fis);
-		FileOutputStream fisO = new FileOutputStream(src);
+		FileOutputStream fos1 = new FileOutputStream(src);
 		Sheet sh = workbook.getSheet(sheetName);
 
 		sh.getRow(row).createCell(col).setCellValue(value);
-		workbook.write(fisO);
-		fisO.close();
+		workbook.write(fos1);
+		fos1.close();
 	}
 
 	public static int getTotalRow(String sheetName)

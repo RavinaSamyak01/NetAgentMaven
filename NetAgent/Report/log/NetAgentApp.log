@@ -1,49 +1,81 @@
-2022-04-14 17:52:52,534 [main] INFO CCAttempt - initialization of the properties file is done
-2022-04-14 17:52:52,730 [main] INFO io.github.bonigarcia.wdm.WebDriverManager - Using chromedriver 100.0.4896.60 (since Google Chrome 100 is installed in your machine)
-2022-04-14 17:52:52,744 [main] INFO io.github.bonigarcia.wdm.WebDriverManager - Exporting webdriver.chrome.driver as C:\Users\rprajapati\.m2\repository\webdriver\chromedriver\win32\100.0.4896.60\chromedriver.exe
-2022-04-14 17:52:57,999 [main] INFO CCAttempt - Url opened
-2022-04-14 17:53:06,973 [main] INFO CCAttempt - Clicked on Operations
-2022-04-14 17:53:07,042 [main] INFO CCAttempt - Clicked on TaskLog
-2022-04-14 17:53:09,656 [main] INFO CCAttempt - ===CCAttempt Test Start===
-2022-04-14 17:53:09,793 [main] INFO CCAttempt - Click on Inventory Tab
-2022-04-14 17:53:10,771 [main] INFO CCAttempt - Total No of job in Inventory Tab is/are==65
-2022-04-14 17:53:10,802 [main] INFO CCAttempt - WorkOrderID is==1685235
-2022-04-14 17:53:10,849 [main] INFO CCAttempt - Clear Search box
-2022-04-14 17:53:10,908 [main] INFO CCAttempt - Enter value in search input
-2022-04-14 17:53:10,977 [main] INFO CCAttempt - Clicked on Search
-2022-04-14 17:53:13,207 [main] INFO CCAttempt - Stage is==Cycle Count Attempt
-2022-04-14 17:53:13,235 [main] INFO CCAttempt - Parts is available, Total Parts==1
-2022-04-14 17:53:13,262 [main] INFO CCAttempt - Total number of records==Page 1 of 1 (51 items)
-2022-04-14 17:53:13,289 [main] INFO CCAttempt - It is CCAttempt1
-2022-04-14 17:53:13,289 [main] INFO CCAttempt - ==Testing CCAttempt1==
-2022-04-14 17:53:13,352 [main] INFO CCAttempt - Clicked on Export button
-2022-04-14 17:53:14,020 [main] INFO CCAttempt - Clicked on Import button
-2022-04-14 17:53:15,054 [main] INFO CCAttempt - Send file to input file
-2022-04-14 17:53:17,138 [main] INFO CCAttempt - Click on Upload button
-2022-04-14 17:53:17,181 [main] INFO CCAttempt - File is uploaded successfully
-2022-04-14 17:53:17,234 [main] INFO CCAttempt - Clicked on Exception View
-2022-04-14 17:53:19,057 [main] INFO CCAttempt - Clear Email input
-2022-04-14 17:53:19,133 [main] INFO CCAttempt - Enter value in Email input
-2022-04-14 17:53:19,192 [main] INFO CCAttempt - Click on Send button
-2022-04-14 17:53:19,271 [main] INFO CCAttempt - EmailID validation is displayed==Please enter valid email.
-2022-04-14 17:53:19,307 [main] INFO CCAttempt - Clear Email input
-2022-04-14 17:53:19,385 [main] INFO CCAttempt - Enter value in Email input
-2022-04-14 17:53:19,427 [main] INFO CCAttempt - Click on Send button
-2022-04-14 17:53:19,491 [main] INFO CCAttempt - Valid EmailID validation is displayed==Please enter valid email.
-2022-04-14 17:53:19,526 [main] INFO CCAttempt - Clear Email input
-2022-04-14 17:53:19,657 [main] INFO CCAttempt - Enter value in Email input
-2022-04-14 17:53:20,258 [main] INFO CCAttempt - Click on Send button
-2022-04-14 17:53:22,714 [main] INFO CCAttempt - Email successfully send==Email Sent successfully!
-2022-04-14 17:53:23,273 [main] INFO CCAttempt - Click on Export button of Exception View
-2022-04-14 17:53:34,993 [main] INFO CCAttempt - Click on Close button of Exception View
-2022-04-14 17:53:35,069 [main] INFO CCAttempt - Total parts are==52
-2022-04-14 17:53:35,105 [main] INFO CCAttempt - Value of Result of 1 Part is==FAIL
-2022-04-14 17:53:35,134 [main] INFO CCAttempt - Stock Qty for Part 1 is==1
-2022-04-14 17:53:35,166 [main] INFO CCAttempt - CC Qty for Part 1 is==0
-2022-04-14 17:53:35,166 [main] INFO CCAttempt - Stock Qty and CC Qty are different, Result is actually FAIL
-2022-04-14 17:53:35,274 [main] INFO CCAttempt - Clicked on CCQty
-2022-04-14 17:53:35,340 [main] INFO CCAttempt - Total parts are==52
-2022-04-14 17:53:35,369 [main] INFO CCAttempt - Clicked on CCQty
-2022-04-14 17:53:35,808 [main] INFO CCAttempt - Entered CC Qty equal to Stock Qty
-2022-04-14 17:53:36,315 [main] INFO CCAttempt - Clicked on LogOut
-2022-04-14 17:54:14,392 [main] INFO CCAttempt - ====Sending Email=====
+2022-04-15 16:44:54,163 [main] INFO CCAttempt - initialization of the properties file is done
+2022-04-15 16:44:54,314 [main] INFO io.github.bonigarcia.wdm.WebDriverManager - Using chromedriver 100.0.4896.60 (since Google Chrome 100 is installed in your machine)
+2022-04-15 16:44:54,327 [main] INFO io.github.bonigarcia.wdm.WebDriverManager - Exporting webdriver.chrome.driver as C:\Users\rprajapati\.m2\repository\webdriver\chromedriver\win32\100.0.4896.60\chromedriver.exe
+2022-04-15 16:45:02,119 [main] INFO CCAttempt - Url opened
+2022-04-15 16:45:13,324 [main] INFO CCAttempt - Clicked on Operations
+2022-04-15 16:45:13,392 [main] INFO CCAttempt - Clicked on TaskLog
+2022-04-15 16:45:16,486 [main] INFO CCAttempt - ===CCAttempt Test Start===
+2022-04-15 16:45:16,624 [main] INFO CCAttempt - Click on Inventory Tab
+2022-04-15 16:45:17,639 [main] INFO CCAttempt - Total No of job in Inventory Tab is/are==67
+2022-04-15 16:45:17,675 [main] INFO CCAttempt - WorkOrderID is==1685268
+2022-04-15 16:45:17,736 [main] INFO CCAttempt - Clear Search box
+2022-04-15 16:45:17,794 [main] INFO CCAttempt - Enter value in search input
+2022-04-15 16:45:17,861 [main] INFO CCAttempt - Clicked on Search
+2022-04-15 16:45:21,367 [main] INFO CCAttempt - Stage is==Cycle Count Attempt
+2022-04-15 16:45:21,447 [main] INFO CCAttempt - Uncheck the checkbox of Remove Zero Stock Parts
+2022-04-15 16:45:23,523 [main] INFO CCAttempt - Total number of records==Page 1 of 1 (51 items)
+2022-04-15 16:45:23,560 [main] INFO CCAttempt - It is CCAttempt1
+2022-04-15 16:45:23,561 [main] INFO CCAttempt - ==Testing CCAttempt1==
+2022-04-15 16:45:23,636 [main] INFO CCAttempt - Clicked on Export button
+2022-04-15 16:45:24,902 [main] INFO CCAttempt - Clicked on Import button
+2022-04-15 16:45:27,099 [main] INFO CCAttempt - Send file to input file
+2022-04-15 16:45:29,188 [main] INFO CCAttempt - Click on Upload button
+2022-04-15 16:45:29,228 [main] INFO CCAttempt - File is uploaded successfully
+2022-04-15 16:45:29,285 [main] INFO CCAttempt - Clicked on Exception View
+2022-04-15 16:45:31,099 [main] INFO CCAttempt - Clear Email input
+2022-04-15 16:45:31,175 [main] INFO CCAttempt - Enter value in Email input
+2022-04-15 16:45:31,233 [main] INFO CCAttempt - Click on Send button
+2022-04-15 16:45:31,309 [main] INFO CCAttempt - EmailID validation is displayed==Please enter valid email.
+2022-04-15 16:45:31,346 [main] INFO CCAttempt - Clear Email input
+2022-04-15 16:45:31,419 [main] INFO CCAttempt - Enter value in Email input
+2022-04-15 16:45:31,461 [main] INFO CCAttempt - Click on Send button
+2022-04-15 16:45:31,527 [main] INFO CCAttempt - Valid EmailID validation is displayed==Please enter valid email.
+2022-04-15 16:45:31,568 [main] INFO CCAttempt - Clear Email input
+2022-04-15 16:45:31,681 [main] INFO CCAttempt - Enter value in Email input
+2022-04-15 16:45:31,736 [main] INFO CCAttempt - Click on Send button
+2022-04-15 16:45:31,801 [main] INFO CCAttempt - Email is not send successfully
+2022-04-15 16:45:31,871 [main] INFO CCAttempt - Click on Export button of Exception View
+2022-04-15 16:45:38,969 [main] INFO CCAttempt - Click on Close button of Exception View
+2022-04-15 16:45:39,040 [main] INFO CCAttempt - Total parts are==52
+2022-04-15 16:45:39,078 [main] INFO CCAttempt - Value of Result of 1 Part is==SUCCESS
+2022-04-15 16:45:39,113 [main] INFO CCAttempt - Stock Qty for Part 1 is==0
+2022-04-15 16:45:39,147 [main] INFO CCAttempt - CC Qty for Part 1 is==0
+2022-04-15 16:45:39,148 [main] INFO CCAttempt - Stock Qty and CC Qty are Same, Result is actually SUCCESS
+2022-04-15 16:45:39,259 [main] INFO CCAttempt - Clicked on CCQty
+2022-04-15 16:45:39,319 [main] INFO CCAttempt - Total parts are==52
+2022-04-15 16:45:39,348 [main] INFO CCAttempt - Clicked on CCQty
+2022-04-15 16:45:39,923 [main] INFO CCAttempt - Entered CC Qty different from Stock Qty
+2022-04-15 16:45:41,860 [main] INFO CCAttempt - Click on Save button
+2022-04-15 16:45:42,450 [main] INFO CCAttempt - ==Testing CCAttempt2==
+2022-04-15 16:45:42,483 [main] INFO CCAttempt - Name of the stage is==CC ATTEMPT 2
+2022-04-15 16:45:43,155 [main] INFO CCAttempt - Click on the record
+2022-04-15 16:45:43,798 [main] INFO CCAttempt - Stage is==Cycle Count Attempt
+2022-04-15 16:45:43,891 [main] INFO CCAttempt - Uncheck the checkbox of Remove Zero Stock Parts
+2022-04-15 16:45:45,957 [main] INFO CCAttempt - Total number of records==Page 1 of 1 (51 items)
+2022-04-15 16:45:45,989 [main] INFO CCAttempt - It is CCAttempt2
+2022-04-15 16:45:46,024 [main] INFO CCAttempt - Total parts are==52
+2022-04-15 16:45:46,055 [main] INFO CCAttempt - Value of Result of 1 Part is==FAIL
+2022-04-15 16:45:46,108 [main] INFO CCAttempt - Click on Save button
+2022-04-15 16:45:46,204 [main] INFO CCAttempt - Dialogue Message is==Are you sure you want to end the Cycle Count operation?
+2022-04-15 16:45:48,225 [main] INFO CCAttempt - Click on YES button
+2022-04-15 16:46:05,764 [main] INFO CCAttempt - ==Testing CONF RECONC==
+2022-04-15 16:46:07,993 [main] INFO CCAttempt - Name of the stage is==CONF RECONC
+2022-04-15 16:46:10,810 [main] INFO CCAttempt - Click on the record
+2022-04-15 16:46:18,651 [main] INFO CCAttempt - Stage is==Confirm Reconciliation
+2022-04-15 16:46:19,396 [main] INFO CCAttempt - IT is Reconcilation
+2022-04-15 16:46:20,769 [main] INFO CCAttempt - Click on Expand All button
+2022-04-15 16:46:24,194 [main] INFO CCAttempt - Click on Collapse All button
+2022-04-15 16:46:27,379 [main] INFO CCAttempt - Click on Collapse All Img
+2022-04-15 16:46:44,575 [main] INFO CCAttempt - Total parts are==1
+2022-04-15 16:46:45,518 [main] INFO CCAttempt - Moved to ReconcileQty
+2022-04-15 16:46:51,729 [main] INFO CCAttempt - Cleared Reconcileqty
+2022-04-15 16:46:52,536 [main] INFO CCAttempt - Entered Reconcileqty0
+2022-04-15 16:46:52,924 [main] INFO CCAttempt - Enetered Reconcileqty in 0 part
+2022-04-15 16:47:00,903 [main] INFO CCAttempt - Cleared Remarks
+2022-04-15 16:47:01,497 [main] INFO CCAttempt - Entered Remarks
+2022-04-15 16:47:02,164 [main] INFO CCAttempt - Enetered Remarks in 0 part
+2022-04-15 16:47:06,651 [main] INFO CCAttempt - Click on Reconcile Exception dropdown
+2022-04-15 16:47:07,537 [main] INFO CCAttempt - Selected Reconcile Exception for 0 part
+2022-04-15 16:47:18,315 [main] INFO CCAttempt - Click on Save button
+2022-04-15 16:48:04,782 [main] INFO CCAttempt - Clicked on LogOut
+2022-04-15 16:48:33,561 [main] INFO CCAttempt - ====Sending Email=====
