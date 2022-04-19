@@ -2,46 +2,46 @@
 <testng-results total="1" passed="1" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2022-04-15T11:00:46Z" name="Default suite" finished-at="2022-04-15T11:01:34Z" duration-ms="48247">
+  <suite started-at="2022-04-19T06:43:52Z" name="Default suite" finished-at="2022-04-19T06:49:02Z" duration-ms="310068">
     <groups>
     </groups>
-    <test started-at="2022-04-15T11:00:46Z" name="Default test" finished-at="2022-04-15T11:01:34Z" duration-ms="48247">
-      <class name="netAgent_OperationsTab.CCAttempt">
-        <test-method is-config="true" signature="beforeMethod()[pri:0, instance:netAgent_OperationsTab.CCAttempt@2e48362c]" started-at="2022-04-15T16:30:11Z" name="beforeMethod" finished-at="2022-04-15T16:30:46Z" duration-ms="35342" status="PASS">
+    <test started-at="2022-04-19T06:43:52Z" name="Default test" finished-at="2022-04-19T06:49:02Z" duration-ms="310068">
+      <class name="netAgent_OperationsTab.OrderProcessing">
+        <test-method is-config="true" signature="beforeMethod()[pri:0, instance:netAgent_OperationsTab.OrderProcessing@3bd323e9]" started-at="2022-04-19T12:13:23Z" name="beforeMethod" finished-at="2022-04-19T12:13:52Z" duration-ms="28951" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeMethod -->
-        <test-method is-config="true" signature="testMethodName(java.lang.reflect.Method)[pri:0, instance:netAgent_OperationsTab.CCAttempt@2e48362c]" started-at="2022-04-15T16:30:46Z" name="testMethodName" finished-at="2022-04-15T16:30:46Z" duration-ms="7" status="PASS">
+        <test-method is-config="true" signature="testMethodName(java.lang.reflect.Method)[pri:0, instance:netAgent_OperationsTab.OrderProcessing@3bd323e9]" started-at="2022-04-19T12:13:52Z" name="testMethodName" finished-at="2022-04-19T12:13:52Z" duration-ms="4" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[public void netAgent_OperationsTab.CCAttempt.ccAttempt() throws java.io.IOException,org.apache.poi.EncryptedDocumentException,org.apache.poi.openxml4j.exceptions.InvalidFormatException,java.lang.InterruptedException,java.awt.AWTException]]>
+                <![CDATA[public static void netAgent_OperationsTab.OrderProcessing.orderProcess() throws org.apache.poi.EncryptedDocumentException,org.apache.poi.openxml4j.exceptions.InvalidFormatException,java.io.IOException,java.lang.InterruptedException]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testMethodName -->
-        <test-method signature="ccAttempt()[pri:0, instance:netAgent_OperationsTab.CCAttempt@2e48362c]" started-at="2022-04-15T16:30:46Z" name="ccAttempt" finished-at="2022-04-15T16:31:34Z" duration-ms="48009" status="PASS">
+        <test-method signature="orderProcess()[pri:0, instance:netAgent_OperationsTab.OrderProcessing@3bd323e9]" started-at="2022-04-19T12:13:52Z" name="orderProcess" finished-at="2022-04-19T12:19:01Z" duration-ms="309841" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- ccAttempt -->
-        <test-method is-config="true" signature="getResult(org.testng.ITestResult)[pri:0, instance:netAgent_OperationsTab.CCAttempt@2e48362c]" started-at="2022-04-15T16:31:34Z" name="getResult" finished-at="2022-04-15T16:31:34Z" duration-ms="211" status="PASS">
+        </test-method> <!-- orderProcess -->
+        <test-method is-config="true" signature="getResult(org.testng.ITestResult)[pri:0, instance:netAgent_OperationsTab.OrderProcessing@3bd323e9]" started-at="2022-04-19T12:19:01Z" name="getResult" finished-at="2022-04-19T12:19:02Z" duration-ms="205" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[TestResult name=ccAttempt status=SUCCESS method=CCAttempt.ccAttempt()[pri:0, instance:netAgent_OperationsTab.CCAttempt@2e48362c] output={null}]]]>
+                <![CDATA[[TestResult name=orderProcess status=SUCCESS method=OrderProcessing.orderProcess()[pri:0, instance:netAgent_OperationsTab.OrderProcessing@3bd323e9] output={null}]]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- getResult -->
-        <test-method is-config="true" signature="SendEmail()[pri:0, instance:netAgent_OperationsTab.CCAttempt@2e48362c]" started-at="2022-04-15T16:31:34Z" name="SendEmail" finished-at="2022-04-15T16:31:46Z" duration-ms="11564" status="PASS">
+        <test-method is-config="true" signature="SendEmail()[pri:0, instance:netAgent_OperationsTab.OrderProcessing@3bd323e9]" started-at="2022-04-19T12:19:02Z" name="SendEmail" finished-at="2022-04-19T12:19:07Z" duration-ms="5165" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- SendEmail -->
-      </class> <!-- netAgent_OperationsTab.CCAttempt -->
+      </class> <!-- netAgent_OperationsTab.OrderProcessing -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>
