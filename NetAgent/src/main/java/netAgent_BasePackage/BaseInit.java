@@ -9,6 +9,7 @@ import java.text.DateFormat;
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
 import java.util.Date;
+import java.util.HashMap;
 import java.util.List;
 import java.util.Properties;
 import java.util.ResourceBundle;
@@ -33,6 +34,7 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.interactions.Actions;
+import org.openqa.selenium.remote.CapabilityType;
 import org.openqa.selenium.remote.DesiredCapabilities;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
@@ -84,6 +86,7 @@ public class BaseInit {
 			DesiredCapabilities capabilities = new DesiredCapabilities();
 			WebDriverManager.chromedriver().setup();
 			ChromeOptions options = new ChromeOptions();
+
 			// options.addArguments("headless");
 			options.addArguments("--incognito");
 			options.addArguments("--test-type");
@@ -92,12 +95,21 @@ public class BaseInit {
 			options.addArguments("--disable-extensions");
 			options.addArguments("--no-sandbox");
 			options.addArguments("--start-maximized");
-
+			String downloadFilepath = System.getProperty("user.dir") + "\\src\\main\\resources";
+			HashMap<String, Object> chromePrefs = new HashMap<String, Object>();
+			chromePrefs.put("profile.default_content_settings.popups", 0);
+			chromePrefs.put("download.prompt_for_download", "false");
+			chromePrefs.put("download.default_directory", downloadFilepath);
+			options.setExperimentalOption("prefs", chromePrefs);
+			capabilities.setCapability(CapabilityType.ACCEPT_SSL_CERTS, true);
+			capabilities.setCapability(ChromeOptions.CAPABILITY, options);
 			// options.addArguments("--headless");
 			// options.addArguments("window-size=1366x788");
 			capabilities.setPlatform(Platform.ANY);
-			capabilities.setCapability(ChromeOptions.CAPABILITY, options);
+			options.addArguments("--start-maximized");
+
 			Driver = new ChromeDriver(options);
+
 			// Default size
 			Dimension currentDimension = Driver.manage().window().getSize();
 			int height = currentDimension.getHeight();

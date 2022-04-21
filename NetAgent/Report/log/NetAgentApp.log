@@ -1,158 +1,37 @@
-2022-04-21 10:19:49,550 [main] INFO CCAttempt - initialization of the properties file is done
-2022-04-21 10:19:49,797 [main] INFO io.github.bonigarcia.wdm.WebDriverManager - Using chromedriver 100.0.4896.60 (since Google Chrome 100 is installed in your machine)
-2022-04-21 10:19:49,821 [main] INFO io.github.bonigarcia.wdm.WebDriverManager - Exporting webdriver.chrome.driver as C:\Users\rprajapati\.m2\repository\webdriver\chromedriver\win32\100.0.4896.60\chromedriver.exe
-2022-04-21 10:19:58,149 [main] INFO CCAttempt - Url opened
-2022-04-21 10:20:17,125 [main] INFO CCAttempt - ===CCAttempt Test Start===
-2022-04-21 10:20:17,332 [main] INFO CCAttempt - Click on Operations
-2022-04-21 10:20:17,511 [main] INFO CCAttempt - Click on CycleCount
-2022-04-21 10:20:20,218 [main] INFO CCAttempt - If action column is not empty
-2022-04-21 10:20:20,439 [main] INFO CCAttempt - Click on Start button
-2022-04-21 10:20:22,396 [main] INFO CCAttempt - WorkOrderID after start==1685485
-2022-04-21 10:20:22,516 [main] INFO CCAttempt - Inserted workorderID in excel
-2022-04-21 10:20:22,645 [main] INFO CCAttempt - Clicked on Operations
-2022-04-21 10:20:22,788 [main] INFO CCAttempt - Clicked on TaskLog
-2022-04-21 10:20:26,445 [main] INFO CCAttempt - Click on Inventory Tab
-2022-04-21 10:20:28,284 [main] INFO CCAttempt - Total No of job in Inventory Tab is/are==68
-2022-04-21 10:20:28,335 [main] INFO CCAttempt - WorkOrderID is==1685485
-2022-04-21 10:20:28,483 [main] INFO CCAttempt - Clear Search box
-2022-04-21 10:20:28,655 [main] INFO CCAttempt - Enter value in search input
-2022-04-21 10:20:28,734 [main] INFO CCAttempt - Clicked on Search
-2022-04-21 10:20:32,127 [main] INFO CCAttempt - Stage is==Cycle Count Attempt
-2022-04-21 10:20:32,208 [main] INFO CCAttempt - Parts is available, Total Parts==2
-2022-04-21 10:20:32,255 [main] INFO CCAttempt - Total number of records==Page 1 of 1 (4 items)
-2022-04-21 10:20:32,285 [main] INFO CCAttempt - It is CCAttempt1
-2022-04-21 10:20:32,285 [main] INFO CCAttempt - ==Testing CCAttempt1==
-2022-04-21 10:20:32,286 [main] INFO CCAttempt - ===CCAttempt Scenario 3 Test Start===
-2022-04-21 10:20:32,339 [main] INFO CCAttempt - Uncheck the checkbox of Mandatory Cycle Recount
-2022-04-21 10:20:32,398 [main] INFO CCAttempt - Total parts are==5
-2022-04-21 10:20:32,439 [main] INFO CCAttempt - Value of Result of 1 Part is==FAIL
-2022-04-21 10:20:32,480 [main] INFO CCAttempt - Stock Qty for Part 1 is==1
-2022-04-21 10:20:32,515 [main] INFO CCAttempt - CC Qty for Part 1 is==0
-2022-04-21 10:20:32,515 [main] INFO CCAttempt - Stock Qty and CC Qty are different, Result is actually FAIL
-2022-04-21 10:20:32,549 [main] INFO CCAttempt - Value of Result of 2 Part is==FAIL
-2022-04-21 10:20:32,581 [main] INFO CCAttempt - Stock Qty for Part 2 is==1
-2022-04-21 10:20:32,610 [main] INFO CCAttempt - CC Qty for Part 2 is==0
-2022-04-21 10:20:32,610 [main] INFO CCAttempt - Stock Qty and CC Qty are different, Result is actually FAIL
-2022-04-21 10:20:32,641 [main] INFO CCAttempt - Value of Result of 3 Part is==FAIL
-2022-04-21 10:20:32,673 [main] INFO CCAttempt - Stock Qty for Part 3 is==1
-2022-04-21 10:20:32,702 [main] INFO CCAttempt - CC Qty for Part 3 is==0
-2022-04-21 10:20:32,702 [main] INFO CCAttempt - Stock Qty and CC Qty are different, Result is actually FAIL
-2022-04-21 10:20:32,758 [main] INFO CCAttempt - Clicked on CCQty
-2022-04-21 10:20:32,833 [main] INFO CCAttempt - Total parts are==5
-2022-04-21 10:20:32,871 [main] INFO CCAttempt - Clicked on CCQty
-2022-04-21 10:20:33,384 [main] INFO CCAttempt - Entered CC Qty equal to Stock Qty
-2022-04-21 10:20:33,451 [main] INFO CCAttempt - Total parts are==5
-2022-04-21 10:20:33,503 [main] INFO CCAttempt - Value of Result of 4 Part is==FAIL
-2022-04-21 10:20:33,555 [main] INFO CCAttempt - Stock Qty for Part 4 is==1
-2022-04-21 10:20:33,612 [main] INFO CCAttempt - CC Qty for Part 4 is==
-2022-04-21 10:20:33,613 [main] INFO CCAttempt - Stock Qty and CC Qty are different, Result is actually FAIL
-2022-04-21 10:20:33,648 [main] INFO CCAttempt - Clicked on CCQty
-2022-04-21 10:20:34,066 [main] INFO CCAttempt - Entered CC Qty equal to Stock Qty
-2022-04-21 10:20:34,353 [main] INFO CCAttempt - Click on End Cycle button
-2022-04-21 10:20:34,750 [main] INFO CCAttempt - Dialogue Message is==Are you sure you want to end the Cycle Count operation?
-2022-04-21 10:20:34,960 [main] INFO CCAttempt - Click on YES button
-2022-04-21 10:21:28,007 [main] INFO CCAttempt - Cycle is not end
-2022-04-21 10:21:28,061 [main] INFO CCAttempt - TaskLog stage is==CONF RECONC
-2022-04-21 10:21:28,098 [main] INFO CCAttempt - Name of the stage is==CONF RECONC
-2022-04-21 10:21:28,237 [main] INFO CCAttempt - Click on the record
-2022-04-21 10:21:31,781 [main] INFO CCAttempt - Stage is==Confirm Reconciliation
-2022-04-21 10:21:31,781 [main] INFO CCAttempt - IT is Reconcilation
-2022-04-21 10:21:31,894 [main] INFO CCAttempt - Click on Expand All button
-2022-04-21 10:21:34,042 [main] INFO CCAttempt - Click on Collapse All button
-2022-04-21 10:21:36,224 [main] INFO CCAttempt - Click on Collapse All Img
-2022-04-21 10:21:38,311 [main] INFO CCAttempt - Total parts are==2
-2022-04-21 10:21:38,496 [main] INFO CCAttempt - Moved to ReconcileQty
-2022-04-21 10:21:38,875 [main] INFO CCAttempt - Cleared Remarks
-2022-04-21 10:21:39,147 [main] INFO CCAttempt - Entered Remarks
-2022-04-21 10:21:39,210 [main] INFO CCAttempt - Enetered Remarks in 0 part
-2022-04-21 10:21:41,304 [main] INFO CCAttempt - Click on Reconcile Exception dropdown
-2022-04-21 10:21:41,464 [main] INFO CCAttempt - Selected Reconcile Exception for 0 part
-2022-04-21 10:21:43,648 [main] INFO CCAttempt - Moved to ReconcileQty
-2022-04-21 10:21:44,071 [main] INFO CCAttempt - Cleared Remarks
-2022-04-21 10:21:44,342 [main] INFO CCAttempt - Entered Remarks
-2022-04-21 10:21:44,412 [main] INFO CCAttempt - Enetered Remarks in 1 part
-2022-04-21 10:21:46,507 [main] INFO CCAttempt - Click on Reconcile Exception dropdown
-2022-04-21 10:21:46,709 [main] INFO CCAttempt - Selected Reconcile Exception for 1 part
-2022-04-21 10:21:49,023 [main] INFO CCAttempt - Click on Save button
-2022-04-21 10:21:52,182 [main] INFO CCAttempt - Cycle is end
-2022-04-21 10:21:52,361 [main] INFO CCAttempt - Click on Operations
-2022-04-21 10:21:53,001 [main] INFO CCAttempt - Click on CycleCount
-2022-04-21 10:21:54,356 [main] INFO CCAttempt - If action column is not empty
-2022-04-21 10:21:54,616 [main] INFO CCAttempt - Click on Start button
-2022-04-21 10:21:56,562 [main] INFO CCAttempt - WorkOrderID after start==1685486
-2022-04-21 10:21:56,579 [main] INFO CCAttempt - Inserted workorderID in excel
-2022-04-21 10:21:56,697 [main] INFO CCAttempt - Clicked on Operations
-2022-04-21 10:21:57,812 [main] INFO CCAttempt - Clicked on TaskLog
-2022-04-21 10:21:58,763 [main] INFO CCAttempt - Click on Inventory Tab
-2022-04-21 10:21:59,818 [main] INFO CCAttempt - Total No of job in Inventory Tab is/are==0
-2022-04-21 10:21:59,887 [main] INFO CCAttempt - WorkOrderID is==1685486
-2022-04-21 10:22:00,044 [main] INFO CCAttempt - Clear Search box
-2022-04-21 10:22:00,268 [main] INFO CCAttempt - Enter value in search input
-2022-04-21 10:22:00,487 [main] INFO CCAttempt - Clicked on Search
-2022-04-21 10:22:03,882 [main] INFO CCAttempt - Stage is==Cycle Count Attempt
-2022-04-21 10:22:03,965 [main] INFO CCAttempt - Parts is available, Total Parts==1
-2022-04-21 10:22:04,047 [main] INFO CCAttempt - Total number of records==Page 1 of 1 (2 items)
-2022-04-21 10:22:04,130 [main] INFO CCAttempt - It is CCAttempt1
-2022-04-21 10:22:04,131 [main] INFO CCAttempt - ==Testing CCAttempt1==
-2022-04-21 10:22:04,132 [main] INFO CCAttempt - ===CCAttempt Scenario 4 Test Start===
-2022-04-21 10:22:04,207 [main] INFO CCAttempt - Total parts are==3
-2022-04-21 10:22:04,294 [main] INFO CCAttempt - Value of Result of 1 Part is==FAIL
-2022-04-21 10:22:04,376 [main] INFO CCAttempt - Stock Qty for Part 1 is==1
-2022-04-21 10:22:04,458 [main] INFO CCAttempt - CC Qty for Part 1 is==0
-2022-04-21 10:22:04,459 [main] INFO CCAttempt - Stock Qty and CC Qty are different, Result is actually FAIL
-2022-04-21 10:22:04,557 [main] INFO CCAttempt - Clicked on CCQty
-2022-04-21 10:22:04,618 [main] INFO CCAttempt - Total parts are==3
-2022-04-21 10:22:04,655 [main] INFO CCAttempt - Clicked on CCQty
-2022-04-21 10:22:05,147 [main] INFO CCAttempt - Entered CC Qty equal to Stock Qty
-2022-04-21 10:22:05,239 [main] INFO CCAttempt - Total parts are==3
-2022-04-21 10:22:05,289 [main] INFO CCAttempt - Value of Result of 2 Part is==FAIL
-2022-04-21 10:22:05,340 [main] INFO CCAttempt - Stock Qty for Part 2 is==1
-2022-04-21 10:22:05,407 [main] INFO CCAttempt - CC Qty for Part 2 is==
-2022-04-21 10:22:05,407 [main] INFO CCAttempt - Stock Qty and CC Qty are different, Result is actually FAIL
-2022-04-21 10:22:05,443 [main] INFO CCAttempt - Clicked on CCQty
-2022-04-21 10:22:05,909 [main] INFO CCAttempt - Entered CC Qty equal to Stock Qty
-2022-04-21 10:22:06,293 [main] INFO CCAttempt - Click on End Cycle button
-2022-04-21 10:22:08,404 [main] INFO CCAttempt - Dialogue is not displayed
-2022-04-21 10:22:08,499 [main] INFO CCAttempt - Cycle is end
-2022-04-21 10:22:08,662 [main] INFO CCAttempt - Click on Operations
-2022-04-21 10:22:09,429 [main] INFO CCAttempt - Click on CycleCount
-2022-04-21 10:22:10,728 [main] INFO CCAttempt - If action column is not empty
-2022-04-21 10:22:10,900 [main] INFO CCAttempt - Click on Start button
-2022-04-21 10:22:12,758 [main] INFO CCAttempt - WorkOrderID after start==1685487
-2022-04-21 10:22:12,778 [main] INFO CCAttempt - Inserted workorderID in excel
-2022-04-21 10:22:12,959 [main] INFO CCAttempt - Clicked on Operations
-2022-04-21 10:22:14,371 [main] INFO CCAttempt - Clicked on TaskLog
-2022-04-21 10:22:15,903 [main] INFO CCAttempt - Click on Inventory Tab
-2022-04-21 10:22:16,933 [main] INFO CCAttempt - Total No of job in Inventory Tab is/are==0
-2022-04-21 10:22:16,981 [main] INFO CCAttempt - WorkOrderID is==1685487
-2022-04-21 10:22:17,068 [main] INFO CCAttempt - Clear Search box
-2022-04-21 10:22:17,179 [main] INFO CCAttempt - Enter value in search input
-2022-04-21 10:22:17,299 [main] INFO CCAttempt - Clicked on Search
-2022-04-21 10:22:20,326 [main] INFO CCAttempt - Stage is==Cycle Count Attempt
-2022-04-21 10:22:20,402 [main] INFO CCAttempt - Parts is available, Total Parts==1
-2022-04-21 10:22:20,478 [main] INFO CCAttempt - Total number of records==Page 1 of 1 (2 items)
-2022-04-21 10:22:20,549 [main] INFO CCAttempt - It is CCAttempt1
-2022-04-21 10:22:20,549 [main] INFO CCAttempt - ==Testing CCAttempt1==
-2022-04-21 10:22:20,550 [main] INFO CCAttempt - ===CCAttempt Scenario 5 Test Start===
-2022-04-21 10:22:20,615 [main] INFO CCAttempt - Total parts are==3
-2022-04-21 10:22:20,700 [main] INFO CCAttempt - Value of Result of 1 Part is==FAIL
-2022-04-21 10:22:20,747 [main] INFO CCAttempt - Stock Qty for Part 1 is==1
-2022-04-21 10:22:20,805 [main] INFO CCAttempt - CC Qty for Part 1 is==0
-2022-04-21 10:22:20,806 [main] INFO CCAttempt - Stock Qty and CC Qty are different, Result is actually FAIL
-2022-04-21 10:22:20,903 [main] INFO CCAttempt - Clicked on CCQty
-2022-04-21 10:22:20,998 [main] INFO CCAttempt - Total parts are==3
-2022-04-21 10:22:21,059 [main] INFO CCAttempt - Clicked on CCQty
-2022-04-21 10:22:21,681 [main] INFO CCAttempt - Entered CC Qty equal to Stock Qty
-2022-04-21 10:22:21,745 [main] INFO CCAttempt - Total parts are==3
-2022-04-21 10:22:21,792 [main] INFO CCAttempt - Value of Result of 2 Part is==FAIL
-2022-04-21 10:22:21,838 [main] INFO CCAttempt - Stock Qty for Part 2 is==1
-2022-04-21 10:22:21,892 [main] INFO CCAttempt - CC Qty for Part 2 is==
-2022-04-21 10:22:21,892 [main] INFO CCAttempt - Stock Qty and CC Qty are different, Result is actually FAIL
-2022-04-21 10:22:21,923 [main] INFO CCAttempt - Clicked on CCQty
-2022-04-21 10:22:22,418 [main] INFO CCAttempt - Entered CC Qty equal to Stock Qty
-2022-04-21 10:22:22,757 [main] INFO CCAttempt - Click on Save button
-2022-04-21 10:22:25,721 [main] INFO CCAttempt - Dialogue is not displayed
-2022-04-21 10:23:16,178 [main] INFO CCAttempt - Cycle is not end
-2022-04-21 10:23:16,258 [main] INFO CCAttempt - TaskLog stage is==CC ATTEMPT 2
-2022-04-21 10:23:16,772 [main] INFO CCAttempt - Clicked on LogOut
-2022-04-21 10:23:21,142 [main] INFO CCAttempt - ====Sending Email=====
+2022-04-21 12:06:13,494 [main] INFO CCAttempt - initialization of the properties file is done
+2022-04-21 12:06:13,759 [main] INFO io.github.bonigarcia.wdm.WebDriverManager - Using chromedriver 100.0.4896.60 (since Google Chrome 100 is installed in your machine)
+2022-04-21 12:06:13,783 [main] INFO io.github.bonigarcia.wdm.WebDriverManager - Exporting webdriver.chrome.driver as C:\Users\rprajapati\.m2\repository\webdriver\chromedriver\win32\100.0.4896.60\chromedriver.exe
+2022-04-21 12:06:23,819 [main] INFO CCAttempt - Url opened
+2022-04-21 12:06:45,642 [main] INFO CCAttempt - ===CCAttempt Test Start===
+2022-04-21 12:06:45,926 [main] INFO CCAttempt - Click on Operations
+2022-04-21 12:06:46,149 [main] INFO CCAttempt - Click on CycleCount
+2022-04-21 12:06:48,836 [main] INFO CCAttempt - If Reset button is exist
+2022-04-21 12:06:49,165 [main] INFO CCAttempt - Click on Reset button
+2022-04-21 12:06:51,085 [main] INFO CCAttempt - WorkOrderID after Reset==Cycle Count of Work Order Id :1685500 is Reset
+2022-04-21 12:06:51,124 [main] INFO CCAttempt - If action column is not empty
+2022-04-21 12:06:51,349 [main] INFO CCAttempt - Click on Start button
+2022-04-21 12:06:53,310 [main] INFO CCAttempt - WorkOrderID after start==1685501
+2022-04-21 12:06:53,408 [main] INFO CCAttempt - Inserted workorderID in excel
+2022-04-21 12:06:53,536 [main] INFO CCAttempt - Clicked on Operations
+2022-04-21 12:06:53,675 [main] INFO CCAttempt - Clicked on TaskLog
+2022-04-21 12:06:56,986 [main] INFO CCAttempt - Click on Inventory Tab
+2022-04-21 12:06:58,973 [main] INFO CCAttempt - Total No of job in Inventory Tab is/are==68
+2022-04-21 12:06:59,058 [main] INFO CCAttempt - WorkOrderID is==1685501
+2022-04-21 12:06:59,210 [main] INFO CCAttempt - Clear Search box
+2022-04-21 12:06:59,388 [main] INFO CCAttempt - Enter value in search input
+2022-04-21 12:06:59,601 [main] INFO CCAttempt - Clicked on Search
+2022-04-21 12:07:03,559 [main] INFO CCAttempt - Stage is==Cycle Count Attempt
+2022-04-21 12:07:03,640 [main] INFO CCAttempt - Parts is available, Total Parts==2
+2022-04-21 12:07:03,723 [main] INFO CCAttempt - Total number of records==Page 1 of 1 (4 items)
+2022-04-21 12:07:03,809 [main] INFO CCAttempt - It is CCAttempt1
+2022-04-21 12:07:03,810 [main] INFO CCAttempt - ==Testing CCAttempt1==
+2022-04-21 12:07:04,087 [main] INFO CCAttempt - Uncheck the checkbox of Remove Zero Stock Parts
+2022-04-21 12:07:04,561 [main] INFO CCAttempt - Number of Parts with 0 stock Qty==55
+2022-04-21 12:07:04,893 [main] INFO CCAttempt - Check the checkbox of Remove Zero Stock Parts
+2022-04-21 12:07:05,042 [main] INFO CCAttempt - Number of Parts with 0 stock Qty after check the checkbox of 'Remove Zero Stock Parts'==0
+2022-04-21 12:07:05,240 [main] INFO CCAttempt - Clicked on Export button
+2022-04-21 12:08:11,062 [main] INFO CCAttempt - Clicked on Import button
+2022-04-21 12:08:25,035 [main] INFO CCAttempt - FileName for import is==CycleCount-1685501-20Apr22233659764.xlsx
+2022-04-21 12:08:49,455 [main] INFO CCAttempt - Send file to input file
+2022-04-21 12:08:58,472 [main] INFO CCAttempt - Click on Upload button
+2022-04-21 12:09:09,040 [main] INFO CCAttempt - File is uploaded successfully

@@ -203,6 +203,8 @@ public class OrderProcessing extends BaseInit {
 						wait.until(ExpectedConditions.visibilityOfElementLocated(By.id("txtBasicSearch")));
 						PUID = getData("OrderProcessing", row1, 1);
 						try {
+							wait.until(
+									ExpectedConditions.visibilityOfElementLocated(By.className("dx-datagrid-nodata")));
 							WebElement NoData = Driver.findElement(By.className("dx-datagrid-nodata"));
 							if (NoData.isDisplayed()) {
 								System.out.println("Job is Delivered successfully");
@@ -294,6 +296,8 @@ public class OrderProcessing extends BaseInit {
 							wait.until(ExpectedConditions.visibilityOfElementLocated(By.id("txtBasicSearch")));
 							PUID = getData("OrderProcessing", row1, 1);
 							try {
+								wait.until(ExpectedConditions
+										.visibilityOfElementLocated(By.className("dx-datagrid-nodata")));
 								WebElement NoData = Driver.findElement(By.className("dx-datagrid-nodata"));
 								if (NoData.isDisplayed()) {
 									System.out.println("Job is Delivered successfully");
@@ -306,6 +310,8 @@ public class OrderProcessing extends BaseInit {
 							wait.until(ExpectedConditions.visibilityOfElementLocated(By.id("txtBasicSearch")));
 							PUID = getData("OrderProcessing", row1, 1);
 							try {
+								wait.until(ExpectedConditions
+										.visibilityOfElementLocated(By.className("dx-datagrid-nodata")));
 								WebElement NoData = Driver.findElement(By.className("dx-datagrid-nodata"));
 								if (NoData.isDisplayed()) {
 									System.out.println("Job is Delivered successfully");
@@ -362,6 +368,8 @@ public class OrderProcessing extends BaseInit {
 						wait.until(ExpectedConditions.visibilityOfElementLocated(By.id("txtBasicSearch")));
 						PUID = getData("OrderProcessing", row1, 1);
 						try {
+							wait.until(
+									ExpectedConditions.visibilityOfElementLocated(By.className("dx-datagrid-nodata")));
 							WebElement NoData = Driver.findElement(By.className("dx-datagrid-nodata"));
 							if (NoData.isDisplayed()) {
 								System.out.println("Job is Delivered successfully");
@@ -454,6 +462,8 @@ public class OrderProcessing extends BaseInit {
 						wait.until(ExpectedConditions.visibilityOfElementLocated(By.id("txtBasicSearch")));
 						PUID = getData("OrderProcessing", row1, 1);
 						try {
+							wait.until(
+									ExpectedConditions.visibilityOfElementLocated(By.className("dx-datagrid-nodata")));
 							WebElement NoData = Driver.findElement(By.className("dx-datagrid-nodata"));
 							if (NoData.isDisplayed()) {
 								System.out.println("Job is Delivered successfully");
@@ -466,6 +476,8 @@ public class OrderProcessing extends BaseInit {
 						wait.until(ExpectedConditions.visibilityOfElementLocated(By.id("txtBasicSearch")));
 						PUID = getData("OrderProcessing", row1, 1);
 						try {
+							wait.until(
+									ExpectedConditions.visibilityOfElementLocated(By.className("dx-datagrid-nodata")));
 							WebElement NoData = Driver.findElement(By.className("dx-datagrid-nodata"));
 							if (NoData.isDisplayed()) {
 								System.out.println("Job is Delivered successfully");
@@ -624,6 +636,8 @@ public class OrderProcessing extends BaseInit {
 						wait.until(ExpectedConditions
 								.invisibilityOfElementLocated(By.xpath("//*[@class=\"ajax-loadernew\"]")));
 						try {
+							wait.until(
+									ExpectedConditions.visibilityOfElementLocated(By.className("dx-datagrid-nodata")));
 							WebElement NoData = Driver.findElement(By.className("dx-datagrid-nodata"));
 							if (NoData.isDisplayed()) {
 								System.out.println("Job is not moved to Confirm Pull stage successfully");
@@ -752,6 +766,8 @@ public class OrderProcessing extends BaseInit {
 								wait.until(ExpectedConditions
 										.invisibilityOfElementLocated(By.xpath("//*[@class=\"ajax-loadernew\"]")));
 								try {
+									wait.until(ExpectedConditions
+											.visibilityOfElementLocated(By.className("dx-datagrid-nodata")));
 									WebElement NoData = Driver.findElement(By.className("dx-datagrid-nodata"));
 									if (NoData.isDisplayed()) {
 										System.out.println("Job is not moved to TENDER TO 3P stage successfully");
@@ -801,6 +817,8 @@ public class OrderProcessing extends BaseInit {
 									wait.until(ExpectedConditions
 											.invisibilityOfElementLocated(By.xpath("//*[@class=\"ajax-loadernew\"]")));
 									try {
+										wait.until(ExpectedConditions
+												.visibilityOfElementLocated(By.className("dx-datagrid-nodata")));
 										WebElement NoData = Driver.findElement(By.className("dx-datagrid-nodata"));
 										if (NoData.isDisplayed()) {
 											System.out.println("Job is Delivered successfully");
@@ -820,6 +838,8 @@ public class OrderProcessing extends BaseInit {
 								wait.until(ExpectedConditions
 										.invisibilityOfElementLocated(By.xpath("//*[@class=\"ajax-loadernew\"]")));
 								try {
+									wait.until(ExpectedConditions
+											.visibilityOfElementLocated(By.className("dx-datagrid-nodata")));
 									WebElement NoData = Driver.findElement(By.className("dx-datagrid-nodata"));
 									if (NoData.isDisplayed()) {
 										System.out.println("Job is not moved to TENDER TO 3P stage successfully");
@@ -840,6 +860,8 @@ public class OrderProcessing extends BaseInit {
 						wait.until(ExpectedConditions
 								.invisibilityOfElementLocated(By.xpath("//*[@class=\"ajax-loadernew\"]")));
 						try {
+							wait.until(
+									ExpectedConditions.visibilityOfElementLocated(By.className("dx-datagrid-nodata")));
 							WebElement NoData = Driver.findElement(By.className("dx-datagrid-nodata"));
 							if (NoData.isDisplayed()) {
 								System.out.println("Job is not moved to Confirm Pull stage successfully");
@@ -968,6 +990,8 @@ public class OrderProcessing extends BaseInit {
 						wait.until(ExpectedConditions
 								.invisibilityOfElementLocated(By.xpath("//*[@class=\"ajax-loadernew\"]")));
 						try {
+							wait.until(
+									ExpectedConditions.visibilityOfElementLocated(By.className("dx-datagrid-nodata")));
 							WebElement NoData = Driver.findElement(By.className("dx-datagrid-nodata"));
 							if (NoData.isDisplayed()) {
 								System.out.println("Job is not moved to TENDER TO 3P stage successfully");
@@ -1017,6 +1041,8 @@ public class OrderProcessing extends BaseInit {
 							wait.until(ExpectedConditions
 									.invisibilityOfElementLocated(By.xpath("//*[@class=\"ajax-loadernew\"]")));
 							try {
+								wait.until(ExpectedConditions
+										.visibilityOfElementLocated(By.className("dx-datagrid-nodata")));
 								WebElement NoData = Driver.findElement(By.className("dx-datagrid-nodata"));
 								if (NoData.isDisplayed()) {
 									System.out.println("Job is Delivered successfully");
@@ -1036,6 +1062,8 @@ public class OrderProcessing extends BaseInit {
 						wait.until(ExpectedConditions
 								.invisibilityOfElementLocated(By.xpath("//*[@class=\"ajax-loadernew\"]")));
 						try {
+							wait.until(
+									ExpectedConditions.visibilityOfElementLocated(By.className("dx-datagrid-nodata")));
 							WebElement NoData = Driver.findElement(By.className("dx-datagrid-nodata"));
 							if (NoData.isDisplayed()) {
 								System.out.println("Job is not moved to TENDER TO 3P stage successfully");
@@ -1087,6 +1115,7 @@ public class OrderProcessing extends BaseInit {
 					wait.until(ExpectedConditions
 							.invisibilityOfElementLocated(By.xpath("//*[@class=\"ajax-loadernew\"]")));
 					try {
+						wait.until(ExpectedConditions.visibilityOfElementLocated(By.className("dx-datagrid-nodata")));
 						WebElement NoData = Driver.findElement(By.className("dx-datagrid-nodata"));
 						if (NoData.isDisplayed()) {
 							System.out.println("Job is Delivered successfully");
@@ -1243,6 +1272,8 @@ public class OrderProcessing extends BaseInit {
 						wait.until(ExpectedConditions
 								.invisibilityOfElementLocated(By.xpath("//*[@class=\"ajax-loadernew\"]")));
 						try {
+							wait.until(
+									ExpectedConditions.visibilityOfElementLocated(By.className("dx-datagrid-nodata")));
 							NoData = Driver.findElement(By.className("dx-datagrid-nodata"));
 							if (NoData.isDisplayed()) {
 								System.out.println("Job is Delivered");
@@ -1363,6 +1394,8 @@ public class OrderProcessing extends BaseInit {
 						wait.until(ExpectedConditions
 								.invisibilityOfElementLocated(By.xpath("//*[@class=\"ajax-loadernew\"]")));
 						try {
+							wait.until(
+									ExpectedConditions.visibilityOfElementLocated(By.className("dx-datagrid-nodata")));
 							NoData = Driver.findElement(By.className("dx-datagrid-nodata"));
 							if (NoData.isDisplayed()) {
 								System.out.println("Job is Delivered");
@@ -1439,6 +1472,8 @@ public class OrderProcessing extends BaseInit {
 						wait.until(ExpectedConditions
 								.invisibilityOfElementLocated(By.xpath("//*[@class=\"ajax-loadernew\"]")));
 						try {
+							wait.until(
+									ExpectedConditions.visibilityOfElementLocated(By.className("dx-datagrid-nodata")));
 							NoData = Driver.findElement(By.className("dx-datagrid-nodata"));
 							if (NoData.isDisplayed()) {
 								System.out.println("Job is Delivered");
@@ -1468,6 +1503,7 @@ public class OrderProcessing extends BaseInit {
 				Driver.findElement(By.id("btnSearch2")).click();
 				wait.until(ExpectedConditions.invisibilityOfElementLocated(By.xpath("//*[@class=\"ajax-loadernew\"]")));
 				try {
+					wait.until(ExpectedConditions.visibilityOfElementLocated(By.className("dx-datagrid-nodata")));
 					WebElement NoData = Driver.findElement(By.className("dx-datagrid-nodata"));
 					if (NoData.isDisplayed()) {
 						System.out.println("Record is not available with search parameters");
@@ -1665,6 +1701,7 @@ public class OrderProcessing extends BaseInit {
 					wait.until(ExpectedConditions
 							.invisibilityOfElementLocated(By.xpath("//*[@class=\"ajax-loadernew\"]")));
 					try {
+						wait.until(ExpectedConditions.visibilityOfElementLocated(By.className("dx-datagrid-nodata")));
 						WebElement NoData1 = Driver.findElement(By.className("dx-datagrid-nodata"));
 						if (NoData1.isDisplayed()) {
 							System.out.println("Record is not available with search parameters");
@@ -1868,6 +1905,7 @@ public class OrderProcessing extends BaseInit {
 							.invisibilityOfElementLocated(By.xpath("//*[@class=\"ajax-loadernew\"]")));
 
 					try {
+						wait.until(ExpectedConditions.visibilityOfElementLocated(By.className("dx-datagrid-nodata")));
 						WebElement NoData = Driver.findElement(By.className("dx-datagrid-nodata"));
 						if (NoData.isDisplayed()) {
 							System.out.println("Job is not moved to Confirm Pull stage successfully");
@@ -2025,6 +2063,8 @@ public class OrderProcessing extends BaseInit {
 							wait.until(ExpectedConditions
 									.invisibilityOfElementLocated(By.xpath("//*[@class=\"ajax-loadernew\"]")));
 							try {
+								wait.until(ExpectedConditions
+										.visibilityOfElementLocated(By.className("dx-datagrid-nodata")));
 								WebElement NoData = Driver.findElement(By.className("dx-datagrid-nodata"));
 								if (NoData.isDisplayed()) {
 									System.out.println("Job is not moved to TENDER TO 3P stage successfully");
@@ -2102,6 +2142,8 @@ public class OrderProcessing extends BaseInit {
 								wait.until(ExpectedConditions
 										.invisibilityOfElementLocated(By.xpath("//*[@class=\"ajax-loadernew\"]")));
 								try {
+									wait.until(ExpectedConditions
+											.visibilityOfElementLocated(By.className("dx-datagrid-nodata")));
 									WebElement NoData = Driver.findElement(By.className("dx-datagrid-nodata"));
 									if (NoData.isDisplayed()) {
 										System.out.println("Job is moved to send to Deliver stage successfully");
@@ -2128,6 +2170,8 @@ public class OrderProcessing extends BaseInit {
 							wait.until(ExpectedConditions
 									.invisibilityOfElementLocated(By.xpath("//*[@class=\"ajax-loadernew\"]")));
 							try {
+								wait.until(ExpectedConditions
+										.visibilityOfElementLocated(By.className("dx-datagrid-nodata")));
 								WebElement NoData = Driver.findElement(By.className("dx-datagrid-nodata"));
 								if (NoData.isDisplayed()) {
 									System.out.println("Job is not moved to TENDER TO 3P stage successfully");
@@ -2286,6 +2330,8 @@ public class OrderProcessing extends BaseInit {
 						wait.until(ExpectedConditions
 								.invisibilityOfElementLocated(By.xpath("//*[@class=\"ajax-loadernew\"]")));
 						try {
+							wait.until(
+									ExpectedConditions.visibilityOfElementLocated(By.className("dx-datagrid-nodata")));
 							WebElement NoData = Driver.findElement(By.className("dx-datagrid-nodata"));
 							if (NoData.isDisplayed()) {
 								System.out.println("Job is not moved to TENDER TO 3P stage successfully");
@@ -2363,6 +2409,8 @@ public class OrderProcessing extends BaseInit {
 							wait.until(ExpectedConditions
 									.invisibilityOfElementLocated(By.xpath("//*[@class=\"ajax-loadernew\"]")));
 							try {
+								wait.until(ExpectedConditions
+										.visibilityOfElementLocated(By.className("dx-datagrid-nodata")));
 								WebElement NoData = Driver.findElement(By.className("dx-datagrid-nodata"));
 								if (NoData.isDisplayed()) {
 									System.out.println("Job is moved to send to Deliver stage successfully");
@@ -2389,6 +2437,8 @@ public class OrderProcessing extends BaseInit {
 						wait.until(ExpectedConditions
 								.invisibilityOfElementLocated(By.xpath("//*[@class=\"ajax-loadernew\"]")));
 						try {
+							wait.until(
+									ExpectedConditions.visibilityOfElementLocated(By.className("dx-datagrid-nodata")));
 							WebElement NoData = Driver.findElement(By.className("dx-datagrid-nodata"));
 							if (NoData.isDisplayed()) {
 								System.out.println("Job is not moved to TENDER TO 3P stage successfully");
@@ -2467,6 +2517,7 @@ public class OrderProcessing extends BaseInit {
 					wait.until(ExpectedConditions
 							.invisibilityOfElementLocated(By.xpath("//*[@class=\"ajax-loadernew\"]")));
 					try {
+						wait.until(ExpectedConditions.visibilityOfElementLocated(By.className("dx-datagrid-nodata")));
 						WebElement NoData = Driver.findElement(By.className("dx-datagrid-nodata"));
 						if (NoData.isDisplayed()) {
 							System.out.println("Job is moved to send to Deliver stage successfully");
@@ -2503,6 +2554,7 @@ public class OrderProcessing extends BaseInit {
 					wait.until(ExpectedConditions
 							.invisibilityOfElementLocated(By.xpath("//*[@class=\"ajax-loadernew\"]")));
 					try {
+						wait.until(ExpectedConditions.visibilityOfElementLocated(By.className("dx-datagrid-nodata")));
 						WebElement NoData = Driver.findElement(By.className("dx-datagrid-nodata"));
 						if (NoData.isDisplayed()) {
 							System.out.println("Job is not moved to RECOVER stage successfully");
@@ -2553,6 +2605,8 @@ public class OrderProcessing extends BaseInit {
 						wait.until(ExpectedConditions
 								.invisibilityOfElementLocated(By.xpath("//*[@class=\"ajax-loadernew\"]")));
 						try {
+							wait.until(
+									ExpectedConditions.visibilityOfElementLocated(By.className("dx-datagrid-nodata")));
 							WebElement NoData = Driver.findElement(By.className("dx-datagrid-nodata"));
 							if (NoData.isDisplayed()) {
 								System.out.println("Job is not moved to Deliver stage successfully");
@@ -2622,6 +2676,8 @@ public class OrderProcessing extends BaseInit {
 							wait.until(ExpectedConditions
 									.invisibilityOfElementLocated(By.xpath("//*[@class=\"ajax-loadernew\"]")));
 							try {
+								wait.until(ExpectedConditions
+										.visibilityOfElementLocated(By.className("dx-datagrid-nodata")));
 								WebElement NoData = Driver.findElement(By.className("dx-datagrid-nodata"));
 								if (NoData.isDisplayed()) {
 									System.out.println("Job is moved to VERIFY CUSTOMER BILL stage successfully");
@@ -2681,6 +2737,7 @@ public class OrderProcessing extends BaseInit {
 					wait.until(ExpectedConditions
 							.invisibilityOfElementLocated(By.xpath("//*[@class=\"ajax-loadernew\"]")));
 					try {
+						wait.until(ExpectedConditions.visibilityOfElementLocated(By.className("dx-datagrid-nodata")));
 						WebElement NoData = Driver.findElement(By.className("dx-datagrid-nodata"));
 						if (NoData.isDisplayed()) {
 							System.out.println("Job is not moved to Deliver stage successfully");
@@ -2750,6 +2807,8 @@ public class OrderProcessing extends BaseInit {
 						wait.until(ExpectedConditions
 								.invisibilityOfElementLocated(By.xpath("//*[@class=\"ajax-loadernew\"]")));
 						try {
+							wait.until(
+									ExpectedConditions.visibilityOfElementLocated(By.className("dx-datagrid-nodata")));
 							WebElement NoData = Driver.findElement(By.className("dx-datagrid-nodata"));
 							if (NoData.isDisplayed()) {
 								System.out.println("Job is moved to VERIFY CUSTOMER BILL stage successfully");
@@ -2822,6 +2881,7 @@ public class OrderProcessing extends BaseInit {
 					wait.until(ExpectedConditions
 							.invisibilityOfElementLocated(By.xpath("//*[@class=\"ajax-loadernew\"]")));
 					try {
+						wait.until(ExpectedConditions.visibilityOfElementLocated(By.className("dx-datagrid-nodata")));
 						WebElement NoData = Driver.findElement(By.className("dx-datagrid-nodata"));
 						if (NoData.isDisplayed()) {
 							System.out.println("Job is moved to VERIFY CUSTOMER BILL stage successfully");
@@ -3012,6 +3072,7 @@ public class OrderProcessing extends BaseInit {
 							.invisibilityOfElementLocated(By.xpath("//*[@class=\"ajax-loadernew\"]")));
 
 					try {
+						wait.until(ExpectedConditions.visibilityOfElementLocated(By.className("dx-datagrid-nodata")));
 						WebElement NoData = Driver.findElement(By.className("dx-datagrid-nodata"));
 						if (NoData.isDisplayed()) {
 							System.out.println("Job is not moved to Confirm Pull Alert stage successfully");
@@ -3059,6 +3120,8 @@ public class OrderProcessing extends BaseInit {
 								.invisibilityOfElementLocated(By.xpath("//*[@class=\"ajax-loadernew\"]")));
 
 						try {
+							wait.until(
+									ExpectedConditions.visibilityOfElementLocated(By.className("dx-datagrid-nodata")));
 							WebElement NoData = Driver.findElement(By.className("dx-datagrid-nodata"));
 							if (NoData.isDisplayed()) {
 								System.out.println("Job is not moved to Confirm Pull stage successfully");
@@ -3111,6 +3174,7 @@ public class OrderProcessing extends BaseInit {
 							.invisibilityOfElementLocated(By.xpath("//*[@class=\"ajax-loadernew\"]")));
 
 					try {
+						wait.until(ExpectedConditions.visibilityOfElementLocated(By.className("dx-datagrid-nodata")));
 						WebElement NoData = Driver.findElement(By.className("dx-datagrid-nodata"));
 						if (NoData.isDisplayed()) {
 							System.out.println("Job is not moved to Confirm Pull stage successfully");
@@ -3163,6 +3227,7 @@ public class OrderProcessing extends BaseInit {
 							.invisibilityOfElementLocated(By.xpath("//*[@class=\"ajax-loadernew\"]")));
 
 					try {
+						wait.until(ExpectedConditions.visibilityOfElementLocated(By.className("dx-datagrid-nodata")));
 						WebElement NoData = Driver.findElement(By.className("dx-datagrid-nodata"));
 						if (NoData.isDisplayed()) {
 							System.out.println("Job is not moved to Tender To 3P stage successfully");
@@ -3237,6 +3302,8 @@ public class OrderProcessing extends BaseInit {
 						wait.until(ExpectedConditions
 								.invisibilityOfElementLocated(By.xpath("//*[@class=\"ajax-loadernew\"]")));
 						try {
+							wait.until(
+									ExpectedConditions.visibilityOfElementLocated(By.className("dx-datagrid-nodata")));
 							WebElement NoData = Driver.findElement(By.className("dx-datagrid-nodata"));
 							if (NoData.isDisplayed()) {
 								System.out.println("Job is moved to VERIFY CUSTOMER BILL stage successfully");

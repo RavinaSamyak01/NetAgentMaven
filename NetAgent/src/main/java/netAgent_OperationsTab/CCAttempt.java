@@ -1,6 +1,7 @@
 package netAgent_OperationsTab;
 
 import java.awt.AWTException;
+import java.io.File;
 import java.io.IOException;
 import java.util.List;
 
@@ -96,15 +97,47 @@ public class CCAttempt extends BaseInit {
 					logger.info("It is CCAttempt1");
 					logger.info("==Testing CCAttempt1==");
 
+					try {
+						WebElement RemoveZeroQty = isElementPresent("RemoveZrQTY_id");
+						if (RemoveZeroQty.isDisplayed()) {
+							RemoveZeroQty.click();
+							logger.info("Uncheck the checkbox of Remove Zero Stock Parts");
+							wait.until(ExpectedConditions
+									.invisibilityOfElementLocated(By.xpath("//*[@class=\"ajax-loadernew\"]")));
+
+							List<WebElement> STockQAtyList = Driver.findElements(By.xpath(
+									"//*[@class=\"dx-datagrid-content\"]//table/tbody//td[contains(@aria-label,'Column Stock Qty')][contains(text(), '0')]"));
+
+							logger.info("Number of Parts with 0 stock Qty==" + STockQAtyList.size());
+							getScreenshot(Driver, "RemoveZeroQty");
+
+							RemoveZeroQty.click();
+							logger.info("Check the checkbox of Remove Zero Stock Parts");
+							wait.until(ExpectedConditions
+									.invisibilityOfElementLocated(By.xpath("//*[@class=\"ajax-loadernew\"]")));
+							STockQAtyList = Driver.findElements(By.xpath(
+									"//*[@class=\"dx-datagrid-content\"]//table/tbody//td[contains(@aria-label,'Column Stock Qty')][contains(text(), '0')]"));
+
+							logger.info(
+									"Number of Parts with 0 stock Qty after check the checkbox of 'Remove Zero Stock Parts'=="
+											+ STockQAtyList.size());
+						}
+
+					} catch (Exception RemoveQty) {
+						logger.info("Checkbox of Remove Zero Stock Parts is not available");
+
+					}
+
 					if (Scenario == 0) {
 
 						// --Call common methods
-						// commonMethods();
+						commonMethods();
 
 						// ==================CCAttempt 1 Scenario 1===============================
 
 						logger.info("===CCAttempt Scenario 1 Test Start===");
 						msg.append("===CCAttempt Scenario 1 Test Start===" + "\n\n");
+						getScreenshot(Driver, "CCAtt1Scenario1_" + WorderID);
 
 						// --Enter value in Qty and get status
 						WebElement PartTable = isElementPresent("CCACCATable_xpath");
@@ -276,6 +309,8 @@ public class CCAttempt extends BaseInit {
 								}
 							}
 						}
+						getScreenshot(Driver, "CCAtt1Scemario1OpDone_" + WorderID);
+
 						// --Save
 						WebElement Save = isElementPresent("CCASave_id");
 						act.moveToElement(Save).click().perform();
@@ -294,6 +329,8 @@ public class CCAttempt extends BaseInit {
 							PageCount = isElementPresent("PageCount_className").getText();
 							logger.info("Total number of records==" + PageCount);
 							WebElement RemoveZeroQty = isElementPresent("RemoveZrQTY_id");
+							getScreenshot(Driver, "CCAtt2Scenario1_" + WorderID);
+
 							if (RemoveZeroQty.isDisplayed()) {
 								logger.info("It is CCAttempt2");
 								// --Enter value in Qty and get status
@@ -436,6 +473,8 @@ public class CCAttempt extends BaseInit {
 
 									}
 								}
+								getScreenshot(Driver, "CCAtt2Scenario1Done_" + WorderID);
+
 								// --EndCycle
 								WebElement EndCycle = isElementPresent("CCAEndCycle_id");
 								act.moveToElement(EndCycle).click().perform();
@@ -482,6 +521,7 @@ public class CCAttempt extends BaseInit {
 						// --CCAttempt 1 Scenario 2
 						logger.info("===CCAttempt Scenario 2 Test Start===");
 						msg.append("===CCAttempt Scenario 2 Test Start===" + "\n\n");
+						getScreenshot(Driver, "CCAtt1Scenario2_" + WorderID);
 
 						// --Enter value in Qty and get status
 						WebElement PartTable = isElementPresent("CCACCATable_xpath");
@@ -632,6 +672,8 @@ public class CCAttempt extends BaseInit {
 								}
 							}
 						}
+						getScreenshot(Driver, "CCAtt1Scenario2Done_" + WorderID);
+
 						// --Save
 						WebElement Save = isElementPresent("CCASave_id");
 						act.moveToElement(Save).click().perform();
@@ -650,6 +692,8 @@ public class CCAttempt extends BaseInit {
 							PageCount = isElementPresent("PageCount_className").getText();
 							logger.info("Total number of records==" + PageCount);
 							WebElement RemoveZeroQty = isElementPresent("RemoveZrQTY_id");
+							getScreenshot(Driver, "CCAtt2Scenario2_" + WorderID);
+
 							if (RemoveZeroQty.isDisplayed()) {
 								logger.info("It is CCAttempt2");
 								// --Enter value in Qty and get status
@@ -793,6 +837,8 @@ public class CCAttempt extends BaseInit {
 
 									}
 								}
+								getScreenshot(Driver, "CCAtt2Scenario2Done_" + WorderID);
+
 								// --EndCycle
 								WebElement EndCycle = isElementPresent("CCAEndCycle_id");
 								act.moveToElement(EndCycle).click().perform();
@@ -838,6 +884,7 @@ public class CCAttempt extends BaseInit {
 						// --CCAttempt 1 Scenario 3
 						logger.info("===CCAttempt Scenario 3 Test Start===");
 						msg.append("===CCAttempt Scenario 3 Test Start===" + "\n\n");
+						getScreenshot(Driver, "CCAtt1Scenario3_" + WorderID);
 
 						CycleReCOunt = isElementPresent("CCACycleRCount_id");
 						CycleReCOunt.click();
@@ -994,6 +1041,8 @@ public class CCAttempt extends BaseInit {
 								}
 							}
 						}
+						getScreenshot(Driver, "CCAtt1Scenario3Done_" + WorderID);
+
 						// --EndCycle
 						WebElement EndCycle = isElementPresent("CCAEndCycle_id");
 						act.moveToElement(EndCycle).click().perform();
@@ -1046,6 +1095,7 @@ public class CCAttempt extends BaseInit {
 								// --Get the stage name
 								String Stage2 = isElementPresent("CCATTStage_xpath").getText();
 								logger.info("Stage is==" + Stage2);
+								getScreenshot(Driver, "ReconcileScenario3_" + WorderID);
 
 								if (Stage2.equalsIgnoreCase("Confirm Reconciliation")) {
 									logger.info("IT is Reconcilation");
@@ -1107,6 +1157,7 @@ public class CCAttempt extends BaseInit {
 										Thread.sleep(2000);
 
 									}
+									getScreenshot(Driver, "ReconcileScenario3Done_" + WorderID);
 
 									// --Save
 									WebElement Save = isElementPresent("CCASave_id");
@@ -1141,6 +1192,7 @@ public class CCAttempt extends BaseInit {
 						// --CCAttempt 1 Scenario 4
 						logger.info("===CCAttempt Scenario 4 Test Start===");
 						msg.append("===CCAttempt Scenario 4 Test Start===" + "\n\n");
+						getScreenshot(Driver, "CCAtt1Scenario4_" + WorderID);
 
 						// --Enter value in Qty and get status
 						WebElement PartTable = isElementPresent("CCACCATable_xpath");
@@ -1290,6 +1342,8 @@ public class CCAttempt extends BaseInit {
 							}
 
 						}
+						getScreenshot(Driver, "CCAtt1Scenario4Done_" + WorderID);
+
 						// --EndCycle
 						WebElement EndCycle = isElementPresent("CCAEndCycle_id");
 						act.moveToElement(EndCycle).click().perform();
@@ -1334,6 +1388,7 @@ public class CCAttempt extends BaseInit {
 						// --CCAttempt 1 Scenario 5
 						logger.info("===CCAttempt Scenario 5 Test Start===");
 						msg.append("===CCAttempt Scenario 5 Test Start===" + "\n\n");
+						getScreenshot(Driver, "CCAtt1Scenario5_" + WorderID);
 
 						// --Enter value in Qty and get status
 						WebElement PartTable = isElementPresent("CCACCATable_xpath");
@@ -1479,6 +1534,8 @@ public class CCAttempt extends BaseInit {
 								}
 							}
 						}
+						getScreenshot(Driver, "CCAtt1Scenario5Done_" + WorderID);
+
 						// --Save
 						WebElement Save = isElementPresent("CCASave_id");
 						act.moveToElement(Save).click().perform();
@@ -1589,18 +1646,36 @@ public class CCAttempt extends BaseInit {
 		WebDriverWait wait = new WebDriverWait(Driver, 50);
 		JavascriptExecutor js = (JavascriptExecutor) Driver;
 
+		// --If file exist, delete it
+		isFileDownloaded("CycleCount-");
+
 		// --Export
 		isElementPresent("CCAExport_id").click();
 		logger.info("Clicked on Export button");
 		wait.until(ExpectedConditions.invisibilityOfElementLocated(By.xpath("//*[@class=\"ajax-loadernew\"]")));
+
+		// --Wait until file is downloaded
+		waitUntilFileToDownload();
 
 		// --Import
 		isElementPresent("CCAImport_id").click();
 		logger.info("Clicked on Import button");
 		wait.until(ExpectedConditions.invisibilityOfElementLocated(By.xpath("//*[@class=\"ajax-loadernew\"]")));
 
+		String downloadPath = System.getProperty("user.dir") + "\\src\\main\\resources";
+		File dir = new File(downloadPath);
+		File[] dirContents = dir.listFiles();
+		String FileName = null;
+
+		for (int i = 0; i < dirContents.length; i++) {
+			if (dirContents[i].getName().contains("CycleCount-")) {
+				FileName = dirContents[i].getName();
+				logger.info("FileName for import is==" + FileName);
+
+			}
+		}
 		// --Click on Select File
-		String Fpath = "C:\\Users\\rprajapati\\git\\NetAgentMaven\\NetAgent\\src\\main\\resources\\CycleCount-1685201-13Apr22044656300.xlsx";
+		String Fpath = System.getProperty("user.dir") + "\\src\\main\\resources\\" + FileName;
 		WebElement InFile = isElementPresent("InputFile_id");
 		InFile.sendKeys(Fpath);
 		logger.info("Send file to input file");
@@ -1691,11 +1766,55 @@ public class CCAttempt extends BaseInit {
 		logger.info("Click on Export button of Exception View");
 		wait.until(ExpectedConditions.invisibilityOfElementLocated(By.xpath("//*[@class=\"ajax-loadernew\"]")));
 		Thread.sleep(7000);
+		// --Wait until file is downloaded
+		waitUntilFileToDownload();
+
 		System.out.println("Windows==" + Driver.getWindowHandle());
 		// --Close Exception View pop up
 		WebElement EXClose = isElementPresent("TLMergeClose_className");
 		js.executeScript("arguments[0].click();", EXClose);
 		logger.info("Click on Close button of Exception View");
 		wait.until(ExpectedConditions.invisibilityOfElementLocated(By.xpath("//*[@class=\"ajax-loadernew\"]")));
+	}
+
+	public boolean isFileDownloaded(String fileName) {
+		String downloadPath = System.getProperty("user.dir") + "\\src\\main\\resources";
+		File dir = new File(downloadPath);
+		File[] dirContents = dir.listFiles();
+
+		for (int i = 0; i < dirContents.length; i++) {
+			if (dirContents[i].getName().contains(fileName)) {
+				logger.info("File is exist with FileName");
+				// File has been found, it can now be deleted:
+				dirContents[i].delete();
+				logger.info("File is Deleted");
+				return true;
+
+			}
+		}
+		logger.info("File is not exist with Filename");
+		return false;
+	}
+
+	public static void waitUntilFileToDownload() throws InterruptedException {
+		String folderLocation = System.getProperty("user.dir") + "\\src\\main\\resources";
+		File directory = new File(folderLocation);
+		boolean downloadinFilePresence = false;
+		File[] filesList = null;
+		LOOP: while (true) {
+			filesList = directory.listFiles();
+			for (File file : filesList) {
+				downloadinFilePresence = file.getName().contains("CycleCount-");
+			}
+			if (downloadinFilePresence) {
+				for (; downloadinFilePresence;) {
+					Thread.sleep(5000);
+					continue LOOP;
+				}
+			} else {
+				logger.info("File is Downloaded successfully:Verified");
+				break;
+			}
+		}
 	}
 }
