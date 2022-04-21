@@ -3,15 +3,12 @@
 <suite parallel="none" name="Failed suite [Default suite]">
   <test parallel="none" name="Default test(failed)">
     <classes>
-      <class name="netAgent_OperationsTab.OrderProcessing">
+      <class name="netAgent_OperationsTab.CCAttempt">
         <methods>
-          <include name="getResult"/>
-          <include name="testMethodName"/>
+          <include name="ccAttempt"/>
           <include name="beforeMethod"/>
-          <include name="SendEmail"/>
-          <include name="orderProcess"/>
         </methods>
-      </class> <!-- netAgent_OperationsTab.OrderProcessing -->
+      </class> <!-- netAgent_OperationsTab.CCAttempt -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

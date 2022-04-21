@@ -1,79 +1,158 @@
-2022-04-19 12:13:23,618 - OrderProcessing -INFO - initialization of the properties file is done
-2022-04-19 12:13:23,926 - io.github.bonigarcia.wdm.WebDriverManager -INFO - Using chromedriver 100.0.4896.60 (since Google Chrome 100 is installed in your machine)
-2022-04-19 12:13:23,949 - io.github.bonigarcia.wdm.WebDriverManager -INFO - Exporting webdriver.chrome.driver as C:\Users\rprajapati\.m2\repository\webdriver\chromedriver\win32\100.0.4896.60\chromedriver.exe
-2022-04-19 12:13:34,051 - OrderProcessing -INFO - Url opened
-2022-04-19 12:13:52,069 - OrderProcessing -INFO - ===Order Processing Test Start===
-2022-04-19 12:13:52,072 - OrderProcessing -INFO - total No of Rows=3
-2022-04-19 12:13:52,076 - OrderProcessing -INFO - total No of Columns=3
-2022-04-19 12:13:52,270 - OrderProcessing -INFO - Click on Operations
-2022-04-19 12:13:55,152 - OrderProcessing -INFO - Click on Task Log
-2022-04-19 12:13:55,572 - OrderProcessing -INFO - Click on Operation Tab
-2022-04-19 12:13:56,787 - OrderProcessing -INFO - ServiceID is==3PLAST
-2022-04-19 12:13:56,798 - OrderProcessing -INFO - PickUpID is==3357395
-2022-04-19 12:13:56,799 - OrderProcessing -INFO - If ServiceID is 3PLAST....
-2022-04-19 12:13:57,010 - OrderProcessing -INFO - Clear search input
-2022-04-19 12:13:57,214 - OrderProcessing -INFO - Enter PickUpID in Search input
-2022-04-19 12:13:57,447 - OrderProcessing -INFO - Cllick on Search button
-2022-04-19 12:14:40,202 - OrderProcessing -INFO - Current stage of the order is=Confirm Pull
-2022-04-19 12:14:40,266 - OrderProcessing -INFO - stage=Confirm Pull
-2022-04-19 12:14:40,267 - OrderProcessing -INFO - If order stage is Confirm Pull.....
-2022-04-19 12:14:40,681 - OrderProcessing -INFO - Clicked on Label Generation
-2022-04-19 12:14:41,939 - OrderProcessing -INFO - Switched to Label generation window
-2022-04-19 12:14:47,207 - OrderProcessing -INFO - Switched to Label generation window
-2022-04-19 12:14:52,472 - OrderProcessing -INFO - Closed Label generation window
-2022-04-19 12:14:52,502 - OrderProcessing -INFO - Switched to main window
-2022-04-19 12:14:52,713 - OrderProcessing -INFO - Clicked on Accept button
-2022-04-19 12:14:52,888 - OrderProcessing -INFO - Validation Message=Part Pull DateTime is required.
-2022-04-19 12:14:53,511 - OrderProcessing -INFO - ZoneID of is==CDT
-2022-04-19 12:14:54,004 - OrderProcessing -INFO - Clicked on Save button
-2022-04-19 12:14:54,165 - OrderProcessing -INFO - ErroMsg is Displayed=Verify all parts before proceeding.
-2022-04-19 12:14:56,265 - OrderProcessing -INFO - Serial No of Part is==BATT3
-
-2022-04-19 12:14:56,401 - OrderProcessing -INFO - Cleared scan input
-2022-04-19 12:14:56,724 - OrderProcessing -INFO - Entered serialNo in Scan input
-2022-04-19 12:14:57,967 - OrderProcessing -INFO - ErroMsg is Displayed=Actual Datetime can not be greater than Current Datetime.
-2022-04-19 12:15:00,006 - OrderProcessing -INFO - ZoneID of is==CDT
-2022-04-19 12:15:00,480 - OrderProcessing -INFO - Clicked on Save button
-2022-04-19 12:15:04,032 - OrderProcessing -INFO - Cleared search input
-2022-04-19 12:15:04,123 - OrderProcessing -INFO - Enter pickupID in search input
-2022-04-19 12:15:04,219 - OrderProcessing -INFO - Click on Search button
-2022-04-19 12:15:16,410 - OrderProcessing -INFO - Job is not moved to TENDER TO 3P stage successfully
-2022-04-19 12:15:16,670 - OrderProcessing -INFO - ZoneID of is==CDT
-2022-04-19 12:15:17,065 - OrderProcessing -INFO - Clicked on Tender to 3P
-2022-04-19 12:16:07,418 - OrderProcessing -INFO - Tracking Number validation is not displayed
-2022-04-19 12:16:57,945 - OrderProcessing -INFO - Dialogue is not present
-2022-04-19 12:16:58,208 - OrderProcessing -INFO - Cleared search input
-2022-04-19 12:16:58,307 - OrderProcessing -INFO - Enter pickupID in search input
-2022-04-19 12:16:58,446 - OrderProcessing -INFO - Click on Search button
-2022-04-19 12:16:59,727 - OrderProcessing -INFO - Job is moved to send to Deliver stage successfully
-2022-04-19 12:16:59,738 - OrderProcessing -INFO - ServiceID is==3PLAST
-2022-04-19 12:16:59,747 - OrderProcessing -INFO - PickUpID is==3357396
-2022-04-19 12:16:59,749 - OrderProcessing -INFO - If ServiceID is 3PLAST....
-2022-04-19 12:16:59,918 - OrderProcessing -INFO - Clear search input
-2022-04-19 12:17:00,091 - OrderProcessing -INFO - Enter PickUpID in Search input
-2022-04-19 12:17:00,256 - OrderProcessing -INFO - Cllick on Search button
-2022-04-19 12:18:27,845 - OrderProcessing -INFO - Current stage of the order is=Confirm Del Alert
-2022-04-19 12:18:27,846 - OrderProcessing -INFO - Job is moved to Confirm Del Alert stage successfully
-2022-04-19 12:18:28,290 - OrderProcessing -INFO - Clicked on Confirm
-2022-04-19 12:18:31,824 - OrderProcessing -INFO - Cleared search input
-2022-04-19 12:18:31,936 - OrderProcessing -INFO - Enter pickupID in search input
-2022-04-19 12:18:32,090 - OrderProcessing -INFO - Click on Search button
-2022-04-19 12:18:43,464 - OrderProcessing -INFO - Job is moved to RECOVER stage successfully
-2022-04-19 12:18:43,549 - OrderProcessing -INFO - Stage is==Recover @ Destination
-2022-04-19 12:18:43,860 - OrderProcessing -INFO - ZoneID of is==CDT
-2022-04-19 12:18:44,504 - OrderProcessing -INFO - Clicked on RECOVER
-2022-04-19 12:18:47,963 - OrderProcessing -INFO - Cleared search input
-2022-04-19 12:18:48,204 - OrderProcessing -INFO - Enter pickupID in search input
-2022-04-19 12:18:48,413 - OrderProcessing -INFO - Click on Search button
-2022-04-19 12:18:54,214 - OrderProcessing -INFO - Job is moved to Deliver stage successfully
-2022-04-19 12:18:54,294 - OrderProcessing -INFO - Stage is==Deliver
-2022-04-19 12:18:54,578 - OrderProcessing -INFO - ZoneID of is==CDT
-2022-04-19 12:18:55,060 - OrderProcessing -INFO - Enter signature
-2022-04-19 12:18:55,386 - OrderProcessing -INFO - Clicked on DELIVER
-2022-04-19 12:18:56,918 - OrderProcessing -INFO - Click on OK button of Dialogue box
-2022-04-19 12:19:00,170 - OrderProcessing -INFO - Cleared search input
-2022-04-19 12:19:00,367 - OrderProcessing -INFO - Enter pickupID in search input
-2022-04-19 12:19:00,553 - OrderProcessing -INFO - Click on Search button
-2022-04-19 12:19:01,899 - OrderProcessing -INFO - Job is moved to VERIFY CUSTOMER BILL stage successfully
-2022-04-19 12:19:02,369 - OrderProcessing -INFO - Clicked on LogOut
-2022-04-19 12:19:05,814 - OrderProcessing -INFO - ====Sending Email=====
+2022-04-21 10:19:49,550 - CCAttempt -INFO - initialization of the properties file is done
+2022-04-21 10:19:49,797 - io.github.bonigarcia.wdm.WebDriverManager -INFO - Using chromedriver 100.0.4896.60 (since Google Chrome 100 is installed in your machine)
+2022-04-21 10:19:49,821 - io.github.bonigarcia.wdm.WebDriverManager -INFO - Exporting webdriver.chrome.driver as C:\Users\rprajapati\.m2\repository\webdriver\chromedriver\win32\100.0.4896.60\chromedriver.exe
+2022-04-21 10:19:58,149 - CCAttempt -INFO - Url opened
+2022-04-21 10:20:17,125 - CCAttempt -INFO - ===CCAttempt Test Start===
+2022-04-21 10:20:17,332 - CCAttempt -INFO - Click on Operations
+2022-04-21 10:20:17,511 - CCAttempt -INFO - Click on CycleCount
+2022-04-21 10:20:20,218 - CCAttempt -INFO - If action column is not empty
+2022-04-21 10:20:20,439 - CCAttempt -INFO - Click on Start button
+2022-04-21 10:20:22,396 - CCAttempt -INFO - WorkOrderID after start==1685485
+2022-04-21 10:20:22,516 - CCAttempt -INFO - Inserted workorderID in excel
+2022-04-21 10:20:22,645 - CCAttempt -INFO - Clicked on Operations
+2022-04-21 10:20:22,788 - CCAttempt -INFO - Clicked on TaskLog
+2022-04-21 10:20:26,445 - CCAttempt -INFO - Click on Inventory Tab
+2022-04-21 10:20:28,284 - CCAttempt -INFO - Total No of job in Inventory Tab is/are==68
+2022-04-21 10:20:28,335 - CCAttempt -INFO - WorkOrderID is==1685485
+2022-04-21 10:20:28,483 - CCAttempt -INFO - Clear Search box
+2022-04-21 10:20:28,655 - CCAttempt -INFO - Enter value in search input
+2022-04-21 10:20:28,734 - CCAttempt -INFO - Clicked on Search
+2022-04-21 10:20:32,127 - CCAttempt -INFO - Stage is==Cycle Count Attempt
+2022-04-21 10:20:32,208 - CCAttempt -INFO - Parts is available, Total Parts==2
+2022-04-21 10:20:32,255 - CCAttempt -INFO - Total number of records==Page 1 of 1 (4 items)
+2022-04-21 10:20:32,285 - CCAttempt -INFO - It is CCAttempt1
+2022-04-21 10:20:32,285 - CCAttempt -INFO - ==Testing CCAttempt1==
+2022-04-21 10:20:32,286 - CCAttempt -INFO - ===CCAttempt Scenario 3 Test Start===
+2022-04-21 10:20:32,339 - CCAttempt -INFO - Uncheck the checkbox of Mandatory Cycle Recount
+2022-04-21 10:20:32,398 - CCAttempt -INFO - Total parts are==5
+2022-04-21 10:20:32,439 - CCAttempt -INFO - Value of Result of 1 Part is==FAIL
+2022-04-21 10:20:32,480 - CCAttempt -INFO - Stock Qty for Part 1 is==1
+2022-04-21 10:20:32,515 - CCAttempt -INFO - CC Qty for Part 1 is==0
+2022-04-21 10:20:32,515 - CCAttempt -INFO - Stock Qty and CC Qty are different, Result is actually FAIL
+2022-04-21 10:20:32,549 - CCAttempt -INFO - Value of Result of 2 Part is==FAIL
+2022-04-21 10:20:32,581 - CCAttempt -INFO - Stock Qty for Part 2 is==1
+2022-04-21 10:20:32,610 - CCAttempt -INFO - CC Qty for Part 2 is==0
+2022-04-21 10:20:32,610 - CCAttempt -INFO - Stock Qty and CC Qty are different, Result is actually FAIL
+2022-04-21 10:20:32,641 - CCAttempt -INFO - Value of Result of 3 Part is==FAIL
+2022-04-21 10:20:32,673 - CCAttempt -INFO - Stock Qty for Part 3 is==1
+2022-04-21 10:20:32,702 - CCAttempt -INFO - CC Qty for Part 3 is==0
+2022-04-21 10:20:32,702 - CCAttempt -INFO - Stock Qty and CC Qty are different, Result is actually FAIL
+2022-04-21 10:20:32,758 - CCAttempt -INFO - Clicked on CCQty
+2022-04-21 10:20:32,833 - CCAttempt -INFO - Total parts are==5
+2022-04-21 10:20:32,871 - CCAttempt -INFO - Clicked on CCQty
+2022-04-21 10:20:33,384 - CCAttempt -INFO - Entered CC Qty equal to Stock Qty
+2022-04-21 10:20:33,451 - CCAttempt -INFO - Total parts are==5
+2022-04-21 10:20:33,503 - CCAttempt -INFO - Value of Result of 4 Part is==FAIL
+2022-04-21 10:20:33,555 - CCAttempt -INFO - Stock Qty for Part 4 is==1
+2022-04-21 10:20:33,612 - CCAttempt -INFO - CC Qty for Part 4 is==
+2022-04-21 10:20:33,613 - CCAttempt -INFO - Stock Qty and CC Qty are different, Result is actually FAIL
+2022-04-21 10:20:33,648 - CCAttempt -INFO - Clicked on CCQty
+2022-04-21 10:20:34,066 - CCAttempt -INFO - Entered CC Qty equal to Stock Qty
+2022-04-21 10:20:34,353 - CCAttempt -INFO - Click on End Cycle button
+2022-04-21 10:20:34,750 - CCAttempt -INFO - Dialogue Message is==Are you sure you want to end the Cycle Count operation?
+2022-04-21 10:20:34,960 - CCAttempt -INFO - Click on YES button
+2022-04-21 10:21:28,007 - CCAttempt -INFO - Cycle is not end
+2022-04-21 10:21:28,061 - CCAttempt -INFO - TaskLog stage is==CONF RECONC
+2022-04-21 10:21:28,098 - CCAttempt -INFO - Name of the stage is==CONF RECONC
+2022-04-21 10:21:28,237 - CCAttempt -INFO - Click on the record
+2022-04-21 10:21:31,781 - CCAttempt -INFO - Stage is==Confirm Reconciliation
+2022-04-21 10:21:31,781 - CCAttempt -INFO - IT is Reconcilation
+2022-04-21 10:21:31,894 - CCAttempt -INFO - Click on Expand All button
+2022-04-21 10:21:34,042 - CCAttempt -INFO - Click on Collapse All button
+2022-04-21 10:21:36,224 - CCAttempt -INFO - Click on Collapse All Img
+2022-04-21 10:21:38,311 - CCAttempt -INFO - Total parts are==2
+2022-04-21 10:21:38,496 - CCAttempt -INFO - Moved to ReconcileQty
+2022-04-21 10:21:38,875 - CCAttempt -INFO - Cleared Remarks
+2022-04-21 10:21:39,147 - CCAttempt -INFO - Entered Remarks
+2022-04-21 10:21:39,210 - CCAttempt -INFO - Enetered Remarks in 0 part
+2022-04-21 10:21:41,304 - CCAttempt -INFO - Click on Reconcile Exception dropdown
+2022-04-21 10:21:41,464 - CCAttempt -INFO - Selected Reconcile Exception for 0 part
+2022-04-21 10:21:43,648 - CCAttempt -INFO - Moved to ReconcileQty
+2022-04-21 10:21:44,071 - CCAttempt -INFO - Cleared Remarks
+2022-04-21 10:21:44,342 - CCAttempt -INFO - Entered Remarks
+2022-04-21 10:21:44,412 - CCAttempt -INFO - Enetered Remarks in 1 part
+2022-04-21 10:21:46,507 - CCAttempt -INFO - Click on Reconcile Exception dropdown
+2022-04-21 10:21:46,709 - CCAttempt -INFO - Selected Reconcile Exception for 1 part
+2022-04-21 10:21:49,023 - CCAttempt -INFO - Click on Save button
+2022-04-21 10:21:52,182 - CCAttempt -INFO - Cycle is end
+2022-04-21 10:21:52,361 - CCAttempt -INFO - Click on Operations
+2022-04-21 10:21:53,001 - CCAttempt -INFO - Click on CycleCount
+2022-04-21 10:21:54,356 - CCAttempt -INFO - If action column is not empty
+2022-04-21 10:21:54,616 - CCAttempt -INFO - Click on Start button
+2022-04-21 10:21:56,562 - CCAttempt -INFO - WorkOrderID after start==1685486
+2022-04-21 10:21:56,579 - CCAttempt -INFO - Inserted workorderID in excel
+2022-04-21 10:21:56,697 - CCAttempt -INFO - Clicked on Operations
+2022-04-21 10:21:57,812 - CCAttempt -INFO - Clicked on TaskLog
+2022-04-21 10:21:58,763 - CCAttempt -INFO - Click on Inventory Tab
+2022-04-21 10:21:59,818 - CCAttempt -INFO - Total No of job in Inventory Tab is/are==0
+2022-04-21 10:21:59,887 - CCAttempt -INFO - WorkOrderID is==1685486
+2022-04-21 10:22:00,044 - CCAttempt -INFO - Clear Search box
+2022-04-21 10:22:00,268 - CCAttempt -INFO - Enter value in search input
+2022-04-21 10:22:00,487 - CCAttempt -INFO - Clicked on Search
+2022-04-21 10:22:03,882 - CCAttempt -INFO - Stage is==Cycle Count Attempt
+2022-04-21 10:22:03,965 - CCAttempt -INFO - Parts is available, Total Parts==1
+2022-04-21 10:22:04,047 - CCAttempt -INFO - Total number of records==Page 1 of 1 (2 items)
+2022-04-21 10:22:04,130 - CCAttempt -INFO - It is CCAttempt1
+2022-04-21 10:22:04,131 - CCAttempt -INFO - ==Testing CCAttempt1==
+2022-04-21 10:22:04,132 - CCAttempt -INFO - ===CCAttempt Scenario 4 Test Start===
+2022-04-21 10:22:04,207 - CCAttempt -INFO - Total parts are==3
+2022-04-21 10:22:04,294 - CCAttempt -INFO - Value of Result of 1 Part is==FAIL
+2022-04-21 10:22:04,376 - CCAttempt -INFO - Stock Qty for Part 1 is==1
+2022-04-21 10:22:04,458 - CCAttempt -INFO - CC Qty for Part 1 is==0
+2022-04-21 10:22:04,459 - CCAttempt -INFO - Stock Qty and CC Qty are different, Result is actually FAIL
+2022-04-21 10:22:04,557 - CCAttempt -INFO - Clicked on CCQty
+2022-04-21 10:22:04,618 - CCAttempt -INFO - Total parts are==3
+2022-04-21 10:22:04,655 - CCAttempt -INFO - Clicked on CCQty
+2022-04-21 10:22:05,147 - CCAttempt -INFO - Entered CC Qty equal to Stock Qty
+2022-04-21 10:22:05,239 - CCAttempt -INFO - Total parts are==3
+2022-04-21 10:22:05,289 - CCAttempt -INFO - Value of Result of 2 Part is==FAIL
+2022-04-21 10:22:05,340 - CCAttempt -INFO - Stock Qty for Part 2 is==1
+2022-04-21 10:22:05,407 - CCAttempt -INFO - CC Qty for Part 2 is==
+2022-04-21 10:22:05,407 - CCAttempt -INFO - Stock Qty and CC Qty are different, Result is actually FAIL
+2022-04-21 10:22:05,443 - CCAttempt -INFO - Clicked on CCQty
+2022-04-21 10:22:05,909 - CCAttempt -INFO - Entered CC Qty equal to Stock Qty
+2022-04-21 10:22:06,293 - CCAttempt -INFO - Click on End Cycle button
+2022-04-21 10:22:08,404 - CCAttempt -INFO - Dialogue is not displayed
+2022-04-21 10:22:08,499 - CCAttempt -INFO - Cycle is end
+2022-04-21 10:22:08,662 - CCAttempt -INFO - Click on Operations
+2022-04-21 10:22:09,429 - CCAttempt -INFO - Click on CycleCount
+2022-04-21 10:22:10,728 - CCAttempt -INFO - If action column is not empty
+2022-04-21 10:22:10,900 - CCAttempt -INFO - Click on Start button
+2022-04-21 10:22:12,758 - CCAttempt -INFO - WorkOrderID after start==1685487
+2022-04-21 10:22:12,778 - CCAttempt -INFO - Inserted workorderID in excel
+2022-04-21 10:22:12,959 - CCAttempt -INFO - Clicked on Operations
+2022-04-21 10:22:14,371 - CCAttempt -INFO - Clicked on TaskLog
+2022-04-21 10:22:15,903 - CCAttempt -INFO - Click on Inventory Tab
+2022-04-21 10:22:16,933 - CCAttempt -INFO - Total No of job in Inventory Tab is/are==0
+2022-04-21 10:22:16,981 - CCAttempt -INFO - WorkOrderID is==1685487
+2022-04-21 10:22:17,068 - CCAttempt -INFO - Clear Search box
+2022-04-21 10:22:17,179 - CCAttempt -INFO - Enter value in search input
+2022-04-21 10:22:17,299 - CCAttempt -INFO - Clicked on Search
+2022-04-21 10:22:20,326 - CCAttempt -INFO - Stage is==Cycle Count Attempt
+2022-04-21 10:22:20,402 - CCAttempt -INFO - Parts is available, Total Parts==1
+2022-04-21 10:22:20,478 - CCAttempt -INFO - Total number of records==Page 1 of 1 (2 items)
+2022-04-21 10:22:20,549 - CCAttempt -INFO - It is CCAttempt1
+2022-04-21 10:22:20,549 - CCAttempt -INFO - ==Testing CCAttempt1==
+2022-04-21 10:22:20,550 - CCAttempt -INFO - ===CCAttempt Scenario 5 Test Start===
+2022-04-21 10:22:20,615 - CCAttempt -INFO - Total parts are==3
+2022-04-21 10:22:20,700 - CCAttempt -INFO - Value of Result of 1 Part is==FAIL
+2022-04-21 10:22:20,747 - CCAttempt -INFO - Stock Qty for Part 1 is==1
+2022-04-21 10:22:20,805 - CCAttempt -INFO - CC Qty for Part 1 is==0
+2022-04-21 10:22:20,806 - CCAttempt -INFO - Stock Qty and CC Qty are different, Result is actually FAIL
+2022-04-21 10:22:20,903 - CCAttempt -INFO - Clicked on CCQty
+2022-04-21 10:22:20,998 - CCAttempt -INFO - Total parts are==3
+2022-04-21 10:22:21,059 - CCAttempt -INFO - Clicked on CCQty
+2022-04-21 10:22:21,681 - CCAttempt -INFO - Entered CC Qty equal to Stock Qty
+2022-04-21 10:22:21,745 - CCAttempt -INFO - Total parts are==3
+2022-04-21 10:22:21,792 - CCAttempt -INFO - Value of Result of 2 Part is==FAIL
+2022-04-21 10:22:21,838 - CCAttempt -INFO - Stock Qty for Part 2 is==1
+2022-04-21 10:22:21,892 - CCAttempt -INFO - CC Qty for Part 2 is==
+2022-04-21 10:22:21,892 - CCAttempt -INFO - Stock Qty and CC Qty are different, Result is actually FAIL
+2022-04-21 10:22:21,923 - CCAttempt -INFO - Clicked on CCQty
+2022-04-21 10:22:22,418 - CCAttempt -INFO - Entered CC Qty equal to Stock Qty
+2022-04-21 10:22:22,757 - CCAttempt -INFO - Click on Save button
+2022-04-21 10:22:25,721 - CCAttempt -INFO - Dialogue is not displayed
+2022-04-21 10:23:16,178 - CCAttempt -INFO - Cycle is not end
+2022-04-21 10:23:16,258 - CCAttempt -INFO - TaskLog stage is==CC ATTEMPT 2
+2022-04-21 10:23:16,772 - CCAttempt -INFO - Clicked on LogOut
+2022-04-21 10:23:21,142 - CCAttempt -INFO - ====Sending Email=====
