@@ -1,37 +1,44 @@
-2022-04-21 12:06:13,494 - CCAttempt -INFO - initialization of the properties file is done
-2022-04-21 12:06:13,759 - io.github.bonigarcia.wdm.WebDriverManager -INFO - Using chromedriver 100.0.4896.60 (since Google Chrome 100 is installed in your machine)
-2022-04-21 12:06:13,783 - io.github.bonigarcia.wdm.WebDriverManager -INFO - Exporting webdriver.chrome.driver as C:\Users\rprajapati\.m2\repository\webdriver\chromedriver\win32\100.0.4896.60\chromedriver.exe
-2022-04-21 12:06:23,819 - CCAttempt -INFO - Url opened
-2022-04-21 12:06:45,642 - CCAttempt -INFO - ===CCAttempt Test Start===
-2022-04-21 12:06:45,926 - CCAttempt -INFO - Click on Operations
-2022-04-21 12:06:46,149 - CCAttempt -INFO - Click on CycleCount
-2022-04-21 12:06:48,836 - CCAttempt -INFO - If Reset button is exist
-2022-04-21 12:06:49,165 - CCAttempt -INFO - Click on Reset button
-2022-04-21 12:06:51,085 - CCAttempt -INFO - WorkOrderID after Reset==Cycle Count of Work Order Id :1685500 is Reset
-2022-04-21 12:06:51,124 - CCAttempt -INFO - If action column is not empty
-2022-04-21 12:06:51,349 - CCAttempt -INFO - Click on Start button
-2022-04-21 12:06:53,310 - CCAttempt -INFO - WorkOrderID after start==1685501
-2022-04-21 12:06:53,408 - CCAttempt -INFO - Inserted workorderID in excel
-2022-04-21 12:06:53,536 - CCAttempt -INFO - Clicked on Operations
-2022-04-21 12:06:53,675 - CCAttempt -INFO - Clicked on TaskLog
-2022-04-21 12:06:56,986 - CCAttempt -INFO - Click on Inventory Tab
-2022-04-21 12:06:58,973 - CCAttempt -INFO - Total No of job in Inventory Tab is/are==68
-2022-04-21 12:06:59,058 - CCAttempt -INFO - WorkOrderID is==1685501
-2022-04-21 12:06:59,210 - CCAttempt -INFO - Clear Search box
-2022-04-21 12:06:59,388 - CCAttempt -INFO - Enter value in search input
-2022-04-21 12:06:59,601 - CCAttempt -INFO - Clicked on Search
-2022-04-21 12:07:03,559 - CCAttempt -INFO - Stage is==Cycle Count Attempt
-2022-04-21 12:07:03,640 - CCAttempt -INFO - Parts is available, Total Parts==2
-2022-04-21 12:07:03,723 - CCAttempt -INFO - Total number of records==Page 1 of 1 (4 items)
-2022-04-21 12:07:03,809 - CCAttempt -INFO - It is CCAttempt1
-2022-04-21 12:07:03,810 - CCAttempt -INFO - ==Testing CCAttempt1==
-2022-04-21 12:07:04,087 - CCAttempt -INFO - Uncheck the checkbox of Remove Zero Stock Parts
-2022-04-21 12:07:04,561 - CCAttempt -INFO - Number of Parts with 0 stock Qty==55
-2022-04-21 12:07:04,893 - CCAttempt -INFO - Check the checkbox of Remove Zero Stock Parts
-2022-04-21 12:07:05,042 - CCAttempt -INFO - Number of Parts with 0 stock Qty after check the checkbox of 'Remove Zero Stock Parts'==0
-2022-04-21 12:07:05,240 - CCAttempt -INFO - Clicked on Export button
-2022-04-21 12:08:11,062 - CCAttempt -INFO - Clicked on Import button
-2022-04-21 12:08:25,035 - CCAttempt -INFO - FileName for import is==CycleCount-1685501-20Apr22233659764.xlsx
-2022-04-21 12:08:49,455 - CCAttempt -INFO - Send file to input file
-2022-04-21 12:08:58,472 - CCAttempt -INFO - Click on Upload button
-2022-04-21 12:09:09,040 - CCAttempt -INFO - File is uploaded successfully
+2022-04-22 10:22:17,110 - OrderProcessing -INFO - initialization of the properties file is done
+2022-04-22 10:22:17,294 - io.github.bonigarcia.wdm.WebDriverManager -INFO - Using chromedriver 100.0.4896.60 (since Google Chrome 100 is installed in your machine)
+2022-04-22 10:22:17,306 - io.github.bonigarcia.wdm.WebDriverManager -INFO - Exporting webdriver.chrome.driver as C:\Users\rprajapati\.m2\repository\webdriver\chromedriver\win32\100.0.4896.60\chromedriver.exe
+2022-04-22 10:22:27,713 - OrderProcessing -INFO - Url opened
+2022-04-22 10:22:41,714 - OrderProcessing -INFO - ===Order Processing Test Start===
+2022-04-22 10:22:41,720 - OrderProcessing -INFO - total No of Rows=2
+2022-04-22 10:22:41,726 - OrderProcessing -INFO - total No of Columns=3
+2022-04-22 10:22:41,858 - OrderProcessing -INFO - Click on Operations
+2022-04-22 10:22:44,823 - OrderProcessing -INFO - Click on Task Log
+2022-04-22 10:22:45,143 - OrderProcessing -INFO - Click on Operation Tab
+2022-04-22 10:22:46,366 - OrderProcessing -INFO - ServiceID is==RETURN
+2022-04-22 10:22:46,370 - OrderProcessing -INFO - PickUpID is==3368782
+2022-04-22 10:31:20,208 - OrderProcessing -INFO - If ServiceID is RETURN....
+2022-04-22 10:31:32,443 - OrderProcessing -INFO - Clear search input
+2022-04-22 10:31:32,984 - OrderProcessing -INFO - Enter PickUpID in Search input
+2022-04-22 10:31:33,575 - OrderProcessing -INFO - Cllick on Search button
+2022-04-22 10:32:00,798 - OrderProcessing -INFO - Current stage of the order is=Confirm Pu Alert
+2022-04-22 10:32:03,994 - OrderProcessing -INFO - Click on CONFIRM button
+2022-04-22 10:32:39,042 - OrderProcessing -INFO - Click on Inventory tab
+2022-04-22 10:32:49,258 - OrderProcessing -INFO - Clear search input
+2022-04-22 10:32:50,146 - OrderProcessing -INFO - Enter pickupID in search input
+2022-04-22 10:32:50,804 - OrderProcessing -INFO - Click on Search button
+2022-04-22 10:34:12,023 - OrderProcessing -INFO - stage=CONF PULL ALERT
+2022-04-22 10:34:12,224 - OrderProcessing -INFO - If order stage is Confirm Pull Alert.....
+2022-04-22 10:34:25,780 - OrderProcessing -INFO - Clicked on Accept button
+2022-04-22 10:35:13,325 - OrderProcessing -INFO - Clear search input
+2022-04-22 10:35:13,918 - OrderProcessing -INFO - Enter pickupID in search input
+2022-04-22 10:35:14,605 - OrderProcessing -INFO - Click on Search button
+2022-04-22 10:36:59,420 - OrderProcessing -INFO - Job is moved to Confirm Pull stage successfully
+2022-04-22 10:39:38,547 - OrderProcessing -INFO - Click on Operation Tab
+2022-04-22 10:41:10,880 - OrderProcessing -INFO - Job is moved to PICKUP stage successfully
+2022-04-22 10:43:41,661 - OrderProcessing -INFO - Job is moved to Deliver stage successfully
+2022-04-22 10:43:59,082 - OrderProcessing -INFO - ZoneID of is==CDT
+2022-04-22 10:44:02,092 - OrderProcessing -INFO - Clicked on Deliver
+2022-04-22 10:44:23,500 - OrderProcessing -INFO - Validation displayed==Signature is Required.
+2022-04-22 10:44:24,403 - OrderProcessing -INFO - Enter signature
+2022-04-22 10:44:25,827 - OrderProcessing -INFO - Clicked on DELIVER
+2022-04-22 10:45:50,737 - OrderProcessing -INFO - Dialogue is not present
+2022-04-22 10:46:22,757 - OrderProcessing -INFO - Cleared search input
+2022-04-22 10:46:23,367 - OrderProcessing -INFO - Enter pickupID in search input
+2022-04-22 10:46:23,935 - OrderProcessing -INFO - Click on Search button
+2022-04-22 10:47:08,546 - OrderProcessing -INFO - Job is moved to VERIFY CUSTOMER BILL stage successfully
+2022-04-22 10:47:39,920 - OrderProcessing -INFO - Clicked on LogOut
+2022-04-22 10:48:26,988 - OrderProcessing -INFO - ====Sending Email=====
