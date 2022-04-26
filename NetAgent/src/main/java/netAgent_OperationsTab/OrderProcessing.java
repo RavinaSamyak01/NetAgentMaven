@@ -55,12 +55,16 @@ public class OrderProcessing extends BaseInit {
 
 		// --Basic Search
 
-		for (int row1 = 1; row1 < rowNum; row1++) {
+		for (int row1 = 5; row1 < rowNum; row1++) {
 			// --Search with PickUP ID
 			String ServiceID = getData("OrderProcessing", row1, 0);
 			logger.info("ServiceID is==" + ServiceID);
 			String PUID = getData("OrderProcessing", row1, 1);
 			logger.info("PickUpID is==" + PUID);
+
+			Driver.findElement(By.id("operation")).click();
+			logger.info("Click on Operation Tab");
+			wait.until(ExpectedConditions.invisibilityOfElementLocated(By.xpath("//*[@class=\"ajax-loadernew\"]")));
 
 			try {
 
@@ -72,7 +76,7 @@ public class OrderProcessing extends BaseInit {
 					Driver.findElement(By.id("txtBasicSearch2")).sendKeys(PUID);
 					logger.info("Enter PickUpID in Search input");
 					Driver.findElement(By.id("btnGXNLSearch2")).click();
-					logger.info("Cllick on Search button");
+					logger.info("Click on Search button");
 					wait.until(ExpectedConditions
 							.invisibilityOfElementLocated(By.xpath("//*[@class=\"ajax-loadernew\"]")));
 					WebElement PickuPBox = Driver.findElement(By.xpath("//*[contains(@class,'pickupbx')]"));
@@ -118,7 +122,7 @@ public class OrderProcessing extends BaseInit {
 						Driver.findElement(By.id("txtBasicSearch2")).sendKeys(PUID);
 						logger.info("Enter PickUpID in Search input");
 						Driver.findElement(By.id("btnGXNLSearch2")).click();
-						logger.info("Cllick on Search button");
+						logger.info("Click on Search button");
 
 						wait.until(ExpectedConditions
 								.invisibilityOfElementLocated(By.xpath("//*[@class=\"ajax-loadernew\"]")));
@@ -177,7 +181,7 @@ public class OrderProcessing extends BaseInit {
 							Driver.findElement(By.id("txtBasicSearch2")).sendKeys(PUID);
 							logger.info("Enter PickUpID in Search input");
 							Driver.findElement(By.id("btnGXNLSearch2")).click();
-							logger.info("Cllick on Search button");
+							logger.info("Click on Search button");
 
 							wait.until(ExpectedConditions
 									.invisibilityOfElementLocated(By.xpath("//*[@class=\"ajax-loadernew\"]")));
@@ -243,7 +247,7 @@ public class OrderProcessing extends BaseInit {
 									Driver.findElement(By.id("txtBasicSearch2")).sendKeys(PUID);
 									logger.info("Enter PickUpID in Search input");
 									Driver.findElement(By.id("btnGXNLSearch2")).click();
-									logger.info("Cllick on Search button");
+									logger.info("Click on Search button");
 									wait.until(ExpectedConditions
 											.invisibilityOfElementLocated(By.xpath("//*[@class=\"ajax-loadernew\"]")));
 									try {
@@ -353,7 +357,7 @@ public class OrderProcessing extends BaseInit {
 										Driver.findElement(By.id("txtBasicSearch2")).sendKeys(PUID);
 										logger.info("Enter PickUpID in Search input");
 										Driver.findElement(By.id("btnGXNLSearch2")).click();
-										logger.info("Cllick on Search button");
+										logger.info("Click on Search button");
 										wait.until(ExpectedConditions.invisibilityOfElementLocated(
 												By.xpath("//*[@class=\"ajax-loadernew\"]")));
 										try {
@@ -377,7 +381,7 @@ public class OrderProcessing extends BaseInit {
 										Driver.findElement(By.id("txtBasicSearch2")).sendKeys(PUID);
 										logger.info("Enter PickUpID in Search input");
 										Driver.findElement(By.id("btnGXNLSearch2")).click();
-										logger.info("Cllick on Search button");
+										logger.info("Click on Search button");
 										wait.until(ExpectedConditions.invisibilityOfElementLocated(
 												By.xpath("//*[@class=\"ajax-loadernew\"]")));
 										try {
@@ -448,7 +452,7 @@ public class OrderProcessing extends BaseInit {
 						Driver.findElement(By.id("txtBasicSearch2")).sendKeys(PUID);
 						logger.info("Enter PickUpID in Search input");
 						Driver.findElement(By.id("btnGXNLSearch2")).click();
-						logger.info("Cllick on Search button");
+						logger.info("Click on Search button");
 
 						wait.until(ExpectedConditions
 								.invisibilityOfElementLocated(By.xpath("//*[@class=\"ajax-loadernew\"]")));
@@ -514,7 +518,7 @@ public class OrderProcessing extends BaseInit {
 								Driver.findElement(By.id("txtBasicSearch2")).sendKeys(PUID);
 								logger.info("Enter PickUpID in Search input");
 								Driver.findElement(By.id("btnGXNLSearch2")).click();
-								logger.info("Cllick on Search button");
+								logger.info("Click on Search button");
 								wait.until(ExpectedConditions
 										.invisibilityOfElementLocated(By.xpath("//*[@class=\"ajax-loadernew\"]")));
 								try {
@@ -623,7 +627,7 @@ public class OrderProcessing extends BaseInit {
 									Driver.findElement(By.id("txtBasicSearch2")).sendKeys(PUID);
 									logger.info("Enter PickUpID in Search input");
 									Driver.findElement(By.id("btnGXNLSearch2")).click();
-									logger.info("Cllick on Search button");
+									logger.info("Click on Search button");
 									wait.until(ExpectedConditions
 											.invisibilityOfElementLocated(By.xpath("//*[@class=\"ajax-loadernew\"]")));
 									try {
@@ -646,7 +650,7 @@ public class OrderProcessing extends BaseInit {
 									Driver.findElement(By.id("txtBasicSearch2")).sendKeys(PUID);
 									logger.info("Enter PickUpID in Search input");
 									Driver.findElement(By.id("btnGXNLSearch2")).click();
-									logger.info("Cllick on Search button");
+									logger.info("Click on Search button");
 									wait.until(ExpectedConditions
 											.invisibilityOfElementLocated(By.xpath("//*[@class=\"ajax-loadernew\"]")));
 									try {
@@ -721,7 +725,7 @@ public class OrderProcessing extends BaseInit {
 							Driver.findElement(By.id("txtBasicSearch2")).sendKeys(PUID);
 							logger.info("Enter PickUpID in Search input");
 							Driver.findElement(By.id("btnGXNLSearch2")).click();
-							logger.info("Cllick on Search button");
+							logger.info("Click on Search button");
 							wait.until(ExpectedConditions
 									.invisibilityOfElementLocated(By.xpath("//*[@class=\"ajax-loadernew\"]")));
 							try {
@@ -829,7 +833,7 @@ public class OrderProcessing extends BaseInit {
 								Driver.findElement(By.id("txtBasicSearch2")).sendKeys(PUID);
 								logger.info("Enter PickUpID in Search input");
 								Driver.findElement(By.id("btnGXNLSearch2")).click();
-								logger.info("Cllick on Search button");
+								logger.info("Click on Search button");
 								wait.until(ExpectedConditions
 										.invisibilityOfElementLocated(By.xpath("//*[@class=\"ajax-loadernew\"]")));
 								try {
@@ -852,7 +856,7 @@ public class OrderProcessing extends BaseInit {
 								Driver.findElement(By.id("txtBasicSearch2")).sendKeys(PUID);
 								logger.info("Enter PickUpID in Search input");
 								Driver.findElement(By.id("btnGXNLSearch2")).click();
-								logger.info("Cllick on Search button");
+								logger.info("Click on Search button");
 								wait.until(ExpectedConditions
 										.invisibilityOfElementLocated(By.xpath("//*[@class=\"ajax-loadernew\"]")));
 								try {
@@ -965,7 +969,7 @@ public class OrderProcessing extends BaseInit {
 							Driver.findElement(By.id("txtBasicSearch2")).sendKeys(PUID);
 							logger.info("Enter PickUpID in Search input");
 							Driver.findElement(By.id("btnGXNLSearch2")).click();
-							logger.info("Cllick on Search button");
+							logger.info("Click on Search button");
 							wait.until(ExpectedConditions
 									.invisibilityOfElementLocated(By.xpath("//*[@class=\"ajax-loadernew\"]")));
 							try {
@@ -988,7 +992,7 @@ public class OrderProcessing extends BaseInit {
 							Driver.findElement(By.id("txtBasicSearch2")).sendKeys(PUID);
 							logger.info("Enter PickUpID in Search input");
 							Driver.findElement(By.id("btnGXNLSearch2")).click();
-							logger.info("Cllick on Search button");
+							logger.info("Click on Search button");
 							wait.until(ExpectedConditions
 									.invisibilityOfElementLocated(By.xpath("//*[@class=\"ajax-loadernew\"]")));
 							try {
@@ -1071,7 +1075,7 @@ public class OrderProcessing extends BaseInit {
 							} catch (Exception e1) {
 								logger.info("Job is moved to Confirm Pull stage successfully");
 
-								// --Pull Inventory and Apply Return Pack(s) stage
+								// --Confirm Pull stage
 								stage = Driver.findElement(By.xpath("//h3[contains(@class,'panel-title')]")).getText();
 								logger.info("stage=" + stage);
 								getScreenshot(Driver, "ConfirmPull_" + PUID);
@@ -1108,6 +1112,8 @@ public class OrderProcessing extends BaseInit {
 									Date date = new Date();
 									DateFormat dateFormat = new SimpleDateFormat("mm:dd:yy");
 									PartPullDate.sendKeys(dateFormat.format(date));
+									PartPullDate.sendKeys(Keys.TAB);
+
 									// --Part Pull Time
 									String ZOneID = Driver
 											.findElement(By.xpath("//span[contains(@ng-bind,'TimezoneId')]")).getText();
@@ -1151,6 +1157,9 @@ public class OrderProcessing extends BaseInit {
 									wait.until(ExpectedConditions
 											.invisibilityOfElementLocated(By.xpath("//*[@class=\"ajax-loadernew\"]")));
 									logger.info("Entered serial No in scan barcode");
+									// --Save button
+									Driver.findElement(By.id("idiconsave")).click();
+									logger.info("Clicked on Save button");
 
 									try {
 										wait.until(ExpectedConditions.visibilityOfElementLocated(
@@ -1158,6 +1167,14 @@ public class OrderProcessing extends BaseInit {
 										logger.info("ErroMsg is Displayed=" + Driver
 												.findElement(By.xpath("//label[contains(@class,'error-messages')]"))
 												.getText());
+										// --Part Pull Date
+										WebElement PartPullDate = Driver.findElement(By.id("idtxtPartPullDate"));
+										PartPullDate.clear();
+										Date date = new Date();
+										DateFormat dateFormat = new SimpleDateFormat("mm:dd:yy");
+										PartPullDate.sendKeys(dateFormat.format(date));
+										PartPullDate.sendKeys(Keys.TAB);
+
 										Thread.sleep(2000);
 										// --Part Pull Time
 										String ZOneID = Driver
@@ -1171,19 +1188,22 @@ public class OrderProcessing extends BaseInit {
 										}
 										WebElement PartPullTime = Driver.findElement(By.id("txtPartPullTime"));
 										PartPullTime.clear();
-										Date date = new Date();
-										SimpleDateFormat dateFormat = new SimpleDateFormat("HH:mm");
+										date = new Date();
+										dateFormat = new SimpleDateFormat("HH:mm");
 										dateFormat.setTimeZone(TimeZone.getTimeZone(ZOneID));
 										logger.info(dateFormat.format(date));
 										PartPullTime.sendKeys(dateFormat.format(date));
+										// --Save button
+										Driver.findElement(By.id("idiconsave")).click();
+										logger.info("Clicked on Save button");
 
 									} catch (Exception Time) {
 										logger.info("Time validation is not displayed-Time is as per timeZone");
 									}
 
-									// --Save button
-									Driver.findElement(By.id("idiconsave")).click();
-									logger.info("Clicked on Save button");
+									// --Checking Error issue
+									dbNullError();
+
 									wait.until(ExpectedConditions
 											.invisibilityOfElementLocated(By.xpath("//*[@class=\"ajax-loadernew\"]")));
 									wait.until(ExpectedConditions.visibilityOfElementLocated(By.id("txtBasicSearch2")));
@@ -1300,6 +1320,229 @@ public class OrderProcessing extends BaseInit {
 							}
 						}
 
+					} else if (Orderstage.contains("Confirm Pull")) {
+
+						logger.info("Job is moved to Confirm Pull stage successfully");
+
+						// --Confirm Pull stage
+						String stage = Driver.findElement(By.xpath("//h3[contains(@class,'panel-title')]")).getText();
+						logger.info("stage=" + stage);
+						getScreenshot(Driver, "ConfirmPull_" + PUID);
+						// --Label generation
+						Driver.findElement(By.id("idiconprint")).click();
+						logger.info("Clicked on Label Generation");
+						wait.until(ExpectedConditions
+								.invisibilityOfElementLocated(By.xpath("//*[@class=\"ajax-loadernew\"]")));
+						// Handle Label Generation window
+						String WindowHandlebefore = Driver.getWindowHandle();
+						for (String windHandle : Driver.getWindowHandles()) {
+							Driver.switchTo().window(windHandle);
+							logger.info("Switched to Label generation window");
+							Thread.sleep(5000);
+							getScreenshot(Driver, "Labelgeneration" + PUID);
+						}
+						Driver.close();
+						logger.info("Closed Label generation window");
+
+						Driver.switchTo().window(WindowHandlebefore);
+						logger.info("Switched to main window");
+
+						// --Save button
+						Driver.findElement(By.id("idiconsave")).click();
+						logger.info("Clicked on Save button");
+						try {
+							wait.until(
+									ExpectedConditions.visibilityOfElementLocated(By.id("idPartPullDttmValidation")));
+							String ValMsg = Driver.findElement(By.id("idPartPullDttmValidation")).getText();
+							logger.info("Validation Message=" + ValMsg);
+							// --Part Pull Date
+							WebElement PartPullDate = Driver.findElement(By.id("idtxtPartPullDate"));
+							PartPullDate.clear();
+							Date date = new Date();
+							DateFormat dateFormat = new SimpleDateFormat("mm:dd:yy");
+							PartPullDate.sendKeys(dateFormat.format(date));
+							PartPullDate.sendKeys(Keys.TAB);
+
+							// --Part Pull Time
+							String ZOneID = Driver.findElement(By.xpath("//span[contains(@ng-bind,'TimezoneId')]"))
+									.getText();
+							logger.info("ZoneID of is==" + ZOneID);
+							if (ZOneID.equalsIgnoreCase("EDT")) {
+								ZOneID = "America/New_York";
+							} else if (ZOneID.equalsIgnoreCase("CDT")) {
+								ZOneID = "CST";
+							}
+							WebElement PartPullTime = Driver.findElement(By.id("txtPartPullTime"));
+							PartPullTime.clear();
+							date = new Date();
+							dateFormat = new SimpleDateFormat("HH:mm");
+							dateFormat.setTimeZone(TimeZone.getTimeZone(ZOneID));
+							logger.info(dateFormat.format(date));
+							PartPullTime.sendKeys(dateFormat.format(date));
+
+							// --Save button
+							Driver.findElement(By.id("idiconsave")).click();
+							logger.info("Clicked on Save button");
+						} catch (Exception e) {
+							logger.info("Validation Message is not displayed");
+						}
+
+						try {
+							wait.until(ExpectedConditions.visibilityOfElementLocated(
+									By.xpath("//label[contains(@class,'error-messages')]")));
+							logger.info("ErroMsg is Displayed=" + Driver
+									.findElement(By.xpath("//label[contains(@class,'error-messages')]")).getText());
+							Thread.sleep(2000);
+
+							// --Get the serial NO
+							String SerialNo = Driver.findElement(By.xpath("//*[@ng-bind=\"segment.SerialNo\"]"))
+									.getText();
+							logger.info("Serial No of Part is==" + SerialNo + "\n");
+							// enter serial number in scan
+							Driver.findElement(By.id("txtBarcode")).clear();
+							Driver.findElement(By.id("txtBarcode")).sendKeys(SerialNo);
+							Driver.findElement(By.id("txtBarcode")).sendKeys(Keys.TAB);
+							wait.until(ExpectedConditions
+									.invisibilityOfElementLocated(By.xpath("//*[@class=\"ajax-loadernew\"]")));
+							logger.info("Entered serial No in scan barcode");
+							// --Save button
+							Driver.findElement(By.id("idiconsave")).click();
+							logger.info("Clicked on Save button");
+
+							try {
+								wait.until(ExpectedConditions.visibilityOfElementLocated(
+										By.xpath("//label[contains(@class,'error-messages')]")));
+								logger.info("ErroMsg is Displayed=" + Driver
+										.findElement(By.xpath("//label[contains(@class,'error-messages')]")).getText());
+								// --Part Pull Date
+								WebElement PartPullDate = Driver.findElement(By.id("idtxtPartPullDate"));
+								PartPullDate.clear();
+								Date date = new Date();
+								DateFormat dateFormat = new SimpleDateFormat("mm:dd:yy");
+								PartPullDate.sendKeys(dateFormat.format(date));
+								PartPullDate.sendKeys(Keys.TAB);
+
+								Thread.sleep(2000);
+								// --Part Pull Time
+								String ZOneID = Driver.findElement(By.xpath("//span[contains(@ng-bind,'TimezoneId')]"))
+										.getText();
+								logger.info("ZoneID of is==" + ZOneID);
+								if (ZOneID.equalsIgnoreCase("EDT")) {
+									ZOneID = "America/New_York";
+								} else if (ZOneID.equalsIgnoreCase("CDT")) {
+									ZOneID = "CST";
+								}
+								WebElement PartPullTime = Driver.findElement(By.id("txtPartPullTime"));
+								PartPullTime.clear();
+								date = new Date();
+								dateFormat = new SimpleDateFormat("HH:mm");
+								dateFormat.setTimeZone(TimeZone.getTimeZone(ZOneID));
+								logger.info(dateFormat.format(date));
+								PartPullTime.sendKeys(dateFormat.format(date));
+								// --Save button
+								Driver.findElement(By.id("idiconsave")).click();
+								logger.info("Clicked on Save button");
+
+							} catch (Exception Time) {
+								logger.info("Time validation is not displayed-Time is as per timeZone");
+							}
+
+							// --Checking Error issue
+							dbNullError();
+
+							wait.until(ExpectedConditions
+									.invisibilityOfElementLocated(By.xpath("//*[@class=\"ajax-loadernew\"]")));
+							wait.until(ExpectedConditions.visibilityOfElementLocated(By.id("txtBasicSearch2")));
+							PUID = getData("OrderProcessing", row1, 1);
+							Driver.findElement(By.id("txtBasicSearch2")).clear();
+							Driver.findElement(By.id("txtBasicSearch2")).sendKeys(PUID);
+							Driver.findElement(By.id("btnGXNLSearch2")).click();
+							wait.until(ExpectedConditions
+									.invisibilityOfElementLocated(By.xpath("//*[@class=\"ajax-loadernew\"]")));
+							try {
+								wait.until(ExpectedConditions
+										.visibilityOfElementLocated(By.className("dx-datagrid-nodata")));
+								WebElement NoData = Driver.findElement(By.className("dx-datagrid-nodata"));
+								if (NoData.isDisplayed()) {
+									logger.info("Job is not moved to TENDER TO 3P stage successfully");
+								}
+							} catch (Exception e) {
+								logger.info("Job is moved to TENDER TO 3P stage successfully");
+
+								// --Enter Drop Time
+								String ZOneID = Driver.findElement(By.id("lblactdltz")).getText();
+								logger.info("ZoneID of is==" + ZOneID);
+								if (ZOneID.equalsIgnoreCase("EDT")) {
+									ZOneID = "America/New_York";
+								} else if (ZOneID.equalsIgnoreCase("CDT")) {
+									ZOneID = "CST";
+								}
+								WebElement DropTime = Driver.findElement(By.id("txtActualDeliveryTme"));
+								DropTime.clear();
+								Date date = new Date();
+								SimpleDateFormat dateFormat = new SimpleDateFormat("HH:mm");
+								dateFormat.setTimeZone(TimeZone.getTimeZone(ZOneID));
+								logger.info(dateFormat.format(date));
+								DropTime.sendKeys(dateFormat.format(date));
+
+								// --Click on Tender To 3P
+								Driver.findElement(By.id("btnsavedelivery")).click();
+								logger.info("Clicked on Tender to 3P");
+
+								try {
+									wait.until(ExpectedConditions
+											.visibilityOfAllElementsLocatedBy(By.className("modal-content")));
+									Driver.findElement(By.id("iddataok")).click();
+									logger.info("Click on OK of Dialogue box");
+
+									wait.until(ExpectedConditions
+											.invisibilityOfElementLocated(By.xpath("//*[@class=\"ajax-loadernew\"]")));
+
+								} catch (Exception SPickup) {
+									logger.info("Dialogue is not present");
+								}
+								wait.until(ExpectedConditions
+										.invisibilityOfElementLocated(By.xpath("//*[@class=\"ajax-loadernew\"]")));
+								wait.until(ExpectedConditions.visibilityOfElementLocated(By.id("txtBasicSearch2")));
+								PUID = getData("OrderProcessing", row1, 1);
+								Driver.findElement(By.id("txtBasicSearch2")).clear();
+								Driver.findElement(By.id("txtBasicSearch2")).sendKeys(PUID);
+								Driver.findElement(By.id("btnGXNLSearch2")).click();
+								wait.until(ExpectedConditions
+										.invisibilityOfElementLocated(By.xpath("//*[@class=\"ajax-loadernew\"]")));
+								try {
+									wait.until(ExpectedConditions
+											.visibilityOfElementLocated(By.className("dx-datagrid-nodata")));
+									WebElement NoData = Driver.findElement(By.className("dx-datagrid-nodata"));
+									if (NoData.isDisplayed()) {
+										logger.info("Job is Delivered successfully");
+									}
+								} catch (Exception Deliver) {
+									logger.info("Job is not Delivered successfully");
+								}
+
+							}
+						} catch (Exception errmsg) {
+							logger.info("Validation message is not displayed");
+							wait.until(ExpectedConditions.visibilityOfElementLocated(By.id("txtBasicSearch2")));
+							PUID = getData("OrderProcessing", row1, 1);
+							Driver.findElement(By.id("txtBasicSearch2")).clear();
+							Driver.findElement(By.id("txtBasicSearch2")).sendKeys(PUID);
+							Driver.findElement(By.id("btnGXNLSearch2")).click();
+							wait.until(ExpectedConditions
+									.invisibilityOfElementLocated(By.xpath("//*[@class=\"ajax-loadernew\"]")));
+							try {
+								wait.until(ExpectedConditions
+										.visibilityOfElementLocated(By.className("dx-datagrid-nodata")));
+								WebElement NoData = Driver.findElement(By.className("dx-datagrid-nodata"));
+								if (NoData.isDisplayed()) {
+									logger.info("Job is not moved to TENDER TO 3P stage successfully");
+								}
+							} catch (Exception e) {
+								logger.info("Job is moved to TENDER TO 3P stage successfully");
+							}
+						}
+
 					} else if (Orderstage.contains("Pull Inventory and Apply Return Pack(s)")) {
 						// --Pull Inventory and Apply Return Pack(s) stage
 						String stage = Driver.findElement(By.xpath("//h3[contains(@class,'panel-title')]")).getText();
@@ -1338,6 +1581,8 @@ public class OrderProcessing extends BaseInit {
 							Date date = new Date();
 							DateFormat dateFormat = new SimpleDateFormat("mm:dd:yy");
 							PartPullDate.sendKeys(dateFormat.format(date));
+							PartPullDate.sendKeys(Keys.TAB);
+
 							// --Part Pull Time
 							String ZOneID = Driver.findElement(By.xpath("//span[contains(@ng-bind,'TimezoneId')]"))
 									.getText();
@@ -1387,6 +1632,14 @@ public class OrderProcessing extends BaseInit {
 								logger.info("ErroMsg is Displayed=" + Driver
 										.findElement(By.xpath("//label[contains(@class,'error-messages')]")).getText());
 								Thread.sleep(2000);
+								// --Part Pull Date
+								WebElement PartPullDate = Driver.findElement(By.id("idtxtPartPullDate"));
+								PartPullDate.clear();
+								Date date = new Date();
+								DateFormat dateFormat = new SimpleDateFormat("mm:dd:yy");
+								PartPullDate.sendKeys(dateFormat.format(date));
+								PartPullDate.sendKeys(Keys.TAB);
+
 								// --Part Pull Time
 								String ZOneID = Driver.findElement(By.xpath("//span[contains(@ng-bind,'TimezoneId')]"))
 										.getText();
@@ -1398,8 +1651,8 @@ public class OrderProcessing extends BaseInit {
 								}
 								WebElement PartPullTime = Driver.findElement(By.id("txtPartPullTime"));
 								PartPullTime.clear();
-								Date date = new Date();
-								SimpleDateFormat dateFormat = new SimpleDateFormat("HH:mm");
+								date = new Date();
+								dateFormat = new SimpleDateFormat("HH:mm");
 								dateFormat.setTimeZone(TimeZone.getTimeZone(ZOneID));
 								logger.info(dateFormat.format(date));
 								PartPullTime.sendKeys(dateFormat.format(date));
@@ -1504,6 +1757,8 @@ public class OrderProcessing extends BaseInit {
 							}
 						}
 					} else if (Orderstage.contains("Tender to 3P")) {
+						logger.info("Job is moved to TENDER TO 3P stage successfully");
+
 						// --Enter Drop Time
 						String ZOneID = Driver.findElement(By.id("lblactdltz")).getText();
 						logger.info("ZoneID of is==" + ZOneID);
@@ -1523,7 +1778,6 @@ public class OrderProcessing extends BaseInit {
 						// --Click on Tender To 3P
 						Driver.findElement(By.id("btnsavedelivery")).click();
 						logger.info("Clicked on Tender to 3P");
-						Thread.sleep(2000);
 
 						try {
 							wait.until(
@@ -1556,6 +1810,7 @@ public class OrderProcessing extends BaseInit {
 						} catch (Exception Deliver) {
 							logger.info("Job is not Delivered successfully");
 						}
+
 					} else {
 						logger.info("unknown stage found for H3P service");
 					}
@@ -1588,7 +1843,6 @@ public class OrderProcessing extends BaseInit {
 						String Orderstage = Driver.findElement(By.xpath("//h3[contains(@class,'panel-title')]"))
 								.getText();
 						logger.info("Current stage of the order is=" + Orderstage);
-						logger.info("Current stage of the order is=" + Orderstage);
 
 						getScreenshot(Driver, Orderstage + PUID);
 
@@ -1601,86 +1855,28 @@ public class OrderProcessing extends BaseInit {
 									.invisibilityOfElementLocated(By.xpath("//*[@class=\"ajax-loadernew\"]")));
 
 							// ---Pickup@Stop 1 of 2 stage
-							// --Again click on Record
-							Driver.findElement(By.xpath("//*[@id=\"idRTEList\"]//span/strong")).click();
-							logger.info("Clicked on the record");
+							wait.until(ExpectedConditions.visibilityOfElementLocated(By.id("txtBasicSearchRTE")));
+							Driver.findElement(By.id("txtBasicSearchRTE")).clear();
+							Driver.findElement(By.id("txtBasicSearchRTE")).sendKeys(PUID);
+							Driver.findElement(By.id("btnRTESearch2")).click();
 							wait.until(ExpectedConditions
 									.invisibilityOfElementLocated(By.xpath("//*[@class=\"ajax-loadernew\"]")));
-							wait.until(ExpectedConditions.visibilityOfElementLocated(By.id("lblRWID")));
-							Orderstage = Driver.findElement(By.xpath("//h3[contains(@class,'panel-title')]")).getText();
-							logger.info("Current stage of the order is=" + Orderstage);
-
-							getScreenshot(Driver, Orderstage + PUID);
-							// --Click on save
-							Driver.findElement(By.id("idiconsave")).click();
-							logger.info("Clicked on the Save");
-							wait.until(ExpectedConditions
-									.invisibilityOfElementLocated(By.xpath("//*[@class=\"ajax-loadernew\"]")));
-							try {
-								wait.until(ExpectedConditions.visibilityOfElementLocated(By.id("errorid")));
-								String Errmsg = Driver.findElement(By.id("errorid")).getText();
-								logger.info("validation message=" + Errmsg);
-								// --Enter Actual PickupTime
-								String ZOneID = Driver.findElement(By.xpath("//span[contains(@ng-bind,'PUTimeZone')]"))
-										.getText();
-								logger.info("ZoneID of is==" + ZOneID);
-								if (ZOneID.equalsIgnoreCase("EDT")) {
-									ZOneID = "America/New_York";
-								} else if (ZOneID.equalsIgnoreCase("CDT")) {
-									ZOneID = "CST";
-								}
-								WebElement ActPUTime = Driver.findElement(By.id("txtActPuTime"));
-								ActPUTime.clear();
-								Date date = new Date();
-								SimpleDateFormat dateFormat = new SimpleDateFormat("HH:mm");
-								dateFormat.setTimeZone(TimeZone.getTimeZone(ZOneID));
-								logger.info(dateFormat.format(date));
-								ActPUTime.sendKeys(dateFormat.format(date));
-								// --Click on save
-								Driver.findElement(By.id("idiconsave")).click();
-								logger.info("Clicked on the Save");
+							NoData = Driver.findElement(By.className("dx-datagrid-nodata"));
+							if (NoData.isDisplayed()) {
+								logger.info("Record is not available with search parameters");
+							} else {
+								logger.info("Record is available with search parameters");
+								// --Again click on Record
+								Driver.findElement(By.xpath("//*[@id=\"idRTEList\"]//span/strong")).click();
+								logger.info("Clicked on the record");
 								wait.until(ExpectedConditions
 										.invisibilityOfElementLocated(By.xpath("//*[@class=\"ajax-loadernew\"]")));
-							} catch (Exception e) {
-								logger.info("validation message is not displayed");
-							}
-
-							// ---DEL@Stop 2 of 2 stage
-							// --Again click on Record
-							Driver.findElement(By.xpath("//*[@id=\"idRTEList\"]//span/strong")).click();
-							logger.info("Clicked on the record");
-							wait.until(ExpectedConditions
-									.invisibilityOfElementLocated(By.xpath("//*[@class=\"ajax-loadernew\"]")));
-							wait.until(ExpectedConditions.visibilityOfElementLocated(By.id("lblRWID")));
-							Orderstage = Driver.findElement(By.xpath("//h3[contains(@class,'panel-title')]")).getText();
-							logger.info("Current stage of the order is=" + Orderstage);
-
-							getScreenshot(Driver, Orderstage + PUID);
-							// --Click on save
-							Driver.findElement(By.id("idiconsave")).click();
-							logger.info("Clicked on the Save");
-							wait.until(ExpectedConditions
-									.invisibilityOfElementLocated(By.xpath("//*[@class=\"ajax-loadernew\"]")));
-							try {
-								wait.until(ExpectedConditions.visibilityOfElementLocated(By.id("errorid")));
-								String Errmsg = Driver.findElement(By.id("errorid")).getText();
-								logger.info("validation message=" + Errmsg);
-								// --Enter Actual DeliverTime
-								String ZOneID = Driver.findElement(By.xpath("//span[contains(@ng-bind,'PUTimeZone')]"))
+								wait.until(ExpectedConditions.visibilityOfElementLocated(By.id("lblRWID")));
+								Orderstage = Driver.findElement(By.xpath("//h3[contains(@class,'panel-title')]"))
 										.getText();
-								logger.info("ZoneID of is==" + ZOneID);
-								if (ZOneID.equalsIgnoreCase("EDT")) {
-									ZOneID = "America/New_York";
-								} else if (ZOneID.equalsIgnoreCase("CDT")) {
-									ZOneID = "CST";
-								}
-								WebElement ActDelTime = Driver.findElement(By.id("txtActDlTime"));
-								ActDelTime.clear();
-								Date date = new Date();
-								SimpleDateFormat dateFormat = new SimpleDateFormat("HH:mm");
-								dateFormat.setTimeZone(TimeZone.getTimeZone(ZOneID));
-								logger.info(dateFormat.format(date));
-								ActDelTime.sendKeys(dateFormat.format(date));
+								logger.info("Current stage of the order is=" + Orderstage);
+
+								getScreenshot(Driver, Orderstage + PUID);
 								// --Click on save
 								Driver.findElement(By.id("idiconsave")).click();
 								logger.info("Clicked on the Save");
@@ -1688,11 +1884,24 @@ public class OrderProcessing extends BaseInit {
 										.invisibilityOfElementLocated(By.xpath("//*[@class=\"ajax-loadernew\"]")));
 								try {
 									wait.until(ExpectedConditions.visibilityOfElementLocated(By.id("errorid")));
-									Errmsg = Driver.findElement(By.id("errorid")).getText();
+									String Errmsg = Driver.findElement(By.id("errorid")).getText();
 									logger.info("validation message=" + Errmsg);
-									// --Enter Signature
-									Driver.findElement(By.id("txtsign")).sendKeys("RV");
-									logger.info("Entered Signature");
+									// --Enter Actual PickupTime
+									String ZOneID = Driver
+											.findElement(By.xpath("//span[contains(@ng-bind,'PUTimeZone')]")).getText();
+									logger.info("ZoneID of is==" + ZOneID);
+									if (ZOneID.equalsIgnoreCase("EDT")) {
+										ZOneID = "America/New_York";
+									} else if (ZOneID.equalsIgnoreCase("CDT")) {
+										ZOneID = "CST";
+									}
+									WebElement ActPUTime = Driver.findElement(By.id("txtActPuTime"));
+									ActPUTime.clear();
+									Date date = new Date();
+									SimpleDateFormat dateFormat = new SimpleDateFormat("HH:mm");
+									dateFormat.setTimeZone(TimeZone.getTimeZone(ZOneID));
+									logger.info(dateFormat.format(date));
+									ActPUTime.sendKeys(dateFormat.format(date));
 									// --Click on save
 									Driver.findElement(By.id("idiconsave")).click();
 									logger.info("Clicked on the Save");
@@ -1701,40 +1910,119 @@ public class OrderProcessing extends BaseInit {
 								} catch (Exception e) {
 									logger.info("validation message is not displayed");
 								}
-							} catch (Exception e) {
-								logger.info("validation message is not displayed");
-							}
-							// --Search the job
-							wait.until(ExpectedConditions.visibilityOfElementLocated(By.id("txtBasicSearchRTE")));
-							Driver.findElement(By.id("txtBasicSearchRTE")).clear();
-							Driver.findElement(By.id("txtBasicSearchRTE")).sendKeys(PUID);
-							Driver.findElement(By.id("btnRTESearch2")).click();
-							wait.until(ExpectedConditions
-									.invisibilityOfElementLocated(By.xpath("//*[@class=\"ajax-loadernew\"]")));
-							try {
+
+								// ---DEL@Stop 2 of 2 stage
+								wait.until(ExpectedConditions.visibilityOfElementLocated(By.id("txtBasicSearchRTE")));
+								Driver.findElement(By.id("txtBasicSearchRTE")).clear();
+								Driver.findElement(By.id("txtBasicSearchRTE")).sendKeys(PUID);
+								Driver.findElement(By.id("btnRTESearch2")).click();
 								wait.until(ExpectedConditions
-										.visibilityOfElementLocated(By.className("dx-datagrid-nodata")));
+										.invisibilityOfElementLocated(By.xpath("//*[@class=\"ajax-loadernew\"]")));
 								NoData = Driver.findElement(By.className("dx-datagrid-nodata"));
 								if (NoData.isDisplayed()) {
-									logger.info("Job is Delivered");
+									logger.info("Record is not available with search parameters");
+								} else {
+									logger.info("Record is available with search parameters");
+									// --Again click on Record
+									Driver.findElement(By.xpath("//*[@id=\"idRTEList\"]//span/strong")).click();
+									logger.info("Clicked on the record");
+									wait.until(ExpectedConditions
+											.invisibilityOfElementLocated(By.xpath("//*[@class=\"ajax-loadernew\"]")));
+									wait.until(ExpectedConditions.visibilityOfElementLocated(By.id("lblRWID")));
+									Orderstage = Driver.findElement(By.xpath("//h3[contains(@class,'panel-title')]"))
+											.getText();
+									logger.info("Current stage of the order is=" + Orderstage);
+
+									getScreenshot(Driver, Orderstage + PUID);
+									// --Click on save
+									Driver.findElement(By.id("idiconsave")).click();
+									logger.info("Clicked on the Save");
+									wait.until(ExpectedConditions
+											.invisibilityOfElementLocated(By.xpath("//*[@class=\"ajax-loadernew\"]")));
+									try {
+										wait.until(ExpectedConditions.visibilityOfElementLocated(By.id("errorid")));
+										String Errmsg = Driver.findElement(By.id("errorid")).getText();
+										logger.info("validation message=" + Errmsg);
+										// --Enter Actual DeliverTime
+										String ZOneID = Driver
+												.findElement(By.xpath("//span[contains(@ng-bind,'PUTimeZone')]"))
+												.getText();
+										logger.info("ZoneID of is==" + ZOneID);
+										if (ZOneID.equalsIgnoreCase("EDT")) {
+											ZOneID = "America/New_York";
+										} else if (ZOneID.equalsIgnoreCase("CDT")) {
+											ZOneID = "CST";
+										}
+										WebElement ActDelTime = Driver.findElement(By.id("txtActDlTime"));
+										ActDelTime.clear();
+										Date date = new Date();
+										SimpleDateFormat dateFormat = new SimpleDateFormat("HH:mm");
+										dateFormat.setTimeZone(TimeZone.getTimeZone(ZOneID));
+										logger.info(dateFormat.format(date));
+										ActDelTime.sendKeys(dateFormat.format(date));
+										// --Click on save
+										Driver.findElement(By.id("idiconsave")).click();
+										logger.info("Clicked on the Save");
+										wait.until(ExpectedConditions.invisibilityOfElementLocated(
+												By.xpath("//*[@class=\"ajax-loadernew\"]")));
+										try {
+											wait.until(ExpectedConditions.visibilityOfElementLocated(By.id("errorid")));
+											Errmsg = Driver.findElement(By.id("errorid")).getText();
+											logger.info("validation message=" + Errmsg);
+											// --Enter Signature
+											Driver.findElement(By.id("txtsign")).sendKeys("RV");
+											logger.info("Entered Signature");
+											// --Click on save
+											Driver.findElement(By.id("idiconsave")).click();
+											logger.info("Clicked on the Save");
+											wait.until(ExpectedConditions.invisibilityOfElementLocated(
+													By.xpath("//*[@class=\"ajax-loadernew\"]")));
+										} catch (Exception e) {
+											logger.info("validation message is not displayed");
+										}
+									} catch (Exception e) {
+										logger.info("validation message is not displayed");
+									}
+									// --Search the job
+									wait.until(
+											ExpectedConditions.visibilityOfElementLocated(By.id("txtBasicSearchRTE")));
+									Driver.findElement(By.id("txtBasicSearchRTE")).clear();
+									Driver.findElement(By.id("txtBasicSearchRTE")).sendKeys(PUID);
+									Driver.findElement(By.id("btnRTESearch2")).click();
+									wait.until(ExpectedConditions
+											.invisibilityOfElementLocated(By.xpath("//*[@class=\"ajax-loadernew\"]")));
+									try {
+										wait.until(ExpectedConditions
+												.visibilityOfElementLocated(By.className("dx-datagrid-nodata")));
+										NoData = Driver.findElement(By.className("dx-datagrid-nodata"));
+										if (NoData.isDisplayed()) {
+											logger.info("Job is not Delivered");
+										}
+									} catch (Exception e) {
+										// --Again click on Record
+										Driver.findElement(By.xpath("//*[@id=\"idRTEList\"]//span/strong")).click();
+										logger.info("Clicked on the record");
+										wait.until(ExpectedConditions.invisibilityOfElementLocated(
+												By.xpath("//*[@class=\"ajax-loadernew\"]")));
+										wait.until(ExpectedConditions.visibilityOfElementLocated(By.id("lblRWID")));
+										Orderstage = Driver
+												.findElement(By.xpath("//h3[contains(@class,'panel-title')]"))
+												.getText();
+										logger.info("Current stage of the order is=" + Orderstage);
+
+										if (Orderstage.equalsIgnoreCase("Delivered@Stop 2 of 2")) {
+											logger.info("Job is delivered");
+
+										} else {
+											logger.info("Job is not delivered");
+
+										}
+
+									}
 								}
-							} catch (Exception e) {
-								logger.info("Job is not delivered yet");
-
 							}
-
 						} else if (Orderstage.contains("Pickup@Stop 1 of 2")) {
 							// ---Pickup@Stop 1 of 2 stage
-							// --Again click on Record
-							Driver.findElement(By.xpath("//*[@id=\"idRTEList\"]//span/strong")).click();
-							logger.info("Clicked on the record");
-							wait.until(ExpectedConditions
-									.invisibilityOfElementLocated(By.xpath("//*[@class=\"ajax-loadernew\"]")));
-							wait.until(ExpectedConditions.visibilityOfElementLocated(By.id("lblRWID")));
-							Orderstage = Driver.findElement(By.xpath("//h3[contains(@class,'panel-title')]")).getText();
-							logger.info("Current stage of the order is=" + Orderstage);
-
-							getScreenshot(Driver, Orderstage + PUID);
 							// --Click on save
 							Driver.findElement(By.id("idiconsave")).click();
 							logger.info("Clicked on the Save");
@@ -1770,16 +2058,120 @@ public class OrderProcessing extends BaseInit {
 							}
 
 							// ---DEL@Stop 2 of 2 stage
-							// --Again click on Record
-							Driver.findElement(By.xpath("//*[@id=\"idRTEList\"]//span/strong")).click();
-							logger.info("Clicked on the record");
+							wait.until(ExpectedConditions.visibilityOfElementLocated(By.id("txtBasicSearchRTE")));
+							Driver.findElement(By.id("txtBasicSearchRTE")).clear();
+							Driver.findElement(By.id("txtBasicSearchRTE")).sendKeys(PUID);
+							Driver.findElement(By.id("btnRTESearch2")).click();
 							wait.until(ExpectedConditions
 									.invisibilityOfElementLocated(By.xpath("//*[@class=\"ajax-loadernew\"]")));
-							wait.until(ExpectedConditions.visibilityOfElementLocated(By.id("lblRWID")));
-							Orderstage = Driver.findElement(By.xpath("//h3[contains(@class,'panel-title')]")).getText();
-							logger.info("Current stage of the order is=" + Orderstage);
+							NoData = Driver.findElement(By.className("dx-datagrid-nodata"));
+							if (NoData.isDisplayed()) {
+								logger.info("Record is not available with search parameters");
+							} else {
+								logger.info("Record is available with search parameters");
+								// --Again click on Record
+								Driver.findElement(By.xpath("//*[@id=\"idRTEList\"]//span/strong")).click();
+								logger.info("Clicked on the record");
+								wait.until(ExpectedConditions
+										.invisibilityOfElementLocated(By.xpath("//*[@class=\"ajax-loadernew\"]")));
+								wait.until(ExpectedConditions.visibilityOfElementLocated(By.id("lblRWID")));
+								Orderstage = Driver.findElement(By.xpath("//h3[contains(@class,'panel-title')]"))
+										.getText();
+								logger.info("Current stage of the order is=" + Orderstage);
 
-							getScreenshot(Driver, Orderstage + PUID);
+								getScreenshot(Driver, Orderstage + PUID);
+								// --Click on save
+								Driver.findElement(By.id("idiconsave")).click();
+								logger.info("Clicked on the Save");
+								wait.until(ExpectedConditions
+										.invisibilityOfElementLocated(By.xpath("//*[@class=\"ajax-loadernew\"]")));
+								try {
+									wait.until(ExpectedConditions.visibilityOfElementLocated(By.id("errorid")));
+									String Errmsg = Driver.findElement(By.id("errorid")).getText();
+									logger.info("validation message=" + Errmsg);
+									// --Enter Actual DeliverTime
+									String ZOneID = Driver
+											.findElement(By.xpath("//span[contains(@ng-bind,'PUTimeZone')]")).getText();
+									logger.info("ZoneID of is==" + ZOneID);
+									if (ZOneID.equalsIgnoreCase("EDT")) {
+										ZOneID = "America/New_York";
+									} else if (ZOneID.equalsIgnoreCase("CDT")) {
+										ZOneID = "CST";
+									}
+									WebElement ActDelTime = Driver.findElement(By.id("txtActDlTime"));
+									ActDelTime.clear();
+									Date date = new Date();
+									SimpleDateFormat dateFormat = new SimpleDateFormat("HH:mm");
+									dateFormat.setTimeZone(TimeZone.getTimeZone(ZOneID));
+									logger.info(dateFormat.format(date));
+									ActDelTime.sendKeys(dateFormat.format(date));
+									// --Click on save
+									Driver.findElement(By.id("idiconsave")).click();
+									logger.info("Clicked on the Save");
+									wait.until(ExpectedConditions
+											.invisibilityOfElementLocated(By.xpath("//*[@class=\"ajax-loadernew\"]")));
+									try {
+										wait.until(ExpectedConditions.visibilityOfElementLocated(By.id("errorid")));
+										Errmsg = Driver.findElement(By.id("errorid")).getText();
+										logger.info("validation message=" + Errmsg);
+										// --Enter Signature
+										Driver.findElement(By.id("txtsign")).sendKeys("RV");
+										logger.info("Entered Signature");
+										// --Click on save
+										Driver.findElement(By.id("idiconsave")).click();
+										logger.info("Clicked on the Save");
+										wait.until(ExpectedConditions.invisibilityOfElementLocated(
+												By.xpath("//*[@class=\"ajax-loadernew\"]")));
+									} catch (Exception e) {
+										logger.info("validation message is not displayed");
+									}
+								} catch (Exception e) {
+									logger.info("validation message is not displayed");
+								}
+								// --Search the job
+								wait.until(ExpectedConditions.visibilityOfElementLocated(By.id("txtBasicSearchRTE")));
+								Driver.findElement(By.id("txtBasicSearchRTE")).clear();
+								Driver.findElement(By.id("txtBasicSearchRTE")).sendKeys(PUID);
+								Driver.findElement(By.id("btnRTESearch2")).click();
+								wait.until(ExpectedConditions
+										.invisibilityOfElementLocated(By.xpath("//*[@class=\"ajax-loadernew\"]")));
+								try {
+									wait.until(ExpectedConditions
+											.visibilityOfElementLocated(By.className("dx-datagrid-nodata")));
+									NoData = Driver.findElement(By.className("dx-datagrid-nodata"));
+									if (NoData.isDisplayed()) {
+										logger.info("Job is not Delivered");
+									}
+								} catch (Exception e) {
+									// --Again click on Record
+									Driver.findElement(By.xpath("//*[@id=\"idRTEList\"]//span/strong")).click();
+									logger.info("Clicked on the record");
+									wait.until(ExpectedConditions
+											.invisibilityOfElementLocated(By.xpath("//*[@class=\"ajax-loadernew\"]")));
+									wait.until(ExpectedConditions.visibilityOfElementLocated(By.id("lblRWID")));
+									Orderstage = Driver.findElement(By.xpath("//h3[contains(@class,'panel-title')]"))
+											.getText();
+									logger.info("Current stage of the order is=" + Orderstage);
+
+									if (Orderstage.equalsIgnoreCase("Delivered@Stop 2 of 2")) {
+										logger.info("Job is delivered");
+
+										// --Close button
+										Driver.findElement(By.id("idiconclose")).click();
+										logger.info("Clicked on Close button");
+										wait.until(ExpectedConditions.invisibilityOfElementLocated(
+												By.xpath("//*[@class=\"ajax-loadernew\"]")));
+
+									} else {
+										logger.info("Job is not delivered");
+
+									}
+
+								}
+							}
+
+						} else if (Orderstage.contains("DEL@Stop 2 of 2")) {// ---DEL@Stop 2 of 2 stage
+
 							// --Click on save
 							Driver.findElement(By.id("idiconsave")).click();
 							logger.info("Clicked on the Save");
@@ -1840,96 +2232,37 @@ public class OrderProcessing extends BaseInit {
 										.visibilityOfElementLocated(By.className("dx-datagrid-nodata")));
 								NoData = Driver.findElement(By.className("dx-datagrid-nodata"));
 								if (NoData.isDisplayed()) {
-									logger.info("Job is Delivered");
+									logger.info("Job is not Delivered");
 								}
 							} catch (Exception e) {
-								logger.info("Job is not delivered yet");
-
-							}
-
-						} else if (Orderstage.contains("DEL@Stop 2 of 2")) {
-							// ---DEL@Stop 2 of 2 stage
-							// --Again click on Record
-							Driver.findElement(By.xpath("//*[@id=\"idRTEList\"]//span/strong")).click();
-							logger.info("Clicked on the record");
-							wait.until(ExpectedConditions
-									.invisibilityOfElementLocated(By.xpath("//*[@class=\"ajax-loadernew\"]")));
-							wait.until(ExpectedConditions.visibilityOfElementLocated(By.id("lblRWID")));
-							Orderstage = Driver.findElement(By.xpath("//h3[contains(@class,'panel-title')]")).getText();
-							logger.info("Current stage of the order is=" + Orderstage);
-
-							getScreenshot(Driver, Orderstage + PUID);
-							// --Click on save
-							Driver.findElement(By.id("idiconsave")).click();
-							logger.info("Clicked on the Save");
-							wait.until(ExpectedConditions
-									.invisibilityOfElementLocated(By.xpath("//*[@class=\"ajax-loadernew\"]")));
-							try {
-								wait.until(ExpectedConditions.visibilityOfElementLocated(By.id("errorid")));
-								String Errmsg = Driver.findElement(By.id("errorid")).getText();
-								logger.info("validation message=" + Errmsg);
-								// --Enter Actual DeliverTime
-								String ZOneID = Driver.findElement(By.xpath("//span[contains(@ng-bind,'PUTimeZone')]"))
-										.getText();
-								logger.info("ZoneID of is==" + ZOneID);
-								if (ZOneID.equalsIgnoreCase("EDT")) {
-									ZOneID = "America/New_York";
-								} else if (ZOneID.equalsIgnoreCase("CDT")) {
-									ZOneID = "CST";
-								}
-								WebElement ActDelTime = Driver.findElement(By.id("txtActDlTime"));
-								ActDelTime.clear();
-								Date date = new Date();
-								SimpleDateFormat dateFormat = new SimpleDateFormat("HH:mm");
-								dateFormat.setTimeZone(TimeZone.getTimeZone(ZOneID));
-								logger.info(dateFormat.format(date));
-								ActDelTime.sendKeys(dateFormat.format(date));
-								// --Click on save
-								Driver.findElement(By.id("idiconsave")).click();
-								logger.info("Clicked on the Save");
+								// --Again click on Record
+								Driver.findElement(By.xpath("//*[@id=\"idRTEList\"]//span/strong")).click();
+								logger.info("Clicked on the record");
 								wait.until(ExpectedConditions
 										.invisibilityOfElementLocated(By.xpath("//*[@class=\"ajax-loadernew\"]")));
-								try {
-									wait.until(ExpectedConditions.visibilityOfElementLocated(By.id("errorid")));
-									Errmsg = Driver.findElement(By.id("errorid")).getText();
-									logger.info("validation message=" + Errmsg);
-									// --Enter Signature
-									Driver.findElement(By.id("txtsign")).sendKeys("RV");
-									logger.info("Entered Signature");
-									// --Click on save
-									Driver.findElement(By.id("idiconsave")).click();
-									logger.info("Clicked on the Save");
+								wait.until(ExpectedConditions.visibilityOfElementLocated(By.id("lblRWID")));
+								Orderstage = Driver.findElement(By.xpath("//h3[contains(@class,'panel-title')]"))
+										.getText();
+								logger.info("Current stage of the order is=" + Orderstage);
+
+								if (Orderstage.equalsIgnoreCase("Delivered@Stop 2 of 2")) {
+									logger.info("Job is delivered");
+									// --Close button
+									Driver.findElement(By.id("idiconclose")).click();
+									logger.info("Clicked on Close button");
 									wait.until(ExpectedConditions
 											.invisibilityOfElementLocated(By.xpath("//*[@class=\"ajax-loadernew\"]")));
-								} catch (Exception e) {
-									logger.info("validation message is not displayed");
+
+								} else {
+									logger.info("Job is not delivered");
+
 								}
-							} catch (Exception e) {
-								logger.info("validation message is not displayed");
-							}
-							// --Search the job
-							wait.until(ExpectedConditions.visibilityOfElementLocated(By.id("txtBasicSearchRTE")));
-							Driver.findElement(By.id("txtBasicSearchRTE")).clear();
-							Driver.findElement(By.id("txtBasicSearchRTE")).sendKeys(PUID);
-							Driver.findElement(By.id("btnRTESearch2")).click();
-							wait.until(ExpectedConditions
-									.invisibilityOfElementLocated(By.xpath("//*[@class=\"ajax-loadernew\"]")));
-							try {
-								wait.until(ExpectedConditions
-										.visibilityOfElementLocated(By.className("dx-datagrid-nodata")));
-								NoData = Driver.findElement(By.className("dx-datagrid-nodata"));
-								if (NoData.isDisplayed()) {
-									logger.info("Job is Delivered");
-								}
-							} catch (Exception e) {
-								logger.info("Job is not delivered yet");
 
 							}
 
 						} else {
 							logger.info("Unknown stage found");
 						}
-
 					}
 				} else if (ServiceID.contains("Replenish")) {
 					// --Click on Inventory tab
@@ -2170,7 +2503,7 @@ public class OrderProcessing extends BaseInit {
 					Driver.findElement(By.id("txtBasicSearch2")).sendKeys(PUID);
 					logger.info("Enter PickUpID in Search input");
 					Driver.findElement(By.id("btnGXNLSearch2")).click();
-					logger.info("Cllick on Search button");
+					logger.info("Click on Search button");
 					wait.until(ExpectedConditions
 							.invisibilityOfElementLocated(By.xpath("//*[@class=\"ajax-loadernew\"]")));
 
@@ -2295,6 +2628,8 @@ public class OrderProcessing extends BaseInit {
 								Date date = new Date();
 								DateFormat dateFormat = new SimpleDateFormat("mm:dd:yy");
 								PartPullDate.sendKeys(dateFormat.format(date));
+								PartPullDate.sendKeys(Keys.TAB);
+
 								// --Part Pull Time
 								String ZOneID = Driver.findElement(By.xpath("//span[contains(@ng-bind,'TimezoneId')]"))
 										.getText();
@@ -2343,6 +2678,9 @@ public class OrderProcessing extends BaseInit {
 								wait.until(ExpectedConditions
 										.invisibilityOfElementLocated(By.xpath("//*[@class=\"ajax-loadernew\"]")));
 								logger.info("Entered serial No in scan barcode");
+								// --Save button
+								Driver.findElement(By.id("idiconsave")).click();
+								logger.info("Clicked on Save button");
 
 								try {
 									wait.until(ExpectedConditions.visibilityOfElementLocated(
@@ -2350,13 +2688,19 @@ public class OrderProcessing extends BaseInit {
 									logger.info("ErroMsg is Displayed="
 											+ Driver.findElement(By.xpath("//label[contains(@class,'error-messages')]"))
 													.getText());
+									// --Part Pull Date
+									WebElement PartPullDate = Driver.findElement(By.id("idtxtPartPullDate"));
+									PartPullDate.clear();
+									Date date = new Date();
+									DateFormat dateFormat = new SimpleDateFormat("mm:dd:yy");
+									PartPullDate.sendKeys(dateFormat.format(date));
+									PartPullDate.sendKeys(Keys.TAB);
 
 									Thread.sleep(2000);
 									// --Part Pull Time
 									String ZOneID = Driver
 											.findElement(By.xpath("//span[contains(@ng-bind,'TimezoneId')]")).getText();
-									logger.info("ZoneID of is==" + ZOneID);
-									logger.info("ZoneID of is==" + ZOneID);
+									logger.info("ZoneID is==" + ZOneID);
 									if (ZOneID.equalsIgnoreCase("EDT")) {
 										ZOneID = "America/New_York";
 									} else if (ZOneID.equalsIgnoreCase("CDT")) {
@@ -2364,19 +2708,22 @@ public class OrderProcessing extends BaseInit {
 									}
 									WebElement PartPullTime = Driver.findElement(By.id("txtPartPullTime"));
 									PartPullTime.clear();
-									Date date = new Date();
-									SimpleDateFormat dateFormat = new SimpleDateFormat("HH:mm");
+									date = new Date();
+									dateFormat = new SimpleDateFormat("HH:mm");
 									dateFormat.setTimeZone(TimeZone.getTimeZone(ZOneID));
 									logger.info(dateFormat.format(date));
 									PartPullTime.sendKeys(dateFormat.format(date));
+									// --Save button
+									Driver.findElement(By.id("idiconsave")).click();
+									logger.info("Clicked on Save button");
 
 								} catch (Exception Time) {
 									logger.info("Time validation is not displayed-Time is as per timeZone");
 								}
 
-								// --Save button
-								Driver.findElement(By.id("idiconsave")).click();
-								logger.info("Clicked on Save button");
+								// --Checking Error issue
+								dbNullError();
+
 								wait.until(ExpectedConditions
 										.invisibilityOfElementLocated(By.xpath("//*[@class=\"ajax-loadernew\"]")));
 								wait.until(ExpectedConditions.visibilityOfElementLocated(By.id("txtBasicSearch2")));
@@ -2428,14 +2775,13 @@ public class OrderProcessing extends BaseInit {
 										Driver.findElement(By.xpath("//input[contains(@id,'txtPackageTrackNum')]"))
 												.sendKeys("Track001");
 										logger.info("Entered Tracking Number");
+										// --Click on Tender To 3P
+										Driver.findElement(By.id("btnsavedelivery")).click();
+										logger.info("Clicked on Tender to 3P");
 
 									} catch (Exception Error) {
 										logger.info("Tracking Number validation is not displayed");
 									}
-
-									// --Click on Tender To 3P
-									Driver.findElement(By.id("btnsavedelivery")).click();
-									logger.info("Clicked on Tender to 3P");
 
 									try {
 										wait.until(ExpectedConditions
@@ -2542,6 +2888,8 @@ public class OrderProcessing extends BaseInit {
 							Date date = new Date();
 							DateFormat dateFormat = new SimpleDateFormat("mm:dd:yy");
 							PartPullDate.sendKeys(dateFormat.format(date));
+							PartPullDate.sendKeys(Keys.TAB);
+
 							// --Part Pull Time
 							String ZOneID = Driver.findElement(By.xpath("//span[contains(@ng-bind,'TimezoneId')]"))
 									.getText();
@@ -2597,6 +2945,13 @@ public class OrderProcessing extends BaseInit {
 										By.xpath("//label[contains(@class,'error-messages')]")));
 								logger.info("ErroMsg is Displayed=" + Driver
 										.findElement(By.xpath("//label[contains(@class,'error-messages')]")).getText());
+								// --Part Pull Date
+								WebElement PartPullDate = Driver.findElement(By.id("idtxtPartPullDate"));
+								PartPullDate.clear();
+								Date date = new Date();
+								DateFormat dateFormat = new SimpleDateFormat("mm:dd:yy");
+								PartPullDate.sendKeys(dateFormat.format(date));
+								PartPullDate.sendKeys(Keys.TAB);
 
 								Thread.sleep(2000);
 								// --Part Pull Time
@@ -2610,8 +2965,8 @@ public class OrderProcessing extends BaseInit {
 								}
 								WebElement PartPullTime = Driver.findElement(By.id("txtPartPullTime"));
 								PartPullTime.clear();
-								Date date = new Date();
-								SimpleDateFormat dateFormat = new SimpleDateFormat("HH:mm");
+								date = new Date();
+								dateFormat = new SimpleDateFormat("HH:mm");
 								dateFormat.setTimeZone(TimeZone.getTimeZone(ZOneID));
 								logger.info(dateFormat.format(date));
 								PartPullTime.sendKeys(dateFormat.format(date));
@@ -3172,7 +3527,7 @@ public class OrderProcessing extends BaseInit {
 					Driver.findElement(By.id("txtBasicSearch2")).sendKeys(PUID);
 					logger.info("Enter PickUpID in Search input");
 					Driver.findElement(By.id("btnGXNLSearch2")).click();
-					logger.info("Cllick on Search button");
+					logger.info("Click on Search button");
 					wait.until(ExpectedConditions
 							.invisibilityOfElementLocated(By.xpath("//*[@class=\"ajax-loadernew\"]")));
 					try {
@@ -3194,7 +3549,7 @@ public class OrderProcessing extends BaseInit {
 									.invisibilityOfElementLocated(By.xpath("//*[@class=\"ajax-loadernew\"]")));
 						}
 					} catch (Exception Tab) {
-						logger.info("Job is not exist in both the tab");
+						logger.info("Job is exist");
 
 					}
 					// --Memo
@@ -3247,7 +3602,7 @@ public class OrderProcessing extends BaseInit {
 						Driver.findElement(By.id("txtBasicSearch2")).sendKeys(PUID);
 						logger.info("Enter PickUpID in Search input");
 						Driver.findElement(By.id("btnGXNLSearch2")).click();
-						logger.info("Cllick on Search button");
+						logger.info("Click on Search button");
 						wait.until(ExpectedConditions
 								.invisibilityOfElementLocated(By.xpath("//*[@class=\"ajax-loadernew\"]")));
 
@@ -3296,7 +3651,7 @@ public class OrderProcessing extends BaseInit {
 							Driver.findElement(By.id("txtBasicSearch2")).sendKeys(PUID);
 							logger.info("Enter PickUpID in Search input");
 							Driver.findElement(By.id("btnGXNLSearch2")).click();
-							logger.info("Cllick on Search button");
+							logger.info("Click on Search button");
 							wait.until(ExpectedConditions
 									.invisibilityOfElementLocated(By.xpath("//*[@class=\"ajax-loadernew\"]")));
 
@@ -3320,7 +3675,7 @@ public class OrderProcessing extends BaseInit {
 											.invisibilityOfElementLocated(By.xpath("//*[@class=\"ajax-loadernew\"]")));
 								}
 							} catch (Exception Tab) {
-								logger.info("Job is not exist in both the tab");
+								logger.info("Job is exist");
 
 							}
 							try {
@@ -3372,6 +3727,8 @@ public class OrderProcessing extends BaseInit {
 									Date date = new Date();
 									DateFormat dateFormat = new SimpleDateFormat("mm:dd:yy");
 									PartPullDate.sendKeys(dateFormat.format(date));
+									PartPullDate.sendKeys(Keys.TAB);
+
 									// --Part Pull Time
 									String ZOneID = Driver
 											.findElement(By.xpath("//span[contains(@ng-bind,'TimezoneId')]")).getText();
@@ -3431,7 +3788,14 @@ public class OrderProcessing extends BaseInit {
 									logger.info("ErroMsg is Displayed="
 											+ Driver.findElement(By.xpath("//label[contains(@class,'error-messages')]"))
 													.getText());
-									Thread.sleep(2000);
+									// --Part Pull Date
+									WebElement PartPullDate = Driver.findElement(By.id("idtxtPartPullDate"));
+									PartPullDate.clear();
+									Date date = new Date();
+									DateFormat dateFormat = new SimpleDateFormat("mm:dd:yy");
+									PartPullDate.sendKeys(dateFormat.format(date));
+									PartPullDate.sendKeys(Keys.TAB);
+
 									// --Part Pull Time
 									String ZOneID = Driver
 											.findElement(By.xpath("//span[contains(@ng-bind,'TimezoneId')]")).getText();
@@ -3443,8 +3807,8 @@ public class OrderProcessing extends BaseInit {
 									}
 									WebElement PartPullTime = Driver.findElement(By.id("txtPartPullTime"));
 									PartPullTime.clear();
-									Date date = new Date();
-									SimpleDateFormat dateFormat = new SimpleDateFormat("HH:mm");
+									date = new Date();
+									dateFormat = new SimpleDateFormat("HH:mm");
 									dateFormat.setTimeZone(TimeZone.getTimeZone(ZOneID));
 									logger.info(dateFormat.format(date));
 									PartPullTime.sendKeys(dateFormat.format(date));
@@ -3458,6 +3822,9 @@ public class OrderProcessing extends BaseInit {
 								} catch (Exception Time) {
 									logger.info("Time validation is not displayed-Time is as per timeZone");
 								}
+
+								// --Checking Error issue
+								dbNullError();
 
 								// --Search job from Inventory tab
 								wait.until(ExpectedConditions.visibilityOfElementLocated(By.id("txtBasicSearch")));
@@ -3486,12 +3853,12 @@ public class OrderProcessing extends BaseInit {
 										Driver.findElement(By.id("txtBasicSearch2")).sendKeys(PUID);
 										logger.info("Enter PickUpID in Search input");
 										Driver.findElement(By.id("btnGXNLSearch2")).click();
-										logger.info("Cllick on Search button");
+										logger.info("Click on Search button");
 										wait.until(ExpectedConditions.invisibilityOfElementLocated(
 												By.xpath("//*[@class=\"ajax-loadernew\"]")));
 									}
 								} catch (Exception Tab) {
-									logger.info("Job is not exist in both the tab");
+									logger.info("Job is exist");
 
 								}
 								try {
@@ -3546,7 +3913,7 @@ public class OrderProcessing extends BaseInit {
 									Driver.findElement(By.id("txtBasicSearch2")).sendKeys(PUID);
 									logger.info("Enter PickUpID in Search input");
 									Driver.findElement(By.id("btnGXNLSearch2")).click();
-									logger.info("Cllick on Search button");
+									logger.info("Click on Search button");
 									wait.until(ExpectedConditions
 											.invisibilityOfElementLocated(By.xpath("//*[@class=\"ajax-loadernew\"]")));
 
@@ -3555,10 +3922,64 @@ public class OrderProcessing extends BaseInit {
 												.visibilityOfElementLocated(By.className("dx-datagrid-nodata")));
 										WebElement NoData = Driver.findElement(By.className("dx-datagrid-nodata"));
 										if (NoData.isDisplayed()) {
-											logger.info("Job is moved to Verify Customer Bill stage successfully");
+											logger.info("Job is not moved to TENDER TO 3P stage successfully");
 										}
 									} catch (Exception eNoData) {
-										logger.info("Job is not moved to Verify Customer Bill stage successfully");
+
+										logger.info("Job is moved to TENDER TO 3P stage successfully");
+
+										// --Enter Drop Time
+										ZOneID = Driver.findElement(By.id("lblactdltz")).getText();
+										logger.info("ZoneID of is==" + ZOneID);
+										if (ZOneID.equalsIgnoreCase("EDT")) {
+											ZOneID = "America/New_York";
+										} else if (ZOneID.equalsIgnoreCase("CDT")) {
+											ZOneID = "CST";
+										}
+										WebElement DropTime = Driver.findElement(By.id("txtActualDeliveryTme"));
+										DropTime.clear();
+										date = new Date();
+										dateFormat = new SimpleDateFormat("HH:mm");
+										dateFormat.setTimeZone(TimeZone.getTimeZone(ZOneID));
+										logger.info(dateFormat.format(date));
+										DropTime.sendKeys(dateFormat.format(date));
+
+										// --Click on Tender To 3P
+										Driver.findElement(By.id("btnsavedelivery")).click();
+										logger.info("Clicked on Tender to 3P");
+
+										try {
+											wait.until(ExpectedConditions
+													.visibilityOfAllElementsLocatedBy(By.className("modal-content")));
+											Driver.findElement(By.id("iddataok")).click();
+											logger.info("Click on OK of Dialogue box");
+
+											wait.until(ExpectedConditions.invisibilityOfElementLocated(
+													By.xpath("//*[@class=\"ajax-loadernew\"]")));
+
+										} catch (Exception SPickup) {
+											logger.info("Dialogue is not present");
+										}
+										wait.until(ExpectedConditions.invisibilityOfElementLocated(
+												By.xpath("//*[@class=\"ajax-loadernew\"]")));
+										wait.until(ExpectedConditions
+												.visibilityOfElementLocated(By.id("txtBasicSearch2")));
+										PUID = getData("OrderProcessing", row1, 1);
+										Driver.findElement(By.id("txtBasicSearch2")).clear();
+										Driver.findElement(By.id("txtBasicSearch2")).sendKeys(PUID);
+										Driver.findElement(By.id("btnGXNLSearch2")).click();
+										wait.until(ExpectedConditions.invisibilityOfElementLocated(
+												By.xpath("//*[@class=\"ajax-loadernew\"]")));
+										try {
+											wait.until(ExpectedConditions
+													.visibilityOfElementLocated(By.className("dx-datagrid-nodata")));
+											WebElement NoData = Driver.findElement(By.className("dx-datagrid-nodata"));
+											if (NoData.isDisplayed()) {
+												logger.info("Job is Delivered successfully");
+											}
+										} catch (Exception Deliver) {
+											logger.info("Job is not Delivered successfully");
+										}
 
 									}
 
@@ -3604,7 +4025,7 @@ public class OrderProcessing extends BaseInit {
 						Driver.findElement(By.id("txtBasicSearch2")).sendKeys(PUID);
 						logger.info("Enter PickUpID in Search input");
 						Driver.findElement(By.id("btnGXNLSearch2")).click();
-						logger.info("Cllick on Search button");
+						logger.info("Click on Search button");
 						wait.until(ExpectedConditions
 								.invisibilityOfElementLocated(By.xpath("//*[@class=\"ajax-loadernew\"]")));
 
@@ -3628,7 +4049,7 @@ public class OrderProcessing extends BaseInit {
 										.invisibilityOfElementLocated(By.xpath("//*[@class=\"ajax-loadernew\"]")));
 							}
 						} catch (Exception Tab) {
-							logger.info("Job is not exist in both the tab");
+							logger.info("Job is exist");
 
 						}
 						try {
@@ -3680,6 +4101,8 @@ public class OrderProcessing extends BaseInit {
 								Date date = new Date();
 								DateFormat dateFormat = new SimpleDateFormat("mm:dd:yy");
 								PartPullDate.sendKeys(dateFormat.format(date));
+								PartPullDate.sendKeys(Keys.TAB);
+
 								// --Part Pull Time
 								String ZOneID = Driver.findElement(By.xpath("//span[contains(@ng-bind,'TimezoneId')]"))
 										.getText();
@@ -3737,7 +4160,14 @@ public class OrderProcessing extends BaseInit {
 										By.xpath("//label[contains(@class,'error-messages')]")));
 								logger.info("ErroMsg is Displayed=" + Driver
 										.findElement(By.xpath("//label[contains(@class,'error-messages')]")).getText());
-								Thread.sleep(2000);
+								// --Part Pull Date
+								WebElement PartPullDate = Driver.findElement(By.id("idtxtPartPullDate"));
+								PartPullDate.clear();
+								Date date = new Date();
+								DateFormat dateFormat = new SimpleDateFormat("mm:dd:yy");
+								PartPullDate.sendKeys(dateFormat.format(date));
+								PartPullDate.sendKeys(Keys.TAB);
+
 								// --Part Pull Time
 								String ZOneID = Driver.findElement(By.xpath("//span[contains(@ng-bind,'TimezoneId')]"))
 										.getText();
@@ -3749,8 +4179,8 @@ public class OrderProcessing extends BaseInit {
 								}
 								WebElement PartPullTime = Driver.findElement(By.id("txtPartPullTime"));
 								PartPullTime.clear();
-								Date date = new Date();
-								SimpleDateFormat dateFormat = new SimpleDateFormat("HH:mm");
+								date = new Date();
+								dateFormat = new SimpleDateFormat("HH:mm");
 								dateFormat.setTimeZone(TimeZone.getTimeZone(ZOneID));
 								logger.info(dateFormat.format(date));
 								PartPullTime.sendKeys(dateFormat.format(date));
@@ -3764,6 +4194,9 @@ public class OrderProcessing extends BaseInit {
 							} catch (Exception Time) {
 								logger.info("Time validation is not displayed-Time is as per timeZone");
 							}
+
+							// --Checking Error issue
+							dbNullError();
 
 							// --Search job from Inventory tab
 							wait.until(ExpectedConditions.visibilityOfElementLocated(By.id("txtBasicSearch")));
@@ -3791,12 +4224,12 @@ public class OrderProcessing extends BaseInit {
 									Driver.findElement(By.id("txtBasicSearch2")).sendKeys(PUID);
 									logger.info("Enter PickUpID in Search input");
 									Driver.findElement(By.id("btnGXNLSearch2")).click();
-									logger.info("Cllick on Search button");
+									logger.info("Click on Search button");
 									wait.until(ExpectedConditions
 											.invisibilityOfElementLocated(By.xpath("//*[@class=\"ajax-loadernew\"]")));
 								}
 							} catch (Exception Tab) {
-								logger.info("Job is not exist in both the tab");
+								logger.info("Job is exist");
 
 							}
 							try {
@@ -3851,7 +4284,7 @@ public class OrderProcessing extends BaseInit {
 								Driver.findElement(By.id("txtBasicSearch2")).sendKeys(PUID);
 								logger.info("Enter PickUpID in Search input");
 								Driver.findElement(By.id("btnGXNLSearch2")).click();
-								logger.info("Cllick on Search button");
+								logger.info("Click on Search button");
 								wait.until(ExpectedConditions
 										.invisibilityOfElementLocated(By.xpath("//*[@class=\"ajax-loadernew\"]")));
 
@@ -3860,10 +4293,63 @@ public class OrderProcessing extends BaseInit {
 											.visibilityOfElementLocated(By.className("dx-datagrid-nodata")));
 									WebElement NoData = Driver.findElement(By.className("dx-datagrid-nodata"));
 									if (NoData.isDisplayed()) {
-										logger.info("Job is moved to Verify Customer Bill stage successfully");
+										logger.info("Job is not moved to TENDER TO 3P stage successfully");
 									}
 								} catch (Exception eNoData) {
-									logger.info("Job is not moved to Verify Customer Bill stage successfully");
+
+									logger.info("Job is moved to TENDER TO 3P stage successfully");
+
+									// --Enter Drop Time
+									ZOneID = Driver.findElement(By.id("lblactdltz")).getText();
+									logger.info("ZoneID of is==" + ZOneID);
+									if (ZOneID.equalsIgnoreCase("EDT")) {
+										ZOneID = "America/New_York";
+									} else if (ZOneID.equalsIgnoreCase("CDT")) {
+										ZOneID = "CST";
+									}
+									WebElement DropTime = Driver.findElement(By.id("txtActualDeliveryTme"));
+									DropTime.clear();
+									date = new Date();
+									dateFormat = new SimpleDateFormat("HH:mm");
+									dateFormat.setTimeZone(TimeZone.getTimeZone(ZOneID));
+									logger.info(dateFormat.format(date));
+									DropTime.sendKeys(dateFormat.format(date));
+
+									// --Click on Tender To 3P
+									Driver.findElement(By.id("btnsavedelivery")).click();
+									logger.info("Clicked on Tender to 3P");
+
+									try {
+										wait.until(ExpectedConditions
+												.visibilityOfAllElementsLocatedBy(By.className("modal-content")));
+										Driver.findElement(By.id("iddataok")).click();
+										logger.info("Click on OK of Dialogue box");
+
+										wait.until(ExpectedConditions.invisibilityOfElementLocated(
+												By.xpath("//*[@class=\"ajax-loadernew\"]")));
+
+									} catch (Exception SPickup) {
+										logger.info("Dialogue is not present");
+									}
+									wait.until(ExpectedConditions
+											.invisibilityOfElementLocated(By.xpath("//*[@class=\"ajax-loadernew\"]")));
+									wait.until(ExpectedConditions.visibilityOfElementLocated(By.id("txtBasicSearch2")));
+									PUID = getData("OrderProcessing", row1, 1);
+									Driver.findElement(By.id("txtBasicSearch2")).clear();
+									Driver.findElement(By.id("txtBasicSearch2")).sendKeys(PUID);
+									Driver.findElement(By.id("btnGXNLSearch2")).click();
+									wait.until(ExpectedConditions
+											.invisibilityOfElementLocated(By.xpath("//*[@class=\"ajax-loadernew\"]")));
+									try {
+										wait.until(ExpectedConditions
+												.visibilityOfElementLocated(By.className("dx-datagrid-nodata")));
+										WebElement NoData = Driver.findElement(By.className("dx-datagrid-nodata"));
+										if (NoData.isDisplayed()) {
+											logger.info("Job is Delivered successfully");
+										}
+									} catch (Exception Deliver) {
+										logger.info("Job is not Delivered successfully");
+									}
 
 								}
 
@@ -3912,6 +4398,8 @@ public class OrderProcessing extends BaseInit {
 							Date date = new Date();
 							DateFormat dateFormat = new SimpleDateFormat("mm:dd:yy");
 							PartPullDate.sendKeys(dateFormat.format(date));
+							PartPullDate.sendKeys(Keys.TAB);
+
 							// --Part Pull Time
 							String ZOneID = Driver.findElement(By.xpath("//span[contains(@ng-bind,'TimezoneId')]"))
 									.getText();
@@ -3969,6 +4457,14 @@ public class OrderProcessing extends BaseInit {
 									By.xpath("//label[contains(@class,'error-messages')]")));
 							logger.info("ErroMsg is Displayed=" + Driver
 									.findElement(By.xpath("//label[contains(@class,'error-messages')]")).getText());
+							// --Part Pull Date
+							WebElement PartPullDate = Driver.findElement(By.id("idtxtPartPullDate"));
+							PartPullDate.clear();
+							Date date = new Date();
+							DateFormat dateFormat = new SimpleDateFormat("mm:dd:yy");
+							PartPullDate.sendKeys(dateFormat.format(date));
+							PartPullDate.sendKeys(Keys.TAB);
+
 							Thread.sleep(2000);
 							// --Part Pull Time
 							String ZOneID = Driver.findElement(By.xpath("//span[contains(@ng-bind,'TimezoneId')]"))
@@ -3981,8 +4477,8 @@ public class OrderProcessing extends BaseInit {
 							}
 							WebElement PartPullTime = Driver.findElement(By.id("txtPartPullTime"));
 							PartPullTime.clear();
-							Date date = new Date();
-							SimpleDateFormat dateFormat = new SimpleDateFormat("HH:mm");
+							date = new Date();
+							dateFormat = new SimpleDateFormat("HH:mm");
 							dateFormat.setTimeZone(TimeZone.getTimeZone(ZOneID));
 							logger.info(dateFormat.format(date));
 							PartPullTime.sendKeys(dateFormat.format(date));
@@ -3996,6 +4492,9 @@ public class OrderProcessing extends BaseInit {
 						} catch (Exception Time) {
 							logger.info("Time validation is not displayed-Time is as per timeZone");
 						}
+
+						// --Checking Error issue
+						dbNullError();
 
 						// --Search job from Inventory tab
 						wait.until(ExpectedConditions.visibilityOfElementLocated(By.id("txtBasicSearch")));
@@ -4023,12 +4522,12 @@ public class OrderProcessing extends BaseInit {
 								Driver.findElement(By.id("txtBasicSearch2")).sendKeys(PUID);
 								logger.info("Enter PickUpID in Search input");
 								Driver.findElement(By.id("btnGXNLSearch2")).click();
-								logger.info("Cllick on Search button");
+								logger.info("Click on Search button");
 								wait.until(ExpectedConditions
 										.invisibilityOfElementLocated(By.xpath("//*[@class=\"ajax-loadernew\"]")));
 							}
 						} catch (Exception Tab) {
-							logger.info("Job is not exist in both the tab");
+							logger.info("Job is exist");
 
 						}
 						try {
@@ -4082,7 +4581,7 @@ public class OrderProcessing extends BaseInit {
 							Driver.findElement(By.id("txtBasicSearch2")).sendKeys(PUID);
 							logger.info("Enter PickUpID in Search input");
 							Driver.findElement(By.id("btnGXNLSearch2")).click();
-							logger.info("Cllick on Search button");
+							logger.info("Click on Search button");
 							wait.until(ExpectedConditions
 									.invisibilityOfElementLocated(By.xpath("//*[@class=\"ajax-loadernew\"]")));
 
@@ -4091,10 +4590,63 @@ public class OrderProcessing extends BaseInit {
 										.visibilityOfElementLocated(By.className("dx-datagrid-nodata")));
 								WebElement NoData = Driver.findElement(By.className("dx-datagrid-nodata"));
 								if (NoData.isDisplayed()) {
-									logger.info("Job is moved to Verify Customer Bill stage successfully");
+									logger.info("Job is not moved to TENDER TO 3P stage successfully");
 								}
 							} catch (Exception eNoData) {
-								logger.info("Job is not moved to Verify Customer Bill stage successfully");
+
+								logger.info("Job is moved to TENDER TO 3P stage successfully");
+
+								// --Enter Drop Time
+								ZOneID = Driver.findElement(By.id("lblactdltz")).getText();
+								logger.info("ZoneID of is==" + ZOneID);
+								if (ZOneID.equalsIgnoreCase("EDT")) {
+									ZOneID = "America/New_York";
+								} else if (ZOneID.equalsIgnoreCase("CDT")) {
+									ZOneID = "CST";
+								}
+								WebElement DropTime = Driver.findElement(By.id("txtActualDeliveryTme"));
+								DropTime.clear();
+								date = new Date();
+								dateFormat = new SimpleDateFormat("HH:mm");
+								dateFormat.setTimeZone(TimeZone.getTimeZone(ZOneID));
+								logger.info(dateFormat.format(date));
+								DropTime.sendKeys(dateFormat.format(date));
+
+								// --Click on Tender To 3P
+								Driver.findElement(By.id("btnsavedelivery")).click();
+								logger.info("Clicked on Tender to 3P");
+
+								try {
+									wait.until(ExpectedConditions
+											.visibilityOfAllElementsLocatedBy(By.className("modal-content")));
+									Driver.findElement(By.id("iddataok")).click();
+									logger.info("Click on OK of Dialogue box");
+
+									wait.until(ExpectedConditions
+											.invisibilityOfElementLocated(By.xpath("//*[@class=\"ajax-loadernew\"]")));
+
+								} catch (Exception SPickup) {
+									logger.info("Dialogue is not present");
+								}
+								wait.until(ExpectedConditions
+										.invisibilityOfElementLocated(By.xpath("//*[@class=\"ajax-loadernew\"]")));
+								wait.until(ExpectedConditions.visibilityOfElementLocated(By.id("txtBasicSearch2")));
+								PUID = getData("OrderProcessing", row1, 1);
+								Driver.findElement(By.id("txtBasicSearch2")).clear();
+								Driver.findElement(By.id("txtBasicSearch2")).sendKeys(PUID);
+								Driver.findElement(By.id("btnGXNLSearch2")).click();
+								wait.until(ExpectedConditions
+										.invisibilityOfElementLocated(By.xpath("//*[@class=\"ajax-loadernew\"]")));
+								try {
+									wait.until(ExpectedConditions
+											.visibilityOfElementLocated(By.className("dx-datagrid-nodata")));
+									WebElement NoData = Driver.findElement(By.className("dx-datagrid-nodata"));
+									if (NoData.isDisplayed()) {
+										logger.info("Job is Delivered successfully");
+									}
+								} catch (Exception Deliver) {
+									logger.info("Job is not Delivered successfully");
+								}
 
 							}
 
@@ -4144,7 +4696,7 @@ public class OrderProcessing extends BaseInit {
 						Driver.findElement(By.id("txtBasicSearch2")).sendKeys(PUID);
 						logger.info("Enter PickUpID in Search input");
 						Driver.findElement(By.id("btnGXNLSearch2")).click();
-						logger.info("Cllick on Search button");
+						logger.info("Click on Search button");
 						wait.until(ExpectedConditions
 								.invisibilityOfElementLocated(By.xpath("//*[@class=\"ajax-loadernew\"]")));
 
@@ -4153,28 +4705,134 @@ public class OrderProcessing extends BaseInit {
 									ExpectedConditions.visibilityOfElementLocated(By.className("dx-datagrid-nodata")));
 							WebElement NoData = Driver.findElement(By.className("dx-datagrid-nodata"));
 							if (NoData.isDisplayed()) {
-								logger.info("Job is moved to Verify Customer Bill stage successfully");
+								logger.info("Job is not moved to TENDER TO 3P stage successfully");
 							}
 						} catch (Exception eNoData) {
-							logger.info("Job is not moved to Verify Customer Bill stage successfully");
+
+							logger.info("Job is moved to TENDER TO 3P stage successfully");
+
+							// --Enter Drop Time
+							ZOneID = Driver.findElement(By.id("lblactdltz")).getText();
+							logger.info("ZoneID of is==" + ZOneID);
+							if (ZOneID.equalsIgnoreCase("EDT")) {
+								ZOneID = "America/New_York";
+							} else if (ZOneID.equalsIgnoreCase("CDT")) {
+								ZOneID = "CST";
+							}
+							WebElement DropTime = Driver.findElement(By.id("txtActualDeliveryTme"));
+							DropTime.clear();
+							date = new Date();
+							dateFormat = new SimpleDateFormat("HH:mm");
+							dateFormat.setTimeZone(TimeZone.getTimeZone(ZOneID));
+							logger.info(dateFormat.format(date));
+							DropTime.sendKeys(dateFormat.format(date));
+
+							// --Click on Tender To 3P
+							Driver.findElement(By.id("btnsavedelivery")).click();
+							logger.info("Clicked on Tender to 3P");
+
+							try {
+								wait.until(ExpectedConditions
+										.visibilityOfAllElementsLocatedBy(By.className("modal-content")));
+								Driver.findElement(By.id("iddataok")).click();
+								logger.info("Click on OK of Dialogue box");
+
+								wait.until(ExpectedConditions
+										.invisibilityOfElementLocated(By.xpath("//*[@class=\"ajax-loadernew\"]")));
+
+							} catch (Exception SPickup) {
+								logger.info("Dialogue is not present");
+							}
+							wait.until(ExpectedConditions
+									.invisibilityOfElementLocated(By.xpath("//*[@class=\"ajax-loadernew\"]")));
+							wait.until(ExpectedConditions.visibilityOfElementLocated(By.id("txtBasicSearch2")));
+							PUID = getData("OrderProcessing", row1, 1);
+							Driver.findElement(By.id("txtBasicSearch2")).clear();
+							Driver.findElement(By.id("txtBasicSearch2")).sendKeys(PUID);
+							Driver.findElement(By.id("btnGXNLSearch2")).click();
+							wait.until(ExpectedConditions
+									.invisibilityOfElementLocated(By.xpath("//*[@class=\"ajax-loadernew\"]")));
+							try {
+								wait.until(ExpectedConditions
+										.visibilityOfElementLocated(By.className("dx-datagrid-nodata")));
+								WebElement NoData = Driver.findElement(By.className("dx-datagrid-nodata"));
+								if (NoData.isDisplayed()) {
+									logger.info("Job is Delivered successfully");
+								}
+							} catch (Exception Deliver) {
+								logger.info("Job is not Delivered successfully");
+							}
 
 						}
 
+					} else if (Orderstage.equalsIgnoreCase("Tender to 3P")) {
+
+						logger.info("Job is moved to TENDER TO 3P stage successfully");
+
+						// --Enter Drop Time
+						String ZOneID = Driver.findElement(By.id("lblactdltz")).getText();
+						logger.info("ZoneID of is==" + ZOneID);
+						if (ZOneID.equalsIgnoreCase("EDT")) {
+							ZOneID = "America/New_York";
+						} else if (ZOneID.equalsIgnoreCase("CDT")) {
+							ZOneID = "CST";
+						}
+						WebElement DropTime = Driver.findElement(By.id("txtActualDeliveryTme"));
+						DropTime.clear();
+						Date date = new Date();
+						SimpleDateFormat dateFormat = new SimpleDateFormat("HH:mm");
+						dateFormat.setTimeZone(TimeZone.getTimeZone(ZOneID));
+						logger.info(dateFormat.format(date));
+						DropTime.sendKeys(dateFormat.format(date));
+
+						// --Click on Tender To 3P
+						Driver.findElement(By.id("btnsavedelivery")).click();
+						logger.info("Clicked on Tender to 3P");
+
+						try {
+							wait.until(
+									ExpectedConditions.visibilityOfAllElementsLocatedBy(By.className("modal-content")));
+							Driver.findElement(By.id("iddataok")).click();
+							logger.info("Click on OK of Dialogue box");
+
+							wait.until(ExpectedConditions
+									.invisibilityOfElementLocated(By.xpath("//*[@class=\"ajax-loadernew\"]")));
+
+						} catch (Exception SPickup) {
+							logger.info("Dialogue is not present");
+						}
+						wait.until(ExpectedConditions
+								.invisibilityOfElementLocated(By.xpath("//*[@class=\"ajax-loadernew\"]")));
+						wait.until(ExpectedConditions.visibilityOfElementLocated(By.id("txtBasicSearch2")));
+						PUID = getData("OrderProcessing", row1, 1);
+						Driver.findElement(By.id("txtBasicSearch2")).clear();
+						Driver.findElement(By.id("txtBasicSearch2")).sendKeys(PUID);
+						Driver.findElement(By.id("btnGXNLSearch2")).click();
+						wait.until(ExpectedConditions
+								.invisibilityOfElementLocated(By.xpath("//*[@class=\"ajax-loadernew\"]")));
+						try {
+							wait.until(
+									ExpectedConditions.visibilityOfElementLocated(By.className("dx-datagrid-nodata")));
+							WebElement NoData = Driver.findElement(By.className("dx-datagrid-nodata"));
+							if (NoData.isDisplayed()) {
+								logger.info("Job is Delivered successfully");
+							}
+						} catch (Exception Deliver) {
+							logger.info("Job is not Delivered successfully");
+						}
+
 					}
+
 				} else if (ServiceID.contains("RETURN")) {
 
 					logger.info("If ServiceID is RETURN....");
-					Driver.findElement(By.id("operation")).click();
-					logger.info("Click on Operation Tab");
-					wait.until(ExpectedConditions
-							.invisibilityOfElementLocated(By.xpath("//*[@class=\"ajax-loadernew\"]")));
 					wait.until(ExpectedConditions.visibilityOfElementLocated(By.id("txtBasicSearch2")));
 					Driver.findElement(By.id("txtBasicSearch2")).clear();
 					logger.info("Clear search input");
 					Driver.findElement(By.id("txtBasicSearch2")).sendKeys(PUID);
 					logger.info("Enter PickUpID in Search input");
 					Driver.findElement(By.id("btnGXNLSearch2")).click();
-					logger.info("Cllick on Search button");
+					logger.info("Click on Search button");
 					wait.until(ExpectedConditions
 							.invisibilityOfElementLocated(By.xpath("//*[@class=\"ajax-loadernew\"]")));
 
@@ -4197,7 +4855,7 @@ public class OrderProcessing extends BaseInit {
 									.invisibilityOfElementLocated(By.xpath("//*[@class=\"ajax-loadernew\"]")));
 						}
 					} catch (Exception Tab) {
-						logger.info("Job is not exist in both the tab");
+						logger.info("Job is exist");
 
 					}
 					// --Memo
@@ -4210,7 +4868,7 @@ public class OrderProcessing extends BaseInit {
 					// upload(PUID);
 
 					// Ship Label Services
-					shipLabel(PUID);
+//					/shipLabel(PUID);
 
 					// --Print pull
 					// printPull(PUID);
@@ -4251,9 +4909,33 @@ public class OrderProcessing extends BaseInit {
 						Driver.findElement(By.id("txtBasicSearch2")).sendKeys(PUID);
 						logger.info("Enter PickUpID in Search input");
 						Driver.findElement(By.id("btnGXNLSearch2")).click();
-						logger.info("Cllick on Search button");
+						logger.info("Click on Search button");
 						wait.until(ExpectedConditions
 								.invisibilityOfElementLocated(By.xpath("//*[@class=\"ajax-loadernew\"]")));
+
+						try {
+							wait.until(
+									ExpectedConditions.visibilityOfElementLocated(By.className("dx-datagrid-nodata")));
+							WebElement NoData = Driver.findElement(By.className("dx-datagrid-nodata"));
+							if (NoData.isDisplayed()) {
+								logger.info("Job is not found in Operation Tab");
+								Driver.findElement(By.id("inventory")).click();
+								logger.info("Click on Inventory tab");
+								wait.until(ExpectedConditions.visibilityOfElementLocated(By.id("txtBasicSearch")));
+								PUID = getData("OrderProcessing", row1, 1);
+								Driver.findElement(By.id("txtBasicSearch")).clear();
+								logger.info("Clear search input");
+								Driver.findElement(By.id("txtBasicSearch")).sendKeys(PUID);
+								logger.info("Enter pickupID in search input");
+								Driver.findElement(By.id("btnSearch2")).click();
+								logger.info("Click on Search button");
+								wait.until(ExpectedConditions
+										.invisibilityOfElementLocated(By.xpath("//*[@class=\"ajax-loadernew\"]")));
+							}
+						} catch (Exception Tab) {
+							logger.info("Job is exist");
+
+						}
 
 						try {
 							wait.until(
@@ -4293,14 +4975,15 @@ public class OrderProcessing extends BaseInit {
 
 							}
 							// --Search again from Operation Tab
-							wait.until(ExpectedConditions.visibilityOfElementLocated(By.id("txtBasicSearch2")));
+							wait.until(ExpectedConditions.visibilityOfElementLocated(By.id("txtBasicSearch")));
 							PUID = getData("OrderProcessing", row1, 1);
-							Driver.findElement(By.id("txtBasicSearch2")).clear();
+							Driver.findElement(By.id("txtBasicSearch")).clear();
 							logger.info("Clear search input");
-							Driver.findElement(By.id("txtBasicSearch2")).sendKeys(PUID);
-							logger.info("Enter PickUpID in Search input");
-							Driver.findElement(By.id("btnGXNLSearch2")).click();
-							logger.info("Cllick on Search button");
+							Driver.findElement(By.id("txtBasicSearch")).sendKeys(PUID);
+							logger.info("Enter pickupID in search input");
+							Driver.findElement(By.id("btnSearch2")).click();
+							logger.info("Click on Search button");
+
 							wait.until(ExpectedConditions
 									.invisibilityOfElementLocated(By.xpath("//*[@class=\"ajax-loadernew\"]")));
 
@@ -4309,22 +4992,22 @@ public class OrderProcessing extends BaseInit {
 										.visibilityOfElementLocated(By.className("dx-datagrid-nodata")));
 								WebElement NoData = Driver.findElement(By.className("dx-datagrid-nodata"));
 								if (NoData.isDisplayed()) {
-									logger.info("Job is not found in Operation Tab");
-									Driver.findElement(By.id("inventory")).click();
-									logger.info("Click on Inventory tab");
-									wait.until(ExpectedConditions.visibilityOfElementLocated(By.id("txtBasicSearch")));
+									logger.info("Job is not found in Inventory Tab");
+									Driver.findElement(By.id("operation")).click();
+									logger.info("Click on Operation tab");
+									wait.until(ExpectedConditions.visibilityOfElementLocated(By.id("txtBasicSearch2")));
 									PUID = getData("OrderProcessing", row1, 1);
-									Driver.findElement(By.id("txtBasicSearch")).clear();
+									Driver.findElement(By.id("txtBasicSearch2")).clear();
 									logger.info("Clear search input");
-									Driver.findElement(By.id("txtBasicSearch")).sendKeys(PUID);
-									logger.info("Enter pickupID in search input");
-									Driver.findElement(By.id("btnSearch2")).click();
+									Driver.findElement(By.id("txtBasicSearch2")).sendKeys(PUID);
+									logger.info("Enter PickUpID in Search input");
+									Driver.findElement(By.id("btnGXNLSearch2")).click();
 									logger.info("Click on Search button");
 									wait.until(ExpectedConditions
 											.invisibilityOfElementLocated(By.xpath("//*[@class=\"ajax-loadernew\"]")));
 								}
 							} catch (Exception Tab) {
-								logger.info("Job is not exist in both the tab");
+								logger.info("Job is exist");
 
 							}
 							try {
@@ -4376,6 +5059,8 @@ public class OrderProcessing extends BaseInit {
 									Date date = new Date();
 									DateFormat dateFormat = new SimpleDateFormat("mm:dd:yy");
 									PartPullDate.sendKeys(dateFormat.format(date));
+									PartPullDate.sendKeys(Keys.TAB);
+
 									// --Part Pull Time
 									String ZOneID = Driver
 											.findElement(By.xpath("//span[contains(@ng-bind,'TimezoneId')]")).getText();
@@ -4435,6 +5120,14 @@ public class OrderProcessing extends BaseInit {
 									logger.info("ErroMsg is Displayed="
 											+ Driver.findElement(By.xpath("//label[contains(@class,'error-messages')]"))
 													.getText());
+									// --Part Pull Date
+									WebElement PartPullDate = Driver.findElement(By.id("idtxtPartPullDate"));
+									PartPullDate.clear();
+									Date date = new Date();
+									DateFormat dateFormat = new SimpleDateFormat("mm:dd:yy");
+									PartPullDate.sendKeys(dateFormat.format(date));
+									PartPullDate.sendKeys(Keys.TAB);
+
 									Thread.sleep(2000);
 									// --Part Pull Time
 									String ZOneID = Driver
@@ -4447,8 +5140,8 @@ public class OrderProcessing extends BaseInit {
 									}
 									WebElement PartPullTime = Driver.findElement(By.id("txtPartPullTime"));
 									PartPullTime.clear();
-									Date date = new Date();
-									SimpleDateFormat dateFormat = new SimpleDateFormat("HH:mm");
+									date = new Date();
+									dateFormat = new SimpleDateFormat("HH:mm");
 									dateFormat.setTimeZone(TimeZone.getTimeZone(ZOneID));
 									logger.info(dateFormat.format(date));
 									PartPullTime.sendKeys(dateFormat.format(date));
@@ -4462,6 +5155,10 @@ public class OrderProcessing extends BaseInit {
 								} catch (Exception Time) {
 									logger.info("Time validation is not displayed-Time is as per timeZone");
 								}
+
+								// --Checking Error issue
+								dbNullError();
+
 								wait.until(ExpectedConditions.visibilityOfElementLocated(By.id("txtBasicSearch")));
 								PUID = getData("OrderProcessing", row1, 1);
 								Driver.findElement(By.id("txtBasicSearch")).clear();
@@ -4493,7 +5190,7 @@ public class OrderProcessing extends BaseInit {
 												By.xpath("//*[@class=\"ajax-loadernew\"]")));
 									}
 								} catch (Exception Tab) {
-									logger.info("Job is not exist in both the tab");
+									logger.info("Job is exist");
 
 								}
 
@@ -4652,7 +5349,8 @@ public class OrderProcessing extends BaseInit {
 							}
 						}
 
-					} else if (Orderstage.equalsIgnoreCase("Confirm Pull Alert")) {
+					} else if (Orderstage.equalsIgnoreCase("Confirm Pull Alert")
+							|| Orderstage.equalsIgnoreCase("CONF PULL ALERT")) {
 						logger.info("Job is moved to Confirm Pull Alert stage successfully");
 
 						// --Confirm Pull Alert
@@ -4681,15 +5379,16 @@ public class OrderProcessing extends BaseInit {
 							logger.info("Validation Message is not displayed");
 
 						}
-						// --Search again from Operation Tab
-						wait.until(ExpectedConditions.visibilityOfElementLocated(By.id("txtBasicSearch2")));
+						// --Search again from Inventory Tab
+						wait.until(ExpectedConditions.visibilityOfElementLocated(By.id("txtBasicSearch")));
 						PUID = getData("OrderProcessing", row1, 1);
-						Driver.findElement(By.id("txtBasicSearch2")).clear();
+						Driver.findElement(By.id("txtBasicSearch")).clear();
 						logger.info("Clear search input");
-						Driver.findElement(By.id("txtBasicSearch2")).sendKeys(PUID);
-						logger.info("Enter PickUpID in Search input");
-						Driver.findElement(By.id("btnGXNLSearch2")).click();
-						logger.info("Cllick on Search button");
+						Driver.findElement(By.id("txtBasicSearch")).sendKeys(PUID);
+						logger.info("Enter pickupID in search input");
+						Driver.findElement(By.id("btnSearch2")).click();
+						logger.info("Click on Search button");
+
 						wait.until(ExpectedConditions
 								.invisibilityOfElementLocated(By.xpath("//*[@class=\"ajax-loadernew\"]")));
 
@@ -4698,22 +5397,22 @@ public class OrderProcessing extends BaseInit {
 									ExpectedConditions.visibilityOfElementLocated(By.className("dx-datagrid-nodata")));
 							WebElement NoData = Driver.findElement(By.className("dx-datagrid-nodata"));
 							if (NoData.isDisplayed()) {
-								logger.info("Job is not found in Operation Tab");
-								Driver.findElement(By.id("inventory")).click();
-								logger.info("Click on Inventory tab");
-								wait.until(ExpectedConditions.visibilityOfElementLocated(By.id("txtBasicSearch")));
+								logger.info("Job is not found in Inventory Tab");
+								Driver.findElement(By.id("operation")).click();
+								logger.info("Click on Operation tab");
+								wait.until(ExpectedConditions.visibilityOfElementLocated(By.id("txtBasicSearch2")));
 								PUID = getData("OrderProcessing", row1, 1);
-								Driver.findElement(By.id("txtBasicSearch")).clear();
+								Driver.findElement(By.id("txtBasicSearch2")).clear();
 								logger.info("Clear search input");
-								Driver.findElement(By.id("txtBasicSearch")).sendKeys(PUID);
-								logger.info("Enter pickupID in search input");
-								Driver.findElement(By.id("btnSearch2")).click();
+								Driver.findElement(By.id("txtBasicSearch2")).sendKeys(PUID);
+								logger.info("Enter PickUpID in Search input");
+								Driver.findElement(By.id("btnGXNLSearch2")).click();
 								logger.info("Click on Search button");
 								wait.until(ExpectedConditions
 										.invisibilityOfElementLocated(By.xpath("//*[@class=\"ajax-loadernew\"]")));
 							}
 						} catch (Exception Tab) {
-							logger.info("Job is not exist in both the tab");
+							logger.info("Job is exist");
 
 						}
 						try {
@@ -4765,6 +5464,8 @@ public class OrderProcessing extends BaseInit {
 								Date date = new Date();
 								DateFormat dateFormat = new SimpleDateFormat("mm:dd:yy");
 								PartPullDate.sendKeys(dateFormat.format(date));
+								PartPullDate.sendKeys(Keys.TAB);
+
 								// --Part Pull Time
 								String ZOneID = Driver.findElement(By.xpath("//span[contains(@ng-bind,'TimezoneId')]"))
 										.getText();
@@ -4822,6 +5523,14 @@ public class OrderProcessing extends BaseInit {
 										By.xpath("//label[contains(@class,'error-messages')]")));
 								logger.info("ErroMsg is Displayed=" + Driver
 										.findElement(By.xpath("//label[contains(@class,'error-messages')]")).getText());
+								// --Part Pull Date
+								WebElement PartPullDate = Driver.findElement(By.id("idtxtPartPullDate"));
+								PartPullDate.clear();
+								Date date = new Date();
+								DateFormat dateFormat = new SimpleDateFormat("mm:dd:yy");
+								PartPullDate.sendKeys(dateFormat.format(date));
+								PartPullDate.sendKeys(Keys.TAB);
+
 								Thread.sleep(2000);
 								// --Part Pull Time
 								String ZOneID = Driver.findElement(By.xpath("//span[contains(@ng-bind,'TimezoneId')]"))
@@ -4834,21 +5543,19 @@ public class OrderProcessing extends BaseInit {
 								}
 								WebElement PartPullTime = Driver.findElement(By.id("txtPartPullTime"));
 								PartPullTime.clear();
-								Date date = new Date();
-								SimpleDateFormat dateFormat = new SimpleDateFormat("HH:mm");
+								date = new Date();
+								dateFormat = new SimpleDateFormat("HH:mm");
 								dateFormat.setTimeZone(TimeZone.getTimeZone(ZOneID));
 								logger.info(dateFormat.format(date));
 								PartPullTime.sendKeys(dateFormat.format(date));
 
-								// --Save button
-								Driver.findElement(By.id("idiconsave")).click();
-								logger.info("Clicked on Save button");
-								wait.until(ExpectedConditions
-										.invisibilityOfElementLocated(By.xpath("//*[@class=\"ajax-loadernew\"]")));
-
 							} catch (Exception Time) {
 								logger.info("Time validation is not displayed-Time is as per timeZone");
 							}
+
+							// --Checking Error issue
+							dbNullError();
+
 							wait.until(ExpectedConditions.visibilityOfElementLocated(By.id("txtBasicSearch")));
 							PUID = getData("OrderProcessing", row1, 1);
 							Driver.findElement(By.id("txtBasicSearch")).clear();
@@ -4879,7 +5586,7 @@ public class OrderProcessing extends BaseInit {
 											.invisibilityOfElementLocated(By.xpath("//*[@class=\"ajax-loadernew\"]")));
 								}
 							} catch (Exception Tab) {
-								logger.info("Job is not exist in both the tab");
+								logger.info("Job is exist");
 
 							}
 
@@ -5077,6 +5784,8 @@ public class OrderProcessing extends BaseInit {
 							Date date = new Date();
 							DateFormat dateFormat = new SimpleDateFormat("mm:dd:yy");
 							PartPullDate.sendKeys(dateFormat.format(date));
+							PartPullDate.sendKeys(Keys.TAB);
+
 							// --Part Pull Time
 							String ZOneID = Driver.findElement(By.xpath("//span[contains(@ng-bind,'TimezoneId')]"))
 									.getText();
@@ -5134,6 +5843,14 @@ public class OrderProcessing extends BaseInit {
 									By.xpath("//label[contains(@class,'error-messages')]")));
 							logger.info("ErroMsg is Displayed=" + Driver
 									.findElement(By.xpath("//label[contains(@class,'error-messages')]")).getText());
+							// --Part Pull Date
+							WebElement PartPullDate = Driver.findElement(By.id("idtxtPartPullDate"));
+							PartPullDate.clear();
+							Date date = new Date();
+							DateFormat dateFormat = new SimpleDateFormat("mm:dd:yy");
+							PartPullDate.sendKeys(dateFormat.format(date));
+							PartPullDate.sendKeys(Keys.TAB);
+
 							Thread.sleep(2000);
 							// --Part Pull Time
 							String ZOneID = Driver.findElement(By.xpath("//span[contains(@ng-bind,'TimezoneId')]"))
@@ -5146,8 +5863,8 @@ public class OrderProcessing extends BaseInit {
 							}
 							WebElement PartPullTime = Driver.findElement(By.id("txtPartPullTime"));
 							PartPullTime.clear();
-							Date date = new Date();
-							SimpleDateFormat dateFormat = new SimpleDateFormat("HH:mm");
+							date = new Date();
+							dateFormat = new SimpleDateFormat("HH:mm");
 							dateFormat.setTimeZone(TimeZone.getTimeZone(ZOneID));
 							logger.info(dateFormat.format(date));
 							PartPullTime.sendKeys(dateFormat.format(date));
@@ -5191,7 +5908,7 @@ public class OrderProcessing extends BaseInit {
 										.invisibilityOfElementLocated(By.xpath("//*[@class=\"ajax-loadernew\"]")));
 							}
 						} catch (Exception Tab) {
-							logger.info("Job is not exist in both the tab");
+							logger.info("Job is exist");
 
 						}
 
@@ -5841,6 +6558,132 @@ public class OrderProcessing extends BaseInit {
 		Driver.switchTo().window(WindowHandlebefore);
 		logger.info("Switched to main window");
 		Thread.sleep(2000);
+	}
+
+	public static void dbNullError() {
+		WebDriverWait wait = new WebDriverWait(Driver, 50);
+
+		try {
+			wait.until(ExpectedConditions.visibilityOfElementLocated(By.id("errorid")));
+			logger.info("Error is Displayed=" + Driver.findElement(By.id("errorid")).getText());
+			logger.info("Unable to process, try again");
+			// --Click on Close button
+			Driver.findElement(By.id("lnkclose")).click();
+			logger.info("Clicked on close button");
+			wait.until(ExpectedConditions.invisibilityOfElementLocated(By.xpath("//*[@class=\"ajax-loadernew\"]")));
+
+			try {
+				wait.until(ExpectedConditions
+						.visibilityOfElementLocated(By.xpath("//td[contains(@aria-label,'Value CONF PULL')]/div")));
+				WebElement ConfirmPull = Driver
+						.findElement(By.xpath("//td[contains(@aria-label,'Value CONF PULL')]/div"));
+				ConfirmPull.click();
+				logger.info("Clicked on Job with status 'Conf Pull'");
+
+				// --Save button
+				Driver.findElement(By.id("idiconsave")).click();
+				logger.info("Clicked on Save button");
+				wait.until(ExpectedConditions.invisibilityOfElementLocated(By.xpath("//*[@class=\"ajax-loadernew\"]")));
+				try {
+					wait.until(ExpectedConditions.visibilityOfElementLocated(By.id("idPartPullDttmValidation")));
+					String ValMsg = Driver.findElement(By.id("idPartPullDttmValidation")).getText();
+					logger.info("Validation Message=" + ValMsg);
+					// --Part Pull Date
+					WebElement PartPullDate = Driver.findElement(By.id("idtxtPartPullDate"));
+					PartPullDate.clear();
+					Date date = new Date();
+					DateFormat dateFormat = new SimpleDateFormat("mm:dd:yy");
+					PartPullDate.sendKeys(dateFormat.format(date));
+					PartPullDate.sendKeys(Keys.TAB);
+
+					// --Part Pull Time
+					String ZOneID = Driver.findElement(By.xpath("//span[contains(@ng-bind,'TimezoneId')]")).getText();
+					logger.info("ZoneID of is==" + ZOneID);
+					if (ZOneID.equalsIgnoreCase("EDT")) {
+						ZOneID = "America/New_York";
+					} else if (ZOneID.equalsIgnoreCase("CDT")) {
+						ZOneID = "CST";
+					}
+					WebElement PartPullTime = Driver.findElement(By.id("txtPartPullTime"));
+					PartPullTime.clear();
+					date = new Date();
+					dateFormat = new SimpleDateFormat("HH:mm");
+					dateFormat.setTimeZone(TimeZone.getTimeZone(ZOneID));
+					logger.info(dateFormat.format(date));
+					PartPullTime.sendKeys(dateFormat.format(date));
+
+					// --Save button
+					Driver.findElement(By.id("idiconsave")).click();
+					logger.info("Clicked on Save button");
+					wait.until(ExpectedConditions
+							.invisibilityOfElementLocated(By.xpath("//*[@class=\"ajax-loadernew\"]")));
+				} catch (Exception eDataB) {
+					logger.info("Validation Message is not displayed");
+				}
+
+				try {
+					wait.until(ExpectedConditions
+							.visibilityOfElementLocated(By.xpath("//label[contains(@class,'error-messages')]")));
+					logger.info("ErroMsg is Displayed="
+							+ Driver.findElement(By.xpath("//label[contains(@class,'error-messages')]")).getText());
+					Thread.sleep(2000);
+
+					// --Get the serial NO
+					String SerialNo = Driver.findElement(By.xpath("//*[@ng-bind=\"segment.SerialNo\"]")).getText();
+					logger.info("Serial No of Part is==" + SerialNo + "\n");
+					// enter serial number in scan
+					Driver.findElement(By.id("txtBarcode")).clear();
+					Driver.findElement(By.id("txtBarcode")).sendKeys(SerialNo);
+					Driver.findElement(By.id("txtBarcode")).sendKeys(Keys.TAB);
+					wait.until(ExpectedConditions
+							.invisibilityOfElementLocated(By.xpath("//*[@class=\"ajax-loadernew\"]")));
+					logger.info("Entered serial No in scan barcode");
+					// --Save button
+					Driver.findElement(By.id("idiconsave")).click();
+					logger.info("Clicked on Save button");
+				} catch (Exception SerialNo1) {
+					logger.info("Validation for Serial No is not displayed");
+
+				}
+
+				try {
+					wait.until(ExpectedConditions.visibilityOfElementLocated(By.id("errorid")));
+					logger.info("Error is Displayed=" + Driver.findElement(By.id("errorid")).getText());
+					String ZOneID = Driver.findElement(By.xpath("//span[contains(@ng-bind,'TimezoneId')]")).getText();
+					logger.info("ZoneID of is==" + ZOneID);
+					if (ZOneID.equalsIgnoreCase("EDT")) {
+						ZOneID = "America/New_York";
+					} else if (ZOneID.equalsIgnoreCase("CDT")) {
+						ZOneID = "CST";
+					}
+					WebElement PartPullTime = Driver.findElement(By.id("txtPartPullTime"));
+					PartPullTime.clear();
+					Date date = new Date();
+					SimpleDateFormat dateFormat = new SimpleDateFormat("HH:mm");
+					dateFormat.setTimeZone(TimeZone.getTimeZone(ZOneID));
+					logger.info(dateFormat.format(date));
+					PartPullTime.sendKeys(dateFormat.format(date));
+
+					// --Save button
+					Driver.findElement(By.id("idiconsave")).click();
+					logger.info("Clicked on Save button");
+					wait.until(ExpectedConditions
+							.invisibilityOfElementLocated(By.xpath("//*[@class=\"ajax-loadernew\"]")));
+
+				} catch (Exception DateTime) {
+					logger.info("Validation for DateTime greater than is not display, DateTime is as per expected");
+
+				}
+
+			} catch (Exception noCOnfPull) {
+				logger.info("There is no job with search PickUpID");
+
+			}
+
+		} catch (Exception PullTicket) {
+			logger.info("Error is not Displayed");
+
+		}
 	}
 
 }
