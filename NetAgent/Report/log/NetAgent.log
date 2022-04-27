@@ -1,91 +1,265 @@
-2022-04-25 16:54:14,589 - OrderProcessing -INFO - initialization of the properties file is done
-2022-04-25 16:54:14,767 - io.github.bonigarcia.wdm.WebDriverManager -INFO - Using chromedriver 100.0.4896.60 (since Google Chrome 100 is installed in your machine)
-2022-04-25 16:54:14,781 - io.github.bonigarcia.wdm.WebDriverManager -INFO - Exporting webdriver.chrome.driver as C:\Users\rprajapati\.m2\repository\webdriver\chromedriver\win32\100.0.4896.60\chromedriver.exe
-2022-04-25 16:54:23,560 - OrderProcessing -INFO - Url opened
-2022-04-25 16:54:38,524 - OrderProcessing -INFO - ===Order Processing Test Start===
-2022-04-25 16:54:38,528 - OrderProcessing -INFO - total No of Rows=9
-2022-04-25 16:54:38,533 - OrderProcessing -INFO - total No of Columns=3
-2022-04-25 16:54:38,654 - OrderProcessing -INFO - Click on Operations
-2022-04-25 16:54:44,330 - OrderProcessing -INFO - Click on Task Log
-2022-04-25 16:54:44,576 - OrderProcessing -INFO - Click on Operation Tab
-2022-04-25 16:54:46,428 - OrderProcessing -INFO - ServiceID is==LOC
-2022-04-25 16:54:46,440 - OrderProcessing -INFO - PickUpID is==3372514
-2022-04-25 16:54:46,441 - OrderProcessing -INFO - If ServiceID contain LOC or SD....
-2022-04-25 16:54:46,527 - OrderProcessing -INFO - Clear search input
-2022-04-25 16:54:46,595 - OrderProcessing -INFO - Enter PickUpID in Search input
-2022-04-25 16:54:46,666 - OrderProcessing -INFO - Cllick on Search button
-2022-04-25 16:54:47,926 - OrderProcessing -INFO - Job is not exist with the search parameters
-2022-04-25 16:54:47,930 - OrderProcessing -INFO - ServiceID is==SD
-2022-04-25 16:54:47,933 - OrderProcessing -INFO - PickUpID is==3368928
-2022-04-25 16:54:47,934 - OrderProcessing -INFO - If ServiceID contain LOC or SD....
-2022-04-25 16:54:48,009 - OrderProcessing -INFO - Clear search input
-2022-04-25 16:54:48,062 - OrderProcessing -INFO - Enter PickUpID in Search input
-2022-04-25 16:54:48,117 - OrderProcessing -INFO - Cllick on Search button
-2022-04-25 16:54:49,484 - OrderProcessing -INFO - Job is not exist with the search parameters
-2022-04-25 16:54:49,490 - OrderProcessing -INFO - ServiceID is==H3P
-2022-04-25 16:54:49,495 - OrderProcessing -INFO - PickUpID is==3368931
-2022-04-25 16:54:50,838 - OrderProcessing -INFO - Current stage of the order is=Task Log
-2022-04-25 16:54:50,838 - OrderProcessing -INFO - unknown stage found for H3P service
-2022-04-25 16:54:50,842 - OrderProcessing -INFO - ServiceID is==3PLAST
-2022-04-25 16:54:50,846 - OrderProcessing -INFO - PickUpID is==3368937
-2022-04-25 16:54:50,846 - OrderProcessing -INFO - If ServiceID is 3PLAST....
-2022-04-25 16:54:50,919 - OrderProcessing -INFO - Clear search input
-2022-04-25 16:54:50,971 - OrderProcessing -INFO - Enter PickUpID in Search input
-2022-04-25 16:54:51,021 - OrderProcessing -INFO - Cllick on Search button
-2022-04-25 16:54:52,367 - OrderProcessing -INFO - Job is not exist with the search parameters
-2022-04-25 16:54:52,370 - OrderProcessing -INFO - ServiceID is==3PLAST
-2022-04-25 16:54:52,373 - OrderProcessing -INFO - PickUpID is==3368938
-2022-04-25 16:54:52,374 - OrderProcessing -INFO - If ServiceID is 3PLAST....
-2022-04-25 16:54:52,453 - OrderProcessing -INFO - Clear search input
-2022-04-25 16:54:52,511 - OrderProcessing -INFO - Enter PickUpID in Search input
-2022-04-25 16:54:52,565 - OrderProcessing -INFO - Cllick on Search button
-2022-04-25 16:54:53,979 - OrderProcessing -INFO - Job is not exist with the search parameters
-2022-04-25 16:54:53,987 - OrderProcessing -INFO - ServiceID is==RETURN
-2022-04-25 16:54:53,994 - OrderProcessing -INFO - PickUpID is==3368940
-2022-04-25 16:54:53,995 - OrderProcessing -INFO - If ServiceID is RETURN....
-2022-04-25 16:54:54,161 - OrderProcessing -INFO - Click on Operation Tab
-2022-04-25 16:54:55,419 - OrderProcessing -INFO - Clear search input
-2022-04-25 16:54:55,469 - OrderProcessing -INFO - Enter PickUpID in Search input
-2022-04-25 16:54:55,522 - OrderProcessing -INFO - Cllick on Search button
-2022-04-25 16:54:56,795 - OrderProcessing -INFO - Job is not found in Operation Tab
-2022-04-25 16:54:56,925 - OrderProcessing -INFO - Click on Inventory tab
-2022-04-25 16:54:57,005 - OrderProcessing -INFO - Clear search input
-2022-04-25 16:54:57,049 - OrderProcessing -INFO - Enter pickupID in search input
-2022-04-25 16:54:58,121 - OrderProcessing -INFO - Job is not exist in both the tab
-2022-04-25 16:54:58,258 - OrderProcessing -INFO - Job is not exist with the search parameters
-2022-04-25 16:54:58,262 - OrderProcessing -INFO - ServiceID is==D3P
-2022-04-25 16:54:58,266 - OrderProcessing -INFO - PickUpID is==3368935
-2022-04-25 16:54:58,267 - OrderProcessing -INFO - If ServiceID is D3P....
-2022-04-25 16:54:58,330 - OrderProcessing -INFO - Job is not found in Operation Tab
-2022-04-25 16:54:58,690 - OrderProcessing -INFO - Click on Inventory tab
-2022-04-25 16:54:58,760 - OrderProcessing -INFO - Clear search input
-2022-04-25 16:54:58,836 - OrderProcessing -INFO - Enter pickupID in search input
-2022-04-25 16:54:59,057 - OrderProcessing -INFO - Click on Search button
-2022-04-25 16:55:05,712 - OrderProcessing -INFO - Current stage of the order is=Confirm Pull
-2022-04-25 16:55:05,713 - OrderProcessing -INFO - Job is moved to Confirm Pull stage successfully
-2022-04-25 16:55:05,744 - OrderProcessing -INFO - stage=Confirm Pull
-2022-04-25 16:55:05,962 - OrderProcessing -INFO - Clicked on Label Generation
-2022-04-25 16:55:08,357 - OrderProcessing -INFO - Switched to Label generation window
-2022-04-25 16:55:13,505 - OrderProcessing -INFO - Switched to Label generation window
-2022-04-25 16:55:18,627 - OrderProcessing -INFO - Closed Label generation window
-2022-04-25 16:55:18,643 - OrderProcessing -INFO - Switched to main window
-2022-04-25 16:55:18,714 - OrderProcessing -INFO - Clicked on Save button
-2022-04-25 16:55:18,819 - OrderProcessing -INFO - Validation Message=Part Pull DateTime is required.
-2022-04-25 16:55:19,063 - OrderProcessing -INFO - ZoneID of is==CDT
-2022-04-25 16:55:19,114 - OrderProcessing -INFO - 06:25
-2022-04-25 16:55:19,270 - OrderProcessing -INFO - Clicked on Save button
-2022-04-25 16:55:19,355 - OrderProcessing -INFO - ErroMsg is Displayed=Verify all parts before proceeding.
-2022-04-25 16:55:21,397 - OrderProcessing -INFO - Serial No of Part is==BATTERY
+2022-04-27 12:34:06,278 - OrderProcessing -INFO - initialization of the properties file is done
+2022-04-27 12:34:06,453 - io.github.bonigarcia.wdm.WebDriverManager -INFO - Using chromedriver 100.0.4896.60 (since Google Chrome 100 is installed in your machine)
+2022-04-27 12:34:06,466 - io.github.bonigarcia.wdm.WebDriverManager -INFO - Exporting webdriver.chrome.driver as C:\Users\rprajapati\.m2\repository\webdriver\chromedriver\win32\100.0.4896.60\chromedriver.exe
+2022-04-27 12:34:13,232 - OrderProcessing -INFO - Url opened
+2022-04-27 12:34:26,036 - OrderProcessing -INFO - ===Order Processing Test Start===
+2022-04-27 12:34:26,041 - OrderProcessing -INFO - total No of Rows=10
+2022-04-27 12:34:26,045 - OrderProcessing -INFO - total No of Columns=3
+2022-04-27 12:34:26,156 - OrderProcessing -INFO - Click on Operations
+2022-04-27 12:34:29,515 - OrderProcessing -INFO - Click on Task Log
+2022-04-27 12:34:29,786 - OrderProcessing -INFO - Click on Operation Tab
+2022-04-27 12:34:30,964 - OrderProcessing -INFO - ServiceID is==LOC
+2022-04-27 12:34:30,976 - OrderProcessing -INFO - PickUpID is==3377250
+2022-04-27 12:34:31,049 - OrderProcessing -INFO - Click on Operation Tab
+2022-04-27 12:34:32,273 - OrderProcessing -INFO - If ServiceID contain LOC or SD....
+2022-04-27 12:34:32,369 - OrderProcessing -INFO - Clear search input
+2022-04-27 12:34:32,433 - OrderProcessing -INFO - Enter PickUpID in Search input
+2022-04-27 12:34:32,505 - OrderProcessing -INFO - Click on Search button
+2022-04-27 12:34:34,366 - OrderProcessing -INFO - Job is not exist with the search parameters
+2022-04-27 12:34:34,369 - OrderProcessing -INFO - ServiceID is==SD
+2022-04-27 12:34:34,372 - OrderProcessing -INFO - PickUpID is==3375024
+2022-04-27 12:34:34,427 - OrderProcessing -INFO - Click on Operation Tab
+2022-04-27 12:34:35,587 - OrderProcessing -INFO - If ServiceID contain LOC or SD....
+2022-04-27 12:34:35,648 - OrderProcessing -INFO - Clear search input
+2022-04-27 12:34:35,705 - OrderProcessing -INFO - Enter PickUpID in Search input
+2022-04-27 12:34:35,763 - OrderProcessing -INFO - Click on Search button
+2022-04-27 12:34:37,041 - OrderProcessing -INFO - Job is not exist with the search parameters
+2022-04-27 12:34:37,048 - OrderProcessing -INFO - ServiceID is==H3P
+2022-04-27 12:34:37,055 - OrderProcessing -INFO - PickUpID is==3377254
+2022-04-27 12:34:37,118 - OrderProcessing -INFO - Click on Operation Tab
+2022-04-27 12:34:39,743 - OrderProcessing -INFO - Current stage of the order is=Task Log
+2022-04-27 12:34:39,743 - OrderProcessing -INFO - unknown stage found for H3P service
+2022-04-27 12:34:39,746 - OrderProcessing -INFO - ServiceID is==RTE
+2022-04-27 12:34:39,749 - OrderProcessing -INFO - PickUpID is==125772231
+2022-04-27 12:34:39,803 - OrderProcessing -INFO - Click on Operation Tab
+2022-04-27 12:34:43,369 - OrderProcessing -INFO - Record is available with search parameters
+2022-04-27 12:34:43,446 - OrderProcessing -INFO - Clicked on the record
+2022-04-27 12:34:50,218 - OrderProcessing -INFO - Current stage of the order is=Delivered@Stop 2 of 2
+2022-04-27 12:34:50,341 - OrderProcessing -INFO - Job is already delivered
+2022-04-27 12:34:50,403 - OrderProcessing -INFO - Clicked on Close button
+2022-04-27 12:34:52,371 - OrderProcessing -INFO - ServiceID is==Replenishment
+2022-04-27 12:34:52,375 - OrderProcessing -INFO - PickUpID is==1685663
+2022-04-27 12:34:52,517 - OrderProcessing -INFO - Click on Operation Tab
+2022-04-27 12:34:55,816 - OrderProcessing -INFO - Total No of job in Inventory Tab is/are==71
+2022-04-27 12:34:56,639 - OrderProcessing -INFO - Record is not available with search parameters
+2022-04-27 12:34:56,642 - OrderProcessing -INFO - ServiceID is==3PLAST
+2022-04-27 12:34:56,645 - OrderProcessing -INFO - PickUpID is==3377264
+2022-04-27 12:34:56,748 - OrderProcessing -INFO - Click on Operation Tab
+2022-04-27 12:34:57,913 - OrderProcessing -INFO - If ServiceID is 3PLAST....
+2022-04-27 12:34:58,040 - OrderProcessing -INFO - Clear search input
+2022-04-27 12:34:58,103 - OrderProcessing -INFO - Enter PickUpID in Search input
+2022-04-27 12:34:58,166 - OrderProcessing -INFO - Click on Search button
+2022-04-27 12:35:00,525 - OrderProcessing -INFO - Current stage of the order is=CONF PULL ALERT
+2022-04-27 12:35:00,525 - OrderProcessing -INFO - Current stage of the order is=CONF PULL ALERT
+2022-04-27 12:35:00,581 - OrderProcessing -INFO - Click on Accept button
+2022-04-27 12:35:00,650 - OrderProcessing -INFO - Spoke with validation is displayed==Spoke with Required.
+2022-04-27 12:35:00,734 - OrderProcessing -INFO - Enter Spoke with
+2022-04-27 12:35:00,809 - OrderProcessing -INFO - Click on Accept button
+2022-04-27 12:35:58,371 - OrderProcessing -INFO - Job is moved to Confirm Pull stage successfully
+2022-04-27 12:35:58,410 - OrderProcessing -INFO - stage=Confirm Pull
+2022-04-27 12:35:58,410 - OrderProcessing -INFO - If order stage is Confirm Pull.....
+2022-04-27 12:35:58,583 - OrderProcessing -INFO - Clicked on Label Generation
+2022-04-27 12:35:59,752 - OrderProcessing -INFO - Switched to Label generation window
+2022-04-27 12:36:04,935 - OrderProcessing -INFO - Switched to Label generation window
+2022-04-27 12:36:10,092 - OrderProcessing -INFO - Closed Label generation window
+2022-04-27 12:36:10,107 - OrderProcessing -INFO - Switched to main window
+2022-04-27 12:36:10,168 - OrderProcessing -INFO - Clicked on Accept button
+2022-04-27 12:36:10,247 - OrderProcessing -INFO - Validation Message=Part Pull DateTime is required.
+2022-04-27 12:36:10,275 - OrderProcessing -INFO - ZoneID of is==CDT
+2022-04-27 12:36:10,340 - OrderProcessing -INFO - 04/27/2022
+2022-04-27 12:36:10,601 - OrderProcessing -INFO - 02:06
+2022-04-27 12:36:10,733 - OrderProcessing -INFO - Clicked on Save button
+2022-04-27 12:36:10,795 - OrderProcessing -INFO - ErroMsg is Displayed=Verify all parts before proceeding.
+2022-04-27 12:36:12,860 - OrderProcessing -INFO - Serial No of Part is==123
 
-2022-04-25 16:55:22,342 - OrderProcessing -INFO - Entered serial No in scan barcode
-2022-04-25 16:55:22,486 - OrderProcessing -INFO - Clicked on Save button
-2022-04-25 16:55:23,228 - OrderProcessing -INFO - ErroMsg is Displayed=Actual Datetime can not be greater than Current Datetime.
-2022-04-25 16:55:25,282 - OrderProcessing -INFO - ZoneID of is==CDT
-2022-04-25 16:55:25,337 - OrderProcessing -INFO - 06:25
-2022-04-25 16:55:25,567 - OrderProcessing -INFO - Clicked on Save button
-2022-04-25 16:55:28,619 - OrderProcessing -INFO - Job is not found in Operation Tab
-2022-04-25 16:55:28,693 - OrderProcessing -INFO - Click on Inventory tab
-2022-04-25 16:55:28,765 - OrderProcessing -INFO - Clear search input
-2022-04-25 16:55:28,830 - OrderProcessing -INFO - Enter pickupID in search input
-2022-04-25 16:55:29,225 - OrderProcessing -INFO - Click on Search button
-2022-04-25 16:55:29,942 - OrderProcessing -INFO - Job is not moved to PICKUP stage successfully
+2022-04-27 12:36:12,906 - OrderProcessing -INFO - Cleared scan input
+2022-04-27 12:36:13,015 - OrderProcessing -INFO - Entered serialNo in Scan input
+2022-04-27 12:36:14,325 - OrderProcessing -INFO - Entered serial No in scan barcode
+2022-04-27 12:36:14,507 - OrderProcessing -INFO - Clicked on Save button
+2022-04-27 12:36:15,088 - OrderProcessing -INFO - ErroMsg is Displayed=Actual Datetime can not be greater than Current Datetime.
+2022-04-27 12:36:15,105 - OrderProcessing -INFO - ZoneID of is==CDT
+2022-04-27 12:36:15,162 - OrderProcessing -INFO - 04/27/2022
+2022-04-27 12:36:15,402 - OrderProcessing -INFO - 02:06
+2022-04-27 12:36:15,638 - OrderProcessing -INFO - Clicked on Save button
+2022-04-27 12:37:06,026 - OrderProcessing -INFO - Error is not Displayed
+2022-04-27 12:37:06,176 - OrderProcessing -INFO - Cleared search input
+2022-04-27 12:37:06,236 - OrderProcessing -INFO - Enter pickupID in search input
+2022-04-27 12:37:06,303 - OrderProcessing -INFO - Click on Search button
+2022-04-27 12:38:02,843 - OrderProcessing -INFO - Job is moved to TENDER TO 3P stage successfully
+2022-04-27 12:38:03,016 - OrderProcessing -INFO - ZoneID of is==CDT
+2022-04-27 12:38:03,051 - OrderProcessing -INFO - 02:08
+2022-04-27 12:38:03,249 - OrderProcessing -INFO - Clicked on Tender to 3P
+2022-04-27 12:38:53,560 - OrderProcessing -INFO - Tracking Number validation is not displayed
+2022-04-27 12:39:43,879 - OrderProcessing -INFO - Dialogue is not present
+2022-04-27 12:39:44,059 - OrderProcessing -INFO - Cleared search input
+2022-04-27 12:39:44,173 - OrderProcessing -INFO - Enter pickupID in search input
+2022-04-27 12:39:44,272 - OrderProcessing -INFO - Click on Search button
+2022-04-27 12:39:45,547 - OrderProcessing -INFO - Job is moved to send to Deliver stage successfully
+2022-04-27 12:39:45,552 - OrderProcessing -INFO - ServiceID is==3PLAST
+2022-04-27 12:39:45,555 - OrderProcessing -INFO - PickUpID is==3375040
+2022-04-27 12:39:45,653 - OrderProcessing -INFO - Click on Operation Tab
+2022-04-27 12:39:46,850 - OrderProcessing -INFO - If ServiceID is 3PLAST....
+2022-04-27 12:39:46,923 - OrderProcessing -INFO - Clear search input
+2022-04-27 12:39:46,989 - OrderProcessing -INFO - Enter PickUpID in Search input
+2022-04-27 12:39:47,061 - OrderProcessing -INFO - Click on Search button
+2022-04-27 12:39:52,219 - OrderProcessing -INFO - Current stage of the order is=Confirm Del Alert
+2022-04-27 12:39:52,219 - OrderProcessing -INFO - Job is moved to Confirm Del Alert stage successfully
+2022-04-27 12:39:52,406 - OrderProcessing -INFO - Clicked on Confirm
+2022-04-27 12:39:56,267 - OrderProcessing -INFO - Cleared search input
+2022-04-27 12:39:56,328 - OrderProcessing -INFO - Enter pickupID in search input
+2022-04-27 12:39:56,407 - OrderProcessing -INFO - Click on Search button
+2022-04-27 12:39:57,654 - OrderProcessing -INFO - Job is not moved to RECOVER stage successfully
+2022-04-27 12:39:57,656 - OrderProcessing -INFO - ServiceID is==D3P
+2022-04-27 12:39:57,659 - OrderProcessing -INFO - PickUpID is==3377255
+2022-04-27 12:39:57,728 - OrderProcessing -INFO - Click on Operation Tab
+2022-04-27 12:39:58,892 - OrderProcessing -INFO - If ServiceID is D3P....
+2022-04-27 12:39:58,968 - OrderProcessing -INFO - Clear search input
+2022-04-27 12:39:59,039 - OrderProcessing -INFO - Enter PickUpID in Search input
+2022-04-27 12:39:59,110 - OrderProcessing -INFO - Click on Search button
+2022-04-27 12:40:53,854 - OrderProcessing -INFO - Job is exist
+2022-04-27 12:40:53,910 - OrderProcessing -INFO - Current stage of the order is=Confirm Pu Alert
+2022-04-27 12:40:54,039 - OrderProcessing -INFO - Click on CONFIRM button
+2022-04-27 12:40:58,024 - OrderProcessing -INFO - Clear search input
+2022-04-27 12:40:58,081 - OrderProcessing -INFO - Enter PickUpID in Search input
+2022-04-27 12:40:58,180 - OrderProcessing -INFO - Click on Search button
+2022-04-27 12:41:50,603 - OrderProcessing -INFO - Job is moved to Confirm Pull Alert stage successfully
+2022-04-27 12:41:50,649 - OrderProcessing -INFO - stage=CONF PULL ALERT
+2022-04-27 12:41:50,649 - OrderProcessing -INFO - If order stage is Confirm Pull Alert.....
+2022-04-27 12:41:50,960 - OrderProcessing -INFO - Clicked on Accept button
+2022-04-27 12:41:51,025 - OrderProcessing -INFO - Validation Message is==Spoke with Required.
+2022-04-27 12:41:51,143 - OrderProcessing -INFO - Entered spoke with
+2022-04-27 12:41:51,206 - OrderProcessing -INFO - Clicked on Accept button
+2022-04-27 12:41:53,449 - OrderProcessing -INFO - Clear search input
+2022-04-27 12:41:53,508 - OrderProcessing -INFO - Enter PickUpID in Search input
+2022-04-27 12:41:54,475 - OrderProcessing -INFO - Click on Search button
+2022-04-27 12:41:55,688 - OrderProcessing -INFO - Job is not found in Operation Tab
+2022-04-27 12:41:55,797 - OrderProcessing -INFO - Click on Inventory tab
+2022-04-27 12:41:55,873 - OrderProcessing -INFO - Clear search input
+2022-04-27 12:41:55,935 - OrderProcessing -INFO - Enter pickupID in search input
+2022-04-27 12:41:56,281 - OrderProcessing -INFO - Click on Search button
+2022-04-27 12:42:51,138 - OrderProcessing -INFO - Job is moved to Confirm Pull stage successfully
+2022-04-27 12:42:51,192 - OrderProcessing -INFO - stage=Confirm Pull
+2022-04-27 12:42:51,467 - OrderProcessing -INFO - Clicked on Label Generation
+2022-04-27 12:42:52,598 - OrderProcessing -INFO - Switched to Label generation window
+2022-04-27 12:42:57,715 - OrderProcessing -INFO - Switched to Label generation window
+2022-04-27 12:43:02,941 - OrderProcessing -INFO - Closed Label generation window
+2022-04-27 12:43:02,958 - OrderProcessing -INFO - Switched to main window
+2022-04-27 12:43:03,049 - OrderProcessing -INFO - Clicked on Save button
+2022-04-27 12:43:03,142 - OrderProcessing -INFO - Validation Message=Part Pull DateTime is required.
+2022-04-27 12:43:03,174 - OrderProcessing -INFO - ZoneID of is==CDT
+2022-04-27 12:43:03,239 - OrderProcessing -INFO - 04/27/2022
+2022-04-27 12:43:03,538 - OrderProcessing -INFO - 02:13
+2022-04-27 12:43:03,672 - OrderProcessing -INFO - Clicked on Save button
+2022-04-27 12:43:03,795 - OrderProcessing -INFO - ErroMsg is Displayed=Verify all parts before proceeding.
+2022-04-27 12:43:06,049 - OrderProcessing -INFO - Serial No of Part is==BS01
+
+2022-04-27 12:43:07,593 - OrderProcessing -INFO - Entered serial No in scan barcode
+2022-04-27 12:43:07,725 - OrderProcessing -INFO - Clicked on Save button
+2022-04-27 12:43:08,323 - OrderProcessing -INFO - ErroMsg is Displayed=Actual Datetime can not be greater than Current Datetime.
+2022-04-27 12:43:08,343 - OrderProcessing -INFO - ZoneID of is==CDT
+2022-04-27 12:43:08,387 - OrderProcessing -INFO - 04/27/2022
+2022-04-27 12:43:08,589 - OrderProcessing -INFO - 02:13
+2022-04-27 12:43:08,861 - OrderProcessing -INFO - Clicked on Save button
+2022-04-27 12:44:02,088 - OrderProcessing -INFO - Error is not Displayed
+2022-04-27 12:44:02,180 - OrderProcessing -INFO - Clear search input
+2022-04-27 12:44:02,248 - OrderProcessing -INFO - Enter pickupID in search input
+2022-04-27 12:44:02,315 - OrderProcessing -INFO - Click on Search button
+2022-04-27 12:44:02,948 - OrderProcessing -INFO - Job is not found in Inventory Tab
+2022-04-27 12:44:03,085 - OrderProcessing -INFO - Click on operation tab
+2022-04-27 12:44:03,158 - OrderProcessing -INFO - Clear search input
+2022-04-27 12:44:03,217 - OrderProcessing -INFO - Enter PickUpID in Search input
+2022-04-27 12:44:03,927 - OrderProcessing -INFO - Click on Search button
+2022-04-27 12:44:59,711 - OrderProcessing -INFO - Job is moved to PICKUP stage successfully
+2022-04-27 12:44:59,758 - OrderProcessing -INFO - Current stage of the order is=Pickup
+2022-04-27 12:44:59,811 - OrderProcessing -INFO - ZoneID of is==CDT
+2022-04-27 12:44:59,867 - OrderProcessing -INFO - 02:14
+2022-04-27 12:45:00,126 - OrderProcessing -INFO - Clicked on PICKUP button
+2022-04-27 12:45:52,296 - OrderProcessing -INFO - Dialogue is not exist
+2022-04-27 12:45:52,396 - OrderProcessing -INFO - Clear search input
+2022-04-27 12:45:52,465 - OrderProcessing -INFO - Enter PickUpID in Search input
+2022-04-27 12:45:52,562 - OrderProcessing -INFO - Click on Search button
+2022-04-27 12:46:46,770 - OrderProcessing -INFO - Job is moved to TENDER TO 3P stage successfully
+2022-04-27 12:46:46,807 - OrderProcessing -INFO - ZoneID of is==CDT
+2022-04-27 12:46:46,873 - OrderProcessing -INFO - 02:16
+2022-04-27 12:46:47,199 - OrderProcessing -INFO - Clicked on Tender to 3P
+2022-04-27 12:47:37,331 - OrderProcessing -INFO - Dialogue is not present
+2022-04-27 12:47:39,420 - OrderProcessing -INFO - Job is Delivered successfully
+2022-04-27 12:47:39,424 - OrderProcessing -INFO - ServiceID is==RETURN
+2022-04-27 12:47:39,429 - OrderProcessing -INFO - PickUpID is==3377258
+2022-04-27 12:47:39,521 - OrderProcessing -INFO - Click on Operation Tab
+2022-04-27 12:47:40,717 - OrderProcessing -INFO - If ServiceID is RETURN....
+2022-04-27 12:47:40,783 - OrderProcessing -INFO - Clear search input
+2022-04-27 12:47:40,852 - OrderProcessing -INFO - Enter PickUpID in Search input
+2022-04-27 12:47:40,916 - OrderProcessing -INFO - Click on Search button
+2022-04-27 12:48:34,621 - OrderProcessing -INFO - Job is exist
+2022-04-27 12:48:34,672 - OrderProcessing -INFO - Current stage of the order is=Confirm Pu Alert
+2022-04-27 12:48:34,762 - OrderProcessing -INFO - Click on CONFIRM button
+2022-04-27 12:48:38,089 - OrderProcessing -INFO - Clear search input
+2022-04-27 12:48:38,146 - OrderProcessing -INFO - Enter PickUpID in Search input
+2022-04-27 12:48:38,213 - OrderProcessing -INFO - Click on Search button
+2022-04-27 12:48:39,410 - OrderProcessing -INFO - Job is not found in Operation Tab
+2022-04-27 12:48:39,523 - OrderProcessing -INFO - Click on Inventory tab
+2022-04-27 12:48:39,596 - OrderProcessing -INFO - Clear search input
+2022-04-27 12:48:39,658 - OrderProcessing -INFO - Enter pickupID in search input
+2022-04-27 12:48:39,991 - OrderProcessing -INFO - Click on Search button
+2022-04-27 12:49:32,452 - OrderProcessing -INFO - Job is moved to Confirm Pull Alert stage successfully
+2022-04-27 12:49:32,529 - OrderProcessing -INFO - stage=CONF PULL ALERT
+2022-04-27 12:49:32,530 - OrderProcessing -INFO - If order stage is Confirm Pull Alert.....
+2022-04-27 12:49:33,083 - OrderProcessing -INFO - Clicked on Accept button
+2022-04-27 12:49:33,140 - OrderProcessing -INFO - Validation Message is==Spoke with Required.
+2022-04-27 12:49:33,231 - OrderProcessing -INFO - Entered spoke with
+2022-04-27 12:49:33,309 - OrderProcessing -INFO - Clicked on Accept button
+2022-04-27 12:49:34,754 - OrderProcessing -INFO - Clear search input
+2022-04-27 12:49:34,815 - OrderProcessing -INFO - Enter pickupID in search input
+2022-04-27 12:49:35,218 - OrderProcessing -INFO - Click on Search button
+2022-04-27 12:50:30,043 - OrderProcessing -INFO - Job is exist
+2022-04-27 12:51:20,255 - OrderProcessing -INFO - Job is moved to Confirm Pull stage successfully
+2022-04-27 12:51:20,304 - OrderProcessing -INFO - stage=Confirm Pull
+2022-04-27 12:51:20,560 - OrderProcessing -INFO - Clicked on Label Generation
+2022-04-27 12:51:21,797 - OrderProcessing -INFO - Switched to Label generation window
+2022-04-27 12:51:26,924 - OrderProcessing -INFO - Switched to Label generation window
+2022-04-27 12:51:32,100 - OrderProcessing -INFO - Closed Label generation window
+2022-04-27 12:51:32,110 - OrderProcessing -INFO - Switched to main window
+2022-04-27 12:51:32,196 - OrderProcessing -INFO - Clicked on Save button
+2022-04-27 12:51:32,288 - OrderProcessing -INFO - Validation Message=Part Pull DateTime is required.
+2022-04-27 12:51:32,323 - OrderProcessing -INFO - ZoneID of is==CDT
+2022-04-27 12:51:32,396 - OrderProcessing -INFO - 04/27/2022
+2022-04-27 12:51:32,724 - OrderProcessing -INFO - 02:21
+2022-04-27 12:51:32,869 - OrderProcessing -INFO - Clicked on Save button
+2022-04-27 12:51:32,994 - OrderProcessing -INFO - ErroMsg is Displayed=Verify all parts before proceeding.
+2022-04-27 12:51:35,078 - OrderProcessing -INFO - Serial No of Part is==BS01
+
+2022-04-27 12:51:36,123 - OrderProcessing -INFO - Entered serial No in scan barcode
+2022-04-27 12:51:36,263 - OrderProcessing -INFO - Clicked on Save button
+2022-04-27 12:51:36,864 - OrderProcessing -INFO - ErroMsg is Displayed=Actual Datetime can not be greater than Current Datetime.
+2022-04-27 12:51:36,885 - OrderProcessing -INFO - ZoneID of is==CDT
+2022-04-27 12:51:36,945 - OrderProcessing -INFO - 04/27/2022
+2022-04-27 12:51:37,142 - OrderProcessing -INFO - 02:21
+2022-04-27 12:51:37,375 - OrderProcessing -INFO - Clicked on Save button
+2022-04-27 12:52:30,357 - OrderProcessing -INFO - Error is not Displayed
+2022-04-27 12:52:30,473 - OrderProcessing -INFO - Clear search input
+2022-04-27 12:52:30,552 - OrderProcessing -INFO - Enter pickupID in search input
+2022-04-27 12:52:30,629 - OrderProcessing -INFO - Click on Search button
+2022-04-27 12:52:31,296 - OrderProcessing -INFO - Job is not found in Inventory Tab
+2022-04-27 12:52:31,479 - OrderProcessing -INFO - Click on Operation Tab
+2022-04-27 12:53:27,566 - OrderProcessing -INFO - Job is moved to PICKUP stage successfully
+2022-04-27 12:53:27,613 - OrderProcessing -INFO - Current stage of the order is=Pickup
+2022-04-27 12:53:27,668 - OrderProcessing -INFO - ZoneID of is==CDT
+2022-04-27 12:53:27,715 - OrderProcessing -INFO - 02:23
+2022-04-27 12:53:28,014 - OrderProcessing -INFO - Clicked on PICKUP button
+2022-04-27 12:54:20,528 - OrderProcessing -INFO - Dialogue is not exist
+2022-04-27 12:55:20,808 - OrderProcessing -INFO - Job is moved to Deliver stage successfully
+2022-04-27 12:55:20,956 - OrderProcessing -INFO - ZoneID of is==CDT
+2022-04-27 12:55:20,956 - OrderProcessing -INFO - ZoneID of is==CDT
+2022-04-27 12:55:20,993 - OrderProcessing -INFO - 02:25
+2022-04-27 12:55:21,137 - OrderProcessing -INFO - Clicked on Deliver
+2022-04-27 12:55:21,202 - OrderProcessing -INFO - Validation displayed==Signature is Required.
+2022-04-27 12:55:21,307 - OrderProcessing -INFO - Enter signature
+2022-04-27 12:55:21,419 - OrderProcessing -INFO - Clicked on DELIVER
+2022-04-27 12:56:11,809 - OrderProcessing -INFO - Dialogue is not present
+2022-04-27 12:56:11,991 - OrderProcessing -INFO - Cleared search input
+2022-04-27 12:56:12,093 - OrderProcessing -INFO - Enter pickupID in search input
+2022-04-27 12:56:12,188 - OrderProcessing -INFO - Click on Search button
+2022-04-27 12:56:13,455 - OrderProcessing -INFO - Job is moved to VERIFY CUSTOMER BILL stage successfully
+2022-04-27 12:56:13,782 - OrderProcessing -INFO - Clicked on LogOut
+2022-04-27 12:56:16,349 - OrderProcessing -INFO - ====Sending Email=====

@@ -55,7 +55,7 @@ public class OrderProcessing extends BaseInit {
 
 		// --Basic Search
 
-		for (int row1 = 5; row1 < rowNum; row1++) {
+		for (int row1 = 1; row1 < rowNum; row1++) {
 			// --Search with PickUP ID
 			String ServiceID = getData("OrderProcessing", row1, 0);
 			logger.info("ServiceID is==" + ServiceID);
@@ -1008,6 +1008,313 @@ public class OrderProcessing extends BaseInit {
 
 							}
 						}
+					} else if (Orderstage.equalsIgnoreCase("Confirm Del Alert")) {
+
+						// --Confirm button
+						Driver.findElement(By.id("lnkConfPick")).click();
+						logger.info("Clicked on CONFIRM button");
+
+						try {
+							// --Click on Close button //
+							Driver.findElement(By.id("idclosetab")).click();
+							logger.info("Clicked on Close button");
+						} catch (Exception close) {
+							logger.info("Editor is already closed");
+
+						}
+						wait.until(ExpectedConditions
+								.invisibilityOfElementLocated(By.xpath("//*[@class=\"ajax-loadernew\"]")));
+						// --Search again
+						wait.until(ExpectedConditions.visibilityOfElementLocated(By.id("txtBasicSearch2")));
+						Driver.findElement(By.id("txtBasicSearch2")).clear();
+						logger.info("Clear search input");
+						Driver.findElement(By.id("txtBasicSearch2")).sendKeys(PUID);
+						logger.info("Enter PickUpID in Search input");
+						Driver.findElement(By.id("btnGXNLSearch2")).click();
+						logger.info("Click on Search button");
+
+						wait.until(ExpectedConditions
+								.invisibilityOfElementLocated(By.xpath("//*[@class=\"ajax-loadernew\"]")));
+
+						try {
+							wait.until(
+									ExpectedConditions.visibilityOfElementLocated(By.className("dx-datagrid-nodata")));
+							WebElement NoData = Driver.findElement(By.className("dx-datagrid-nodata"));
+							if (NoData.isDisplayed()) {
+								logger.info("Job is not moved to ON BOARD stage successfully");
+
+							}
+						} catch (Exception e1) {
+							logger.info("Job is moved to ON BOARD stage successfully");
+
+							// --Pickup
+							Orderstage = Driver.findElement(By.xpath("//strong/span[@class=\"ng-binding\"]")).getText();
+							logger.info("Current stage of the order is=" + Orderstage);
+
+							// --Enter PickUp Time
+
+							String ZOneID = Driver.findElement(By.id("spanTimezoneId")).getText();
+							logger.info("ZoneID of is==" + ZOneID);
+
+							if (ZOneID.equalsIgnoreCase("EDT")) {
+								ZOneID = "America/New_York";
+							} else if (ZOneID.equalsIgnoreCase("CDT")) {
+								ZOneID = "CST";
+
+							}
+
+							WebElement PUPTime = Driver.findElement(By.id("txtActualPickUpTime"));
+							PUPTime.clear();
+							Date date = new Date();
+							DateFormat dateFormat = new SimpleDateFormat("HH:mm");
+							dateFormat.setTimeZone(TimeZone.getTimeZone(ZOneID));
+							logger.info(dateFormat.format(date));
+							PUPTime.sendKeys(dateFormat.format(date));
+							Driver.findElement(By.id("lnksave")).click();
+							logger.info("Clicked on PICKUP button");
+
+							Thread.sleep(2000);
+							try {
+								wait.until(ExpectedConditions
+										.visibilityOfAllElementsLocatedBy(By.className("modal-dialog")));
+								Driver.findElement(By.id("iddataok")).click();
+								logger.info("Clicked on Yes button");
+
+							} catch (Exception e) {
+								logger.info("Dialogue is not exist");
+
+							}
+							wait.until(ExpectedConditions.visibilityOfElementLocated(By.id("txtBasicSearch2")));
+							Driver.findElement(By.id("txtBasicSearch2")).clear();
+							logger.info("Clear search input");
+							Driver.findElement(By.id("txtBasicSearch2")).sendKeys(PUID);
+							logger.info("Enter PickUpID in Search input");
+							Driver.findElement(By.id("btnGXNLSearch2")).click();
+							logger.info("Click on Search button");
+
+							wait.until(ExpectedConditions
+									.invisibilityOfElementLocated(By.xpath("//*[@class=\"ajax-loadernew\"]")));
+
+							try {
+								wait.until(ExpectedConditions
+										.visibilityOfElementLocated(By.className("dx-datagrid-nodata")));
+								WebElement NoData = Driver.findElement(By.className("dx-datagrid-nodata"));
+								if (NoData.isDisplayed()) {
+									logger.info("Job is not moved to DELIVER stage successfully");
+
+								}
+							} catch (Exception DNoData) {
+								logger.info("Job is moved to DELIVER stage successfully");
+								ServiceID = getData("OrderProcessing", row1, 0);
+								logger.info("Service ID is==" + ServiceID);
+								if (ServiceID.equalsIgnoreCase("LOC")) {
+
+									// --Deliver Stage
+									Orderstage = Driver.findElement(By.xpath("//strong/span[@class=\"ng-binding\"]"))
+											.getText();
+									logger.info("Current stage of the order is=" + Orderstage);
+
+									// --Deliver Time
+
+									ZOneID = Driver.findElement(By.id("lblactdltz")).getText();
+									logger.info("ZoneID of is==" + ZOneID);
+									if (ZOneID.equalsIgnoreCase("EDT")) {
+										ZOneID = "America/New_York";
+									} else if (ZOneID.equalsIgnoreCase("CDT")) {
+										ZOneID = "CST";
+
+									}
+
+									WebElement DelTime = Driver.findElement(By.id("txtActualDeliveryTme"));
+									DelTime.clear();
+									date = new Date();
+									dateFormat = new SimpleDateFormat("HH:mm");
+									dateFormat.setTimeZone(TimeZone.getTimeZone(ZOneID));
+									logger.info(dateFormat.format(date));
+									DelTime.sendKeys(dateFormat.format(date));
+
+									// --Signature
+									Driver.findElement(By.id("txtSignature")).sendKeys("Ravina Prajapati");
+									logger.info("Entered signature");
+
+									// --Click on Deliver
+									Driver.findElement(By.id("btnsavedelivery")).click();
+									logger.info("Clicked on Deliver button");
+									try {
+										wait.until(ExpectedConditions
+												.visibilityOfAllElementsLocatedBy(By.className("modal-dialog")));
+										Driver.findElement(By.id("iddataok")).click();
+										logger.info("Clicked on Yes button");
+
+									} catch (Exception e) {
+										logger.info("Dialogue is not exist");
+
+									}
+									wait.until(ExpectedConditions.visibilityOfElementLocated(By.id("txtBasicSearch2")));
+									Driver.findElement(By.id("txtBasicSearch2")).clear();
+									logger.info("Clear search input");
+									Driver.findElement(By.id("txtBasicSearch2")).sendKeys(PUID);
+									logger.info("Enter PickUpID in Search input");
+									Driver.findElement(By.id("btnGXNLSearch2")).click();
+									logger.info("Click on Search button");
+									wait.until(ExpectedConditions
+											.invisibilityOfElementLocated(By.xpath("//*[@class=\"ajax-loadernew\"]")));
+									try {
+										wait.until(ExpectedConditions
+												.visibilityOfElementLocated(By.className("dx-datagrid-nodata")));
+										WebElement NoData = Driver.findElement(By.className("dx-datagrid-nodata"));
+										if (NoData.isDisplayed()) {
+											logger.info("Job is Delivered successfully");
+
+										}
+									} catch (Exception NoData) {
+										logger.info("Job is not delivered yet");
+
+									}
+
+								} else if (ServiceID.equalsIgnoreCase("SD")) {
+
+									Orderstage = Driver.findElement(By.xpath("//strong/span[@class=\"ng-binding\"]"))
+											.getText();
+									logger.info("Current stage of the order is=" + Orderstage);
+
+									// --Drop Time
+
+									ZOneID = Driver.findElement(By.id("lblactdltz")).getText();
+									logger.info("ZoneID of is==" + ZOneID);
+									if (ZOneID.equalsIgnoreCase("EDT")) {
+										ZOneID = "America/New_York";
+									} else if (ZOneID.equalsIgnoreCase("CDT")) {
+										ZOneID = "CST";
+									}
+
+									WebElement DelTime = Driver.findElement(By.id("txtActualDeliveryTme"));
+									DelTime.clear();
+									date = new Date();
+									dateFormat = new SimpleDateFormat("HH:mm");
+									dateFormat.setTimeZone(TimeZone.getTimeZone(ZOneID));
+									logger.info(dateFormat.format(date));
+									DelTime.sendKeys(dateFormat.format(date));
+
+									// --Click on Drop
+									WebElement Drop = Driver.findElement(By.id("btnsavedelivery"));
+									Drop.click();
+									logger.info("Clicked on Deliver button");
+									WebElement ErrorID = Driver.findElement(By.id("errorid"));
+									if (ErrorID.getText().contains("The Air Bill is required")) {
+										logger.info("Message:-" + ErrorID.getText());
+										// --Add Airbill
+										WebElement AirBill = Driver.findElement(By.id("lnkAddAWB"));
+										js.executeScript("arguments[0].scrollIntoView();", AirBill);
+
+										WebElement AddAirBill = Driver.findElement(By.id("btnAddAWB"));
+										js.executeScript("arguments[0].click();", AddAirBill);
+										wait.until(ExpectedConditions.visibilityOfAllElementsLocatedBy(
+												By.xpath("//*[@id=\"tableairbill\"]/tbody/tr")));
+										logger.info("AirBill editor is opened");
+
+										/// --Enter AirBill
+										Driver.findElement(By.id("txtAWBNum_0")).sendKeys("11111111");
+										logger.info("Entered AirBill");
+
+										/// --Enter Description
+										Driver.findElement(By.id("txtAWBDec_0")).sendKeys("SD Service Automation");
+										logger.info("Entered Description");
+
+										/// --Enter NoOFPieces
+										Driver.findElement(By.id("txtNoOfPieces_0")).sendKeys("2");
+										logger.info("Entered NoOFPieces");
+
+										/// --Enter Total Weight
+										Driver.findElement(By.id("txtTotalweight_0")).sendKeys("10");
+										logger.info("Entered Total Weight");
+
+										// --Track
+										wait.until(ExpectedConditions.elementToBeClickable(By.linkText("Track")));
+										WebElement Track = Driver.findElement(By.linkText("Track"));
+										js.executeScript("arguments[0].click();", Track);
+										logger.info("Clicked on Track button");
+
+										// --AIrbill new window
+										String WindowHandlebefore = Driver.getWindowHandle();
+										for (String windHandle : Driver.getWindowHandles()) {
+											Driver.switchTo().window(windHandle);
+											logger.info("Switched to Track window");
+
+											Thread.sleep(5000);
+											getScreenshot(Driver, "Track" + PUID);
+
+										}
+										Driver.close();
+										logger.info("Closed Track window");
+
+										Driver.switchTo().window(WindowHandlebefore);
+										logger.info("Switched to main window");
+
+										// --Click on Drop
+										Drop = Driver.findElement(By.id("btnsavedelivery"));
+										js.executeScript("window.scrollBy(0,-250)");
+										Thread.sleep(1000);
+										Drop.click();
+										logger.info("Clicked on Drop button");
+										wait.until(ExpectedConditions.invisibilityOfElementLocated(
+												By.xpath("//*[@class=\"ajax-loadernew\"]")));
+										wait.until(ExpectedConditions
+												.visibilityOfElementLocated(By.id("txtBasicSearch2")));
+										Driver.findElement(By.id("txtBasicSearch2")).clear();
+										logger.info("Clear search input");
+										Driver.findElement(By.id("txtBasicSearch2")).sendKeys(PUID);
+										logger.info("Enter PickUpID in Search input");
+										Driver.findElement(By.id("btnGXNLSearch2")).click();
+										logger.info("Click on Search button");
+										wait.until(ExpectedConditions.invisibilityOfElementLocated(
+												By.xpath("//*[@class=\"ajax-loadernew\"]")));
+										try {
+											wait.until(ExpectedConditions
+													.visibilityOfElementLocated(By.className("dx-datagrid-nodata")));
+											WebElement NoData = Driver.findElement(By.className("dx-datagrid-nodata"));
+											if (NoData.isDisplayed()) {
+												logger.info("Job is Delivered successfully");
+
+											}
+										} catch (Exception dNoData) {
+											logger.info("Job is not Delivered yet");
+
+										}
+
+									} else {
+										wait.until(ExpectedConditions
+												.visibilityOfElementLocated(By.id("txtBasicSearch2")));
+										Driver.findElement(By.id("txtBasicSearch2")).clear();
+										logger.info("Clear search input");
+										Driver.findElement(By.id("txtBasicSearch2")).sendKeys(PUID);
+										logger.info("Enter PickUpID in Search input");
+										Driver.findElement(By.id("btnGXNLSearch2")).click();
+										logger.info("Click on Search button");
+										wait.until(ExpectedConditions.invisibilityOfElementLocated(
+												By.xpath("//*[@class=\"ajax-loadernew\"]")));
+										try {
+											wait.until(ExpectedConditions
+													.visibilityOfElementLocated(By.className("dx-datagrid-nodata")));
+											WebElement NoData = Driver.findElement(By.className("dx-datagrid-nodata"));
+											if (NoData.isDisplayed()) {
+												logger.info("Job is Delivered successfully");
+
+											}
+										} catch (Exception NoDataD) {
+											logger.info("Job is not Delivered yet");
+
+										}
+									}
+								} else {
+									logger.info("Service is not SD or LOC");
+
+								}
+
+							}
+
+						}
+
 					}
 				} else if (ServiceID.contains("H3P")) {
 					wait.until(ExpectedConditions.visibilityOfElementLocated(By.id("txtBasicSearch2")));
@@ -1106,15 +1413,8 @@ public class OrderProcessing extends BaseInit {
 											.visibilityOfElementLocated(By.id("idPartPullDttmValidation")));
 									String ValMsg = Driver.findElement(By.id("idPartPullDttmValidation")).getText();
 									logger.info("Validation Message=" + ValMsg);
-									// --Part Pull Date
-									WebElement PartPullDate = Driver.findElement(By.id("idtxtPartPullDate"));
-									PartPullDate.clear();
-									Date date = new Date();
-									DateFormat dateFormat = new SimpleDateFormat("mm:dd:yy");
-									PartPullDate.sendKeys(dateFormat.format(date));
-									PartPullDate.sendKeys(Keys.TAB);
 
-									// --Part Pull Time
+									// --ZoneID
 									String ZOneID = Driver
 											.findElement(By.xpath("//span[contains(@ng-bind,'TimezoneId')]")).getText();
 									logger.info("ZoneID of is==" + ZOneID);
@@ -1123,6 +1423,18 @@ public class OrderProcessing extends BaseInit {
 									} else if (ZOneID.equalsIgnoreCase("CDT")) {
 										ZOneID = "CST";
 									}
+
+									// --Part Pull Date
+									WebElement PartPullDate = Driver.findElement(By.id("idtxtPartPullDate"));
+									PartPullDate.clear();
+									Date date = new Date();
+									DateFormat dateFormat = new SimpleDateFormat("MM/dd/yyyy");
+									dateFormat.setTimeZone(TimeZone.getTimeZone(ZOneID));
+									logger.info(dateFormat.format(date));
+									PartPullDate.sendKeys(dateFormat.format(date));
+									PartPullDate.sendKeys(Keys.TAB);
+
+									// --Part Pull Time
 									WebElement PartPullTime = Driver.findElement(By.id("txtPartPullTime"));
 									PartPullTime.clear();
 									date = new Date();
@@ -1167,16 +1479,7 @@ public class OrderProcessing extends BaseInit {
 										logger.info("ErroMsg is Displayed=" + Driver
 												.findElement(By.xpath("//label[contains(@class,'error-messages')]"))
 												.getText());
-										// --Part Pull Date
-										WebElement PartPullDate = Driver.findElement(By.id("idtxtPartPullDate"));
-										PartPullDate.clear();
-										Date date = new Date();
-										DateFormat dateFormat = new SimpleDateFormat("mm:dd:yy");
-										PartPullDate.sendKeys(dateFormat.format(date));
-										PartPullDate.sendKeys(Keys.TAB);
-
-										Thread.sleep(2000);
-										// --Part Pull Time
+										// --ZoneID
 										String ZOneID = Driver
 												.findElement(By.xpath("//span[contains(@ng-bind,'TimezoneId')]"))
 												.getText();
@@ -1186,6 +1489,18 @@ public class OrderProcessing extends BaseInit {
 										} else if (ZOneID.equalsIgnoreCase("CDT")) {
 											ZOneID = "CST";
 										}
+
+										// --Part Pull Date
+										WebElement PartPullDate = Driver.findElement(By.id("idtxtPartPullDate"));
+										PartPullDate.clear();
+										Date date = new Date();
+										DateFormat dateFormat = new SimpleDateFormat("MM/dd/yyyy");
+										dateFormat.setTimeZone(TimeZone.getTimeZone(ZOneID));
+										logger.info(dateFormat.format(date));
+										PartPullDate.sendKeys(dateFormat.format(date));
+										PartPullDate.sendKeys(Keys.TAB);
+
+										// --Part Pull Time
 										WebElement PartPullTime = Driver.findElement(By.id("txtPartPullTime"));
 										PartPullTime.clear();
 										date = new Date();
@@ -1193,6 +1508,7 @@ public class OrderProcessing extends BaseInit {
 										dateFormat.setTimeZone(TimeZone.getTimeZone(ZOneID));
 										logger.info(dateFormat.format(date));
 										PartPullTime.sendKeys(dateFormat.format(date));
+
 										// --Save button
 										Driver.findElement(By.id("idiconsave")).click();
 										logger.info("Clicked on Save button");
@@ -1355,15 +1671,7 @@ public class OrderProcessing extends BaseInit {
 									ExpectedConditions.visibilityOfElementLocated(By.id("idPartPullDttmValidation")));
 							String ValMsg = Driver.findElement(By.id("idPartPullDttmValidation")).getText();
 							logger.info("Validation Message=" + ValMsg);
-							// --Part Pull Date
-							WebElement PartPullDate = Driver.findElement(By.id("idtxtPartPullDate"));
-							PartPullDate.clear();
-							Date date = new Date();
-							DateFormat dateFormat = new SimpleDateFormat("mm:dd:yy");
-							PartPullDate.sendKeys(dateFormat.format(date));
-							PartPullDate.sendKeys(Keys.TAB);
-
-							// --Part Pull Time
+							// --ZoneID
 							String ZOneID = Driver.findElement(By.xpath("//span[contains(@ng-bind,'TimezoneId')]"))
 									.getText();
 							logger.info("ZoneID of is==" + ZOneID);
@@ -1372,6 +1680,18 @@ public class OrderProcessing extends BaseInit {
 							} else if (ZOneID.equalsIgnoreCase("CDT")) {
 								ZOneID = "CST";
 							}
+
+							// --Part Pull Date
+							WebElement PartPullDate = Driver.findElement(By.id("idtxtPartPullDate"));
+							PartPullDate.clear();
+							Date date = new Date();
+							DateFormat dateFormat = new SimpleDateFormat("MM/dd/yyyy");
+							dateFormat.setTimeZone(TimeZone.getTimeZone(ZOneID));
+							logger.info(dateFormat.format(date));
+							PartPullDate.sendKeys(dateFormat.format(date));
+							PartPullDate.sendKeys(Keys.TAB);
+
+							// --Part Pull Time
 							WebElement PartPullTime = Driver.findElement(By.id("txtPartPullTime"));
 							PartPullTime.clear();
 							date = new Date();
@@ -1414,16 +1734,7 @@ public class OrderProcessing extends BaseInit {
 										By.xpath("//label[contains(@class,'error-messages')]")));
 								logger.info("ErroMsg is Displayed=" + Driver
 										.findElement(By.xpath("//label[contains(@class,'error-messages')]")).getText());
-								// --Part Pull Date
-								WebElement PartPullDate = Driver.findElement(By.id("idtxtPartPullDate"));
-								PartPullDate.clear();
-								Date date = new Date();
-								DateFormat dateFormat = new SimpleDateFormat("mm:dd:yy");
-								PartPullDate.sendKeys(dateFormat.format(date));
-								PartPullDate.sendKeys(Keys.TAB);
-
-								Thread.sleep(2000);
-								// --Part Pull Time
+								// --ZoneID
 								String ZOneID = Driver.findElement(By.xpath("//span[contains(@ng-bind,'TimezoneId')]"))
 										.getText();
 								logger.info("ZoneID of is==" + ZOneID);
@@ -1432,6 +1743,18 @@ public class OrderProcessing extends BaseInit {
 								} else if (ZOneID.equalsIgnoreCase("CDT")) {
 									ZOneID = "CST";
 								}
+
+								// --Part Pull Date
+								WebElement PartPullDate = Driver.findElement(By.id("idtxtPartPullDate"));
+								PartPullDate.clear();
+								Date date = new Date();
+								DateFormat dateFormat = new SimpleDateFormat("MM/dd/yyyy");
+								dateFormat.setTimeZone(TimeZone.getTimeZone(ZOneID));
+								logger.info(dateFormat.format(date));
+								PartPullDate.sendKeys(dateFormat.format(date));
+								PartPullDate.sendKeys(Keys.TAB);
+
+								// --Part Pull Time
 								WebElement PartPullTime = Driver.findElement(By.id("txtPartPullTime"));
 								PartPullTime.clear();
 								date = new Date();
@@ -1575,15 +1898,7 @@ public class OrderProcessing extends BaseInit {
 									ExpectedConditions.visibilityOfElementLocated(By.id("idPartPullDttmValidation")));
 							String ValMsg = Driver.findElement(By.id("idPartPullDttmValidation")).getText();
 							logger.info("Validation Message=" + ValMsg);
-							// --Part Pull Date
-							WebElement PartPullDate = Driver.findElement(By.id("idtxtPartPullDate"));
-							PartPullDate.clear();
-							Date date = new Date();
-							DateFormat dateFormat = new SimpleDateFormat("mm:dd:yy");
-							PartPullDate.sendKeys(dateFormat.format(date));
-							PartPullDate.sendKeys(Keys.TAB);
-
-							// --Part Pull Time
+							// --ZoneID
 							String ZOneID = Driver.findElement(By.xpath("//span[contains(@ng-bind,'TimezoneId')]"))
 									.getText();
 							logger.info("ZoneID of is==" + ZOneID);
@@ -1592,6 +1907,18 @@ public class OrderProcessing extends BaseInit {
 							} else if (ZOneID.equalsIgnoreCase("CDT")) {
 								ZOneID = "CST";
 							}
+
+							// --Part Pull Date
+							WebElement PartPullDate = Driver.findElement(By.id("idtxtPartPullDate"));
+							PartPullDate.clear();
+							Date date = new Date();
+							DateFormat dateFormat = new SimpleDateFormat("MM/dd/yyyy");
+							dateFormat.setTimeZone(TimeZone.getTimeZone(ZOneID));
+							logger.info(dateFormat.format(date));
+							PartPullDate.sendKeys(dateFormat.format(date));
+							PartPullDate.sendKeys(Keys.TAB);
+
+							// --Part Pull Time
 							WebElement PartPullTime = Driver.findElement(By.id("txtPartPullTime"));
 							PartPullTime.clear();
 							date = new Date();
@@ -1632,15 +1959,7 @@ public class OrderProcessing extends BaseInit {
 								logger.info("ErroMsg is Displayed=" + Driver
 										.findElement(By.xpath("//label[contains(@class,'error-messages')]")).getText());
 								Thread.sleep(2000);
-								// --Part Pull Date
-								WebElement PartPullDate = Driver.findElement(By.id("idtxtPartPullDate"));
-								PartPullDate.clear();
-								Date date = new Date();
-								DateFormat dateFormat = new SimpleDateFormat("mm:dd:yy");
-								PartPullDate.sendKeys(dateFormat.format(date));
-								PartPullDate.sendKeys(Keys.TAB);
-
-								// --Part Pull Time
+								// --ZoneID
 								String ZOneID = Driver.findElement(By.xpath("//span[contains(@ng-bind,'TimezoneId')]"))
 										.getText();
 								logger.info("ZoneID of is==" + ZOneID);
@@ -1649,6 +1968,18 @@ public class OrderProcessing extends BaseInit {
 								} else if (ZOneID.equalsIgnoreCase("CDT")) {
 									ZOneID = "CST";
 								}
+
+								// --Part Pull Date
+								WebElement PartPullDate = Driver.findElement(By.id("idtxtPartPullDate"));
+								PartPullDate.clear();
+								Date date = new Date();
+								DateFormat dateFormat = new SimpleDateFormat("MM/dd/yyyy");
+								dateFormat.setTimeZone(TimeZone.getTimeZone(ZOneID));
+								logger.info(dateFormat.format(date));
+								PartPullDate.sendKeys(dateFormat.format(date));
+								PartPullDate.sendKeys(Keys.TAB);
+
+								// --Part Pull Time
 								WebElement PartPullTime = Driver.findElement(By.id("txtPartPullTime"));
 								PartPullTime.clear();
 								date = new Date();
@@ -1656,7 +1987,6 @@ public class OrderProcessing extends BaseInit {
 								dateFormat.setTimeZone(TimeZone.getTimeZone(ZOneID));
 								logger.info(dateFormat.format(date));
 								PartPullTime.sendKeys(dateFormat.format(date));
-
 							} catch (Exception Time) {
 								logger.info("Time validation is not displayed-Time is as per timeZone");
 							}
@@ -2012,6 +2342,11 @@ public class OrderProcessing extends BaseInit {
 
 										if (Orderstage.equalsIgnoreCase("Delivered@Stop 2 of 2")) {
 											logger.info("Job is delivered");
+											// --Close button
+											Driver.findElement(By.id("idiconclose")).click();
+											logger.info("Clicked on Close button");
+											wait.until(ExpectedConditions.invisibilityOfElementLocated(
+													By.xpath("//*[@class=\"ajax-loadernew\"]")));
 
 										} else {
 											logger.info("Job is not delivered");
@@ -2170,7 +2505,8 @@ public class OrderProcessing extends BaseInit {
 								}
 							}
 
-						} else if (Orderstage.contains("DEL@Stop 2 of 2")) {// ---DEL@Stop 2 of 2 stage
+						} else if (Orderstage.contains("DEL@Stop 2 of 2")) {
+							// ---DEL@Stop 2 of 2 stage
 
 							// --Click on save
 							Driver.findElement(By.id("idiconsave")).click();
@@ -2259,6 +2595,14 @@ public class OrderProcessing extends BaseInit {
 								}
 
 							}
+
+						} else if (Orderstage.contains("Delivered@Stop 2 of 2")) {
+							logger.info("Job is already delivered");
+							// --Close button
+							Driver.findElement(By.id("idiconclose")).click();
+							logger.info("Clicked on Close button");
+							wait.until(ExpectedConditions
+									.invisibilityOfElementLocated(By.xpath("//*[@class=\"ajax-loadernew\"]")));
 
 						} else {
 							logger.info("Unknown stage found");
@@ -2448,7 +2792,7 @@ public class OrderProcessing extends BaseInit {
 							String WindowHandlebefore = Driver.getWindowHandle();
 							for (String windHandle : Driver.getWindowHandles()) {
 								Driver.switchTo().window(windHandle);
-								logger.info("Switched to Prit Label window");
+								logger.info("Switched to Print Label window");
 								Thread.sleep(5000);
 								getScreenshot(Driver, "PrintLabel_" + PUID);
 
@@ -2488,10 +2832,10 @@ public class OrderProcessing extends BaseInit {
 									ExpectedConditions.visibilityOfElementLocated(By.className("dx-datagrid-nodata")));
 							WebElement NoData1 = Driver.findElement(By.className("dx-datagrid-nodata"));
 							if (NoData1.isDisplayed()) {
-								logger.info("Record is not available with search parameters");
+								logger.info("Order is Replenished");
 							}
 						} catch (Exception Data) {
-							logger.info("Record is available with search parameters");
+							logger.info("Order is not Replenished");
 						}
 					}
 
@@ -2622,15 +2966,7 @@ public class OrderProcessing extends BaseInit {
 								String ValMsg = Driver.findElement(By.id("idPartPullDttmValidation")).getText();
 								logger.info("Validation Message=" + ValMsg);
 
-								// --Part Pull Date
-								WebElement PartPullDate = Driver.findElement(By.id("idtxtPartPullDate"));
-								PartPullDate.clear();
-								Date date = new Date();
-								DateFormat dateFormat = new SimpleDateFormat("mm:dd:yy");
-								PartPullDate.sendKeys(dateFormat.format(date));
-								PartPullDate.sendKeys(Keys.TAB);
-
-								// --Part Pull Time
+								// --ZoneID
 								String ZOneID = Driver.findElement(By.xpath("//span[contains(@ng-bind,'TimezoneId')]"))
 										.getText();
 								logger.info("ZoneID of is==" + ZOneID);
@@ -2639,6 +2975,18 @@ public class OrderProcessing extends BaseInit {
 								} else if (ZOneID.equalsIgnoreCase("CDT")) {
 									ZOneID = "CST";
 								}
+
+								// --Part Pull Date
+								WebElement PartPullDate = Driver.findElement(By.id("idtxtPartPullDate"));
+								PartPullDate.clear();
+								Date date = new Date();
+								DateFormat dateFormat = new SimpleDateFormat("MM/dd/yyyy");
+								dateFormat.setTimeZone(TimeZone.getTimeZone(ZOneID));
+								logger.info(dateFormat.format(date));
+								PartPullDate.sendKeys(dateFormat.format(date));
+								PartPullDate.sendKeys(Keys.TAB);
+
+								// --Part Pull Time
 								WebElement PartPullTime = Driver.findElement(By.id("txtPartPullTime"));
 								PartPullTime.clear();
 								date = new Date();
@@ -2688,24 +3036,27 @@ public class OrderProcessing extends BaseInit {
 									logger.info("ErroMsg is Displayed="
 											+ Driver.findElement(By.xpath("//label[contains(@class,'error-messages')]"))
 													.getText());
-									// --Part Pull Date
-									WebElement PartPullDate = Driver.findElement(By.id("idtxtPartPullDate"));
-									PartPullDate.clear();
-									Date date = new Date();
-									DateFormat dateFormat = new SimpleDateFormat("mm:dd:yy");
-									PartPullDate.sendKeys(dateFormat.format(date));
-									PartPullDate.sendKeys(Keys.TAB);
-
-									Thread.sleep(2000);
-									// --Part Pull Time
+									// --ZoneID
 									String ZOneID = Driver
 											.findElement(By.xpath("//span[contains(@ng-bind,'TimezoneId')]")).getText();
-									logger.info("ZoneID is==" + ZOneID);
+									logger.info("ZoneID of is==" + ZOneID);
 									if (ZOneID.equalsIgnoreCase("EDT")) {
 										ZOneID = "America/New_York";
 									} else if (ZOneID.equalsIgnoreCase("CDT")) {
 										ZOneID = "CST";
 									}
+
+									// --Part Pull Date
+									WebElement PartPullDate = Driver.findElement(By.id("idtxtPartPullDate"));
+									PartPullDate.clear();
+									Date date = new Date();
+									DateFormat dateFormat = new SimpleDateFormat("MM/dd/yyyy");
+									dateFormat.setTimeZone(TimeZone.getTimeZone(ZOneID));
+									logger.info(dateFormat.format(date));
+									PartPullDate.sendKeys(dateFormat.format(date));
+									PartPullDate.sendKeys(Keys.TAB);
+
+									// --Part Pull Time
 									WebElement PartPullTime = Driver.findElement(By.id("txtPartPullTime"));
 									PartPullTime.clear();
 									date = new Date();
@@ -2882,15 +3233,7 @@ public class OrderProcessing extends BaseInit {
 							String ValMsg = Driver.findElement(By.id("idPartPullDttmValidation")).getText();
 							logger.info("Validation Message=" + ValMsg);
 
-							// --Part Pull Date
-							WebElement PartPullDate = Driver.findElement(By.id("idtxtPartPullDate"));
-							PartPullDate.clear();
-							Date date = new Date();
-							DateFormat dateFormat = new SimpleDateFormat("mm:dd:yy");
-							PartPullDate.sendKeys(dateFormat.format(date));
-							PartPullDate.sendKeys(Keys.TAB);
-
-							// --Part Pull Time
+							// --ZoneID
 							String ZOneID = Driver.findElement(By.xpath("//span[contains(@ng-bind,'TimezoneId')]"))
 									.getText();
 							logger.info("ZoneID of is==" + ZOneID);
@@ -2899,6 +3242,18 @@ public class OrderProcessing extends BaseInit {
 							} else if (ZOneID.equalsIgnoreCase("CDT")) {
 								ZOneID = "CST";
 							}
+
+							// --Part Pull Date
+							WebElement PartPullDate = Driver.findElement(By.id("idtxtPartPullDate"));
+							PartPullDate.clear();
+							Date date = new Date();
+							DateFormat dateFormat = new SimpleDateFormat("MM/dd/yyyy");
+							dateFormat.setTimeZone(TimeZone.getTimeZone(ZOneID));
+							logger.info(dateFormat.format(date));
+							PartPullDate.sendKeys(dateFormat.format(date));
+							PartPullDate.sendKeys(Keys.TAB);
+
+							// --Part Pull Time
 							WebElement PartPullTime = Driver.findElement(By.id("txtPartPullTime"));
 							PartPullTime.clear();
 							date = new Date();
@@ -2945,16 +3300,7 @@ public class OrderProcessing extends BaseInit {
 										By.xpath("//label[contains(@class,'error-messages')]")));
 								logger.info("ErroMsg is Displayed=" + Driver
 										.findElement(By.xpath("//label[contains(@class,'error-messages')]")).getText());
-								// --Part Pull Date
-								WebElement PartPullDate = Driver.findElement(By.id("idtxtPartPullDate"));
-								PartPullDate.clear();
-								Date date = new Date();
-								DateFormat dateFormat = new SimpleDateFormat("mm:dd:yy");
-								PartPullDate.sendKeys(dateFormat.format(date));
-								PartPullDate.sendKeys(Keys.TAB);
-
-								Thread.sleep(2000);
-								// --Part Pull Time
+								// --ZoneID
 								String ZOneID = Driver.findElement(By.xpath("//span[contains(@ng-bind,'TimezoneId')]"))
 										.getText();
 								logger.info("ZoneID of is==" + ZOneID);
@@ -2963,6 +3309,18 @@ public class OrderProcessing extends BaseInit {
 								} else if (ZOneID.equalsIgnoreCase("CDT")) {
 									ZOneID = "CST";
 								}
+
+								// --Part Pull Date
+								WebElement PartPullDate = Driver.findElement(By.id("idtxtPartPullDate"));
+								PartPullDate.clear();
+								Date date = new Date();
+								DateFormat dateFormat = new SimpleDateFormat("MM/dd/yyyy");
+								dateFormat.setTimeZone(TimeZone.getTimeZone(ZOneID));
+								logger.info(dateFormat.format(date));
+								PartPullDate.sendKeys(dateFormat.format(date));
+								PartPullDate.sendKeys(Keys.TAB);
+
+								// --Part Pull Time
 								WebElement PartPullTime = Driver.findElement(By.id("txtPartPullTime"));
 								PartPullTime.clear();
 								date = new Date();
@@ -3721,15 +4079,7 @@ public class OrderProcessing extends BaseInit {
 											.visibilityOfElementLocated(By.id("idPartPullDttmValidation")));
 									String ValMsg = Driver.findElement(By.id("idPartPullDttmValidation")).getText();
 									logger.info("Validation Message=" + ValMsg);
-									// --Part Pull Date
-									WebElement PartPullDate = Driver.findElement(By.id("idtxtPartPullDate"));
-									PartPullDate.clear();
-									Date date = new Date();
-									DateFormat dateFormat = new SimpleDateFormat("mm:dd:yy");
-									PartPullDate.sendKeys(dateFormat.format(date));
-									PartPullDate.sendKeys(Keys.TAB);
-
-									// --Part Pull Time
+									// --ZoneID
 									String ZOneID = Driver
 											.findElement(By.xpath("//span[contains(@ng-bind,'TimezoneId')]")).getText();
 									logger.info("ZoneID of is==" + ZOneID);
@@ -3738,6 +4088,18 @@ public class OrderProcessing extends BaseInit {
 									} else if (ZOneID.equalsIgnoreCase("CDT")) {
 										ZOneID = "CST";
 									}
+
+									// --Part Pull Date
+									WebElement PartPullDate = Driver.findElement(By.id("idtxtPartPullDate"));
+									PartPullDate.clear();
+									Date date = new Date();
+									DateFormat dateFormat = new SimpleDateFormat("MM/dd/yyyy");
+									dateFormat.setTimeZone(TimeZone.getTimeZone(ZOneID));
+									logger.info(dateFormat.format(date));
+									PartPullDate.sendKeys(dateFormat.format(date));
+									PartPullDate.sendKeys(Keys.TAB);
+
+									// --Part Pull Time
 									WebElement PartPullTime = Driver.findElement(By.id("txtPartPullTime"));
 									PartPullTime.clear();
 									date = new Date();
@@ -3745,7 +4107,6 @@ public class OrderProcessing extends BaseInit {
 									dateFormat.setTimeZone(TimeZone.getTimeZone(ZOneID));
 									logger.info(dateFormat.format(date));
 									PartPullTime.sendKeys(dateFormat.format(date));
-
 									// --Save button
 									Driver.findElement(By.id("idiconsave")).click();
 									logger.info("Clicked on Save button");
@@ -3788,15 +4149,7 @@ public class OrderProcessing extends BaseInit {
 									logger.info("ErroMsg is Displayed="
 											+ Driver.findElement(By.xpath("//label[contains(@class,'error-messages')]"))
 													.getText());
-									// --Part Pull Date
-									WebElement PartPullDate = Driver.findElement(By.id("idtxtPartPullDate"));
-									PartPullDate.clear();
-									Date date = new Date();
-									DateFormat dateFormat = new SimpleDateFormat("mm:dd:yy");
-									PartPullDate.sendKeys(dateFormat.format(date));
-									PartPullDate.sendKeys(Keys.TAB);
-
-									// --Part Pull Time
+									// --ZoneID
 									String ZOneID = Driver
 											.findElement(By.xpath("//span[contains(@ng-bind,'TimezoneId')]")).getText();
 									logger.info("ZoneID of is==" + ZOneID);
@@ -3805,6 +4158,18 @@ public class OrderProcessing extends BaseInit {
 									} else if (ZOneID.equalsIgnoreCase("CDT")) {
 										ZOneID = "CST";
 									}
+
+									// --Part Pull Date
+									WebElement PartPullDate = Driver.findElement(By.id("idtxtPartPullDate"));
+									PartPullDate.clear();
+									Date date = new Date();
+									DateFormat dateFormat = new SimpleDateFormat("MM/dd/yyyy");
+									dateFormat.setTimeZone(TimeZone.getTimeZone(ZOneID));
+									logger.info(dateFormat.format(date));
+									PartPullDate.sendKeys(dateFormat.format(date));
+									PartPullDate.sendKeys(Keys.TAB);
+
+									// --Part Pull Time
 									WebElement PartPullTime = Driver.findElement(By.id("txtPartPullTime"));
 									PartPullTime.clear();
 									date = new Date();
@@ -4095,15 +4460,7 @@ public class OrderProcessing extends BaseInit {
 										.visibilityOfElementLocated(By.id("idPartPullDttmValidation")));
 								String ValMsg = Driver.findElement(By.id("idPartPullDttmValidation")).getText();
 								logger.info("Validation Message=" + ValMsg);
-								// --Part Pull Date
-								WebElement PartPullDate = Driver.findElement(By.id("idtxtPartPullDate"));
-								PartPullDate.clear();
-								Date date = new Date();
-								DateFormat dateFormat = new SimpleDateFormat("mm:dd:yy");
-								PartPullDate.sendKeys(dateFormat.format(date));
-								PartPullDate.sendKeys(Keys.TAB);
-
-								// --Part Pull Time
+								// --ZoneID
 								String ZOneID = Driver.findElement(By.xpath("//span[contains(@ng-bind,'TimezoneId')]"))
 										.getText();
 								logger.info("ZoneID of is==" + ZOneID);
@@ -4112,6 +4469,18 @@ public class OrderProcessing extends BaseInit {
 								} else if (ZOneID.equalsIgnoreCase("CDT")) {
 									ZOneID = "CST";
 								}
+
+								// --Part Pull Date
+								WebElement PartPullDate = Driver.findElement(By.id("idtxtPartPullDate"));
+								PartPullDate.clear();
+								Date date = new Date();
+								DateFormat dateFormat = new SimpleDateFormat("MM/dd/yyyy");
+								dateFormat.setTimeZone(TimeZone.getTimeZone(ZOneID));
+								logger.info(dateFormat.format(date));
+								PartPullDate.sendKeys(dateFormat.format(date));
+								PartPullDate.sendKeys(Keys.TAB);
+
+								// --Part Pull Time
 								WebElement PartPullTime = Driver.findElement(By.id("txtPartPullTime"));
 								PartPullTime.clear();
 								date = new Date();
@@ -4119,7 +4488,6 @@ public class OrderProcessing extends BaseInit {
 								dateFormat.setTimeZone(TimeZone.getTimeZone(ZOneID));
 								logger.info(dateFormat.format(date));
 								PartPullTime.sendKeys(dateFormat.format(date));
-
 								// --Save button
 								Driver.findElement(By.id("idiconsave")).click();
 								logger.info("Clicked on Save button");
@@ -4160,15 +4528,7 @@ public class OrderProcessing extends BaseInit {
 										By.xpath("//label[contains(@class,'error-messages')]")));
 								logger.info("ErroMsg is Displayed=" + Driver
 										.findElement(By.xpath("//label[contains(@class,'error-messages')]")).getText());
-								// --Part Pull Date
-								WebElement PartPullDate = Driver.findElement(By.id("idtxtPartPullDate"));
-								PartPullDate.clear();
-								Date date = new Date();
-								DateFormat dateFormat = new SimpleDateFormat("mm:dd:yy");
-								PartPullDate.sendKeys(dateFormat.format(date));
-								PartPullDate.sendKeys(Keys.TAB);
-
-								// --Part Pull Time
+								// --ZoneID
 								String ZOneID = Driver.findElement(By.xpath("//span[contains(@ng-bind,'TimezoneId')]"))
 										.getText();
 								logger.info("ZoneID of is==" + ZOneID);
@@ -4177,6 +4537,18 @@ public class OrderProcessing extends BaseInit {
 								} else if (ZOneID.equalsIgnoreCase("CDT")) {
 									ZOneID = "CST";
 								}
+
+								// --Part Pull Date
+								WebElement PartPullDate = Driver.findElement(By.id("idtxtPartPullDate"));
+								PartPullDate.clear();
+								Date date = new Date();
+								DateFormat dateFormat = new SimpleDateFormat("MM/dd/yyyy");
+								dateFormat.setTimeZone(TimeZone.getTimeZone(ZOneID));
+								logger.info(dateFormat.format(date));
+								PartPullDate.sendKeys(dateFormat.format(date));
+								PartPullDate.sendKeys(Keys.TAB);
+
+								// --Part Pull Time
 								WebElement PartPullTime = Driver.findElement(By.id("txtPartPullTime"));
 								PartPullTime.clear();
 								date = new Date();
@@ -4392,15 +4764,7 @@ public class OrderProcessing extends BaseInit {
 									ExpectedConditions.visibilityOfElementLocated(By.id("idPartPullDttmValidation")));
 							String ValMsg = Driver.findElement(By.id("idPartPullDttmValidation")).getText();
 							logger.info("Validation Message=" + ValMsg);
-							// --Part Pull Date
-							WebElement PartPullDate = Driver.findElement(By.id("idtxtPartPullDate"));
-							PartPullDate.clear();
-							Date date = new Date();
-							DateFormat dateFormat = new SimpleDateFormat("mm:dd:yy");
-							PartPullDate.sendKeys(dateFormat.format(date));
-							PartPullDate.sendKeys(Keys.TAB);
-
-							// --Part Pull Time
+							// --ZoneID
 							String ZOneID = Driver.findElement(By.xpath("//span[contains(@ng-bind,'TimezoneId')]"))
 									.getText();
 							logger.info("ZoneID of is==" + ZOneID);
@@ -4409,6 +4773,18 @@ public class OrderProcessing extends BaseInit {
 							} else if (ZOneID.equalsIgnoreCase("CDT")) {
 								ZOneID = "CST";
 							}
+
+							// --Part Pull Date
+							WebElement PartPullDate = Driver.findElement(By.id("idtxtPartPullDate"));
+							PartPullDate.clear();
+							Date date = new Date();
+							DateFormat dateFormat = new SimpleDateFormat("MM/dd/yyyy");
+							dateFormat.setTimeZone(TimeZone.getTimeZone(ZOneID));
+							logger.info(dateFormat.format(date));
+							PartPullDate.sendKeys(dateFormat.format(date));
+							PartPullDate.sendKeys(Keys.TAB);
+
+							// --Part Pull Time
 							WebElement PartPullTime = Driver.findElement(By.id("txtPartPullTime"));
 							PartPullTime.clear();
 							date = new Date();
@@ -4416,7 +4792,6 @@ public class OrderProcessing extends BaseInit {
 							dateFormat.setTimeZone(TimeZone.getTimeZone(ZOneID));
 							logger.info(dateFormat.format(date));
 							PartPullTime.sendKeys(dateFormat.format(date));
-
 							// --Save button
 							Driver.findElement(By.id("idiconsave")).click();
 							logger.info("Clicked on Save button");
@@ -4457,16 +4832,7 @@ public class OrderProcessing extends BaseInit {
 									By.xpath("//label[contains(@class,'error-messages')]")));
 							logger.info("ErroMsg is Displayed=" + Driver
 									.findElement(By.xpath("//label[contains(@class,'error-messages')]")).getText());
-							// --Part Pull Date
-							WebElement PartPullDate = Driver.findElement(By.id("idtxtPartPullDate"));
-							PartPullDate.clear();
-							Date date = new Date();
-							DateFormat dateFormat = new SimpleDateFormat("mm:dd:yy");
-							PartPullDate.sendKeys(dateFormat.format(date));
-							PartPullDate.sendKeys(Keys.TAB);
-
-							Thread.sleep(2000);
-							// --Part Pull Time
+							// --ZoneID
 							String ZOneID = Driver.findElement(By.xpath("//span[contains(@ng-bind,'TimezoneId')]"))
 									.getText();
 							logger.info("ZoneID of is==" + ZOneID);
@@ -4475,6 +4841,18 @@ public class OrderProcessing extends BaseInit {
 							} else if (ZOneID.equalsIgnoreCase("CDT")) {
 								ZOneID = "CST";
 							}
+
+							// --Part Pull Date
+							WebElement PartPullDate = Driver.findElement(By.id("idtxtPartPullDate"));
+							PartPullDate.clear();
+							Date date = new Date();
+							DateFormat dateFormat = new SimpleDateFormat("MM/dd/yyyy");
+							dateFormat.setTimeZone(TimeZone.getTimeZone(ZOneID));
+							logger.info(dateFormat.format(date));
+							PartPullDate.sendKeys(dateFormat.format(date));
+							PartPullDate.sendKeys(Keys.TAB);
+
+							// --Part Pull Time
 							WebElement PartPullTime = Driver.findElement(By.id("txtPartPullTime"));
 							PartPullTime.clear();
 							date = new Date();
@@ -4482,7 +4860,6 @@ public class OrderProcessing extends BaseInit {
 							dateFormat.setTimeZone(TimeZone.getTimeZone(ZOneID));
 							logger.info(dateFormat.format(date));
 							PartPullTime.sendKeys(dateFormat.format(date));
-
 							// --Save button
 							Driver.findElement(By.id("idiconsave")).click();
 							logger.info("Clicked on Save button");
@@ -5053,15 +5430,7 @@ public class OrderProcessing extends BaseInit {
 											.visibilityOfElementLocated(By.id("idPartPullDttmValidation")));
 									String ValMsg = Driver.findElement(By.id("idPartPullDttmValidation")).getText();
 									logger.info("Validation Message=" + ValMsg);
-									// --Part Pull Date
-									WebElement PartPullDate = Driver.findElement(By.id("idtxtPartPullDate"));
-									PartPullDate.clear();
-									Date date = new Date();
-									DateFormat dateFormat = new SimpleDateFormat("mm:dd:yy");
-									PartPullDate.sendKeys(dateFormat.format(date));
-									PartPullDate.sendKeys(Keys.TAB);
-
-									// --Part Pull Time
+									// --ZoneID
 									String ZOneID = Driver
 											.findElement(By.xpath("//span[contains(@ng-bind,'TimezoneId')]")).getText();
 									logger.info("ZoneID of is==" + ZOneID);
@@ -5070,6 +5439,18 @@ public class OrderProcessing extends BaseInit {
 									} else if (ZOneID.equalsIgnoreCase("CDT")) {
 										ZOneID = "CST";
 									}
+
+									// --Part Pull Date
+									WebElement PartPullDate = Driver.findElement(By.id("idtxtPartPullDate"));
+									PartPullDate.clear();
+									Date date = new Date();
+									DateFormat dateFormat = new SimpleDateFormat("MM/dd/yyyy");
+									dateFormat.setTimeZone(TimeZone.getTimeZone(ZOneID));
+									logger.info(dateFormat.format(date));
+									PartPullDate.sendKeys(dateFormat.format(date));
+									PartPullDate.sendKeys(Keys.TAB);
+
+									// --Part Pull Time
 									WebElement PartPullTime = Driver.findElement(By.id("txtPartPullTime"));
 									PartPullTime.clear();
 									date = new Date();
@@ -5120,16 +5501,7 @@ public class OrderProcessing extends BaseInit {
 									logger.info("ErroMsg is Displayed="
 											+ Driver.findElement(By.xpath("//label[contains(@class,'error-messages')]"))
 													.getText());
-									// --Part Pull Date
-									WebElement PartPullDate = Driver.findElement(By.id("idtxtPartPullDate"));
-									PartPullDate.clear();
-									Date date = new Date();
-									DateFormat dateFormat = new SimpleDateFormat("mm:dd:yy");
-									PartPullDate.sendKeys(dateFormat.format(date));
-									PartPullDate.sendKeys(Keys.TAB);
-
-									Thread.sleep(2000);
-									// --Part Pull Time
+									// --ZoneID
 									String ZOneID = Driver
 											.findElement(By.xpath("//span[contains(@ng-bind,'TimezoneId')]")).getText();
 									logger.info("ZoneID of is==" + ZOneID);
@@ -5138,6 +5510,18 @@ public class OrderProcessing extends BaseInit {
 									} else if (ZOneID.equalsIgnoreCase("CDT")) {
 										ZOneID = "CST";
 									}
+
+									// --Part Pull Date
+									WebElement PartPullDate = Driver.findElement(By.id("idtxtPartPullDate"));
+									PartPullDate.clear();
+									Date date = new Date();
+									DateFormat dateFormat = new SimpleDateFormat("MM/dd/yyyy");
+									dateFormat.setTimeZone(TimeZone.getTimeZone(ZOneID));
+									logger.info(dateFormat.format(date));
+									PartPullDate.sendKeys(dateFormat.format(date));
+									PartPullDate.sendKeys(Keys.TAB);
+
+									// --Part Pull Time
 									WebElement PartPullTime = Driver.findElement(By.id("txtPartPullTime"));
 									PartPullTime.clear();
 									date = new Date();
@@ -5458,15 +5842,7 @@ public class OrderProcessing extends BaseInit {
 										.visibilityOfElementLocated(By.id("idPartPullDttmValidation")));
 								String ValMsg = Driver.findElement(By.id("idPartPullDttmValidation")).getText();
 								logger.info("Validation Message=" + ValMsg);
-								// --Part Pull Date
-								WebElement PartPullDate = Driver.findElement(By.id("idtxtPartPullDate"));
-								PartPullDate.clear();
-								Date date = new Date();
-								DateFormat dateFormat = new SimpleDateFormat("mm:dd:yy");
-								PartPullDate.sendKeys(dateFormat.format(date));
-								PartPullDate.sendKeys(Keys.TAB);
-
-								// --Part Pull Time
+								// --ZoneID
 								String ZOneID = Driver.findElement(By.xpath("//span[contains(@ng-bind,'TimezoneId')]"))
 										.getText();
 								logger.info("ZoneID of is==" + ZOneID);
@@ -5475,6 +5851,18 @@ public class OrderProcessing extends BaseInit {
 								} else if (ZOneID.equalsIgnoreCase("CDT")) {
 									ZOneID = "CST";
 								}
+
+								// --Part Pull Date
+								WebElement PartPullDate = Driver.findElement(By.id("idtxtPartPullDate"));
+								PartPullDate.clear();
+								Date date = new Date();
+								DateFormat dateFormat = new SimpleDateFormat("MM/dd/yyyy");
+								dateFormat.setTimeZone(TimeZone.getTimeZone(ZOneID));
+								logger.info(dateFormat.format(date));
+								PartPullDate.sendKeys(dateFormat.format(date));
+								PartPullDate.sendKeys(Keys.TAB);
+
+								// --Part Pull Time
 								WebElement PartPullTime = Driver.findElement(By.id("txtPartPullTime"));
 								PartPullTime.clear();
 								date = new Date();
@@ -5523,16 +5911,7 @@ public class OrderProcessing extends BaseInit {
 										By.xpath("//label[contains(@class,'error-messages')]")));
 								logger.info("ErroMsg is Displayed=" + Driver
 										.findElement(By.xpath("//label[contains(@class,'error-messages')]")).getText());
-								// --Part Pull Date
-								WebElement PartPullDate = Driver.findElement(By.id("idtxtPartPullDate"));
-								PartPullDate.clear();
-								Date date = new Date();
-								DateFormat dateFormat = new SimpleDateFormat("mm:dd:yy");
-								PartPullDate.sendKeys(dateFormat.format(date));
-								PartPullDate.sendKeys(Keys.TAB);
-
-								Thread.sleep(2000);
-								// --Part Pull Time
+								// --ZoneID
 								String ZOneID = Driver.findElement(By.xpath("//span[contains(@ng-bind,'TimezoneId')]"))
 										.getText();
 								logger.info("ZoneID of is==" + ZOneID);
@@ -5541,6 +5920,18 @@ public class OrderProcessing extends BaseInit {
 								} else if (ZOneID.equalsIgnoreCase("CDT")) {
 									ZOneID = "CST";
 								}
+
+								// --Part Pull Date
+								WebElement PartPullDate = Driver.findElement(By.id("idtxtPartPullDate"));
+								PartPullDate.clear();
+								Date date = new Date();
+								DateFormat dateFormat = new SimpleDateFormat("MM/dd/yyyy");
+								dateFormat.setTimeZone(TimeZone.getTimeZone(ZOneID));
+								logger.info(dateFormat.format(date));
+								PartPullDate.sendKeys(dateFormat.format(date));
+								PartPullDate.sendKeys(Keys.TAB);
+
+								// --Part Pull Time
 								WebElement PartPullTime = Driver.findElement(By.id("txtPartPullTime"));
 								PartPullTime.clear();
 								date = new Date();
@@ -5778,15 +6169,7 @@ public class OrderProcessing extends BaseInit {
 									ExpectedConditions.visibilityOfElementLocated(By.id("idPartPullDttmValidation")));
 							String ValMsg = Driver.findElement(By.id("idPartPullDttmValidation")).getText();
 							logger.info("Validation Message=" + ValMsg);
-							// --Part Pull Date
-							WebElement PartPullDate = Driver.findElement(By.id("idtxtPartPullDate"));
-							PartPullDate.clear();
-							Date date = new Date();
-							DateFormat dateFormat = new SimpleDateFormat("mm:dd:yy");
-							PartPullDate.sendKeys(dateFormat.format(date));
-							PartPullDate.sendKeys(Keys.TAB);
-
-							// --Part Pull Time
+							// --ZoneID
 							String ZOneID = Driver.findElement(By.xpath("//span[contains(@ng-bind,'TimezoneId')]"))
 									.getText();
 							logger.info("ZoneID of is==" + ZOneID);
@@ -5795,6 +6178,18 @@ public class OrderProcessing extends BaseInit {
 							} else if (ZOneID.equalsIgnoreCase("CDT")) {
 								ZOneID = "CST";
 							}
+
+							// --Part Pull Date
+							WebElement PartPullDate = Driver.findElement(By.id("idtxtPartPullDate"));
+							PartPullDate.clear();
+							Date date = new Date();
+							DateFormat dateFormat = new SimpleDateFormat("MM/dd/yyyy");
+							dateFormat.setTimeZone(TimeZone.getTimeZone(ZOneID));
+							logger.info(dateFormat.format(date));
+							PartPullDate.sendKeys(dateFormat.format(date));
+							PartPullDate.sendKeys(Keys.TAB);
+
+							// --Part Pull Time
 							WebElement PartPullTime = Driver.findElement(By.id("txtPartPullTime"));
 							PartPullTime.clear();
 							date = new Date();
@@ -5802,7 +6197,6 @@ public class OrderProcessing extends BaseInit {
 							dateFormat.setTimeZone(TimeZone.getTimeZone(ZOneID));
 							logger.info(dateFormat.format(date));
 							PartPullTime.sendKeys(dateFormat.format(date));
-
 							// --Save button
 							Driver.findElement(By.id("idiconsave")).click();
 							logger.info("Clicked on Save button");
@@ -5843,16 +6237,7 @@ public class OrderProcessing extends BaseInit {
 									By.xpath("//label[contains(@class,'error-messages')]")));
 							logger.info("ErroMsg is Displayed=" + Driver
 									.findElement(By.xpath("//label[contains(@class,'error-messages')]")).getText());
-							// --Part Pull Date
-							WebElement PartPullDate = Driver.findElement(By.id("idtxtPartPullDate"));
-							PartPullDate.clear();
-							Date date = new Date();
-							DateFormat dateFormat = new SimpleDateFormat("mm:dd:yy");
-							PartPullDate.sendKeys(dateFormat.format(date));
-							PartPullDate.sendKeys(Keys.TAB);
-
-							Thread.sleep(2000);
-							// --Part Pull Time
+							// --ZoneID
 							String ZOneID = Driver.findElement(By.xpath("//span[contains(@ng-bind,'TimezoneId')]"))
 									.getText();
 							logger.info("ZoneID of is==" + ZOneID);
@@ -5861,6 +6246,18 @@ public class OrderProcessing extends BaseInit {
 							} else if (ZOneID.equalsIgnoreCase("CDT")) {
 								ZOneID = "CST";
 							}
+
+							// --Part Pull Date
+							WebElement PartPullDate = Driver.findElement(By.id("idtxtPartPullDate"));
+							PartPullDate.clear();
+							Date date = new Date();
+							DateFormat dateFormat = new SimpleDateFormat("MM/dd/yyyy");
+							dateFormat.setTimeZone(TimeZone.getTimeZone(ZOneID));
+							logger.info(dateFormat.format(date));
+							PartPullDate.sendKeys(dateFormat.format(date));
+							PartPullDate.sendKeys(Keys.TAB);
+
+							// --Part Pull Time
 							WebElement PartPullTime = Driver.findElement(By.id("txtPartPullTime"));
 							PartPullTime.clear();
 							date = new Date();
@@ -5868,7 +6265,6 @@ public class OrderProcessing extends BaseInit {
 							dateFormat.setTimeZone(TimeZone.getTimeZone(ZOneID));
 							logger.info(dateFormat.format(date));
 							PartPullTime.sendKeys(dateFormat.format(date));
-
 							// --Save button
 							Driver.findElement(By.id("idiconsave")).click();
 							logger.info("Clicked on Save button");
@@ -6588,15 +6984,7 @@ public class OrderProcessing extends BaseInit {
 					wait.until(ExpectedConditions.visibilityOfElementLocated(By.id("idPartPullDttmValidation")));
 					String ValMsg = Driver.findElement(By.id("idPartPullDttmValidation")).getText();
 					logger.info("Validation Message=" + ValMsg);
-					// --Part Pull Date
-					WebElement PartPullDate = Driver.findElement(By.id("idtxtPartPullDate"));
-					PartPullDate.clear();
-					Date date = new Date();
-					DateFormat dateFormat = new SimpleDateFormat("mm:dd:yy");
-					PartPullDate.sendKeys(dateFormat.format(date));
-					PartPullDate.sendKeys(Keys.TAB);
-
-					// --Part Pull Time
+					// --ZoneID
 					String ZOneID = Driver.findElement(By.xpath("//span[contains(@ng-bind,'TimezoneId')]")).getText();
 					logger.info("ZoneID of is==" + ZOneID);
 					if (ZOneID.equalsIgnoreCase("EDT")) {
@@ -6604,6 +6992,18 @@ public class OrderProcessing extends BaseInit {
 					} else if (ZOneID.equalsIgnoreCase("CDT")) {
 						ZOneID = "CST";
 					}
+
+					// --Part Pull Date
+					WebElement PartPullDate = Driver.findElement(By.id("idtxtPartPullDate"));
+					PartPullDate.clear();
+					Date date = new Date();
+					DateFormat dateFormat = new SimpleDateFormat("MM/dd/yyyy");
+					dateFormat.setTimeZone(TimeZone.getTimeZone(ZOneID));
+					logger.info(dateFormat.format(date));
+					PartPullDate.sendKeys(dateFormat.format(date));
+					PartPullDate.sendKeys(Keys.TAB);
+
+					// --Part Pull Time
 					WebElement PartPullTime = Driver.findElement(By.id("txtPartPullTime"));
 					PartPullTime.clear();
 					date = new Date();
@@ -6611,7 +7011,6 @@ public class OrderProcessing extends BaseInit {
 					dateFormat.setTimeZone(TimeZone.getTimeZone(ZOneID));
 					logger.info(dateFormat.format(date));
 					PartPullTime.sendKeys(dateFormat.format(date));
-
 					// --Save button
 					Driver.findElement(By.id("idiconsave")).click();
 					logger.info("Clicked on Save button");
