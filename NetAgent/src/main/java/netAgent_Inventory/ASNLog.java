@@ -450,11 +450,13 @@ public class ASNLog extends BaseInit {
 		logger.info("No.Of Records==" + P2);
 
 		// Export Action
+		// Delete existing file
+		isFileDownloaded("ASN-");
+
 		Driver.findElement(By.id("idbtnexport")).click();
 		logger.info("Click on Export button");
 		wait.until(ExpectedConditions.invisibilityOfElementLocated(By.xpath("//*[@class=\"ajax-loadernew\"]")));
-		Thread.sleep(5000);
-
+		waitUntilFileToDownload("ASN-");
 		getScreenshot(Driver, "ASNLog_2");
 
 		// Go to main screen

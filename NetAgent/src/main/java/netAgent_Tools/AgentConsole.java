@@ -103,6 +103,7 @@ public class AgentConsole extends BaseInit {
 		logger.info("Enter AirlineID");
 		Thread.sleep(2000);
 		alid = Driver.findElement(By.id("txtAirlineId"));
+		alid.sendKeys(Keys.DOWN);
 		alid.sendKeys(Keys.ENTER);
 		Thread.sleep(2000);
 
@@ -120,8 +121,6 @@ public class AgentConsole extends BaseInit {
 		logger.info("Enter AirportID");
 		Thread.sleep(2000);
 		apid = Driver.findElement(By.id("txtAirportID"));
-		apid.sendKeys(Keys.DOWN);
-		apid.sendKeys(Keys.DOWN);
 		apid.sendKeys(Keys.ENTER);
 		Thread.sleep(2000);
 

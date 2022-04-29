@@ -32,7 +32,7 @@ public class CycleCountBin extends BaseInit {
 		wait.until(ExpectedConditions.elementToBeClickable(By.id("ddlClient")));
 		Driver.findElement(By.id("ddlClient")).click();
 		Select client = new Select(Driver.findElement(By.id("ddlClient")));
-		client.selectByVisibleText("AUTOMATION - SPRINT #950656");
+		client.selectByIndex(1);
 		logger.info("Selected Client");
 
 		// Select Bin name from dropdown list.

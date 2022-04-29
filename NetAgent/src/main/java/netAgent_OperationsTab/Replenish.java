@@ -1,6 +1,8 @@
 package netAgent_OperationsTab;
 
 import org.openqa.selenium.By;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
@@ -12,6 +14,7 @@ public class Replenish extends BaseInit {
 	@Test
 	public static void replenish() throws Exception {
 		WebDriverWait wait = new WebDriverWait(Driver, 50);
+		Actions act = new Actions(Driver);
 		logger.info("=======Replenish Test Start=======");
 		msg.append("=======Replenish Test Start=======" + "\n\n");
 
@@ -30,7 +33,7 @@ public class Replenish extends BaseInit {
 		// --Scenario=Select Account and Add part
 		// Select Account number
 		Select AccNo = new Select(Driver.findElement(By.id("ddlClient")));
-		AccNo.selectByVisibleText(Client);
+		AccNo.selectByIndex(1);
 		logger.info("Selected Account Number");
 		Thread.sleep(2000);
 
@@ -86,9 +89,17 @@ public class Replenish extends BaseInit {
 		Driver.findElement(By.xpath(".//*[@id='lnklinedtl_0']")).click();
 		logger.info("Click on Add Line button");
 
-		Driver.findElement(By.id("ReplanishQty_0")).clear();
-		Driver.findElement(By.id("ReplanishQty_0")).sendKeys("2");
-		logger.info("Entered Replenished Qty");
+		/*
+		 * Driver.findElement(By.id("ReplanishQty_0")).clear();
+		 * Driver.findElement(By.id("ReplanishQty_0")).sendKeys("2");
+		 * logger.info("Entered Replenished Qty");
+		 */
+
+		// --SerialNo
+
+		Driver.findElement(By.id("idchildsegmentserialno")).clear();
+		Driver.findElement(By.id("idchildsegmentserialno")).sendKeys("Serial" + System.currentTimeMillis());
+		logger.info("Entered SerialNo");
 
 		// click on add location
 		Driver.findElement(By.linkText("Add Location")).click();
@@ -110,9 +121,9 @@ public class Replenish extends BaseInit {
 		logger.info("Click on Save Location");
 
 		// --Cancel Add Location
-		wait.until(ExpectedConditions
-				.elementToBeClickable(By.xpath("//*[@id=\"idsavelocationprocess\"]/i[@id=\"idiconsave\"]")));
-		Driver.findElement(By.xpath("//*[@id=\"idsavelocationprocess\"]/i[@id=\"idiconsave\"]")).click();
+		wait.until(ExpectedConditions.elementToBeClickable(By.id("idAddLocationProcess")));
+		WebElement AddLocCancel = Driver.findElement(By.id("idAddLocationProcess"));
+		act.moveToElement(AddLocCancel).click().perform();
 		logger.info("Click on Cancel Location");
 		Thread.sleep(2000);
 

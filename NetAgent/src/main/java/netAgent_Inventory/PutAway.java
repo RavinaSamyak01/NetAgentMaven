@@ -111,7 +111,6 @@ public class PutAway extends BaseInit {
 					System.out.println("Total records are==" + stockIDSNew.size());
 					logger.info("Total records are==" + stockIDSNew.size());
 					for (int sID1 = sID; sID1 < stockIDSNew.size();) {
-						String stockID1 = stockIDSNew.get(sID1).getText();
 						String xpath = "//*[@id=\"gridProcessPutaway\"]//tbody/tr[" + sID1 + 1 + "]//i";
 						WebElement GreenTick = Driver.findElement(By.xpath(xpath));
 						if (GreenTick.isDisplayed()) {

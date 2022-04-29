@@ -3,6 +3,7 @@ package netAgent_Reports;
 import java.text.DateFormat;
 import java.text.SimpleDateFormat;
 import java.util.Date;
+import java.util.List;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
@@ -66,6 +67,8 @@ public class InventoryReceiptReport extends BaseInit {
 		// Driver.findElement(By.xpath("/html/body/div[2]/section/div[2]/div/div/div[2]/form/div[2]/div[1]/div[1]/div/div/button")).click();
 
 		// --Select FSL Name
+		wait.until(ExpectedConditions.visibilityOfElementLocated(By.id("btn_ddlfslclass=")));
+		wait.until(ExpectedConditions.elementToBeClickable(By.id("btn_ddlfslclass=")));
 		Driver.findElement(By.id("btn_ddlfslclass=")).click();
 		Thread.sleep(2000);
 		Driver.findElement(By.xpath("//div[@id=\"ddlfsl\"]//input[@id=\"idcheckboxInput\"]")).click();
@@ -125,20 +128,80 @@ public class InventoryReceiptReport extends BaseInit {
 		logger.info("Wait Message is==" + WaitMsg);
 
 		wait.until(ExpectedConditions.invisibilityOfElementLocated(By.xpath("//label[@id=\"idwait\"]")));
-
-		boolean Replnsh = Driver.findElement(By.xpath("//*[@id=\"myIframe\"]")).isDisplayed();
-
-		if (Replnsh == false) {
-			throw new Error("Error: Replenish Report grid not display");
-		}
-
+		wait.until(ExpectedConditions.visibilityOfAllElementsLocatedBy(By.id("reportid")));
+		wait.until(ExpectedConditions.visibilityOfAllElementsLocatedBy(By.xpath("//iframe[@id=\"myIframe\"]")));
 		getScreenshot(Driver, "ReceiptReport");
+
+		boolean AvArRp = Driver.findElement(By.xpath("//iframe[@id=\"myIframe\"]")).isDisplayed();
+
+		if (AvArRp == false) {
+			throw new Error("Error: Receipt Report grid not display");
+		} else {
+			WebElement ReportFrame = Driver.findElement(By.id("myIframe"));
+			Driver.switchTo().frame(ReportFrame);
+			logger.info("Switched to Report Frame");
+
+			// --Click on Export button
+			wait.until(ExpectedConditions.visibilityOfElementLocated(By.id("rpt_ctl05_ctl04_ctl00_ButtonImg")));
+			Driver.findElement(By.id("rpt_ctl05_ctl04_ctl00_ButtonImg")).click();
+			logger.info("Clicked on Export img");
+			wait.until(ExpectedConditions.visibilityOfAllElementsLocatedBy(By.id("rpt_ctl05_ctl04_ctl00_Menu")));
+
+			// --Same file exist, delete it
+			isFileDownloaded("InventoryReceiptReport_NA");
+
+			// --Download report in all available format
+			List<WebElement> ReportOpt = Driver.findElements(By.xpath("//*[@id=\"rpt_ctl05_ctl04_ctl00_Menu\"]//a"));
+			logger.info("Total No of Options are==" + ReportOpt.size());
+			for (int RO = 0; RO < ReportOpt.size(); RO++) {
+				try {
+					if (RO > 0) {
+						Driver.findElement(By.id("rpt_ctl05_ctl04_ctl00_ButtonImg")).click();
+						logger.info("Clicked on Export img");
+						wait.until(ExpectedConditions
+								.visibilityOfAllElementsLocatedBy(By.id("rpt_ctl05_ctl04_ctl00_Menu")));
+
+					}
+					String OptionName = ReportOpt.get(RO).getText();
+					logger.info("Option name is==" + OptionName);
+
+					ReportOpt.get(RO).click();
+					logger.info("Clicked on Option to download Report");
+					// --Wait until file download
+					waitUntilFileToDownload("InventoryReceiptReport_NA");
+					Thread.sleep(2000);
+				} catch (Exception ClickIntercepted) {
+					Driver.findElement(By.id("rpt_ctl05_ctl04_ctl00_ButtonImg")).click();
+					logger.info("Clicked on Export img");
+					List<WebElement> ReportOpt1 = Driver
+							.findElements(By.xpath("//*[@id=\"rpt_ctl05_ctl04_ctl00_Menu\"]//a"));
+					logger.info("Total No of Options are==" + ReportOpt.size());
+					for (int RO1 = RO; RO1 < ReportOpt1.size();) {
+						String OptionName1 = ReportOpt1.get(RO1).getText();
+						logger.info("Option name is==" + OptionName1);
+
+						// --CLick on option
+						ReportOpt1.get(RO1).click();
+						logger.info("Clicked on Option to download Report");
+						// --Wait until file download
+						waitUntilFileToDownload("InventoryReceiptReport_NA");
+						Thread.sleep(2000);
+						break;
+					}
+				}
+			}
+
+		}
+		Driver.switchTo().defaultContent();
+		logger.info("Switched to Main screen");
 
 		// Reset
 		Driver.findElement(By.id("btnReset")).click();
 		logger.info("Click on Reset button");
 		wait.until(ExpectedConditions.invisibilityOfElementLocated(By.xpath("//*[@class=\"ajax-loadernew\"]")));
 
+		wait.until(ExpectedConditions.visibilityOfElementLocated(By.id("imgNGLLogo")));
+		wait.until(ExpectedConditions.elementToBeClickable(By.id("imgNGLLogo")));
 		Driver.findElement(By.id("imgNGLLogo")).click();
 		logger.info("Click on MNX Logo");
 		wait.until(ExpectedConditions.invisibilityOfElementLocated(By.xpath("//*[@class=\"ajax-loadernew\"]")));

@@ -31,7 +31,7 @@ public class Parts extends BaseInit {
 		// parts
 		WebElement clientprt = Driver.findElement(By.id("ddlClient"));
 		Select optprt = new Select(clientprt);
-		optprt.selectByVisibleText(Client);
+		optprt.selectByIndex(1);
 		logger.info("Parts Screen: Client selected");
 		wait.until(ExpectedConditions.invisibilityOfElementLocated(By.xpath("//*[@class=\"ajax-loadernew\"]")));
 
@@ -65,16 +65,15 @@ public class Parts extends BaseInit {
 		// partDetail
 
 		// --Get data from excel
-		String SprintPartNo = getData("Sheet1", 2, 22);
-		String IMN = getData("Sheet1", 2, 23);
-		String MFGPartNo = getData("Sheet1", 2, 24);
-		String SpNumber = getData("Sheet1", 2, 25);
+		String ModelNumber = getData("Sheet1", 2, 22);
+		String EXPIRATIONDATE = getData("Sheet1", 2, 23);
+		String LotBatchNo = getData("Sheet1", 2, 24);
 		String MFGSerialNo = getData("Sheet1", 2, 26);
 
 		// Click on Part# and Return
 
-		Driver.findElement(By.id("txtField1")).sendKeys(SprintPartNo);
-		logger.info("Entered value in Sprint Part Number");
+		Driver.findElement(By.id("txtField1")).sendKeys(ModelNumber);
+		logger.info("Entered value in MODEL NUMBER");
 		Driver.findElement(By.id("idsearchbutton")).click();
 		logger.info("Clicked on Search button");
 		wait.until(ExpectedConditions.invisibilityOfElementLocated(By.xpath("//*[@class=\"ajax-loadernew\"]")));
@@ -94,13 +93,13 @@ public class Parts extends BaseInit {
 		logger.info("Parts Screen: Return from part details screen.");
 		Thread.sleep(2000);
 
-		System.out.println("Expected Sprint part Number is=" + SprintPartNo);
-		logger.info("Expected Sprint part Number is=" + SprintPartNo);
+		System.out.println("Expected MODEL NUMBER is=" + ModelNumber);
+		logger.info("Expected MODEL NUMBER is=" + ModelNumber);
 		String act1 = Driver.findElement(By.xpath("//*[@id='PartMasterGD']//tbody//a")).getText();
-		System.out.println("Actual Sprint part Number is=" + act1);
-		logger.info("Actual Sprint part Number is=" + act1);
+		System.out.println("Actual MODEL NUMBER is=" + act1);
+		logger.info("Actual MODEL NUMBER is=" + act1);
 
-		if (act1.contains(SprintPartNo)) {
+		if (act1.contains(ModelNumber)) {
 			System.out.println("Field1 Search Compare is - PASS");
 			logger.info("Field1 Search Compare is - PASS");
 		}
@@ -112,38 +111,28 @@ public class Parts extends BaseInit {
 
 		// --Search with second field
 		Driver.findElement(By.id("txtField1")).clear();
-		logger.info("Cleared Sprint Part Number");
-		Driver.findElement(By.id("txtField2")).sendKeys(IMN);
-		logger.info("Entered value in IMN");
+		logger.info("Cleared MODEL NUMBER");
+		Driver.findElement(By.id("txtField2")).sendKeys(EXPIRATIONDATE);
+		logger.info("Entered value in EXPIRATION DATE");
 		wait.until(ExpectedConditions.elementToBeClickable(By.id("idsearchbutton")));
 		Driver.findElement(By.id("idsearchbutton")).click();
 		logger.info("Clicked on Search button");
 		wait.until(ExpectedConditions.invisibilityOfElementLocated(By.xpath("//*[@class=\"ajax-loadernew\"]")));
 		Driver.findElement(By.id("txtField2")).clear();
-		logger.info("Cleared IMN");
+		logger.info("Cleared EXPIRATION DATE");
 
 		// --Search with third field
-		Driver.findElement(By.id("txtField3")).sendKeys(MFGPartNo);
-		logger.info("Entered MFG Part Number");
+		Driver.findElement(By.id("txtField3")).sendKeys(LotBatchNo);
+		logger.info("Entered LOT/BATCH NUMBER");
 		wait.until(ExpectedConditions.elementToBeClickable(By.id("idsearchbutton")));
 		Driver.findElement(By.id("idsearchbutton")).click();
 		logger.info("Clicked on Search button");
 		wait.until(ExpectedConditions.invisibilityOfElementLocated(By.xpath("//*[@class=\"ajax-loadernew\"]")));
 
-		// --Search with fourth field
+		// -Search with Fourth field
+		wait.until(ExpectedConditions.visibilityOfElementLocated(By.id("txtField3")));
 		Driver.findElement(By.id("txtField3")).clear();
-		logger.info("Cleared MFG Part Number");
-		Driver.findElement(By.id("txtField4")).sendKeys(SpNumber);
-		logger.info("Entered SP Number");
-		wait.until(ExpectedConditions.elementToBeClickable(By.id("idsearchbutton")));
-		Driver.findElement(By.id("idsearchbutton")).click();
-		logger.info("Clicked on Search button");
-		wait.until(ExpectedConditions.invisibilityOfElementLocated(By.xpath("//*[@class=\"ajax-loadernew\"]")));
-
-		// -Search with fifth field
-		wait.until(ExpectedConditions.visibilityOfElementLocated(By.id("txtField4")));
-		Driver.findElement(By.id("txtField4")).clear();
-		logger.info("Cleared SP Number");
+		logger.info("LOT/BATCH NUMBER");
 		wait.until(ExpectedConditions.visibilityOfElementLocated(By.id("txtSrAliasName")));
 		Driver.findElement(By.id("txtSrAliasName")).sendKeys(MFGSerialNo);
 		logger.info("Entered MFG Serial No");
@@ -158,7 +147,7 @@ public class Parts extends BaseInit {
 
 		// Search with invalid text
 		Driver.findElement(By.id("txtField1")).sendKeys("Test123");
-		logger.info("Entered invalid value in Sprint Part Number");
+		logger.info("Entered invalid value in MODEL NUMBER");
 		wait.until(ExpectedConditions.elementToBeClickable(By.id("idsearchbutton")));
 		Driver.findElement(By.id("idsearchbutton")).click();
 		logger.info("Clicked on Search button");
@@ -166,10 +155,10 @@ public class Parts extends BaseInit {
 		Driver.findElement(By.id("PartNoGrid")).getText();
 		logger.info("Records==" + Driver.findElement(By.id("PartNoGrid")).getText());
 		Driver.findElement(By.id("txtField1")).clear();
-		logger.info("Cleared Sprint Part Number");
+		logger.info("Cleared MODEL NUMBER");
 
 		Driver.findElement(By.id("txtField2")).sendKeys("Test123");
-		logger.info("Entered invalid value in IMN");
+		logger.info("Entered invalid value in EXPIRATION DATE");
 		wait.until(ExpectedConditions.elementToBeClickable(By.id("idsearchbutton")));
 		Driver.findElement(By.id("idsearchbutton")).click();
 		logger.info("Clicked on Search button");
@@ -177,10 +166,10 @@ public class Parts extends BaseInit {
 		Driver.findElement(By.id("PartNoGrid")).getText();
 		logger.info("Records==" + Driver.findElement(By.id("PartNoGrid")).getText());
 		Driver.findElement(By.id("txtField2")).clear();
-		logger.info("Cleared IMN");
+		logger.info("Cleared EXPIRATION DATE");
 
 		Driver.findElement(By.id("txtField3")).sendKeys("Test123");
-		logger.info("Entered invalid value in MFG Part Number");
+		logger.info("Entered invalid value in LOT/BATCH NUMBER");
 		wait.until(ExpectedConditions.elementToBeClickable(By.id("idsearchbutton")));
 		Driver.findElement(By.id("idsearchbutton")).click();
 		logger.info("Clicked on Search button");
@@ -188,18 +177,7 @@ public class Parts extends BaseInit {
 		Driver.findElement(By.id("PartNoGrid")).getText();
 		logger.info("Records==" + Driver.findElement(By.id("PartNoGrid")).getText());
 		Driver.findElement(By.id("txtField3")).clear();
-		logger.info("Cleared MFG Part Number");
-
-		Driver.findElement(By.id("txtField4")).sendKeys("Test123");
-		logger.info("Entered invalid value in SP Number");
-		wait.until(ExpectedConditions.visibilityOfElementLocated(By.id("idsearchbutton")));
-		Driver.findElement(By.id("idsearchbutton")).click();
-		logger.info("Clicked on Search button");
-		wait.until(ExpectedConditions.invisibilityOfElementLocated(By.xpath("//*[@class=\"ajax-loadernew\"]")));
-		Driver.findElement(By.id("PartNoGrid")).getText();
-		logger.info("Records==" + Driver.findElement(By.id("PartNoGrid")).getText());
-		Driver.findElement(By.id("txtField4")).clear();
-		logger.info("Cleared SP Number");
+		logger.info("Cleared LOT/BATCH NUMBER");
 
 		Driver.findElement(By.id("txtSrAliasName")).sendKeys("Test123");
 		logger.info("Entered invalid value in MFG Serial No");
@@ -233,7 +211,7 @@ public class Parts extends BaseInit {
 
 		WebElement clientstck = Driver.findElement(By.id("ddlClient"));
 		Select optstck = new Select(clientstck);
-		optstck.selectByVisibleText(Client);
+		optstck.selectByIndex(1);
 		logger.info("Selected Client");
 		Thread.sleep(2000);
 
@@ -247,7 +225,7 @@ public class Parts extends BaseInit {
 		// Click on Stock
 		Driver.findElement(By.id("txtField1")).clear();
 		logger.info("Cleared Sprint Part No");
-		Driver.findElement(By.id("txtField1")).sendKeys(SprintPartNo);
+		Driver.findElement(By.id("txtField1")).sendKeys(ModelNumber);
 		logger.info("Entered Sprint Part No");
 		wait.until(ExpectedConditions.elementToBeClickable(By.id("idsearchbutton")));
 		Driver.findElement(By.id("idsearchbutton")).click();

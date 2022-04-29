@@ -3,6 +3,9 @@ package netAgent_OperationsTab;
 import java.awt.AWTException;
 import java.io.File;
 import java.io.IOException;
+import java.text.DateFormat;
+import java.text.SimpleDateFormat;
+import java.util.Date;
 import java.util.List;
 
 import org.apache.poi.EncryptedDocumentException;
@@ -1110,14 +1113,24 @@ public class CCAttempt extends BaseInit {
 									logger.info("Click on Collapse All button");
 									Thread.sleep(2000);
 
-									// --Collapse All by plus img
+									// --Expand All by plus img
 									isElementPresent("CCARCollImag_id").click();
 									logger.info("Click on Collapse All Img");
 									Thread.sleep(2000);
 
+									// --Collapse All
+									isElementPresent("CCARCollapseAll_id").click();
+									logger.info("Click on Collapse All button");
+									Thread.sleep(2000);
+
+									// --Expand All
+									isElementPresent("CCARExpandAll_id").click();
+									logger.info("Click on Expand All button");
+									Thread.sleep(2000);
+
 									// --Stored all Reconcilation Qty
-									PartTable = isElementPresent("CCARTableB_xpath");
-									Partrow = PartTable.findElements(By.tagName("tr"));
+									Partrow = Driver.findElements(By
+											.xpath("//*[@id=\"parttable\"]//table[@id=\"idsegmentexpand\"]/tbody//tr"));
 									logger.info("Total parts are==" + Partrow.size());
 
 									for (int partR = 0; partR < Partrow.size(); partR++) {
@@ -1655,12 +1668,16 @@ public class CCAttempt extends BaseInit {
 		wait.until(ExpectedConditions.invisibilityOfElementLocated(By.xpath("//*[@class=\"ajax-loadernew\"]")));
 
 		// --Wait until file is downloaded
-		waitUntilFileToDownload();
+		waitUntilFileToDownload("CycleCount-");
 
 		// --Import
 		isElementPresent("CCAImport_id").click();
 		logger.info("Clicked on Import button");
 		wait.until(ExpectedConditions.invisibilityOfElementLocated(By.xpath("//*[@class=\"ajax-loadernew\"]")));
+		Date date = new Date();
+		DateFormat dateFormat = new SimpleDateFormat("ddMMMyy");
+		String Date = dateFormat.format(date);
+		logger.info("Latest Date=" + Date);
 
 		String downloadPath = System.getProperty("user.dir") + "\\src\\main\\resources";
 		File dir = new File(downloadPath);
@@ -1669,11 +1686,13 @@ public class CCAttempt extends BaseInit {
 
 		for (int i = 0; i < dirContents.length; i++) {
 			if (dirContents[i].getName().contains("CycleCount-")) {
+
 				FileName = dirContents[i].getName();
 				logger.info("FileName for import is==" + FileName);
 
 			}
 		}
+
 		// --Click on Select File
 		String Fpath = System.getProperty("user.dir") + "\\src\\main\\resources\\" + FileName;
 		WebElement InFile = isElementPresent("InputFile_id");
@@ -1767,7 +1786,7 @@ public class CCAttempt extends BaseInit {
 		wait.until(ExpectedConditions.invisibilityOfElementLocated(By.xpath("//*[@class=\"ajax-loadernew\"]")));
 		Thread.sleep(7000);
 		// --Wait until file is downloaded
-		waitUntilFileToDownload();
+		waitUntilFileToDownload("CycleCount-");
 
 		System.out.println("Windows==" + Driver.getWindowHandle());
 		// --Close Exception View pop up
@@ -1777,44 +1796,5 @@ public class CCAttempt extends BaseInit {
 		wait.until(ExpectedConditions.invisibilityOfElementLocated(By.xpath("//*[@class=\"ajax-loadernew\"]")));
 	}
 
-	public boolean isFileDownloaded(String fileName) {
-		String downloadPath = System.getProperty("user.dir") + "\\src\\main\\resources";
-		File dir = new File(downloadPath);
-		File[] dirContents = dir.listFiles();
-
-		for (int i = 0; i < dirContents.length; i++) {
-			if (dirContents[i].getName().contains(fileName)) {
-				logger.info("File is exist with FileName");
-				// File has been found, it can now be deleted:
-				dirContents[i].delete();
-				logger.info("File is Deleted");
-				return true;
-
-			}
-		}
-		logger.info("File is not exist with Filename");
-		return false;
-	}
-
-	public static void waitUntilFileToDownload() throws InterruptedException {
-		String folderLocation = System.getProperty("user.dir") + "\\src\\main\\resources";
-		File directory = new File(folderLocation);
-		boolean downloadinFilePresence = false;
-		File[] filesList = null;
-		LOOP: while (true) {
-			filesList = directory.listFiles();
-			for (File file : filesList) {
-				downloadinFilePresence = file.getName().contains("CycleCount-");
-			}
-			if (downloadinFilePresence) {
-				for (; downloadinFilePresence;) {
-					Thread.sleep(5000);
-					continue LOOP;
-				}
-			} else {
-				logger.info("File is Downloaded successfully:Verified");
-				break;
-			}
-		}
-	}
+	
 }

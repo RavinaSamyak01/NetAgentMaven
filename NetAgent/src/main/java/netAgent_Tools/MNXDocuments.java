@@ -31,6 +31,9 @@ public class MNXDocuments extends BaseInit {
 		String winHandleBefore1 = Driver.getWindowHandle();
 
 //			//CLick on doc link
+		wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//a[@ng-click=\"NglDocData(doc)\"]")));
+		wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//a[@ng-click=\"NglDocData(doc)\"]")));
+
 		Driver.findElement(By.xpath("//a[@ng-click=\"NglDocData(doc)\"]")).click();
 		logger.info("Click on Document");
 		wait.until(ExpectedConditions.invisibilityOfElementLocated(By.xpath("//*[@class=\"ajax-loadernew\"]")));

@@ -69,66 +69,8 @@ public class TaskLog extends BaseInit {
 			logger.info("Clicked on Search button of BasicSearch");
 			wait.until(ExpectedConditions.invisibilityOfElementLocated(By.xpath("//*[@class=\"ajax-loadernew\"]")));
 
-			try {
-				try {
-					WebElement PickuPBox = isElementPresent("TLPickUpBox_xpath");
-					if (PickuPBox.isDisplayed()) {
-						System.out.println(BPickUpID + " Job is displayed in edit mode");
-						logger.info(BPickUpID + " Job is displayed in edit mode");
-						getScreenshot(Driver, "OrderEditor_" + BPickUpID);
-						// --Click on Close button
-						try {
-							isElementPresent("TLCloseTab_id").click();
-							logger.info("Clicked on close button");
-							wait.until(ExpectedConditions
-									.invisibilityOfElementLocated(By.xpath("//*[@class=\"ajax-loadernew\"]")));
-						} catch (Exception close) {
-							isElementPresent("TLCloseIcon_id").click();
-							logger.info("Clicked on close button");
-							wait.until(ExpectedConditions
-									.invisibilityOfElementLocated(By.xpath("//*[@class=\"ajax-loadernew\"]")));
-						}
-
-					}
-				} catch (Exception PickUp) {
-					WebElement Stage = isElementPresent("TLStage_xpath");
-					if (Stage.isDisplayed()) {
-						System.out.println(BPickUpID + " Job is displayed in edit mode");
-						logger.info(BPickUpID + " Job is displayed in edit mode");
-						getScreenshot(Driver, "OrderEditor_" + BPickUpID);
-						// --Click on Close button
-						try {
-							isElementPresent("TLIconClose_id").click();
-							logger.info("Clicked on close button");
-							wait.until(ExpectedConditions
-									.invisibilityOfElementLocated(By.xpath("//*[@class=\"ajax-loadernew\"]")));
-						} catch (Exception close) {
-							isElementPresent("TLCloseIcon_id").click();
-							logger.info("Clicked on close button");
-							wait.until(ExpectedConditions
-									.invisibilityOfElementLocated(By.xpath("//*[@class=\"ajax-loadernew\"]")));
-						}
-
-					}
-				}
-
-			} catch (Exception e) {
-				try {
-					WebElement NoData = isElementPresent("NoData_className");
-					if (NoData.isDisplayed()) {
-						System.out.println("There is no job exist with " + BPickUpID);
-						logger.info("There is no job exist with " + BPickUpID);
-
-					} else {
-						System.out.println("There is multiple job exist with " + BPickUpID);
-						logger.info("There is multiple job exist with " + BPickUpID);
-					}
-				} catch (Exception NoData) {
-					System.out.println("There is no job exist with " + BPickUpID);
-					logger.info("There is no job exist with " + BPickUpID);
-				}
-
-			}
+			// --CHeck data is exist or not
+			isDataExist();
 		}
 
 		// --Advance Search
@@ -380,7 +322,6 @@ public class TaskLog extends BaseInit {
 		// -Select All
 		isElementPresent("TLASNReplenish_xpath").click();
 		logger.info("Selected Replenish from ASNType dropdown");
-		Thread.sleep(2000);
 		isElementPresent("TLASNType_id").click();
 		System.out.println("Close the ASNType dropdown");
 		logger.info("Cleared Pickup");
@@ -605,26 +546,9 @@ public class TaskLog extends BaseInit {
 		isElementPresent("TLADSearchBTN_id").click();
 		logger.info("Click on Search button of Advance Search");
 		wait.until(ExpectedConditions.invisibilityOfElementLocated(By.xpath("//*[@class=\"ajax-loadernew\"]")));
-		try {
-			WebElement PickuPBox = isElementPresent("TLPickUpBox_xpath");
-			if (PickuPBox.isDisplayed()) {
-				System.out.println("Searched Job is displayed in edit mode");
-				logger.info("Searched Job is displayed in edit mode");
-				// --Click on Close button
-				isElementPresent("TLCloseTab_id").click();
-				logger.info("Click on Close button");
-				wait.until(ExpectedConditions.invisibilityOfElementLocated(By.xpath("//*[@class=\"ajax-loadernew\"]")));
-				// --Go to Advance Tab
-				isElementPresent("TLAdSearchTab_id").click();
-				logger.info("Click on Advance Search");
-				wait.until(ExpectedConditions.invisibilityOfElementLocated(By.xpath("//*[@class=\"ajax-loadernew\"]")));
-				wait.until(ExpectedConditions.visibilityOfAllElementsLocatedBy(By.id("AdvancesSearch")));
-			}
-		} catch (Exception e) {
-			System.out.println("Data is not exist related search parameters");
-			logger.info("Data is not exist related search parameters");
 
-		}
+		// --CHeck data is exist or not
+		isDataExist();
 
 		// --Clear Reference
 		isElementPresent("TLReference_id").clear();
@@ -943,43 +867,8 @@ public class TaskLog extends BaseInit {
 			isElementPresent("TLOSearchBTN_id").click();
 			wait.until(ExpectedConditions.invisibilityOfElementLocated(By.xpath("//*[@class=\"ajax-loadernew\"]")));
 
-			try {
-				String Orderstage = isElementPresent("TLStage_xpath").getText();
-				System.out.println("Current stage of the order is=" + Orderstage);
-				logger.info("Current stage of the order is=" + Orderstage);
-				System.out.println("Searched Job is displayed in edit mode");
-				logger.info("Searched Job is displayed in edit mode");
-
-				// --Click on Close button
-				try {
-					isElementPresent("TLCloseTab_id").click();
-					logger.info("Click on Close button");
-					wait.until(ExpectedConditions
-							.invisibilityOfElementLocated(By.xpath("//*[@class=\"ajax-loadernew\"]")));
-				} catch (Exception close1) {
-					isElementPresent("TLCloseIcon_id").click();
-					logger.info("Click on Close button");
-					wait.until(ExpectedConditions
-							.invisibilityOfElementLocated(By.xpath("//*[@class=\"ajax-loadernew\"]")));
-				}
-
-			} catch (Exception e) {
-				try {
-					NoData = isElementPresent("NoData_className");
-					if (NoData.isDisplayed()) {
-						System.out.println("There is no job exist with Search parameter");
-						logger.info("There is no job exist with Search parameter");
-
-					} else {
-						System.out.println("There is multiple job exist with Search parameter ");
-						logger.info("There is multiple job exist with Search parameter ");
-					}
-				} catch (Exception NoData2) {
-					System.out.println("There is no job exist with Search parameter");
-					logger.info("There is no job exist with Search parameter");
-				}
-			}
-
+			// --CHeck data is exist or not
+			isDataExist();
 		}
 
 		// --Inventory Tab
@@ -994,232 +883,8 @@ public class TaskLog extends BaseInit {
 
 		wait.until(ExpectedConditions.invisibilityOfElementLocated(By.xpath("//*[@class=\"ajax-loadernew\"]")));
 
-		// --CCAttempt 1 Scenario
-		// --Search job
-		logger.info("==Testing CCAttempt1==");
-		String WorderID = getData("OrderSearch", 1, 13);
-		logger.info("WorkOrderID is==" + WorderID);
-		isElementPresent("TLInvSearch_id").clear();
-		logger.info("Clear Search box");
-		isElementPresent("TLInvSearch_id").sendKeys(WorderID);
-		logger.info("Enter value in search input");
-		isElementPresent("TLInvSearchBTN_id").click();
-		logger.info("Clicked on Search");
-		wait.until(ExpectedConditions.invisibilityOfElementLocated(By.xpath("//*[@class=\"ajax-loadernew\"]")));
-
-		// --Get the stage name
-		try {
-			String Stage = isElementPresent("CCATTStage_xpath").getText();
-			logger.info("Stage is==" + Stage);
-			// --Checking total parts
-			String TotalParts = isElementPresent("CCATotalParts_xpath").getText();
-			String[] TotalPts = TotalParts.split(":");
-			String TotalPart = TotalPts[1].trim();
-			int TParts = Integer.parseInt(TotalPart);
-			// --if parts >0 check page count and status
-			if (TParts > 0) {
-				logger.info("Parts is available, Total Parts==" + TParts);
-				String PageCount = isElementPresent("PageCount_className").getText();
-				logger.info("Total number of records==" + PageCount);
-
-				List<WebElement> Results = Driver.findElements(By.xpath("//td[contains(@aria-label,'Column Result')]"));
-				logger.info("Total number of Parts==" + Results.size());
-				for (int Result = 0; Result < Results.size();) {
-					String ResultValue = Results.get(Result).getText();
-					logger.info("Value of Result of " + Result + 1 + " Part is==" + ResultValue);
-					if (ResultValue.equalsIgnoreCase("FAIL")) {
-						String StockQtyxpath = "//div[@class='dx-datagrid-content']//tr[" + (Result + 1) + "]/td[7]";
-						String StockQty = Driver.findElement(By.xpath(StockQtyxpath)).getText().trim();
-						logger.info("Stock Qty for Part " + (Result + 1) + " is==" + StockQty);
-						String CCQtyxpath = "//div[@class='dx-datagrid-content']//tr[" + (Result + 1) + "]/td[8]";
-						String CCQty = Driver.findElement(By.xpath(CCQtyxpath)).getText().trim();
-						logger.info("CC Qty for Part " + (Result + 1) + " is==" + CCQty);
-
-						if (StockQty.equals(CCQty)) {
-							logger.info(
-									"Stock Qty and CC Qty are same, Result must be SUCCESS, but it is==" + ResultValue);
-
-						} else {
-							logger.info("Stock Qty and CC Qty are different, Result is actually FAIL");
-							// enter stock qty in cc qty
-							Driver.findElement(By.xpath(CCQtyxpath)).sendKeys(StockQty);
-							logger.info("Entered CC Qty equal to Stock Qty");
-							Driver.findElement(By.xpath(CCQtyxpath)).sendKeys(Keys.TAB);
-							ResultValue = Results.get(Result).getText();
-							logger.info("Value of Result of " + Result + 1 + " Part is==" + ResultValue);
-							if (ResultValue.equalsIgnoreCase("SUCCESS")) {
-								logger.info("Stock Qty and CC Qty are same, Result is actually SUCCESS");
-
-							} else {
-								logger.info("Stock Qty and CC Qty are same, Result must be SUCCESS, but it is=="
-										+ ResultValue);
-
-							}
-						}
-
-					} else if (ResultValue.equalsIgnoreCase("SUCCESS")) {
-						String StockQtyxpath = "//div[@class='dx-datagrid-content']//tr[" + Result + 1 + "]/td[7]";
-						String StockQty = Driver.findElement(By.xpath(StockQtyxpath)).getText().trim();
-						logger.info("Stock Qty for Part " + Result + 1 + " is==" + StockQty);
-						String CCQtyxpath = "//div[@class='dx-datagrid-content']//tr[" + Result + 1 + "]/td[8]";
-						String CCQty = Driver.findElement(By.xpath(CCQtyxpath)).getText().trim();
-						logger.info("CC Qty for Part " + Result + 1 + " is==" + CCQty);
-
-						if (StockQty.equals(CCQty)) {
-							logger.info("Stock Qty and CC Qty are same, Result is actually SUCCESS");
-							// enter stock qty in cc qty
-							Driver.findElement(By.xpath(CCQtyxpath)).sendKeys("0");
-							logger.info("Entered CC Qty different from Stock Qty");
-							Driver.findElement(By.xpath(CCQtyxpath)).sendKeys(Keys.TAB);
-							ResultValue = Results.get(Result).getText();
-							logger.info("Value of Result of " + Result + 1 + " Part is==" + ResultValue);
-							if (ResultValue.equalsIgnoreCase("SUCCESS")) {
-								logger.info("Stock Qty and CC Qty are different, Result must be FAIL, but it is=="
-										+ ResultValue);
-
-							} else {
-								logger.info("Stock Qty and CC Qty are different, Result is actually FAIL");
-
-							}
-						} else {
-							logger.info(
-									"Stock Qty and CC Qty are same, Result must be SUCCESS, but it is==" + ResultValue);
-
-						}
-
-					}
-					break;
-				}
-
-			}
-			// --if parts <0 uncheck Remove Zero Qty checkbox and check the part
-			else {
-				isElementPresent("RemoveZrQTY_id").click();
-				logger.info("Uncheck the checkbox of Remove Zero Stock Parts");
-			}
-
-			// --Export
-			isElementPresent("CCAExport_id").click();
-			logger.info("Clicked on Export button");
-			wait.until(ExpectedConditions.invisibilityOfElementLocated(By.xpath("//*[@class=\"ajax-loadernew\"]")));
-
-			// --Import
-			isElementPresent("CCAImport_id").click();
-			logger.info("Clicked on Import button");
-			wait.until(ExpectedConditions.invisibilityOfElementLocated(By.xpath("//*[@class=\"ajax-loadernew\"]")));
-
-			// --Click on Select File
-			isElementPresent("InputFile_id").click();
-			logger.info("Clicked on Select File button");
-			wait.until(ExpectedConditions.invisibilityOfElementLocated(By.xpath("//*[@class=\"ajax-loadernew\"]")));
-			wait.until(ExpectedConditions.visibilityOfAllElementsLocatedBy(By.xpath("//*[@ng-form=\"userForm\"]")));
-			Fpath = "C:\\Users\\rprajapati\\git\\NetAgent\\NetAgentProcess\\Job Upload Doc STG.xls";
-			InFile = isElementPresent("InputFile_id");
-			InFile.sendKeys(Fpath);
-			logger.info("Send file to input file");
-			Thread.sleep(2000);
-			// --Click on Upload btn
-			isElementPresent("BTNUpload_id").click();
-			logger.info("Click on Upload button");
-			wait.until(ExpectedConditions.invisibilityOfElementLocated(By.xpath("//*[@class=\"ajax-loadernew\"]")));
-			try {
-				String ErrorMsg = isElementPresent("ErrorMsg_xpath").getText();
-				if (ErrorMsg.contains("already exists.Your file was saved as")) {
-					System.out.println("File already exist in the system");
-					logger.info("File already exist in the system");
-				}
-			} catch (Exception e) {
-				System.out.println("File is uploaded successfully");
-				logger.info("File is uploaded successfully");
-			}
-
-			// --Exception View
-			isElementPresent("CCAExcepView_id").click();
-			logger.info("Clicked on Exception View");
-			wait.until(ExpectedConditions.invisibilityOfElementLocated(By.xpath("//*[@class=\"ajax-loadernew\"]")));
-			wait.until(ExpectedConditions.visibilityOfAllElementsLocatedBy(By.id("gridExceptionView")));
-
-			// --Send Email with Blank Address
-			isElementPresent("CCAEVEmail_id").clear();
-			logger.info("Clear Email input");
-			isElementPresent("CCAEVEmail_id").sendKeys("Ravik.com");
-			logger.info("Enter value in Email input");
-			// --Click on send button
-			isElementPresent("CCAEVESend_id").click();
-			logger.info("Click on Send button");
-			wait.until(ExpectedConditions.invisibilityOfElementLocated(By.xpath("//*[@class=\"ajax-loadernew\"]")));
-
-			WebElement EmailFail = isElementPresent("CCAEEFail_id");
-			if (EmailFail.isDisplayed()) {
-				logger.info("EmailID validation is displayed==" + EmailFail.getText());
-
-			} else {
-				logger.info("EmailID validation is not displayed");
-
-			}
-
-			// --Send Email with Invalid Address
-			isElementPresent("CCAEVEmail_id").clear();
-			logger.info("Clear Email input");
-			isElementPresent("CCAEVEmail_id").sendKeys("Ravik.com");
-			logger.info("Enter value in Email input");
-			// --Click on send button
-			isElementPresent("CCAEVESend_id").click();
-			logger.info("Click on Send button");
-			wait.until(ExpectedConditions.invisibilityOfElementLocated(By.xpath("//*[@class=\"ajax-loadernew\"]")));
-
-			EmailFail = isElementPresent("CCAEEFail_id");
-			if (EmailFail.isDisplayed()) {
-				logger.info("Valid EmailID validation is displayed==" + EmailFail.getText());
-
-			} else {
-				logger.info("Valid EmailID validation is not displayed");
-
-			}
-
-			// --Send Email with valid Address
-			isElementPresent("CCAEVEmail_id").clear();
-			logger.info("Clear Email input");
-			isElementPresent("CCAEVEmail_id").sendKeys("Ravina.prajapati@samyak.com");
-			logger.info("Enter value in Email input");
-			// --Click on send button
-			isElementPresent("CCAEVESend_id").click();
-			logger.info("Click on Send button");
-			wait.until(ExpectedConditions.invisibilityOfElementLocated(By.xpath("//*[@class=\"ajax-loadernew\"]")));
-
-			WebElement EmailSUccess = isElementPresent("CCAEVESucc_id");
-			if (EmailSUccess.isDisplayed()) {
-				logger.info("Email successfully send==" + EmailSUccess.getText());
-
-			} else {
-				logger.info("Email is not send successfully");
-
-			}
-
-			// Export
-			// --Click on send button
-			isElementPresent("CCAEExport_id").click();
-			logger.info("Click on Export button of Exception View");
-			wait.until(ExpectedConditions.invisibilityOfElementLocated(By.xpath("//*[@class=\"ajax-loadernew\"]")));
-			Thread.sleep(3000);
-
-			// --Close Exception View pop up
-			isElementPresent("TLMergeClose_className").click();
-			logger.info("Click on Close button of Exception View");
-			wait.until(ExpectedConditions.invisibilityOfElementLocated(By.xpath("//*[@class=\"ajax-loadernew\"]")));
-
-		} catch (Exception Data) {
-			NoData = isElementPresent("NoData_className");
-			if (NoData.isDisplayed()) {
-				System.out.println("There is no job exist with Search parameter");
-				logger.info("There is no job exist with Search parameter");
-
-			} else {
-				System.out.println("There is multiple job exist with Search parameter ");
-				logger.info("There is multiple job exist with Search parameter ");
-			}
-		}
 		// --Combined Tab
+		wait.until(ExpectedConditions.elementToBeClickable(By.id("combined")));
 		isElementPresent("TLCombinedTab_id").click();
 		logger.info("Click on Combined Tab");
 
@@ -1352,6 +1017,77 @@ public class TaskLog extends BaseInit {
 		logger.info("=======TaskLog Test End=======");
 		msg.append("=======TaskLog Test End=======" + "\n\n");
 
+	}
+
+	public static void isDataExist() {
+		WebDriverWait wait = new WebDriverWait(Driver, 50);
+
+		try {
+			try {
+				WebElement PickuPBox = isElementPresent("TLPickUpBox_xpath");
+				if (PickuPBox.isDisplayed()) {
+					System.out.println("Job is displayed in edit mode");
+					logger.info("Job is displayed in edit mode");
+					// --Click on Close button
+					try {
+						isElementPresent("TLCloseTab_id").click();
+						logger.info("Clicked on close button");
+						wait.until(ExpectedConditions
+								.invisibilityOfElementLocated(By.xpath("//*[@class=\"ajax-loadernew\"]")));
+					} catch (Exception close) {
+						try {
+							isElementPresent("TLCloseIcon_id").click();
+							logger.info("Clicked on close button");
+							wait.until(ExpectedConditions
+									.invisibilityOfElementLocated(By.xpath("//*[@class=\"ajax-loadernew\"]")));
+						} catch (Exception DelClose) {
+							isElementPresent("TLDClose_id").click();
+							logger.info("Clicked on close button");
+							wait.until(ExpectedConditions
+									.invisibilityOfElementLocated(By.xpath("//*[@class=\"ajax-loadernew\"]")));
+
+						}
+					}
+
+				}
+			} catch (Exception PickUp) {
+				WebElement Stage = isElementPresent("TLStage_xpath");
+				if (Stage.isDisplayed()) {
+					System.out.println("Job is displayed in edit mode");
+					logger.info(" Job is displayed in edit mode");
+					// --Click on Close button
+					try {
+						isElementPresent("TLIconClose_id").click();
+						logger.info("Clicked on close button");
+						wait.until(ExpectedConditions
+								.invisibilityOfElementLocated(By.xpath("//*[@class=\"ajax-loadernew\"]")));
+					} catch (Exception close) {
+						isElementPresent("TLCloseIcon_id").click();
+						logger.info("Clicked on close button");
+						wait.until(ExpectedConditions
+								.invisibilityOfElementLocated(By.xpath("//*[@class=\"ajax-loadernew\"]")));
+					}
+
+				}
+			}
+
+		} catch (Exception e) {
+			try {
+				WebElement NoData = isElementPresent("NoData_className");
+				if (NoData.isDisplayed()) {
+					System.out.println("There is no job exist with search parameters");
+					logger.info("There is no job exist with search parameters");
+
+				} else {
+					System.out.println("There is multiple job exist with search parameters");
+					logger.info("There is multiple job exist with search parameters");
+				}
+			} catch (Exception NoData1) {
+				System.out.println("There is no job exist with search parameters ");
+				logger.info("There is no job exist with search parameters");
+			}
+
+		}
 	}
 
 }

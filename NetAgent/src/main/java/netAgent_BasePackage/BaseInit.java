@@ -88,7 +88,7 @@ public class BaseInit {
 			ChromeOptions options = new ChromeOptions();
 
 			// options.addArguments("headless");
-			options.addArguments("--incognito");
+			//options.addArguments("--incognito");
 			options.addArguments("--test-type");
 			options.addArguments("--no-proxy-server");
 			options.addArguments("--proxy-bypass-list=*");
@@ -99,6 +99,7 @@ public class BaseInit {
 			HashMap<String, Object> chromePrefs = new HashMap<String, Object>();
 			chromePrefs.put("profile.default_content_settings.popups", 0);
 			chromePrefs.put("download.prompt_for_download", "false");
+			chromePrefs.put("safebrowsing.enabled", "false");
 			chromePrefs.put("download.default_directory", downloadFilepath);
 			options.setExperimentalOption("prefs", chromePrefs);
 			capabilities.setCapability(CapabilityType.ACCEPT_SSL_CERTS, true);
@@ -309,7 +310,11 @@ public class BaseInit {
 
 	public void logOut() throws InterruptedException, IOException {
 		WebDriverWait wait = new WebDriverWait(Driver, 5000);
+		wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//div[contains(@class,'userthumb')]")));
+		wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//div[contains(@class,'userthumb')]")));
 		isElementPresent("LogOutDiv_xpath").click();
+		wait.until(ExpectedConditions.visibilityOfElementLocated(By.linkText("LOGOUT")));
+		wait.until(ExpectedConditions.elementToBeClickable(By.linkText("LOGOUT")));
 		isElementPresent("LogOut_linkText").click();
 		logger.info("Clicked on LogOut");
 		wait.until(ExpectedConditions.invisibilityOfElementLocated(By.xpath("//*[@class=\"ajax-loadernew\"]")));
@@ -489,6 +494,47 @@ public class BaseInit {
 
 		} catch (Exception ex) {
 			logger.error(ex);
+		}
+	}
+	
+	public boolean isFileDownloaded(String fileName) {
+		String downloadPath = System.getProperty("user.dir") + "\\src\\main\\resources";
+		File dir = new File(downloadPath);
+		File[] dirContents = dir.listFiles();
+
+		for (int i = 0; i < dirContents.length; i++) {
+			if (dirContents[i].getName().contains(fileName)) {
+				logger.info("File is exist with FileName");
+				// File has been found, it can now be deleted:
+				dirContents[i].delete();
+				logger.info("File is Deleted");
+				return true;
+
+			}
+		}
+		logger.info("File is not exist with Filename");
+		return false;
+	}
+
+	public static void waitUntilFileToDownload(String Name) throws InterruptedException {
+		String folderLocation = System.getProperty("user.dir") + "\\src\\main\\resources";
+		File directory = new File(folderLocation);
+		boolean downloadinFilePresence = false;
+		File[] filesList = null;
+		LOOP: while (true) {
+			filesList = directory.listFiles();
+			for (File file : filesList) {
+				downloadinFilePresence = file.getName().contains(Name);
+			}
+			if (downloadinFilePresence) {
+				for (; downloadinFilePresence;) {
+					Thread.sleep(5000);
+					continue LOOP;
+				}
+			} else {
+				logger.info("File is Downloaded successfully:Verified");
+				break;
+			}
 		}
 	}
 }

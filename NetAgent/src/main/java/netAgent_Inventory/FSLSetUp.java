@@ -37,6 +37,7 @@ public class FSLSetUp extends BaseInit {
 		wait.until(ExpectedConditions.invisibilityOfElementLocated(By.xpath("//*[@class=\"ajax-loadernew\"]")));
 
 		// Select DefaultBin and Try to edit
+
 		wait.until(ExpectedConditions.visibilityOfElementLocated(By.id("hrfAct")));
 		Driver.findElement(By.id("hrfAct")).click();
 		logger.info("Clicked on Edit button of DefaultBin");
@@ -183,56 +184,86 @@ public class FSLSetUp extends BaseInit {
 		logger.info("Clicked on Search button");
 		wait.until(ExpectedConditions.invisibilityOfElementLocated(By.xpath("//*[@class=\"ajax-loadernew\"]")));
 
-		wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//a[contains(.,'Manage')]")));
-		Driver.findElement(By.xpath("//a[contains(.,'Manage')]")).click();
-		logger.info("Clicked on Manage button");
-		wait.until(ExpectedConditions.invisibilityOfElementLocated(By.xpath("//*[@class=\"ajax-loadernew\"]")));
-
-		// Refresh
-		Driver.findElement(By.id("idiconrefresh")).click();
-		logger.info("Clicked on Refresh button of Manage FSL page");
-		wait.until(ExpectedConditions.invisibilityOfElementLocated(By.xpath("//*[@class=\"ajax-loadernew\"]")));
-
-		// basic search
-
-		for (int col = 28; col < 32; col++) {
-			String LocCode = getData("Sheet1", 2, col);
-			Driver.findElement(By.id("txtFSLbinSearch")).sendKeys(LocCode);
-			logger.info("Enter value in Basic Search");
-			Driver.findElement(By.id("idbtnsearch")).click();
-			logger.info("Clicked on Search button");
+		try {
+			wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//a[contains(.,'Manage')]")));
+			wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//a[contains(.,'Manage')]")));
+			Driver.findElement(By.xpath("//a[contains(.,'Manage')]")).click();
+			logger.info("Clicked on Manage button");
 			wait.until(ExpectedConditions.invisibilityOfElementLocated(By.xpath("//*[@class=\"ajax-loadernew\"]")));
 
-			String A1 = Driver
-					.findElement(By.xpath("//*[@class=\"dx-datagrid-content\"]//td[contains(@aria-label,'Part')]"))
-					.getText();
-			System.out.println(LocCode);
-			logger.info("Entered Location Code==" + LocCode);
-			System.out.println(A1);
-			logger.info("Searched Location Code==" + A1);
+			// Refresh
+			Driver.findElement(By.id("idiconrefresh")).click();
+			logger.info("Clicked on Refresh button of Manage FSL page");
+			wait.until(ExpectedConditions.invisibilityOfElementLocated(By.xpath("//*[@class=\"ajax-loadernew\"]")));
 
-			if (A1.equals(LocCode)) {
-				System.out.println("Search Compare PASS");
-				logger.info("Search Compare PASS");
-			} else {
-				System.out.println("Search Compare FAIL");
-				logger.info("Search Compare FAIL");
+			// basic search
+
+			for (int col = 28; col < 32; col++) {
+				String LocCode = getData("Sheet1", 2, col);
+				Driver.findElement(By.id("txtFSLbinSearch")).sendKeys(LocCode);
+				logger.info("Enter value in Basic Search");
+				Driver.findElement(By.id("idbtnsearch")).click();
+				logger.info("Clicked on Search button");
+				wait.until(ExpectedConditions.invisibilityOfElementLocated(By.xpath("//*[@class=\"ajax-loadernew\"]")));
+
+				try {
+					wait.until(ExpectedConditions.visibilityOfElementLocated(
+							By.xpath("//*[@class=\"dx-datagrid-content\"]//td[contains(@aria-label,'Part')]")));
+					String A1 = Driver
+							.findElement(
+									By.xpath("//*[@class=\"dx-datagrid-content\"]//td[contains(@aria-label,'Part')]"))
+							.getText();
+					System.out.println(LocCode);
+					logger.info("Entered Location Code==" + LocCode);
+					System.out.println(A1);
+					logger.info("Searched Location Code==" + A1);
+
+					if (A1.equals(LocCode)) {
+						System.out.println("Search Compare PASS");
+						logger.info("Search Compare PASS");
+					} else {
+						System.out.println("Search Compare FAIL");
+						logger.info("Search Compare FAIL");
+					}
+				} catch (Exception NoData) {
+					logger.info("Part is not exist with search parameter");
+
+				}
+
+				Driver.findElement(By.id("idbtnreset")).click();
+				logger.info("Clicked on Reset button");
+				wait.until(ExpectedConditions.invisibilityOfElementLocated(By.xpath("//*[@class=\"ajax-loadernew\"]")));
+
 			}
 
-			Driver.findElement(By.id("idbtnreset")).click();
-			logger.info("Clicked on Reset button");
-			wait.until(ExpectedConditions.invisibilityOfElementLocated(By.xpath("//*[@class=\"ajax-loadernew\"]")));
+			for (int col = 32; col < 36; col++) {
+				String LocCode = getData("Sheet1", 2, col);
+				Driver.findElement(By.id("txtFSLbinSearch")).sendKeys(LocCode);
+				logger.info("Enter value in Basic Search");
+				Driver.findElement(By.id("idbtnsearch")).click();
+				logger.info("Clicked on Search button");
+				wait.until(ExpectedConditions.invisibilityOfElementLocated(By.xpath("//*[@class=\"ajax-loadernew\"]")));
+				// --Check data
+				Nodata = Driver.findElement(By.className("dx-datagrid-nodata"));
+				if (Nodata.isDisplayed()) {
+					logger.info("There is no data with entered value");
 
-		}
+				} else {
+					logger.info("Data is/are exist with  entered value");
 
-		for (int col = 32; col < 36; col++) {
-			String LocCode = getData("Sheet1", 2, col);
-			Driver.findElement(By.id("txtFSLbinSearch")).sendKeys(LocCode);
-			logger.info("Enter value in Basic Search");
+				}
+				Driver.findElement(By.id("idbtnreset")).click();
+				logger.info("Clicked on Reset button");
+				wait.until(ExpectedConditions.invisibilityOfElementLocated(By.xpath("//*[@class=\"ajax-loadernew\"]")));
+
+			}
+			// --Enter invalid value
+			Driver.findElement(By.id("txtFSLbinSearch")).sendKeys("Test1234");
+			logger.info("Enter invalid value in Basic Search");
 			Driver.findElement(By.id("idbtnsearch")).click();
 			logger.info("Clicked on Search button");
 			wait.until(ExpectedConditions.invisibilityOfElementLocated(By.xpath("//*[@class=\"ajax-loadernew\"]")));
-			// --Check data
+
 			Nodata = Driver.findElement(By.className("dx-datagrid-nodata"));
 			if (Nodata.isDisplayed()) {
 				logger.info("There is no data with entered value");
@@ -241,134 +272,125 @@ public class FSLSetUp extends BaseInit {
 				logger.info("Data is/are exist with  entered value");
 
 			}
+
 			Driver.findElement(By.id("idbtnreset")).click();
 			logger.info("Clicked on Reset button");
 			wait.until(ExpectedConditions.invisibilityOfElementLocated(By.xpath("//*[@class=\"ajax-loadernew\"]")));
 
+			// click save
+			Driver.findElement(By.id("hlkSaveASN")).click();
+			logger.info("Clicked on Save ");
+			wait.until(ExpectedConditions.invisibilityOfElementLocated(By.xpath("//*[@class=\"ajax-loadernew\"]")));
+
+			String Validations = Driver.findElement(By.id("idValidation")).getText();
+			logger.info("Validation Messages==" + Validations);
+
+			getScreenshot(Driver, "FSLSetup");
+
+			Driver.findElement(By.xpath("//*[@class=\"dx-datagrid-content\"]//div[@class=\"dx-checkbox-container\"]"))
+					.click();
+			logger.info("Check the checkbox of 1st record");
+			Thread.sleep(10000);
+
+			// Select To Location
+			Driver.findElement(By.id("ddlToLocation")).sendKeys("DEFAULTBIN");
+			logger.info("Entered To Location same as current location");
+
+			Driver.findElement(By.id("hlkSaveASN")).click();
+			logger.info("Clicked on Save button");
+			wait.until(ExpectedConditions.invisibilityOfElementLocated(By.xpath("//*[@class=\"ajax-loadernew\"]")));
+
+			String erromsg = Driver.findElement(By.id("errorid")).getText();
+			logger.info("Validation is displayed=" + erromsg);
+
+			// --Add valid To Location
+			Driver.findElement(By.id("ddlToLocation")).clear();
+			logger.info("Cleared To Location");
+
+			Driver.findElement(By.id("ddlToLocation")).sendKeys("ToLocation" + System.currentTimeMillis());
+			logger.info("Entered To Location");
+			Driver.findElement(By.id("idbtnAdd")).click();
+			logger.info("Clicked on Add button");
+			wait.until(ExpectedConditions.invisibilityOfElementLocated(By.xpath("//*[@class=\"ajax-loadernew\"]")));
+
+			// --Add Location with blank value
+			Driver.findElement(By.id("ddlToLocation")).clear();
+			logger.info("Cleared To Location");
+
+			Driver.findElement(By.id("idbtnAdd")).click();
+			logger.info("Clicked on Add button");
+			wait.until(ExpectedConditions.invisibilityOfElementLocated(By.xpath("//*[@class=\"ajax-loadernew\"]")));
+			String errorid = Driver.findElement(By.id("idValidation")).getText();
+			logger.info("Validation message is displayed==" + errorid);
+			getScreenshot(Driver, "FSLSetup_Locadd_Blank");
+
+			// --Add Duplicate Location
+			Driver.findElement(By.id("ddlToLocation")).clear();
+			logger.info("Cleared To Location");
+			Driver.findElement(By.id("ddlToLocation")).sendKeys("DEFAULTBIN");
+			logger.info("Entered duplicate To Location");
+			Driver.findElement(By.id("idbtnAdd")).click();
+			logger.info("Clicked on Add button");
+			wait.until(ExpectedConditions.invisibilityOfElementLocated(By.xpath("//*[@class=\"ajax-loadernew\"]")));
+			errorid = Driver.findElement(By.id("errorid")).getText();
+			logger.info("Validation message is displayed==" + errorid);
+			getScreenshot(Driver, "FSLSetup_Locadd_Duplicate");
+
+			// --Enter valid To Location
+			Driver.findElement(By.id("ddlToLocation")).clear();
+			logger.info("Cleared To Location");
+			Driver.findElement(By.id("ddlToLocation")).sendKeys("AUTOMATION");
+			Driver.findElement(By.id("ddlToLocation")).sendKeys(Keys.ENTER);
+
+			logger.info("Entered To Location");
+			Driver.findElement(By.id("hlkSaveASN")).click();
+			logger.info("Clicked on Save button");
+			wait.until(ExpectedConditions.invisibilityOfElementLocated(By.xpath("//*[@class=\"ajax-loadernew\"]")));
+
+			SuccMsg = Driver.findElement(By.id("success"));
+			if (SuccMsg.isDisplayed()) {
+				String SuccMessage = SuccMsg.getText();
+				logger.info("Success Message==" + SuccMessage);
+			} else {
+				logger.info("Record is not saved");
+			}
+
+			// --Print button
+			Driver.findElement(By.id("idPrint")).click();
+			logger.info("Clicked on Print button of Manage FSL");
+			wait.until(ExpectedConditions.invisibilityOfElementLocated(By.xpath("//*[@class=\"ajax-loadernew\"]")));
+
+			String winHandleBefore = Driver.getWindowHandle();
+			for (String winHandle : Driver.getWindowHandles()) {
+				Driver.switchTo().window(winHandle);
+				logger.info("Switched to Print Label window");
+				getScreenshot(Driver, "ManageFSL_PrintLabel");
+			}
+			Thread.sleep(2000);
+
+			Driver.close();
+			logger.info("Closed Print Label window");
+			Driver.switchTo().window(winHandleBefore);
+			logger.info("Switched to main window");
+			Thread.sleep(2000);
+
+			// Click Back
+			Driver.findElement(By.id("idBack")).click();
+			logger.info("Clicked on Back button of Manage FSL");
+			wait.until(ExpectedConditions.invisibilityOfElementLocated(By.xpath("//*[@class=\"ajax-loadernew\"]")));
+
+		} catch (Exception NoFSL) {
+			logger.info("Location is not contain any Part");
+			Driver.findElement(By.id("idbtnreset")).click();
+			logger.info("Clicked on Reset");
+			wait.until(ExpectedConditions.invisibilityOfElementLocated(By.xpath("//*[@class=\"ajax-loadernew\"]")));
+
+
 		}
-		// --Enter invalid value
-		Driver.findElement(By.id("txtFSLbinSearch")).sendKeys("Test1234");
-		logger.info("Enter invalid value in Basic Search");
-		Driver.findElement(By.id("idbtnsearch")).click();
-		logger.info("Clicked on Search button");
-		wait.until(ExpectedConditions.invisibilityOfElementLocated(By.xpath("//*[@class=\"ajax-loadernew\"]")));
-
-		Nodata = Driver.findElement(By.className("dx-datagrid-nodata"));
-		if (Nodata.isDisplayed()) {
-			logger.info("There is no data with entered value");
-
-		} else {
-			logger.info("Data is/are exist with  entered value");
-
-		}
-
-		Driver.findElement(By.id("idbtnreset")).click();
-		logger.info("Clicked on Reset button");
-		wait.until(ExpectedConditions.invisibilityOfElementLocated(By.xpath("//*[@class=\"ajax-loadernew\"]")));
-
-		// click save
-		Driver.findElement(By.id("hlkSaveASN")).click();
-		logger.info("Clicked on Save ");
-		wait.until(ExpectedConditions.invisibilityOfElementLocated(By.xpath("//*[@class=\"ajax-loadernew\"]")));
-
-		String Validations = Driver.findElement(By.id("idValidation")).getText();
-		logger.info("Validation Messages==" + Validations);
-
-		getScreenshot(Driver, "FSLSetup");
-
-		Driver.findElement(By.xpath("//*[@class=\"dx-datagrid-content\"]//div[@class=\"dx-checkbox-container\"]"))
-				.click();
-		logger.info("Check the checkbox of 1st record");
-		Thread.sleep(10000);
-
-		// Select To Location
-		Driver.findElement(By.id("ddlToLocation")).sendKeys("DEFAULTBIN");
-		logger.info("Entered To Location same as current location");
-
-		Driver.findElement(By.id("hlkSaveASN")).click();
-		logger.info("Clicked on Save button");
-		wait.until(ExpectedConditions.invisibilityOfElementLocated(By.xpath("//*[@class=\"ajax-loadernew\"]")));
-
-		String erromsg = Driver.findElement(By.id("errorid")).getText();
-		logger.info("Validation is displayed=" + erromsg);
-
-		// --Add valid To Location
-		Driver.findElement(By.id("ddlToLocation")).clear();
-		logger.info("Cleared To Location");
-
-		Driver.findElement(By.id("ddlToLocation")).sendKeys("ToLocation" + System.currentTimeMillis());
-		logger.info("Entered To Location");
-		Driver.findElement(By.id("idbtnAdd")).click();
-		logger.info("Clicked on Add button");
-		wait.until(ExpectedConditions.invisibilityOfElementLocated(By.xpath("//*[@class=\"ajax-loadernew\"]")));
-
-		// --Add Location with blank value
-		Driver.findElement(By.id("ddlToLocation")).clear();
-		logger.info("Cleared To Location");
-
-		Driver.findElement(By.id("idbtnAdd")).click();
-		logger.info("Clicked on Add button");
-		wait.until(ExpectedConditions.invisibilityOfElementLocated(By.xpath("//*[@class=\"ajax-loadernew\"]")));
-		String errorid = Driver.findElement(By.id("idValidation")).getText();
-		logger.info("Validation message is displayed==" + errorid);
-		getScreenshot(Driver, "FSLSetup_Locadd_Blank");
-
-		// --Add Duplicate Location
-		Driver.findElement(By.id("ddlToLocation")).clear();
-		logger.info("Cleared To Location");
-		Driver.findElement(By.id("ddlToLocation")).sendKeys("DEFAULTBIN");
-		logger.info("Entered duplicate To Location");
-		Driver.findElement(By.id("idbtnAdd")).click();
-		logger.info("Clicked on Add button");
-		wait.until(ExpectedConditions.invisibilityOfElementLocated(By.xpath("//*[@class=\"ajax-loadernew\"]")));
-		errorid = Driver.findElement(By.id("errorid")).getText();
-		logger.info("Validation message is displayed==" + errorid);
-		getScreenshot(Driver, "FSLSetup_Locadd_Duplicate");
-
-		// --Enter valid To Location
-		Driver.findElement(By.id("ddlToLocation")).clear();
-		logger.info("Cleared To Location");
-		Driver.findElement(By.id("ddlToLocation")).sendKeys("AUTOMATION");
-		logger.info("Entered To Location");
-		Driver.findElement(By.id("hlkSaveASN")).click();
-		logger.info("Clicked on Save button");
-		wait.until(ExpectedConditions.invisibilityOfElementLocated(By.xpath("//*[@class=\"ajax-loadernew\"]")));
-
-		SuccMsg = Driver.findElement(By.id("success"));
-		if (SuccMsg.isDisplayed()) {
-			String SuccMessage = SuccMsg.getText();
-			logger.info("Success Message==" + SuccMessage);
-		} else {
-			logger.info("Record is not saved");
-		}
-
-		// --Print button
-		Driver.findElement(By.id("idPrint")).click();
-		logger.info("Clicked on Print button of Manage FSL");
-		wait.until(ExpectedConditions.invisibilityOfElementLocated(By.xpath("//*[@class=\"ajax-loadernew\"]")));
-
-		String winHandleBefore = Driver.getWindowHandle();
-		for (String winHandle : Driver.getWindowHandles()) {
-			Driver.switchTo().window(winHandle);
-			logger.info("Switched to Print Label window");
-			getScreenshot(Driver, "ManageFSL_PrintLabel");
-		}
-		Thread.sleep(2000);
-
-		Driver.close();
-		logger.info("Closed Print Label window");
-		Driver.switchTo().window(winHandleBefore);
-		logger.info("Switched to main window");
-		Thread.sleep(2000);
-
-		// Click Back
-		Driver.findElement(By.id("idBack")).click();
-		logger.info("Clicked on Back button of Manage FSL");
-		wait.until(ExpectedConditions.invisibilityOfElementLocated(By.xpath("//*[@class=\"ajax-loadernew\"]")));
-
 		// Add New
 
 		// Click on add
+		wait.until(ExpectedConditions.visibilityOfElementLocated(By.id("hlkCreateASN")));
 		Driver.findElement(By.id("hlkCreateASN")).click();
 		logger.info("Clicked on Add FSL");
 		wait.until(ExpectedConditions.invisibilityOfElementLocated(By.xpath("//*[@class=\"ajax-loadernew\"]")));
