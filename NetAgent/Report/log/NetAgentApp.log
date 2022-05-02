@@ -1,112 +1,51 @@
-2022-04-29 17:28:24,585 [main] INFO OrderProcessing - initialization of the properties file is done
-2022-04-29 17:28:24,935 [main] INFO io.github.bonigarcia.wdm.WebDriverManager - Using chromedriver 100.0.4896.60 (since Google Chrome 100 is installed in your machine)
-2022-04-29 17:28:24,959 [main] INFO io.github.bonigarcia.wdm.WebDriverManager - Exporting webdriver.chrome.driver as C:\Users\rprajapati\.m2\repository\webdriver\chromedriver\win32\100.0.4896.60\chromedriver.exe
-2022-04-29 17:29:04,943 [main] INFO OrderProcessing - Url opened
-2022-04-29 17:29:22,766 [main] INFO OrderProcessing - ===Order Processing Test Start===
-2022-04-29 17:29:22,772 [main] INFO OrderProcessing - total No of Rows=11
-2022-04-29 17:29:22,777 [main] INFO OrderProcessing - total No of Columns=3
-2022-04-29 17:29:22,984 [main] INFO OrderProcessing - Click on Operations
-2022-04-29 17:29:26,098 [main] INFO OrderProcessing - Click on Task Log
-2022-04-29 17:29:26,716 [main] INFO OrderProcessing - Click on Operation Tab
-2022-04-29 17:29:27,958 [main] INFO OrderProcessing - ServiceID is==LOC
-2022-04-29 17:29:27,968 [main] INFO OrderProcessing - PickUpID is==3377419
-2022-04-29 17:29:28,160 [main] INFO OrderProcessing - Click on Operation Tab
-2022-04-29 17:29:29,594 [main] INFO OrderProcessing - If ServiceID contain LOC or SD....
-2022-04-29 17:29:29,870 [main] INFO OrderProcessing - Clear search input
-2022-04-29 17:29:29,996 [main] INFO OrderProcessing - Enter PickUpID in Search input
-2022-04-29 17:29:30,151 [main] INFO OrderProcessing - Click on Search button
-2022-04-29 17:29:31,679 [main] INFO OrderProcessing - Job is not exist with the search parameters
-2022-04-29 17:29:31,693 [main] INFO OrderProcessing - ServiceID is==SD
-2022-04-29 17:29:31,708 [main] INFO OrderProcessing - PickUpID is==3377423
-2022-04-29 17:29:31,917 [main] INFO OrderProcessing - Click on Operation Tab
-2022-04-29 17:29:33,159 [main] INFO OrderProcessing - If ServiceID contain LOC or SD....
-2022-04-29 17:29:33,367 [main] INFO OrderProcessing - Clear search input
-2022-04-29 17:29:33,579 [main] INFO OrderProcessing - Enter PickUpID in Search input
-2022-04-29 17:29:33,770 [main] INFO OrderProcessing - Click on Search button
-2022-04-29 17:29:35,353 [main] INFO OrderProcessing - Job is not exist with the search parameters
-2022-04-29 17:29:35,360 [main] INFO OrderProcessing - ServiceID is==SD
-2022-04-29 17:29:35,365 [main] INFO OrderProcessing - PickUpID is==3375024
-2022-04-29 17:29:35,452 [main] INFO OrderProcessing - Click on Operation Tab
-2022-04-29 17:29:36,693 [main] INFO OrderProcessing - If ServiceID contain LOC or SD....
-2022-04-29 17:29:36,900 [main] INFO OrderProcessing - Clear search input
-2022-04-29 17:29:37,077 [main] INFO OrderProcessing - Enter PickUpID in Search input
-2022-04-29 17:29:37,325 [main] INFO OrderProcessing - Click on Search button
-2022-04-29 17:30:29,413 [main] INFO OrderProcessing - SD Job is on OnBoard stage
-2022-04-29 17:30:29,422 [main] INFO OrderProcessing - ServiceID is==H3P
-2022-04-29 17:30:29,435 [main] INFO OrderProcessing - PickUpID is==3377424
-2022-04-29 17:30:29,667 [main] INFO OrderProcessing - Click on Operation Tab
-2022-04-29 17:30:32,887 [main] INFO OrderProcessing - Current stage of the order is=Task Log
-2022-04-29 17:30:32,888 [main] INFO OrderProcessing - unknown stage found for H3P service
-2022-04-29 17:30:32,900 [main] INFO OrderProcessing - ServiceID is==RTE
-2022-04-29 17:30:32,912 [main] INFO OrderProcessing - PickUpID is==125772150
-2022-04-29 17:30:33,045 [main] INFO OrderProcessing - Click on Operation Tab
-2022-04-29 17:30:36,853 [main] INFO OrderProcessing - Record is available with search parameters
-2022-04-29 17:30:36,992 [main] INFO OrderProcessing - Clicked on the record
-2022-04-29 17:30:42,415 [main] INFO OrderProcessing - Current stage of the order is=Delivered@Stop 2 of 2
-2022-04-29 17:30:42,644 [main] INFO OrderProcessing - Job is already delivered
-2022-04-29 17:30:42,773 [main] INFO OrderProcessing - Clicked on Close button
-2022-04-29 17:30:45,130 [main] INFO OrderProcessing - ServiceID is==Replenishment
-2022-04-29 17:30:45,141 [main] INFO OrderProcessing - PickUpID is==1685675
-2022-04-29 17:30:45,578 [main] INFO OrderProcessing - Click on Operation Tab
-2022-04-29 17:30:49,129 [main] INFO OrderProcessing - Total No of job in Inventory Tab is/are==96
-2022-04-29 17:30:50,407 [main] INFO OrderProcessing - Record is not available with search parameters
-2022-04-29 17:30:50,412 [main] INFO OrderProcessing - ServiceID is==3PLAST
-2022-04-29 17:30:50,417 [main] INFO OrderProcessing - PickUpID is==3377428
-2022-04-29 17:30:50,787 [main] INFO OrderProcessing - Click on Operation Tab
-2022-04-29 17:30:51,594 [main] INFO OrderProcessing - If ServiceID is 3PLAST....
-2022-04-29 17:30:51,830 [main] INFO OrderProcessing - Clear search input
-2022-04-29 17:30:51,930 [main] INFO OrderProcessing - Enter PickUpID in Search input
-2022-04-29 17:30:52,055 [main] INFO OrderProcessing - Click on Search button
-2022-04-29 17:30:53,457 [main] INFO OrderProcessing - Job is not exist with the search parameters
-2022-04-29 17:30:53,462 [main] INFO OrderProcessing - ServiceID is==3PLAST
-2022-04-29 17:30:53,465 [main] INFO OrderProcessing - PickUpID is==3377264
-2022-04-29 17:30:53,575 [main] INFO OrderProcessing - Click on Operation Tab
-2022-04-29 17:30:54,802 [main] INFO OrderProcessing - If ServiceID is 3PLAST....
-2022-04-29 17:30:55,010 [main] INFO OrderProcessing - Clear search input
-2022-04-29 17:30:55,280 [main] INFO OrderProcessing - Enter PickUpID in Search input
-2022-04-29 17:30:55,403 [main] INFO OrderProcessing - Click on Search button
-2022-04-29 17:30:56,987 [main] INFO OrderProcessing - Job is not exist with the search parameters
-2022-04-29 17:30:56,995 [main] INFO OrderProcessing - ServiceID is==D3P
-2022-04-29 17:30:57,001 [main] INFO OrderProcessing - PickUpID is==3377429
-2022-04-29 17:30:57,141 [main] INFO OrderProcessing - Click on Operation Tab
-2022-04-29 17:30:58,376 [main] INFO OrderProcessing - If ServiceID is D3P....
-2022-04-29 17:30:58,535 [main] INFO OrderProcessing - Clear search input
-2022-04-29 17:30:58,634 [main] INFO OrderProcessing - Enter PickUpID in Search input
-2022-04-29 17:30:58,784 [main] INFO OrderProcessing - Click on Search button
-2022-04-29 17:31:00,136 [main] INFO OrderProcessing - Job is not found in Operation Tab
-2022-04-29 17:31:00,308 [main] INFO OrderProcessing - Click on Inventory tab
-2022-04-29 17:31:00,428 [main] INFO OrderProcessing - Clear search input
-2022-04-29 17:31:00,672 [main] INFO OrderProcessing - Enter pickupID in search input
-2022-04-29 17:31:00,983 [main] INFO OrderProcessing - Click on Search button
-2022-04-29 17:31:01,888 [main] INFO OrderProcessing - Job is not exist with the search parameters
-2022-04-29 17:31:01,900 [main] INFO OrderProcessing - ServiceID is==RETURN
-2022-04-29 17:31:01,912 [main] INFO OrderProcessing - PickUpID is==3377431
-2022-04-29 17:31:02,169 [main] INFO OrderProcessing - Click on Operation Tab
-2022-04-29 17:31:03,373 [main] INFO OrderProcessing - If ServiceID is RETURN....
-2022-04-29 17:31:03,532 [main] INFO OrderProcessing - Clear search input
-2022-04-29 17:31:03,628 [main] INFO OrderProcessing - Enter PickUpID in Search input
-2022-04-29 17:31:03,740 [main] INFO OrderProcessing - Click on Search button
-2022-04-29 17:31:58,709 [main] INFO OrderProcessing - Job is exist
-2022-04-29 17:31:58,888 [main] INFO OrderProcessing - Clicked on Memo
-2022-04-29 17:32:00,528 [main] INFO OrderProcessing - Total no of memo is/are=(1)
-2022-04-29 17:32:00,794 [main] INFO OrderProcessing - Entered value in memo
-2022-04-29 17:32:00,949 [main] INFO OrderProcessing - Clicked on Save button
-2022-04-29 17:32:01,005 [main] INFO OrderProcessing - Clicked on Close button of Memo
-2022-04-29 17:32:03,173 [main] INFO OrderProcessing - Clicked on Notification
-2022-04-29 17:32:05,241 [main] INFO OrderProcessing - Clicked on Close button of Notification
-2022-04-29 17:32:07,414 [main] INFO OrderProcessing - Clicked on Upload
-2022-04-29 17:32:09,579 [main] INFO OrderProcessing - Click on plus sign
-2022-04-29 17:32:09,886 [main] INFO OrderProcessing - Enter doc name
-2022-04-29 17:32:10,001 [main] INFO OrderProcessing - Click on select file
-2022-04-29 17:32:12,152 [main] INFO OrderProcessing - Enter path of the file
-2022-04-29 17:32:14,333 [main] INFO OrderProcessing - File is uploaded successfully
-2022-04-29 17:32:16,416 [main] INFO OrderProcessing - File is uploaded successfully
-2022-04-29 17:32:18,857 [main] INFO OrderProcessing - Clicked on Ship Label Services
-2022-04-29 17:32:22,949 [main] INFO OrderProcessing - There is no Ship Label generated
-2022-04-29 17:32:22,995 [main] INFO OrderProcessing - Label is==[[ChromeDriver: chrome on WINDOWS (d908f5828fd9f6382875a9a0c03b436d)] -> xpath: //*[@ng-if="ShowTransSection"]]
-2022-04-29 17:32:23,035 [main] INFO OrderProcessing - Clicked on Close button of Memo
-2022-04-29 17:32:51,391 [main] INFO OrderProcessing - Clicked on Print Pull Ticket
-2022-04-29 17:33:14,128 [main] INFO OrderProcessing - Switched to Print Pull Ticket window
-2022-04-29 17:36:06,850 [main] INFO OrderProcessing - Switched to Print Pull Ticket window
-2022-04-29 17:36:25,958 [main] INFO OrderProcessing - Closed Print Pull Ticket window
-2022-04-29 17:36:26,892 [main] INFO OrderProcessing - Switched to main window
+2022-05-02 09:54:46,742 [main] INFO RTEDriverBilling - initialization of the properties file is done
+2022-05-02 09:54:48,457 [main] INFO io.github.bonigarcia.wdm.WebDriverManager - Using chromedriver 100.0.4896.60 (since Google Chrome 100 is installed in your machine)
+2022-05-02 09:54:48,479 [main] INFO io.github.bonigarcia.wdm.WebDriverManager - Exporting webdriver.chrome.driver as C:\Users\rprajapati\.m2\repository\webdriver\chromedriver\win32\100.0.4896.60\chromedriver.exe
+2022-05-02 09:54:58,301 [main] INFO RTEDriverBilling - Url opened
+2022-05-02 09:55:11,602 [main] INFO RTEDriverBilling - Click on MNX Logo
+2022-05-02 09:55:11,666 [main] INFO RTEDriverBilling - =======RTE Driver Billing Report Test Start=======
+2022-05-02 09:55:11,770 [main] INFO RTEDriverBilling - Clicked on Reports
+2022-05-02 09:55:11,881 [main] INFO RTEDriverBilling - Clicked on RTE Driver Billing Report
+2022-05-02 09:55:13,025 [main] INFO RTEDriverBilling - Entered Customer Code
+2022-05-02 09:55:13,078 [main] INFO RTEDriverBilling - Cleared Valid From
+2022-05-02 09:55:13,165 [main] INFO RTEDriverBilling - Enter Valid From
+2022-05-02 09:55:13,286 [main] INFO RTEDriverBilling - Cleared Valid To
+2022-05-02 09:55:13,394 [main] INFO RTEDriverBilling - Cleared Valid To
+2022-05-02 09:55:13,508 [main] INFO RTEDriverBilling - Click on View button
+2022-05-02 09:55:13,601 [main] INFO RTEDriverBilling - Wait Message is==Please be patient. It can take some time to fetch large amounts of data from the server.
+2022-05-02 09:55:20,016 [main] INFO RTEDriverBilling - Switched to Report Frame
+2022-05-02 09:55:20,137 [main] INFO RTEDriverBilling - Clicked on Export img
+2022-05-02 09:55:20,165 [main] INFO RTEDriverBilling - File is not exist with Filename
+2022-05-02 09:55:20,182 [main] INFO RTEDriverBilling - Total No of Options are==7
+2022-05-02 09:55:20,199 [main] INFO RTEDriverBilling - Option name is==XML file with report data
+2022-05-02 09:55:20,290 [main] INFO RTEDriverBilling - Clicked on Option to download Report
+2022-05-02 09:55:20,291 [main] INFO RTEDriverBilling - File is Downloaded successfully:Verified
+2022-05-02 09:55:22,385 [main] INFO RTEDriverBilling - Clicked on Export img
+2022-05-02 09:55:22,421 [main] INFO RTEDriverBilling - Option name is==CSV (comma delimited)
+2022-05-02 09:55:22,513 [main] INFO RTEDriverBilling - Clicked on Option to download Report
+2022-05-02 09:55:22,515 [main] INFO RTEDriverBilling - File is Downloaded successfully:Verified
+2022-05-02 09:55:24,610 [main] INFO RTEDriverBilling - Clicked on Export img
+2022-05-02 09:55:24,668 [main] INFO RTEDriverBilling - Option name is==PDF
+2022-05-02 09:55:24,760 [main] INFO RTEDriverBilling - Clicked on Option to download Report
+2022-05-02 09:55:24,762 [main] INFO RTEDriverBilling - File is Downloaded successfully:Verified
+2022-05-02 09:55:26,894 [main] INFO RTEDriverBilling - Clicked on Export img
+2022-05-02 09:55:26,928 [main] INFO RTEDriverBilling - Option name is==MHTML (web archive)
+2022-05-02 09:55:27,014 [main] INFO RTEDriverBilling - Clicked on Option to download Report
+2022-05-02 09:55:27,015 [main] INFO RTEDriverBilling - File is Downloaded successfully:Verified
+2022-05-02 09:55:29,109 [main] INFO RTEDriverBilling - Clicked on Export img
+2022-05-02 09:55:29,146 [main] INFO RTEDriverBilling - Option name is==Excel
+2022-05-02 09:55:29,245 [main] INFO RTEDriverBilling - Clicked on Option to download Report
+2022-05-02 09:55:29,246 [main] INFO RTEDriverBilling - File is Downloaded successfully:Verified
+2022-05-02 09:55:31,362 [main] INFO RTEDriverBilling - Clicked on Export img
+2022-05-02 09:55:31,398 [main] INFO RTEDriverBilling - Option name is==TIFF file
+2022-05-02 09:55:31,481 [main] INFO RTEDriverBilling - Clicked on Option to download Report
+2022-05-02 09:55:31,484 [main] INFO RTEDriverBilling - File is Downloaded successfully:Verified
+2022-05-02 09:55:33,576 [main] INFO RTEDriverBilling - Clicked on Export img
+2022-05-02 09:55:33,612 [main] INFO RTEDriverBilling - Option name is==Word
+2022-05-02 09:55:33,692 [main] INFO RTEDriverBilling - Clicked on Option to download Report
+2022-05-02 09:55:33,693 [main] INFO RTEDriverBilling - File is Downloaded successfully:Verified
+2022-05-02 09:55:35,704 [main] INFO RTEDriverBilling - Switched to Main screen
+2022-05-02 09:55:36,182 [main] INFO RTEDriverBilling - Click on MNX Logo
+2022-05-02 09:55:36,802 [main] INFO RTEDriverBilling - =======RTE Driver Billing Report Test End=======
+2022-05-02 09:55:37,218 [main] INFO RTEDriverBilling - Clicked on LogOut
+2022-05-02 09:55:39,957 [main] INFO RTEDriverBilling - ====Sending Email=====

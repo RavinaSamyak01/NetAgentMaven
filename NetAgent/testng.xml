@@ -1,6 +1,7 @@
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
 <suite name="NetAgentSmokeTest">
-	<!-- --><test thread-count="5" name="ContactUS">
+	<!-- -->
+	<test thread-count="5" name="ContactUS">
 		<classes>
 			<class name="netAgent_LogOutDiv.ContactUS"></class>
 		</classes>
@@ -54,12 +55,6 @@
 		</classes>
 	</test>
 
-	<!-- <test thread-count="5" name="OrderProcessing	">
-		<classes>
-			<class name="netAgent_OperationsTab.OrderProcessing"></class>
-		</classes>
-	</test>
-	-->
 	<test thread-count="5" name="Parts">
 		<classes>
 			<class name="netAgent_Inventory.Parts"></class>
@@ -160,6 +155,12 @@
 	<test thread-count="5" name="User Preferences">
 		<classes>
 			<class name="netAgent_Preferences.UserPreferences"></class>
+		</classes>
+	</test>
+
+		<test thread-count="5" name="OrderProcessing	">
+		<classes>
+			<class name="netAgent_OperationsTab.OrderProcessing"></class>
 		</classes>
 	</test>
 	<!-- NASmoke -->
