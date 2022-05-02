@@ -31,7 +31,7 @@ public class Parts extends BaseInit {
 		// parts
 		WebElement clientprt = Driver.findElement(By.id("ddlClient"));
 		Select optprt = new Select(clientprt);
-		optprt.selectByIndex(1);
+		optprt.selectByVisibleText("AUTOMATION INVENTORY PROFILE");
 		logger.info("Parts Screen: Client selected");
 		wait.until(ExpectedConditions.invisibilityOfElementLocated(By.xpath("//*[@class=\"ajax-loadernew\"]")));
 
@@ -79,34 +79,40 @@ public class Parts extends BaseInit {
 		wait.until(ExpectedConditions.invisibilityOfElementLocated(By.xpath("//*[@class=\"ajax-loadernew\"]")));
 		Thread.sleep(2000);
 
-		Driver.findElement(By.xpath("//*[@id='PartMasterGD']//tbody//a")).click();
-		wait.until(ExpectedConditions.invisibilityOfElementLocated(By.xpath("//*[@class=\"ajax-loadernew\"]")));
-		Thread.sleep(2000);
+		try {
 
-		logger.info("Parts Screen: Click on part and go to part details screen.");
-		System.out.println(Driver.getTitle());
+			Driver.findElement(By.xpath("//*[@id='PartMasterGD']//tbody//a")).click();
+			wait.until(ExpectedConditions.invisibilityOfElementLocated(By.xpath("//*[@class=\"ajax-loadernew\"]")));
+			Thread.sleep(2000);
 
-		getScreenshot(Driver, "Part_PartEditor");
+			logger.info("Parts Screen: Click on part and go to part details screen.");
+			System.out.println(Driver.getTitle());
 
-		Driver.findElement(By.id("idreturntoitem")).click();
-		wait.until(ExpectedConditions.invisibilityOfElementLocated(By.xpath("//*[@class=\"ajax-loadernew\"]")));
-		logger.info("Parts Screen: Return from part details screen.");
-		Thread.sleep(2000);
+			getScreenshot(Driver, "Part_PartEditor");
 
-		System.out.println("Expected MODEL NUMBER is=" + ModelNumber);
-		logger.info("Expected MODEL NUMBER is=" + ModelNumber);
-		String act1 = Driver.findElement(By.xpath("//*[@id='PartMasterGD']//tbody//a")).getText();
-		System.out.println("Actual MODEL NUMBER is=" + act1);
-		logger.info("Actual MODEL NUMBER is=" + act1);
+			Driver.findElement(By.id("idreturntoitem")).click();
+			wait.until(ExpectedConditions.invisibilityOfElementLocated(By.xpath("//*[@class=\"ajax-loadernew\"]")));
+			logger.info("Parts Screen: Return from part details screen.");
+			Thread.sleep(2000);
 
-		if (act1.contains(ModelNumber)) {
-			System.out.println("Field1 Search Compare is - PASS");
-			logger.info("Field1 Search Compare is - PASS");
-		}
+			System.out.println("Expected MODEL NUMBER is=" + ModelNumber);
+			logger.info("Expected MODEL NUMBER is=" + ModelNumber);
+			String act1 = Driver.findElement(By.xpath("//*[@id='PartMasterGD']//tbody//a")).getText();
+			System.out.println("Actual MODEL NUMBER is=" + act1);
+			logger.info("Actual MODEL NUMBER is=" + act1);
 
-		else {
-			System.out.println("Field1 Search Compare is - FAIL");
-			logger.info("Field1 Search Compare is - FAIL");
+			if (act1.contains(ModelNumber)) {
+				System.out.println("Field1 Search Compare is - PASS");
+				logger.info("Field1 Search Compare is - PASS");
+			}
+
+			else {
+				System.out.println("Field1 Search Compare is - FAIL");
+				logger.info("Field1 Search Compare is - FAIL");
+			}
+		} catch (Exception Nodata) {
+			System.out.println("There is no parts with search parameters");
+
 		}
 
 		// --Search with second field
@@ -232,86 +238,91 @@ public class Parts extends BaseInit {
 		logger.info("Clicked on Search button");
 		wait.until(ExpectedConditions.invisibilityOfElementLocated(By.xpath("//*[@class=\"ajax-loadernew\"]")));
 
-		Thread.sleep(2000);
-		String stock_partDetails = Driver.findElement(By.xpath(".//*[@id=\"PartMasterGD\"]//tr[1]/td[4]/a")).getText();
-		String[] list = stock_partDetails.split(" ");
-		String a = list[1].replaceAll("[^0-9]", "");
-		String stock_partDetails1 = a;
-		System.out.println("First : " + stock_partDetails1);
-		logger.info("First : " + stock_partDetails1);
+		try {
+			Thread.sleep(2000);
+			String stock_partDetails = Driver.findElement(By.xpath(".//*[@id=\"PartMasterGD\"]//tr[1]/td[4]/a"))
+					.getText();
+			String[] list = stock_partDetails.split(" ");
+			String a = list[1].replaceAll("[^0-9]", "");
+			String stock_partDetails1 = a;
+			System.out.println("First : " + stock_partDetails1);
+			logger.info("First : " + stock_partDetails1);
 
-		// System.out.println("First :: "+stock_partDetails);
+			// System.out.println("First :: "+stock_partDetails);
 
-		Driver.findElement(By.xpath(".//*[@id=\"PartMasterGD\"]//tr[1]/td[4]/a")).click();
-		wait.until(ExpectedConditions.invisibilityOfElementLocated(By.xpath("//*[@class=\"ajax-loadernew\"]")));
-
-		String stock_Details = Driver.findElement(By.xpath("//div[@style=\"text-align:right\"]/strong")).getText();
-		System.out.println("Second : " + stock_Details);
-		logger.info("Second : " + stock_Details);
-
-		if (stock_partDetails1.equals(stock_Details)) {
-			System.out.println("Total Records Matched");
-			logger.info("Total Records Matched");
-		} else {
-			System.out.println("Total Records Not Matched");
-			logger.info("Total Records Not Matched");
-		}
-
-		logger.info("Parts Screen: Go to stock details screen.");
-		System.out.println(Driver.getTitle());
-
-		getScreenshot(Driver, "Part_StockDetails");
-
-		// --Click on PrintLabel button
-		Driver.findElement(By.linkText("Print Label")).click();
-		wait.until(ExpectedConditions.invisibilityOfElementLocated(By.xpath("//*[@class=\"ajax-loadernew\"]")));
-		logger.info("Parts Screen: User has performed print label.");
-
-		String winHandleBefore = Driver.getWindowHandle();
-		for (String winHandle : Driver.getWindowHandles()) {
-			Driver.switchTo().window(winHandle);
-			logger.info("Switched to Print Label window");
-		}
-		Thread.sleep(2000);
-
-		Driver.close();
-		logger.info("Closed Print Label window");
-		Driver.switchTo().window(winHandleBefore);
-		logger.info("Switched to main window");
-		Thread.sleep(2000);
-
-		// --Return to Item
-		Driver.findElement(By.id("idreturntoitem")).click();
-		logger.info("Clicked on Return To Item");
-		wait.until(ExpectedConditions.invisibilityOfElementLocated(By.xpath("//*[@class=\"ajax-loadernew\"]")));
-
-		Driver.findElement(By.id("btnPrint")).click();
-		logger.info("Clicked Print button");
-		Thread.sleep(10000);
-		boolean plabel = Driver.findElement(By.id("PartNoGrid")).getText()
-				.contains("Please select atleast one record.");
-
-		if (plabel == true) {
-			Driver.findElement(By.xpath("//td[@role=\"gridcell\"]//span[@class=\"dx-checkbox-icon\"]")).click();
-
-			Driver.findElement(By.id("btnPrint")).click();
+			Driver.findElement(By.xpath(".//*[@id=\"PartMasterGD\"]//tr[1]/td[4]/a")).click();
 			wait.until(ExpectedConditions.invisibilityOfElementLocated(By.xpath("//*[@class=\"ajax-loadernew\"]")));
 
-			String winHandleBefore1 = Driver.getWindowHandle();
-			for (String winHandle1 : Driver.getWindowHandles()) {
-				Driver.switchTo().window(winHandle1);
+			String stock_Details = Driver.findElement(By.xpath("//div[@style=\"text-align:right\"]/strong")).getText();
+			System.out.println("Second : " + stock_Details);
+			logger.info("Second : " + stock_Details);
+
+			if (stock_partDetails1.equals(stock_Details)) {
+				System.out.println("Total Records Matched");
+				logger.info("Total Records Matched");
+			} else {
+				System.out.println("Total Records Not Matched");
+				logger.info("Total Records Not Matched");
+			}
+
+			logger.info("Parts Screen: Go to stock details screen.");
+			System.out.println(Driver.getTitle());
+
+			getScreenshot(Driver, "Part_StockDetails");
+
+			// --Click on PrintLabel button
+			Driver.findElement(By.linkText("Print Label")).click();
+			wait.until(ExpectedConditions.invisibilityOfElementLocated(By.xpath("//*[@class=\"ajax-loadernew\"]")));
+			logger.info("Parts Screen: User has performed print label.");
+
+			String winHandleBefore = Driver.getWindowHandle();
+			for (String winHandle : Driver.getWindowHandles()) {
+				Driver.switchTo().window(winHandle);
 				logger.info("Switched to Print Label window");
 			}
+			Thread.sleep(2000);
 
 			Driver.close();
 			logger.info("Closed Print Label window");
-			Driver.switchTo().window(winHandleBefore1);
+			Driver.switchTo().window(winHandleBefore);
 			logger.info("Switched to main window");
 			Thread.sleep(2000);
 
-		}
-		getScreenshot(Driver, "PartswithSelection");
+			// --Return to Item
+			Driver.findElement(By.id("idreturntoitem")).click();
+			logger.info("Clicked on Return To Item");
+			wait.until(ExpectedConditions.invisibilityOfElementLocated(By.xpath("//*[@class=\"ajax-loadernew\"]")));
 
+			Driver.findElement(By.id("btnPrint")).click();
+			logger.info("Clicked Print button");
+			Thread.sleep(10000);
+			boolean plabel = Driver.findElement(By.id("PartNoGrid")).getText()
+					.contains("Please select atleast one record.");
+
+			if (plabel == true) {
+				Driver.findElement(By.xpath("//td[@role=\"gridcell\"]//span[@class=\"dx-checkbox-icon\"]")).click();
+
+				Driver.findElement(By.id("btnPrint")).click();
+				wait.until(ExpectedConditions.invisibilityOfElementLocated(By.xpath("//*[@class=\"ajax-loadernew\"]")));
+
+				String winHandleBefore1 = Driver.getWindowHandle();
+				for (String winHandle1 : Driver.getWindowHandles()) {
+					Driver.switchTo().window(winHandle1);
+					logger.info("Switched to Print Label window");
+				}
+
+				Driver.close();
+				logger.info("Closed Print Label window");
+				Driver.switchTo().window(winHandleBefore1);
+				logger.info("Switched to main window");
+				Thread.sleep(2000);
+
+			}
+			getScreenshot(Driver, "PartswithSelection");
+		} catch (Exception NoData) {
+			logger.info("There is no part with search parameter");
+
+		}
 		Driver.findElement(By.id("idResetbutton")).click();
 		logger.info("Parts Screen: User has click reset button.");
 		wait.until(ExpectedConditions.invisibilityOfElementLocated(By.xpath("//*[@class=\"ajax-loadernew\"]")));

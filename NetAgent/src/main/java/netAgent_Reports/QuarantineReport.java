@@ -32,7 +32,7 @@ public class QuarantineReport extends BaseInit {
 
 		// --client select
 		Select client = new Select(Driver.findElement(By.id("ddlClient")));
-		client.selectByIndex(1);
+		client.selectByVisibleText("AUTOMATION INVENTORY PROFILE");
 		System.out.println("Client selected");
 		logger.info("Selected Client");
 		wait.until(ExpectedConditions.invisibilityOfElementLocated(By.xpath("//*[@class=\"ajax-loadernew\"]")));

@@ -33,7 +33,7 @@ public class Replenish extends BaseInit {
 		// --Scenario=Select Account and Add part
 		// Select Account number
 		Select AccNo = new Select(Driver.findElement(By.id("ddlClient")));
-		AccNo.selectByIndex(1);
+		AccNo.selectByVisibleText("AUTOMATION INVENTORY PROFILE");
 		logger.info("Selected Account Number");
 		Thread.sleep(2000);
 
@@ -43,42 +43,47 @@ public class Replenish extends BaseInit {
 		logger.info("Click on Add Parts");
 		wait.until(ExpectedConditions.invisibilityOfElementLocated(By.xpath("//*[@class=\"ajax-loadernew\"]")));
 
-		// Search with part# and name
+		try {
+			// Search with part# and name
 
-		Driver.findElement(By.id("txtF1lable")).clear();
-		Driver.findElement(By.id("txtF1lable")).sendKeys(Part1);
-		logger.info("Entered Sprint Part Number");
+			Driver.findElement(By.id("txtF1lable")).clear();
+			Driver.findElement(By.id("txtF1lable")).sendKeys(Part1);
+			logger.info("Entered Sprint Part Number");
 
-		Driver.findElement(By.id("txtPartName")).clear();
-		Driver.findElement(By.id("txtPartName")).sendKeys(Part1Name);
-		logger.info("Entered Part Name");
+			Driver.findElement(By.id("txtPartName")).clear();
+			Driver.findElement(By.id("txtPartName")).sendKeys(Part1Name);
+			logger.info("Entered Part Name");
 
-		Driver.findElement(By.id("btnSearch")).click();
-		logger.info("Click on Search button");
-		wait.until(ExpectedConditions.invisibilityOfElementLocated(By.xpath("//*[@class=\"ajax-loadernew\"]")));
+			Driver.findElement(By.id("btnSearch")).click();
+			logger.info("Click on Search button");
+			wait.until(ExpectedConditions.invisibilityOfElementLocated(By.xpath("//*[@class=\"ajax-loadernew\"]")));
 
-		// select part
-		Driver.findElement(By.xpath(".//*[@title='Add']")).click();
-		logger.info("Selected the part");
-		Thread.sleep(2000);
+			// select part
+			Driver.findElement(By.xpath(".//*[@title='Add']")).click();
+			logger.info("Selected the part");
+			Thread.sleep(2000);
 
-		getScreenshot(Driver, "Replenish-Part Popup");
+			getScreenshot(Driver, "Replenish-Part Popup");
 
-		// delete part
-		Driver.findElement(By.xpath(".//*[@title='Delete']")).click();
-		logger.info("Deleted the part");
-		wait.until(ExpectedConditions.invisibilityOfElementLocated(By.xpath("//*[@class=\"ajax-loadernew\"]")));
+			// delete part
+			Driver.findElement(By.xpath(".//*[@title='Delete']")).click();
+			logger.info("Deleted the part");
+			wait.until(ExpectedConditions.invisibilityOfElementLocated(By.xpath("//*[@class=\"ajax-loadernew\"]")));
 
-		// select part
-		Driver.findElement(By.xpath(".//*[@title='Add']")).click();
-		logger.info("Selected the part");
-		wait.until(ExpectedConditions.invisibilityOfElementLocated(By.xpath("//*[@class=\"ajax-loadernew\"]")));
+			// select part
+			Driver.findElement(By.xpath(".//*[@title='Add']")).click();
+			logger.info("Selected the part");
+			wait.until(ExpectedConditions.invisibilityOfElementLocated(By.xpath("//*[@class=\"ajax-loadernew\"]")));
 
-		// save part
-		Driver.findElement(By.xpath(".//*[@title='Save']")).click();
-		logger.info("Save the part");
-		wait.until(ExpectedConditions.invisibilityOfElementLocated(By.xpath("//*[@class=\"ajax-loadernew\"]")));
+			// save part
+			Driver.findElement(By.xpath(".//*[@title='Save']")).click();
+			logger.info("Save the part");
+			wait.until(ExpectedConditions.invisibilityOfElementLocated(By.xpath("//*[@class=\"ajax-loadernew\"]")));
 
+		} catch (Exception Part) {
+			logger.info("Part is not available with search parameters");
+
+		}
 		// click on + icon for expand
 
 		Driver.findElement(By.id("lnkexpandlnkexpand_0")).click();
