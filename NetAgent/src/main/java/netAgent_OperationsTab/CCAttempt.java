@@ -1280,80 +1280,158 @@ public class CCAttempt extends BaseInit {
 
 								}
 							} catch (Exception e) {
-								PartTable = isElementPresent("CCACCATable_xpath");
-								Partrow = PartTable.findElements(By.tagName("tr"));
-								logger.info("Total parts are==" + Partrow.size());
-								for (int part4 = part; part4 < Partrow.size() - 1;) {
-									// --Get the result value
-									WebElement Result = Partrow.get(part4)
-											.findElement(By.xpath("td[contains(@aria-label,'Column Result')]"));
-									String ResultValue = Result.getText();
-									logger.info("Value of Result of " + (part4 + 1) + " Part is==" + ResultValue);
+								try {
+									PartTable = isElementPresent("CCACCATable_xpath");
+									Partrow = PartTable.findElements(By.tagName("tr"));
+									logger.info("Total parts are==" + Partrow.size());
+									for (int part4 = part; part4 < Partrow.size() - 1;) {
+										// --Get the result value
+										WebElement Result = Partrow.get(part4)
+												.findElement(By.xpath("td[contains(@aria-label,'Column Result')]"));
+										String ResultValue = Result.getText();
+										logger.info("Value of Result of " + (part4 + 1) + " Part is==" + ResultValue);
 
-									if (ResultValue.equalsIgnoreCase("FAIL")) {
-										WebElement StockQtyxpath = Partrow.get(part4)
-												.findElement(By.xpath("td[contains(@aria-label,'Column Stock Qty')]"));
-										String StockQty = StockQtyxpath.getText().trim();
-										logger.info("Stock Qty for Part " + (part4 + 1) + " is==" + StockQty);
-										WebElement CCQtyxpath = Partrow.get(part4)
-												.findElement(By.xpath("td[contains(@aria-label,'Column CC Qty')]"));
-										String CCQty = CCQtyxpath.getText().trim();
-										logger.info("CC Qty for Part " + (part4 + 1) + " is==" + CCQty);
-										if (StockQty.equalsIgnoreCase(CCQty)) {
-											logger.info(
-													"Stock Qty and CC Qty are Same, Result is actually SUCCESS instead of FAIL");
+										if (ResultValue.equalsIgnoreCase("FAIL")) {
+											WebElement StockQtyxpath = Partrow.get(part4).findElement(
+													By.xpath("td[contains(@aria-label,'Column Stock Qty')]"));
+											String StockQty = StockQtyxpath.getText().trim();
+											logger.info("Stock Qty for Part " + (part4 + 1) + " is==" + StockQty);
+											WebElement CCQtyxpath = Partrow.get(part4)
+													.findElement(By.xpath("td[contains(@aria-label,'Column CC Qty')]"));
+											String CCQty = CCQtyxpath.getText().trim();
+											logger.info("CC Qty for Part " + (part4 + 1) + " is==" + CCQty);
+											if (StockQty.equalsIgnoreCase(CCQty)) {
+												logger.info(
+														"Stock Qty and CC Qty are Same, Result is actually SUCCESS instead of FAIL");
 
-										} else {
-											logger.info("Stock Qty and CC Qty are different, Result is actually FAIL");
+											} else {
+												logger.info(
+														"Stock Qty and CC Qty are different, Result is actually FAIL");
 
-										}
+											}
 
-										CCQtyxpath = Partrow.get(part)
-												.findElement(By.xpath("td[contains(@aria-label,'Column CC Qty')]"));
-										js.executeScript("arguments[0].click();", CCQtyxpath);
-										logger.info("Clicked on CCQty");
-										try {
-											wait.until(ExpectedConditions.elementToBeClickable(
-													Partrow.get(part4).findElement(By.tagName("input"))));
-											WebElement CCQtyInput = Partrow.get(part4).findElement(By.tagName("input"));
-											// enter stock qty in cc qty
-											CCQtyInput.clear();
-											CCQtyInput.sendKeys(Keys.BACK_SPACE);
-											CCQtyInput.sendKeys(StockQty);
-											CCQtyInput.sendKeys(Keys.TAB);
-
-											logger.info("Entered CC Qty equal to Stock Qty");
-										} catch (Exception NotFoun) {
-											WebElement PartTable1 = isElementPresent("CCACCATable_xpath");
-											List<WebElement> Partrow1 = PartTable1.findElements(By.tagName("tr"));
-											logger.info("Total parts are==" + Partrow1.size());
-											for (int part1 = part4; part1 < Partrow1.size() - 1;) {
-												CCQtyxpath = Partrow1.get(part1).findElement(
-														By.xpath("td[contains(@aria-label,'Column CC Qty')]"));
-												js.executeScript("arguments[0].click();", CCQtyxpath);
-												logger.info("Clicked on CCQty");
+											CCQtyxpath = Partrow.get(part)
+													.findElement(By.xpath("td[contains(@aria-label,'Column CC Qty')]"));
+											js.executeScript("arguments[0].click();", CCQtyxpath);
+											logger.info("Clicked on CCQty");
+											try {
 												wait.until(ExpectedConditions.elementToBeClickable(
-														Partrow1.get(part1).findElement(By.tagName("input"))));
-												WebElement CCQtyInput = Partrow1.get(part1)
+														Partrow.get(part4).findElement(By.tagName("input"))));
+												WebElement CCQtyInput = Partrow.get(part4)
 														.findElement(By.tagName("input"));
 												// enter stock qty in cc qty
 												CCQtyInput.clear();
 												CCQtyInput.sendKeys(Keys.BACK_SPACE);
 												CCQtyInput.sendKeys(StockQty);
 												CCQtyInput.sendKeys(Keys.TAB);
+
 												logger.info("Entered CC Qty equal to Stock Qty");
-												break;
+											} catch (Exception NotFoun) {
+												WebElement PartTable1 = isElementPresent("CCACCATable_xpath");
+												List<WebElement> Partrow1 = PartTable1.findElements(By.tagName("tr"));
+												logger.info("Total parts are==" + Partrow1.size());
+												for (int part1 = part4; part1 < Partrow1.size() - 1;) {
+													CCQtyxpath = Partrow1.get(part1).findElement(
+															By.xpath("td[contains(@aria-label,'Column CC Qty')]"));
+													js.executeScript("arguments[0].click();", CCQtyxpath);
+													logger.info("Clicked on CCQty");
+													wait.until(ExpectedConditions.elementToBeClickable(
+															Partrow1.get(part1).findElement(By.tagName("input"))));
+													WebElement CCQtyInput = Partrow1.get(part1)
+															.findElement(By.tagName("input"));
+													// enter stock qty in cc qty
+													CCQtyInput.clear();
+													CCQtyInput.sendKeys(Keys.BACK_SPACE);
+													CCQtyInput.sendKeys(StockQty);
+													CCQtyInput.sendKeys(Keys.TAB);
+													logger.info("Entered CC Qty equal to Stock Qty");
+													break;
+
+												}
 
 											}
 
 										}
-
+										break;
 									}
-									break;
+
+								} catch (Exception staleElement) {
+									PartTable = isElementPresent("CCACCATable_xpath");
+									Partrow = PartTable.findElements(By.tagName("tr"));
+									logger.info("Total parts are==" + Partrow.size());
+									for (int part4 = part; part4 < Partrow.size() - 1;) {
+										// --Get the result value
+										WebElement Result = Partrow.get(part4)
+												.findElement(By.xpath("td[contains(@aria-label,'Column Result')]"));
+										String ResultValue = Result.getText();
+										logger.info("Value of Result of " + (part4 + 1) + " Part is==" + ResultValue);
+
+										if (ResultValue.equalsIgnoreCase("FAIL")) {
+											WebElement StockQtyxpath = Partrow.get(part4).findElement(
+													By.xpath("td[contains(@aria-label,'Column Stock Qty')]"));
+											String StockQty = StockQtyxpath.getText().trim();
+											logger.info("Stock Qty for Part " + (part4 + 1) + " is==" + StockQty);
+											WebElement CCQtyxpath = Partrow.get(part4)
+													.findElement(By.xpath("td[contains(@aria-label,'Column CC Qty')]"));
+											String CCQty = CCQtyxpath.getText().trim();
+											logger.info("CC Qty for Part " + (part4 + 1) + " is==" + CCQty);
+											if (StockQty.equalsIgnoreCase(CCQty)) {
+												logger.info(
+														"Stock Qty and CC Qty are Same, Result is actually SUCCESS instead of FAIL");
+
+											} else {
+												logger.info(
+														"Stock Qty and CC Qty are different, Result is actually FAIL");
+
+											}
+
+											CCQtyxpath = Partrow.get(part)
+													.findElement(By.xpath("td[contains(@aria-label,'Column CC Qty')]"));
+											js.executeScript("arguments[0].click();", CCQtyxpath);
+											logger.info("Clicked on CCQty");
+											try {
+												wait.until(ExpectedConditions.elementToBeClickable(
+														Partrow.get(part4).findElement(By.tagName("input"))));
+												WebElement CCQtyInput = Partrow.get(part4)
+														.findElement(By.tagName("input"));
+												// enter stock qty in cc qty
+												CCQtyInput.clear();
+												CCQtyInput.sendKeys(Keys.BACK_SPACE);
+												CCQtyInput.sendKeys(StockQty);
+												CCQtyInput.sendKeys(Keys.TAB);
+
+												logger.info("Entered CC Qty equal to Stock Qty");
+											} catch (Exception NotFoun) {
+												WebElement PartTable1 = isElementPresent("CCACCATable_xpath");
+												List<WebElement> Partrow1 = PartTable1.findElements(By.tagName("tr"));
+												logger.info("Total parts are==" + Partrow1.size());
+												for (int part1 = part4; part1 < Partrow1.size() - 1;) {
+													CCQtyxpath = Partrow1.get(part1).findElement(
+															By.xpath("td[contains(@aria-label,'Column CC Qty')]"));
+													js.executeScript("arguments[0].click();", CCQtyxpath);
+													logger.info("Clicked on CCQty");
+													wait.until(ExpectedConditions.elementToBeClickable(
+															Partrow1.get(part1).findElement(By.tagName("input"))));
+													WebElement CCQtyInput = Partrow1.get(part1)
+															.findElement(By.tagName("input"));
+													// enter stock qty in cc qty
+													CCQtyInput.clear();
+													CCQtyInput.sendKeys(Keys.BACK_SPACE);
+													CCQtyInput.sendKeys(StockQty);
+													CCQtyInput.sendKeys(Keys.TAB);
+													logger.info("Entered CC Qty equal to Stock Qty");
+													break;
+
+												}
+
+											}
+
+										}
+										break;
+									}
+
 								}
-
 							}
-
 						}
 						getScreenshot(Driver, "CCAtt1Scenario4Done_" + WorderID);
 
@@ -1595,6 +1673,8 @@ public class CCAttempt extends BaseInit {
 			}
 		}
 
+		logger.info("===CCAttempt Test End===");
+		msg.append("===CCAttempt Test End===" + "\n\n");
 	}
 
 	public void cycleCount() {
@@ -1660,7 +1740,20 @@ public class CCAttempt extends BaseInit {
 		JavascriptExecutor js = (JavascriptExecutor) Driver;
 
 		// --If file exist, delete it
-		isFileDownloaded("CycleCount-");
+		String downloadPath = System.getProperty("user.dir") + "\\src\\main\\resources";
+		File dir = new File(downloadPath);
+		File[] dirContents = dir.listFiles();
+
+		for (int i = 0; i < dirContents.length - 1; i++) {
+			if (dirContents[i].getName().contains("CycleCount-")) {
+				logger.info("File is exist with FileName==" + "CycleCount-");
+				// File has been found, it can now be deleted:
+				dirContents[i].delete();
+				logger.info("CycleCount-" + " File is Deleted");
+			} else {
+				logger.info("File is not exist with Filename==" + "CycleCount-");
+			}
+		}
 
 		// --Export
 		isElementPresent("CCAExport_id").click();
@@ -1679,9 +1772,9 @@ public class CCAttempt extends BaseInit {
 		String Date = dateFormat.format(date);
 		logger.info("Latest Date=" + Date);
 
-		String downloadPath = System.getProperty("user.dir") + "\\src\\main\\resources";
-		File dir = new File(downloadPath);
-		File[] dirContents = dir.listFiles();
+		downloadPath = System.getProperty("user.dir") + "\\src\\main\\resources";
+		dir = new File(downloadPath);
+		dirContents = dir.listFiles();
 		String FileName = null;
 
 		for (int i = 0; i < dirContents.length; i++) {
@@ -1796,5 +1889,4 @@ public class CCAttempt extends BaseInit {
 		wait.until(ExpectedConditions.invisibilityOfElementLocated(By.xpath("//*[@class=\"ajax-loadernew\"]")));
 	}
 
-	
 }

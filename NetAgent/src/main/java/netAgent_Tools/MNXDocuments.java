@@ -27,32 +27,37 @@ public class MNXDocuments extends BaseInit {
 
 		getScreenshot(Driver, "MNXDocuments");
 
-//			//Click on First Doc
+//			//Click on Automation  Doc
 		String winHandleBefore1 = Driver.getWindowHandle();
 
 //			//CLick on doc link
-		wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//a[@ng-click=\"NglDocData(doc)\"]")));
-		wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//a[@ng-click=\"NglDocData(doc)\"]")));
+		try {
+			wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//a[contains(text(),'AUTOMATION')]")));
+			wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//a[contains(text(),'AUTOMATION')]")));
 
-		Driver.findElement(By.xpath("//a[@ng-click=\"NglDocData(doc)\"]")).click();
-		logger.info("Click on Document");
-		wait.until(ExpectedConditions.invisibilityOfElementLocated(By.xpath("//*[@class=\"ajax-loadernew\"]")));
+			Driver.findElement(By.xpath("//a[contains(text(),'AUTOMATION')]")).click();
+			logger.info("Click on Document");
+			wait.until(ExpectedConditions.invisibilityOfElementLocated(By.xpath("//*[@class=\"ajax-loadernew\"]")));
 
-		for (String winHandle : Driver.getWindowHandles()) {
-			Driver.switchTo().window(winHandle);
-			getScreenshot(Driver, "MNXDocument");
-			logger.info("Switched to Document window");
+			for (String winHandle : Driver.getWindowHandles()) {
+				Driver.switchTo().window(winHandle);
+				getScreenshot(Driver, "MNXDocument");
+				logger.info("Switched to Document window");
+			}
+			// Close new window
+			Driver.close();
+			logger.info("Close Document window");
+
+			Thread.sleep(5000);
+
+			// Switch back to original browser (first window)
+			Driver.switchTo().window(winHandleBefore1);
+			logger.info("Switched to Main window");
+			wait.until(ExpectedConditions.invisibilityOfElementLocated(By.xpath("//*[@class=\"ajax-loadernew\"]")));
+		} catch (Exception nodoc) {
+			logger.info("There is no doc with 'Automation' text");
+
 		}
-		// Close new window
-		Driver.close();
-		logger.info("Close Document window");
-
-		Thread.sleep(5000);
-
-		// Switch back to original browser (first window)
-		Driver.switchTo().window(winHandleBefore1);
-		logger.info("Switched to Main window");
-		wait.until(ExpectedConditions.invisibilityOfElementLocated(By.xpath("//*[@class=\"ajax-loadernew\"]")));
 
 		Driver.findElement(By.id("imgNGLLogo")).click();
 		logger.info("Click on MNX Logo");

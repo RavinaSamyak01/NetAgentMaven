@@ -2,8 +2,13 @@
 Agent Activity Chart
 
 Textbox8,Textbox11
-04/19/2022,04/29/2022
+04/23/2022,05/03/2022
 
 No Of Jobs_label,No Of Jobs_Chart2_CategoryGroup_label,No Of Jobs_Chart2_CategoryGroup_Value_Y
-No Of Jobs,,
+No Of Jobs,CANCEL,9
+No Of Jobs,DEL ALERT CONFED,5
+No Of Jobs,DEL DRV ALERTED,1
+No Of Jobs,DELIVERED,12
+No Of Jobs,DROPPED,1
+No Of Jobs,PU ALERT CONFED,4
 

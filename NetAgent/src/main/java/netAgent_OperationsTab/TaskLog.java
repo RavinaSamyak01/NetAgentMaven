@@ -400,7 +400,7 @@ public class TaskLog extends BaseInit {
 							wait.until(ExpectedConditions.elementToBeClickable(SerialNo));
 							SerialNo.clear();
 							logger.info("Cleared SerialNo");
-							SerialNo.sendKeys("Entered SerialNo" + part);
+							SerialNo.sendKeys("SerialNo" + part);
 							logger.info("Entered SerialNo" + part);
 							System.out.println("Enetered serial Number in " + part + " part");
 							logger.info("Enetered serial Number in " + part + " part");

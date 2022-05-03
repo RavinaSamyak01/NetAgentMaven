@@ -88,7 +88,7 @@ public class BaseInit {
 			ChromeOptions options = new ChromeOptions();
 
 			// options.addArguments("headless");
-			//options.addArguments("--incognito");
+			options.addArguments("--incognito");
 			options.addArguments("--test-type");
 			options.addArguments("--no-proxy-server");
 			options.addArguments("--proxy-bypass-list=*");
@@ -496,24 +496,24 @@ public class BaseInit {
 			logger.error(ex);
 		}
 	}
-	
-	public boolean isFileDownloaded(String fileName) {
+
+	public void isFileDownloaded(String fileName) {
 		String downloadPath = System.getProperty("user.dir") + "\\src\\main\\resources";
 		File dir = new File(downloadPath);
 		File[] dirContents = dir.listFiles();
 
 		for (int i = 0; i < dirContents.length; i++) {
 			if (dirContents[i].getName().contains(fileName)) {
-				logger.info("File is exist with FileName");
+				logger.info("File is exist with FileName==" + fileName);
 				// File has been found, it can now be deleted:
 				dirContents[i].delete();
-				logger.info("File is Deleted");
-				return true;
+				logger.info(fileName + " File is Deleted");
 
+			} else {
+				logger.info("File is not exist with Filename==" + fileName);
 			}
 		}
-		logger.info("File is not exist with Filename");
-		return false;
+
 	}
 
 	public static void waitUntilFileToDownload(String Name) throws InterruptedException {

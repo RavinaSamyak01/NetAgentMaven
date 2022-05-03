@@ -1,51 +1,1838 @@
-2022-05-02 09:54:46,742 [main] INFO RTEDriverBilling - initialization of the properties file is done
-2022-05-02 09:54:48,457 [main] INFO io.github.bonigarcia.wdm.WebDriverManager - Using chromedriver 100.0.4896.60 (since Google Chrome 100 is installed in your machine)
-2022-05-02 09:54:48,479 [main] INFO io.github.bonigarcia.wdm.WebDriverManager - Exporting webdriver.chrome.driver as C:\Users\rprajapati\.m2\repository\webdriver\chromedriver\win32\100.0.4896.60\chromedriver.exe
-2022-05-02 09:54:58,301 [main] INFO RTEDriverBilling - Url opened
-2022-05-02 09:55:11,602 [main] INFO RTEDriverBilling - Click on MNX Logo
-2022-05-02 09:55:11,666 [main] INFO RTEDriverBilling - =======RTE Driver Billing Report Test Start=======
-2022-05-02 09:55:11,770 [main] INFO RTEDriverBilling - Clicked on Reports
-2022-05-02 09:55:11,881 [main] INFO RTEDriverBilling - Clicked on RTE Driver Billing Report
-2022-05-02 09:55:13,025 [main] INFO RTEDriverBilling - Entered Customer Code
-2022-05-02 09:55:13,078 [main] INFO RTEDriverBilling - Cleared Valid From
-2022-05-02 09:55:13,165 [main] INFO RTEDriverBilling - Enter Valid From
-2022-05-02 09:55:13,286 [main] INFO RTEDriverBilling - Cleared Valid To
-2022-05-02 09:55:13,394 [main] INFO RTEDriverBilling - Cleared Valid To
-2022-05-02 09:55:13,508 [main] INFO RTEDriverBilling - Click on View button
-2022-05-02 09:55:13,601 [main] INFO RTEDriverBilling - Wait Message is==Please be patient. It can take some time to fetch large amounts of data from the server.
-2022-05-02 09:55:20,016 [main] INFO RTEDriverBilling - Switched to Report Frame
-2022-05-02 09:55:20,137 [main] INFO RTEDriverBilling - Clicked on Export img
-2022-05-02 09:55:20,165 [main] INFO RTEDriverBilling - File is not exist with Filename
-2022-05-02 09:55:20,182 [main] INFO RTEDriverBilling - Total No of Options are==7
-2022-05-02 09:55:20,199 [main] INFO RTEDriverBilling - Option name is==XML file with report data
-2022-05-02 09:55:20,290 [main] INFO RTEDriverBilling - Clicked on Option to download Report
-2022-05-02 09:55:20,291 [main] INFO RTEDriverBilling - File is Downloaded successfully:Verified
-2022-05-02 09:55:22,385 [main] INFO RTEDriverBilling - Clicked on Export img
-2022-05-02 09:55:22,421 [main] INFO RTEDriverBilling - Option name is==CSV (comma delimited)
-2022-05-02 09:55:22,513 [main] INFO RTEDriverBilling - Clicked on Option to download Report
-2022-05-02 09:55:22,515 [main] INFO RTEDriverBilling - File is Downloaded successfully:Verified
-2022-05-02 09:55:24,610 [main] INFO RTEDriverBilling - Clicked on Export img
-2022-05-02 09:55:24,668 [main] INFO RTEDriverBilling - Option name is==PDF
-2022-05-02 09:55:24,760 [main] INFO RTEDriverBilling - Clicked on Option to download Report
-2022-05-02 09:55:24,762 [main] INFO RTEDriverBilling - File is Downloaded successfully:Verified
-2022-05-02 09:55:26,894 [main] INFO RTEDriverBilling - Clicked on Export img
-2022-05-02 09:55:26,928 [main] INFO RTEDriverBilling - Option name is==MHTML (web archive)
-2022-05-02 09:55:27,014 [main] INFO RTEDriverBilling - Clicked on Option to download Report
-2022-05-02 09:55:27,015 [main] INFO RTEDriverBilling - File is Downloaded successfully:Verified
-2022-05-02 09:55:29,109 [main] INFO RTEDriverBilling - Clicked on Export img
-2022-05-02 09:55:29,146 [main] INFO RTEDriverBilling - Option name is==Excel
-2022-05-02 09:55:29,245 [main] INFO RTEDriverBilling - Clicked on Option to download Report
-2022-05-02 09:55:29,246 [main] INFO RTEDriverBilling - File is Downloaded successfully:Verified
-2022-05-02 09:55:31,362 [main] INFO RTEDriverBilling - Clicked on Export img
-2022-05-02 09:55:31,398 [main] INFO RTEDriverBilling - Option name is==TIFF file
-2022-05-02 09:55:31,481 [main] INFO RTEDriverBilling - Clicked on Option to download Report
-2022-05-02 09:55:31,484 [main] INFO RTEDriverBilling - File is Downloaded successfully:Verified
-2022-05-02 09:55:33,576 [main] INFO RTEDriverBilling - Clicked on Export img
-2022-05-02 09:55:33,612 [main] INFO RTEDriverBilling - Option name is==Word
-2022-05-02 09:55:33,692 [main] INFO RTEDriverBilling - Clicked on Option to download Report
-2022-05-02 09:55:33,693 [main] INFO RTEDriverBilling - File is Downloaded successfully:Verified
-2022-05-02 09:55:35,704 [main] INFO RTEDriverBilling - Switched to Main screen
-2022-05-02 09:55:36,182 [main] INFO RTEDriverBilling - Click on MNX Logo
-2022-05-02 09:55:36,802 [main] INFO RTEDriverBilling - =======RTE Driver Billing Report Test End=======
-2022-05-02 09:55:37,218 [main] INFO RTEDriverBilling - Clicked on LogOut
-2022-05-02 09:55:39,957 [main] INFO RTEDriverBilling - ====Sending Email=====
+2022-05-03 13:39:49,040 [main] INFO CCAttempt - initialization of the properties file is done
+2022-05-03 13:39:49,573 [main] INFO io.github.bonigarcia.wdm.WebDriverManager - Using chromedriver 100.0.4896.60 (since Google Chrome 100 is installed in your machine)
+2022-05-03 13:39:49,596 [main] INFO io.github.bonigarcia.wdm.WebDriverManager - Exporting webdriver.chrome.driver as C:\Users\rprajapati\.m2\repository\webdriver\chromedriver\win32\100.0.4896.60\chromedriver.exe
+2022-05-03 13:39:56,133 [main] INFO CCAttempt - Url opened
+2022-05-03 13:40:05,645 [main] INFO CCAttempt - ===CCAttempt Test Start===
+2022-05-03 13:40:05,843 [main] INFO CCAttempt - Click on Operations
+2022-05-03 13:40:06,000 [main] INFO CCAttempt - Click on CycleCount
+2022-05-03 13:40:08,461 [main] INFO CCAttempt - If Reset button is exist
+2022-05-03 13:40:08,640 [main] INFO CCAttempt - Click on Reset button
+2022-05-03 13:40:10,447 [main] INFO CCAttempt - WorkOrderID after Reset==Cycle Count of Work Order Id :1686415 is Reset
+2022-05-03 13:40:10,471 [main] INFO CCAttempt - If action column is not empty
+2022-05-03 13:40:10,630 [main] INFO CCAttempt - Click on Start button
+2022-05-03 13:40:12,398 [main] INFO CCAttempt - WorkOrderID after start==1686416
+2022-05-03 13:40:12,450 [main] INFO CCAttempt - Inserted workorderID in excel
+2022-05-03 13:40:12,551 [main] INFO CCAttempt - Clicked on Operations
+2022-05-03 13:40:12,648 [main] INFO CCAttempt - Clicked on TaskLog
+2022-05-03 13:40:15,348 [main] INFO CCAttempt - Click on Inventory Tab
+2022-05-03 13:40:16,941 [main] INFO CCAttempt - Total No of job in Inventory Tab is/are==114
+2022-05-03 13:40:17,012 [main] INFO CCAttempt - WorkOrderID is==1686416
+2022-05-03 13:40:17,128 [main] INFO CCAttempt - Clear Search box
+2022-05-03 13:40:17,292 [main] INFO CCAttempt - Enter value in search input
+2022-05-03 13:40:17,463 [main] INFO CCAttempt - Clicked on Search
+2022-05-03 13:40:19,993 [main] INFO CCAttempt - Stage is==Cycle Count Attempt
+2022-05-03 13:40:20,041 [main] INFO CCAttempt - Parts is available, Total Parts==3
+2022-05-03 13:40:20,091 [main] INFO CCAttempt - Total number of records==Page 1 of 1 (43 items)
+2022-05-03 13:40:20,140 [main] INFO CCAttempt - It is CCAttempt1
+2022-05-03 13:40:20,141 [main] INFO CCAttempt - ==Testing CCAttempt1==
+2022-05-03 13:40:20,302 [main] INFO CCAttempt - Uncheck the checkbox of Remove Zero Stock Parts
+2022-05-03 13:40:20,707 [main] INFO CCAttempt - Number of Parts with 0 stock Qty==71
+2022-05-03 13:40:21,074 [main] INFO CCAttempt - Check the checkbox of Remove Zero Stock Parts
+2022-05-03 13:40:21,285 [main] INFO CCAttempt - Number of Parts with 0 stock Qty after check the checkbox of 'Remove Zero Stock Parts'==0
+2022-05-03 13:40:21,286 [main] INFO CCAttempt - File is not exist with Filename==CycleCount-
+2022-05-03 13:40:21,287 [main] INFO CCAttempt - File is not exist with Filename==CycleCount-
+2022-05-03 13:40:21,387 [main] INFO CCAttempt - Clicked on Export button
+2022-05-03 13:40:21,978 [main] INFO CCAttempt - File is Downloaded successfully:Verified
+2022-05-03 13:40:22,130 [main] INFO CCAttempt - Clicked on Import button
+2022-05-03 13:40:23,194 [main] INFO CCAttempt - Latest Date=03May22
+2022-05-03 13:40:23,197 [main] INFO CCAttempt - FileName for import is==CycleCount-1686409-03May22005341714.xlsx
+2022-05-03 13:40:23,198 [main] INFO CCAttempt - FileName for import is==CycleCount-1686410-03May22005528468.xlsx
+2022-05-03 13:40:23,198 [main] INFO CCAttempt - FileName for import is==CycleCount-1686410-03May22005541759.xlsx
+2022-05-03 13:40:23,199 [main] INFO CCAttempt - FileName for import is==CycleCount-1686411-03May22005835827.xlsx
+2022-05-03 13:40:23,200 [main] INFO CCAttempt - FileName for import is==CycleCount-1686411-03May22005847602.xlsx
+2022-05-03 13:40:23,360 [main] INFO CCAttempt - Send file to input file
+2022-05-03 13:40:25,455 [main] INFO CCAttempt - Click on Upload button
+2022-05-03 13:40:25,519 [main] INFO CCAttempt - File is uploaded successfully
+2022-05-03 13:40:25,596 [main] INFO CCAttempt - Clicked on Exception View
+2022-05-03 13:40:26,919 [main] INFO CCAttempt - Clear Email input
+2022-05-03 13:40:27,094 [main] INFO CCAttempt - Enter value in Email input
+2022-05-03 13:40:27,277 [main] INFO CCAttempt - Click on Send button
+2022-05-03 13:40:27,511 [main] INFO CCAttempt - EmailID validation is displayed==Please enter valid email.
+2022-05-03 13:40:27,615 [main] INFO CCAttempt - Clear Email input
+2022-05-03 13:40:27,855 [main] INFO CCAttempt - Enter value in Email input
+2022-05-03 13:40:27,980 [main] INFO CCAttempt - Click on Send button
+2022-05-03 13:40:28,154 [main] INFO CCAttempt - Valid EmailID validation is displayed==Please enter valid email.
+2022-05-03 13:40:28,210 [main] INFO CCAttempt - Clear Email input
+2022-05-03 13:40:28,383 [main] INFO CCAttempt - Enter value in Email input
+2022-05-03 13:40:29,877 [main] INFO CCAttempt - Click on Send button
+2022-05-03 13:40:31,180 [main] INFO CCAttempt - Email successfully send==Email Sent successfully!
+2022-05-03 13:40:32,717 [main] INFO CCAttempt - Click on Export button of Exception View
+2022-05-03 13:40:40,938 [main] INFO CCAttempt - File is Downloaded successfully:Verified
+2022-05-03 13:40:41,042 [main] INFO CCAttempt - Click on Close button of Exception View
+2022-05-03 13:40:41,126 [main] INFO CCAttempt - ===CCAttempt Scenario 1 Test Start===
+2022-05-03 13:40:41,735 [main] INFO CCAttempt - Total parts are==44
+2022-05-03 13:40:41,803 [main] INFO CCAttempt - Value of Result of 1 Part is==FAIL
+2022-05-03 13:40:41,884 [main] INFO CCAttempt - Stock Qty for Part 1 is==1
+2022-05-03 13:40:41,959 [main] INFO CCAttempt - CC Qty for Part 1 is==0
+2022-05-03 13:40:41,959 [main] INFO CCAttempt - Stock Qty and CC Qty are different, Result is actually FAIL
+2022-05-03 13:40:41,996 [main] INFO CCAttempt - Value of Result of 2 Part is==FAIL
+2022-05-03 13:40:42,037 [main] INFO CCAttempt - Stock Qty for Part 2 is==1
+2022-05-03 13:40:42,083 [main] INFO CCAttempt - CC Qty for Part 2 is==0
+2022-05-03 13:40:42,084 [main] INFO CCAttempt - Stock Qty and CC Qty are different, Result is actually FAIL
+2022-05-03 13:40:42,123 [main] INFO CCAttempt - Value of Result of 3 Part is==FAIL
+2022-05-03 13:40:42,171 [main] INFO CCAttempt - Stock Qty for Part 3 is==1
+2022-05-03 13:40:42,220 [main] INFO CCAttempt - CC Qty for Part 3 is==0
+2022-05-03 13:40:42,221 [main] INFO CCAttempt - Stock Qty and CC Qty are different, Result is actually FAIL
+2022-05-03 13:40:42,424 [main] INFO CCAttempt - Clicked on CCQty
+2022-05-03 13:40:42,522 [main] INFO CCAttempt - Total parts are==44
+2022-05-03 13:40:42,565 [main] INFO CCAttempt - Clicked on CCQty
+2022-05-03 13:40:43,748 [main] INFO CCAttempt - Entered CC Qty equal to Stock Qty
+2022-05-03 13:40:43,895 [main] INFO CCAttempt - Total parts are==44
+2022-05-03 13:40:43,945 [main] INFO CCAttempt - Value of Result of 4 partEx is==
+2022-05-03 13:40:44,006 [main] INFO CCAttempt - Total parts are==44
+2022-05-03 13:40:44,046 [main] INFO CCAttempt - Value of Result of 5 partEx is==
+2022-05-03 13:40:44,107 [main] INFO CCAttempt - Total parts are==44
+2022-05-03 13:40:44,146 [main] INFO CCAttempt - Value of Result of 6 partEx is==
+2022-05-03 13:40:44,208 [main] INFO CCAttempt - Total parts are==44
+2022-05-03 13:40:44,247 [main] INFO CCAttempt - Value of Result of 7 partEx is==
+2022-05-03 13:40:44,306 [main] INFO CCAttempt - Total parts are==44
+2022-05-03 13:40:44,343 [main] INFO CCAttempt - Value of Result of 8 partEx is==
+2022-05-03 13:40:44,405 [main] INFO CCAttempt - Total parts are==44
+2022-05-03 13:40:44,442 [main] INFO CCAttempt - Value of Result of 9 partEx is==
+2022-05-03 13:40:44,501 [main] INFO CCAttempt - Total parts are==44
+2022-05-03 13:40:44,539 [main] INFO CCAttempt - Value of Result of 10 partEx is==
+2022-05-03 13:40:44,598 [main] INFO CCAttempt - Total parts are==44
+2022-05-03 13:40:44,648 [main] INFO CCAttempt - Value of Result of 11 partEx is==
+2022-05-03 13:40:44,759 [main] INFO CCAttempt - Total parts are==44
+2022-05-03 13:40:44,828 [main] INFO CCAttempt - Value of Result of 12 partEx is==
+2022-05-03 13:40:44,910 [main] INFO CCAttempt - Total parts are==44
+2022-05-03 13:40:44,953 [main] INFO CCAttempt - Value of Result of 13 partEx is==
+2022-05-03 13:40:45,027 [main] INFO CCAttempt - Total parts are==44
+2022-05-03 13:40:45,098 [main] INFO CCAttempt - Value of Result of 14 partEx is==
+2022-05-03 13:40:45,198 [main] INFO CCAttempt - Total parts are==44
+2022-05-03 13:40:45,268 [main] INFO CCAttempt - Value of Result of 15 partEx is==
+2022-05-03 13:40:45,372 [main] INFO CCAttempt - Total parts are==44
+2022-05-03 13:40:45,439 [main] INFO CCAttempt - Value of Result of 16 partEx is==
+2022-05-03 13:40:45,538 [main] INFO CCAttempt - Total parts are==44
+2022-05-03 13:40:45,612 [main] INFO CCAttempt - Value of Result of 17 partEx is==
+2022-05-03 13:40:45,720 [main] INFO CCAttempt - Total parts are==44
+2022-05-03 13:40:45,788 [main] INFO CCAttempt - Value of Result of 18 partEx is==
+2022-05-03 13:40:45,955 [main] INFO CCAttempt - Total parts are==44
+2022-05-03 13:40:46,024 [main] INFO CCAttempt - Value of Result of 19 partEx is==
+2022-05-03 13:40:46,085 [main] INFO CCAttempt - Total parts are==44
+2022-05-03 13:40:46,119 [main] INFO CCAttempt - Value of Result of 20 partEx is==
+2022-05-03 13:40:46,167 [main] INFO CCAttempt - Total parts are==44
+2022-05-03 13:40:46,199 [main] INFO CCAttempt - Value of Result of 21 partEx is==
+2022-05-03 13:40:46,258 [main] INFO CCAttempt - Total parts are==44
+2022-05-03 13:40:46,311 [main] INFO CCAttempt - Value of Result of 22 partEx is==
+2022-05-03 13:40:46,405 [main] INFO CCAttempt - Total parts are==44
+2022-05-03 13:40:46,472 [main] INFO CCAttempt - Value of Result of 23 partEx is==
+2022-05-03 13:40:46,561 [main] INFO CCAttempt - Total parts are==44
+2022-05-03 13:40:46,621 [main] INFO CCAttempt - Value of Result of 24 partEx is==
+2022-05-03 13:40:46,712 [main] INFO CCAttempt - Total parts are==44
+2022-05-03 13:40:46,770 [main] INFO CCAttempt - Value of Result of 25 partEx is==
+2022-05-03 13:40:46,861 [main] INFO CCAttempt - Total parts are==44
+2022-05-03 13:40:46,921 [main] INFO CCAttempt - Value of Result of 26 partEx is==
+2022-05-03 13:40:47,010 [main] INFO CCAttempt - Total parts are==44
+2022-05-03 13:40:47,071 [main] INFO CCAttempt - Value of Result of 27 partEx is==
+2022-05-03 13:40:47,168 [main] INFO CCAttempt - Total parts are==44
+2022-05-03 13:40:47,236 [main] INFO CCAttempt - Value of Result of 28 partEx is==
+2022-05-03 13:40:47,324 [main] INFO CCAttempt - Total parts are==44
+2022-05-03 13:40:47,359 [main] INFO CCAttempt - Value of Result of 29 partEx is==
+2022-05-03 13:40:47,432 [main] INFO CCAttempt - Total parts are==44
+2022-05-03 13:40:47,484 [main] INFO CCAttempt - Value of Result of 30 partEx is==
+2022-05-03 13:40:47,567 [main] INFO CCAttempt - Total parts are==44
+2022-05-03 13:40:47,629 [main] INFO CCAttempt - Value of Result of 31 partEx is==
+2022-05-03 13:40:47,718 [main] INFO CCAttempt - Total parts are==44
+2022-05-03 13:40:47,783 [main] INFO CCAttempt - Value of Result of 32 partEx is==
+2022-05-03 13:40:47,870 [main] INFO CCAttempt - Total parts are==44
+2022-05-03 13:40:47,932 [main] INFO CCAttempt - Value of Result of 33 partEx is==
+2022-05-03 13:40:48,026 [main] INFO CCAttempt - Total parts are==44
+2022-05-03 13:40:48,090 [main] INFO CCAttempt - Value of Result of 34 partEx is==
+2022-05-03 13:40:48,176 [main] INFO CCAttempt - Total parts are==44
+2022-05-03 13:40:48,240 [main] INFO CCAttempt - Value of Result of 35 partEx is==
+2022-05-03 13:40:48,345 [main] INFO CCAttempt - Total parts are==44
+2022-05-03 13:40:48,414 [main] INFO CCAttempt - Value of Result of 36 partEx is==
+2022-05-03 13:40:48,510 [main] INFO CCAttempt - Total parts are==44
+2022-05-03 13:40:48,574 [main] INFO CCAttempt - Value of Result of 37 partEx is==
+2022-05-03 13:40:48,679 [main] INFO CCAttempt - Total parts are==44
+2022-05-03 13:40:48,746 [main] INFO CCAttempt - Value of Result of 38 partEx is==
+2022-05-03 13:40:48,846 [main] INFO CCAttempt - Total parts are==44
+2022-05-03 13:40:48,924 [main] INFO CCAttempt - Value of Result of 39 partEx is==
+2022-05-03 13:40:49,038 [main] INFO CCAttempt - Total parts are==44
+2022-05-03 13:40:49,106 [main] INFO CCAttempt - Value of Result of 40 partEx is==
+2022-05-03 13:40:49,208 [main] INFO CCAttempt - Total parts are==44
+2022-05-03 13:40:49,275 [main] INFO CCAttempt - Value of Result of 41 partEx is==
+2022-05-03 13:40:49,376 [main] INFO CCAttempt - Total parts are==44
+2022-05-03 13:40:49,448 [main] INFO CCAttempt - Value of Result of 42 partEx is==
+2022-05-03 13:40:49,544 [main] INFO CCAttempt - Total parts are==44
+2022-05-03 13:40:49,616 [main] INFO CCAttempt - Value of Result of 43 partEx is==
+2022-05-03 13:40:53,954 [main] INFO CCAttempt - Click on Save button
+2022-05-03 13:40:55,286 [main] INFO CCAttempt - TaskLog stage is==CC ATTEMPT 2
+2022-05-03 13:40:56,171 [main] INFO CCAttempt - Click on the Record
+2022-05-03 13:40:57,506 [main] INFO CCAttempt - Total number of records==Page 1 of 1 (43 items)
+2022-05-03 13:40:57,748 [main] INFO CCAttempt - It is CCAttempt2
+2022-05-03 13:40:57,821 [main] INFO CCAttempt - Total parts are==44
+2022-05-03 13:40:57,905 [main] INFO CCAttempt - Value of Result of 1 partAtt2 is==FAIL
+2022-05-03 13:40:57,988 [main] INFO CCAttempt - Stock Qty for partAtt2 1 is==1
+2022-05-03 13:40:58,077 [main] INFO CCAttempt - CC Qty for partAtt2 1 is==0
+2022-05-03 13:40:58,078 [main] INFO CCAttempt - Stock Qty and CC Qty are different, Result is actually FAIL
+2022-05-03 13:40:58,236 [main] INFO CCAttempt - Clicked on CCQty
+2022-05-03 13:40:58,343 [main] INFO CCAttempt - Total partAtt2s are==44
+2022-05-03 13:40:58,386 [main] INFO CCAttempt - Clicked on CCQty
+2022-05-03 13:40:59,562 [main] INFO CCAttempt - Entered CC Qty equal to Stock Qty
+2022-05-03 13:40:59,622 [main] INFO CCAttempt - Total parts are==44
+2022-05-03 13:40:59,668 [main] INFO CCAttempt - Value of Result of 2 part is==FAIL
+2022-05-03 13:40:59,713 [main] INFO CCAttempt - Stock Qty for part 2 is==1
+2022-05-03 13:40:59,763 [main] INFO CCAttempt - CC Qty for part 2 is==
+2022-05-03 13:40:59,763 [main] INFO CCAttempt - Stock Qty and CC Qty are different, Result is actually FAIL
+2022-05-03 13:40:59,795 [main] INFO CCAttempt - Clicked on CCQty
+2022-05-03 13:41:00,699 [main] INFO CCAttempt - Entered CC Qty equal to Stock Qty
+2022-05-03 13:41:00,761 [main] INFO CCAttempt - Total parts are==44
+2022-05-03 13:41:00,801 [main] INFO CCAttempt - Value of Result of 3 part is==SUCCESS
+2022-05-03 13:41:00,846 [main] INFO CCAttempt - Value of Result of 4 partAtt2 is==FAIL
+2022-05-03 13:41:00,893 [main] INFO CCAttempt - Stock Qty for partAtt2 4 is==1
+2022-05-03 13:41:00,945 [main] INFO CCAttempt - CC Qty for partAtt2 4 is==0
+2022-05-03 13:41:00,946 [main] INFO CCAttempt - Stock Qty and CC Qty are different, Result is actually FAIL
+2022-05-03 13:41:01,042 [main] INFO CCAttempt - Clicked on CCQty
+2022-05-03 13:41:01,136 [main] INFO CCAttempt - Total partAtt2s are==44
+2022-05-03 13:41:01,181 [main] INFO CCAttempt - Clicked on CCQty
+2022-05-03 13:41:02,282 [main] INFO CCAttempt - Entered CC Qty equal to Stock Qty
+2022-05-03 13:41:02,458 [main] INFO CCAttempt - Total parts are==44
+2022-05-03 13:41:02,526 [main] INFO CCAttempt - Value of Result of 5 part is==FAIL
+2022-05-03 13:41:02,592 [main] INFO CCAttempt - Stock Qty for part 5 is==1
+2022-05-03 13:41:02,665 [main] INFO CCAttempt - CC Qty for part 5 is==
+2022-05-03 13:41:02,665 [main] INFO CCAttempt - Stock Qty and CC Qty are different, Result is actually FAIL
+2022-05-03 13:41:02,708 [main] INFO CCAttempt - Clicked on CCQty
+2022-05-03 13:41:03,702 [main] INFO CCAttempt - Entered CC Qty equal to Stock Qty
+2022-05-03 13:41:03,798 [main] INFO CCAttempt - Total parts are==44
+2022-05-03 13:41:03,879 [main] INFO CCAttempt - Value of Result of 6 part is==FAIL
+2022-05-03 13:41:03,959 [main] INFO CCAttempt - Stock Qty for part 6 is==1
+2022-05-03 13:41:04,043 [main] INFO CCAttempt - CC Qty for part 6 is==
+2022-05-03 13:41:04,044 [main] INFO CCAttempt - Stock Qty and CC Qty are different, Result is actually FAIL
+2022-05-03 13:41:04,094 [main] INFO CCAttempt - Clicked on CCQty
+2022-05-03 13:41:05,143 [main] INFO CCAttempt - Entered CC Qty equal to Stock Qty
+2022-05-03 13:41:05,224 [main] INFO CCAttempt - Total parts are==44
+2022-05-03 13:41:05,279 [main] INFO CCAttempt - Value of Result of 7 part is==FAIL
+2022-05-03 13:41:05,333 [main] INFO CCAttempt - Stock Qty for part 7 is==1
+2022-05-03 13:41:05,395 [main] INFO CCAttempt - CC Qty for part 7 is==
+2022-05-03 13:41:05,396 [main] INFO CCAttempt - Stock Qty and CC Qty are different, Result is actually FAIL
+2022-05-03 13:41:05,431 [main] INFO CCAttempt - Clicked on CCQty
+2022-05-03 13:41:06,727 [main] INFO CCAttempt - Entered CC Qty equal to Stock Qty
+2022-05-03 13:41:06,873 [main] INFO CCAttempt - Total parts are==44
+2022-05-03 13:41:06,928 [main] INFO CCAttempt - Value of Result of 8 part is==FAIL
+2022-05-03 13:41:06,992 [main] INFO CCAttempt - Stock Qty for part 8 is==1
+2022-05-03 13:41:07,077 [main] INFO CCAttempt - CC Qty for part 8 is==
+2022-05-03 13:41:07,078 [main] INFO CCAttempt - Stock Qty and CC Qty are different, Result is actually FAIL
+2022-05-03 13:41:07,116 [main] INFO CCAttempt - Clicked on CCQty
+2022-05-03 13:41:08,261 [main] INFO CCAttempt - Entered CC Qty equal to Stock Qty
+2022-05-03 13:41:08,356 [main] INFO CCAttempt - Total parts are==44
+2022-05-03 13:41:08,421 [main] INFO CCAttempt - Value of Result of 9 part is==FAIL
+2022-05-03 13:41:08,481 [main] INFO CCAttempt - Stock Qty for part 9 is==1
+2022-05-03 13:41:08,548 [main] INFO CCAttempt - CC Qty for part 9 is==
+2022-05-03 13:41:08,549 [main] INFO CCAttempt - Stock Qty and CC Qty are different, Result is actually FAIL
+2022-05-03 13:41:08,585 [main] INFO CCAttempt - Clicked on CCQty
+2022-05-03 13:41:09,628 [main] INFO CCAttempt - Entered CC Qty equal to Stock Qty
+2022-05-03 13:41:09,688 [main] INFO CCAttempt - Total parts are==44
+2022-05-03 13:41:09,735 [main] INFO CCAttempt - Value of Result of 10 part is==FAIL
+2022-05-03 13:41:09,781 [main] INFO CCAttempt - Stock Qty for part 10 is==1
+2022-05-03 13:41:09,843 [main] INFO CCAttempt - CC Qty for part 10 is==
+2022-05-03 13:41:09,844 [main] INFO CCAttempt - Stock Qty and CC Qty are different, Result is actually FAIL
+2022-05-03 13:41:09,879 [main] INFO CCAttempt - Clicked on CCQty
+2022-05-03 13:41:11,000 [main] INFO CCAttempt - Entered CC Qty equal to Stock Qty
+2022-05-03 13:41:11,099 [main] INFO CCAttempt - Total parts are==44
+2022-05-03 13:41:11,170 [main] INFO CCAttempt - Value of Result of 11 part is==FAIL
+2022-05-03 13:41:11,218 [main] INFO CCAttempt - Stock Qty for part 11 is==1
+2022-05-03 13:41:11,273 [main] INFO CCAttempt - CC Qty for part 11 is==
+2022-05-03 13:41:11,273 [main] INFO CCAttempt - Stock Qty and CC Qty are different, Result is actually FAIL
+2022-05-03 13:41:11,302 [main] INFO CCAttempt - Clicked on CCQty
+2022-05-03 13:41:12,445 [main] INFO CCAttempt - Entered CC Qty equal to Stock Qty
+2022-05-03 13:41:12,521 [main] INFO CCAttempt - Total parts are==44
+2022-05-03 13:41:12,570 [main] INFO CCAttempt - Value of Result of 12 part is==FAIL
+2022-05-03 13:41:12,615 [main] INFO CCAttempt - Stock Qty for part 12 is==1
+2022-05-03 13:41:12,670 [main] INFO CCAttempt - CC Qty for part 12 is==
+2022-05-03 13:41:12,670 [main] INFO CCAttempt - Stock Qty and CC Qty are different, Result is actually FAIL
+2022-05-03 13:41:12,699 [main] INFO CCAttempt - Clicked on CCQty
+2022-05-03 13:41:13,727 [main] INFO CCAttempt - Entered CC Qty equal to Stock Qty
+2022-05-03 13:41:13,869 [main] INFO CCAttempt - Total parts are==44
+2022-05-03 13:41:13,917 [main] INFO CCAttempt - Value of Result of 13 part is==FAIL
+2022-05-03 13:41:13,965 [main] INFO CCAttempt - Stock Qty for part 13 is==1
+2022-05-03 13:41:14,017 [main] INFO CCAttempt - CC Qty for part 13 is==
+2022-05-03 13:41:14,017 [main] INFO CCAttempt - Stock Qty and CC Qty are different, Result is actually FAIL
+2022-05-03 13:41:14,047 [main] INFO CCAttempt - Clicked on CCQty
+2022-05-03 13:41:15,135 [main] INFO CCAttempt - Entered CC Qty equal to Stock Qty
+2022-05-03 13:41:15,233 [main] INFO CCAttempt - Total parts are==44
+2022-05-03 13:41:15,286 [main] INFO CCAttempt - Value of Result of 14 part is==FAIL
+2022-05-03 13:41:15,338 [main] INFO CCAttempt - Stock Qty for part 14 is==1
+2022-05-03 13:41:15,395 [main] INFO CCAttempt - CC Qty for part 14 is==
+2022-05-03 13:41:15,395 [main] INFO CCAttempt - Stock Qty and CC Qty are different, Result is actually FAIL
+2022-05-03 13:41:15,431 [main] INFO CCAttempt - Clicked on CCQty
+2022-05-03 13:41:16,408 [main] INFO CCAttempt - Entered CC Qty equal to Stock Qty
+2022-05-03 13:41:16,493 [main] INFO CCAttempt - Total parts are==44
+2022-05-03 13:41:16,551 [main] INFO CCAttempt - Value of Result of 15 part is==FAIL
+2022-05-03 13:41:16,596 [main] INFO CCAttempt - Stock Qty for part 15 is==1
+2022-05-03 13:41:16,652 [main] INFO CCAttempt - CC Qty for part 15 is==
+2022-05-03 13:41:16,653 [main] INFO CCAttempt - Stock Qty and CC Qty are different, Result is actually FAIL
+2022-05-03 13:41:16,696 [main] INFO CCAttempt - Clicked on CCQty
+2022-05-03 13:41:17,768 [main] INFO CCAttempt - Entered CC Qty equal to Stock Qty
+2022-05-03 13:41:17,923 [main] INFO CCAttempt - Total parts are==44
+2022-05-03 13:41:17,976 [main] INFO CCAttempt - Value of Result of 16 part is==FAIL
+2022-05-03 13:41:18,027 [main] INFO CCAttempt - Stock Qty for part 16 is==1
+2022-05-03 13:41:18,108 [main] INFO CCAttempt - CC Qty for part 16 is==
+2022-05-03 13:41:18,108 [main] INFO CCAttempt - Stock Qty and CC Qty are different, Result is actually FAIL
+2022-05-03 13:41:18,151 [main] INFO CCAttempt - Clicked on CCQty
+2022-05-03 13:41:19,321 [main] INFO CCAttempt - Entered CC Qty equal to Stock Qty
+2022-05-03 13:41:19,551 [main] INFO CCAttempt - Total parts are==44
+2022-05-03 13:41:19,602 [main] INFO CCAttempt - Value of Result of 17 part is==FAIL
+2022-05-03 13:41:19,654 [main] INFO CCAttempt - Stock Qty for part 17 is==1
+2022-05-03 13:41:19,728 [main] INFO CCAttempt - CC Qty for part 17 is==
+2022-05-03 13:41:19,729 [main] INFO CCAttempt - Stock Qty and CC Qty are different, Result is actually FAIL
+2022-05-03 13:41:19,781 [main] INFO CCAttempt - Clicked on CCQty
+2022-05-03 13:41:20,742 [main] INFO CCAttempt - Entered CC Qty equal to Stock Qty
+2022-05-03 13:41:20,918 [main] INFO CCAttempt - Total parts are==44
+2022-05-03 13:41:20,980 [main] INFO CCAttempt - Value of Result of 18 part is==FAIL
+2022-05-03 13:41:21,036 [main] INFO CCAttempt - Stock Qty for part 18 is==1
+2022-05-03 13:41:21,101 [main] INFO CCAttempt - CC Qty for part 18 is==
+2022-05-03 13:41:21,101 [main] INFO CCAttempt - Stock Qty and CC Qty are different, Result is actually FAIL
+2022-05-03 13:41:21,135 [main] INFO CCAttempt - Clicked on CCQty
+2022-05-03 13:41:22,238 [main] INFO CCAttempt - Entered CC Qty equal to Stock Qty
+2022-05-03 13:41:22,391 [main] INFO CCAttempt - Total parts are==44
+2022-05-03 13:41:22,440 [main] INFO CCAttempt - Value of Result of 19 part is==FAIL
+2022-05-03 13:41:22,487 [main] INFO CCAttempt - Stock Qty for part 19 is==1
+2022-05-03 13:41:22,543 [main] INFO CCAttempt - CC Qty for part 19 is==
+2022-05-03 13:41:22,544 [main] INFO CCAttempt - Stock Qty and CC Qty are different, Result is actually FAIL
+2022-05-03 13:41:22,599 [main] INFO CCAttempt - Clicked on CCQty
+2022-05-03 13:41:23,766 [main] INFO CCAttempt - Entered CC Qty equal to Stock Qty
+2022-05-03 13:41:23,863 [main] INFO CCAttempt - Total parts are==44
+2022-05-03 13:41:23,948 [main] INFO CCAttempt - Value of Result of 20 part is==FAIL
+2022-05-03 13:41:24,036 [main] INFO CCAttempt - Stock Qty for part 20 is==1
+2022-05-03 13:41:24,118 [main] INFO CCAttempt - CC Qty for part 20 is==
+2022-05-03 13:41:24,118 [main] INFO CCAttempt - Stock Qty and CC Qty are different, Result is actually FAIL
+2022-05-03 13:41:24,147 [main] INFO CCAttempt - Clicked on CCQty
+2022-05-03 13:41:25,151 [main] INFO CCAttempt - Entered CC Qty equal to Stock Qty
+2022-05-03 13:41:25,436 [main] INFO CCAttempt - Total parts are==44
+2022-05-03 13:41:25,486 [main] INFO CCAttempt - Value of Result of 21 part is==FAIL
+2022-05-03 13:41:25,534 [main] INFO CCAttempt - Stock Qty for part 21 is==1
+2022-05-03 13:41:25,614 [main] INFO CCAttempt - CC Qty for part 21 is==
+2022-05-03 13:41:25,614 [main] INFO CCAttempt - Stock Qty and CC Qty are different, Result is actually FAIL
+2022-05-03 13:41:25,677 [main] INFO CCAttempt - Clicked on CCQty
+2022-05-03 13:41:27,089 [main] INFO CCAttempt - Entered CC Qty equal to Stock Qty
+2022-05-03 13:41:27,237 [main] INFO CCAttempt - Total parts are==44
+2022-05-03 13:41:27,286 [main] INFO CCAttempt - Value of Result of 22 part is==FAIL
+2022-05-03 13:41:27,338 [main] INFO CCAttempt - Stock Qty for part 22 is==1
+2022-05-03 13:41:27,422 [main] INFO CCAttempt - CC Qty for part 22 is==
+2022-05-03 13:41:27,423 [main] INFO CCAttempt - Stock Qty and CC Qty are different, Result is actually FAIL
+2022-05-03 13:41:27,459 [main] INFO CCAttempt - Clicked on CCQty
+2022-05-03 13:41:28,443 [main] INFO CCAttempt - Entered CC Qty equal to Stock Qty
+2022-05-03 13:41:28,525 [main] INFO CCAttempt - Total parts are==44
+2022-05-03 13:41:28,576 [main] INFO CCAttempt - Value of Result of 23 part is==FAIL
+2022-05-03 13:41:28,626 [main] INFO CCAttempt - Stock Qty for part 23 is==1
+2022-05-03 13:41:28,683 [main] INFO CCAttempt - CC Qty for part 23 is==
+2022-05-03 13:41:28,683 [main] INFO CCAttempt - Stock Qty and CC Qty are different, Result is actually FAIL
+2022-05-03 13:41:28,717 [main] INFO CCAttempt - Clicked on CCQty
+2022-05-03 13:41:29,952 [main] INFO CCAttempt - Entered CC Qty equal to Stock Qty
+2022-05-03 13:41:30,291 [main] INFO CCAttempt - Total parts are==44
+2022-05-03 13:41:30,451 [main] INFO CCAttempt - Value of Result of 24 part is==FAIL
+2022-05-03 13:41:30,500 [main] INFO CCAttempt - Stock Qty for part 24 is==1
+2022-05-03 13:41:30,554 [main] INFO CCAttempt - CC Qty for part 24 is==
+2022-05-03 13:41:30,554 [main] INFO CCAttempt - Stock Qty and CC Qty are different, Result is actually FAIL
+2022-05-03 13:41:30,583 [main] INFO CCAttempt - Clicked on CCQty
+2022-05-03 13:41:31,602 [main] INFO CCAttempt - Entered CC Qty equal to Stock Qty
+2022-05-03 13:41:31,702 [main] INFO CCAttempt - Total parts are==44
+2022-05-03 13:41:31,769 [main] INFO CCAttempt - Value of Result of 25 part is==FAIL
+2022-05-03 13:41:31,836 [main] INFO CCAttempt - Stock Qty for part 25 is==1
+2022-05-03 13:41:31,911 [main] INFO CCAttempt - CC Qty for part 25 is==
+2022-05-03 13:41:31,912 [main] INFO CCAttempt - Stock Qty and CC Qty are different, Result is actually FAIL
+2022-05-03 13:41:31,951 [main] INFO CCAttempt - Clicked on CCQty
+2022-05-03 13:41:32,768 [main] INFO CCAttempt - Entered CC Qty equal to Stock Qty
+2022-05-03 13:41:33,179 [main] INFO CCAttempt - Total parts are==44
+2022-05-03 13:41:33,254 [main] INFO CCAttempt - Value of Result of 26 part is==FAIL
+2022-05-03 13:41:33,320 [main] INFO CCAttempt - Stock Qty for part 26 is==1
+2022-05-03 13:41:33,395 [main] INFO CCAttempt - CC Qty for part 26 is==
+2022-05-03 13:41:33,395 [main] INFO CCAttempt - Stock Qty and CC Qty are different, Result is actually FAIL
+2022-05-03 13:41:33,435 [main] INFO CCAttempt - Clicked on CCQty
+2022-05-03 13:41:34,334 [main] INFO CCAttempt - Entered CC Qty equal to Stock Qty
+2022-05-03 13:41:34,420 [main] INFO CCAttempt - Total parts are==44
+2022-05-03 13:41:34,466 [main] INFO CCAttempt - Value of Result of 27 part is==FAIL
+2022-05-03 13:41:34,516 [main] INFO CCAttempt - Stock Qty for part 27 is==1
+2022-05-03 13:41:34,585 [main] INFO CCAttempt - CC Qty for part 27 is==
+2022-05-03 13:41:34,585 [main] INFO CCAttempt - Stock Qty and CC Qty are different, Result is actually FAIL
+2022-05-03 13:41:34,624 [main] INFO CCAttempt - Clicked on CCQty
+2022-05-03 13:41:35,678 [main] INFO CCAttempt - Entered CC Qty equal to Stock Qty
+2022-05-03 13:41:35,766 [main] INFO CCAttempt - Total parts are==44
+2022-05-03 13:41:35,842 [main] INFO CCAttempt - Value of Result of 28 part is==FAIL
+2022-05-03 13:41:35,909 [main] INFO CCAttempt - Stock Qty for part 28 is==1
+2022-05-03 13:41:35,986 [main] INFO CCAttempt - CC Qty for part 28 is==
+2022-05-03 13:41:35,986 [main] INFO CCAttempt - Stock Qty and CC Qty are different, Result is actually FAIL
+2022-05-03 13:41:36,014 [main] INFO CCAttempt - Clicked on CCQty
+2022-05-03 13:41:37,154 [main] INFO CCAttempt - Entered CC Qty equal to Stock Qty
+2022-05-03 13:41:37,228 [main] INFO CCAttempt - Total parts are==44
+2022-05-03 13:41:37,273 [main] INFO CCAttempt - Value of Result of 29 part is==FAIL
+2022-05-03 13:41:37,314 [main] INFO CCAttempt - Stock Qty for part 29 is==1
+2022-05-03 13:41:37,364 [main] INFO CCAttempt - CC Qty for part 29 is==
+2022-05-03 13:41:37,365 [main] INFO CCAttempt - Stock Qty and CC Qty are different, Result is actually FAIL
+2022-05-03 13:41:37,393 [main] INFO CCAttempt - Clicked on CCQty
+2022-05-03 13:41:38,351 [main] INFO CCAttempt - Entered CC Qty equal to Stock Qty
+2022-05-03 13:41:38,448 [main] INFO CCAttempt - Total parts are==44
+2022-05-03 13:41:38,530 [main] INFO CCAttempt - Value of Result of 30 part is==FAIL
+2022-05-03 13:41:38,583 [main] INFO CCAttempt - Stock Qty for part 30 is==1
+2022-05-03 13:41:38,640 [main] INFO CCAttempt - CC Qty for part 30 is==
+2022-05-03 13:41:38,640 [main] INFO CCAttempt - Stock Qty and CC Qty are different, Result is actually FAIL
+2022-05-03 13:41:38,671 [main] INFO CCAttempt - Clicked on CCQty
+2022-05-03 13:41:39,819 [main] INFO CCAttempt - Entered CC Qty equal to Stock Qty
+2022-05-03 13:41:39,994 [main] INFO CCAttempt - Total parts are==44
+2022-05-03 13:41:40,059 [main] INFO CCAttempt - Value of Result of 31 part is==FAIL
+2022-05-03 13:41:40,105 [main] INFO CCAttempt - Stock Qty for part 31 is==1
+2022-05-03 13:41:40,171 [main] INFO CCAttempt - CC Qty for part 31 is==
+2022-05-03 13:41:40,171 [main] INFO CCAttempt - Stock Qty and CC Qty are different, Result is actually FAIL
+2022-05-03 13:41:40,213 [main] INFO CCAttempt - Clicked on CCQty
+2022-05-03 13:41:41,364 [main] INFO CCAttempt - Entered CC Qty equal to Stock Qty
+2022-05-03 13:41:41,477 [main] INFO CCAttempt - Total parts are==44
+2022-05-03 13:41:41,533 [main] INFO CCAttempt - Value of Result of 32 part is==FAIL
+2022-05-03 13:41:41,585 [main] INFO CCAttempt - Stock Qty for part 32 is==1
+2022-05-03 13:41:41,641 [main] INFO CCAttempt - CC Qty for part 32 is==
+2022-05-03 13:41:41,641 [main] INFO CCAttempt - Stock Qty and CC Qty are different, Result is actually FAIL
+2022-05-03 13:41:41,672 [main] INFO CCAttempt - Clicked on CCQty
+2022-05-03 13:41:42,601 [main] INFO CCAttempt - Entered CC Qty equal to Stock Qty
+2022-05-03 13:41:42,894 [main] INFO CCAttempt - Total parts are==44
+2022-05-03 13:41:42,944 [main] INFO CCAttempt - Value of Result of 33 part is==FAIL
+2022-05-03 13:41:42,991 [main] INFO CCAttempt - Stock Qty for part 33 is==1
+2022-05-03 13:41:43,062 [main] INFO CCAttempt - CC Qty for part 33 is==
+2022-05-03 13:41:43,062 [main] INFO CCAttempt - Stock Qty and CC Qty are different, Result is actually FAIL
+2022-05-03 13:41:43,096 [main] INFO CCAttempt - Clicked on CCQty
+2022-05-03 13:41:44,203 [main] INFO CCAttempt - Entered CC Qty equal to Stock Qty
+2022-05-03 13:41:44,367 [main] INFO CCAttempt - Total parts are==44
+2022-05-03 13:41:44,415 [main] INFO CCAttempt - Value of Result of 34 part is==FAIL
+2022-05-03 13:41:44,462 [main] INFO CCAttempt - Stock Qty for part 34 is==1
+2022-05-03 13:41:44,518 [main] INFO CCAttempt - CC Qty for part 34 is==
+2022-05-03 13:41:44,518 [main] INFO CCAttempt - Stock Qty and CC Qty are different, Result is actually FAIL
+2022-05-03 13:41:44,547 [main] INFO CCAttempt - Clicked on CCQty
+2022-05-03 13:41:45,514 [main] INFO CCAttempt - Entered CC Qty equal to Stock Qty
+2022-05-03 13:41:45,688 [main] INFO CCAttempt - Total parts are==44
+2022-05-03 13:41:45,751 [main] INFO CCAttempt - Value of Result of 35 part is==FAIL
+2022-05-03 13:41:45,809 [main] INFO CCAttempt - Stock Qty for part 35 is==1
+2022-05-03 13:41:45,891 [main] INFO CCAttempt - CC Qty for part 35 is==
+2022-05-03 13:41:45,892 [main] INFO CCAttempt - Stock Qty and CC Qty are different, Result is actually FAIL
+2022-05-03 13:41:45,932 [main] INFO CCAttempt - Clicked on CCQty
+2022-05-03 13:41:46,971 [main] INFO CCAttempt - Entered CC Qty equal to Stock Qty
+2022-05-03 13:41:47,070 [main] INFO CCAttempt - Total parts are==44
+2022-05-03 13:41:47,112 [main] INFO CCAttempt - Value of Result of 36 part is==FAIL
+2022-05-03 13:41:47,155 [main] INFO CCAttempt - Stock Qty for part 36 is==1
+2022-05-03 13:41:47,199 [main] INFO CCAttempt - CC Qty for part 36 is==
+2022-05-03 13:41:47,200 [main] INFO CCAttempt - Stock Qty and CC Qty are different, Result is actually FAIL
+2022-05-03 13:41:47,229 [main] INFO CCAttempt - Clicked on CCQty
+2022-05-03 13:41:48,112 [main] INFO CCAttempt - Entered CC Qty equal to Stock Qty
+2022-05-03 13:41:48,198 [main] INFO CCAttempt - Total parts are==44
+2022-05-03 13:41:48,249 [main] INFO CCAttempt - Value of Result of 37 part is==FAIL
+2022-05-03 13:41:48,298 [main] INFO CCAttempt - Stock Qty for part 37 is==1
+2022-05-03 13:41:48,351 [main] INFO CCAttempt - CC Qty for part 37 is==
+2022-05-03 13:41:48,351 [main] INFO CCAttempt - Stock Qty and CC Qty are different, Result is actually FAIL
+2022-05-03 13:41:48,381 [main] INFO CCAttempt - Clicked on CCQty
+2022-05-03 13:41:49,291 [main] INFO CCAttempt - Entered CC Qty equal to Stock Qty
+2022-05-03 13:41:49,386 [main] INFO CCAttempt - Total parts are==44
+2022-05-03 13:41:49,436 [main] INFO CCAttempt - Value of Result of 38 part is==FAIL
+2022-05-03 13:41:49,487 [main] INFO CCAttempt - Stock Qty for part 38 is==1
+2022-05-03 13:41:49,541 [main] INFO CCAttempt - CC Qty for part 38 is==
+2022-05-03 13:41:49,541 [main] INFO CCAttempt - Stock Qty and CC Qty are different, Result is actually FAIL
+2022-05-03 13:41:49,572 [main] INFO CCAttempt - Clicked on CCQty
+2022-05-03 13:41:50,513 [main] INFO CCAttempt - Entered CC Qty equal to Stock Qty
+2022-05-03 13:41:50,614 [main] INFO CCAttempt - Total parts are==44
+2022-05-03 13:41:50,676 [main] INFO CCAttempt - Value of Result of 39 part is==FAIL
+2022-05-03 13:41:50,731 [main] INFO CCAttempt - Stock Qty for part 39 is==1
+2022-05-03 13:41:50,798 [main] INFO CCAttempt - CC Qty for part 39 is==
+2022-05-03 13:41:50,798 [main] INFO CCAttempt - Stock Qty and CC Qty are different, Result is actually FAIL
+2022-05-03 13:41:50,835 [main] INFO CCAttempt - Clicked on CCQty
+2022-05-03 13:41:51,625 [main] INFO CCAttempt - Entered CC Qty equal to Stock Qty
+2022-05-03 13:41:51,742 [main] INFO CCAttempt - Total parts are==44
+2022-05-03 13:41:51,803 [main] INFO CCAttempt - Value of Result of 40 part is==FAIL
+2022-05-03 13:41:51,859 [main] INFO CCAttempt - Stock Qty for part 40 is==1
+2022-05-03 13:41:51,904 [main] INFO CCAttempt - CC Qty for part 40 is==
+2022-05-03 13:41:51,904 [main] INFO CCAttempt - Stock Qty and CC Qty are different, Result is actually FAIL
+2022-05-03 13:41:51,934 [main] INFO CCAttempt - Clicked on CCQty
+2022-05-03 13:41:52,766 [main] INFO CCAttempt - Entered CC Qty equal to Stock Qty
+2022-05-03 13:41:52,874 [main] INFO CCAttempt - Total parts are==44
+2022-05-03 13:41:52,936 [main] INFO CCAttempt - Value of Result of 41 part is==FAIL
+2022-05-03 13:41:53,001 [main] INFO CCAttempt - Stock Qty for part 41 is==1
+2022-05-03 13:41:53,072 [main] INFO CCAttempt - CC Qty for part 41 is==
+2022-05-03 13:41:53,072 [main] INFO CCAttempt - Stock Qty and CC Qty are different, Result is actually FAIL
+2022-05-03 13:41:53,114 [main] INFO CCAttempt - Clicked on CCQty
+2022-05-03 13:41:54,089 [main] INFO CCAttempt - Entered CC Qty equal to Stock Qty
+2022-05-03 13:41:54,202 [main] INFO CCAttempt - Total parts are==44
+2022-05-03 13:41:54,274 [main] INFO CCAttempt - Value of Result of 42 part is==FAIL
+2022-05-03 13:41:54,339 [main] INFO CCAttempt - Stock Qty for part 42 is==1
+2022-05-03 13:41:54,393 [main] INFO CCAttempt - CC Qty for part 42 is==
+2022-05-03 13:41:54,393 [main] INFO CCAttempt - Stock Qty and CC Qty are different, Result is actually FAIL
+2022-05-03 13:41:54,423 [main] INFO CCAttempt - Clicked on CCQty
+2022-05-03 13:41:55,301 [main] INFO CCAttempt - Entered CC Qty equal to Stock Qty
+2022-05-03 13:41:55,400 [main] INFO CCAttempt - Total parts are==44
+2022-05-03 13:41:55,451 [main] INFO CCAttempt - Value of Result of 43 part is==FAIL
+2022-05-03 13:41:55,499 [main] INFO CCAttempt - Stock Qty for part 43 is==1
+2022-05-03 13:41:55,554 [main] INFO CCAttempt - CC Qty for part 43 is==
+2022-05-03 13:41:55,555 [main] INFO CCAttempt - Stock Qty and CC Qty are different, Result is actually FAIL
+2022-05-03 13:41:55,585 [main] INFO CCAttempt - Clicked on CCQty
+2022-05-03 13:41:56,351 [main] INFO CCAttempt - Entered CC Qty equal to Stock Qty
+2022-05-03 13:41:56,938 [main] INFO CCAttempt - Click on End Cycle button
+2022-05-03 13:41:57,312 [main] INFO CCAttempt - Dialogue Message is==Are you sure you want to end the Cycle Count operation?
+2022-05-03 13:42:00,678 [main] INFO CCAttempt - Click on YES button
+2022-05-03 13:42:02,019 [main] INFO CCAttempt - Cycle is end
+2022-05-03 13:42:02,269 [main] INFO CCAttempt - Click on Operations
+2022-05-03 13:42:02,957 [main] INFO CCAttempt - Click on CycleCount
+2022-05-03 13:42:04,300 [main] INFO CCAttempt - If action column is not empty
+2022-05-03 13:42:04,546 [main] INFO CCAttempt - Click on Start button
+2022-05-03 13:42:06,465 [main] INFO CCAttempt - WorkOrderID after start==1686417
+2022-05-03 13:42:06,499 [main] INFO CCAttempt - Inserted workorderID in excel
+2022-05-03 13:42:06,699 [main] INFO CCAttempt - Clicked on Operations
+2022-05-03 13:42:07,478 [main] INFO CCAttempt - Clicked on TaskLog
+2022-05-03 13:42:08,394 [main] INFO CCAttempt - Click on Inventory Tab
+2022-05-03 13:42:09,408 [main] INFO CCAttempt - Total No of job in Inventory Tab is/are==0
+2022-05-03 13:42:09,493 [main] INFO CCAttempt - WorkOrderID is==1686417
+2022-05-03 13:42:09,649 [main] INFO CCAttempt - Clear Search box
+2022-05-03 13:42:09,854 [main] INFO CCAttempt - Enter value in search input
+2022-05-03 13:42:10,073 [main] INFO CCAttempt - Clicked on Search
+2022-05-03 13:42:13,206 [main] INFO CCAttempt - Stage is==Cycle Count Attempt
+2022-05-03 13:42:13,254 [main] INFO CCAttempt - Parts is available, Total Parts==3
+2022-05-03 13:42:13,302 [main] INFO CCAttempt - Total number of records==Page 1 of 1 (43 items)
+2022-05-03 13:42:13,353 [main] INFO CCAttempt - It is CCAttempt1
+2022-05-03 13:42:13,353 [main] INFO CCAttempt - ==Testing CCAttempt1==
+2022-05-03 13:42:13,498 [main] INFO CCAttempt - Uncheck the checkbox of Remove Zero Stock Parts
+2022-05-03 13:42:13,875 [main] INFO CCAttempt - Number of Parts with 0 stock Qty==71
+2022-05-03 13:42:14,451 [main] INFO CCAttempt - Check the checkbox of Remove Zero Stock Parts
+2022-05-03 13:42:14,505 [main] INFO CCAttempt - Number of Parts with 0 stock Qty after check the checkbox of 'Remove Zero Stock Parts'==0
+2022-05-03 13:42:14,506 [main] INFO CCAttempt - ===CCAttempt Scenario 2 Test Start===
+2022-05-03 13:42:14,809 [main] INFO CCAttempt - Total parts are==44
+2022-05-03 13:42:14,858 [main] INFO CCAttempt - Value of Result of 1 Part is==FAIL
+2022-05-03 13:42:14,906 [main] INFO CCAttempt - Stock Qty for Part 1 is==1
+2022-05-03 13:42:14,956 [main] INFO CCAttempt - CC Qty for Part 1 is==0
+2022-05-03 13:42:14,957 [main] INFO CCAttempt - Stock Qty and CC Qty are different, Result is actually FAIL
+2022-05-03 13:42:15,005 [main] INFO CCAttempt - Value of Result of 2 Part is==FAIL
+2022-05-03 13:42:15,057 [main] INFO CCAttempt - Stock Qty for Part 2 is==1
+2022-05-03 13:42:15,129 [main] INFO CCAttempt - CC Qty for Part 2 is==0
+2022-05-03 13:42:15,130 [main] INFO CCAttempt - Stock Qty and CC Qty are different, Result is actually FAIL
+2022-05-03 13:42:15,205 [main] INFO CCAttempt - Value of Result of 3 Part is==FAIL
+2022-05-03 13:42:15,271 [main] INFO CCAttempt - Stock Qty for Part 3 is==1
+2022-05-03 13:42:15,339 [main] INFO CCAttempt - CC Qty for Part 3 is==0
+2022-05-03 13:42:15,339 [main] INFO CCAttempt - Stock Qty and CC Qty are different, Result is actually FAIL
+2022-05-03 13:42:15,466 [main] INFO CCAttempt - Clicked on CCQty
+2022-05-03 13:42:15,554 [main] INFO CCAttempt - Total parts are==44
+2022-05-03 13:42:15,593 [main] INFO CCAttempt - Clicked on CCQty
+2022-05-03 13:42:16,516 [main] INFO CCAttempt - Entered CC Qty equal to Stock Qty
+2022-05-03 13:42:16,657 [main] INFO CCAttempt - Total parts are==44
+2022-05-03 13:42:16,706 [main] INFO CCAttempt - Value of Result of 4 part2is==FAIL
+2022-05-03 13:42:16,760 [main] INFO CCAttempt - Stock Qty for part24 is==1
+2022-05-03 13:42:16,830 [main] INFO CCAttempt - CC Qty for part24 is==
+2022-05-03 13:42:16,830 [main] INFO CCAttempt - Stock Qty and CC Qty are different, Result is actually FAIL
+2022-05-03 13:42:16,921 [main] INFO CCAttempt - Clicked on CCQty
+2022-05-03 13:42:17,709 [main] INFO CCAttempt - Entered CC Qty equal to Stock Qty
+2022-05-03 13:42:17,804 [main] INFO CCAttempt - Total parts are==44
+2022-05-03 13:42:17,854 [main] INFO CCAttempt - Value of Result of 5 part2is==FAIL
+2022-05-03 13:42:17,901 [main] INFO CCAttempt - Stock Qty for part25 is==1
+2022-05-03 13:42:17,954 [main] INFO CCAttempt - CC Qty for part25 is==
+2022-05-03 13:42:17,954 [main] INFO CCAttempt - Stock Qty and CC Qty are different, Result is actually FAIL
+2022-05-03 13:42:17,983 [main] INFO CCAttempt - Clicked on CCQty
+2022-05-03 13:42:18,747 [main] INFO CCAttempt - Entered CC Qty equal to Stock Qty
+2022-05-03 13:42:18,855 [main] INFO CCAttempt - Total parts are==44
+2022-05-03 13:42:18,914 [main] INFO CCAttempt - Value of Result of 6 part2is==FAIL
+2022-05-03 13:42:18,973 [main] INFO CCAttempt - Stock Qty for part26 is==1
+2022-05-03 13:42:19,038 [main] INFO CCAttempt - CC Qty for part26 is==
+2022-05-03 13:42:19,038 [main] INFO CCAttempt - Stock Qty and CC Qty are different, Result is actually FAIL
+2022-05-03 13:42:19,074 [main] INFO CCAttempt - Clicked on CCQty
+2022-05-03 13:42:19,937 [main] INFO CCAttempt - Entered CC Qty equal to Stock Qty
+2022-05-03 13:42:20,036 [main] INFO CCAttempt - Total parts are==44
+2022-05-03 13:42:20,089 [main] INFO CCAttempt - Value of Result of 7 part2is==FAIL
+2022-05-03 13:42:20,151 [main] INFO CCAttempt - Stock Qty for part27 is==1
+2022-05-03 13:42:20,211 [main] INFO CCAttempt - CC Qty for part27 is==
+2022-05-03 13:42:20,212 [main] INFO CCAttempt - Stock Qty and CC Qty are different, Result is actually FAIL
+2022-05-03 13:42:20,242 [main] INFO CCAttempt - Clicked on CCQty
+2022-05-03 13:42:21,151 [main] INFO CCAttempt - Entered CC Qty equal to Stock Qty
+2022-05-03 13:42:21,253 [main] INFO CCAttempt - Total parts are==44
+2022-05-03 13:42:21,308 [main] INFO CCAttempt - Value of Result of 8 part2is==FAIL
+2022-05-03 13:42:21,375 [main] INFO CCAttempt - Stock Qty for part28 is==1
+2022-05-03 13:42:21,451 [main] INFO CCAttempt - CC Qty for part28 is==
+2022-05-03 13:42:21,451 [main] INFO CCAttempt - Stock Qty and CC Qty are different, Result is actually FAIL
+2022-05-03 13:42:21,488 [main] INFO CCAttempt - Clicked on CCQty
+2022-05-03 13:42:22,424 [main] INFO CCAttempt - Entered CC Qty equal to Stock Qty
+2022-05-03 13:42:22,535 [main] INFO CCAttempt - Total parts are==44
+2022-05-03 13:42:22,589 [main] INFO CCAttempt - Value of Result of 9 part2is==FAIL
+2022-05-03 13:42:22,640 [main] INFO CCAttempt - Stock Qty for part29 is==1
+2022-05-03 13:42:22,699 [main] INFO CCAttempt - CC Qty for part29 is==
+2022-05-03 13:42:22,699 [main] INFO CCAttempt - Stock Qty and CC Qty are different, Result is actually FAIL
+2022-05-03 13:42:22,743 [main] INFO CCAttempt - Clicked on CCQty
+2022-05-03 13:42:23,540 [main] INFO CCAttempt - Entered CC Qty equal to Stock Qty
+2022-05-03 13:42:23,641 [main] INFO CCAttempt - Total parts are==44
+2022-05-03 13:42:23,716 [main] INFO CCAttempt - Value of Result of 10 part2is==FAIL
+2022-05-03 13:42:23,854 [main] INFO CCAttempt - Stock Qty for part210 is==1
+2022-05-03 13:42:23,910 [main] INFO CCAttempt - CC Qty for part210 is==
+2022-05-03 13:42:23,910 [main] INFO CCAttempt - Stock Qty and CC Qty are different, Result is actually FAIL
+2022-05-03 13:42:23,939 [main] INFO CCAttempt - Clicked on CCQty
+2022-05-03 13:42:24,771 [main] INFO CCAttempt - Entered CC Qty equal to Stock Qty
+2022-05-03 13:42:24,858 [main] INFO CCAttempt - Total parts are==44
+2022-05-03 13:42:24,906 [main] INFO CCAttempt - Value of Result of 11 part2is==FAIL
+2022-05-03 13:42:24,955 [main] INFO CCAttempt - Stock Qty for part211 is==1
+2022-05-03 13:42:25,017 [main] INFO CCAttempt - CC Qty for part211 is==
+2022-05-03 13:42:25,018 [main] INFO CCAttempt - Stock Qty and CC Qty are different, Result is actually FAIL
+2022-05-03 13:42:25,056 [main] INFO CCAttempt - Clicked on CCQty
+2022-05-03 13:42:25,835 [main] INFO CCAttempt - Entered CC Qty equal to Stock Qty
+2022-05-03 13:42:25,933 [main] INFO CCAttempt - Total parts are==44
+2022-05-03 13:42:25,982 [main] INFO CCAttempt - Value of Result of 12 part2is==FAIL
+2022-05-03 13:42:26,030 [main] INFO CCAttempt - Stock Qty for part212 is==1
+2022-05-03 13:42:26,086 [main] INFO CCAttempt - CC Qty for part212 is==
+2022-05-03 13:42:26,087 [main] INFO CCAttempt - Stock Qty and CC Qty are different, Result is actually FAIL
+2022-05-03 13:42:26,115 [main] INFO CCAttempt - Clicked on CCQty
+2022-05-03 13:42:26,919 [main] INFO CCAttempt - Entered CC Qty equal to Stock Qty
+2022-05-03 13:42:27,026 [main] INFO CCAttempt - Total parts are==44
+2022-05-03 13:42:27,078 [main] INFO CCAttempt - Value of Result of 13 part2is==FAIL
+2022-05-03 13:42:27,125 [main] INFO CCAttempt - Stock Qty for part213 is==1
+2022-05-03 13:42:27,179 [main] INFO CCAttempt - CC Qty for part213 is==
+2022-05-03 13:42:27,179 [main] INFO CCAttempt - Stock Qty and CC Qty are different, Result is actually FAIL
+2022-05-03 13:42:27,211 [main] INFO CCAttempt - Clicked on CCQty
+2022-05-03 13:42:27,980 [main] INFO CCAttempt - Entered CC Qty equal to Stock Qty
+2022-05-03 13:42:28,101 [main] INFO CCAttempt - Total parts are==44
+2022-05-03 13:42:28,163 [main] INFO CCAttempt - Value of Result of 14 part2is==FAIL
+2022-05-03 13:42:28,220 [main] INFO CCAttempt - Stock Qty for part214 is==1
+2022-05-03 13:42:28,282 [main] INFO CCAttempt - CC Qty for part214 is==
+2022-05-03 13:42:28,282 [main] INFO CCAttempt - Stock Qty and CC Qty are different, Result is actually FAIL
+2022-05-03 13:42:28,316 [main] INFO CCAttempt - Clicked on CCQty
+2022-05-03 13:42:29,173 [main] INFO CCAttempt - Entered CC Qty equal to Stock Qty
+2022-05-03 13:42:29,282 [main] INFO CCAttempt - Total parts are==44
+2022-05-03 13:42:29,332 [main] INFO CCAttempt - Value of Result of 15 part2is==FAIL
+2022-05-03 13:42:29,386 [main] INFO CCAttempt - Stock Qty for part215 is==1
+2022-05-03 13:42:29,452 [main] INFO CCAttempt - CC Qty for part215 is==
+2022-05-03 13:42:29,452 [main] INFO CCAttempt - Stock Qty and CC Qty are different, Result is actually FAIL
+2022-05-03 13:42:29,484 [main] INFO CCAttempt - Clicked on CCQty
+2022-05-03 13:42:30,327 [main] INFO CCAttempt - Entered CC Qty equal to Stock Qty
+2022-05-03 13:42:30,439 [main] INFO CCAttempt - Total parts are==44
+2022-05-03 13:42:30,495 [main] INFO CCAttempt - Value of Result of 16 part2is==FAIL
+2022-05-03 13:42:30,545 [main] INFO CCAttempt - Stock Qty for part216 is==1
+2022-05-03 13:42:30,602 [main] INFO CCAttempt - CC Qty for part216 is==
+2022-05-03 13:42:30,603 [main] INFO CCAttempt - Stock Qty and CC Qty are different, Result is actually FAIL
+2022-05-03 13:42:30,636 [main] INFO CCAttempt - Clicked on CCQty
+2022-05-03 13:42:31,443 [main] INFO CCAttempt - Entered CC Qty equal to Stock Qty
+2022-05-03 13:42:31,549 [main] INFO CCAttempt - Total parts are==44
+2022-05-03 13:42:31,603 [main] INFO CCAttempt - Value of Result of 17 part2is==FAIL
+2022-05-03 13:42:31,651 [main] INFO CCAttempt - Stock Qty for part217 is==1
+2022-05-03 13:42:31,707 [main] INFO CCAttempt - CC Qty for part217 is==
+2022-05-03 13:42:31,707 [main] INFO CCAttempt - Stock Qty and CC Qty are different, Result is actually FAIL
+2022-05-03 13:42:31,736 [main] INFO CCAttempt - Clicked on CCQty
+2022-05-03 13:42:32,644 [main] INFO CCAttempt - Entered CC Qty equal to Stock Qty
+2022-05-03 13:42:32,755 [main] INFO CCAttempt - Total parts are==44
+2022-05-03 13:42:32,805 [main] INFO CCAttempt - Value of Result of 18 part2is==FAIL
+2022-05-03 13:42:32,852 [main] INFO CCAttempt - Stock Qty for part218 is==1
+2022-05-03 13:42:32,905 [main] INFO CCAttempt - CC Qty for part218 is==
+2022-05-03 13:42:32,905 [main] INFO CCAttempt - Stock Qty and CC Qty are different, Result is actually FAIL
+2022-05-03 13:42:32,936 [main] INFO CCAttempt - Clicked on CCQty
+2022-05-03 13:42:33,693 [main] INFO CCAttempt - Entered CC Qty equal to Stock Qty
+2022-05-03 13:42:33,810 [main] INFO CCAttempt - Total parts are==44
+2022-05-03 13:42:33,861 [main] INFO CCAttempt - Value of Result of 19 part2is==FAIL
+2022-05-03 13:42:33,909 [main] INFO CCAttempt - Stock Qty for part219 is==1
+2022-05-03 13:42:33,963 [main] INFO CCAttempt - CC Qty for part219 is==
+2022-05-03 13:42:33,963 [main] INFO CCAttempt - Stock Qty and CC Qty are different, Result is actually FAIL
+2022-05-03 13:42:33,994 [main] INFO CCAttempt - Clicked on CCQty
+2022-05-03 13:42:34,823 [main] INFO CCAttempt - Entered CC Qty equal to Stock Qty
+2022-05-03 13:42:34,937 [main] INFO CCAttempt - Total parts are==44
+2022-05-03 13:42:34,988 [main] INFO CCAttempt - Value of Result of 20 part2is==FAIL
+2022-05-03 13:42:35,038 [main] INFO CCAttempt - Stock Qty for part220 is==1
+2022-05-03 13:42:35,095 [main] INFO CCAttempt - CC Qty for part220 is==
+2022-05-03 13:42:35,095 [main] INFO CCAttempt - Stock Qty and CC Qty are different, Result is actually FAIL
+2022-05-03 13:42:35,126 [main] INFO CCAttempt - Clicked on CCQty
+2022-05-03 13:42:35,905 [main] INFO CCAttempt - Entered CC Qty equal to Stock Qty
+2022-05-03 13:42:36,014 [main] INFO CCAttempt - Total parts are==44
+2022-05-03 13:42:36,070 [main] INFO CCAttempt - Value of Result of 21 part2is==FAIL
+2022-05-03 13:42:36,121 [main] INFO CCAttempt - Stock Qty for part221 is==1
+2022-05-03 13:42:36,180 [main] INFO CCAttempt - CC Qty for part221 is==
+2022-05-03 13:42:36,180 [main] INFO CCAttempt - Stock Qty and CC Qty are different, Result is actually FAIL
+2022-05-03 13:42:36,212 [main] INFO CCAttempt - Clicked on CCQty
+2022-05-03 13:42:37,162 [main] INFO CCAttempt - Entered CC Qty equal to Stock Qty
+2022-05-03 13:42:37,298 [main] INFO CCAttempt - Total parts are==44
+2022-05-03 13:42:37,359 [main] INFO CCAttempt - Value of Result of 22 part2is==FAIL
+2022-05-03 13:42:37,418 [main] INFO CCAttempt - Stock Qty for part222 is==1
+2022-05-03 13:42:37,479 [main] INFO CCAttempt - CC Qty for part222 is==
+2022-05-03 13:42:37,480 [main] INFO CCAttempt - Stock Qty and CC Qty are different, Result is actually FAIL
+2022-05-03 13:42:37,511 [main] INFO CCAttempt - Clicked on CCQty
+2022-05-03 13:42:38,647 [main] INFO CCAttempt - Entered CC Qty equal to Stock Qty
+2022-05-03 13:42:38,841 [main] INFO CCAttempt - Total parts are==44
+2022-05-03 13:42:38,893 [main] INFO CCAttempt - Value of Result of 23 part2is==FAIL
+2022-05-03 13:42:38,942 [main] INFO CCAttempt - Stock Qty for part223 is==1
+2022-05-03 13:42:38,999 [main] INFO CCAttempt - CC Qty for part223 is==
+2022-05-03 13:42:39,000 [main] INFO CCAttempt - Stock Qty and CC Qty are different, Result is actually FAIL
+2022-05-03 13:42:39,030 [main] INFO CCAttempt - Clicked on CCQty
+2022-05-03 13:42:39,805 [main] INFO CCAttempt - Entered CC Qty equal to Stock Qty
+2022-05-03 13:42:39,914 [main] INFO CCAttempt - Total parts are==44
+2022-05-03 13:42:39,961 [main] INFO CCAttempt - Value of Result of 24 part2is==FAIL
+2022-05-03 13:42:40,010 [main] INFO CCAttempt - Stock Qty for part224 is==1
+2022-05-03 13:42:40,064 [main] INFO CCAttempt - CC Qty for part224 is==
+2022-05-03 13:42:40,064 [main] INFO CCAttempt - Stock Qty and CC Qty are different, Result is actually FAIL
+2022-05-03 13:42:40,095 [main] INFO CCAttempt - Clicked on CCQty
+2022-05-03 13:42:40,815 [main] INFO CCAttempt - Entered CC Qty equal to Stock Qty
+2022-05-03 13:42:40,932 [main] INFO CCAttempt - Total parts are==44
+2022-05-03 13:42:40,984 [main] INFO CCAttempt - Value of Result of 25 part2is==FAIL
+2022-05-03 13:42:41,040 [main] INFO CCAttempt - Stock Qty for part225 is==1
+2022-05-03 13:42:41,114 [main] INFO CCAttempt - CC Qty for part225 is==
+2022-05-03 13:42:41,115 [main] INFO CCAttempt - Stock Qty and CC Qty are different, Result is actually FAIL
+2022-05-03 13:42:41,153 [main] INFO CCAttempt - Clicked on CCQty
+2022-05-03 13:42:41,993 [main] INFO CCAttempt - Entered CC Qty equal to Stock Qty
+2022-05-03 13:42:42,105 [main] INFO CCAttempt - Total parts are==44
+2022-05-03 13:42:42,157 [main] INFO CCAttempt - Value of Result of 26 part2is==FAIL
+2022-05-03 13:42:42,209 [main] INFO CCAttempt - Stock Qty for part226 is==1
+2022-05-03 13:42:42,277 [main] INFO CCAttempt - CC Qty for part226 is==
+2022-05-03 13:42:42,278 [main] INFO CCAttempt - Stock Qty and CC Qty are different, Result is actually FAIL
+2022-05-03 13:42:42,319 [main] INFO CCAttempt - Clicked on CCQty
+2022-05-03 13:42:43,077 [main] INFO CCAttempt - Entered CC Qty equal to Stock Qty
+2022-05-03 13:42:43,197 [main] INFO CCAttempt - Total parts are==44
+2022-05-03 13:42:43,260 [main] INFO CCAttempt - Value of Result of 27 part2is==FAIL
+2022-05-03 13:42:43,310 [main] INFO CCAttempt - Stock Qty for part227 is==1
+2022-05-03 13:42:43,376 [main] INFO CCAttempt - CC Qty for part227 is==
+2022-05-03 13:42:43,376 [main] INFO CCAttempt - Stock Qty and CC Qty are different, Result is actually FAIL
+2022-05-03 13:42:43,416 [main] INFO CCAttempt - Clicked on CCQty
+2022-05-03 13:42:44,233 [main] INFO CCAttempt - Entered CC Qty equal to Stock Qty
+2022-05-03 13:42:44,345 [main] INFO CCAttempt - Total parts are==44
+2022-05-03 13:42:44,403 [main] INFO CCAttempt - Value of Result of 28 part2is==FAIL
+2022-05-03 13:42:44,461 [main] INFO CCAttempt - Stock Qty for part228 is==1
+2022-05-03 13:42:44,523 [main] INFO CCAttempt - CC Qty for part228 is==
+2022-05-03 13:42:44,523 [main] INFO CCAttempt - Stock Qty and CC Qty are different, Result is actually FAIL
+2022-05-03 13:42:44,558 [main] INFO CCAttempt - Clicked on CCQty
+2022-05-03 13:42:45,368 [main] INFO CCAttempt - Entered CC Qty equal to Stock Qty
+2022-05-03 13:42:45,500 [main] INFO CCAttempt - Total parts are==44
+2022-05-03 13:42:45,550 [main] INFO CCAttempt - Value of Result of 29 part2is==FAIL
+2022-05-03 13:42:45,599 [main] INFO CCAttempt - Stock Qty for part229 is==1
+2022-05-03 13:42:45,655 [main] INFO CCAttempt - CC Qty for part229 is==
+2022-05-03 13:42:45,655 [main] INFO CCAttempt - Stock Qty and CC Qty are different, Result is actually FAIL
+2022-05-03 13:42:45,685 [main] INFO CCAttempt - Clicked on CCQty
+2022-05-03 13:42:46,576 [main] INFO CCAttempt - Entered CC Qty equal to Stock Qty
+2022-05-03 13:42:46,746 [main] INFO CCAttempt - Total parts are==44
+2022-05-03 13:42:46,795 [main] INFO CCAttempt - Value of Result of 30 part2is==FAIL
+2022-05-03 13:42:46,846 [main] INFO CCAttempt - Stock Qty for part230 is==1
+2022-05-03 13:42:46,903 [main] INFO CCAttempt - CC Qty for part230 is==
+2022-05-03 13:42:46,903 [main] INFO CCAttempt - Stock Qty and CC Qty are different, Result is actually FAIL
+2022-05-03 13:42:46,938 [main] INFO CCAttempt - Clicked on CCQty
+2022-05-03 13:42:47,866 [main] INFO CCAttempt - Entered CC Qty equal to Stock Qty
+2022-05-03 13:42:47,992 [main] INFO CCAttempt - Total parts are==44
+2022-05-03 13:42:48,050 [main] INFO CCAttempt - Value of Result of 31 part2is==FAIL
+2022-05-03 13:42:48,108 [main] INFO CCAttempt - Stock Qty for part231 is==1
+2022-05-03 13:42:48,171 [main] INFO CCAttempt - CC Qty for part231 is==
+2022-05-03 13:42:48,171 [main] INFO CCAttempt - Stock Qty and CC Qty are different, Result is actually FAIL
+2022-05-03 13:42:48,207 [main] INFO CCAttempt - Clicked on CCQty
+2022-05-03 13:42:49,050 [main] INFO CCAttempt - Entered CC Qty equal to Stock Qty
+2022-05-03 13:42:49,207 [main] INFO CCAttempt - Total parts are==44
+2022-05-03 13:42:49,260 [main] INFO CCAttempt - Value of Result of 32 part2is==FAIL
+2022-05-03 13:42:49,312 [main] INFO CCAttempt - Stock Qty for part232 is==1
+2022-05-03 13:42:49,366 [main] INFO CCAttempt - CC Qty for part232 is==
+2022-05-03 13:42:49,366 [main] INFO CCAttempt - Stock Qty and CC Qty are different, Result is actually FAIL
+2022-05-03 13:42:49,399 [main] INFO CCAttempt - Clicked on CCQty
+2022-05-03 13:42:50,197 [main] INFO CCAttempt - Entered CC Qty equal to Stock Qty
+2022-05-03 13:42:50,315 [main] INFO CCAttempt - Total parts are==44
+2022-05-03 13:42:50,366 [main] INFO CCAttempt - Value of Result of 33 part2is==FAIL
+2022-05-03 13:42:50,419 [main] INFO CCAttempt - Stock Qty for part233 is==1
+2022-05-03 13:42:50,478 [main] INFO CCAttempt - CC Qty for part233 is==
+2022-05-03 13:42:50,478 [main] INFO CCAttempt - Stock Qty and CC Qty are different, Result is actually FAIL
+2022-05-03 13:42:50,511 [main] INFO CCAttempt - Clicked on CCQty
+2022-05-03 13:42:51,407 [main] INFO CCAttempt - Entered CC Qty equal to Stock Qty
+2022-05-03 13:42:51,527 [main] INFO CCAttempt - Total parts are==44
+2022-05-03 13:42:51,579 [main] INFO CCAttempt - Value of Result of 34 part2is==FAIL
+2022-05-03 13:42:51,627 [main] INFO CCAttempt - Stock Qty for part234 is==1
+2022-05-03 13:42:51,682 [main] INFO CCAttempt - CC Qty for part234 is==
+2022-05-03 13:42:51,683 [main] INFO CCAttempt - Stock Qty and CC Qty are different, Result is actually FAIL
+2022-05-03 13:42:51,724 [main] INFO CCAttempt - Clicked on CCQty
+2022-05-03 13:42:52,602 [main] INFO CCAttempt - Entered CC Qty equal to Stock Qty
+2022-05-03 13:42:52,716 [main] INFO CCAttempt - Total parts are==44
+2022-05-03 13:42:52,769 [main] INFO CCAttempt - Value of Result of 35 part2is==FAIL
+2022-05-03 13:42:52,818 [main] INFO CCAttempt - Stock Qty for part235 is==1
+2022-05-03 13:42:52,877 [main] INFO CCAttempt - CC Qty for part235 is==
+2022-05-03 13:42:52,877 [main] INFO CCAttempt - Stock Qty and CC Qty are different, Result is actually FAIL
+2022-05-03 13:42:52,909 [main] INFO CCAttempt - Clicked on CCQty
+2022-05-03 13:42:53,806 [main] INFO CCAttempt - Entered CC Qty equal to Stock Qty
+2022-05-03 13:42:54,024 [main] INFO CCAttempt - Total parts are==44
+2022-05-03 13:42:54,162 [main] INFO CCAttempt - Value of Result of 36 part2is==FAIL
+2022-05-03 13:42:54,220 [main] INFO CCAttempt - Stock Qty for part236 is==1
+2022-05-03 13:42:54,294 [main] INFO CCAttempt - CC Qty for part236 is==
+2022-05-03 13:42:54,294 [main] INFO CCAttempt - Stock Qty and CC Qty are different, Result is actually FAIL
+2022-05-03 13:42:54,334 [main] INFO CCAttempt - Clicked on CCQty
+2022-05-03 13:42:55,284 [main] INFO CCAttempt - Entered CC Qty equal to Stock Qty
+2022-05-03 13:42:55,458 [main] INFO CCAttempt - Total parts are==44
+2022-05-03 13:42:55,512 [main] INFO CCAttempt - Value of Result of 37 part2is==FAIL
+2022-05-03 13:42:55,564 [main] INFO CCAttempt - Stock Qty for part237 is==1
+2022-05-03 13:42:55,621 [main] INFO CCAttempt - CC Qty for part237 is==
+2022-05-03 13:42:55,621 [main] INFO CCAttempt - Stock Qty and CC Qty are different, Result is actually FAIL
+2022-05-03 13:42:55,654 [main] INFO CCAttempt - Clicked on CCQty
+2022-05-03 13:42:56,525 [main] INFO CCAttempt - Entered CC Qty equal to Stock Qty
+2022-05-03 13:42:56,641 [main] INFO CCAttempt - Total parts are==44
+2022-05-03 13:42:56,681 [main] INFO CCAttempt - Value of Result of 38 part2is==FAIL
+2022-05-03 13:42:56,722 [main] INFO CCAttempt - Stock Qty for part238 is==1
+2022-05-03 13:42:56,771 [main] INFO CCAttempt - CC Qty for part238 is==
+2022-05-03 13:42:56,772 [main] INFO CCAttempt - Stock Qty and CC Qty are different, Result is actually FAIL
+2022-05-03 13:42:56,802 [main] INFO CCAttempt - Clicked on CCQty
+2022-05-03 13:42:57,641 [main] INFO CCAttempt - Entered CC Qty equal to Stock Qty
+2022-05-03 13:42:57,778 [main] INFO CCAttempt - Total parts are==44
+2022-05-03 13:42:57,828 [main] INFO CCAttempt - Value of Result of 39 part2is==FAIL
+2022-05-03 13:42:57,877 [main] INFO CCAttempt - Stock Qty for part239 is==1
+2022-05-03 13:42:57,940 [main] INFO CCAttempt - CC Qty for part239 is==
+2022-05-03 13:42:57,940 [main] INFO CCAttempt - Stock Qty and CC Qty are different, Result is actually FAIL
+2022-05-03 13:42:57,975 [main] INFO CCAttempt - Clicked on CCQty
+2022-05-03 13:42:58,765 [main] INFO CCAttempt - Entered CC Qty equal to Stock Qty
+2022-05-03 13:42:58,888 [main] INFO CCAttempt - Total parts are==44
+2022-05-03 13:42:58,941 [main] INFO CCAttempt - Value of Result of 40 part2is==FAIL
+2022-05-03 13:42:59,001 [main] INFO CCAttempt - Stock Qty for part240 is==1
+2022-05-03 13:42:59,073 [main] INFO CCAttempt - CC Qty for part240 is==
+2022-05-03 13:42:59,074 [main] INFO CCAttempt - Stock Qty and CC Qty are different, Result is actually FAIL
+2022-05-03 13:42:59,114 [main] INFO CCAttempt - Clicked on CCQty
+2022-05-03 13:42:59,955 [main] INFO CCAttempt - Entered CC Qty equal to Stock Qty
+2022-05-03 13:43:00,083 [main] INFO CCAttempt - Total parts are==44
+2022-05-03 13:43:00,135 [main] INFO CCAttempt - Value of Result of 41 part2is==FAIL
+2022-05-03 13:43:00,185 [main] INFO CCAttempt - Stock Qty for part241 is==1
+2022-05-03 13:43:00,240 [main] INFO CCAttempt - CC Qty for part241 is==
+2022-05-03 13:43:00,240 [main] INFO CCAttempt - Stock Qty and CC Qty are different, Result is actually FAIL
+2022-05-03 13:43:00,273 [main] INFO CCAttempt - Clicked on CCQty
+2022-05-03 13:43:01,087 [main] INFO CCAttempt - Entered CC Qty equal to Stock Qty
+2022-05-03 13:43:01,228 [main] INFO CCAttempt - Total parts are==44
+2022-05-03 13:43:01,280 [main] INFO CCAttempt - Value of Result of 42 part2is==FAIL
+2022-05-03 13:43:01,331 [main] INFO CCAttempt - Stock Qty for part242 is==1
+2022-05-03 13:43:01,401 [main] INFO CCAttempt - CC Qty for part242 is==
+2022-05-03 13:43:01,401 [main] INFO CCAttempt - Stock Qty and CC Qty are different, Result is actually FAIL
+2022-05-03 13:43:01,439 [main] INFO CCAttempt - Clicked on CCQty
+2022-05-03 13:43:02,304 [main] INFO CCAttempt - Entered CC Qty equal to Stock Qty
+2022-05-03 13:43:02,435 [main] INFO CCAttempt - Total parts are==44
+2022-05-03 13:43:02,497 [main] INFO CCAttempt - Value of Result of 43 part2is==FAIL
+2022-05-03 13:43:02,554 [main] INFO CCAttempt - Stock Qty for part243 is==1
+2022-05-03 13:43:02,620 [main] INFO CCAttempt - CC Qty for part243 is==
+2022-05-03 13:43:02,620 [main] INFO CCAttempt - Stock Qty and CC Qty are different, Result is actually FAIL
+2022-05-03 13:43:02,655 [main] INFO CCAttempt - Clicked on CCQty
+2022-05-03 13:43:03,363 [main] INFO CCAttempt - Entered CC Qty equal to Stock Qty
+2022-05-03 13:43:07,063 [main] INFO CCAttempt - Click on Save button
+2022-05-03 13:43:07,789 [main] INFO CCAttempt - TaskLog stage is==CC ATTEMPT 2
+2022-05-03 13:43:09,339 [main] INFO CCAttempt - Click on the Record
+2022-05-03 13:43:10,597 [main] INFO CCAttempt - Total number of records==Page 1 of 1 (43 items)
+2022-05-03 13:43:10,875 [main] INFO CCAttempt - It is CCAttempt2
+2022-05-03 13:43:10,973 [main] INFO CCAttempt - Total parts are==44
+2022-05-03 13:43:11,021 [main] INFO CCAttempt - Value of Result of 1 Part is==FAIL
+2022-05-03 13:43:11,072 [main] INFO CCAttempt - Stock Qty for Part 1 is==1
+2022-05-03 13:43:11,122 [main] INFO CCAttempt - CC Qty for Part 1 is==0
+2022-05-03 13:43:11,122 [main] INFO CCAttempt - Stock Qty and CC Qty are different, Result is actually FAIL
+2022-05-03 13:43:11,179 [main] INFO CCAttempt - Value of Result of 2 Part is==FAIL
+2022-05-03 13:43:11,228 [main] INFO CCAttempt - Stock Qty for Part 2 is==1
+2022-05-03 13:43:11,279 [main] INFO CCAttempt - CC Qty for Part 2 is==0
+2022-05-03 13:43:11,279 [main] INFO CCAttempt - Stock Qty and CC Qty are different, Result is actually FAIL
+2022-05-03 13:43:11,332 [main] INFO CCAttempt - Value of Result of 3 Part is==SUCCESS
+2022-05-03 13:43:11,384 [main] INFO CCAttempt - Value of Result of 4 Part is==SUCCESS
+2022-05-03 13:43:11,439 [main] INFO CCAttempt - Value of Result of 5 Part is==SUCCESS
+2022-05-03 13:43:11,492 [main] INFO CCAttempt - Value of Result of 6 Part is==SUCCESS
+2022-05-03 13:43:11,543 [main] INFO CCAttempt - Value of Result of 7 Part is==
+2022-05-03 13:43:11,597 [main] INFO CCAttempt - Value of Result of 8 Part is==
+2022-05-03 13:43:11,670 [main] INFO CCAttempt - Value of Result of 9 Part is==
+2022-05-03 13:43:11,748 [main] INFO CCAttempt - Value of Result of 10 Part is==
+2022-05-03 13:43:11,819 [main] INFO CCAttempt - Value of Result of 11 Part is==
+2022-05-03 13:43:11,884 [main] INFO CCAttempt - Value of Result of 12 Part is==
+2022-05-03 13:43:11,946 [main] INFO CCAttempt - Value of Result of 13 Part is==
+2022-05-03 13:43:12,012 [main] INFO CCAttempt - Value of Result of 14 Part is==
+2022-05-03 13:43:12,077 [main] INFO CCAttempt - Value of Result of 15 Part is==
+2022-05-03 13:43:12,140 [main] INFO CCAttempt - Value of Result of 16 Part is==
+2022-05-03 13:43:12,204 [main] INFO CCAttempt - Value of Result of 17 Part is==
+2022-05-03 13:43:12,271 [main] INFO CCAttempt - Value of Result of 18 Part is==
+2022-05-03 13:43:12,325 [main] INFO CCAttempt - Value of Result of 19 Part is==
+2022-05-03 13:43:12,379 [main] INFO CCAttempt - Value of Result of 20 Part is==
+2022-05-03 13:43:12,433 [main] INFO CCAttempt - Value of Result of 21 Part is==
+2022-05-03 13:43:12,492 [main] INFO CCAttempt - Value of Result of 22 Part is==
+2022-05-03 13:43:12,558 [main] INFO CCAttempt - Value of Result of 23 Part is==
+2022-05-03 13:43:12,631 [main] INFO CCAttempt - Value of Result of 24 Part is==
+2022-05-03 13:43:12,707 [main] INFO CCAttempt - Value of Result of 25 Part is==
+2022-05-03 13:43:12,788 [main] INFO CCAttempt - Value of Result of 26 Part is==
+2022-05-03 13:43:12,867 [main] INFO CCAttempt - Value of Result of 27 Part is==
+2022-05-03 13:43:12,943 [main] INFO CCAttempt - Value of Result of 28 Part is==
+2022-05-03 13:43:13,014 [main] INFO CCAttempt - Value of Result of 29 Part is==
+2022-05-03 13:43:13,085 [main] INFO CCAttempt - Value of Result of 30 Part is==
+2022-05-03 13:43:13,152 [main] INFO CCAttempt - Value of Result of 31 Part is==
+2022-05-03 13:43:13,217 [main] INFO CCAttempt - Value of Result of 32 Part is==
+2022-05-03 13:43:13,282 [main] INFO CCAttempt - Value of Result of 33 Part is==
+2022-05-03 13:43:13,340 [main] INFO CCAttempt - Value of Result of 34 Part is==
+2022-05-03 13:43:13,392 [main] INFO CCAttempt - Value of Result of 35 Part is==
+2022-05-03 13:43:13,444 [main] INFO CCAttempt - Value of Result of 36 Part is==
+2022-05-03 13:43:13,504 [main] INFO CCAttempt - Value of Result of 37 Part is==
+2022-05-03 13:43:13,568 [main] INFO CCAttempt - Value of Result of 38 Part is==
+2022-05-03 13:43:13,631 [main] INFO CCAttempt - Value of Result of 39 Part is==
+2022-05-03 13:43:13,696 [main] INFO CCAttempt - Value of Result of 40 Part is==
+2022-05-03 13:43:13,763 [main] INFO CCAttempt - Value of Result of 41 Part is==
+2022-05-03 13:43:13,841 [main] INFO CCAttempt - Value of Result of 42 Part is==
+2022-05-03 13:43:13,913 [main] INFO CCAttempt - Value of Result of 43 Part is==
+2022-05-03 13:43:14,377 [main] INFO CCAttempt - Click on End Cycle button
+2022-05-03 13:43:14,599 [main] INFO CCAttempt - Dialogue Message is==Are you sure you want to end the Cycle Count operation?
+2022-05-03 13:43:18,214 [main] INFO CCAttempt - Click on YES button
+2022-05-03 13:44:09,006 [main] INFO CCAttempt - Cycle is moved to Reconcile stage
+2022-05-03 13:44:09,085 [main] INFO CCAttempt - TaskLog stage is==CONF RECONC
+2022-05-03 13:44:09,287 [main] INFO CCAttempt - Click on Operations
+2022-05-03 13:44:10,598 [main] INFO CCAttempt - Click on CycleCount
+2022-05-03 13:44:11,921 [main] INFO CCAttempt - If action column is not empty
+2022-05-03 13:44:12,130 [main] INFO CCAttempt - Click on Start button
+2022-05-03 13:44:14,058 [main] INFO CCAttempt - WorkOrderID after start==1686418
+2022-05-03 13:44:14,081 [main] INFO CCAttempt - Inserted workorderID in excel
+2022-05-03 13:44:14,196 [main] INFO CCAttempt - Clicked on Operations
+2022-05-03 13:44:15,516 [main] INFO CCAttempt - Clicked on TaskLog
+2022-05-03 13:44:16,426 [main] INFO CCAttempt - Click on Inventory Tab
+2022-05-03 13:44:17,487 [main] INFO CCAttempt - Total No of job in Inventory Tab is/are==1
+2022-05-03 13:44:17,532 [main] INFO CCAttempt - WorkOrderID is==1686418
+2022-05-03 13:44:17,698 [main] INFO CCAttempt - Clear Search box
+2022-05-03 13:44:17,974 [main] INFO CCAttempt - Enter value in search input
+2022-05-03 13:44:18,230 [main] INFO CCAttempt - Clicked on Search
+2022-05-03 13:44:20,581 [main] INFO CCAttempt - Stage is==Cycle Count Attempt
+2022-05-03 13:44:20,661 [main] INFO CCAttempt - Parts is available, Total Parts==3
+2022-05-03 13:44:20,741 [main] INFO CCAttempt - Total number of records==Page 1 of 1 (43 items)
+2022-05-03 13:44:20,815 [main] INFO CCAttempt - It is CCAttempt1
+2022-05-03 13:44:20,816 [main] INFO CCAttempt - ==Testing CCAttempt1==
+2022-05-03 13:44:21,396 [main] INFO CCAttempt - Uncheck the checkbox of Remove Zero Stock Parts
+2022-05-03 13:44:21,608 [main] INFO CCAttempt - Number of Parts with 0 stock Qty==71
+2022-05-03 13:44:22,160 [main] INFO CCAttempt - Check the checkbox of Remove Zero Stock Parts
+2022-05-03 13:44:22,243 [main] INFO CCAttempt - Number of Parts with 0 stock Qty after check the checkbox of 'Remove Zero Stock Parts'==0
+2022-05-03 13:44:22,243 [main] INFO CCAttempt - ===CCAttempt Scenario 3 Test Start===
+2022-05-03 13:44:22,536 [main] INFO CCAttempt - Uncheck the checkbox of Mandatory Cycle Recount
+2022-05-03 13:44:22,752 [main] INFO CCAttempt - Total parts are==44
+2022-05-03 13:44:22,793 [main] INFO CCAttempt - Value of Result of 1 Part is==FAIL
+2022-05-03 13:44:22,844 [main] INFO CCAttempt - Stock Qty for Part 1 is==1
+2022-05-03 13:44:22,910 [main] INFO CCAttempt - CC Qty for Part 1 is==0
+2022-05-03 13:44:22,910 [main] INFO CCAttempt - Stock Qty and CC Qty are different, Result is actually FAIL
+2022-05-03 13:44:22,978 [main] INFO CCAttempt - Value of Result of 2 Part is==FAIL
+2022-05-03 13:44:23,049 [main] INFO CCAttempt - Stock Qty for Part 2 is==1
+2022-05-03 13:44:23,127 [main] INFO CCAttempt - CC Qty for Part 2 is==0
+2022-05-03 13:44:23,128 [main] INFO CCAttempt - Stock Qty and CC Qty are different, Result is actually FAIL
+2022-05-03 13:44:23,193 [main] INFO CCAttempt - Value of Result of 3 Part is==FAIL
+2022-05-03 13:44:23,234 [main] INFO CCAttempt - Stock Qty for Part 3 is==1
+2022-05-03 13:44:23,280 [main] INFO CCAttempt - CC Qty for Part 3 is==0
+2022-05-03 13:44:23,281 [main] INFO CCAttempt - Stock Qty and CC Qty are different, Result is actually FAIL
+2022-05-03 13:44:23,373 [main] INFO CCAttempt - Clicked on CCQty
+2022-05-03 13:44:23,519 [main] INFO CCAttempt - Total parts are==44
+2022-05-03 13:44:23,554 [main] INFO CCAttempt - Clicked on CCQty
+2022-05-03 13:44:24,455 [main] INFO CCAttempt - Entered CC Qty equal to Stock Qty
+2022-05-03 13:44:24,603 [main] INFO CCAttempt - Total parts are==44
+2022-05-03 13:44:24,681 [main] INFO CCAttempt - Value of Result of 4 Part is==FAIL
+2022-05-03 13:44:24,731 [main] INFO CCAttempt - Stock Qty for Part 4 is==1
+2022-05-03 13:44:24,796 [main] INFO CCAttempt - CC Qty for Part 4 is==
+2022-05-03 13:44:24,797 [main] INFO CCAttempt - Stock Qty and CC Qty are different, Result is actually FAIL
+2022-05-03 13:44:24,835 [main] INFO CCAttempt - Clicked on CCQty
+2022-05-03 13:44:25,673 [main] INFO CCAttempt - Entered CC Qty equal to Stock Qty
+2022-05-03 13:44:25,803 [main] INFO CCAttempt - Total parts are==44
+2022-05-03 13:44:25,854 [main] INFO CCAttempt - Value of Result of 5 Part is==FAIL
+2022-05-03 13:44:25,903 [main] INFO CCAttempt - Stock Qty for Part 5 is==1
+2022-05-03 13:44:25,958 [main] INFO CCAttempt - CC Qty for Part 5 is==
+2022-05-03 13:44:25,959 [main] INFO CCAttempt - Stock Qty and CC Qty are different, Result is actually FAIL
+2022-05-03 13:44:25,993 [main] INFO CCAttempt - Clicked on CCQty
+2022-05-03 13:44:26,937 [main] INFO CCAttempt - Entered CC Qty equal to Stock Qty
+2022-05-03 13:44:27,077 [main] INFO CCAttempt - Total parts are==44
+2022-05-03 13:44:27,130 [main] INFO CCAttempt - Value of Result of 6 Part is==FAIL
+2022-05-03 13:44:27,180 [main] INFO CCAttempt - Stock Qty for Part 6 is==1
+2022-05-03 13:44:27,236 [main] INFO CCAttempt - CC Qty for Part 6 is==
+2022-05-03 13:44:27,236 [main] INFO CCAttempt - Stock Qty and CC Qty are different, Result is actually FAIL
+2022-05-03 13:44:27,268 [main] INFO CCAttempt - Clicked on CCQty
+2022-05-03 13:44:28,142 [main] INFO CCAttempt - Entered CC Qty equal to Stock Qty
+2022-05-03 13:44:28,270 [main] INFO CCAttempt - Total parts are==44
+2022-05-03 13:44:28,345 [main] INFO CCAttempt - Value of Result of 7 Part is==FAIL
+2022-05-03 13:44:28,389 [main] INFO CCAttempt - Stock Qty for Part 7 is==1
+2022-05-03 13:44:28,439 [main] INFO CCAttempt - CC Qty for Part 7 is==
+2022-05-03 13:44:28,440 [main] INFO CCAttempt - Stock Qty and CC Qty are different, Result is actually FAIL
+2022-05-03 13:44:28,479 [main] INFO CCAttempt - Clicked on CCQty
+2022-05-03 13:44:29,363 [main] INFO CCAttempt - Entered CC Qty equal to Stock Qty
+2022-05-03 13:44:29,541 [main] INFO CCAttempt - Total parts are==44
+2022-05-03 13:44:29,590 [main] INFO CCAttempt - Value of Result of 8 Part is==FAIL
+2022-05-03 13:44:29,646 [main] INFO CCAttempt - Stock Qty for Part 8 is==1
+2022-05-03 13:44:29,708 [main] INFO CCAttempt - CC Qty for Part 8 is==
+2022-05-03 13:44:29,708 [main] INFO CCAttempt - Stock Qty and CC Qty are different, Result is actually FAIL
+2022-05-03 13:44:29,741 [main] INFO CCAttempt - Clicked on CCQty
+2022-05-03 13:44:30,595 [main] INFO CCAttempt - Entered CC Qty equal to Stock Qty
+2022-05-03 13:44:30,733 [main] INFO CCAttempt - Total parts are==44
+2022-05-03 13:44:30,784 [main] INFO CCAttempt - Value of Result of 9 Part is==FAIL
+2022-05-03 13:44:30,838 [main] INFO CCAttempt - Stock Qty for Part 9 is==1
+2022-05-03 13:44:30,897 [main] INFO CCAttempt - CC Qty for Part 9 is==
+2022-05-03 13:44:30,898 [main] INFO CCAttempt - Stock Qty and CC Qty are different, Result is actually FAIL
+2022-05-03 13:44:30,935 [main] INFO CCAttempt - Clicked on CCQty
+2022-05-03 13:44:31,862 [main] INFO CCAttempt - Entered CC Qty equal to Stock Qty
+2022-05-03 13:44:32,032 [main] INFO CCAttempt - Total parts are==44
+2022-05-03 13:44:32,107 [main] INFO CCAttempt - Value of Result of 10 Part is==FAIL
+2022-05-03 13:44:32,159 [main] INFO CCAttempt - Stock Qty for Part 10 is==1
+2022-05-03 13:44:32,215 [main] INFO CCAttempt - CC Qty for Part 10 is==
+2022-05-03 13:44:32,215 [main] INFO CCAttempt - Stock Qty and CC Qty are different, Result is actually FAIL
+2022-05-03 13:44:32,247 [main] INFO CCAttempt - Clicked on CCQty
+2022-05-03 13:44:33,069 [main] INFO CCAttempt - Entered CC Qty equal to Stock Qty
+2022-05-03 13:44:33,223 [main] INFO CCAttempt - Total parts are==44
+2022-05-03 13:44:33,275 [main] INFO CCAttempt - Value of Result of 11 Part is==FAIL
+2022-05-03 13:44:33,330 [main] INFO CCAttempt - Stock Qty for Part 11 is==1
+2022-05-03 13:44:33,386 [main] INFO CCAttempt - CC Qty for Part 11 is==
+2022-05-03 13:44:33,386 [main] INFO CCAttempt - Stock Qty and CC Qty are different, Result is actually FAIL
+2022-05-03 13:44:33,418 [main] INFO CCAttempt - Clicked on CCQty
+2022-05-03 13:44:34,315 [main] INFO CCAttempt - Entered CC Qty equal to Stock Qty
+2022-05-03 13:44:34,450 [main] INFO CCAttempt - Total parts are==44
+2022-05-03 13:44:34,500 [main] INFO CCAttempt - Value of Result of 12 Part is==FAIL
+2022-05-03 13:44:34,552 [main] INFO CCAttempt - Stock Qty for Part 12 is==1
+2022-05-03 13:44:34,618 [main] INFO CCAttempt - CC Qty for Part 12 is==
+2022-05-03 13:44:34,618 [main] INFO CCAttempt - Stock Qty and CC Qty are different, Result is actually FAIL
+2022-05-03 13:44:34,656 [main] INFO CCAttempt - Clicked on CCQty
+2022-05-03 13:44:35,531 [main] INFO CCAttempt - Entered CC Qty equal to Stock Qty
+2022-05-03 13:44:35,720 [main] INFO CCAttempt - Total parts are==44
+2022-05-03 13:44:35,768 [main] INFO CCAttempt - Value of Result of 13 Part is==FAIL
+2022-05-03 13:44:35,821 [main] INFO CCAttempt - Stock Qty for Part 13 is==1
+2022-05-03 13:44:35,887 [main] INFO CCAttempt - CC Qty for Part 13 is==
+2022-05-03 13:44:35,888 [main] INFO CCAttempt - Stock Qty and CC Qty are different, Result is actually FAIL
+2022-05-03 13:44:35,923 [main] INFO CCAttempt - Clicked on CCQty
+2022-05-03 13:44:36,779 [main] INFO CCAttempt - Entered CC Qty equal to Stock Qty
+2022-05-03 13:44:36,910 [main] INFO CCAttempt - Total parts are==44
+2022-05-03 13:44:36,961 [main] INFO CCAttempt - Value of Result of 14 Part is==FAIL
+2022-05-03 13:44:37,007 [main] INFO CCAttempt - Stock Qty for Part 14 is==1
+2022-05-03 13:44:37,064 [main] INFO CCAttempt - CC Qty for Part 14 is==
+2022-05-03 13:44:37,065 [main] INFO CCAttempt - Stock Qty and CC Qty are different, Result is actually FAIL
+2022-05-03 13:44:37,104 [main] INFO CCAttempt - Clicked on CCQty
+2022-05-03 13:44:38,115 [main] INFO CCAttempt - Entered CC Qty equal to Stock Qty
+2022-05-03 13:44:38,351 [main] INFO CCAttempt - Total parts are==44
+2022-05-03 13:44:38,401 [main] INFO CCAttempt - Value of Result of 15 Part is==FAIL
+2022-05-03 13:44:38,449 [main] INFO CCAttempt - Stock Qty for Part 15 is==1
+2022-05-03 13:44:38,501 [main] INFO CCAttempt - CC Qty for Part 15 is==
+2022-05-03 13:44:38,502 [main] INFO CCAttempt - Stock Qty and CC Qty are different, Result is actually FAIL
+2022-05-03 13:44:38,531 [main] INFO CCAttempt - Clicked on CCQty
+2022-05-03 13:44:39,498 [main] INFO CCAttempt - Entered CC Qty equal to Stock Qty
+2022-05-03 13:44:39,648 [main] INFO CCAttempt - Total parts are==44
+2022-05-03 13:44:39,736 [main] INFO CCAttempt - Value of Result of 16 Part is==FAIL
+2022-05-03 13:44:39,783 [main] INFO CCAttempt - Stock Qty for Part 16 is==1
+2022-05-03 13:44:39,838 [main] INFO CCAttempt - CC Qty for Part 16 is==
+2022-05-03 13:44:39,838 [main] INFO CCAttempt - Stock Qty and CC Qty are different, Result is actually FAIL
+2022-05-03 13:44:39,867 [main] INFO CCAttempt - Clicked on CCQty
+2022-05-03 13:44:40,734 [main] INFO CCAttempt - Entered CC Qty equal to Stock Qty
+2022-05-03 13:44:40,867 [main] INFO CCAttempt - Total parts are==44
+2022-05-03 13:44:40,917 [main] INFO CCAttempt - Value of Result of 17 Part is==FAIL
+2022-05-03 13:44:40,966 [main] INFO CCAttempt - Stock Qty for Part 17 is==1
+2022-05-03 13:44:41,020 [main] INFO CCAttempt - CC Qty for Part 17 is==
+2022-05-03 13:44:41,020 [main] INFO CCAttempt - Stock Qty and CC Qty are different, Result is actually FAIL
+2022-05-03 13:44:41,050 [main] INFO CCAttempt - Clicked on CCQty
+2022-05-03 13:44:42,095 [main] INFO CCAttempt - Entered CC Qty equal to Stock Qty
+2022-05-03 13:44:42,325 [main] INFO CCAttempt - Total parts are==44
+2022-05-03 13:44:42,376 [main] INFO CCAttempt - Value of Result of 18 Part is==FAIL
+2022-05-03 13:44:42,436 [main] INFO CCAttempt - Stock Qty for Part 18 is==1
+2022-05-03 13:44:42,505 [main] INFO CCAttempt - CC Qty for Part 18 is==
+2022-05-03 13:44:42,506 [main] INFO CCAttempt - Stock Qty and CC Qty are different, Result is actually FAIL
+2022-05-03 13:44:42,547 [main] INFO CCAttempt - Clicked on CCQty
+2022-05-03 13:44:43,386 [main] INFO CCAttempt - Entered CC Qty equal to Stock Qty
+2022-05-03 13:44:43,550 [main] INFO CCAttempt - Total parts are==44
+2022-05-03 13:44:43,620 [main] INFO CCAttempt - Value of Result of 19 Part is==FAIL
+2022-05-03 13:44:43,668 [main] INFO CCAttempt - Stock Qty for Part 19 is==1
+2022-05-03 13:44:43,722 [main] INFO CCAttempt - CC Qty for Part 19 is==
+2022-05-03 13:44:43,722 [main] INFO CCAttempt - Stock Qty and CC Qty are different, Result is actually FAIL
+2022-05-03 13:44:43,752 [main] INFO CCAttempt - Clicked on CCQty
+2022-05-03 13:44:44,537 [main] INFO CCAttempt - Entered CC Qty equal to Stock Qty
+2022-05-03 13:44:44,672 [main] INFO CCAttempt - Total parts are==44
+2022-05-03 13:44:44,721 [main] INFO CCAttempt - Value of Result of 20 Part is==FAIL
+2022-05-03 13:44:44,769 [main] INFO CCAttempt - Stock Qty for Part 20 is==1
+2022-05-03 13:44:44,821 [main] INFO CCAttempt - CC Qty for Part 20 is==
+2022-05-03 13:44:44,822 [main] INFO CCAttempt - Stock Qty and CC Qty are different, Result is actually FAIL
+2022-05-03 13:44:44,852 [main] INFO CCAttempt - Clicked on CCQty
+2022-05-03 13:44:45,799 [main] INFO CCAttempt - Entered CC Qty equal to Stock Qty
+2022-05-03 13:44:45,941 [main] INFO CCAttempt - Total parts are==44
+2022-05-03 13:44:46,001 [main] INFO CCAttempt - Value of Result of 21 Part is==FAIL
+2022-05-03 13:44:46,062 [main] INFO CCAttempt - Stock Qty for Part 21 is==1
+2022-05-03 13:44:46,131 [main] INFO CCAttempt - CC Qty for Part 21 is==
+2022-05-03 13:44:46,131 [main] INFO CCAttempt - Stock Qty and CC Qty are different, Result is actually FAIL
+2022-05-03 13:44:46,170 [main] INFO CCAttempt - Clicked on CCQty
+2022-05-03 13:44:47,057 [main] INFO CCAttempt - Entered CC Qty equal to Stock Qty
+2022-05-03 13:44:47,225 [main] INFO CCAttempt - Total parts are==44
+2022-05-03 13:44:47,320 [main] INFO CCAttempt - Value of Result of 22 Part is==FAIL
+2022-05-03 13:44:47,365 [main] INFO CCAttempt - Stock Qty for Part 22 is==1
+2022-05-03 13:44:47,418 [main] INFO CCAttempt - CC Qty for Part 22 is==
+2022-05-03 13:44:47,418 [main] INFO CCAttempt - Stock Qty and CC Qty are different, Result is actually FAIL
+2022-05-03 13:44:47,450 [main] INFO CCAttempt - Clicked on CCQty
+2022-05-03 13:44:48,244 [main] INFO CCAttempt - Entered CC Qty equal to Stock Qty
+2022-05-03 13:44:48,371 [main] INFO CCAttempt - Total parts are==44
+2022-05-03 13:44:48,416 [main] INFO CCAttempt - Value of Result of 23 Part is==FAIL
+2022-05-03 13:44:48,466 [main] INFO CCAttempt - Stock Qty for Part 23 is==1
+2022-05-03 13:44:48,520 [main] INFO CCAttempt - CC Qty for Part 23 is==
+2022-05-03 13:44:48,520 [main] INFO CCAttempt - Stock Qty and CC Qty are different, Result is actually FAIL
+2022-05-03 13:44:48,551 [main] INFO CCAttempt - Clicked on CCQty
+2022-05-03 13:44:49,434 [main] INFO CCAttempt - Entered CC Qty equal to Stock Qty
+2022-05-03 13:44:49,610 [main] INFO CCAttempt - Total parts are==44
+2022-05-03 13:44:49,660 [main] INFO CCAttempt - Value of Result of 24 Part is==FAIL
+2022-05-03 13:44:49,707 [main] INFO CCAttempt - Stock Qty for Part 24 is==1
+2022-05-03 13:44:49,760 [main] INFO CCAttempt - CC Qty for Part 24 is==
+2022-05-03 13:44:49,760 [main] INFO CCAttempt - Stock Qty and CC Qty are different, Result is actually FAIL
+2022-05-03 13:44:49,793 [main] INFO CCAttempt - Clicked on CCQty
+2022-05-03 13:44:50,598 [main] INFO CCAttempt - Entered CC Qty equal to Stock Qty
+2022-05-03 13:44:50,779 [main] INFO CCAttempt - Total parts are==44
+2022-05-03 13:44:50,843 [main] INFO CCAttempt - Value of Result of 25 Part is==FAIL
+2022-05-03 13:44:50,893 [main] INFO CCAttempt - Stock Qty for Part 25 is==1
+2022-05-03 13:44:50,945 [main] INFO CCAttempt - CC Qty for Part 25 is==
+2022-05-03 13:44:50,946 [main] INFO CCAttempt - Stock Qty and CC Qty are different, Result is actually FAIL
+2022-05-03 13:44:50,975 [main] INFO CCAttempt - Clicked on CCQty
+2022-05-03 13:44:51,838 [main] INFO CCAttempt - Entered CC Qty equal to Stock Qty
+2022-05-03 13:44:52,004 [main] INFO CCAttempt - Total parts are==44
+2022-05-03 13:44:52,062 [main] INFO CCAttempt - Value of Result of 26 Part is==FAIL
+2022-05-03 13:44:52,119 [main] INFO CCAttempt - Stock Qty for Part 26 is==1
+2022-05-03 13:44:52,182 [main] INFO CCAttempt - CC Qty for Part 26 is==
+2022-05-03 13:44:52,183 [main] INFO CCAttempt - Stock Qty and CC Qty are different, Result is actually FAIL
+2022-05-03 13:44:52,217 [main] INFO CCAttempt - Clicked on CCQty
+2022-05-03 13:44:53,156 [main] INFO CCAttempt - Entered CC Qty equal to Stock Qty
+2022-05-03 13:44:53,312 [main] INFO CCAttempt - Total parts are==44
+2022-05-03 13:44:53,363 [main] INFO CCAttempt - Value of Result of 27 Part is==FAIL
+2022-05-03 13:44:53,414 [main] INFO CCAttempt - Stock Qty for Part 27 is==1
+2022-05-03 13:44:53,461 [main] INFO CCAttempt - CC Qty for Part 27 is==
+2022-05-03 13:44:53,462 [main] INFO CCAttempt - Stock Qty and CC Qty are different, Result is actually FAIL
+2022-05-03 13:44:53,491 [main] INFO CCAttempt - Clicked on CCQty
+2022-05-03 13:44:54,416 [main] INFO CCAttempt - Entered CC Qty equal to Stock Qty
+2022-05-03 13:44:54,601 [main] INFO CCAttempt - Total parts are==44
+2022-05-03 13:44:54,686 [main] INFO CCAttempt - Value of Result of 28 Part is==FAIL
+2022-05-03 13:44:54,735 [main] INFO CCAttempt - Stock Qty for Part 28 is==1
+2022-05-03 13:44:54,803 [main] INFO CCAttempt - CC Qty for Part 28 is==
+2022-05-03 13:44:54,803 [main] INFO CCAttempt - Stock Qty and CC Qty are different, Result is actually FAIL
+2022-05-03 13:44:54,843 [main] INFO CCAttempt - Clicked on CCQty
+2022-05-03 13:44:55,888 [main] INFO CCAttempt - Entered CC Qty equal to Stock Qty
+2022-05-03 13:44:56,095 [main] INFO CCAttempt - Total parts are==44
+2022-05-03 13:44:56,148 [main] INFO CCAttempt - Value of Result of 29 Part is==FAIL
+2022-05-03 13:44:56,198 [main] INFO CCAttempt - Stock Qty for Part 29 is==1
+2022-05-03 13:44:56,258 [main] INFO CCAttempt - CC Qty for Part 29 is==
+2022-05-03 13:44:56,258 [main] INFO CCAttempt - Stock Qty and CC Qty are different, Result is actually FAIL
+2022-05-03 13:44:56,296 [main] INFO CCAttempt - Clicked on CCQty
+2022-05-03 13:44:57,056 [main] INFO CCAttempt - Entered CC Qty equal to Stock Qty
+2022-05-03 13:44:57,467 [main] INFO CCAttempt - Total parts are==44
+2022-05-03 13:44:57,510 [main] INFO CCAttempt - Value of Result of 30 Part is==FAIL
+2022-05-03 13:44:57,548 [main] INFO CCAttempt - Stock Qty for Part 30 is==1
+2022-05-03 13:44:57,597 [main] INFO CCAttempt - CC Qty for Part 30 is==
+2022-05-03 13:44:57,597 [main] INFO CCAttempt - Stock Qty and CC Qty are different, Result is actually FAIL
+2022-05-03 13:44:57,624 [main] INFO CCAttempt - Clicked on CCQty
+2022-05-03 13:44:58,450 [main] INFO CCAttempt - Entered CC Qty equal to Stock Qty
+2022-05-03 13:44:58,650 [main] INFO CCAttempt - Total parts are==44
+2022-05-03 13:44:58,707 [main] INFO CCAttempt - Value of Result of 31 Part is==FAIL
+2022-05-03 13:44:58,750 [main] INFO CCAttempt - Stock Qty for Part 31 is==1
+2022-05-03 13:44:58,807 [main] INFO CCAttempt - CC Qty for Part 31 is==
+2022-05-03 13:44:58,807 [main] INFO CCAttempt - Stock Qty and CC Qty are different, Result is actually FAIL
+2022-05-03 13:44:58,843 [main] INFO CCAttempt - Clicked on CCQty
+2022-05-03 13:44:59,864 [main] INFO CCAttempt - Entered CC Qty equal to Stock Qty
+2022-05-03 13:45:00,082 [main] INFO CCAttempt - Total parts are==44
+2022-05-03 13:45:00,134 [main] INFO CCAttempt - Value of Result of 32 Part is==FAIL
+2022-05-03 13:45:00,186 [main] INFO CCAttempt - Stock Qty for Part 32 is==1
+2022-05-03 13:45:00,253 [main] INFO CCAttempt - CC Qty for Part 32 is==
+2022-05-03 13:45:00,253 [main] INFO CCAttempt - Stock Qty and CC Qty are different, Result is actually FAIL
+2022-05-03 13:45:00,291 [main] INFO CCAttempt - Clicked on CCQty
+2022-05-03 13:45:01,254 [main] INFO CCAttempt - Entered CC Qty equal to Stock Qty
+2022-05-03 13:45:01,463 [main] INFO CCAttempt - Total parts are==44
+2022-05-03 13:45:01,514 [main] INFO CCAttempt - Value of Result of 33 Part is==FAIL
+2022-05-03 13:45:01,561 [main] INFO CCAttempt - Stock Qty for Part 33 is==1
+2022-05-03 13:45:01,616 [main] INFO CCAttempt - CC Qty for Part 33 is==
+2022-05-03 13:45:01,616 [main] INFO CCAttempt - Stock Qty and CC Qty are different, Result is actually FAIL
+2022-05-03 13:45:01,646 [main] INFO CCAttempt - Clicked on CCQty
+2022-05-03 13:45:02,535 [main] INFO CCAttempt - Entered CC Qty equal to Stock Qty
+2022-05-03 13:45:02,742 [main] INFO CCAttempt - Total parts are==44
+2022-05-03 13:45:02,819 [main] INFO CCAttempt - Value of Result of 34 Part is==FAIL
+2022-05-03 13:45:02,865 [main] INFO CCAttempt - Stock Qty for Part 34 is==1
+2022-05-03 13:45:02,919 [main] INFO CCAttempt - CC Qty for Part 34 is==
+2022-05-03 13:45:02,919 [main] INFO CCAttempt - Stock Qty and CC Qty are different, Result is actually FAIL
+2022-05-03 13:45:02,950 [main] INFO CCAttempt - Clicked on CCQty
+2022-05-03 13:45:03,729 [main] INFO CCAttempt - Entered CC Qty equal to Stock Qty
+2022-05-03 13:45:03,896 [main] INFO CCAttempt - Total parts are==44
+2022-05-03 13:45:03,950 [main] INFO CCAttempt - Value of Result of 35 Part is==FAIL
+2022-05-03 13:45:04,000 [main] INFO CCAttempt - Stock Qty for Part 35 is==1
+2022-05-03 13:45:04,058 [main] INFO CCAttempt - CC Qty for Part 35 is==
+2022-05-03 13:45:04,059 [main] INFO CCAttempt - Stock Qty and CC Qty are different, Result is actually FAIL
+2022-05-03 13:45:04,090 [main] INFO CCAttempt - Clicked on CCQty
+2022-05-03 13:45:05,068 [main] INFO CCAttempt - Entered CC Qty equal to Stock Qty
+2022-05-03 13:45:05,259 [main] INFO CCAttempt - Total parts are==44
+2022-05-03 13:45:05,307 [main] INFO CCAttempt - Value of Result of 36 Part is==FAIL
+2022-05-03 13:45:05,360 [main] INFO CCAttempt - Stock Qty for Part 36 is==1
+2022-05-03 13:45:05,416 [main] INFO CCAttempt - CC Qty for Part 36 is==
+2022-05-03 13:45:05,416 [main] INFO CCAttempt - Stock Qty and CC Qty are different, Result is actually FAIL
+2022-05-03 13:45:05,452 [main] INFO CCAttempt - Clicked on CCQty
+2022-05-03 13:45:06,240 [main] INFO CCAttempt - Entered CC Qty equal to Stock Qty
+2022-05-03 13:45:06,402 [main] INFO CCAttempt - Total parts are==44
+2022-05-03 13:45:06,450 [main] INFO CCAttempt - Value of Result of 37 Part is==FAIL
+2022-05-03 13:45:06,496 [main] INFO CCAttempt - Stock Qty for Part 37 is==1
+2022-05-03 13:45:06,552 [main] INFO CCAttempt - CC Qty for Part 37 is==
+2022-05-03 13:45:06,552 [main] INFO CCAttempt - Stock Qty and CC Qty are different, Result is actually FAIL
+2022-05-03 13:45:06,584 [main] INFO CCAttempt - Clicked on CCQty
+2022-05-03 13:45:07,588 [main] INFO CCAttempt - Entered CC Qty equal to Stock Qty
+2022-05-03 13:45:07,836 [main] INFO CCAttempt - Total parts are==44
+2022-05-03 13:45:07,883 [main] INFO CCAttempt - Value of Result of 38 Part is==FAIL
+2022-05-03 13:45:07,934 [main] INFO CCAttempt - Stock Qty for Part 38 is==1
+2022-05-03 13:45:07,991 [main] INFO CCAttempt - CC Qty for Part 38 is==
+2022-05-03 13:45:07,991 [main] INFO CCAttempt - Stock Qty and CC Qty are different, Result is actually FAIL
+2022-05-03 13:45:08,024 [main] INFO CCAttempt - Clicked on CCQty
+2022-05-03 13:45:08,814 [main] INFO CCAttempt - Entered CC Qty equal to Stock Qty
+2022-05-03 13:45:08,975 [main] INFO CCAttempt - Total parts are==44
+2022-05-03 13:45:09,026 [main] INFO CCAttempt - Value of Result of 39 Part is==FAIL
+2022-05-03 13:45:09,078 [main] INFO CCAttempt - Stock Qty for Part 39 is==1
+2022-05-03 13:45:09,131 [main] INFO CCAttempt - CC Qty for Part 39 is==
+2022-05-03 13:45:09,131 [main] INFO CCAttempt - Stock Qty and CC Qty are different, Result is actually FAIL
+2022-05-03 13:45:09,161 [main] INFO CCAttempt - Clicked on CCQty
+2022-05-03 13:45:10,109 [main] INFO CCAttempt - Entered CC Qty equal to Stock Qty
+2022-05-03 13:45:10,345 [main] INFO CCAttempt - Total parts are==44
+2022-05-03 13:45:10,402 [main] INFO CCAttempt - Value of Result of 40 Part is==FAIL
+2022-05-03 13:45:10,464 [main] INFO CCAttempt - Stock Qty for Part 40 is==1
+2022-05-03 13:45:10,534 [main] INFO CCAttempt - CC Qty for Part 40 is==
+2022-05-03 13:45:10,534 [main] INFO CCAttempt - Stock Qty and CC Qty are different, Result is actually FAIL
+2022-05-03 13:45:10,574 [main] INFO CCAttempt - Clicked on CCQty
+2022-05-03 13:45:11,674 [main] INFO CCAttempt - Entered CC Qty equal to Stock Qty
+2022-05-03 13:45:11,901 [main] INFO CCAttempt - Total parts are==44
+2022-05-03 13:45:11,954 [main] INFO CCAttempt - Value of Result of 41 Part is==FAIL
+2022-05-03 13:45:12,002 [main] INFO CCAttempt - Stock Qty for Part 41 is==1
+2022-05-03 13:45:12,061 [main] INFO CCAttempt - CC Qty for Part 41 is==
+2022-05-03 13:45:12,062 [main] INFO CCAttempt - Stock Qty and CC Qty are different, Result is actually FAIL
+2022-05-03 13:45:12,092 [main] INFO CCAttempt - Clicked on CCQty
+2022-05-03 13:45:12,866 [main] INFO CCAttempt - Entered CC Qty equal to Stock Qty
+2022-05-03 13:45:13,302 [main] INFO CCAttempt - Total parts are==44
+2022-05-03 13:45:13,354 [main] INFO CCAttempt - Value of Result of 42 Part is==FAIL
+2022-05-03 13:45:13,404 [main] INFO CCAttempt - Stock Qty for Part 42 is==1
+2022-05-03 13:45:13,460 [main] INFO CCAttempt - CC Qty for Part 42 is==
+2022-05-03 13:45:13,461 [main] INFO CCAttempt - Stock Qty and CC Qty are different, Result is actually FAIL
+2022-05-03 13:45:13,492 [main] INFO CCAttempt - Clicked on CCQty
+2022-05-03 13:45:14,373 [main] INFO CCAttempt - Entered CC Qty equal to Stock Qty
+2022-05-03 13:45:14,545 [main] INFO CCAttempt - Total parts are==44
+2022-05-03 13:45:14,597 [main] INFO CCAttempt - Value of Result of 43 Part is==FAIL
+2022-05-03 13:45:14,658 [main] INFO CCAttempt - Stock Qty for Part 43 is==1
+2022-05-03 13:45:14,729 [main] INFO CCAttempt - CC Qty for Part 43 is==
+2022-05-03 13:45:14,729 [main] INFO CCAttempt - Stock Qty and CC Qty are different, Result is actually FAIL
+2022-05-03 13:45:14,769 [main] INFO CCAttempt - Clicked on CCQty
+2022-05-03 13:45:15,460 [main] INFO CCAttempt - Entered CC Qty equal to Stock Qty
+2022-05-03 13:45:16,024 [main] INFO CCAttempt - Click on End Cycle button
+2022-05-03 13:45:16,435 [main] INFO CCAttempt - Dialogue Message is==Are you sure you want to end the Cycle Count operation?
+2022-05-03 13:45:19,600 [main] INFO CCAttempt - Click on YES button
+2022-05-03 13:46:10,538 [main] INFO CCAttempt - Cycle is not end
+2022-05-03 13:46:10,617 [main] INFO CCAttempt - TaskLog stage is==CONF RECONC
+2022-05-03 13:46:10,668 [main] INFO CCAttempt - Name of the stage is==CONF RECONC
+2022-05-03 13:46:10,890 [main] INFO CCAttempt - Click on the record
+2022-05-03 13:46:14,251 [main] INFO CCAttempt - Stage is==Confirm Reconciliation
+2022-05-03 13:46:14,540 [main] INFO CCAttempt - IT is Reconcilation
+2022-05-03 13:46:14,632 [main] INFO CCAttempt - Click on Expand All button
+2022-05-03 13:46:16,793 [main] INFO CCAttempt - Click on Collapse All button
+2022-05-03 13:46:18,961 [main] INFO CCAttempt - Click on Collapse All Img
+2022-05-03 13:46:21,062 [main] INFO CCAttempt - Click on Collapse All button
+2022-05-03 13:46:23,231 [main] INFO CCAttempt - Click on Expand All button
+2022-05-03 13:46:25,277 [main] INFO CCAttempt - Total parts are==2
+2022-05-03 13:46:25,451 [main] INFO CCAttempt - Moved to ReconcileQty
+2022-05-03 13:46:25,837 [main] INFO CCAttempt - Cleared Remarks
+2022-05-03 13:46:26,075 [main] INFO CCAttempt - Entered Remarks
+2022-05-03 13:46:26,132 [main] INFO CCAttempt - Enetered Remarks in 0 part
+2022-05-03 13:46:28,213 [main] INFO CCAttempt - Click on Reconcile Exception dropdown
+2022-05-03 13:46:28,362 [main] INFO CCAttempt - Selected Reconcile Exception for 0 part
+2022-05-03 13:46:30,551 [main] INFO CCAttempt - Moved to ReconcileQty
+2022-05-03 13:46:30,975 [main] INFO CCAttempt - Cleared Remarks
+2022-05-03 13:46:31,202 [main] INFO CCAttempt - Entered Remarks
+2022-05-03 13:46:31,268 [main] INFO CCAttempt - Enetered Remarks in 1 part
+2022-05-03 13:46:33,348 [main] INFO CCAttempt - Click on Reconcile Exception dropdown
+2022-05-03 13:46:33,500 [main] INFO CCAttempt - Selected Reconcile Exception for 1 part
+2022-05-03 13:46:36,149 [main] INFO CCAttempt - Click on Save button
+2022-05-03 13:46:39,510 [main] INFO CCAttempt - Cycle is end
+2022-05-03 13:46:39,667 [main] INFO CCAttempt - Click on Operations
+2022-05-03 13:46:40,614 [main] INFO CCAttempt - Click on CycleCount
+2022-05-03 13:46:41,942 [main] INFO CCAttempt - If action column is not empty
+2022-05-03 13:46:42,113 [main] INFO CCAttempt - Click on Start button
+2022-05-03 13:46:43,357 [main] INFO CCAttempt - WorkOrderID after start==1686420
+2022-05-03 13:46:43,377 [main] INFO CCAttempt - Inserted workorderID in excel
+2022-05-03 13:46:43,509 [main] INFO CCAttempt - Clicked on Operations
+2022-05-03 13:46:44,731 [main] INFO CCAttempt - Clicked on TaskLog
+2022-05-03 13:46:45,628 [main] INFO CCAttempt - Click on Inventory Tab
+2022-05-03 13:46:46,545 [main] INFO CCAttempt - Total No of job in Inventory Tab is/are==0
+2022-05-03 13:46:46,595 [main] INFO CCAttempt - WorkOrderID is==1686420
+2022-05-03 13:46:46,684 [main] INFO CCAttempt - Clear Search box
+2022-05-03 13:46:46,803 [main] INFO CCAttempt - Enter value in search input
+2022-05-03 13:46:46,927 [main] INFO CCAttempt - Clicked on Search
+2022-05-03 13:46:49,368 [main] INFO CCAttempt - Stage is==Cycle Count Attempt
+2022-05-03 13:46:49,420 [main] INFO CCAttempt - Parts is available, Total Parts==3
+2022-05-03 13:46:49,470 [main] INFO CCAttempt - Total number of records==Page 1 of 1 (41 items)
+2022-05-03 13:46:49,524 [main] INFO CCAttempt - It is CCAttempt1
+2022-05-03 13:46:49,524 [main] INFO CCAttempt - ==Testing CCAttempt1==
+2022-05-03 13:46:49,685 [main] INFO CCAttempt - Uncheck the checkbox of Remove Zero Stock Parts
+2022-05-03 13:46:50,197 [main] INFO CCAttempt - Number of Parts with 0 stock Qty==73
+2022-05-03 13:46:50,677 [main] INFO CCAttempt - Check the checkbox of Remove Zero Stock Parts
+2022-05-03 13:46:50,786 [main] INFO CCAttempt - Number of Parts with 0 stock Qty after check the checkbox of 'Remove Zero Stock Parts'==0
+2022-05-03 13:46:50,786 [main] INFO CCAttempt - ===CCAttempt Scenario 4 Test Start===
+2022-05-03 13:46:51,158 [main] INFO CCAttempt - Total parts are==42
+2022-05-03 13:46:51,209 [main] INFO CCAttempt - Value of Result of 1 Part is==FAIL
+2022-05-03 13:46:51,277 [main] INFO CCAttempt - Stock Qty for Part 1 is==1
+2022-05-03 13:46:51,347 [main] INFO CCAttempt - CC Qty for Part 1 is==0
+2022-05-03 13:46:51,347 [main] INFO CCAttempt - Stock Qty and CC Qty are different, Result is actually FAIL
+2022-05-03 13:46:51,451 [main] INFO CCAttempt - Clicked on CCQty
+2022-05-03 13:46:51,612 [main] INFO CCAttempt - Total parts are==42
+2022-05-03 13:46:51,651 [main] INFO CCAttempt - Clicked on CCQty
+2022-05-03 13:46:52,527 [main] INFO CCAttempt - Entered CC Qty equal to Stock Qty
+2022-05-03 13:46:52,681 [main] INFO CCAttempt - Total parts are==42
+2022-05-03 13:46:52,732 [main] INFO CCAttempt - Value of Result of 2 Part is==FAIL
+2022-05-03 13:46:52,784 [main] INFO CCAttempt - Stock Qty for Part 2 is==1
+2022-05-03 13:46:52,864 [main] INFO CCAttempt - CC Qty for Part 2 is==
+2022-05-03 13:46:52,864 [main] INFO CCAttempt - Stock Qty and CC Qty are different, Result is actually FAIL
+2022-05-03 13:46:52,905 [main] INFO CCAttempt - Clicked on CCQty
+2022-05-03 13:46:53,872 [main] INFO CCAttempt - Entered CC Qty equal to Stock Qty
+2022-05-03 13:46:54,118 [main] INFO CCAttempt - Total parts are==42
+2022-05-03 13:46:54,169 [main] INFO CCAttempt - Value of Result of 3 Part is==FAIL
+2022-05-03 13:46:54,225 [main] INFO CCAttempt - Stock Qty for Part 3 is==1
+2022-05-03 13:46:54,288 [main] INFO CCAttempt - CC Qty for Part 3 is==
+2022-05-03 13:46:54,290 [main] INFO CCAttempt - Stock Qty and CC Qty are different, Result is actually FAIL
+2022-05-03 13:46:54,324 [main] INFO CCAttempt - Clicked on CCQty
+2022-05-03 13:46:55,241 [main] INFO CCAttempt - Entered CC Qty equal to Stock Qty
+2022-05-03 13:46:55,459 [main] INFO CCAttempt - Total parts are==42
+2022-05-03 13:46:55,511 [main] INFO CCAttempt - Value of Result of 4 Part is==FAIL
+2022-05-03 13:46:55,571 [main] INFO CCAttempt - Stock Qty for Part 4 is==1
+2022-05-03 13:46:55,641 [main] INFO CCAttempt - CC Qty for Part 4 is==
+2022-05-03 13:46:55,641 [main] INFO CCAttempt - Stock Qty and CC Qty are different, Result is actually FAIL
+2022-05-03 13:46:55,680 [main] INFO CCAttempt - Clicked on CCQty
+2022-05-03 13:46:56,559 [main] INFO CCAttempt - Entered CC Qty equal to Stock Qty
+2022-05-03 13:46:56,764 [main] INFO CCAttempt - Total parts are==42
+2022-05-03 13:46:56,817 [main] INFO CCAttempt - Value of Result of 5 Part is==FAIL
+2022-05-03 13:46:56,873 [main] INFO CCAttempt - Stock Qty for Part 5 is==1
+2022-05-03 13:46:56,935 [main] INFO CCAttempt - CC Qty for Part 5 is==
+2022-05-03 13:46:56,935 [main] INFO CCAttempt - Stock Qty and CC Qty are different, Result is actually FAIL
+2022-05-03 13:46:56,973 [main] INFO CCAttempt - Clicked on CCQty
+2022-05-03 13:46:57,822 [main] INFO CCAttempt - Entered CC Qty equal to Stock Qty
+2022-05-03 13:46:57,999 [main] INFO CCAttempt - Total parts are==42
+2022-05-03 13:46:58,057 [main] INFO CCAttempt - Value of Result of 6 Part is==FAIL
+2022-05-03 13:46:58,116 [main] INFO CCAttempt - Stock Qty for Part 6 is==1
+2022-05-03 13:46:58,179 [main] INFO CCAttempt - CC Qty for Part 6 is==
+2022-05-03 13:46:58,180 [main] INFO CCAttempt - Stock Qty and CC Qty are different, Result is actually FAIL
+2022-05-03 13:46:58,216 [main] INFO CCAttempt - Clicked on CCQty
+2022-05-03 13:46:59,055 [main] INFO CCAttempt - Entered CC Qty equal to Stock Qty
+2022-05-03 13:46:59,254 [main] INFO CCAttempt - Total parts are==42
+2022-05-03 13:46:59,328 [main] INFO CCAttempt - Value of Result of 7 Part is==FAIL
+2022-05-03 13:46:59,385 [main] INFO CCAttempt - Stock Qty for Part 7 is==1
+2022-05-03 13:46:59,448 [main] INFO CCAttempt - CC Qty for Part 7 is==
+2022-05-03 13:46:59,448 [main] INFO CCAttempt - Stock Qty and CC Qty are different, Result is actually FAIL
+2022-05-03 13:46:59,479 [main] INFO CCAttempt - Clicked on CCQty
+2022-05-03 13:47:00,312 [main] INFO CCAttempt - Entered CC Qty equal to Stock Qty
+2022-05-03 13:47:00,477 [main] INFO CCAttempt - Total parts are==42
+2022-05-03 13:47:00,529 [main] INFO CCAttempt - Value of Result of 8 Part is==FAIL
+2022-05-03 13:47:00,580 [main] INFO CCAttempt - Stock Qty for Part 8 is==1
+2022-05-03 13:47:00,636 [main] INFO CCAttempt - CC Qty for Part 8 is==
+2022-05-03 13:47:00,637 [main] INFO CCAttempt - Stock Qty and CC Qty are different, Result is actually FAIL
+2022-05-03 13:47:00,671 [main] INFO CCAttempt - Clicked on CCQty
+2022-05-03 13:47:01,734 [main] INFO CCAttempt - Entered CC Qty equal to Stock Qty
+2022-05-03 13:47:02,060 [main] INFO CCAttempt - Total parts are==42
+2022-05-03 13:47:02,172 [main] INFO CCAttempt - Value of Result of 9 Part is==FAIL
+2022-05-03 13:47:02,219 [main] INFO CCAttempt - Stock Qty for Part 9 is==1
+2022-05-03 13:47:02,275 [main] INFO CCAttempt - CC Qty for Part 9 is==
+2022-05-03 13:47:02,276 [main] INFO CCAttempt - Stock Qty and CC Qty are different, Result is actually FAIL
+2022-05-03 13:47:02,307 [main] INFO CCAttempt - Clicked on CCQty
+2022-05-03 13:47:03,179 [main] INFO CCAttempt - Entered CC Qty equal to Stock Qty
+2022-05-03 13:47:03,372 [main] INFO CCAttempt - Total parts are==42
+2022-05-03 13:47:03,423 [main] INFO CCAttempt - Value of Result of 10 Part is==FAIL
+2022-05-03 13:47:03,481 [main] INFO CCAttempt - Stock Qty for Part 10 is==1
+2022-05-03 13:47:03,545 [main] INFO CCAttempt - CC Qty for Part 10 is==
+2022-05-03 13:47:03,545 [main] INFO CCAttempt - Stock Qty and CC Qty are different, Result is actually FAIL
+2022-05-03 13:47:03,577 [main] INFO CCAttempt - Clicked on CCQty
+2022-05-03 13:47:04,419 [main] INFO CCAttempt - Entered CC Qty equal to Stock Qty
+2022-05-03 13:47:04,620 [main] INFO CCAttempt - Total parts are==42
+2022-05-03 13:47:04,723 [main] INFO CCAttempt - Value of Result of 11 Part is==FAIL
+2022-05-03 13:47:04,771 [main] INFO CCAttempt - Stock Qty for Part 11 is==1
+2022-05-03 13:47:04,829 [main] INFO CCAttempt - CC Qty for Part 11 is==
+2022-05-03 13:47:04,830 [main] INFO CCAttempt - Stock Qty and CC Qty are different, Result is actually FAIL
+2022-05-03 13:47:04,861 [main] INFO CCAttempt - Clicked on CCQty
+2022-05-03 13:47:05,634 [main] INFO CCAttempt - Entered CC Qty equal to Stock Qty
+2022-05-03 13:47:05,805 [main] INFO CCAttempt - Total parts are==42
+2022-05-03 13:47:05,857 [main] INFO CCAttempt - Value of Result of 12 Part is==FAIL
+2022-05-03 13:47:05,925 [main] INFO CCAttempt - Stock Qty for Part 12 is==1
+2022-05-03 13:47:05,996 [main] INFO CCAttempt - CC Qty for Part 12 is==
+2022-05-03 13:47:05,997 [main] INFO CCAttempt - Stock Qty and CC Qty are different, Result is actually FAIL
+2022-05-03 13:47:06,035 [main] INFO CCAttempt - Clicked on CCQty
+2022-05-03 13:47:06,891 [main] INFO CCAttempt - Entered CC Qty equal to Stock Qty
+2022-05-03 13:47:07,119 [main] INFO CCAttempt - Total parts are==42
+2022-05-03 13:47:07,220 [main] INFO CCAttempt - Value of Result of 13 Part is==FAIL
+2022-05-03 13:47:07,281 [main] INFO CCAttempt - Stock Qty for Part 13 is==1
+2022-05-03 13:47:07,347 [main] INFO CCAttempt - CC Qty for Part 13 is==
+2022-05-03 13:47:07,347 [main] INFO CCAttempt - Stock Qty and CC Qty are different, Result is actually FAIL
+2022-05-03 13:47:07,381 [main] INFO CCAttempt - Clicked on CCQty
+2022-05-03 13:47:08,211 [main] INFO CCAttempt - Entered CC Qty equal to Stock Qty
+2022-05-03 13:47:08,378 [main] INFO CCAttempt - Total parts are==42
+2022-05-03 13:47:08,422 [main] INFO CCAttempt - Value of Result of 14 Part is==FAIL
+2022-05-03 13:47:08,472 [main] INFO CCAttempt - Stock Qty for Part 14 is==1
+2022-05-03 13:47:08,527 [main] INFO CCAttempt - CC Qty for Part 14 is==
+2022-05-03 13:47:08,527 [main] INFO CCAttempt - Stock Qty and CC Qty are different, Result is actually FAIL
+2022-05-03 13:47:08,557 [main] INFO CCAttempt - Clicked on CCQty
+2022-05-03 13:47:09,423 [main] INFO CCAttempt - Entered CC Qty equal to Stock Qty
+2022-05-03 13:47:09,636 [main] INFO CCAttempt - Total parts are==42
+2022-05-03 13:47:09,743 [main] INFO CCAttempt - Value of Result of 15 Part is==FAIL
+2022-05-03 13:47:09,792 [main] INFO CCAttempt - Stock Qty for Part 15 is==1
+2022-05-03 13:47:09,845 [main] INFO CCAttempt - CC Qty for Part 15 is==
+2022-05-03 13:47:09,845 [main] INFO CCAttempt - Stock Qty and CC Qty are different, Result is actually FAIL
+2022-05-03 13:47:09,875 [main] INFO CCAttempt - Clicked on CCQty
+2022-05-03 13:47:10,722 [main] INFO CCAttempt - Entered CC Qty equal to Stock Qty
+2022-05-03 13:47:10,939 [main] INFO CCAttempt - Total parts are==42
+2022-05-03 13:47:10,997 [main] INFO CCAttempt - Value of Result of 16 Part is==FAIL
+2022-05-03 13:47:11,053 [main] INFO CCAttempt - Stock Qty for Part 16 is==1
+2022-05-03 13:47:11,119 [main] INFO CCAttempt - CC Qty for Part 16 is==
+2022-05-03 13:47:11,120 [main] INFO CCAttempt - Stock Qty and CC Qty are different, Result is actually FAIL
+2022-05-03 13:47:11,154 [main] INFO CCAttempt - Clicked on CCQty
+2022-05-03 13:47:11,971 [main] INFO CCAttempt - Entered CC Qty equal to Stock Qty
+2022-05-03 13:47:12,185 [main] INFO CCAttempt - Total parts are==42
+2022-05-03 13:47:12,304 [main] INFO CCAttempt - Value of Result of 17 Part is==FAIL
+2022-05-03 13:47:12,362 [main] INFO CCAttempt - Stock Qty for Part 17 is==1
+2022-05-03 13:47:12,432 [main] INFO CCAttempt - CC Qty for Part 17 is==
+2022-05-03 13:47:12,432 [main] INFO CCAttempt - Stock Qty and CC Qty are different, Result is actually FAIL
+2022-05-03 13:47:12,470 [main] INFO CCAttempt - Clicked on CCQty
+2022-05-03 13:47:13,297 [main] INFO CCAttempt - Entered CC Qty equal to Stock Qty
+2022-05-03 13:47:13,450 [main] INFO CCAttempt - Total parts are==42
+2022-05-03 13:47:13,499 [main] INFO CCAttempt - Value of Result of 18 Part is==FAIL
+2022-05-03 13:47:13,551 [main] INFO CCAttempt - Stock Qty for Part 18 is==1
+2022-05-03 13:47:13,607 [main] INFO CCAttempt - CC Qty for Part 18 is==
+2022-05-03 13:47:13,607 [main] INFO CCAttempt - Stock Qty and CC Qty are different, Result is actually FAIL
+2022-05-03 13:47:13,636 [main] INFO CCAttempt - Clicked on CCQty
+2022-05-03 13:47:14,516 [main] INFO CCAttempt - Entered CC Qty equal to Stock Qty
+2022-05-03 13:47:14,730 [main] INFO CCAttempt - Total parts are==42
+2022-05-03 13:47:14,839 [main] INFO CCAttempt - Value of Result of 19 Part is==FAIL
+2022-05-03 13:47:14,880 [main] INFO CCAttempt - Stock Qty for Part 19 is==1
+2022-05-03 13:47:14,931 [main] INFO CCAttempt - CC Qty for Part 19 is==
+2022-05-03 13:47:14,932 [main] INFO CCAttempt - Stock Qty and CC Qty are different, Result is actually FAIL
+2022-05-03 13:47:14,964 [main] INFO CCAttempt - Clicked on CCQty
+2022-05-03 13:47:15,808 [main] INFO CCAttempt - Entered CC Qty equal to Stock Qty
+2022-05-03 13:47:15,976 [main] INFO CCAttempt - Total parts are==42
+2022-05-03 13:47:16,047 [main] INFO CCAttempt - Value of Result of 20 Part is==FAIL
+2022-05-03 13:47:16,112 [main] INFO CCAttempt - Stock Qty for Part 20 is==1
+2022-05-03 13:47:16,180 [main] INFO CCAttempt - CC Qty for Part 20 is==
+2022-05-03 13:47:16,181 [main] INFO CCAttempt - Stock Qty and CC Qty are different, Result is actually FAIL
+2022-05-03 13:47:16,217 [main] INFO CCAttempt - Clicked on CCQty
+2022-05-03 13:47:17,044 [main] INFO CCAttempt - Entered CC Qty equal to Stock Qty
+2022-05-03 13:47:17,268 [main] INFO CCAttempt - Total parts are==42
+2022-05-03 13:47:17,386 [main] INFO CCAttempt - Value of Result of 21 Part is==FAIL
+2022-05-03 13:47:17,436 [main] INFO CCAttempt - Stock Qty for Part 21 is==1
+2022-05-03 13:47:17,493 [main] INFO CCAttempt - CC Qty for Part 21 is==
+2022-05-03 13:47:17,494 [main] INFO CCAttempt - Stock Qty and CC Qty are different, Result is actually FAIL
+2022-05-03 13:47:17,525 [main] INFO CCAttempt - Clicked on CCQty
+2022-05-03 13:47:18,031 [main] INFO CCAttempt - Entered CC Qty equal to Stock Qty
+2022-05-03 13:47:18,195 [main] INFO CCAttempt - Total parts are==42
+2022-05-03 13:47:18,240 [main] INFO CCAttempt - Value of Result of 22 Part is==FAIL
+2022-05-03 13:47:18,290 [main] INFO CCAttempt - Stock Qty for Part 22 is==1
+2022-05-03 13:47:18,346 [main] INFO CCAttempt - CC Qty for Part 22 is==
+2022-05-03 13:47:18,346 [main] INFO CCAttempt - Stock Qty and CC Qty are different, Result is actually FAIL
+2022-05-03 13:47:18,379 [main] INFO CCAttempt - Clicked on CCQty
+2022-05-03 13:47:19,245 [main] INFO CCAttempt - Entered CC Qty equal to Stock Qty
+2022-05-03 13:47:19,461 [main] INFO CCAttempt - Total parts are==42
+2022-05-03 13:47:19,592 [main] INFO CCAttempt - Value of Result of 23 Part is==FAIL
+2022-05-03 13:47:19,643 [main] INFO CCAttempt - Stock Qty for Part 23 is==1
+2022-05-03 13:47:19,710 [main] INFO CCAttempt - CC Qty for Part 23 is==
+2022-05-03 13:47:19,710 [main] INFO CCAttempt - Stock Qty and CC Qty are different, Result is actually FAIL
+2022-05-03 13:47:19,748 [main] INFO CCAttempt - Clicked on CCQty
+2022-05-03 13:47:20,603 [main] INFO CCAttempt - Entered CC Qty equal to Stock Qty
+2022-05-03 13:47:20,754 [main] INFO CCAttempt - Total parts are==42
+2022-05-03 13:47:20,805 [main] INFO CCAttempt - Value of Result of 24 Part is==FAIL
+2022-05-03 13:47:20,854 [main] INFO CCAttempt - Stock Qty for Part 24 is==1
+2022-05-03 13:47:20,907 [main] INFO CCAttempt - CC Qty for Part 24 is==
+2022-05-03 13:47:20,908 [main] INFO CCAttempt - Stock Qty and CC Qty are different, Result is actually FAIL
+2022-05-03 13:47:20,938 [main] INFO CCAttempt - Clicked on CCQty
+2022-05-03 13:47:21,720 [main] INFO CCAttempt - Entered CC Qty equal to Stock Qty
+2022-05-03 13:47:21,939 [main] INFO CCAttempt - Total parts are==42
+2022-05-03 13:47:22,052 [main] INFO CCAttempt - Value of Result of 25 Part is==FAIL
+2022-05-03 13:47:22,107 [main] INFO CCAttempt - Stock Qty for Part 25 is==1
+2022-05-03 13:47:22,165 [main] INFO CCAttempt - CC Qty for Part 25 is==
+2022-05-03 13:47:22,165 [main] INFO CCAttempt - Stock Qty and CC Qty are different, Result is actually FAIL
+2022-05-03 13:47:22,210 [main] INFO CCAttempt - Clicked on CCQty
+2022-05-03 13:47:23,054 [main] INFO CCAttempt - Entered CC Qty equal to Stock Qty
+2022-05-03 13:47:23,229 [main] INFO CCAttempt - Total parts are==42
+2022-05-03 13:47:23,282 [main] INFO CCAttempt - Value of Result of 26 Part is==FAIL
+2022-05-03 13:47:23,331 [main] INFO CCAttempt - Stock Qty for Part 26 is==1
+2022-05-03 13:47:23,388 [main] INFO CCAttempt - CC Qty for Part 26 is==
+2022-05-03 13:47:23,388 [main] INFO CCAttempt - Stock Qty and CC Qty are different, Result is actually FAIL
+2022-05-03 13:47:23,420 [main] INFO CCAttempt - Clicked on CCQty
+2022-05-03 13:47:24,240 [main] INFO CCAttempt - Entered CC Qty equal to Stock Qty
+2022-05-03 13:47:24,457 [main] INFO CCAttempt - Total parts are==42
+2022-05-03 13:47:24,567 [main] INFO CCAttempt - Value of Result of 27 Part is==FAIL
+2022-05-03 13:47:24,615 [main] INFO CCAttempt - Stock Qty for Part 27 is==1
+2022-05-03 13:47:24,673 [main] INFO CCAttempt - CC Qty for Part 27 is==
+2022-05-03 13:47:24,673 [main] INFO CCAttempt - Stock Qty and CC Qty are different, Result is actually FAIL
+2022-05-03 13:47:24,704 [main] INFO CCAttempt - Clicked on CCQty
+2022-05-03 13:47:25,456 [main] INFO CCAttempt - Entered CC Qty equal to Stock Qty
+2022-05-03 13:47:25,603 [main] INFO CCAttempt - Total parts are==42
+2022-05-03 13:47:25,651 [main] INFO CCAttempt - Value of Result of 28 Part is==FAIL
+2022-05-03 13:47:25,702 [main] INFO CCAttempt - Stock Qty for Part 28 is==1
+2022-05-03 13:47:25,758 [main] INFO CCAttempt - CC Qty for Part 28 is==
+2022-05-03 13:47:25,758 [main] INFO CCAttempt - Stock Qty and CC Qty are different, Result is actually FAIL
+2022-05-03 13:47:25,789 [main] INFO CCAttempt - Clicked on CCQty
+2022-05-03 13:47:26,643 [main] INFO CCAttempt - Entered CC Qty equal to Stock Qty
+2022-05-03 13:47:26,875 [main] INFO CCAttempt - Total parts are==42
+2022-05-03 13:47:26,954 [main] INFO CCAttempt - Value of Result of 29 Part is==FAIL
+2022-05-03 13:47:27,027 [main] INFO CCAttempt - Stock Qty for Part 29 is==1
+2022-05-03 13:47:27,082 [main] INFO CCAttempt - CC Qty for Part 29 is==
+2022-05-03 13:47:27,082 [main] INFO CCAttempt - Stock Qty and CC Qty are different, Result is actually FAIL
+2022-05-03 13:47:27,115 [main] INFO CCAttempt - Clicked on CCQty
+2022-05-03 13:47:27,953 [main] INFO CCAttempt - Entered CC Qty equal to Stock Qty
+2022-05-03 13:47:28,106 [main] INFO CCAttempt - Total parts are==42
+2022-05-03 13:47:28,153 [main] INFO CCAttempt - Value of Result of 30 Part is==FAIL
+2022-05-03 13:47:28,204 [main] INFO CCAttempt - Stock Qty for Part 30 is==1
+2022-05-03 13:47:28,259 [main] INFO CCAttempt - CC Qty for Part 30 is==
+2022-05-03 13:47:28,259 [main] INFO CCAttempt - Stock Qty and CC Qty are different, Result is actually FAIL
+2022-05-03 13:47:28,291 [main] INFO CCAttempt - Clicked on CCQty
+2022-05-03 13:47:29,063 [main] INFO CCAttempt - Entered CC Qty equal to Stock Qty
+2022-05-03 13:47:29,283 [main] INFO CCAttempt - Total parts are==42
+2022-05-03 13:47:29,378 [main] INFO CCAttempt - Value of Result of 31 Part is==FAIL
+2022-05-03 13:47:29,424 [main] INFO CCAttempt - Stock Qty for Part 31 is==1
+2022-05-03 13:47:29,478 [main] INFO CCAttempt - CC Qty for Part 31 is==
+2022-05-03 13:47:29,478 [main] INFO CCAttempt - Stock Qty and CC Qty are different, Result is actually FAIL
+2022-05-03 13:47:29,509 [main] INFO CCAttempt - Clicked on CCQty
+2022-05-03 13:47:30,249 [main] INFO CCAttempt - Entered CC Qty equal to Stock Qty
+2022-05-03 13:47:30,425 [main] INFO CCAttempt - Total parts are==42
+2022-05-03 13:47:30,476 [main] INFO CCAttempt - Value of Result of 32 Part is==FAIL
+2022-05-03 13:47:30,526 [main] INFO CCAttempt - Stock Qty for Part 32 is==1
+2022-05-03 13:47:30,579 [main] INFO CCAttempt - CC Qty for Part 32 is==
+2022-05-03 13:47:30,580 [main] INFO CCAttempt - Stock Qty and CC Qty are different, Result is actually FAIL
+2022-05-03 13:47:30,615 [main] INFO CCAttempt - Clicked on CCQty
+2022-05-03 13:47:31,411 [main] INFO CCAttempt - Entered CC Qty equal to Stock Qty
+2022-05-03 13:47:31,658 [main] INFO CCAttempt - Total parts are==42
+2022-05-03 13:47:31,761 [main] INFO CCAttempt - Value of Result of 33 Part is==FAIL
+2022-05-03 13:47:31,820 [main] INFO CCAttempt - Stock Qty for Part 33 is==1
+2022-05-03 13:47:31,885 [main] INFO CCAttempt - CC Qty for Part 33 is==
+2022-05-03 13:47:31,886 [main] INFO CCAttempt - Stock Qty and CC Qty are different, Result is actually FAIL
+2022-05-03 13:47:31,925 [main] INFO CCAttempt - Clicked on CCQty
+2022-05-03 13:47:32,715 [main] INFO CCAttempt - Entered CC Qty equal to Stock Qty
+2022-05-03 13:47:32,873 [main] INFO CCAttempt - Total parts are==42
+2022-05-03 13:47:32,920 [main] INFO CCAttempt - Value of Result of 34 Part is==FAIL
+2022-05-03 13:47:32,980 [main] INFO CCAttempt - Stock Qty for Part 34 is==1
+2022-05-03 13:47:33,043 [main] INFO CCAttempt - CC Qty for Part 34 is==
+2022-05-03 13:47:33,043 [main] INFO CCAttempt - Stock Qty and CC Qty are different, Result is actually FAIL
+2022-05-03 13:47:33,078 [main] INFO CCAttempt - Clicked on CCQty
+2022-05-03 13:47:33,921 [main] INFO CCAttempt - Entered CC Qty equal to Stock Qty
+2022-05-03 13:47:34,190 [main] INFO CCAttempt - Total parts are==42
+2022-05-03 13:47:34,263 [main] INFO CCAttempt - Value of Result of 35 Part is==FAIL
+2022-05-03 13:47:34,313 [main] INFO CCAttempt - Stock Qty for Part 35 is==1
+2022-05-03 13:47:34,368 [main] INFO CCAttempt - CC Qty for Part 35 is==
+2022-05-03 13:47:34,368 [main] INFO CCAttempt - Stock Qty and CC Qty are different, Result is actually FAIL
+2022-05-03 13:47:34,399 [main] INFO CCAttempt - Clicked on CCQty
+2022-05-03 13:47:35,236 [main] INFO CCAttempt - Entered CC Qty equal to Stock Qty
+2022-05-03 13:47:35,384 [main] INFO CCAttempt - Total parts are==42
+2022-05-03 13:47:35,436 [main] INFO CCAttempt - Value of Result of 36 Part is==FAIL
+2022-05-03 13:47:35,484 [main] INFO CCAttempt - Stock Qty for Part 36 is==1
+2022-05-03 13:47:35,538 [main] INFO CCAttempt - CC Qty for Part 36 is==
+2022-05-03 13:47:35,538 [main] INFO CCAttempt - Stock Qty and CC Qty are different, Result is actually FAIL
+2022-05-03 13:47:35,572 [main] INFO CCAttempt - Clicked on CCQty
+2022-05-03 13:47:36,396 [main] INFO CCAttempt - Entered CC Qty equal to Stock Qty
+2022-05-03 13:47:36,623 [main] INFO CCAttempt - Total parts are==42
+2022-05-03 13:47:36,698 [main] INFO CCAttempt - Value of Result of 37 Part is==FAIL
+2022-05-03 13:47:36,770 [main] INFO CCAttempt - Stock Qty for Part 37 is==1
+2022-05-03 13:47:36,824 [main] INFO CCAttempt - CC Qty for Part 37 is==
+2022-05-03 13:47:36,824 [main] INFO CCAttempt - Stock Qty and CC Qty are different, Result is actually FAIL
+2022-05-03 13:47:36,856 [main] INFO CCAttempt - Clicked on CCQty
+2022-05-03 13:47:37,596 [main] INFO CCAttempt - Entered CC Qty equal to Stock Qty
+2022-05-03 13:47:37,780 [main] INFO CCAttempt - Total parts are==42
+2022-05-03 13:47:37,837 [main] INFO CCAttempt - Value of Result of 38 Part is==FAIL
+2022-05-03 13:47:37,892 [main] INFO CCAttempt - Stock Qty for Part 38 is==1
+2022-05-03 13:47:37,956 [main] INFO CCAttempt - CC Qty for Part 38 is==
+2022-05-03 13:47:37,956 [main] INFO CCAttempt - Stock Qty and CC Qty are different, Result is actually FAIL
+2022-05-03 13:47:37,993 [main] INFO CCAttempt - Clicked on CCQty
+2022-05-03 13:47:38,868 [main] INFO CCAttempt - Entered CC Qty equal to Stock Qty
+2022-05-03 13:47:39,099 [main] INFO CCAttempt - Total parts are==42
+2022-05-03 13:47:39,200 [main] INFO CCAttempt - Value of Result of 39 Part is==FAIL
+2022-05-03 13:47:39,254 [main] INFO CCAttempt - Stock Qty for Part 39 is==1
+2022-05-03 13:47:39,307 [main] INFO CCAttempt - CC Qty for Part 39 is==
+2022-05-03 13:47:39,308 [main] INFO CCAttempt - Stock Qty and CC Qty are different, Result is actually FAIL
+2022-05-03 13:47:39,339 [main] INFO CCAttempt - Clicked on CCQty
+2022-05-03 13:47:40,138 [main] INFO CCAttempt - Entered CC Qty equal to Stock Qty
+2022-05-03 13:47:40,342 [main] INFO CCAttempt - Total parts are==42
+2022-05-03 13:47:40,398 [main] INFO CCAttempt - Value of Result of 40 Part is==FAIL
+2022-05-03 13:47:40,453 [main] INFO CCAttempt - Stock Qty for Part 40 is==1
+2022-05-03 13:47:40,516 [main] INFO CCAttempt - CC Qty for Part 40 is==
+2022-05-03 13:47:40,517 [main] INFO CCAttempt - Stock Qty and CC Qty are different, Result is actually FAIL
+2022-05-03 13:47:40,552 [main] INFO CCAttempt - Clicked on CCQty
+2022-05-03 13:47:41,191 [main] INFO CCAttempt - Entered CC Qty equal to Stock Qty
+2022-05-03 13:47:41,630 [main] INFO CCAttempt - Total parts are==42
+2022-05-03 13:47:41,741 [main] INFO CCAttempt - Value of Result of 41 Part is==FAIL
+2022-05-03 13:47:41,798 [main] INFO CCAttempt - Stock Qty for Part 41 is==1
+2022-05-03 13:47:41,863 [main] INFO CCAttempt - CC Qty for Part 41 is==
+2022-05-03 13:47:41,863 [main] INFO CCAttempt - Stock Qty and CC Qty are different, Result is actually FAIL
+2022-05-03 13:47:41,899 [main] INFO CCAttempt - Clicked on CCQty
+2022-05-03 13:47:42,498 [main] INFO CCAttempt - Entered CC Qty equal to Stock Qty
+2022-05-03 13:47:45,722 [main] INFO CCAttempt - Click on End Cycle button
+2022-05-03 13:47:46,389 [main] INFO CCAttempt - Dialogue is not displayed
+2022-05-03 13:48:36,699 [main] INFO CCAttempt - Cycle is not end
+2022-05-03 13:48:36,784 [main] INFO CCAttempt - TaskLog stage is==CC ATTEMPT 2
+2022-05-03 13:48:37,041 [main] INFO CCAttempt - Click on Operations
+2022-05-03 13:48:38,039 [main] INFO CCAttempt - Click on CycleCount
+2022-05-03 13:48:39,330 [main] INFO CCAttempt - If Reset button is exist
+2022-05-03 13:48:39,582 [main] INFO CCAttempt - Click on Reset button
+2022-05-03 13:48:41,457 [main] INFO CCAttempt - WorkOrderID after Reset==Cycle Count of Work Order Id :1686420 is Reset
+2022-05-03 13:48:41,491 [main] INFO CCAttempt - If action column is not empty
+2022-05-03 13:48:41,666 [main] INFO CCAttempt - Click on Start button
+2022-05-03 13:48:43,524 [main] INFO CCAttempt - WorkOrderID after start==1686421
+2022-05-03 13:48:43,543 [main] INFO CCAttempt - Inserted workorderID in excel
+2022-05-03 13:48:43,708 [main] INFO CCAttempt - Clicked on Operations
+2022-05-03 13:48:44,566 [main] INFO CCAttempt - Clicked on TaskLog
+2022-05-03 13:48:45,431 [main] INFO CCAttempt - Click on Inventory Tab
+2022-05-03 13:48:46,451 [main] INFO CCAttempt - Total No of job in Inventory Tab is/are==0
+2022-05-03 13:48:46,524 [main] INFO CCAttempt - WorkOrderID is==1686421
+2022-05-03 13:48:46,675 [main] INFO CCAttempt - Clear Search box
+2022-05-03 13:48:46,889 [main] INFO CCAttempt - Enter value in search input
+2022-05-03 13:48:47,008 [main] INFO CCAttempt - Clicked on Search
+2022-05-03 13:48:50,324 [main] INFO CCAttempt - Stage is==Cycle Count Attempt
+2022-05-03 13:48:50,372 [main] INFO CCAttempt - Parts is available, Total Parts==3
+2022-05-03 13:48:50,420 [main] INFO CCAttempt - Total number of records==Page 1 of 1 (41 items)
+2022-05-03 13:48:50,466 [main] INFO CCAttempt - It is CCAttempt1
+2022-05-03 13:48:50,467 [main] INFO CCAttempt - ==Testing CCAttempt1==
+2022-05-03 13:48:50,633 [main] INFO CCAttempt - Uncheck the checkbox of Remove Zero Stock Parts
+2022-05-03 13:48:51,259 [main] INFO CCAttempt - Number of Parts with 0 stock Qty==73
+2022-05-03 13:48:51,704 [main] INFO CCAttempt - Check the checkbox of Remove Zero Stock Parts
+2022-05-03 13:48:51,757 [main] INFO CCAttempt - Number of Parts with 0 stock Qty after check the checkbox of 'Remove Zero Stock Parts'==0
+2022-05-03 13:48:51,757 [main] INFO CCAttempt - ===CCAttempt Scenario 5 Test Start===
+2022-05-03 13:48:52,146 [main] INFO CCAttempt - Total parts are==42
+2022-05-03 13:48:52,197 [main] INFO CCAttempt - Value of Result of 1 Part is==FAIL
+2022-05-03 13:48:52,245 [main] INFO CCAttempt - Stock Qty for Part 1 is==1
+2022-05-03 13:48:52,308 [main] INFO CCAttempt - CC Qty for Part 1 is==0
+2022-05-03 13:48:52,308 [main] INFO CCAttempt - Stock Qty and CC Qty are different, Result is actually FAIL
+2022-05-03 13:48:52,452 [main] INFO CCAttempt - Clicked on CCQty
+2022-05-03 13:48:52,635 [main] INFO CCAttempt - Total parts are==42
+2022-05-03 13:48:52,673 [main] INFO CCAttempt - Clicked on CCQty
+2022-05-03 13:48:53,720 [main] INFO CCAttempt - Entered CC Qty equal to Stock Qty
+2022-05-03 13:48:53,896 [main] INFO CCAttempt - Total parts are==42
+2022-05-03 13:48:53,945 [main] INFO CCAttempt - Value of Result of 2 Part is==FAIL
+2022-05-03 13:48:53,994 [main] INFO CCAttempt - Stock Qty for Part 2 is==1
+2022-05-03 13:48:54,059 [main] INFO CCAttempt - CC Qty for Part 2 is==
+2022-05-03 13:48:54,060 [main] INFO CCAttempt - Stock Qty and CC Qty are different, Result is actually FAIL
+2022-05-03 13:48:54,099 [main] INFO CCAttempt - Clicked on CCQty
+2022-05-03 13:48:54,938 [main] INFO CCAttempt - Entered CC Qty equal to Stock Qty
+2022-05-03 13:48:55,127 [main] INFO CCAttempt - Total parts are==42
+2022-05-03 13:48:55,181 [main] INFO CCAttempt - Value of Result of 3 Part is==FAIL
+2022-05-03 13:48:55,233 [main] INFO CCAttempt - Stock Qty for Part 3 is==1
+2022-05-03 13:48:55,289 [main] INFO CCAttempt - CC Qty for Part 3 is==
+2022-05-03 13:48:55,289 [main] INFO CCAttempt - Stock Qty and CC Qty are different, Result is actually FAIL
+2022-05-03 13:48:55,320 [main] INFO CCAttempt - Clicked on CCQty
+2022-05-03 13:48:56,197 [main] INFO CCAttempt - Entered CC Qty equal to Stock Qty
+2022-05-03 13:48:56,447 [main] INFO CCAttempt - Total parts are==42
+2022-05-03 13:48:56,489 [main] INFO CCAttempt - Value of Result of 4 Part is==FAIL
+2022-05-03 13:48:56,534 [main] INFO CCAttempt - Stock Qty for Part 4 is==1
+2022-05-03 13:48:56,590 [main] INFO CCAttempt - CC Qty for Part 4 is==
+2022-05-03 13:48:56,591 [main] INFO CCAttempt - Stock Qty and CC Qty are different, Result is actually FAIL
+2022-05-03 13:48:56,632 [main] INFO CCAttempt - Clicked on CCQty
+2022-05-03 13:48:57,461 [main] INFO CCAttempt - Entered CC Qty equal to Stock Qty
+2022-05-03 13:48:57,648 [main] INFO CCAttempt - Total parts are==42
+2022-05-03 13:48:57,701 [main] INFO CCAttempt - Value of Result of 5 Part is==FAIL
+2022-05-03 13:48:57,757 [main] INFO CCAttempt - Stock Qty for Part 5 is==1
+2022-05-03 13:48:57,826 [main] INFO CCAttempt - CC Qty for Part 5 is==
+2022-05-03 13:48:57,826 [main] INFO CCAttempt - Stock Qty and CC Qty are different, Result is actually FAIL
+2022-05-03 13:48:57,864 [main] INFO CCAttempt - Clicked on CCQty
+2022-05-03 13:48:58,735 [main] INFO CCAttempt - Entered CC Qty equal to Stock Qty
+2022-05-03 13:48:58,901 [main] INFO CCAttempt - Total parts are==42
+2022-05-03 13:48:58,946 [main] INFO CCAttempt - Value of Result of 6 Part is==FAIL
+2022-05-03 13:48:58,996 [main] INFO CCAttempt - Stock Qty for Part 6 is==1
+2022-05-03 13:48:59,085 [main] INFO CCAttempt - CC Qty for Part 6 is==
+2022-05-03 13:48:59,085 [main] INFO CCAttempt - Stock Qty and CC Qty are different, Result is actually FAIL
+2022-05-03 13:48:59,143 [main] INFO CCAttempt - Clicked on CCQty
+2022-05-03 13:48:59,958 [main] INFO CCAttempt - Entered CC Qty equal to Stock Qty
+2022-05-03 13:49:00,133 [main] INFO CCAttempt - Total parts are==42
+2022-05-03 13:49:00,178 [main] INFO CCAttempt - Value of Result of 7 Part is==FAIL
+2022-05-03 13:49:00,227 [main] INFO CCAttempt - Stock Qty for Part 7 is==1
+2022-05-03 13:49:00,283 [main] INFO CCAttempt - CC Qty for Part 7 is==
+2022-05-03 13:49:00,283 [main] INFO CCAttempt - Stock Qty and CC Qty are different, Result is actually FAIL
+2022-05-03 13:49:00,316 [main] INFO CCAttempt - Clicked on CCQty
+2022-05-03 13:49:01,064 [main] INFO CCAttempt - Entered CC Qty equal to Stock Qty
+2022-05-03 13:49:01,257 [main] INFO CCAttempt - Total parts are==42
+2022-05-03 13:49:01,304 [main] INFO CCAttempt - Value of Result of 8 Part is==FAIL
+2022-05-03 13:49:01,354 [main] INFO CCAttempt - Stock Qty for Part 8 is==1
+2022-05-03 13:49:01,410 [main] INFO CCAttempt - CC Qty for Part 8 is==
+2022-05-03 13:49:01,411 [main] INFO CCAttempt - Stock Qty and CC Qty are different, Result is actually FAIL
+2022-05-03 13:49:01,447 [main] INFO CCAttempt - Clicked on CCQty
+2022-05-03 13:49:02,164 [main] INFO CCAttempt - Entered CC Qty equal to Stock Qty
+2022-05-03 13:49:02,556 [main] INFO CCAttempt - Total parts are==42
+2022-05-03 13:49:02,607 [main] INFO CCAttempt - Value of Result of 9 Part is==FAIL
+2022-05-03 13:49:02,656 [main] INFO CCAttempt - Stock Qty for Part 9 is==1
+2022-05-03 13:49:02,710 [main] INFO CCAttempt - CC Qty for Part 9 is==
+2022-05-03 13:49:02,711 [main] INFO CCAttempt - Stock Qty and CC Qty are different, Result is actually FAIL
+2022-05-03 13:49:02,743 [main] INFO CCAttempt - Clicked on CCQty
+2022-05-03 13:49:03,519 [main] INFO CCAttempt - Entered CC Qty equal to Stock Qty
+2022-05-03 13:49:03,681 [main] INFO CCAttempt - Total parts are==42
+2022-05-03 13:49:03,734 [main] INFO CCAttempt - Value of Result of 10 Part is==FAIL
+2022-05-03 13:49:03,790 [main] INFO CCAttempt - Stock Qty for Part 10 is==1
+2022-05-03 13:49:03,855 [main] INFO CCAttempt - CC Qty for Part 10 is==
+2022-05-03 13:49:03,855 [main] INFO CCAttempt - Stock Qty and CC Qty are different, Result is actually FAIL
+2022-05-03 13:49:03,894 [main] INFO CCAttempt - Clicked on CCQty
+2022-05-03 13:49:04,757 [main] INFO CCAttempt - Entered CC Qty equal to Stock Qty
+2022-05-03 13:49:04,957 [main] INFO CCAttempt - Total parts are==42
+2022-05-03 13:49:05,011 [main] INFO CCAttempt - Value of Result of 11 Part is==FAIL
+2022-05-03 13:49:05,070 [main] INFO CCAttempt - Stock Qty for Part 11 is==1
+2022-05-03 13:49:05,135 [main] INFO CCAttempt - CC Qty for Part 11 is==
+2022-05-03 13:49:05,135 [main] INFO CCAttempt - Stock Qty and CC Qty are different, Result is actually FAIL
+2022-05-03 13:49:05,176 [main] INFO CCAttempt - Clicked on CCQty
+2022-05-03 13:49:06,028 [main] INFO CCAttempt - Entered CC Qty equal to Stock Qty
+2022-05-03 13:49:06,206 [main] INFO CCAttempt - Total parts are==42
+2022-05-03 13:49:06,257 [main] INFO CCAttempt - Value of Result of 12 Part is==FAIL
+2022-05-03 13:49:06,309 [main] INFO CCAttempt - Stock Qty for Part 12 is==1
+2022-05-03 13:49:06,374 [main] INFO CCAttempt - CC Qty for Part 12 is==
+2022-05-03 13:49:06,374 [main] INFO CCAttempt - Stock Qty and CC Qty are different, Result is actually FAIL
+2022-05-03 13:49:06,409 [main] INFO CCAttempt - Clicked on CCQty
+2022-05-03 13:49:07,355 [main] INFO CCAttempt - Entered CC Qty equal to Stock Qty
+2022-05-03 13:49:07,684 [main] INFO CCAttempt - Total parts are==42
+2022-05-03 13:49:07,734 [main] INFO CCAttempt - Value of Result of 13 Part is==FAIL
+2022-05-03 13:49:07,788 [main] INFO CCAttempt - Stock Qty for Part 13 is==1
+2022-05-03 13:49:07,859 [main] INFO CCAttempt - CC Qty for Part 13 is==
+2022-05-03 13:49:07,859 [main] INFO CCAttempt - Stock Qty and CC Qty are different, Result is actually FAIL
+2022-05-03 13:49:07,898 [main] INFO CCAttempt - Clicked on CCQty
+2022-05-03 13:49:08,693 [main] INFO CCAttempt - Entered CC Qty equal to Stock Qty
+2022-05-03 13:49:08,863 [main] INFO CCAttempt - Total parts are==42
+2022-05-03 13:49:08,903 [main] INFO CCAttempt - Value of Result of 14 Part is==FAIL
+2022-05-03 13:49:08,951 [main] INFO CCAttempt - Stock Qty for Part 14 is==1
+2022-05-03 13:49:09,005 [main] INFO CCAttempt - CC Qty for Part 14 is==
+2022-05-03 13:49:09,005 [main] INFO CCAttempt - Stock Qty and CC Qty are different, Result is actually FAIL
+2022-05-03 13:49:09,039 [main] INFO CCAttempt - Clicked on CCQty
+2022-05-03 13:49:09,837 [main] INFO CCAttempt - Entered CC Qty equal to Stock Qty
+2022-05-03 13:49:10,043 [main] INFO CCAttempt - Total parts are==42
+2022-05-03 13:49:10,094 [main] INFO CCAttempt - Value of Result of 15 Part is==FAIL
+2022-05-03 13:49:10,143 [main] INFO CCAttempt - Stock Qty for Part 15 is==1
+2022-05-03 13:49:10,198 [main] INFO CCAttempt - CC Qty for Part 15 is==
+2022-05-03 13:49:10,198 [main] INFO CCAttempt - Stock Qty and CC Qty are different, Result is actually FAIL
+2022-05-03 13:49:10,237 [main] INFO CCAttempt - Clicked on CCQty
+2022-05-03 13:49:11,292 [main] INFO CCAttempt - Entered CC Qty equal to Stock Qty
+2022-05-03 13:49:11,511 [main] INFO CCAttempt - Total parts are==42
+2022-05-03 13:49:11,565 [main] INFO CCAttempt - Value of Result of 16 Part is==FAIL
+2022-05-03 13:49:11,613 [main] INFO CCAttempt - Stock Qty for Part 16 is==1
+2022-05-03 13:49:11,668 [main] INFO CCAttempt - CC Qty for Part 16 is==
+2022-05-03 13:49:11,669 [main] INFO CCAttempt - Stock Qty and CC Qty are different, Result is actually FAIL
+2022-05-03 13:49:11,701 [main] INFO CCAttempt - Clicked on CCQty
+2022-05-03 13:49:12,549 [main] INFO CCAttempt - Entered CC Qty equal to Stock Qty
+2022-05-03 13:49:12,745 [main] INFO CCAttempt - Total parts are==42
+2022-05-03 13:49:12,796 [main] INFO CCAttempt - Value of Result of 17 Part is==FAIL
+2022-05-03 13:49:12,856 [main] INFO CCAttempt - Stock Qty for Part 17 is==1
+2022-05-03 13:49:12,924 [main] INFO CCAttempt - CC Qty for Part 17 is==
+2022-05-03 13:49:12,925 [main] INFO CCAttempt - Stock Qty and CC Qty are different, Result is actually FAIL
+2022-05-03 13:49:12,960 [main] INFO CCAttempt - Clicked on CCQty
+2022-05-03 13:49:13,960 [main] INFO CCAttempt - Entered CC Qty equal to Stock Qty
+2022-05-03 13:49:14,174 [main] INFO CCAttempt - Total parts are==42
+2022-05-03 13:49:14,231 [main] INFO CCAttempt - Value of Result of 18 Part is==FAIL
+2022-05-03 13:49:14,291 [main] INFO CCAttempt - Stock Qty for Part 18 is==1
+2022-05-03 13:49:14,355 [main] INFO CCAttempt - CC Qty for Part 18 is==
+2022-05-03 13:49:14,356 [main] INFO CCAttempt - Stock Qty and CC Qty are different, Result is actually FAIL
+2022-05-03 13:49:14,391 [main] INFO CCAttempt - Clicked on CCQty
+2022-05-03 13:49:15,215 [main] INFO CCAttempt - Entered CC Qty equal to Stock Qty
+2022-05-03 13:49:15,437 [main] INFO CCAttempt - Total parts are==42
+2022-05-03 13:49:15,493 [main] INFO CCAttempt - Value of Result of 19 Part is==FAIL
+2022-05-03 13:49:15,544 [main] INFO CCAttempt - Stock Qty for Part 19 is==1
+2022-05-03 13:49:15,604 [main] INFO CCAttempt - CC Qty for Part 19 is==
+2022-05-03 13:49:15,604 [main] INFO CCAttempt - Stock Qty and CC Qty are different, Result is actually FAIL
+2022-05-03 13:49:15,639 [main] INFO CCAttempt - Clicked on CCQty
+2022-05-03 13:49:16,447 [main] INFO CCAttempt - Entered CC Qty equal to Stock Qty
+2022-05-03 13:49:16,713 [main] INFO CCAttempt - Total parts are==42
+2022-05-03 13:49:16,816 [main] INFO CCAttempt - Value of Result of 20 Part is==FAIL
+2022-05-03 13:49:16,919 [main] INFO CCAttempt - Stock Qty for Part 20 is==1
+2022-05-03 13:49:16,975 [main] INFO CCAttempt - CC Qty for Part 20 is==
+2022-05-03 13:49:16,975 [main] INFO CCAttempt - Stock Qty and CC Qty are different, Result is actually FAIL
+2022-05-03 13:49:17,006 [main] INFO CCAttempt - Clicked on CCQty
+2022-05-03 13:49:17,787 [main] INFO CCAttempt - Entered CC Qty equal to Stock Qty
+2022-05-03 13:49:17,951 [main] INFO CCAttempt - Total parts are==42
+2022-05-03 13:49:18,002 [main] INFO CCAttempt - Value of Result of 21 Part is==FAIL
+2022-05-03 13:49:18,060 [main] INFO CCAttempt - Stock Qty for Part 21 is==1
+2022-05-03 13:49:18,134 [main] INFO CCAttempt - CC Qty for Part 21 is==
+2022-05-03 13:49:18,134 [main] INFO CCAttempt - Stock Qty and CC Qty are different, Result is actually FAIL
+2022-05-03 13:49:18,172 [main] INFO CCAttempt - Clicked on CCQty
+2022-05-03 13:49:18,942 [main] INFO CCAttempt - Entered CC Qty equal to Stock Qty
+2022-05-03 13:49:19,151 [main] INFO CCAttempt - Total parts are==42
+2022-05-03 13:49:19,202 [main] INFO CCAttempt - Value of Result of 22 Part is==FAIL
+2022-05-03 13:49:19,254 [main] INFO CCAttempt - Stock Qty for Part 22 is==1
+2022-05-03 13:49:19,331 [main] INFO CCAttempt - CC Qty for Part 22 is==
+2022-05-03 13:49:19,331 [main] INFO CCAttempt - Stock Qty and CC Qty are different, Result is actually FAIL
+2022-05-03 13:49:19,371 [main] INFO CCAttempt - Clicked on CCQty
+2022-05-03 13:49:20,334 [main] INFO CCAttempt - Entered CC Qty equal to Stock Qty
+2022-05-03 13:49:20,550 [main] INFO CCAttempt - Total parts are==42
+2022-05-03 13:49:20,605 [main] INFO CCAttempt - Value of Result of 23 Part is==FAIL
+2022-05-03 13:49:20,657 [main] INFO CCAttempt - Stock Qty for Part 23 is==1
+2022-05-03 13:49:20,718 [main] INFO CCAttempt - CC Qty for Part 23 is==
+2022-05-03 13:49:20,718 [main] INFO CCAttempt - Stock Qty and CC Qty are different, Result is actually FAIL
+2022-05-03 13:49:20,751 [main] INFO CCAttempt - Clicked on CCQty
+2022-05-03 13:49:21,590 [main] INFO CCAttempt - Entered CC Qty equal to Stock Qty
+2022-05-03 13:49:21,808 [main] INFO CCAttempt - Total parts are==42
+2022-05-03 13:49:21,862 [main] INFO CCAttempt - Value of Result of 24 Part is==FAIL
+2022-05-03 13:49:21,913 [main] INFO CCAttempt - Stock Qty for Part 24 is==1
+2022-05-03 13:49:21,969 [main] INFO CCAttempt - CC Qty for Part 24 is==
+2022-05-03 13:49:21,969 [main] INFO CCAttempt - Stock Qty and CC Qty are different, Result is actually FAIL
+2022-05-03 13:49:22,003 [main] INFO CCAttempt - Clicked on CCQty
+2022-05-03 13:49:22,838 [main] INFO CCAttempt - Entered CC Qty equal to Stock Qty
+2022-05-03 13:49:23,111 [main] INFO CCAttempt - Total parts are==42
+2022-05-03 13:49:23,172 [main] INFO CCAttempt - Value of Result of 25 Part is==FAIL
+2022-05-03 13:49:23,289 [main] INFO CCAttempt - Stock Qty for Part 25 is==1
+2022-05-03 13:49:23,346 [main] INFO CCAttempt - CC Qty for Part 25 is==
+2022-05-03 13:49:23,346 [main] INFO CCAttempt - Stock Qty and CC Qty are different, Result is actually FAIL
+2022-05-03 13:49:23,378 [main] INFO CCAttempt - Clicked on CCQty
+2022-05-03 13:49:23,957 [main] INFO CCAttempt - Entered CC Qty equal to Stock Qty
+2022-05-03 13:49:24,386 [main] INFO CCAttempt - Total parts are==42
+2022-05-03 13:49:24,441 [main] INFO CCAttempt - Value of Result of 26 Part is==FAIL
+2022-05-03 13:49:24,494 [main] INFO CCAttempt - Stock Qty for Part 26 is==1
+2022-05-03 13:49:24,550 [main] INFO CCAttempt - CC Qty for Part 26 is==
+2022-05-03 13:49:24,551 [main] INFO CCAttempt - Stock Qty and CC Qty are different, Result is actually FAIL
+2022-05-03 13:49:24,585 [main] INFO CCAttempt - Clicked on CCQty
+2022-05-03 13:49:25,407 [main] INFO CCAttempt - Entered CC Qty equal to Stock Qty
+2022-05-03 13:49:25,601 [main] INFO CCAttempt - Total parts are==42
+2022-05-03 13:49:25,653 [main] INFO CCAttempt - Value of Result of 27 Part is==FAIL
+2022-05-03 13:49:25,706 [main] INFO CCAttempt - Stock Qty for Part 27 is==1
+2022-05-03 13:49:25,761 [main] INFO CCAttempt - CC Qty for Part 27 is==
+2022-05-03 13:49:25,761 [main] INFO CCAttempt - Stock Qty and CC Qty are different, Result is actually FAIL
+2022-05-03 13:49:25,793 [main] INFO CCAttempt - Clicked on CCQty
+2022-05-03 13:49:26,449 [main] INFO CCAttempt - Entered CC Qty equal to Stock Qty
+2022-05-03 13:49:26,922 [main] INFO CCAttempt - Total parts are==42
+2022-05-03 13:49:26,975 [main] INFO CCAttempt - Value of Result of 28 Part is==FAIL
+2022-05-03 13:49:27,028 [main] INFO CCAttempt - Stock Qty for Part 28 is==1
+2022-05-03 13:49:27,088 [main] INFO CCAttempt - CC Qty for Part 28 is==
+2022-05-03 13:49:27,089 [main] INFO CCAttempt - Stock Qty and CC Qty are different, Result is actually FAIL
+2022-05-03 13:49:27,121 [main] INFO CCAttempt - Clicked on CCQty
+2022-05-03 13:49:27,910 [main] INFO CCAttempt - Entered CC Qty equal to Stock Qty
+2022-05-03 13:49:28,102 [main] INFO CCAttempt - Total parts are==42
+2022-05-03 13:49:28,155 [main] INFO CCAttempt - Value of Result of 29 Part is==FAIL
+2022-05-03 13:49:28,204 [main] INFO CCAttempt - Stock Qty for Part 29 is==1
+2022-05-03 13:49:28,262 [main] INFO CCAttempt - CC Qty for Part 29 is==
+2022-05-03 13:49:28,263 [main] INFO CCAttempt - Stock Qty and CC Qty are different, Result is actually FAIL
+2022-05-03 13:49:28,296 [main] INFO CCAttempt - Clicked on CCQty
+2022-05-03 13:49:29,122 [main] INFO CCAttempt - Entered CC Qty equal to Stock Qty
+2022-05-03 13:49:29,416 [main] INFO CCAttempt - Total parts are==42
+2022-05-03 13:49:29,472 [main] INFO CCAttempt - Value of Result of 30 Part is==FAIL
+2022-05-03 13:49:29,598 [main] INFO CCAttempt - Stock Qty for Part 30 is==1
+2022-05-03 13:49:29,654 [main] INFO CCAttempt - CC Qty for Part 30 is==
+2022-05-03 13:49:29,654 [main] INFO CCAttempt - Stock Qty and CC Qty are different, Result is actually FAIL
+2022-05-03 13:49:29,691 [main] INFO CCAttempt - Clicked on CCQty
+2022-05-03 13:49:30,491 [main] INFO CCAttempt - Entered CC Qty equal to Stock Qty
+2022-05-03 13:49:30,681 [main] INFO CCAttempt - Total parts are==42
+2022-05-03 13:49:30,732 [main] INFO CCAttempt - Value of Result of 31 Part is==FAIL
+2022-05-03 13:49:30,780 [main] INFO CCAttempt - Stock Qty for Part 31 is==1
+2022-05-03 13:49:30,836 [main] INFO CCAttempt - CC Qty for Part 31 is==
+2022-05-03 13:49:30,836 [main] INFO CCAttempt - Stock Qty and CC Qty are different, Result is actually FAIL
+2022-05-03 13:49:30,868 [main] INFO CCAttempt - Clicked on CCQty
+2022-05-03 13:49:31,690 [main] INFO CCAttempt - Entered CC Qty equal to Stock Qty
+2022-05-03 13:49:31,877 [main] INFO CCAttempt - Total parts are==42
+2022-05-03 13:49:31,928 [main] INFO CCAttempt - Value of Result of 32 Part is==FAIL
+2022-05-03 13:49:31,977 [main] INFO CCAttempt - Stock Qty for Part 32 is==1
+2022-05-03 13:49:32,033 [main] INFO CCAttempt - CC Qty for Part 32 is==
+2022-05-03 13:49:32,033 [main] INFO CCAttempt - Stock Qty and CC Qty are different, Result is actually FAIL
+2022-05-03 13:49:32,067 [main] INFO CCAttempt - Clicked on CCQty
+2022-05-03 13:49:33,089 [main] INFO CCAttempt - Entered CC Qty equal to Stock Qty
+2022-05-03 13:49:33,273 [main] INFO CCAttempt - Total parts are==42
+2022-05-03 13:49:33,325 [main] INFO CCAttempt - Value of Result of 33 Part is==FAIL
+2022-05-03 13:49:33,375 [main] INFO CCAttempt - Stock Qty for Part 33 is==1
+2022-05-03 13:49:33,431 [main] INFO CCAttempt - CC Qty for Part 33 is==
+2022-05-03 13:49:33,431 [main] INFO CCAttempt - Stock Qty and CC Qty are different, Result is actually FAIL
+2022-05-03 13:49:33,463 [main] INFO CCAttempt - Clicked on CCQty
+2022-05-03 13:49:34,241 [main] INFO CCAttempt - Entered CC Qty equal to Stock Qty
+2022-05-03 13:49:34,457 [main] INFO CCAttempt - Total parts are==42
+2022-05-03 13:49:34,508 [main] INFO CCAttempt - Value of Result of 34 Part is==FAIL
+2022-05-03 13:49:34,561 [main] INFO CCAttempt - Stock Qty for Part 34 is==1
+2022-05-03 13:49:34,620 [main] INFO CCAttempt - CC Qty for Part 34 is==
+2022-05-03 13:49:34,620 [main] INFO CCAttempt - Stock Qty and CC Qty are different, Result is actually FAIL
+2022-05-03 13:49:34,654 [main] INFO CCAttempt - Clicked on CCQty
+2022-05-03 13:49:35,289 [main] INFO CCAttempt - Entered CC Qty equal to Stock Qty
+2022-05-03 13:49:35,771 [main] INFO CCAttempt - Total parts are==42
+2022-05-03 13:49:35,828 [main] INFO CCAttempt - Value of Result of 35 Part is==FAIL
+2022-05-03 13:49:35,951 [main] INFO CCAttempt - Stock Qty for Part 35 is==1
+2022-05-03 13:49:36,008 [main] INFO CCAttempt - CC Qty for Part 35 is==
+2022-05-03 13:49:36,008 [main] INFO CCAttempt - Stock Qty and CC Qty are different, Result is actually FAIL
+2022-05-03 13:49:36,039 [main] INFO CCAttempt - Clicked on CCQty
+2022-05-03 13:49:36,804 [main] INFO CCAttempt - Entered CC Qty equal to Stock Qty
+2022-05-03 13:49:37,008 [main] INFO CCAttempt - Total parts are==42
+2022-05-03 13:49:37,055 [main] INFO CCAttempt - Value of Result of 36 Part is==FAIL
+2022-05-03 13:49:37,106 [main] INFO CCAttempt - Stock Qty for Part 36 is==1
+2022-05-03 13:49:37,162 [main] INFO CCAttempt - CC Qty for Part 36 is==
+2022-05-03 13:49:37,162 [main] INFO CCAttempt - Stock Qty and CC Qty are different, Result is actually FAIL
+2022-05-03 13:49:37,195 [main] INFO CCAttempt - Clicked on CCQty
+2022-05-03 13:49:38,077 [main] INFO CCAttempt - Entered CC Qty equal to Stock Qty
+2022-05-03 13:49:38,267 [main] INFO CCAttempt - Total parts are==42
+2022-05-03 13:49:38,318 [main] INFO CCAttempt - Value of Result of 37 Part is==FAIL
+2022-05-03 13:49:38,368 [main] INFO CCAttempt - Stock Qty for Part 37 is==1
+2022-05-03 13:49:38,419 [main] INFO CCAttempt - CC Qty for Part 37 is==
+2022-05-03 13:49:38,420 [main] INFO CCAttempt - Stock Qty and CC Qty are different, Result is actually FAIL
+2022-05-03 13:49:38,448 [main] INFO CCAttempt - Clicked on CCQty
+2022-05-03 13:49:39,439 [main] INFO CCAttempt - Entered CC Qty equal to Stock Qty
+2022-05-03 13:49:39,623 [main] INFO CCAttempt - Total parts are==42
+2022-05-03 13:49:39,668 [main] INFO CCAttempt - Value of Result of 38 Part is==FAIL
+2022-05-03 13:49:39,721 [main] INFO CCAttempt - Stock Qty for Part 38 is==1
+2022-05-03 13:49:39,781 [main] INFO CCAttempt - CC Qty for Part 38 is==
+2022-05-03 13:49:39,782 [main] INFO CCAttempt - Stock Qty and CC Qty are different, Result is actually FAIL
+2022-05-03 13:49:39,816 [main] INFO CCAttempt - Clicked on CCQty
+2022-05-03 13:49:40,642 [main] INFO CCAttempt - Entered CC Qty equal to Stock Qty
+2022-05-03 13:49:40,865 [main] INFO CCAttempt - Total parts are==42
+2022-05-03 13:49:40,915 [main] INFO CCAttempt - Value of Result of 39 Part is==FAIL
+2022-05-03 13:49:40,965 [main] INFO CCAttempt - Stock Qty for Part 39 is==1
+2022-05-03 13:49:41,014 [main] INFO CCAttempt - CC Qty for Part 39 is==
+2022-05-03 13:49:41,014 [main] INFO CCAttempt - Stock Qty and CC Qty are different, Result is actually FAIL
+2022-05-03 13:49:41,047 [main] INFO CCAttempt - Clicked on CCQty
+2022-05-03 13:49:42,245 [main] INFO CCAttempt - Entered CC Qty equal to Stock Qty
+2022-05-03 13:49:42,584 [main] INFO CCAttempt - Total parts are==42
+2022-05-03 13:49:42,682 [main] INFO CCAttempt - Value of Result of 40 Part is==FAIL
+2022-05-03 13:49:42,794 [main] INFO CCAttempt - Stock Qty for Part 40 is==1
+2022-05-03 13:49:42,858 [main] INFO CCAttempt - CC Qty for Part 40 is==
+2022-05-03 13:49:42,858 [main] INFO CCAttempt - Stock Qty and CC Qty are different, Result is actually FAIL
+2022-05-03 13:49:42,894 [main] INFO CCAttempt - Clicked on CCQty
+2022-05-03 13:49:43,738 [main] INFO CCAttempt - Entered CC Qty equal to Stock Qty
+2022-05-03 13:49:43,955 [main] INFO CCAttempt - Total parts are==42
+2022-05-03 13:49:44,008 [main] INFO CCAttempt - Value of Result of 41 Part is==FAIL
+2022-05-03 13:49:44,061 [main] INFO CCAttempt - Stock Qty for Part 41 is==1
+2022-05-03 13:49:44,116 [main] INFO CCAttempt - CC Qty for Part 41 is==
+2022-05-03 13:49:44,116 [main] INFO CCAttempt - Stock Qty and CC Qty are different, Result is actually FAIL
+2022-05-03 13:49:44,148 [main] INFO CCAttempt - Clicked on CCQty
+2022-05-03 13:49:44,713 [main] INFO CCAttempt - Entered CC Qty equal to Stock Qty
+2022-05-03 13:49:48,752 [main] INFO CCAttempt - Click on Save button
+2022-05-03 13:49:49,436 [main] INFO CCAttempt - Dialogue is not displayed
+2022-05-03 13:50:39,578 [main] INFO CCAttempt - Cycle is Moved to CCAttempt2 end
+2022-05-03 13:50:39,663 [main] INFO CCAttempt - TaskLog stage is==CC ATTEMPT 2
+2022-05-03 13:50:40,507 [main] INFO CCAttempt - Clicked on LogOut
+2022-05-03 13:50:44,426 [main] INFO CCAttempt - ====Sending Email=====

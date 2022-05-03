@@ -209,22 +209,7 @@ public class FSLSetUp extends BaseInit {
 				try {
 					wait.until(ExpectedConditions.visibilityOfElementLocated(
 							By.xpath("//*[@class=\"dx-datagrid-content\"]//td[contains(@aria-label,'Part')]")));
-					String A1 = Driver
-							.findElement(
-									By.xpath("//*[@class=\"dx-datagrid-content\"]//td[contains(@aria-label,'Part')]"))
-							.getText();
-					System.out.println(LocCode);
-					logger.info("Entered Location Code==" + LocCode);
-					System.out.println(A1);
-					logger.info("Searched Location Code==" + A1);
 
-					if (A1.equals(LocCode)) {
-						System.out.println("Search Compare PASS");
-						logger.info("Search Compare PASS");
-					} else {
-						System.out.println("Search Compare FAIL");
-						logger.info("Search Compare FAIL");
-					}
 				} catch (Exception NoData) {
 					logger.info("Part is not exist with search parameter");
 
@@ -340,6 +325,7 @@ public class FSLSetUp extends BaseInit {
 			Driver.findElement(By.id("ddlToLocation")).clear();
 			logger.info("Cleared To Location");
 			Driver.findElement(By.id("ddlToLocation")).sendKeys("AUTOMATION");
+			Thread.sleep(2000);
 			Driver.findElement(By.id("ddlToLocation")).sendKeys(Keys.ENTER);
 
 			logger.info("Entered To Location");
@@ -384,7 +370,6 @@ public class FSLSetUp extends BaseInit {
 			Driver.findElement(By.id("idbtnreset")).click();
 			logger.info("Clicked on Reset");
 			wait.until(ExpectedConditions.invisibilityOfElementLocated(By.xpath("//*[@class=\"ajax-loadernew\"]")));
-
 
 		}
 		// Add New

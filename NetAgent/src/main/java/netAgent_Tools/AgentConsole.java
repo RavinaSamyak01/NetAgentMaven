@@ -204,6 +204,7 @@ public class AgentConsole extends BaseInit {
 		}
 
 		// --Weather Up/Down icon
+		wait.until(ExpectedConditions.elementToBeClickable(By.id("imgWeather")));
 		Driver.findElement(By.id("imgWeather")).click();
 		logger.info("Click on Weather Up/Down icon");
 

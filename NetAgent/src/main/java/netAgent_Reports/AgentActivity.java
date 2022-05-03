@@ -108,6 +108,9 @@ public class AgentActivity extends BaseInit {
 
 			// --Same file exist, delete it
 			isFileDownloaded("AgentActivity");
+			
+			//--Delete Unconfirmed files
+			isFileDownloaded("Unconfirmed");
 
 			// --Download report in all available format
 			List<WebElement> ReportOpt = Driver.findElements(By.xpath("//*[@id=\"rpt_ctl05_ctl04_ctl00_Menu\"]//a"));

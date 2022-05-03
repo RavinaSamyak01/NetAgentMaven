@@ -1,6 +1,5 @@
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
 <suite name="NetAgentSmokeTest">
-	<!-- -->
 	<test thread-count="5" name="ContactUS">
 		<classes>
 			<class name="netAgent_LogOutDiv.ContactUS"></class>
@@ -54,7 +53,6 @@
 			<class name="netAgent_OperationsTab.CCAttempt"></class>
 		</classes>
 	</test>
-
 	<test thread-count="5" name="Parts">
 		<classes>
 			<class name="netAgent_Inventory.Parts"></class>
@@ -103,6 +101,11 @@
 	<test thread-count="5" name="Quarantine Report">
 		<classes>
 			<class name="netAgent_Reports.QuarantineReport"></class>
+		</classes>
+	</test>
+	<test thread-count="5" name="RTE Driver Billing Report">
+		<classes>
+			<class name="netAgent_Reports.RTEDriverBilling"></class>
 		</classes>
 	</test>
 	<test thread-count="5" name="Inventory OnHand Report">
@@ -158,7 +161,7 @@
 		</classes>
 	</test>
 
-		<test thread-count="5" name="OrderProcessing	">
+	<test thread-count="5" name="OrderProcessing	">
 		<classes>
 			<class name="netAgent_OperationsTab.OrderProcessing"></class>
 		</classes>

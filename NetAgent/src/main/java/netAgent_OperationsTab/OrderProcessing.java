@@ -48,10 +48,12 @@ public class OrderProcessing extends BaseInit {
 		wait.until(ExpectedConditions.visibilityOfAllElementsLocatedBy(By.className("panel-body")));
 		logger.info("Click on Task Log");
 
-		getScreenshot(Driver, "TaskLog_Operations");
+		wait.until(ExpectedConditions.visibilityOfElementLocated(By.id("operation")));
+		wait.until(ExpectedConditions.elementToBeClickable(By.id("operation")));
 		Driver.findElement(By.id("operation")).click();
 		logger.info("Click on Operation Tab");
 		wait.until(ExpectedConditions.invisibilityOfElementLocated(By.xpath("//*[@class=\"ajax-loadernew\"]")));
+		getScreenshot(Driver, "TaskLog_Operations");
 
 		// --Basic Search
 
@@ -6421,14 +6423,15 @@ public class OrderProcessing extends BaseInit {
 				}
 			} catch (Exception NoData1) {
 				try {
-				wait.until(ExpectedConditions.visibilityOfElementLocated(By.className("dx-datagrid-nodata")));
-				WebElement NoData = Driver.findElement(By.className("dx-datagrid-nodata"));
-				if (NoData.isDisplayed()) {
-					logger.info("Job is not exist with the search parameters");
+					wait.until(ExpectedConditions.visibilityOfElementLocated(By.className("dx-datagrid-nodata")));
+					WebElement NoData = Driver.findElement(By.className("dx-datagrid-nodata"));
+					if (NoData.isDisplayed()) {
+						logger.info("Job is not exist with the search parameters");
 
-				}
-				}catch(Exception OnBoard) {
-					wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//*[@class=\"pull-left\"]/strong")));
+					}
+				} catch (Exception OnBoard) {
+					wait.until(ExpectedConditions
+							.visibilityOfElementLocated(By.xpath("//*[@class=\"pull-left\"]/strong")));
 					WebElement ONBOARD = Driver.findElement(By.xpath("//*[@class=\"pull-left\"]/strong"));
 					if (ONBOARD.getText().equalsIgnoreCase("ON BOARD")) {
 						logger.info("SD Job is on OnBoard stage");

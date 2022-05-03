@@ -1,5 +1,5 @@
 ﻿FromDate,ToDate
-04/19/2022,04/29/2022
+04/23/2022,05/03/2022
 
 JobID,BOLType,CityState,SRVC,Miles,AlertMiles,BillMiles,Wait,ATT,WTPCS,ActualDTTM,Late,Interco,RE,Vehicle,Mileagesource,BaseRate2,ExcessMileage,ExcessMileageCharge,AttemptCharge,WaitCharge,ExcessWeight,ExcessWeight1,HolidayCharge,AddStopcharge,HoldCharge,ID2ndmanHrcharge,FSC,TotalAgentCost,Note1,GrandTotal,TotalLate,TotalCostInterco,TotalAgentCost2
 ,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,Grand Total           0 job(s),,,

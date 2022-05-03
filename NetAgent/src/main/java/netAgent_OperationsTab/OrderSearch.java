@@ -150,6 +150,25 @@ public class OrderSearch extends BaseInit {
 			wait.until(ExpectedConditions.invisibilityOfElementLocated(By.xpath("//*[@class=\"ajax-loadernew\"]")));
 
 			getScreenshot(Driver, "OrderSearch Document");
+
+			// --Delete existing doc
+			try {
+				wait.until(ExpectedConditions.elementToBeClickable(By.id("idcancelicon")));
+				Driver.findElement(By.id("idcancelicon")).click();
+				logger.info("Clicked on Delete button of Doc");
+				// --Pop Up
+				wait.until(ExpectedConditions.visibilityOfAllElementsLocatedBy(By.className("modal-dialog")));
+				// --Getting popup message
+				String Msg = Driver.findElement(By.xpath("//*[contains(@class,'modal-body ')]")).getText();
+				logger.info("Popup message==" + Msg);
+
+				// --Click on Yes
+				Driver.findElement(By.id("iddataok")).click();
+				logger.info("Clicked on Yes button of Pop Up");
+			} catch (Exception NoDOc) {
+				logger.info("There is no any existing doc");
+
+			}
 			wait.until(
 					ExpectedConditions.visibilityOfAllElementsLocatedBy(By.xpath("//*[@ng-form=\"DocDetailsForm\"]")));
 			// --Click on Plus sign
