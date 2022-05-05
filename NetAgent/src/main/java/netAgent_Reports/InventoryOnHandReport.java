@@ -3,6 +3,7 @@ package netAgent_Reports;
 import java.util.List;
 
 import org.openqa.selenium.By;
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.ExpectedConditions;
@@ -50,10 +51,15 @@ public class InventoryOnHandReport extends BaseInit {
 
 		wait.until(ExpectedConditions.invisibilityOfElementLocated(By.xpath("//*[@class=\"ajax-loadernew\"]")));
 
+		JavascriptExecutor js = (JavascriptExecutor) Driver;
+		js.executeScript("window.scrollBy(0,-250)");
+		Thread.sleep(2000);
+		
 		// select FSL
 		wait.until(ExpectedConditions.visibilityOfElementLocated(By.id("btn_ddlfslclass=")));
 		wait.until(ExpectedConditions.elementToBeClickable(By.id("btn_ddlfslclass=")));
-		Driver.findElement(By.id("btn_ddlfslclass=")).click();
+		WebElement FSL = Driver.findElement(By.id("btn_ddlfslclass="));
+		act.moveToElement(FSL).click().perform();
 		Thread.sleep(2000);
 		wait.until(ExpectedConditions
 				.elementToBeClickable(By.xpath("//*[@id=\"ddlfsl\"]//input[@id=\"idcheckboxInput\"]")));
@@ -155,13 +161,11 @@ public class InventoryOnHandReport extends BaseInit {
 		Driver.switchTo().defaultContent();
 		logger.info("Switched to Main screen");
 
-		
-
 		// Reset
 		Driver.findElement(By.id("btnReset")).click();
 		logger.info("Click on Reset button");
 		wait.until(ExpectedConditions.invisibilityOfElementLocated(By.xpath("//*[@class=\"ajax-loadernew\"]")));
-		
+
 		wait.until(ExpectedConditions.visibilityOfElementLocated(By.id("imgNGLLogo")));
 		wait.until(ExpectedConditions.elementToBeClickable(By.id("imgNGLLogo")));
 

@@ -6,8 +6,10 @@ import java.util.Date;
 import java.util.List;
 
 import org.openqa.selenium.By;
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.annotations.Test;
@@ -31,12 +33,17 @@ public class AgentActivityDetail extends BaseInit {
 		logger.info("Clicked on Agent Activity Details");
 		wait.until(ExpectedConditions.invisibilityOfElementLocated(By.xpath("//*[@class=\"ajax-loadernew\"]")));
 
+		JavascriptExecutor js = (JavascriptExecutor) Driver;
+		js.executeScript("window.scrollBy(0,-250)");
+		Thread.sleep(2000);
+		
 		// --Select Agent
 		wait.until(ExpectedConditions.visibilityOfElementLocated(By.id("btn_ddlCourierclass=")));
 		wait.until(ExpectedConditions.elementToBeClickable(By.id("btn_ddlCourierclass=")));
-	
-		Driver.findElement(By.id("btn_ddlCourierclass=")).click();
-		logger.info("Clicked on Courier dropdown");
+
+		Actions act = new Actions(Driver);
+		WebElement Courier = Driver.findElement(By.id("btn_ddlCourierclass="));
+		act.moveToElement(Courier).click().perform();
 		Thread.sleep(2000);
 		Driver.findElement(By.id("chkAllddlCourier")).click();
 		logger.info("Select all");
@@ -149,7 +156,6 @@ public class AgentActivityDetail extends BaseInit {
 
 		wait.until(ExpectedConditions.visibilityOfElementLocated(By.id("imgNGLLogo")));
 		wait.until(ExpectedConditions.elementToBeClickable(By.id("imgNGLLogo")));
-
 
 		Driver.findElement(By.id("imgNGLLogo")).click();
 		logger.info("Click on MNX Logo");

@@ -6,6 +6,7 @@ import java.util.Date;
 import java.util.List;
 
 import org.openqa.selenium.By;
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
@@ -54,10 +55,16 @@ public class InventoryTransactionReport extends BaseInit {
 		}
 
 		wait.until(ExpectedConditions.invisibilityOfElementLocated(By.xpath("//*[@class=\"ajax-loadernew\"]")));
+
+		JavascriptExecutor js = (JavascriptExecutor) Driver;
+		js.executeScript("window.scrollBy(0,-250)");
+		Thread.sleep(2000);
+		
 		wait.until(ExpectedConditions.visibilityOfElementLocated(By.id("btn_ddlfslclass=")));
 		wait.until(ExpectedConditions.elementToBeClickable(By.id("btn_ddlfslclass=")));
 		// select FSL
-		Driver.findElement(By.id("btn_ddlfslclass=")).click();
+		WebElement FSL = Driver.findElement(By.id("btn_ddlfslclass="));
+		act.moveToElement(FSL).click().perform();
 		Thread.sleep(2000);
 		Driver.findElement(By.xpath("//*[@id=\"ddlfsl\"]//input[@id=\"idcheckboxInput\"]")).click();
 		Thread.sleep(2000);

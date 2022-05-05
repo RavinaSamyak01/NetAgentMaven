@@ -6,8 +6,10 @@ import java.util.Date;
 import java.util.List;
 
 import org.openqa.selenium.By;
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.annotations.Test;
@@ -18,6 +20,7 @@ public class RTEDriverBilling extends BaseInit {
 	@Test
 	public void rteDriverBillingReport() throws Exception {
 		WebDriverWait wait = new WebDriverWait(Driver, 50);
+		Actions act = new Actions(Driver);
 
 		Driver.findElement(By.id("imgNGLLogo")).click();
 		logger.info("Click on MNX Logo");
@@ -36,6 +39,10 @@ public class RTEDriverBilling extends BaseInit {
 		logger.info("Clicked on RTE Driver Billing Report");
 		wait.until(ExpectedConditions.invisibilityOfElementLocated(By.xpath("//*[@class=\"ajax-loadernew\"]")));
 
+		JavascriptExecutor js = (JavascriptExecutor) Driver;
+		js.executeScript("window.scrollBy(0,-250)");
+		Thread.sleep(2000);
+		
 		// Enter Customer
 		wait.until(ExpectedConditions.visibilityOfElementLocated(By.id("txtCustCode")));
 		wait.until(ExpectedConditions.elementToBeClickable(By.id("txtCustCode")));
@@ -69,7 +76,8 @@ public class RTEDriverBilling extends BaseInit {
 		AgAcRptdate.sendKeys(Keys.TAB);
 
 		// click on view report
-		Driver.findElement(By.id("btnView")).click();
+		WebElement View = Driver.findElement(By.id("btnView"));
+		act.moveToElement(View).click().perform();
 		logger.info("Click on View button");
 		wait.until(ExpectedConditions.invisibilityOfElementLocated(By.xpath("//*[@class=\"ajax-loadernew\"]")));
 

@@ -6,6 +6,7 @@ import java.util.Date;
 import java.util.List;
 
 import org.openqa.selenium.By;
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
@@ -54,11 +55,16 @@ public class InventoryPullReport extends BaseInit {
 
 		wait.until(ExpectedConditions.invisibilityOfElementLocated(By.xpath("//*[@class=\"ajax-loadernew\"]")));
 
+		JavascriptExecutor js = (JavascriptExecutor) Driver;
+		js.executeScript("window.scrollBy(0,-250)");
+		Thread.sleep(2000);
+		
 		// select FSL
 		// Driver.findElement(By.xpath("/html/body/div[2]/section/div[2]/div/div/div[2]/form/div[2]/div[1]/div[1]/div/div/button")).click();
 		wait.until(ExpectedConditions.visibilityOfElementLocated(By.id("btn_ddlfslclass=")));
 		wait.until(ExpectedConditions.elementToBeClickable(By.id("btn_ddlfslclass=")));
-		Driver.findElement(By.id("btn_ddlfslclass=")).click();
+		WebElement FSL = Driver.findElement(By.id("btn_ddlfslclass="));
+		act.moveToElement(FSL).click().perform();
 		Thread.sleep(2000);
 		Driver.findElement(By.xpath("//*[@id=\"ddlfsl\"]//input[@id=\"idcheckboxInput\"]")).click();
 		wait.until(ExpectedConditions.elementToBeClickable(By.id("btn_ddlfslclass=")));

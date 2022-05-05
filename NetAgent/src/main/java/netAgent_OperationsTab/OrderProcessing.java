@@ -48,11 +48,6 @@ public class OrderProcessing extends BaseInit {
 		wait.until(ExpectedConditions.visibilityOfAllElementsLocatedBy(By.className("panel-body")));
 		logger.info("Click on Task Log");
 
-		wait.until(ExpectedConditions.visibilityOfElementLocated(By.id("operation")));
-		wait.until(ExpectedConditions.elementToBeClickable(By.id("operation")));
-		Driver.findElement(By.id("operation")).click();
-		logger.info("Click on Operation Tab");
-		wait.until(ExpectedConditions.invisibilityOfElementLocated(By.xpath("//*[@class=\"ajax-loadernew\"]")));
 		getScreenshot(Driver, "TaskLog_Operations");
 
 		// --Basic Search
@@ -64,9 +59,14 @@ public class OrderProcessing extends BaseInit {
 			String PUID = getData("OrderProcessing", row1, 1);
 			logger.info("PickUpID is==" + PUID);
 
-			Driver.findElement(By.id("operation")).click();
+			wait.until(ExpectedConditions
+					.visibilityOfElementLocated(By.xpath("//*[@id=\"operation\" and  text()='Operations']")));
+			wait.until(ExpectedConditions
+					.elementToBeClickable(By.xpath("//*[@id=\"operation\" and  text()='Operations']")));
+			Driver.findElement(By.xpath("//*[@id=\"operation\" and  text()='Operations']")).click();
 			logger.info("Click on Operation Tab");
 			wait.until(ExpectedConditions.invisibilityOfElementLocated(By.xpath("//*[@class=\"ajax-loadernew\"]")));
+			getScreenshot(Driver, "TaskLog_Operations");
 
 			try {
 
@@ -3944,7 +3944,8 @@ public class OrderProcessing extends BaseInit {
 									WebElement NoData = Driver.findElement(By.className("dx-datagrid-nodata"));
 									if (NoData.isDisplayed()) {
 										logger.info("Job is not found in Inventory Tab");
-										Driver.findElement(By.id("operation")).click();
+										Driver.findElement(By.xpath("//*[@id=\"operation\" and  text()='Operations']"))
+												.click();
 										logger.info("Click on operation tab");
 										wait.until(ExpectedConditions
 												.visibilityOfElementLocated(By.id("txtBasicSearch2")));
@@ -4323,7 +4324,8 @@ public class OrderProcessing extends BaseInit {
 								WebElement NoData = Driver.findElement(By.className("dx-datagrid-nodata"));
 								if (NoData.isDisplayed()) {
 									logger.info("Job is not found in Inventory Tab");
-									Driver.findElement(By.id("operation")).click();
+									Driver.findElement(By.xpath("//*[@id=\"operation\" and  text()='Operations']"))
+											.click();
 									logger.info("Click on operation tab");
 									wait.until(ExpectedConditions.visibilityOfElementLocated(By.id("txtBasicSearch2")));
 									PUID = getData("OrderProcessing", row1, 1);
@@ -4626,7 +4628,7 @@ public class OrderProcessing extends BaseInit {
 							WebElement NoData = Driver.findElement(By.className("dx-datagrid-nodata"));
 							if (NoData.isDisplayed()) {
 								logger.info("Job is not found in Inventory Tab");
-								Driver.findElement(By.id("operation")).click();
+								Driver.findElement(By.xpath("//*[@id=\"operation\" and  text()='Operations']")).click();
 								logger.info("Click on operation tab");
 								wait.until(ExpectedConditions.visibilityOfElementLocated(By.id("txtBasicSearch2")));
 								PUID = getData("OrderProcessing", row1, 1);
@@ -5106,7 +5108,8 @@ public class OrderProcessing extends BaseInit {
 								WebElement NoData = Driver.findElement(By.className("dx-datagrid-nodata"));
 								if (NoData.isDisplayed()) {
 									logger.info("Job is not found in Inventory Tab");
-									Driver.findElement(By.id("operation")).click();
+									Driver.findElement(By.xpath("//*[@id=\"operation\" and  text()='Operations']"))
+											.click();
 									logger.info("Click on Operation tab");
 									wait.until(ExpectedConditions.visibilityOfElementLocated(By.id("txtBasicSearch2")));
 									PUID = getData("OrderProcessing", row1, 1);
@@ -5296,7 +5299,8 @@ public class OrderProcessing extends BaseInit {
 									if (NoData.isDisplayed()) {
 										logger.info("Job is not found in Inventory Tab");
 										// --Go to Operation tab
-										Driver.findElement(By.id("operation")).click();
+										Driver.findElement(By.xpath("//*[@id=\"operation\" and  text()='Operations']"))
+												.click();
 										logger.info("Click on Operation Tab");
 										wait.until(ExpectedConditions.invisibilityOfElementLocated(
 												By.xpath("//*[@class=\"ajax-loadernew\"]")));
@@ -5518,7 +5522,7 @@ public class OrderProcessing extends BaseInit {
 							WebElement NoData = Driver.findElement(By.className("dx-datagrid-nodata"));
 							if (NoData.isDisplayed()) {
 								logger.info("Job is not found in Inventory Tab");
-								Driver.findElement(By.id("operation")).click();
+								Driver.findElement(By.xpath("//*[@id=\"operation\" and  text()='Operations']")).click();
 								logger.info("Click on Operation tab");
 								wait.until(ExpectedConditions.visibilityOfElementLocated(By.id("txtBasicSearch2")));
 								PUID = getData("OrderProcessing", row1, 1);
@@ -5700,7 +5704,8 @@ public class OrderProcessing extends BaseInit {
 								if (NoData.isDisplayed()) {
 									logger.info("Job is not found in Inventory Tab");
 									// --Go to Operation tab
-									Driver.findElement(By.id("operation")).click();
+									Driver.findElement(By.xpath("//*[@id=\"operation\" and  text()='Operations']"))
+											.click();
 									logger.info("Click on Operation Tab");
 									wait.until(ExpectedConditions
 											.invisibilityOfElementLocated(By.xpath("//*[@class=\"ajax-loadernew\"]")));
@@ -6027,7 +6032,7 @@ public class OrderProcessing extends BaseInit {
 							if (NoData.isDisplayed()) {
 								logger.info("Job is not found in Inventory Tab");
 								// --Go to Operation tab
-								Driver.findElement(By.id("operation")).click();
+								Driver.findElement(By.xpath("//*[@id=\"operation\" and  text()='Operations']")).click();
 								logger.info("Click on Operation Tab");
 								wait.until(ExpectedConditions
 										.invisibilityOfElementLocated(By.xpath("//*[@class=\"ajax-loadernew\"]")));

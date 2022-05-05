@@ -1,6 +1,7 @@
 package netAgent_Tools;
 
 import org.openqa.selenium.By;
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.annotations.Test;
@@ -26,6 +27,10 @@ public class MNXDocuments extends BaseInit {
 		wait.until(ExpectedConditions.invisibilityOfElementLocated(By.xpath("//*[@class=\"ajax-loadernew\"]")));
 
 		getScreenshot(Driver, "MNXDocuments");
+
+		JavascriptExecutor js = (JavascriptExecutor) Driver;
+		js.executeScript("window.scrollBy(0,-250)");
+		Thread.sleep(2000);
 
 //			//Click on Automation  Doc
 		String winHandleBefore1 = Driver.getWindowHandle();

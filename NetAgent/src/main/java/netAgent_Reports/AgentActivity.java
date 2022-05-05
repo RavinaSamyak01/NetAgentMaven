@@ -6,8 +6,10 @@ import java.util.Date;
 import java.util.List;
 
 import org.openqa.selenium.By;
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.annotations.Test;
@@ -18,7 +20,8 @@ public class AgentActivity extends BaseInit {
 	@Test
 	public void AgentActivityReport() throws Exception {
 		WebDriverWait wait = new WebDriverWait(Driver, 50);
-
+		Actions act = new Actions(Driver);
+		JavascriptExecutor js = (JavascriptExecutor) Driver;
 		Driver.findElement(By.id("imgNGLLogo")).click();
 		logger.info("Click on MNX Logo");
 		wait.until(ExpectedConditions.invisibilityOfElementLocated(By.xpath("//*[@class=\"ajax-loadernew\"]")));
@@ -36,11 +39,15 @@ public class AgentActivity extends BaseInit {
 		logger.info("Clicked on Agent Activity");
 		wait.until(ExpectedConditions.invisibilityOfElementLocated(By.xpath("//*[@class=\"ajax-loadernew\"]")));
 
+		js.executeScript("window.scrollBy(0,-250)");
+		Thread.sleep(2000);
+
 		// select all agent
 		wait.until(ExpectedConditions.visibilityOfElementLocated(By.id("btn_ddlCourierclass=")));
 		wait.until(ExpectedConditions.elementToBeClickable(By.id("btn_ddlCourierclass=")));
 
-		Driver.findElement(By.id("btn_ddlCourierclass=")).click();
+		WebElement Courier = Driver.findElement(By.id("btn_ddlCourierclass="));
+		act.moveToElement(Courier).click().perform();
 		logger.info("Clicked on Courier dropdown");
 		//// button[contains(.,'Select')]
 		Thread.sleep(2000);
@@ -108,8 +115,8 @@ public class AgentActivity extends BaseInit {
 
 			// --Same file exist, delete it
 			isFileDownloaded("AgentActivity");
-			
-			//--Delete Unconfirmed files
+
+			// --Delete Unconfirmed files
 			isFileDownloaded("Unconfirmed");
 
 			// --Download report in all available format

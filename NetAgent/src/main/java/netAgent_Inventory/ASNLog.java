@@ -340,7 +340,9 @@ public class ASNLog extends BaseInit {
 
 		// Click on ASN No.
 		wait.until(ExpectedConditions.visibilityOfElementLocated(By.id("hrfAct")));
-		Driver.findElement(By.id("hrfAct")).click();
+		WebElement ASNO=Driver.findElement(By.id("hrfAct"));
+		act.moveToElement(ASNO).build().perform();
+		act.moveToElement(ASNO).click().perform();
 		logger.info("Click on ASN No");
 		wait.until(ExpectedConditions.invisibilityOfElementLocated(By.xpath("//*[@class=\"ajax-loadernew\"]")));
 

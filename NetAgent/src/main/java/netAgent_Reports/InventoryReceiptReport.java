@@ -6,6 +6,7 @@ import java.util.Date;
 import java.util.List;
 
 import org.openqa.selenium.By;
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
@@ -66,10 +67,15 @@ public class InventoryReceiptReport extends BaseInit {
 		// select FSL
 		// Driver.findElement(By.xpath("/html/body/div[2]/section/div[2]/div/div/div[2]/form/div[2]/div[1]/div[1]/div/div/button")).click();
 
+		JavascriptExecutor js = (JavascriptExecutor) Driver;
+		js.executeScript("window.scrollBy(0,-250)");
+		Thread.sleep(2000);
+
 		// --Select FSL Name
 		wait.until(ExpectedConditions.visibilityOfElementLocated(By.id("btn_ddlfslclass=")));
 		wait.until(ExpectedConditions.elementToBeClickable(By.id("btn_ddlfslclass=")));
-		Driver.findElement(By.id("btn_ddlfslclass=")).click();
+		WebElement FSL = Driver.findElement(By.id("btn_ddlfslclass="));
+		act.moveToElement(FSL).click().perform();
 		Thread.sleep(2000);
 		Driver.findElement(By.xpath("//div[@id=\"ddlfsl\"]//input[@id=\"idcheckboxInput\"]")).click();
 		Thread.sleep(2000);

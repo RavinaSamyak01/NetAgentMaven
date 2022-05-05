@@ -3,7 +3,9 @@ package netAgent_Reports;
 import java.util.List;
 
 import org.openqa.selenium.By;
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
@@ -15,7 +17,7 @@ public class QuarantineReport extends BaseInit {
 	@Test
 	public void quarantineReport() throws Exception {
 		WebDriverWait wait = new WebDriverWait(Driver, 50);
-
+		Actions act = new Actions(Driver);
 		logger.info("=======Quarantine Report Test Start=======");
 		msg.append("=======Quarantine Report Test Start=======" + "\n\n");
 
@@ -30,6 +32,10 @@ public class QuarantineReport extends BaseInit {
 
 		getScreenshot(Driver, "QuarantineReportScreen");
 
+		JavascriptExecutor js = (JavascriptExecutor) Driver;
+		js.executeScript("window.scrollBy(0,-250)");
+		Thread.sleep(2000);
+		
 		// --client select
 		Select client = new Select(Driver.findElement(By.id("ddlClient")));
 		client.selectByVisibleText("AUTOMATION INVENTORY PROFILE");
@@ -44,7 +50,8 @@ public class QuarantineReport extends BaseInit {
 		logger.info("Selected FSL");
 
 		// click on view report
-		Driver.findElement(By.id("btnView")).click();
+		WebElement View = Driver.findElement(By.id("btnView"));
+		act.moveToElement(View).click().perform();
 		logger.info("Click on View button");
 		wait.until(ExpectedConditions.invisibilityOfElementLocated(By.xpath("//*[@class=\"ajax-loadernew\"]")));
 

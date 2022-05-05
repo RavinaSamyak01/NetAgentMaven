@@ -1,6 +1,7 @@
 package netAgent_Tools;
 
 import org.openqa.selenium.By;
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
@@ -32,6 +33,10 @@ public class AgentConsole extends BaseInit {
 		String AirlineID = getData("AgentConsole", 1, 0);
 		String FlightNo = getData("AgentConsole", 1, 1);
 		String ArrAP = getData("AgentConsole", 1, 2);
+
+		JavascriptExecutor js = (JavascriptExecutor) Driver;
+		js.executeScript("window.scrollBy(0,-250)");
+		Thread.sleep(2000);
 
 		// --Click on Get FlightPath without data
 		// Click on Check Status

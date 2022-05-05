@@ -30,6 +30,10 @@ public class UserList extends BaseInit {
 
 		getScreenshot(Driver, "UserList");
 
+		JavascriptExecutor js = (JavascriptExecutor) Driver;
+		js.executeScript("window.scrollBy(0,-250)");
+		Thread.sleep(2000);
+
 		// search with first name
 		Driver.findElement(By.id("txtFirstName")).clear();
 		logger.info("Cleared FirstName");
@@ -405,7 +409,6 @@ public class UserList extends BaseInit {
 		// Thread.sleep(5000);
 
 		// add and delete user role
-		JavascriptExecutor js = ((JavascriptExecutor) Driver);
 		js.executeScript("window.scrollTo(2, document.body.scrollHeight);");
 
 		// select all
