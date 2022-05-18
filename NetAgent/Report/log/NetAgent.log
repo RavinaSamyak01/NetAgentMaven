@@ -1,11 +1,90 @@
-2022-05-05 11:29:25,563 - CCAttempt -INFO - initialization of the properties file is done
-2022-05-05 11:29:25,855 - io.github.bonigarcia.wdm.WebDriverManager -INFO - Using chromedriver 100.0.4896.60 (since Google Chrome 100 is installed in your machine)
-2022-05-05 11:29:25,868 - io.github.bonigarcia.wdm.WebDriverManager -INFO - Exporting webdriver.chrome.driver as C:\Users\rprajapati\.m2\repository\webdriver\chromedriver\win32\100.0.4896.60\chromedriver.exe
-2022-05-05 11:29:32,677 - CCAttempt -INFO - Url opened
-2022-05-05 11:29:44,774 - CCAttempt -INFO - ===CCAttempt Test Start===
-2022-05-05 11:29:44,913 - CCAttempt -INFO - Click on Operations
-2022-05-05 11:29:45,020 - CCAttempt -INFO - Click on CycleCount
-2022-05-05 11:29:47,416 - CCAttempt -INFO - If Reset button is exist
-2022-05-05 11:29:47,539 - CCAttempt -INFO - Click on Reset button
-2022-05-05 11:29:49,375 - CCAttempt -INFO - WorkOrderID after Reset==Cycle Count of Work Order Id :1687704 is Reset
-2022-05-05 11:29:49,393 - CCAttempt -INFO - If action column is not empty
+2022-05-18 12:26:40,645 - OrderProcessing -INFO - initialization of the properties file is done
+2022-05-18 12:26:40,953 - io.github.bonigarcia.wdm.WebDriverManager -INFO - Using chromedriver 101.0.4951.41 (since Google Chrome 101 is installed in your machine)
+2022-05-18 12:26:40,969 - io.github.bonigarcia.wdm.WebDriverManager -INFO - Exporting webdriver.chrome.driver as C:\Users\rprajapati\.m2\repository\webdriver\chromedriver\win32\101.0.4951.41\chromedriver.exe
+2022-05-18 12:26:47,627 - OrderProcessing -INFO - Url opened
+2022-05-18 12:27:03,795 - OrderProcessing -INFO - ===Order Processing Test Start===
+2022-05-18 12:27:03,799 - OrderProcessing -INFO - total No of Rows=11
+2022-05-18 12:27:03,803 - OrderProcessing -INFO - total No of Columns=3
+2022-05-18 12:27:03,933 - OrderProcessing -INFO - Click on Operations
+2022-05-18 12:27:07,126 - OrderProcessing -INFO - Click on Task Log
+2022-05-18 12:27:07,401 - OrderProcessing -INFO - ServiceID is==LOC
+2022-05-18 12:27:07,405 - OrderProcessing -INFO - PickUpID is==3384004
+2022-05-18 12:27:57,549 - OrderProcessing -INFO - Operation tab is not selected
+2022-05-18 12:27:57,825 - OrderProcessing -INFO - Click on Operation Tab
+2022-05-18 12:28:01,470 - OrderProcessing -INFO - If ServiceID contain LOC or SD....
+2022-05-18 12:28:01,555 - OrderProcessing -INFO - Clear search input
+2022-05-18 12:28:01,635 - OrderProcessing -INFO - Enter PickUpID in Search input
+2022-05-18 12:28:01,704 - OrderProcessing -INFO - Click on Search button
+2022-05-18 12:28:08,161 - OrderProcessing -INFO - Job is not exist with the search parameters
+2022-05-18 12:28:08,164 - OrderProcessing -INFO - ServiceID is==SD
+2022-05-18 12:28:08,167 - OrderProcessing -INFO - PickUpID is==3384005
+2022-05-18 12:28:08,200 - OrderProcessing -INFO - Operation tab is already selected
+2022-05-18 12:28:08,348 - OrderProcessing -INFO - If ServiceID contain LOC or SD....
+2022-05-18 12:28:08,407 - OrderProcessing -INFO - Clear search input
+2022-05-18 12:28:08,462 - OrderProcessing -INFO - Enter PickUpID in Search input
+2022-05-18 12:28:08,518 - OrderProcessing -INFO - Click on Search button
+2022-05-18 12:28:12,047 - OrderProcessing -INFO - Job is not exist with the search parameters
+2022-05-18 12:28:12,050 - OrderProcessing -INFO - ServiceID is==SD
+2022-05-18 12:28:12,052 - OrderProcessing -INFO - PickUpID is==3384006
+2022-05-18 12:28:12,082 - OrderProcessing -INFO - Operation tab is already selected
+2022-05-18 12:28:12,183 - OrderProcessing -INFO - If ServiceID contain LOC or SD....
+2022-05-18 12:28:12,239 - OrderProcessing -INFO - Clear search input
+2022-05-18 12:28:12,294 - OrderProcessing -INFO - Enter PickUpID in Search input
+2022-05-18 12:28:12,352 - OrderProcessing -INFO - Click on Search button
+2022-05-18 12:28:15,836 - OrderProcessing -INFO - Job is not exist with the search parameters
+2022-05-18 12:28:15,840 - OrderProcessing -INFO - ServiceID is==H3P
+2022-05-18 12:28:15,844 - OrderProcessing -INFO - PickUpID is==32381732
+2022-05-18 12:28:15,876 - OrderProcessing -INFO - Operation tab is already selected
+2022-05-18 12:28:19,702 - OrderProcessing -INFO - Current stage of the order is=Task Log
+2022-05-18 12:28:19,703 - OrderProcessing -INFO - unknown stage found for H3P service
+2022-05-18 12:28:19,706 - OrderProcessing -INFO - ServiceID is==RTE
+2022-05-18 12:28:19,711 - OrderProcessing -INFO - PickUpID is==320018465103
+2022-05-18 12:28:19,748 - OrderProcessing -INFO - Operation tab is already selected
+2022-05-18 12:28:21,608 - OrderProcessing -INFO - Record is not available with search parameters
+2022-05-18 12:28:21,612 - OrderProcessing -INFO - ServiceID is==3PLAST
+2022-05-18 12:28:21,616 - OrderProcessing -INFO - PickUpID is==3389109
+2022-05-18 12:28:21,644 - OrderProcessing -INFO - Operation tab is already selected
+2022-05-18 12:28:21,775 - OrderProcessing -INFO - If ServiceID is 3PLAST....
+2022-05-18 12:29:12,429 - OrderProcessing -INFO - Job is not exist with the search parameters
+2022-05-18 12:29:12,432 - OrderProcessing -INFO - ServiceID is==3PLAST
+2022-05-18 12:29:12,435 - OrderProcessing -INFO - PickUpID is==3387189
+2022-05-18 12:29:12,465 - OrderProcessing -INFO - Operation tab is already selected
+2022-05-18 12:29:12,570 - OrderProcessing -INFO - If ServiceID is 3PLAST....
+2022-05-18 12:30:03,186 - OrderProcessing -INFO - Job is not exist with the search parameters
+2022-05-18 12:30:03,194 - OrderProcessing -INFO - ServiceID is==D3P
+2022-05-18 12:30:03,202 - OrderProcessing -INFO - PickUpID is==3387197
+2022-05-18 12:30:03,249 - OrderProcessing -INFO - Operation tab is already selected
+2022-05-18 12:30:03,387 - OrderProcessing -INFO - If ServiceID is D3P....
+2022-05-18 12:30:54,000 - OrderProcessing -INFO - Job is not exist with the search parameters
+2022-05-18 12:30:54,004 - OrderProcessing -INFO - ServiceID is==RETURN
+2022-05-18 12:30:54,009 - OrderProcessing -INFO - PickUpID is==3387201
+2022-05-18 12:30:54,067 - OrderProcessing -INFO - Operation tab is already selected
+2022-05-18 12:30:54,214 - OrderProcessing -INFO - If ServiceID is RETURN....
+2022-05-18 12:31:44,768 - OrderProcessing -INFO - Job is not exist with the search parameters
+2022-05-18 12:31:44,773 - OrderProcessing -INFO - ServiceID is==Replenish
+2022-05-18 12:31:44,778 - OrderProcessing -INFO - PickUpID is==1687840
+2022-05-18 12:31:44,813 - OrderProcessing -INFO - Operation tab is already selected
+2022-05-18 12:31:47,439 - OrderProcessing -INFO - Total No of job in Inventory Tab is/are==145
+2022-05-18 12:32:42,965 - OrderProcessing -INFO - Record is available with search parameters
+2022-05-18 12:32:43,030 - OrderProcessing -INFO - Current stage of the order is=Confirm Receipt
+2022-05-18 12:32:43,250 - OrderProcessing -INFO - Clicked on the Update
+2022-05-18 12:32:43,317 - OrderProcessing -INFO - Alert is displayed for create sub ASN
+2022-05-18 12:32:43,381 - OrderProcessing -INFO - Click on Close PopUp
+2022-05-18 12:32:43,955 - OrderProcessing -INFO - Clicked on the Save
+2022-05-18 12:32:44,021 - OrderProcessing -INFO - total No of rows in part table are==1
+2022-05-18 12:32:44,338 - OrderProcessing -INFO - Enetered serial Number in 0 part
+2022-05-18 12:32:44,713 - OrderProcessing -INFO - Enetered Accepted Quantity in 0 part
+2022-05-18 12:32:44,987 - OrderProcessing -INFO - Clicked on the Save
+2022-05-18 12:32:47,688 - OrderProcessing -INFO - Clicked on the update
+2022-05-18 12:32:48,920 - OrderProcessing -INFO - Success Message==Data Saved Successfully. You may print label from Print Label icon or click on close to return to Task log.
+2022-05-18 12:32:49,004 - OrderProcessing -INFO - Clicked on BinLess Label
+2022-05-18 12:32:51,472 - OrderProcessing -INFO - Error Message==Inventory not found for binless label generation.
+2022-05-18 12:32:51,558 - OrderProcessing -INFO - Clicked on Print Label
+2022-05-18 12:32:52,778 - OrderProcessing -INFO - Switched to Print Label window
+2022-05-18 12:32:57,953 - OrderProcessing -INFO - Switched to Print Label window
+2022-05-18 12:33:03,129 - OrderProcessing -INFO - Closed Print Label window
+2022-05-18 12:33:03,143 - OrderProcessing -INFO - Switched to main window
+2022-05-18 12:33:03,268 - OrderProcessing -INFO - Clicked on Close button
+2022-05-18 12:33:07,290 - OrderProcessing -INFO - Order is Replenished
+2022-05-18 12:33:07,694 - OrderProcessing -INFO - Clicked on LogOut
+2022-05-18 12:33:10,434 - OrderProcessing -INFO - ====Sending Email=====

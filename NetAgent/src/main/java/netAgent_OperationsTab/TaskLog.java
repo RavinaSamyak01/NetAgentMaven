@@ -887,8 +887,11 @@ public class TaskLog extends BaseInit {
 		wait.until(ExpectedConditions.elementToBeClickable(By.id("combined")));
 		isElementPresent("TLCombinedTab_id").click();
 		logger.info("Click on Combined Tab");
+		wait.until(ExpectedConditions.invisibilityOfElementLocated(By.xpath("//*[@class=\"ajax-loadernew\"]")));
 
 		// --RTE Tab
+		Thread.sleep(2000);
+		wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//*[@ng-model=\"RTE\"]")));
 		isElementPresent("TLRTETab_xpath").click();
 		logger.info("Click on RTE Tab");
 		wait.until(ExpectedConditions.invisibilityOfElementLocated(By.xpath("//*[@class=\"ajax-loadernew\"]")));

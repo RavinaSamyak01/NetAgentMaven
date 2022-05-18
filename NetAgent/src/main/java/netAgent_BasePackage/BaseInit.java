@@ -56,7 +56,6 @@ public class BaseInit {
 	public static StringBuilder msg = new StringBuilder();
 	public static WebDriver Driver;
 	public static Properties storage = new Properties();
-	String baseUrl = rb.getString("URL");
 
 	// public static GenerateData genData;
 	public static String SuccMsgReplnsh;
@@ -95,6 +94,7 @@ public class BaseInit {
 			options.addArguments("--disable-extensions");
 			options.addArguments("--no-sandbox");
 			options.addArguments("--start-maximized");
+			// options.addArguments("--headless");
 			String downloadFilepath = System.getProperty("user.dir") + "\\src\\main\\resources";
 			HashMap<String, Object> chromePrefs = new HashMap<String, Object>();
 			chromePrefs.put("profile.default_content_settings.popups", 0);
@@ -104,7 +104,6 @@ public class BaseInit {
 			options.setExperimentalOption("prefs", chromePrefs);
 			capabilities.setCapability(CapabilityType.ACCEPT_SSL_CERTS, true);
 			capabilities.setCapability(ChromeOptions.CAPABILITY, options);
-			// options.addArguments("--headless");
 			// options.addArguments("window-size=1366x788");
 			capabilities.setPlatform(Platform.ANY);
 			options.addArguments("--start-maximized");
@@ -263,18 +262,56 @@ public class BaseInit {
 	// --Updated by Ravina
 	public void Login() throws Exception {
 		WebDriverWait wait = new WebDriverWait(Driver, 50);
-		Driver.get(baseUrl);
-		logger.info("Url opened");
-		wait.until(ExpectedConditions.visibilityOfAllElementsLocatedBy(By.name("loginForm")));
-		getScreenshot(Driver, "LoginPage");
-		String UserName = storage.getProperty("UserName");
-		String password = storage.getProperty("Password");
 
-		// Enter User_name and Password and click on Login
-		isElementPresent("UserName_id").clear();
-		isElementPresent("UserName_id").sendKeys(UserName);
-		isElementPresent("Password_id").clear();
-		isElementPresent("Password_id").sendKeys(password);
+		String Env = storage.getProperty("Env");
+		String baseUrl = null;
+		if (Env.equalsIgnoreCase("Pre-Prod")) {
+			baseUrl = storage.getProperty("PREProdURL");
+			Driver.get(baseUrl);
+			logger.info("Url opened");
+			wait.until(ExpectedConditions.visibilityOfAllElementsLocatedBy(By.className("login")));
+			wait.until(ExpectedConditions.visibilityOfAllElementsLocatedBy(By.name("loginForm")));
+			getScreenshot(Driver, "LoginPage");
+			String UserName = storage.getProperty("PreProdUserName");
+			String password = storage.getProperty("PreProdPass");
+			// Enter User_name and Password and click on Login
+			isElementPresent("UserName_id").clear();
+			isElementPresent("UserName_id").sendKeys(UserName);
+			isElementPresent("Password_id").clear();
+			isElementPresent("Password_id").sendKeys(password);
+		} else if (Env.equalsIgnoreCase("STG")) {
+			baseUrl = storage.getProperty("STGURL");
+			Driver.get(baseUrl);
+			logger.info("Url opened");
+			wait.until(ExpectedConditions.visibilityOfAllElementsLocatedBy(By.className("login")));
+			wait.until(ExpectedConditions.visibilityOfAllElementsLocatedBy(By.name("loginForm")));
+			getScreenshot(Driver, "LoginPage");
+			String UserName = storage.getProperty("STGUserName");
+			String password = storage.getProperty("STGPassword");
+			// Enter User_name and Password and click on Login
+			isElementPresent("UserName_id").clear();
+			isElementPresent("UserName_id").sendKeys(UserName);
+			isElementPresent("Password_id").clear();
+			isElementPresent("Password_id").sendKeys(password);
+
+		} else if (Env.equalsIgnoreCase("DEV")) {
+			baseUrl = storage.getProperty("DEVURL");
+			Driver.get(baseUrl);
+			logger.info("Url opened");
+			wait.until(ExpectedConditions.visibilityOfAllElementsLocatedBy(By.className("login")));
+			wait.until(ExpectedConditions.visibilityOfAllElementsLocatedBy(By.name("loginForm")));
+			getScreenshot(Driver, "LoginPage");
+			String UserName = storage.getProperty("DEVUserName");
+			String password = storage.getProperty("DEVPassword");
+			// Enter User_name and Password and click on Login
+			isElementPresent("UserName_id").clear();
+			isElementPresent("UserName_id").sendKeys(UserName);
+			isElementPresent("Password_id").clear();
+			isElementPresent("Password_id").sendKeys(password);
+
+		}
+		String BaseUrl = baseUrl;
+		msg.append("Process URL : " + BaseUrl + "\n");
 
 		isElementPresent("Login_id").click();
 		wait.until(ExpectedConditions.invisibilityOfElementLocated(By.xpath("//*[@class=\"ajax-loadernew\"]")));
@@ -408,7 +445,15 @@ public class BaseInit {
 
 	public static String getData(String sheetName, int row, int col)
 			throws EncryptedDocumentException, InvalidFormatException, IOException {
-		String FilePath = storage.getProperty("File");
+		String Env = storage.getProperty("Env");
+		String FilePath = null;
+		if (Env.equalsIgnoreCase("Pre-Prod")) {
+			FilePath = storage.getProperty("PrePRODFile");
+		} else if (Env.equalsIgnoreCase("STG")) {
+			FilePath = storage.getProperty("STGFile");
+		} else if (Env.equalsIgnoreCase("DEV")) {
+			FilePath = storage.getProperty("DEVFile");
+		}
 
 		File src = new File(FilePath);
 
@@ -424,8 +469,15 @@ public class BaseInit {
 
 	public static void setData(String sheetName, int row, int col, String value)
 			throws EncryptedDocumentException, InvalidFormatException, IOException {
-		String FilePath = storage.getProperty("File");
-
+		String Env = storage.getProperty("Env");
+		String FilePath = null;
+		if (Env.equalsIgnoreCase("Pre-Prod")) {
+			FilePath = storage.getProperty("PrePRODFile");
+		} else if (Env.equalsIgnoreCase("STG")) {
+			FilePath = storage.getProperty("STGFile");
+		} else if (Env.equalsIgnoreCase("DEV")) {
+			FilePath = storage.getProperty("DEVFile");
+		}
 		File src = new File(FilePath);
 		FileInputStream fis = new FileInputStream(src);
 		Workbook workbook = WorkbookFactory.create(fis);
@@ -439,8 +491,15 @@ public class BaseInit {
 
 	public static int getTotalRow(String sheetName)
 			throws EncryptedDocumentException, InvalidFormatException, IOException {
-		String FilePath = storage.getProperty("File");
-
+		String Env = storage.getProperty("Env");
+		String FilePath = null;
+		if (Env.equalsIgnoreCase("Pre-Prod")) {
+			FilePath = storage.getProperty("PrePRODFile");
+		} else if (Env.equalsIgnoreCase("STG")) {
+			FilePath = storage.getProperty("STGFile");
+		} else if (Env.equalsIgnoreCase("DEV")) {
+			FilePath = storage.getProperty("DEVFile");
+		}
 		File src = new File(FilePath);
 
 		FileInputStream FIS = new FileInputStream(src);
@@ -454,8 +513,15 @@ public class BaseInit {
 
 	public static int getTotalCol(String sheetName)
 			throws EncryptedDocumentException, InvalidFormatException, IOException {
-		String FilePath = storage.getProperty("File");
-
+		String Env = storage.getProperty("Env");
+		String FilePath = null;
+		if (Env.equalsIgnoreCase("Pre-Prod")) {
+			FilePath = storage.getProperty("PrePRODFile");
+		} else if (Env.equalsIgnoreCase("STG")) {
+			FilePath = storage.getProperty("STGFile");
+		} else if (Env.equalsIgnoreCase("DEV")) {
+			FilePath = storage.getProperty("DEVFile");
+		}
 		File src = new File(FilePath);
 
 		FileInputStream FIS = new FileInputStream(src);
@@ -479,10 +545,10 @@ public class BaseInit {
 		// Send Details email
 
 		msg.append("*** This is automated generated email and send through automation script ***" + "\n");
-		msg.append("Process URL : " + baseUrl + "\n");
 		msg.append("Please find attached file of Report and Log");
 
-		String subject = "Selenium Automation Script: Staging NetAgent Portal";
+		String Env = storage.getProperty("Env");
+		String subject = "Selenium Automation Script: " + Env + " NetAgent Portal";
 		String File = ".\\Report\\ExtentReport\\ExtentReportResults.html,.\\Report\\log\\NetAgentLog.html";
 
 		try {

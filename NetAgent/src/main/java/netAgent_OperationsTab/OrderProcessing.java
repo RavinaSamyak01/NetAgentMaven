@@ -59,13 +59,22 @@ public class OrderProcessing extends BaseInit {
 			String PUID = getData("OrderProcessing", row1, 1);
 			logger.info("PickUpID is==" + PUID);
 
-			wait.until(ExpectedConditions
-					.visibilityOfElementLocated(By.xpath("//*[@id=\"operation\" and  text()='Operations']")));
-			wait.until(ExpectedConditions
-					.elementToBeClickable(By.xpath("//*[@id=\"operation\" and  text()='Operations']")));
-			Driver.findElement(By.xpath("//*[@id=\"operation\" and  text()='Operations']")).click();
-			logger.info("Click on Operation Tab");
-			wait.until(ExpectedConditions.invisibilityOfElementLocated(By.xpath("//*[@class=\"ajax-loadernew\"]")));
+			try {
+				wait.until(ExpectedConditions
+						.visibilityOfElementLocated(By.xpath("//*[@id=\"operation\"][contains(@class,'active ')]")));
+				logger.info("Operation tab is already selected");
+
+			} catch (Exception Operation) {
+				logger.info("Operation tab is not selected");
+				wait.until(ExpectedConditions
+						.visibilityOfElementLocated(By.xpath("//*[@id=\"operation\" and  text()='Operations']")));
+				wait.until(ExpectedConditions
+						.elementToBeClickable(By.xpath("//*[@id=\"operation\" and  text()='Operations']")));
+				Driver.findElement(By.xpath("//*[@id=\"operation\" and  text()='Operations']")).click();
+				logger.info("Click on Operation Tab");
+				wait.until(ExpectedConditions.invisibilityOfElementLocated(By.xpath("//*[@class=\"ajax-loadernew\"]")));
+
+			}
 			getScreenshot(Driver, "TaskLog_Operations");
 
 			try {
@@ -3610,6 +3619,18 @@ public class OrderProcessing extends BaseInit {
 							logger.info("Job is not moved to VERIFY CUSTOMER BILL stage successfully");
 
 						}
+
+					} else if (Orderstage.equalsIgnoreCase("3rd Party Delivery")) {
+
+						// ----3rd Party Delivery stage
+						String StageName = Driver.findElement(By.xpath("//strong/span[@class=\"ng-binding\"]"))
+								.getText();
+						logger.info("Stage is==" + StageName);
+						getScreenshot(Driver, "3rdPartyDelivery_" + PUID);
+
+						// --Click on Close
+						Driver.findElement(By.id("btnclsdelivery")).click();
+						logger.info("Clicked on Close");
 
 					}
 

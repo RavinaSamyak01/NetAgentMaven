@@ -83,7 +83,7 @@
 			<class name="netAgent_Inventory.ASNLog"></class>
 		</classes>
 	</test>
-	<test thread-count="5" name="Agent Activity">
+	<!-- --><test thread-count="5" name="Agent Activity">
 		<classes>
 			<class name="netAgent_Reports.AgentActivity"></class>
 		</classes>
