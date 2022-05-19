@@ -244,7 +244,7 @@ public class ASNLog extends BaseInit {
 		wait.until(ExpectedConditions.elementToBeClickable(By.id("idbtnRunSearch")));
 		WebElement RSearch = Driver.findElement(By.id("idbtnRunSearch"));
 		act.moveToElement(RSearch).build().perform();
-		RSearch.click();
+		act.moveToElement(RSearch).click().perform();
 		logger.info("Click on Search button");
 		wait.until(ExpectedConditions.invisibilityOfElementLocated(By.xpath("//*[@class=\"ajax-loadernew\"]")));
 		try {
@@ -260,17 +260,35 @@ public class ASNLog extends BaseInit {
 		logger.info("Cleared FromESTArrival");
 		Driver.findElement(By.id("txtToEstArrival")).clear();
 		logger.info("Cleared ToESTArrival");
-		Driver.findElement(By.id("idbtnRunSearch")).click();
-		logger.info("Click on Search button");
-		wait.until(ExpectedConditions.invisibilityOfElementLocated(By.xpath("//*[@class=\"ajax-loadernew\"]")));
+
+		try {
+			Driver.findElement(By.id("idbtnRunSearch")).click();
+			logger.info("Click on Search button");
+			wait.until(ExpectedConditions.invisibilityOfElementLocated(By.xpath("//*[@class=\"ajax-loadernew\"]")));
+
+		} catch (Exception e) {
+			WebElement Search = Driver.findElement(By.id("idbtnRunSearch"));
+			act.moveToElement(Search).build().perform();
+			act.moveToElement(Search).click().perform();
+
+		}
 
 		Driver.findElement(By.id("txtAsnFromDate")).sendKeys(ValiFrom);
 		logger.info("Enter ASNFromDate");
 		Driver.findElement(By.id("txtAsnToDate")).sendKeys(ValiTo);
 		logger.info("Enter ASNToDate");
-		Driver.findElement(By.id("idbtnRunSearch")).click();
-		logger.info("Click on Search button");
-		wait.until(ExpectedConditions.invisibilityOfElementLocated(By.xpath("//*[@class=\"ajax-loadernew\"]")));
+		try {
+			Driver.findElement(By.id("idbtnRunSearch")).click();
+			logger.info("Click on Search button");
+			wait.until(ExpectedConditions.invisibilityOfElementLocated(By.xpath("//*[@class=\"ajax-loadernew\"]")));
+
+		} catch (Exception e) {
+			WebElement Search = Driver.findElement(By.id("idbtnRunSearch"));
+			act.moveToElement(Search).build().perform();
+			act.moveToElement(Search).click().perform();
+			wait.until(ExpectedConditions.invisibilityOfElementLocated(By.xpath("//*[@class=\"ajax-loadernew\"]")));
+
+		}
 		try {
 			Driver.findElement(By.id("hlkBackToScreen")).click();
 			logger.info("Click on Back button");
@@ -284,17 +302,34 @@ public class ASNLog extends BaseInit {
 		logger.info("Cleared ASNFromDate");
 		Driver.findElement(By.id("txtAsnToDate")).clear();
 		logger.info("Cleared ASNToDate");
-		Driver.findElement(By.id("idbtnRunSearch")).click();
-		logger.info("Click on Search button");
-		wait.until(ExpectedConditions.invisibilityOfElementLocated(By.xpath("//*[@class=\"ajax-loadernew\"]")));
+		try {
+			Driver.findElement(By.id("idbtnRunSearch")).click();
+			logger.info("Click on Search button");
+			wait.until(ExpectedConditions.invisibilityOfElementLocated(By.xpath("//*[@class=\"ajax-loadernew\"]")));
 
+		} catch (Exception e) {
+			WebElement Search = Driver.findElement(By.id("idbtnRunSearch"));
+			act.moveToElement(Search).build().perform();
+			act.moveToElement(Search).click().perform();
+			wait.until(ExpectedConditions.invisibilityOfElementLocated(By.xpath("//*[@class=\"ajax-loadernew\"]")));
+
+		}
 		getScreenshot(Driver, "ASNLog_1");
 
 		Driver.findElement(By.id("txtTracking")).sendKeys("Test1234");
 		logger.info("Enter Tracking No");
-		Driver.findElement(By.id("idbtnRunSearch")).click();
-		logger.info("Click on Search button");
-		wait.until(ExpectedConditions.invisibilityOfElementLocated(By.xpath("//*[@class=\"ajax-loadernew\"]")));
+		try {
+			Driver.findElement(By.id("idbtnRunSearch")).click();
+			logger.info("Click on Search button");
+			wait.until(ExpectedConditions.invisibilityOfElementLocated(By.xpath("//*[@class=\"ajax-loadernew\"]")));
+
+		} catch (Exception e) {
+			WebElement Search = Driver.findElement(By.id("idbtnRunSearch"));
+			act.moveToElement(Search).build().perform();
+			act.moveToElement(Search).click().perform();
+			wait.until(ExpectedConditions.invisibilityOfElementLocated(By.xpath("//*[@class=\"ajax-loadernew\"]")));
+
+		}
 		String NoData = Driver.findElement(By.className("dx-datagrid-nodata")).getText();
 		logger.info("Records==" + NoData);
 		Driver.findElement(By.id("txtTracking")).clear();
@@ -302,9 +337,18 @@ public class ASNLog extends BaseInit {
 
 		Driver.findElement(By.id("txtWorkOrder")).sendKeys("1234567890");
 		logger.info("Enter WorkOrder");
-		Driver.findElement(By.id("idbtnRunSearch")).click();
-		logger.info("Click on Search button");
-		wait.until(ExpectedConditions.invisibilityOfElementLocated(By.xpath("//*[@class=\"ajax-loadernew\"]")));
+		try {
+			Driver.findElement(By.id("idbtnRunSearch")).click();
+			logger.info("Click on Search button");
+			wait.until(ExpectedConditions.invisibilityOfElementLocated(By.xpath("//*[@class=\"ajax-loadernew\"]")));
+
+		} catch (Exception e) {
+			WebElement Search = Driver.findElement(By.id("idbtnRunSearch"));
+			act.moveToElement(Search).build().perform();
+			act.moveToElement(Search).click().perform();
+			wait.until(ExpectedConditions.invisibilityOfElementLocated(By.xpath("//*[@class=\"ajax-loadernew\"]")));
+
+		}
 		NoData = Driver.findElement(By.className("dx-datagrid-nodata")).getText();
 		logger.info("Records==" + NoData);
 		Driver.findElement(By.id("txtWorkOrder")).clear();
@@ -312,9 +356,18 @@ public class ASNLog extends BaseInit {
 
 		Driver.findElement(By.id("txtASN")).sendKeys("1234567890");
 		logger.info("Enter ASN");
-		Driver.findElement(By.id("idbtnRunSearch")).click();
-		logger.info("Click on Search button");
-		wait.until(ExpectedConditions.invisibilityOfElementLocated(By.xpath("//*[@class=\"ajax-loadernew\"]")));
+		try {
+			Driver.findElement(By.id("idbtnRunSearch")).click();
+			logger.info("Click on Search button");
+			wait.until(ExpectedConditions.invisibilityOfElementLocated(By.xpath("//*[@class=\"ajax-loadernew\"]")));
+
+		} catch (Exception e) {
+			WebElement Search = Driver.findElement(By.id("idbtnRunSearch"));
+			act.moveToElement(Search).build().perform();
+			act.moveToElement(Search).click().perform();
+			wait.until(ExpectedConditions.invisibilityOfElementLocated(By.xpath("//*[@class=\"ajax-loadernew\"]")));
+
+		}
 		NoData = Driver.findElement(By.className("dx-datagrid-nodata")).getText();
 		logger.info("Records==" + NoData);
 		Driver.findElement(By.id("txtASN")).clear();
@@ -322,25 +375,42 @@ public class ASNLog extends BaseInit {
 
 		Driver.findElement(By.id("txtAsnRef")).sendKeys("Test1234");
 		logger.info("Enter ASN ref");
-		Driver.findElement(By.id("idbtnRunSearch")).click();
-		logger.info("Click on Search button");
-		wait.until(ExpectedConditions.invisibilityOfElementLocated(By.xpath("//*[@class=\"ajax-loadernew\"]")));
+		try {
+			Driver.findElement(By.id("idbtnRunSearch")).click();
+			logger.info("Click on Search button");
+			wait.until(ExpectedConditions.invisibilityOfElementLocated(By.xpath("//*[@class=\"ajax-loadernew\"]")));
+
+		} catch (Exception e) {
+			WebElement Search = Driver.findElement(By.id("idbtnRunSearch"));
+			act.moveToElement(Search).build().perform();
+			act.moveToElement(Search).click().perform();
+			wait.until(ExpectedConditions.invisibilityOfElementLocated(By.xpath("//*[@class=\"ajax-loadernew\"]")));
+
+		}
 		NoData = Driver.findElement(By.className("dx-datagrid-nodata")).getText();
 		logger.info("Records==" + NoData);
 		Driver.findElement(By.id("txtAsnRef")).clear();
 		logger.info("Clear ASN Ref");
 
-		Driver.findElement(By.id("idbtnRunSearch")).click();
-		logger.info("Click on Search button");
-		wait.until(ExpectedConditions.invisibilityOfElementLocated(By.xpath("//*[@class=\"ajax-loadernew\"]")));
+		try {
+			Driver.findElement(By.id("idbtnRunSearch")).click();
+			logger.info("Click on Search button");
+			wait.until(ExpectedConditions.invisibilityOfElementLocated(By.xpath("//*[@class=\"ajax-loadernew\"]")));
 
+		} catch (Exception e) {
+			WebElement Search = Driver.findElement(By.id("idbtnRunSearch"));
+			act.moveToElement(Search).build().perform();
+			act.moveToElement(Search).click().perform();
+			wait.until(ExpectedConditions.invisibilityOfElementLocated(By.xpath("//*[@class=\"ajax-loadernew\"]")));
+
+		}
 		// Check paging
 		logger.info("Testing Pagination");
 		pagination();
 
 		// Click on ASN No.
 		wait.until(ExpectedConditions.visibilityOfElementLocated(By.id("hrfAct")));
-		WebElement ASNO=Driver.findElement(By.id("hrfAct"));
+		WebElement ASNO = Driver.findElement(By.id("hrfAct"));
 		act.moveToElement(ASNO).build().perform();
 		act.moveToElement(ASNO).click().perform();
 		logger.info("Click on ASN No");

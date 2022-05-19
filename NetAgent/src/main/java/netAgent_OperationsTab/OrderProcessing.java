@@ -6467,6 +6467,8 @@ public class OrderProcessing extends BaseInit {
 			}
 		}
 
+		logger.info("===Order Processing Test End===");
+		msg.append("===Order Processing Test End===" + "\n\n");
 	}
 
 	public static boolean retryingFindClick(WebElement webElement) {

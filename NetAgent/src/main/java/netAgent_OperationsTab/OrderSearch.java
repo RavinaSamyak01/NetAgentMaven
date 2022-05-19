@@ -289,11 +289,27 @@ public class OrderSearch extends BaseInit {
 				logger.info("Sorting for " + ColName + " is==" + ColSortBefore);
 
 				// --Clicking on column
-				Cols = Columns.get(col);
-				wait.until(ExpectedConditions.elementToBeClickable(Cols));
-				Cols.click();
-				System.out.println("Clicked on column for sorting");
-				logger.info("Clicked on column for sorting");
+				try {
+					Cols = Columns.get(col);
+					wait.until(ExpectedConditions.elementToBeClickable(Cols));
+					Cols.click();
+					System.out.println("Clicked on column for sorting");
+					logger.info("Clicked on column for sorting");
+				} catch (Exception Col) {
+					List<WebElement> Columnss = Driver.findElements(By.xpath("//td[@role=\"columnheader\"]"));
+					for (int cols = col; cols < Columns.size() - 4;) {
+						WebElement Colss = Columnss.get(cols);
+						wait.until(ExpectedConditions.visibilityOf(Colss));
+						wait.until(ExpectedConditions.elementToBeClickable(Colss));
+						act.moveToElement(Colss).build().perform();
+						act.moveToElement(Colss).click().perform();
+						wait.until(ExpectedConditions.elementToBeClickable(Colss));
+						System.out.println("Clicked on column for sorting");
+						logger.info("Clicked on column for sorting");
+
+						break;
+					}
+				}
 
 				// --Check the sorting value after sorting applied
 				String ColSortAsc = Columns.get(col).getAttribute("aria-sort");
