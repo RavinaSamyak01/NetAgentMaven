@@ -288,65 +288,57 @@ public class OrderSearch extends BaseInit {
 				System.out.println("Sorting for " + ColName + " is==" + ColSortBefore);
 				logger.info("Sorting for " + ColName + " is==" + ColSortBefore);
 
-				// --Clicking on column
-				try {
+				if (ColName.equalsIgnoreCase("FROM Column")) {
+					logger.info("Not applying sorting on 'From' column, It is not displayed in 1032x776 window");
+
+				} else if (ColName.equalsIgnoreCase("TO Column")) {
+					logger.info("Not applying sorting on 'TO' column, It is not displayed in 1032x776 window");
+
+				} else {
 					Cols = Columns.get(col);
 					wait.until(ExpectedConditions.elementToBeClickable(Cols));
 					Cols.click();
 					System.out.println("Clicked on column for sorting");
 					logger.info("Clicked on column for sorting");
-				} catch (Exception Col) {
-					List<WebElement> Columnss = Driver.findElements(By.xpath("//td[@role=\"columnheader\"]"));
-					for (int cols = col; cols < Columns.size() - 4;) {
-						WebElement Colss = Columnss.get(cols);
-						wait.until(ExpectedConditions.visibilityOf(Colss));
-						wait.until(ExpectedConditions.elementToBeClickable(Colss));
-						act.moveToElement(Colss).build().perform();
-						act.moveToElement(Colss).click().perform();
-						wait.until(ExpectedConditions.elementToBeClickable(Colss));
-						System.out.println("Clicked on column for sorting");
-						logger.info("Clicked on column for sorting");
 
-						break;
+					// --Check the sorting value after sorting applied
+					String ColSortAsc = Columns.get(col).getAttribute("aria-sort");
+					System.out.println("after Sorting value of sort for " + ColName + " is==" + ColSortAsc);
+					logger.info("after Sorting value of sort for " + ColName + " is==" + ColSortAsc);
+
+					// --Checking sorting is applied or not
+					if (ColSortAsc.equals(ColSortBefore)) {
+						System.out.println("Sorting is not applied");
+						logger.info("Sorting is not applied");
+
+					} else {
+						System.out.println("Sorting is applied and sorting is applied on " + ColSortAsc + " Order");
+						logger.info("Sorting is applied and sorting is applied on " + ColSortAsc + " Order");
+
+					}
+
+					// --Clicking on column
+					Columns.get(col).click();
+					System.out.println("Clicked on column for sorting");
+					logger.info("Clicked on column for sorting");
+
+					// --Check the sorting value after sorting applied
+					String ColSortDesc = Columns.get(col).getAttribute("aria-sort");
+					System.out.println("after Sorting value of sort for " + ColName + " is==" + ColSortDesc);
+					logger.info("after Sorting value of sort for " + ColName + " is==" + ColSortDesc);
+
+					// --Checking sorting is applied on desc order or not
+					if (ColSortDesc.equals("descending")) {
+						System.out.println("Sorting is applied and sorting is applied on " + ColSortAsc + " Order");
+						logger.info("Sorting is applied and sorting is applied on " + ColSortAsc + " Order");
+
+					} else {
+						System.out.println("Sorting is not applied");
+						logger.info("Sorting is not applied");
+
 					}
 				}
 
-				// --Check the sorting value after sorting applied
-				String ColSortAsc = Columns.get(col).getAttribute("aria-sort");
-				System.out.println("after Sorting value of sort for " + ColName + " is==" + ColSortAsc);
-				logger.info("after Sorting value of sort for " + ColName + " is==" + ColSortAsc);
-
-				// --Checking sorting is applied or not
-				if (ColSortAsc.equals(ColSortBefore)) {
-					System.out.println("Sorting is not applied");
-					logger.info("Sorting is not applied");
-
-				} else {
-					System.out.println("Sorting is applied and sorting is applied on " + ColSortAsc + " Order");
-					logger.info("Sorting is applied and sorting is applied on " + ColSortAsc + " Order");
-
-				}
-
-				// --Clicking on column
-				Columns.get(col).click();
-				System.out.println("Clicked on column for sorting");
-				logger.info("Clicked on column for sorting");
-
-				// --Check the sorting value after sorting applied
-				String ColSortDesc = Columns.get(col).getAttribute("aria-sort");
-				System.out.println("after Sorting value of sort for " + ColName + " is==" + ColSortDesc);
-				logger.info("after Sorting value of sort for " + ColName + " is==" + ColSortDesc);
-
-				// --Checking sorting is applied on desc order or not
-				if (ColSortDesc.equals("descending")) {
-					System.out.println("Sorting is applied and sorting is applied on " + ColSortAsc + " Order");
-					logger.info("Sorting is applied and sorting is applied on " + ColSortAsc + " Order");
-
-				} else {
-					System.out.println("Sorting is not applied");
-					logger.info("Sorting is not applied");
-
-				}
 			}
 
 		}
