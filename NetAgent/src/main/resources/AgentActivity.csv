@@ -1,6 +1,6 @@
-﻿From_Date,To_Date
-05/10/2022,05/20/2022
+﻿Courier_Name,From_Date,To_Date
+34769 - AUTOMATION COURIER,05/24/2022,06/03/2022
 
-CourierId,VoucherNum,Courier_type,pieces,PickupId,VoucherNum2,pAddr1,Paddr21,City_State,Pu_Tm,VoucherNum3,dAddr1,Paddr22,Dcity_Dstate,Del_Tm,Textbox37,Total_Amount
-,,,,,,,,,,,,,,,,           TotalShipment : 0        Total PCS :         Total WT :        
+VoucherNum,Courier_type,Order_Dttm,pieces,weight,Textbox3,VoucherNum2,pAddr1,Paddr21,City_State,Pu_Tm,VoucherNum3,dAddr1,Paddr22,Dcity_Dstate,Del_Tm,CodeDisplayName,Cost,Code_Displayname,Total_Cost,Total_Amount
+,,,,,,,,,,,,,,,,,,,,              Shipment : 0         Total PCS :                Total WT :                       Total Charges :      $0.00
 
