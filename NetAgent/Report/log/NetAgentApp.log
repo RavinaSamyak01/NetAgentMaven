@@ -1,19 +1,81 @@
-2022-06-03 16:56:27,123 [main] INFO OrderProcessing - initialization of the properties file is done
-2022-06-03 16:56:27,428 [main] INFO io.github.bonigarcia.wdm.WebDriverManager - Using chromedriver 102.0.5005.61 (since Google Chrome 102 is installed in your machine)
-2022-06-03 16:56:27,445 [main] INFO io.github.bonigarcia.wdm.WebDriverManager - Exporting webdriver.chrome.driver as C:\Users\rprajapati\.m2\repository\webdriver\chromedriver\win32\102.0.5005.61\chromedriver.exe
-2022-06-03 16:56:34,033 [main] INFO OrderProcessing - Url opened
-2022-06-03 16:56:46,286 [main] INFO OrderProcessing - ===Order Processing Test Start===
-2022-06-03 16:56:46,290 [main] INFO OrderProcessing - total No of Rows=11
-2022-06-03 16:56:46,293 [main] INFO OrderProcessing - total No of Columns=3
-2022-06-03 16:56:46,422 [main] INFO OrderProcessing - Click on Operations
-2022-06-03 16:56:49,853 [main] INFO OrderProcessing - Click on Task Log
-2022-06-03 16:56:50,056 [main] INFO OrderProcessing - ServiceID is==LOC
-2022-06-03 16:56:50,060 [main] INFO OrderProcessing - PickUpID is==3433681
-2022-06-03 16:57:40,481 [main] INFO OrderProcessing - Operation tab is not selected
-2022-06-03 16:57:40,747 [main] INFO OrderProcessing - Click on Operation Tab
-2022-06-03 16:57:44,302 [main] INFO OrderProcessing - If ServiceID contain LOC or SD....
-2022-06-03 16:57:44,370 [main] INFO OrderProcessing - Clear search input
-2022-06-03 16:57:44,433 [main] INFO OrderProcessing - Enter PickUpID in Search input
-2022-06-03 16:57:44,502 [main] INFO OrderProcessing - Click on Search button
-2022-06-03 16:58:25,532 [main] INFO OrderProcessing - Searched Job is displayed in edit mode
-2022-06-03 16:58:41,973 [main] INFO OrderProcessing - Current stage of the order is=Confirm Pu Alert
+2022-06-06 17:17:26,083 [main] INFO OrderProcessing - initialization of the properties file is done
+2022-06-06 17:17:26,621 [main] INFO io.github.bonigarcia.wdm.WebDriverManager - Using chromedriver 102.0.5005.61 (since Google Chrome 102 is installed in your machine)
+2022-06-06 17:17:26,644 [main] INFO io.github.bonigarcia.wdm.WebDriverManager - Exporting webdriver.chrome.driver as C:\Users\rprajapati\.m2\repository\webdriver\chromedriver\win32\102.0.5005.61\chromedriver.exe
+2022-06-06 17:17:35,012 [main] INFO OrderProcessing - Url opened
+2022-06-06 17:17:53,866 [main] INFO OrderProcessing - ===Order Processing Test Start===
+2022-06-06 17:17:53,875 [main] INFO OrderProcessing - total No of Rows=11
+2022-06-06 17:17:53,884 [main] INFO OrderProcessing - total No of Columns=3
+2022-06-06 17:17:54,094 [main] INFO OrderProcessing - Click on Operations
+2022-06-06 17:17:58,382 [main] INFO OrderProcessing - Click on Task Log
+2022-06-06 17:17:58,655 [main] INFO OrderProcessing - ServiceID is==LOC
+2022-06-06 17:17:58,665 [main] INFO OrderProcessing - PickUpID is==3433681
+2022-06-06 17:18:49,198 [main] INFO OrderProcessing - Operation tab is not selected
+2022-06-06 17:18:49,898 [main] INFO OrderProcessing - Click on Operation Tab
+2022-06-06 17:18:53,943 [main] INFO OrderProcessing - If ServiceID contain LOC or SD....
+2022-06-06 17:18:54,102 [main] INFO OrderProcessing - Clear search input
+2022-06-06 17:18:54,268 [main] INFO OrderProcessing - Enter PickUpID in Search input
+2022-06-06 17:18:54,453 [main] INFO OrderProcessing - Click on Search button
+2022-06-06 17:19:01,244 [main] INFO OrderProcessing - Job is not exist with the search parameters
+2022-06-06 17:19:01,256 [main] INFO OrderProcessing - ServiceID is==SD
+2022-06-06 17:19:01,267 [main] INFO OrderProcessing - PickUpID is==3433684
+2022-06-06 17:19:01,343 [main] INFO OrderProcessing - Operation tab is already selected
+2022-06-06 17:19:01,539 [main] INFO OrderProcessing - If ServiceID contain LOC or SD....
+2022-06-06 17:19:01,656 [main] INFO OrderProcessing - Clear search input
+2022-06-06 17:19:01,749 [main] INFO OrderProcessing - Enter PickUpID in Search input
+2022-06-06 17:19:01,824 [main] INFO OrderProcessing - Click on Search button
+2022-06-06 17:19:05,573 [main] INFO OrderProcessing - Job is not exist with the search parameters
+2022-06-06 17:19:05,586 [main] INFO OrderProcessing - ServiceID is==SD
+2022-06-06 17:19:05,597 [main] INFO OrderProcessing - PickUpID is==3384006
+2022-06-06 17:19:05,660 [main] INFO OrderProcessing - Operation tab is already selected
+2022-06-06 17:19:05,914 [main] INFO OrderProcessing - If ServiceID contain LOC or SD....
+2022-06-06 17:19:06,086 [main] INFO OrderProcessing - Clear search input
+2022-06-06 17:19:06,170 [main] INFO OrderProcessing - Enter PickUpID in Search input
+2022-06-06 17:19:06,255 [main] INFO OrderProcessing - Click on Search button
+2022-06-06 17:19:10,064 [main] INFO OrderProcessing - Job is not exist with the search parameters
+2022-06-06 17:19:10,074 [main] INFO OrderProcessing - ServiceID is==H3P
+2022-06-06 17:19:10,087 [main] INFO OrderProcessing - PickUpID is==3433700
+2022-06-06 17:19:10,162 [main] INFO OrderProcessing - Operation tab is already selected
+2022-06-06 17:19:18,973 [main] INFO OrderProcessing - Current stage of the order is=Tender to 3P
+Job # 32428464 Map
+2022-06-06 17:19:18,974 [main] INFO OrderProcessing - Job is moved to TENDER TO 3P stage successfully
+2022-06-06 17:19:19,049 [main] INFO OrderProcessing - ZoneID of is==CDT
+2022-06-06 17:19:19,283 [main] INFO OrderProcessing - 06:49
+2022-06-06 17:19:19,844 [main] INFO OrderProcessing - Clicked on Tender to 3P
+2022-06-06 17:19:20,117 [main] INFO OrderProcessing - Click on OK of Dialogue box
+2022-06-06 17:19:20,385 [main] INFO OrderProcessing - Validation is displayed==Package Tracking Number is Required.
+2022-06-06 17:19:20,625 [main] INFO OrderProcessing - Click on Close button
+2022-06-06 17:20:25,052 [main] INFO OrderProcessing - Job is not Delivered successfully
+2022-06-06 17:20:25,249 [main] INFO OrderProcessing - Click on Close button
+2022-06-06 17:20:30,948 [main] INFO OrderProcessing - ServiceID is==RTE
+2022-06-06 17:20:30,961 [main] INFO OrderProcessing - PickUpID is==126311130
+2022-06-06 17:21:21,108 [main] INFO OrderProcessing - Operation tab is not selected
+2022-06-06 17:21:21,515 [main] INFO OrderProcessing - Click on Operation Tab
+2022-06-06 17:21:29,373 [main] INFO OrderProcessing - Record is not available with search parameters
+2022-06-06 17:21:29,384 [main] INFO OrderProcessing - ServiceID is==3PLAST
+2022-06-06 17:21:29,394 [main] INFO OrderProcessing - PickUpID is==3433751
+2022-06-06 17:21:29,478 [main] INFO OrderProcessing - Operation tab is already selected
+2022-06-06 17:21:29,695 [main] INFO OrderProcessing - If ServiceID is 3PLAST....
+2022-06-06 17:22:19,995 [main] INFO OrderProcessing - Job is not exist with the search parameters
+2022-06-06 17:22:20,001 [main] INFO OrderProcessing - ServiceID is==3PLAST
+2022-06-06 17:22:20,007 [main] INFO OrderProcessing - PickUpID is==3387189
+2022-06-06 17:22:20,049 [main] INFO OrderProcessing - Operation tab is already selected
+2022-06-06 17:22:20,241 [main] INFO OrderProcessing - If ServiceID is 3PLAST....
+2022-06-06 17:23:10,412 [main] INFO OrderProcessing - Job is not exist with the search parameters
+2022-06-06 17:23:10,420 [main] INFO OrderProcessing - ServiceID is==D3P
+2022-06-06 17:23:10,427 [main] INFO OrderProcessing - PickUpID is==3433749
+2022-06-06 17:23:10,500 [main] INFO OrderProcessing - Operation tab is already selected
+2022-06-06 17:23:10,706 [main] INFO OrderProcessing - If ServiceID is D3P....
+2022-06-06 17:24:01,020 [main] INFO OrderProcessing - Job is not exist with the search parameters
+2022-06-06 17:24:01,031 [main] INFO OrderProcessing - ServiceID is==RETURN
+2022-06-06 17:24:01,039 [main] INFO OrderProcessing - PickUpID is==3433822
+2022-06-06 17:24:01,103 [main] INFO OrderProcessing - Operation tab is already selected
+2022-06-06 17:24:01,304 [main] INFO OrderProcessing - If ServiceID is RETURN....
+2022-06-06 17:24:51,498 [main] INFO OrderProcessing - Job is not exist with the search parameters
+2022-06-06 17:24:51,506 [main] INFO OrderProcessing - ServiceID is==Replenish
+2022-06-06 17:24:51,512 [main] INFO OrderProcessing - PickUpID is==1687840
+2022-06-06 17:24:51,667 [main] INFO OrderProcessing - Operation tab is already selected
+2022-06-06 17:24:55,973 [main] INFO OrderProcessing - Total No of job in Inventory Tab is/are==178
+2022-06-06 17:24:57,359 [main] INFO OrderProcessing - Record is not available with search parameters
+2022-06-06 17:24:57,360 [main] INFO OrderProcessing - ===Order Processing Test End===
+2022-06-06 17:24:58,091 [main] INFO OrderProcessing - Clicked on LogOut
+2022-06-06 17:25:02,145 [main] INFO OrderProcessing - ====Sending Email=====

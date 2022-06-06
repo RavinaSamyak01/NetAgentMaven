@@ -1,6 +1,12 @@
-﻿Courier_Name,From_Date,To_Date
-34769 - AUTOMATION COURIER,05/24/2022,06/03/2022
+﻿From_Date,To_Date
+05/27/2022,06/06/2022
 
-VoucherNum,Courier_type,Order_Dttm,pieces,weight,Textbox3,VoucherNum2,pAddr1,Paddr21,City_State,Pu_Tm,VoucherNum3,dAddr1,Paddr22,Dcity_Dstate,Del_Tm,CodeDisplayName,Cost,Code_Displayname,Total_Cost,Total_Amount
-,,,,,,,,,,,,,,,,,,,,              Shipment : 0         Total PCS :                Total WT :                       Total Charges :      $0.00
+CourierId,VoucherNum,Courier_type,pieces,PickupId,VoucherNum2,pAddr1,Paddr21,City_State,Pu_Tm,VoucherNum3,dAddr1,Paddr22,Dcity_Dstate,Del_Tm,Textbox37,Total_Amount
+34769 -  AUTOMATION COURIER,,,,,,,,,,,,,,,,           TotalShipment : 5        Total PCS : 24        Total WT :  290      
+,32428448 / 06/02/2022,PU,PCS : 10     WT : 50.00,PU#   3433684,Automation,1525 14th St NW,,"WASHINGTON, DC 20005",PU TM : ,WASHINGTON NATL (DCA),1 Aviation Cir,,"WASHINGTON, DC 22202",DEL TM : ,,           TotalShipment : 5        Total PCS : 24        Total WT :  290      
+,32428449 / 06/02/2022,PU,PCS : 10     WT : 50.00,PU#   3433685,Automation,1525 14th St NW,,"WASHINGTON, DC 20005",PU TM : 6/3/2022 01:02,WASHINGTON NATL (DCA),1 Aviation Cir,,"WASHINGTON, DC 22202",DEL TM : ,,           TotalShipment : 5        Total PCS : 24        Total WT :  290      
+,32428445 / 06/02/2022,PU,PCS : 2     WT : 20.00,PU#   3433681,Automation,612 E Dallas Rd,Ste 200,"GRAPEVINE, TX 76051",PU TM : ,AutoTest,44 Folly Road,,"Charleston, SC 29407",DEL TM : ,,           TotalShipment : 5        Total PCS : 24        Total WT :  290      
+,32428586 / 06/03/2022,PU,PCS : 1     WT : 150.00,PU#   3433822,RAVINA FSL (F5491),304 W BAY AREA BLVD.,,"FONDREN, TX 77598",PU TM : ,AUTODEL,701 GRAINGER WAY,,"MINOOKA, IL 60447",DEL TM : ,,           TotalShipment : 5        Total PCS : 24        Total WT :  290      
+,32428513 / 06/02/2022,PU,PCS : 1     WT : 20.00,PU#   3433749,AUTOMATION RV,304 W BAY AREA BLVD.,,"FONDREN, TX 77598",PU TM : ,FedEx Ship Center,12606 Fuqua St,,"HOUSTON, TX 77034",DEL TM : ,,           TotalShipment : 5        Total PCS : 24        Total WT :  290      
+,,,,,,,,,,,,,,,           Shipment : 5        SubTotal PCS : 24        SubTotal WT :  290      ,           TotalShipment : 5        Total PCS : 24        Total WT :  290      
 

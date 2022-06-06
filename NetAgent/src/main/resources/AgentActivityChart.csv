@@ -2,8 +2,9 @@
 Agent Activity Chart
 
 Textbox8,Textbox11
-05/24/2022,06/03/2022
+05/27/2022,06/06/2022
 
 No Of Jobs_label,No Of Jobs_Chart2_CategoryGroup_label,No Of Jobs_Chart2_CategoryGroup_Value_Y
-No Of Jobs,,
+No Of Jobs,PICKEDUP,1
+No Of Jobs,PU DRV ALERTED,7
 

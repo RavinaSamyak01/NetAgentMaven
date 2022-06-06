@@ -1344,6 +1344,49 @@ public class CCAttempt extends BaseInit {
 											.invisibilityOfElementLocated(By.xpath("//*[@class=\"ajax-loadernew\"]")));
 
 									try {
+										wait.until(
+												ExpectedConditions.visibilityOfElementLocated(By.id("idValidation")));
+										String Val = Driver.findElement(By.id("idValidation")).getText();
+										logger.info("Validation is displayed===" + Val);
+
+										// --Enter value in Qty and get status
+										PartTable = isElementPresent("CCReconPart_xpath");
+										Partrow = PartTable.findElements(By.tagName("tr"));
+										logger.info("Total parts are==" + Partrow.size());
+										for (int part = 0; part < Partrow.size(); part++) {
+
+											WebElement ReconQty = Partrow.get(part)
+													.findElement(By.xpath("td/input[@id=\"txtreconQty\"]"));
+
+											ReconQty = Partrow.get(part)
+													.findElement(By.xpath("td/input[@id=\"txtreconQty\"]"));
+											js.executeScript("arguments[0].click();", ReconQty);
+											logger.info("Clicked on Reconciliation QTY");
+
+											wait.until(ExpectedConditions.elementToBeClickable(Partrow.get(part)
+													.findElement(By.xpath("td/input[@id=\"txtreconQty\"]"))));
+											// enter stock qty in cc qty
+											ReconQty.clear();
+											ReconQty.sendKeys(Keys.BACK_SPACE);
+											ReconQty.sendKeys("0");
+											ReconQty.sendKeys(Keys.TAB);
+											logger.info("Entered CC Qty 0");
+
+										}
+
+										// --Save
+										Save = isElementPresent("CCASave_id");
+										act.moveToElement(Save).click().perform();
+										logger.info("Click on Save button");
+										wait.until(ExpectedConditions.invisibilityOfElementLocated(
+												By.xpath("//*[@class=\"ajax-loadernew\"]")));
+
+									} catch (Exception ee) {
+										logger.info("Reconciliation stage is proceed");
+
+									}
+
+									try {
 										wait.until(ExpectedConditions
 												.visibilityOfElementLocated(By.className("dx-datagrid-nodata")));
 										WebElement NoData = Driver.findElement(By.className("dx-datagrid-nodata"));
@@ -1356,8 +1399,13 @@ public class CCAttempt extends BaseInit {
 										System.out.println("Cycle is not end");
 										logger.info("Cycle is not end");
 
-										TStage = Driver.findElement(By.xpath("//div/span[@class=\"pull-left\"]"));
-										logger.info("TaskLog stage is==" + TStage.getText());
+										try {
+											TStage = Driver.findElement(By.xpath("//div/span[@class=\"pull-left\"]"));
+											logger.info("TaskLog stage is==" + TStage.getText());
+										} catch (Exception e) {
+											TStage = Driver.findElement(By.xpath("//*[@class=\"panel-title\"]"));
+											logger.info("TaskLog stage is==" + TStage.getText());
+										}
 									}
 
 								}

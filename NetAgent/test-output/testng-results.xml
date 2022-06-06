@@ -2,46 +2,46 @@
 <testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2022-05-23T11:41:19 IST" name="Default suite" finished-at="2022-05-23T11:41:30 IST" duration-ms="11254">
+  <suite started-at="2022-06-06T17:17:53 IST" name="Default suite" finished-at="2022-06-06T17:24:57 IST" duration-ms="423808">
     <groups>
     </groups>
-    <test started-at="2022-05-23T11:41:19 IST" name="Default test" finished-at="2022-05-23T11:41:30 IST" duration-ms="11254">
-      <class name="netAgent_Tools.MileageCalc">
-        <test-method is-config="true" signature="beforeMethod()[pri:0, instance:netAgent_Tools.MileageCalc@54a7079e]" started-at="2022-05-23T11:40:59 IST" name="beforeMethod" finished-at="2022-05-23T11:41:19 IST" duration-ms="19677" status="PASS">
+    <test started-at="2022-06-06T17:17:53 IST" name="Default test" finished-at="2022-06-06T17:24:57 IST" duration-ms="423808">
+      <class name="netAgent_OperationsTab.OrderProcessing">
+        <test-method is-config="true" signature="beforeMethod()[pri:0, instance:netAgent_OperationsTab.OrderProcessing@d9345cd]" started-at="2022-06-06T17:17:25 IST" name="beforeMethod" finished-at="2022-06-06T17:17:53 IST" duration-ms="28069" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeMethod -->
-        <test-method is-config="true" signature="testMethodName(java.lang.reflect.Method)[pri:0, instance:netAgent_Tools.MileageCalc@54a7079e]" started-at="2022-05-23T11:41:19 IST" name="testMethodName" finished-at="2022-05-23T11:41:19 IST" duration-ms="8" status="PASS">
+        <test-method is-config="true" signature="testMethodName(java.lang.reflect.Method)[pri:0, instance:netAgent_OperationsTab.OrderProcessing@d9345cd]" started-at="2022-06-06T17:17:53 IST" name="testMethodName" finished-at="2022-06-06T17:17:53 IST" duration-ms="8" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[public void netAgent_Tools.MileageCalc.mileageCalc() throws java.lang.Exception]]>
+                <![CDATA[public static void netAgent_OperationsTab.OrderProcessing.orderProcess() throws org.apache.poi.EncryptedDocumentException,org.apache.poi.openxml4j.exceptions.InvalidFormatException,java.io.IOException,java.lang.InterruptedException]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testMethodName -->
-        <test-method signature="mileageCalc()[pri:0, instance:netAgent_Tools.MileageCalc@54a7079e]" started-at="2022-05-23T11:41:19 IST" name="mileageCalc" finished-at="2022-05-23T11:41:30 IST" duration-ms="11073" status="PASS">
+        <test-method signature="orderProcess()[pri:0, instance:netAgent_OperationsTab.OrderProcessing@d9345cd]" started-at="2022-06-06T17:17:53 IST" name="orderProcess" finished-at="2022-06-06T17:24:57 IST" duration-ms="423510" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- mileageCalc -->
-        <test-method is-config="true" signature="getResult(org.testng.ITestResult)[pri:0, instance:netAgent_Tools.MileageCalc@54a7079e]" started-at="2022-05-23T11:41:30 IST" name="getResult" finished-at="2022-05-23T11:41:30 IST" duration-ms="115" status="PASS">
+        </test-method> <!-- orderProcess -->
+        <test-method is-config="true" signature="getResult(org.testng.ITestResult)[pri:0, instance:netAgent_OperationsTab.OrderProcessing@d9345cd]" started-at="2022-06-06T17:24:57 IST" name="getResult" finished-at="2022-06-06T17:24:57 IST" duration-ms="222" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[TestResult name=mileageCalc status=SUCCESS method=MileageCalc.mileageCalc()[pri:0, instance:netAgent_Tools.MileageCalc@54a7079e] output={null}]]]>
+                <![CDATA[[TestResult name=orderProcess status=SUCCESS method=OrderProcessing.orderProcess()[pri:0, instance:netAgent_OperationsTab.OrderProcessing@d9345cd] output={null}]]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- getResult -->
-        <test-method is-config="true" signature="SendEmail()[pri:0, instance:netAgent_Tools.MileageCalc@54a7079e]" started-at="2022-05-23T11:41:30 IST" name="SendEmail" finished-at="2022-05-23T11:41:36 IST" duration-ms="6367" status="PASS">
+        <test-method is-config="true" signature="SendEmail()[pri:0, instance:netAgent_OperationsTab.OrderProcessing@d9345cd]" started-at="2022-06-06T17:24:57 IST" name="SendEmail" finished-at="2022-06-06T17:25:04 IST" duration-ms="6873" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- SendEmail -->
-      </class> <!-- netAgent_Tools.MileageCalc -->
+      </class> <!-- netAgent_OperationsTab.OrderProcessing -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

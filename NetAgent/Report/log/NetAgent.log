@@ -1,19 +1,81 @@
-2022-06-03 16:56:27,123 - OrderProcessing -INFO - initialization of the properties file is done
-2022-06-03 16:56:27,428 - io.github.bonigarcia.wdm.WebDriverManager -INFO - Using chromedriver 102.0.5005.61 (since Google Chrome 102 is installed in your machine)
-2022-06-03 16:56:27,445 - io.github.bonigarcia.wdm.WebDriverManager -INFO - Exporting webdriver.chrome.driver as C:\Users\rprajapati\.m2\repository\webdriver\chromedriver\win32\102.0.5005.61\chromedriver.exe
-2022-06-03 16:56:34,033 - OrderProcessing -INFO - Url opened
-2022-06-03 16:56:46,286 - OrderProcessing -INFO - ===Order Processing Test Start===
-2022-06-03 16:56:46,290 - OrderProcessing -INFO - total No of Rows=11
-2022-06-03 16:56:46,293 - OrderProcessing -INFO - total No of Columns=3
-2022-06-03 16:56:46,422 - OrderProcessing -INFO - Click on Operations
-2022-06-03 16:56:49,853 - OrderProcessing -INFO - Click on Task Log
-2022-06-03 16:56:50,056 - OrderProcessing -INFO - ServiceID is==LOC
-2022-06-03 16:56:50,060 - OrderProcessing -INFO - PickUpID is==3433681
-2022-06-03 16:57:40,481 - OrderProcessing -INFO - Operation tab is not selected
-2022-06-03 16:57:40,747 - OrderProcessing -INFO - Click on Operation Tab
-2022-06-03 16:57:44,302 - OrderProcessing -INFO - If ServiceID contain LOC or SD....
-2022-06-03 16:57:44,370 - OrderProcessing -INFO - Clear search input
-2022-06-03 16:57:44,433 - OrderProcessing -INFO - Enter PickUpID in Search input
-2022-06-03 16:57:44,502 - OrderProcessing -INFO - Click on Search button
-2022-06-03 16:58:25,532 - OrderProcessing -INFO - Searched Job is displayed in edit mode
-2022-06-03 16:58:41,973 - OrderProcessing -INFO - Current stage of the order is=Confirm Pu Alert
+2022-06-06 17:17:26,083 - OrderProcessing -INFO - initialization of the properties file is done
+2022-06-06 17:17:26,621 - io.github.bonigarcia.wdm.WebDriverManager -INFO - Using chromedriver 102.0.5005.61 (since Google Chrome 102 is installed in your machine)
+2022-06-06 17:17:26,644 - io.github.bonigarcia.wdm.WebDriverManager -INFO - Exporting webdriver.chrome.driver as C:\Users\rprajapati\.m2\repository\webdriver\chromedriver\win32\102.0.5005.61\chromedriver.exe
+2022-06-06 17:17:35,012 - OrderProcessing -INFO - Url opened
+2022-06-06 17:17:53,866 - OrderProcessing -INFO - ===Order Processing Test Start===
+2022-06-06 17:17:53,875 - OrderProcessing -INFO - total No of Rows=11
+2022-06-06 17:17:53,884 - OrderProcessing -INFO - total No of Columns=3
+2022-06-06 17:17:54,094 - OrderProcessing -INFO - Click on Operations
+2022-06-06 17:17:58,382 - OrderProcessing -INFO - Click on Task Log
+2022-06-06 17:17:58,655 - OrderProcessing -INFO - ServiceID is==LOC
+2022-06-06 17:17:58,665 - OrderProcessing -INFO - PickUpID is==3433681
+2022-06-06 17:18:49,198 - OrderProcessing -INFO - Operation tab is not selected
+2022-06-06 17:18:49,898 - OrderProcessing -INFO - Click on Operation Tab
+2022-06-06 17:18:53,943 - OrderProcessing -INFO - If ServiceID contain LOC or SD....
+2022-06-06 17:18:54,102 - OrderProcessing -INFO - Clear search input
+2022-06-06 17:18:54,268 - OrderProcessing -INFO - Enter PickUpID in Search input
+2022-06-06 17:18:54,453 - OrderProcessing -INFO - Click on Search button
+2022-06-06 17:19:01,244 - OrderProcessing -INFO - Job is not exist with the search parameters
+2022-06-06 17:19:01,256 - OrderProcessing -INFO - ServiceID is==SD
+2022-06-06 17:19:01,267 - OrderProcessing -INFO - PickUpID is==3433684
+2022-06-06 17:19:01,343 - OrderProcessing -INFO - Operation tab is already selected
+2022-06-06 17:19:01,539 - OrderProcessing -INFO - If ServiceID contain LOC or SD....
+2022-06-06 17:19:01,656 - OrderProcessing -INFO - Clear search input
+2022-06-06 17:19:01,749 - OrderProcessing -INFO - Enter PickUpID in Search input
+2022-06-06 17:19:01,824 - OrderProcessing -INFO - Click on Search button
+2022-06-06 17:19:05,573 - OrderProcessing -INFO - Job is not exist with the search parameters
+2022-06-06 17:19:05,586 - OrderProcessing -INFO - ServiceID is==SD
+2022-06-06 17:19:05,597 - OrderProcessing -INFO - PickUpID is==3384006
+2022-06-06 17:19:05,660 - OrderProcessing -INFO - Operation tab is already selected
+2022-06-06 17:19:05,914 - OrderProcessing -INFO - If ServiceID contain LOC or SD....
+2022-06-06 17:19:06,086 - OrderProcessing -INFO - Clear search input
+2022-06-06 17:19:06,170 - OrderProcessing -INFO - Enter PickUpID in Search input
+2022-06-06 17:19:06,255 - OrderProcessing -INFO - Click on Search button
+2022-06-06 17:19:10,064 - OrderProcessing -INFO - Job is not exist with the search parameters
+2022-06-06 17:19:10,074 - OrderProcessing -INFO - ServiceID is==H3P
+2022-06-06 17:19:10,087 - OrderProcessing -INFO - PickUpID is==3433700
+2022-06-06 17:19:10,162 - OrderProcessing -INFO - Operation tab is already selected
+2022-06-06 17:19:18,973 - OrderProcessing -INFO - Current stage of the order is=Tender to 3P
+Job # 32428464 Map
+2022-06-06 17:19:18,974 - OrderProcessing -INFO - Job is moved to TENDER TO 3P stage successfully
+2022-06-06 17:19:19,049 - OrderProcessing -INFO - ZoneID of is==CDT
+2022-06-06 17:19:19,283 - OrderProcessing -INFO - 06:49
+2022-06-06 17:19:19,844 - OrderProcessing -INFO - Clicked on Tender to 3P
+2022-06-06 17:19:20,117 - OrderProcessing -INFO - Click on OK of Dialogue box
+2022-06-06 17:19:20,385 - OrderProcessing -INFO - Validation is displayed==Package Tracking Number is Required.
+2022-06-06 17:19:20,625 - OrderProcessing -INFO - Click on Close button
+2022-06-06 17:20:25,052 - OrderProcessing -INFO - Job is not Delivered successfully
+2022-06-06 17:20:25,249 - OrderProcessing -INFO - Click on Close button
+2022-06-06 17:20:30,948 - OrderProcessing -INFO - ServiceID is==RTE
+2022-06-06 17:20:30,961 - OrderProcessing -INFO - PickUpID is==126311130
+2022-06-06 17:21:21,108 - OrderProcessing -INFO - Operation tab is not selected
+2022-06-06 17:21:21,515 - OrderProcessing -INFO - Click on Operation Tab
+2022-06-06 17:21:29,373 - OrderProcessing -INFO - Record is not available with search parameters
+2022-06-06 17:21:29,384 - OrderProcessing -INFO - ServiceID is==3PLAST
+2022-06-06 17:21:29,394 - OrderProcessing -INFO - PickUpID is==3433751
+2022-06-06 17:21:29,478 - OrderProcessing -INFO - Operation tab is already selected
+2022-06-06 17:21:29,695 - OrderProcessing -INFO - If ServiceID is 3PLAST....
+2022-06-06 17:22:19,995 - OrderProcessing -INFO - Job is not exist with the search parameters
+2022-06-06 17:22:20,001 - OrderProcessing -INFO - ServiceID is==3PLAST
+2022-06-06 17:22:20,007 - OrderProcessing -INFO - PickUpID is==3387189
+2022-06-06 17:22:20,049 - OrderProcessing -INFO - Operation tab is already selected
+2022-06-06 17:22:20,241 - OrderProcessing -INFO - If ServiceID is 3PLAST....
+2022-06-06 17:23:10,412 - OrderProcessing -INFO - Job is not exist with the search parameters
+2022-06-06 17:23:10,420 - OrderProcessing -INFO - ServiceID is==D3P
+2022-06-06 17:23:10,427 - OrderProcessing -INFO - PickUpID is==3433749
+2022-06-06 17:23:10,500 - OrderProcessing -INFO - Operation tab is already selected
+2022-06-06 17:23:10,706 - OrderProcessing -INFO - If ServiceID is D3P....
+2022-06-06 17:24:01,020 - OrderProcessing -INFO - Job is not exist with the search parameters
+2022-06-06 17:24:01,031 - OrderProcessing -INFO - ServiceID is==RETURN
+2022-06-06 17:24:01,039 - OrderProcessing -INFO - PickUpID is==3433822
+2022-06-06 17:24:01,103 - OrderProcessing -INFO - Operation tab is already selected
+2022-06-06 17:24:01,304 - OrderProcessing -INFO - If ServiceID is RETURN....
+2022-06-06 17:24:51,498 - OrderProcessing -INFO - Job is not exist with the search parameters
+2022-06-06 17:24:51,506 - OrderProcessing -INFO - ServiceID is==Replenish
+2022-06-06 17:24:51,512 - OrderProcessing -INFO - PickUpID is==1687840
+2022-06-06 17:24:51,667 - OrderProcessing -INFO - Operation tab is already selected
+2022-06-06 17:24:55,973 - OrderProcessing -INFO - Total No of job in Inventory Tab is/are==178
+2022-06-06 17:24:57,359 - OrderProcessing -INFO - Record is not available with search parameters
+2022-06-06 17:24:57,360 - OrderProcessing -INFO - ===Order Processing Test End===
+2022-06-06 17:24:58,091 - OrderProcessing -INFO - Clicked on LogOut
+2022-06-06 17:25:02,145 - OrderProcessing -INFO - ====Sending Email=====

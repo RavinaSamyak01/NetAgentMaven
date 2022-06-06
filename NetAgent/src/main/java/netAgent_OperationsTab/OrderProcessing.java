@@ -96,16 +96,16 @@ public class OrderProcessing extends BaseInit {
 						getScreenshot(Driver, "OrderEditor_" + PUID);
 					}
 					// --Memo
-					// memo(PUID);
+					memo(PUID);
 
 					// -Notification
-					// notification(PUID);
+					notification(PUID);
 
 					// Upload
-					// upload(PUID);
+					upload(PUID);
 
 					// Map
-					// map(PUID);
+					map(PUID);
 
 					// --Get current stage of the order
 					String Orderstage = Driver.findElement(By.xpath("//strong/span[@class=\"ng-binding\"]")).getText();
@@ -1408,6 +1408,22 @@ public class OrderProcessing extends BaseInit {
 										} catch (Exception SPickup) {
 											logger.info("Dialogue is not present");
 										}
+										try {
+											wait.until(ExpectedConditions
+													.visibilityOfAllElementsLocatedBy(By.id("errorid")));
+											String Validation = Driver.findElement(By.id("errorid")).getText();
+											logger.info("Validation is displayed==" + Validation);
+
+											Driver.findElement(By.id("btnclsdelivery")).click();
+											logger.info("Click on Close button");
+
+											wait.until(ExpectedConditions.invisibilityOfElementLocated(
+													By.xpath("//*[@class=\"ajax-loadernew\"]")));
+
+										} catch (Exception POD) {
+											logger.info("Validation is not displayed for Package Tracking No");
+
+										}
 										wait.until(ExpectedConditions.invisibilityOfElementLocated(
 												By.xpath("//*[@class=\"ajax-loadernew\"]")));
 										wait.until(ExpectedConditions
@@ -1427,6 +1443,12 @@ public class OrderProcessing extends BaseInit {
 											}
 										} catch (Exception Deliver) {
 											logger.info("Job is not Delivered successfully");
+											Driver.findElement(By.id("btnclsdelivery")).click();
+											logger.info("Click on Close button");
+
+											wait.until(ExpectedConditions.invisibilityOfElementLocated(
+													By.xpath("//*[@class=\"ajax-loadernew\"]")));
+
 										}
 
 									}
@@ -1681,6 +1703,21 @@ public class OrderProcessing extends BaseInit {
 								} catch (Exception SPickup) {
 									logger.info("Dialogue is not present");
 								}
+								try {
+									wait.until(ExpectedConditions.visibilityOfAllElementsLocatedBy(By.id("errorid")));
+									String Validation = Driver.findElement(By.id("errorid")).getText();
+									logger.info("Validation is displayed==" + Validation);
+
+									Driver.findElement(By.id("btnclsdelivery")).click();
+									logger.info("Click on Close button");
+
+									wait.until(ExpectedConditions
+											.invisibilityOfElementLocated(By.xpath("//*[@class=\"ajax-loadernew\"]")));
+
+								} catch (Exception POD) {
+									logger.info("Validation is not displayed for Package Tracking No");
+
+								}
 								wait.until(ExpectedConditions
 										.invisibilityOfElementLocated(By.xpath("//*[@class=\"ajax-loadernew\"]")));
 								wait.until(ExpectedConditions.visibilityOfElementLocated(By.id("txtBasicSearch2")));
@@ -1699,6 +1736,12 @@ public class OrderProcessing extends BaseInit {
 									}
 								} catch (Exception Deliver) {
 									logger.info("Job is not Delivered successfully");
+									Driver.findElement(By.id("btnclsdelivery")).click();
+									logger.info("Click on Close button");
+
+									wait.until(ExpectedConditions
+											.invisibilityOfElementLocated(By.xpath("//*[@class=\"ajax-loadernew\"]")));
+
 								}
 
 							}
@@ -1928,6 +1971,21 @@ public class OrderProcessing extends BaseInit {
 								} catch (Exception SPickup) {
 									logger.info("Dialogue is not present");
 								}
+								try {
+									wait.until(ExpectedConditions.visibilityOfAllElementsLocatedBy(By.id("errorid")));
+									String Validation = Driver.findElement(By.id("errorid")).getText();
+									logger.info("Validation is displayed==" + Validation);
+
+									Driver.findElement(By.id("btnclsdelivery")).click();
+									logger.info("Click on Close button");
+
+									wait.until(ExpectedConditions
+											.invisibilityOfElementLocated(By.xpath("//*[@class=\"ajax-loadernew\"]")));
+
+								} catch (Exception POD) {
+									logger.info("Validation is not displayed for Package Tracking No");
+
+								}
 								wait.until(ExpectedConditions
 										.invisibilityOfElementLocated(By.xpath("//*[@class=\"ajax-loadernew\"]")));
 								wait.until(ExpectedConditions.visibilityOfElementLocated(By.id("txtBasicSearch2")));
@@ -1946,6 +2004,12 @@ public class OrderProcessing extends BaseInit {
 									}
 								} catch (Exception Deliver) {
 									logger.info("Job is not Delivered successfully");
+									Driver.findElement(By.id("btnclsdelivery")).click();
+									logger.info("Click on Close button");
+
+									wait.until(ExpectedConditions
+											.invisibilityOfElementLocated(By.xpath("//*[@class=\"ajax-loadernew\"]")));
+
 								}
 
 							}
@@ -2007,6 +2071,22 @@ public class OrderProcessing extends BaseInit {
 						} catch (Exception SPickup) {
 							logger.info("Dialogue is not present");
 						}
+
+						try {
+							wait.until(ExpectedConditions.visibilityOfAllElementsLocatedBy(By.id("errorid")));
+							String Validation = Driver.findElement(By.id("errorid")).getText();
+							logger.info("Validation is displayed==" + Validation);
+
+							Driver.findElement(By.id("btnclsdelivery")).click();
+							logger.info("Click on Close button");
+
+							wait.until(ExpectedConditions
+									.invisibilityOfElementLocated(By.xpath("//*[@class=\"ajax-loadernew\"]")));
+
+						} catch (Exception POD) {
+							logger.info("Validation is not displayed for Package Tracking No");
+
+						}
 						wait.until(ExpectedConditions
 								.invisibilityOfElementLocated(By.xpath("//*[@class=\"ajax-loadernew\"]")));
 						wait.until(ExpectedConditions.visibilityOfElementLocated(By.id("txtBasicSearch2")));
@@ -2025,6 +2105,12 @@ public class OrderProcessing extends BaseInit {
 							}
 						} catch (Exception Deliver) {
 							logger.info("Job is not Delivered successfully");
+							Driver.findElement(By.id("btnclsdelivery")).click();
+							logger.info("Click on Close button");
+
+							wait.until(ExpectedConditions
+									.invisibilityOfElementLocated(By.xpath("//*[@class=\"ajax-loadernew\"]")));
+
 						}
 
 					} else {
@@ -4271,6 +4357,22 @@ public class OrderProcessing extends BaseInit {
 										} catch (Exception SPickup) {
 											logger.info("Dialogue is not present");
 										}
+										try {
+											wait.until(ExpectedConditions
+													.visibilityOfAllElementsLocatedBy(By.id("errorid")));
+											String Validation = Driver.findElement(By.id("errorid")).getText();
+											logger.info("Validation is displayed==" + Validation);
+
+											Driver.findElement(By.id("btnclsdelivery")).click();
+											logger.info("Click on Close button");
+
+											wait.until(ExpectedConditions.invisibilityOfElementLocated(
+													By.xpath("//*[@class=\"ajax-loadernew\"]")));
+
+										} catch (Exception POD) {
+											logger.info("Validation is not displayed for Package Tracking No");
+
+										}
 										wait.until(ExpectedConditions.invisibilityOfElementLocated(
 												By.xpath("//*[@class=\"ajax-loadernew\"]")));
 										wait.until(ExpectedConditions
@@ -4290,6 +4392,12 @@ public class OrderProcessing extends BaseInit {
 											}
 										} catch (Exception Deliver) {
 											logger.info("Job is not Delivered successfully");
+											Driver.findElement(By.id("btnclsdelivery")).click();
+											logger.info("Click on Close button");
+
+											wait.until(ExpectedConditions.invisibilityOfElementLocated(
+													By.xpath("//*[@class=\"ajax-loadernew\"]")));
+
 										}
 
 									}
@@ -4658,6 +4766,22 @@ public class OrderProcessing extends BaseInit {
 									} catch (Exception SPickup) {
 										logger.info("Dialogue is not present");
 									}
+									try {
+										wait.until(
+												ExpectedConditions.visibilityOfAllElementsLocatedBy(By.id("errorid")));
+										String Validation = Driver.findElement(By.id("errorid")).getText();
+										logger.info("Validation is displayed==" + Validation);
+
+										Driver.findElement(By.id("btnclsdelivery")).click();
+										logger.info("Click on Close button");
+
+										wait.until(ExpectedConditions.invisibilityOfElementLocated(
+												By.xpath("//*[@class=\"ajax-loadernew\"]")));
+
+									} catch (Exception POD) {
+										logger.info("Validation is not displayed for Package Tracking No");
+
+									}
 									wait.until(ExpectedConditions
 											.invisibilityOfElementLocated(By.xpath("//*[@class=\"ajax-loadernew\"]")));
 									wait.until(ExpectedConditions.visibilityOfElementLocated(By.id("txtBasicSearch2")));
@@ -4676,6 +4800,12 @@ public class OrderProcessing extends BaseInit {
 										}
 									} catch (Exception Deliver) {
 										logger.info("Job is not Delivered successfully");
+										Driver.findElement(By.id("btnclsdelivery")).click();
+										logger.info("Click on Close button");
+
+										wait.until(ExpectedConditions.invisibilityOfElementLocated(
+												By.xpath("//*[@class=\"ajax-loadernew\"]")));
+
 									}
 
 								}
@@ -4968,6 +5098,21 @@ public class OrderProcessing extends BaseInit {
 								} catch (Exception SPickup) {
 									logger.info("Dialogue is not present");
 								}
+								try {
+									wait.until(ExpectedConditions.visibilityOfAllElementsLocatedBy(By.id("errorid")));
+									String Validation = Driver.findElement(By.id("errorid")).getText();
+									logger.info("Validation is displayed==" + Validation);
+
+									Driver.findElement(By.id("btnclsdelivery")).click();
+									logger.info("Click on Close button");
+
+									wait.until(ExpectedConditions
+											.invisibilityOfElementLocated(By.xpath("//*[@class=\"ajax-loadernew\"]")));
+
+								} catch (Exception POD) {
+									logger.info("Validation is not displayed for Package Tracking No");
+
+								}
 								wait.until(ExpectedConditions
 										.invisibilityOfElementLocated(By.xpath("//*[@class=\"ajax-loadernew\"]")));
 								wait.until(ExpectedConditions.visibilityOfElementLocated(By.id("txtBasicSearch2")));
@@ -4986,6 +5131,12 @@ public class OrderProcessing extends BaseInit {
 									}
 								} catch (Exception Deliver) {
 									logger.info("Job is not Delivered successfully");
+									Driver.findElement(By.id("btnclsdelivery")).click();
+									logger.info("Click on Close button");
+
+									wait.until(ExpectedConditions
+											.invisibilityOfElementLocated(By.xpath("//*[@class=\"ajax-loadernew\"]")));
+
 								}
 
 							}
@@ -5083,6 +5234,21 @@ public class OrderProcessing extends BaseInit {
 							} catch (Exception SPickup) {
 								logger.info("Dialogue is not present");
 							}
+							try {
+								wait.until(ExpectedConditions.visibilityOfAllElementsLocatedBy(By.id("errorid")));
+								String Validation = Driver.findElement(By.id("errorid")).getText();
+								logger.info("Validation is displayed==" + Validation);
+
+								Driver.findElement(By.id("btnclsdelivery")).click();
+								logger.info("Click on Close button");
+
+								wait.until(ExpectedConditions
+										.invisibilityOfElementLocated(By.xpath("//*[@class=\"ajax-loadernew\"]")));
+
+							} catch (Exception POD) {
+								logger.info("Validation is not displayed for Package Tracking No");
+
+							}
 							wait.until(ExpectedConditions
 									.invisibilityOfElementLocated(By.xpath("//*[@class=\"ajax-loadernew\"]")));
 							wait.until(ExpectedConditions.visibilityOfElementLocated(By.id("txtBasicSearch2")));
@@ -5101,6 +5267,12 @@ public class OrderProcessing extends BaseInit {
 								}
 							} catch (Exception Deliver) {
 								logger.info("Job is not Delivered successfully");
+								Driver.findElement(By.id("btnclsdelivery")).click();
+								logger.info("Click on Close button");
+
+								wait.until(ExpectedConditions
+										.invisibilityOfElementLocated(By.xpath("//*[@class=\"ajax-loadernew\"]")));
+
 							}
 
 						}
@@ -5141,6 +5313,21 @@ public class OrderProcessing extends BaseInit {
 						} catch (Exception SPickup) {
 							logger.info("Dialogue is not present");
 						}
+						try {
+							wait.until(ExpectedConditions.visibilityOfAllElementsLocatedBy(By.id("errorid")));
+							String Validation = Driver.findElement(By.id("errorid")).getText();
+							logger.info("Validation is displayed==" + Validation);
+
+							Driver.findElement(By.id("btnclsdelivery")).click();
+							logger.info("Click on Close button");
+
+							wait.until(ExpectedConditions
+									.invisibilityOfElementLocated(By.xpath("//*[@class=\"ajax-loadernew\"]")));
+
+						} catch (Exception POD) {
+							logger.info("Validation is not displayed for Package Tracking No");
+
+						}
 						wait.until(ExpectedConditions
 								.invisibilityOfElementLocated(By.xpath("//*[@class=\"ajax-loadernew\"]")));
 						wait.until(ExpectedConditions.visibilityOfElementLocated(By.id("txtBasicSearch2")));
@@ -5159,6 +5346,12 @@ public class OrderProcessing extends BaseInit {
 							}
 						} catch (Exception Deliver) {
 							logger.info("Job is not Delivered successfully");
+							Driver.findElement(By.id("btnclsdelivery")).click();
+							logger.info("Click on Close button");
+
+							wait.until(ExpectedConditions
+									.invisibilityOfElementLocated(By.xpath("//*[@class=\"ajax-loadernew\"]")));
+
 						}
 
 					}
