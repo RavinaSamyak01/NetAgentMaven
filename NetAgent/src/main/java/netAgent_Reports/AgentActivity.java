@@ -93,7 +93,13 @@ public class AgentActivity extends BaseInit {
 		logger.info("Wait Message is==" + WaitMsg);
 
 		Thread.sleep(5000);
-		wait.until(ExpectedConditions.invisibilityOfElementLocated(By.xpath("//label[@id=\"idwait\"]")));
+		try {
+			wait.until(ExpectedConditions.invisibilityOfElementLocated(By.xpath("//label[@id=\"idwait\"]")));
+		} catch (Exception waittt) {
+			WebDriverWait wait1 = new WebDriverWait(Driver, 70);
+			wait1.until(ExpectedConditions.invisibilityOfElementLocated(By.xpath("//label[@id=\"idwait\"]")));
+
+		}
 		wait.until(ExpectedConditions.visibilityOfAllElementsLocatedBy(By.id("reportid")));
 		wait.until(ExpectedConditions.visibilityOfAllElementsLocatedBy(By.xpath("//iframe[@id=\"myIframe\"]")));
 		getScreenshot(Driver, "AgentActivityReport");

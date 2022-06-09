@@ -1,81 +1,172 @@
-2022-06-06 17:17:26,083 - OrderProcessing -INFO - initialization of the properties file is done
-2022-06-06 17:17:26,621 - io.github.bonigarcia.wdm.WebDriverManager -INFO - Using chromedriver 102.0.5005.61 (since Google Chrome 102 is installed in your machine)
-2022-06-06 17:17:26,644 - io.github.bonigarcia.wdm.WebDriverManager -INFO - Exporting webdriver.chrome.driver as C:\Users\rprajapati\.m2\repository\webdriver\chromedriver\win32\102.0.5005.61\chromedriver.exe
-2022-06-06 17:17:35,012 - OrderProcessing -INFO - Url opened
-2022-06-06 17:17:53,866 - OrderProcessing -INFO - ===Order Processing Test Start===
-2022-06-06 17:17:53,875 - OrderProcessing -INFO - total No of Rows=11
-2022-06-06 17:17:53,884 - OrderProcessing -INFO - total No of Columns=3
-2022-06-06 17:17:54,094 - OrderProcessing -INFO - Click on Operations
-2022-06-06 17:17:58,382 - OrderProcessing -INFO - Click on Task Log
-2022-06-06 17:17:58,655 - OrderProcessing -INFO - ServiceID is==LOC
-2022-06-06 17:17:58,665 - OrderProcessing -INFO - PickUpID is==3433681
-2022-06-06 17:18:49,198 - OrderProcessing -INFO - Operation tab is not selected
-2022-06-06 17:18:49,898 - OrderProcessing -INFO - Click on Operation Tab
-2022-06-06 17:18:53,943 - OrderProcessing -INFO - If ServiceID contain LOC or SD....
-2022-06-06 17:18:54,102 - OrderProcessing -INFO - Clear search input
-2022-06-06 17:18:54,268 - OrderProcessing -INFO - Enter PickUpID in Search input
-2022-06-06 17:18:54,453 - OrderProcessing -INFO - Click on Search button
-2022-06-06 17:19:01,244 - OrderProcessing -INFO - Job is not exist with the search parameters
-2022-06-06 17:19:01,256 - OrderProcessing -INFO - ServiceID is==SD
-2022-06-06 17:19:01,267 - OrderProcessing -INFO - PickUpID is==3433684
-2022-06-06 17:19:01,343 - OrderProcessing -INFO - Operation tab is already selected
-2022-06-06 17:19:01,539 - OrderProcessing -INFO - If ServiceID contain LOC or SD....
-2022-06-06 17:19:01,656 - OrderProcessing -INFO - Clear search input
-2022-06-06 17:19:01,749 - OrderProcessing -INFO - Enter PickUpID in Search input
-2022-06-06 17:19:01,824 - OrderProcessing -INFO - Click on Search button
-2022-06-06 17:19:05,573 - OrderProcessing -INFO - Job is not exist with the search parameters
-2022-06-06 17:19:05,586 - OrderProcessing -INFO - ServiceID is==SD
-2022-06-06 17:19:05,597 - OrderProcessing -INFO - PickUpID is==3384006
-2022-06-06 17:19:05,660 - OrderProcessing -INFO - Operation tab is already selected
-2022-06-06 17:19:05,914 - OrderProcessing -INFO - If ServiceID contain LOC or SD....
-2022-06-06 17:19:06,086 - OrderProcessing -INFO - Clear search input
-2022-06-06 17:19:06,170 - OrderProcessing -INFO - Enter PickUpID in Search input
-2022-06-06 17:19:06,255 - OrderProcessing -INFO - Click on Search button
-2022-06-06 17:19:10,064 - OrderProcessing -INFO - Job is not exist with the search parameters
-2022-06-06 17:19:10,074 - OrderProcessing -INFO - ServiceID is==H3P
-2022-06-06 17:19:10,087 - OrderProcessing -INFO - PickUpID is==3433700
-2022-06-06 17:19:10,162 - OrderProcessing -INFO - Operation tab is already selected
-2022-06-06 17:19:18,973 - OrderProcessing -INFO - Current stage of the order is=Tender to 3P
-Job # 32428464 Map
-2022-06-06 17:19:18,974 - OrderProcessing -INFO - Job is moved to TENDER TO 3P stage successfully
-2022-06-06 17:19:19,049 - OrderProcessing -INFO - ZoneID of is==CDT
-2022-06-06 17:19:19,283 - OrderProcessing -INFO - 06:49
-2022-06-06 17:19:19,844 - OrderProcessing -INFO - Clicked on Tender to 3P
-2022-06-06 17:19:20,117 - OrderProcessing -INFO - Click on OK of Dialogue box
-2022-06-06 17:19:20,385 - OrderProcessing -INFO - Validation is displayed==Package Tracking Number is Required.
-2022-06-06 17:19:20,625 - OrderProcessing -INFO - Click on Close button
-2022-06-06 17:20:25,052 - OrderProcessing -INFO - Job is not Delivered successfully
-2022-06-06 17:20:25,249 - OrderProcessing -INFO - Click on Close button
-2022-06-06 17:20:30,948 - OrderProcessing -INFO - ServiceID is==RTE
-2022-06-06 17:20:30,961 - OrderProcessing -INFO - PickUpID is==126311130
-2022-06-06 17:21:21,108 - OrderProcessing -INFO - Operation tab is not selected
-2022-06-06 17:21:21,515 - OrderProcessing -INFO - Click on Operation Tab
-2022-06-06 17:21:29,373 - OrderProcessing -INFO - Record is not available with search parameters
-2022-06-06 17:21:29,384 - OrderProcessing -INFO - ServiceID is==3PLAST
-2022-06-06 17:21:29,394 - OrderProcessing -INFO - PickUpID is==3433751
-2022-06-06 17:21:29,478 - OrderProcessing -INFO - Operation tab is already selected
-2022-06-06 17:21:29,695 - OrderProcessing -INFO - If ServiceID is 3PLAST....
-2022-06-06 17:22:19,995 - OrderProcessing -INFO - Job is not exist with the search parameters
-2022-06-06 17:22:20,001 - OrderProcessing -INFO - ServiceID is==3PLAST
-2022-06-06 17:22:20,007 - OrderProcessing -INFO - PickUpID is==3387189
-2022-06-06 17:22:20,049 - OrderProcessing -INFO - Operation tab is already selected
-2022-06-06 17:22:20,241 - OrderProcessing -INFO - If ServiceID is 3PLAST....
-2022-06-06 17:23:10,412 - OrderProcessing -INFO - Job is not exist with the search parameters
-2022-06-06 17:23:10,420 - OrderProcessing -INFO - ServiceID is==D3P
-2022-06-06 17:23:10,427 - OrderProcessing -INFO - PickUpID is==3433749
-2022-06-06 17:23:10,500 - OrderProcessing -INFO - Operation tab is already selected
-2022-06-06 17:23:10,706 - OrderProcessing -INFO - If ServiceID is D3P....
-2022-06-06 17:24:01,020 - OrderProcessing -INFO - Job is not exist with the search parameters
-2022-06-06 17:24:01,031 - OrderProcessing -INFO - ServiceID is==RETURN
-2022-06-06 17:24:01,039 - OrderProcessing -INFO - PickUpID is==3433822
-2022-06-06 17:24:01,103 - OrderProcessing -INFO - Operation tab is already selected
-2022-06-06 17:24:01,304 - OrderProcessing -INFO - If ServiceID is RETURN....
-2022-06-06 17:24:51,498 - OrderProcessing -INFO - Job is not exist with the search parameters
-2022-06-06 17:24:51,506 - OrderProcessing -INFO - ServiceID is==Replenish
-2022-06-06 17:24:51,512 - OrderProcessing -INFO - PickUpID is==1687840
-2022-06-06 17:24:51,667 - OrderProcessing -INFO - Operation tab is already selected
-2022-06-06 17:24:55,973 - OrderProcessing -INFO - Total No of job in Inventory Tab is/are==178
-2022-06-06 17:24:57,359 - OrderProcessing -INFO - Record is not available with search parameters
-2022-06-06 17:24:57,360 - OrderProcessing -INFO - ===Order Processing Test End===
-2022-06-06 17:24:58,091 - OrderProcessing -INFO - Clicked on LogOut
-2022-06-06 17:25:02,145 - OrderProcessing -INFO - ====Sending Email=====
+2022-06-09 19:37:52,993 - ASNLog -INFO - initialization of the properties file is done
+2022-06-09 19:37:53,630 - io.github.bonigarcia.wdm.WebDriverManager -INFO - Using chromedriver 102.0.5005.61 (since Google Chrome 102 is installed in your machine)
+2022-06-09 19:37:53,667 - io.github.bonigarcia.wdm.WebDriverManager -INFO - Exporting webdriver.chrome.driver as C:\Users\rprajapati\.m2\repository\webdriver\chromedriver\win32\102.0.5005.61\chromedriver.exe
+2022-06-09 19:38:03,159 - ASNLog -INFO - Url opened
+2022-06-09 19:38:16,110 - ASNLog -INFO - =======ASN Log Test Start=======
+2022-06-09 19:38:16,274 - ASNLog -INFO - Clicked on Inventory
+2022-06-09 19:38:16,494 - ASNLog -INFO - Clicked on ASN Log
+2022-06-09 19:38:21,213 - ASNLog -INFO - Enter value in ASN
+2022-06-09 19:38:21,327 - ASNLog -INFO - Clicked on Search button
+2022-06-09 19:38:23,767 - ASNLog -INFO - Title of the screen isNetAgent : ASN
+2022-06-09 19:38:23,810 - ASNLog -INFO - Entered ASN==257702
+2022-06-09 19:38:23,811 - ASNLog -INFO - Searched ASN==
+2022-06-09 19:38:23,811 - ASNLog -INFO - ASN Number search result is FAIL
+2022-06-09 19:38:23,897 - ASNLog -INFO - Expand ASN Detail
+2022-06-09 19:38:26,256 - ASNLog -INFO - Collapse ASN Detail
+2022-06-09 19:38:29,432 - ASNLog -INFO - Click on Back button
+2022-06-09 19:38:32,128 - ASNLog -INFO - Cleared ASN
+2022-06-09 19:38:32,337 - ASNLog -INFO - Click on Search
+2022-06-09 19:38:33,842 - ASNLog -INFO - Click on ASNType dropdown
+2022-06-09 19:38:36,045 - ASNLog -INFO - Select all
+2022-06-09 19:38:36,187 - ASNLog -INFO - Close ASNType dropdown
+2022-06-09 19:38:36,315 - ASNLog -INFO - Click on Search button
+2022-06-09 19:38:37,769 - ASNLog -INFO - Click on ASNType dropdown
+2022-06-09 19:38:39,925 - ASNLog -INFO - Deselect all
+2022-06-09 19:38:40,045 - ASNLog -INFO - Close ASNType dropdown
+2022-06-09 19:38:40,218 - ASNLog -INFO - Click on Search button
+2022-06-09 19:38:41,753 - ASNLog -INFO - Click on ASN Status dropdown
+2022-06-09 19:38:43,959 - ASNLog -INFO - Select all
+2022-06-09 19:38:44,101 - ASNLog -INFO - Close ASN Status dropdown
+2022-06-09 19:38:44,281 - ASNLog -INFO - Click on Search button
+2022-06-09 19:38:45,771 - ASNLog -INFO - Click on ASN Status dropdown
+2022-06-09 19:38:48,870 - ASNLog -INFO - Deselect all
+2022-06-09 19:38:48,931 - ASNLog -INFO - Close ASN Status dropdown
+2022-06-09 19:38:49,019 - ASNLog -INFO - Click on Search button
+2022-06-09 19:38:50,384 - ASNLog -INFO - Select Location
+2022-06-09 19:38:52,567 - ASNLog -INFO - Click on Search button
+2022-06-09 19:38:53,774 - ASNLog -INFO - Entered Location==
+                                    AUTOMATION-FSL (F5386)                                
+2022-06-09 19:38:53,775 - ASNLog -INFO - Searched Location==SFO - NCM DIRECT DELIVERY (F1052)
+2022-06-09 19:38:53,775 - ASNLog -INFO - Location search result is FAIL
+2022-06-09 19:38:54,082 - ASNLog -INFO - Select Account
+2022-06-09 19:38:56,263 - ASNLog -INFO - Click on Search button
+2022-06-09 19:38:57,250 - ASNLog -INFO - Deselect Location
+2022-06-09 19:38:59,400 - ASNLog -INFO - Click on Search button
+2022-06-09 19:39:00,620 - ASNLog -INFO - Valid From Date :- 5/10/2022
+2022-06-09 19:39:00,621 - ASNLog -INFO - Valid To Date :- 5/10/2022
+2022-06-09 19:39:00,845 - ASNLog -INFO - Enter From Est. Arrival
+2022-06-09 19:39:01,188 - ASNLog -INFO - Clear ASN
+2022-06-09 19:39:01,589 - ASNLog -INFO - Click on Search button
+2022-06-09 19:39:01,735 - ASNLog -INFO - There is no data with enetered date
+2022-06-09 19:39:01,882 - ASNLog -INFO - Cleared FromESTArrival
+2022-06-09 19:39:01,950 - ASNLog -INFO - Cleared ToESTArrival
+2022-06-09 19:39:03,769 - ASNLog -INFO - Enter ASNFromDate
+2022-06-09 19:39:04,208 - ASNLog -INFO - Enter ASNToDate
+2022-06-09 19:39:05,720 - ASNLog -INFO - There is no data with enetered date
+2022-06-09 19:39:05,796 - ASNLog -INFO - Cleared ASNFromDate
+2022-06-09 19:39:05,869 - ASNLog -INFO - Cleared ASNToDate
+2022-06-09 19:39:05,965 - ASNLog -INFO - Click on Search button
+2022-06-09 19:39:07,091 - ASNLog -INFO - Enter Tracking No
+2022-06-09 19:39:07,179 - ASNLog -INFO - Click on Search button
+2022-06-09 19:39:07,951 - ASNLog -INFO - Records==No Records found!
+2022-06-09 19:39:08,072 - ASNLog -INFO - Cleared Tracking
+2022-06-09 19:39:08,361 - ASNLog -INFO - Enter WorkOrder
+2022-06-09 19:39:08,541 - ASNLog -INFO - Click on Search button
+2022-06-09 19:39:09,349 - ASNLog -INFO - Records==No Records found!
+2022-06-09 19:39:09,469 - ASNLog -INFO - Clear WorkOrder
+2022-06-09 19:39:09,707 - ASNLog -INFO - Enter ASN
+2022-06-09 19:39:09,877 - ASNLog -INFO - Click on Search button
+2022-06-09 19:39:10,684 - ASNLog -INFO - Records==No Records found!
+2022-06-09 19:39:10,782 - ASNLog -INFO - Clear ASN
+2022-06-09 19:39:11,060 - ASNLog -INFO - Enter ASN ref
+2022-06-09 19:39:11,241 - ASNLog -INFO - Click on Search button
+2022-06-09 19:39:11,945 - ASNLog -INFO - Records==No Records found!
+2022-06-09 19:39:12,009 - ASNLog -INFO - Clear ASN Ref
+2022-06-09 19:39:12,059 - ASNLog -INFO - Cleared FromESTArrival
+2022-06-09 19:39:14,481 - ASNLog -INFO - Cleared ToESTArrival
+2022-06-09 19:39:14,659 - ASNLog -INFO - Click on Search button
+2022-06-09 19:39:15,931 - ASNLog -INFO - Testing Pagination
+2022-06-09 19:39:31,454 - ASNLog -INFO - Click on ASN No
+2022-06-09 19:39:33,309 - ASNLog -INFO - ASNNo. field is Non-editable
+2022-06-09 19:39:33,378 - ASNLog -INFO - ASNType field is Non-editable
+2022-06-09 19:39:33,442 - ASNLog -INFO - Account Number field is Non-editable
+2022-06-09 19:39:33,512 - ASNLog -INFO - Location field is Non-editable
+2022-06-09 19:39:33,585 - ASNLog -INFO - ASN Reference field is Non-editable
+2022-06-09 19:39:33,630 - ASNLog -INFO - Carrier Name field is Non-editable
+2022-06-09 19:39:33,672 - ASNLog -INFO - Tracking Number field is Non-editable
+2022-06-09 19:39:33,719 - ASNLog -INFO - RefURL field is Non-editable
+2022-06-09 19:39:33,760 - ASNLog -INFO - Note field is Non-editable
+2022-06-09 19:39:35,115 - ASNLog -INFO - Click on Back button
+2022-06-09 19:39:38,549 - ASNLog -INFO - Click on next page
+2022-06-09 19:39:39,931 - ASNLog -INFO - No.Of Records==Page 2 of 10 (246 items)
+2022-06-09 19:39:40,156 - ASNLog -INFO - Click on Previous Page
+2022-06-09 19:39:41,512 - ASNLog -INFO - No.Of Records==Page 1 of 10 (246 items)
+2022-06-09 19:39:41,512 - ASNLog -INFO - File is not exist with Filename==ASN-
+2022-06-09 19:39:41,513 - ASNLog -INFO - File is not exist with Filename==ASN-
+2022-06-09 19:39:41,513 - ASNLog -INFO - File is not exist with Filename==ASN-
+2022-06-09 19:39:41,513 - ASNLog -INFO - File is not exist with Filename==ASN-
+2022-06-09 19:39:41,514 - ASNLog -INFO - File is not exist with Filename==ASN-
+2022-06-09 19:39:41,514 - ASNLog -INFO - File is not exist with Filename==ASN-
+2022-06-09 19:39:41,515 - ASNLog -INFO - File is not exist with Filename==ASN-
+2022-06-09 19:39:41,515 - ASNLog -INFO - File is not exist with Filename==ASN-
+2022-06-09 19:39:41,515 - ASNLog -INFO - File is not exist with Filename==ASN-
+2022-06-09 19:39:41,516 - ASNLog -INFO - File is not exist with Filename==ASN-
+2022-06-09 19:39:41,516 - ASNLog -INFO - File is not exist with Filename==ASN-
+2022-06-09 19:39:41,517 - ASNLog -INFO - File is not exist with Filename==ASN-
+2022-06-09 19:39:41,517 - ASNLog -INFO - File is exist with FileName==ASN-
+2022-06-09 19:39:41,519 - ASNLog -INFO - ASN- File is Deleted
+2022-06-09 19:39:41,519 - ASNLog -INFO - File is not exist with Filename==ASN-
+2022-06-09 19:39:41,519 - ASNLog -INFO - File is not exist with Filename==ASN-
+2022-06-09 19:39:41,520 - ASNLog -INFO - File is not exist with Filename==ASN-
+2022-06-09 19:39:41,520 - ASNLog -INFO - File is not exist with Filename==ASN-
+2022-06-09 19:39:41,520 - ASNLog -INFO - File is not exist with Filename==ASN-
+2022-06-09 19:39:41,521 - ASNLog -INFO - File is not exist with Filename==ASN-
+2022-06-09 19:39:41,521 - ASNLog -INFO - File is not exist with Filename==ASN-
+2022-06-09 19:39:41,522 - ASNLog -INFO - File is not exist with Filename==ASN-
+2022-06-09 19:39:41,522 - ASNLog -INFO - File is not exist with Filename==ASN-
+2022-06-09 19:39:41,522 - ASNLog -INFO - File is not exist with Filename==ASN-
+2022-06-09 19:39:41,523 - ASNLog -INFO - File is not exist with Filename==ASN-
+2022-06-09 19:39:41,523 - ASNLog -INFO - File is not exist with Filename==ASN-
+2022-06-09 19:39:41,524 - ASNLog -INFO - File is not exist with Filename==ASN-
+2022-06-09 19:39:41,524 - ASNLog -INFO - File is not exist with Filename==ASN-
+2022-06-09 19:39:41,525 - ASNLog -INFO - File is not exist with Filename==ASN-
+2022-06-09 19:39:41,525 - ASNLog -INFO - File is not exist with Filename==ASN-
+2022-06-09 19:39:41,525 - ASNLog -INFO - File is not exist with Filename==ASN-
+2022-06-09 19:39:41,526 - ASNLog -INFO - File is not exist with Filename==ASN-
+2022-06-09 19:39:41,526 - ASNLog -INFO - File is not exist with Filename==ASN-
+2022-06-09 19:39:41,526 - ASNLog -INFO - File is not exist with Filename==ASN-
+2022-06-09 19:39:41,527 - ASNLog -INFO - File is not exist with Filename==ASN-
+2022-06-09 19:39:41,527 - ASNLog -INFO - File is not exist with Filename==ASN-
+2022-06-09 19:39:41,529 - ASNLog -INFO - File is not exist with Filename==ASN-
+2022-06-09 19:39:41,529 - ASNLog -INFO - File is not exist with Filename==ASN-
+2022-06-09 19:39:41,529 - ASNLog -INFO - File is not exist with Filename==ASN-
+2022-06-09 19:39:41,529 - ASNLog -INFO - File is not exist with Filename==ASN-
+2022-06-09 19:39:41,529 - ASNLog -INFO - File is not exist with Filename==ASN-
+2022-06-09 19:39:41,530 - ASNLog -INFO - File is not exist with Filename==ASN-
+2022-06-09 19:39:41,530 - ASNLog -INFO - File is not exist with Filename==ASN-
+2022-06-09 19:39:41,531 - ASNLog -INFO - File is not exist with Filename==ASN-
+2022-06-09 19:39:41,531 - ASNLog -INFO - File is not exist with Filename==ASN-
+2022-06-09 19:39:41,531 - ASNLog -INFO - File is not exist with Filename==ASN-
+2022-06-09 19:39:41,532 - ASNLog -INFO - File is not exist with Filename==ASN-
+2022-06-09 19:39:41,532 - ASNLog -INFO - File is not exist with Filename==ASN-
+2022-06-09 19:39:41,532 - ASNLog -INFO - File is not exist with Filename==ASN-
+2022-06-09 19:39:41,533 - ASNLog -INFO - File is not exist with Filename==ASN-
+2022-06-09 19:39:41,533 - ASNLog -INFO - File is not exist with Filename==ASN-
+2022-06-09 19:39:41,533 - ASNLog -INFO - File is not exist with Filename==ASN-
+2022-06-09 19:39:41,534 - ASNLog -INFO - File is not exist with Filename==ASN-
+2022-06-09 19:39:41,534 - ASNLog -INFO - File is not exist with Filename==ASN-
+2022-06-09 19:39:41,535 - ASNLog -INFO - File is not exist with Filename==ASN-
+2022-06-09 19:39:41,535 - ASNLog -INFO - File is not exist with Filename==ASN-
+2022-06-09 19:39:41,535 - ASNLog -INFO - File is not exist with Filename==ASN-
+2022-06-09 19:39:41,536 - ASNLog -INFO - File is not exist with Filename==ASN-
+2022-06-09 19:39:41,536 - ASNLog -INFO - File is not exist with Filename==ASN-
+2022-06-09 19:39:41,536 - ASNLog -INFO - File is not exist with Filename==ASN-
+2022-06-09 19:39:41,537 - ASNLog -INFO - File is not exist with Filename==ASN-
+2022-06-09 19:39:41,537 - ASNLog -INFO - File is not exist with Filename==ASN-
+2022-06-09 19:39:41,537 - ASNLog -INFO - File is not exist with Filename==ASN-
+2022-06-09 19:39:41,538 - ASNLog -INFO - File is not exist with Filename==ASN-
+2022-06-09 19:39:41,538 - ASNLog -INFO - File is not exist with Filename==ASN-
+2022-06-09 19:39:41,538 - ASNLog -INFO - File is not exist with Filename==ASN-
+2022-06-09 19:39:41,539 - ASNLog -INFO - File is not exist with Filename==ASN-
+2022-06-09 19:39:41,539 - ASNLog -INFO - File is not exist with Filename==ASN-
+2022-06-09 19:39:41,539 - ASNLog -INFO - File is not exist with Filename==ASN-
+2022-06-09 19:39:41,540 - ASNLog -INFO - File is not exist with Filename==ASN-
+2022-06-09 19:39:41,540 - ASNLog -INFO - File is not exist with Filename==ASN-
+2022-06-09 19:39:41,540 - ASNLog -INFO - File is not exist with Filename==ASN-
+2022-06-09 19:39:41,542 - ASNLog -INFO - File is not exist with Filename==ASN-
+2022-06-09 19:39:41,712 - ASNLog -INFO - Click on Export button
+2022-06-09 19:39:50,914 - ASNLog -INFO - File is Downloaded successfully:Verified
+2022-06-09 19:39:51,742 - ASNLog -INFO - Clicked on MNX Logo
+2022-06-09 19:39:52,522 - ASNLog -INFO - =======ASN Log Test End=======
+2022-06-09 19:39:53,245 - ASNLog -INFO - Clicked on LogOut
+2022-06-09 19:39:57,729 - ASNLog -INFO - ====Sending Email=====

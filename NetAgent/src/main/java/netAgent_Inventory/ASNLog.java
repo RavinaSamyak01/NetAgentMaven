@@ -2,6 +2,7 @@ package netAgent_Inventory;
 
 import java.util.Calendar;
 import org.openqa.selenium.By;
+import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.ExpectedConditions;
@@ -391,6 +392,15 @@ public class ASNLog extends BaseInit {
 		logger.info("Records==" + NoData);
 		Driver.findElement(By.id("txtAsnRef")).clear();
 		logger.info("Clear ASN Ref");
+		Driver.findElement(By.id("txtFromEstArrival")).clear();
+		logger.info("Cleared FromESTArrival");
+		Driver.findElement(By.id("txtTracking")).click();
+		Thread.sleep(1000);
+		Driver.findElement(By.id("txtToEstArrival")).clear();
+		Driver.findElement(By.id("txtTracking")).click();
+		Thread.sleep(1000);
+
+		logger.info("Cleared ToESTArrival");
 
 		try {
 			Driver.findElement(By.id("idbtnRunSearch")).click();
