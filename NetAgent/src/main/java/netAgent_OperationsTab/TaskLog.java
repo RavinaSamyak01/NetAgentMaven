@@ -303,12 +303,13 @@ public class TaskLog extends BaseInit {
 		// --Remove Service
 		isElementPresent("TLService_id").clear();
 		System.out.println("Cleared Service");
-		logger.info("Cleared Pickup");
+		logger.info("Cleared Service");
 
-		// --Remove Customer
+		// --Enter Customer
 		isElementPresent("TLCustomer_id").clear();
-		System.out.println("Cleared Customer");
-		logger.info("Cleared Pickup");
+		isElementPresent("TLCustomer_id").sendKeys("950682");
+		System.out.println("Enter Customer");
+		logger.info("Enter Customer");
 
 		//// --Remove PickUp
 		isElementPresent("TLPickUp_id").clear();
@@ -324,7 +325,7 @@ public class TaskLog extends BaseInit {
 		logger.info("Selected Replenish from ASNType dropdown");
 		isElementPresent("TLASNType_id").click();
 		System.out.println("Close the ASNType dropdown");
-		logger.info("Cleared Pickup");
+		logger.info("Close the ASNType dropdown");
 
 		// --Click on Search
 		isElementPresent("TLADSearchBTN_id").click();

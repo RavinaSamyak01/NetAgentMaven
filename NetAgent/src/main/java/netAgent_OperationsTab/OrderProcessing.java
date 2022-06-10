@@ -6875,11 +6875,20 @@ public class OrderProcessing extends BaseInit {
 
 					}
 				} catch (Exception OnBoard) {
-					wait.until(ExpectedConditions
-							.visibilityOfElementLocated(By.xpath("//*[@class=\"pull-left\"]/strong")));
-					WebElement ONBOARD = Driver.findElement(By.xpath("//*[@class=\"pull-left\"]/strong"));
-					if (ONBOARD.getText().equalsIgnoreCase("ON BOARD")) {
-						logger.info("SD Job is on OnBoard stage");
+					try {
+						wait.until(ExpectedConditions
+								.visibilityOfElementLocated(By.xpath("//*[@class=\"pull-left\"]/strong")));
+						WebElement ONBOARD = Driver.findElement(By.xpath("//*[@class=\"pull-left\"]/strong"));
+						if (ONBOARD.getText().equalsIgnoreCase("ON BOARD")) {
+							logger.info("SD Job is on OnBoard stage");
+
+						}
+					} catch (Exception stage) {
+						String Orderstage = Driver.findElement(By.xpath("//strong/span[@class=\"ng-binding\"]"))
+								.getText();
+						logger.info("Current stage of the order is=" + Orderstage);
+						logger.info("Issue in Order stage==" + Orderstage);
+						getScreenshot(Driver, "StageIssue_" + Orderstage);
 
 					}
 				}
