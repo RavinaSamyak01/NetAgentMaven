@@ -36,12 +36,15 @@ public class ContactUS extends BaseInit {
 				System.out.println("Success Message is displayed==" + SuccMsg.getText() + "\n\n");
 				logger.info("Success Message is displayed==" + SuccMsg.getText() + "\n\n");
 				msg.append("Success Message is displayed==" + SuccMsg.getText() + "\n\n");
+				logger.info("Success Message is displayed==PASS");
 
 			}
 		} catch (Exception SUccMsg) {
 			System.out.println("Success Message is not displayed" + "\n\n");
 			logger.info("Success Message is not displayed" + "\n\n");
 			msg.append("Success Message is not displayed" + "\n\n");
+			logger.info("Success Message is not displayed==FAIL");
+
 		}
 
 		// Take screen-shot.

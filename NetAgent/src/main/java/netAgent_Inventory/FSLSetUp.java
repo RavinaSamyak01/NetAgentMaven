@@ -46,8 +46,11 @@ public class FSLSetUp extends BaseInit {
 		Boolean locationcode = Driver.findElement(By.id("txtLocationCode")).isEnabled();
 
 		if (locationcode == true) {
-			throw new Error("Error: Location Code field is enable");
+			throw new Error("Error: Location Code field is enable==PASS");
+		} else {
+
 		}
+		logger.info("Error: Location Code field is enable==FAIL");
 
 		Driver.findElement(By.id("idiconsave")).click();
 		logger.info("Clicked on Save button");
@@ -168,8 +171,10 @@ public class FSLSetUp extends BaseInit {
 		if (SuccMsg.isDisplayed()) {
 			String SuccMessage = SuccMsg.getText();
 			logger.info("Success Message==" + SuccMessage);
+			logger.info("Record is Saved==PASS");
+
 		} else {
-			logger.info("Record is not saved");
+			logger.info("Record is not saved==FAIL");
 		}
 
 		Driver.findElement(By.id("idbtnreset")).click();
@@ -337,8 +342,10 @@ public class FSLSetUp extends BaseInit {
 			if (SuccMsg.isDisplayed()) {
 				String SuccMessage = SuccMsg.getText();
 				logger.info("Success Message==" + SuccMessage);
+				logger.info("Record is Saved==PASS");
+
 			} else {
-				logger.info("Record is not saved");
+				logger.info("Record is not saved==FAIL");
 			}
 
 			// --Print button
@@ -416,8 +423,10 @@ public class FSLSetUp extends BaseInit {
 		if (SuccMsg.isDisplayed()) {
 			String SuccMessage = SuccMsg.getText();
 			logger.info("Success Message==" + SuccMessage);
+			logger.info("Record is Saved==PASS");
+
 		} else {
-			logger.info("Record is not saved");
+			logger.info("Record is not saved==FAIL");
 		}
 		getScreenshot(Driver, "FSLSetup_Save");
 

@@ -46,6 +46,8 @@ public class CycleCount extends BaseInit {
 				WebElement WorkOID = Driver.findElement(By.id("workid"));
 				wait.until(ExpectedConditions.visibilityOf(WorkOID));
 				logger.info("WorkOrderID after start==" + WorkOID.getText());
+				logger.info("Able to start cycle===PASS");
+				msg.append("Able to start cycle===PASS" + "/n");
 
 			} catch (Exception Part) {
 				WebElement PartError = Driver.findElement(By.id("CycleNoGrid"));
@@ -57,6 +59,9 @@ public class CycleCount extends BaseInit {
 					getScreenshot(Driver, "CycleCountStartError");
 
 				}
+				logger.info("Unable to start cycle===FAIL");
+				msg.append("Unable to start cycle===FAIL" + "/n");
+
 			}
 
 		}
@@ -101,6 +106,8 @@ public class CycleCount extends BaseInit {
 						logger.info("WorkOrderID after start==" + wOID);
 						setData("OrderSearch", 1, 13, wOID);
 						logger.info("Inserted workorderID in excel");
+						logger.info("Able to start cycle===PASS");
+						msg.append("Able to start cycle===PASS" + "/n");
 
 					} catch (Exception Part) {
 						WebElement PartError = Driver.findElement(By.id("CycleNoGrid"));
@@ -112,6 +119,9 @@ public class CycleCount extends BaseInit {
 							getScreenshot(Driver, "CycleCountStartError");
 
 						}
+						logger.info("Unable to start cycle===FAIL");
+						msg.append("Unable to start cycle===FAIL" + "/n");
+
 					}
 				} catch (Exception staleelement) {
 					List<WebElement> multistart1 = Driver
@@ -132,6 +142,9 @@ public class CycleCount extends BaseInit {
 							logger.info("WorkOrderID after start==" + wOID);
 							setData("OrderSearch", 1, 13, wOID);
 							logger.info("Inserted workorderID in excel");
+							logger.info("Able to start cycle===PASS");
+							msg.append("Able to start cycle===PASS" + "/n");
+
 							break;
 
 						} catch (Exception Part) {
@@ -144,6 +157,9 @@ public class CycleCount extends BaseInit {
 								getScreenshot(Driver, "CycleCountStartError");
 
 							}
+							logger.info("Unable to start cycle===FAIL");
+							msg.append("Unable to start cycle===FAIL" + "/n");
+
 						}
 
 					}

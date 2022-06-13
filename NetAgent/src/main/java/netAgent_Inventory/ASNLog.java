@@ -2,7 +2,6 @@ package netAgent_Inventory;
 
 import java.util.Calendar;
 import org.openqa.selenium.By;
-import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.ExpectedConditions;
@@ -90,12 +89,14 @@ public class ASNLog extends BaseInit {
 		Driver.findElement(By.id("expandId")).click();
 		logger.info("Expand ASN Detail");
 		Thread.sleep(2000);
+		logger.info("Expand ASN Details==PASS");
 
 		getScreenshot(Driver, "ASN Log Details");
 
 		Driver.findElement(By.id("collapseId")).click();
 		logger.info("Collapse ASN Detail");
 		Thread.sleep(2000);
+		logger.info("Collapse ASN Details==PASS");
 
 		// Go back to ASNLog screen
 		Driver.findElement(By.id("hlkBackToScreen")).click();

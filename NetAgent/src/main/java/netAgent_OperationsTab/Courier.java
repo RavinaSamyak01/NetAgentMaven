@@ -33,13 +33,13 @@ public class Courier extends BaseInit {
 
 		if (!Courier.equals(Agent)) {
 			System.out.println("Status : Agent Id is wrong.");
-			logger.info("Status : Agent Id is wrong.");
-			msg.append("Status : Agent Id is wrong." + "\n\n");
+			logger.info("Status : Agent Id is wrong.==FAIL");
+			msg.append("Status : Agent Id is wrong.==FAIL" + "\n\n");
 
 		} else {
 			System.out.println("Status : Agent Id is right.");
-			logger.info("Status : Agent Id is right.");
-			msg.append("Status : Agent Id is right." + "\n\n");
+			logger.info("Status : Agent Id is right.==PASS");
+			msg.append("Status : Agent Id is right.==PASS" + "\n\n");
 		}
 
 		// Check all fields
@@ -53,12 +53,16 @@ public class Courier extends BaseInit {
 			logger.info("Status : Agent Id is displayed.");
 			if (AgentId.getAttribute("readonly").equalsIgnoreCase("false")) {
 				logger.info("Status : Agent Id is Enabled.==FAIL");
+				msg.append("Status : Agent Id is Enabled.==FAIL" + "/n");
+
 			} else {
 				logger.info("Status : Agent Id is Disabled.==PASS");
 
 			}
 		} else {
-			logger.info("Status : Agent Id is not displayed.");
+			logger.info("Status : Agent Id is not displayed.==FAIL");
+			msg.append("Status : Agent Id is not displayed.==FAIL" + "/n");
+
 		}
 
 		// 2. Agent Code
@@ -68,12 +72,16 @@ public class Courier extends BaseInit {
 			logger.info("Status : AgentCode is displayed.");
 			if (AgentCode.getAttribute("readonly").equalsIgnoreCase("false")) {
 				logger.info("Status : AgentCode is Enabled.==FAIL");
+				msg.append("Status : AgentCode is Enabled.==FAIL" + "/n");
+
 			} else {
 				logger.info("Status : AgentCode is Disabled.==PASS");
 
 			}
 		} else {
-			logger.info("Status : AgentCode is not displayed.");
+			logger.info("Status : AgentCode is not displayed.==FAIL");
+			msg.append("Status : AgentCode is not displayed.==FAIL" + "/n");
+
 		}
 
 		// 3. Vendor
@@ -83,12 +91,16 @@ public class Courier extends BaseInit {
 			logger.info("Status : Vendor is displayed.");
 			if (Vendor.getAttribute("readonly").equalsIgnoreCase("false")) {
 				logger.info("Status : Vendor is Enabled.==FAIL");
+				msg.append("Status : Vendor is Enabled.==FAIL" + "/n");
+
 			} else {
 				logger.info("Status : Vendor is Disabled.==PASS");
 
 			}
 		} else {
-			logger.info("Status : Vendor is not displayed.");
+			logger.info("Status : Vendor is not displayed.==FAIL");
+			msg.append("Status : Vendor is not displayed.==FAIL" + "/n");
+
 		}
 
 		// 4. Name
@@ -98,12 +110,16 @@ public class Courier extends BaseInit {
 			logger.info("Status : Name is displayed.");
 			if (Name.getAttribute("readonly").equalsIgnoreCase("false")) {
 				logger.info("Status : Name is Enabled.==FAIL");
+				msg.append("Status : Name is Enabled.==FAIL" + "/n");
+
 			} else {
 				logger.info("Status : Name is Disabled.==PASS");
 
 			}
 		} else {
-			logger.info("Status : Vendor is not displayed.");
+			logger.info("Status : Vendor is not displayed.==FAIL");
+			msg.append("Status : Vendor is not displayed.==FAIL" + "/n");
+
 		}
 
 		// 5. Valid From
@@ -113,12 +129,16 @@ public class Courier extends BaseInit {
 			logger.info("Status : ValidFrom is displayed.");
 			if (Vendor.getAttribute("readonly").equalsIgnoreCase("false")) {
 				logger.info("Status : ValidFrom is Enabled.==FAIL");
+				msg.append("Status : ValidFrom is Enabled.==FAIL" + "/n");
+
 			} else {
 				logger.info("Status : ValidFrom is Disabled.==PASS");
 
 			}
 		} else {
-			logger.info("Status : ValidFrom is not displayed.");
+			logger.info("Status : ValidFrom is not displayed.==FAIL");
+			msg.append("Status : ValidFrom is not displayed.==FAIL" + "/n");
+
 		}
 		// 6. Valid To
 		WebElement ValidTo = Driver.findElement(By.id("txtValidto"));
@@ -127,12 +147,16 @@ public class Courier extends BaseInit {
 			logger.info("Status : ValidTo is displayed.");
 			if (ValidTo.getAttribute("readonly").equalsIgnoreCase("false")) {
 				logger.info("Status : ValidTo is Enabled.==FAIL");
+				msg.append("Status : ValidTo is Enabled.==FAIL" + "/n");
+
 			} else {
 				logger.info("Status : ValidTo is Disabled.==PASS");
 
 			}
 		} else {
-			logger.info("Status : ValidTo is not displayed.");
+			logger.info("Status : ValidTo is not displayed.==FAIL");
+			msg.append("Status : ValidTo is not displayed.==FAIL" + "/n");
+
 		}
 
 		// 7. Country
@@ -142,12 +166,16 @@ public class Courier extends BaseInit {
 			logger.info("Status : Country is displayed.");
 			if (Country.getAttribute("readonly").equalsIgnoreCase("false")) {
 				logger.info("Status : Country is Enabled.==FAIL");
+				msg.append("Status : Country is Enabled.==FAIL" + "/n");
+
 			} else {
 				logger.info("Status : Country is Disabled.==PASS");
 
 			}
 		} else {
-			logger.info("Status : Country is not displayed.");
+			logger.info("Status : Country is not displayed.==FAIL");
+			msg.append("Status : Country is not displayed.==FAIL" + "/n");
+
 		}
 
 		// 8. Zip
@@ -156,12 +184,16 @@ public class Courier extends BaseInit {
 			logger.info("Status : Zip is displayed.");
 			if (Zip.getAttribute("readonly").equalsIgnoreCase("false")) {
 				logger.info("Status : Zip is Enabled.==FAIL");
+				msg.append("Status : Zip is Enabled.==FAIL" + "/n");
+
 			} else {
 				logger.info("Status : Zip is Disabled.==PASS");
 
 			}
 		} else {
-			logger.info("Status : Zip is not displayed.");
+			logger.info("Status : Zip is not displayed.==FAIL");
+			msg.append("Status : Zip is not displayed.==FAIL" + "/n");
+
 		}
 		// 9. City
 		WebElement City = Driver.findElement(By.id("txtCity"));
@@ -170,12 +202,16 @@ public class Courier extends BaseInit {
 			logger.info("Status : City is displayed.");
 			if (City.getAttribute("readonly").equalsIgnoreCase("false")) {
 				logger.info("Status : City is Enabled.==FAIL");
+				msg.append("Status : City is Enabled.==FAIL" + "/n");
+
 			} else {
 				logger.info("Status : City is Disabled.==PASS");
 
 			}
 		} else {
-			logger.info("Status : City is not displayed.");
+			logger.info("Status : City is not displayed.==FAIL");
+			msg.append("Status : City is not displayed.==FAIL" + "/n");
+
 		}
 
 		// 10. State
@@ -185,12 +221,16 @@ public class Courier extends BaseInit {
 			logger.info("Status : State is displayed.");
 			if (State.getAttribute("readonly").equalsIgnoreCase("false")) {
 				logger.info("Status : State is Enabled.==FAIL");
+				msg.append("Status : State is Enabled.==FAIL" + "/n");
+
 			} else {
 				logger.info("Status : State is Disabled.==PASS");
 
 			}
 		} else {
-			logger.info("Status : State is not displayed.");
+			logger.info("Status : State is not displayed.==FAIL");
+			msg.append("Status : State is not displayed.==FAIL" + "/n");
+
 		}
 
 		// 11. Address 1
@@ -200,12 +240,16 @@ public class Courier extends BaseInit {
 			logger.info("Status : add1 is displayed.");
 			if (add1.getAttribute("readonly").equalsIgnoreCase("false")) {
 				logger.info("Status : add1 is Enabled.==FAIL");
+				msg.append("Status : add1 is Enabled.==FAIL" + "/n");
+
 			} else {
 				logger.info("Status : add1 is Disabled.==PASS");
 
 			}
 		} else {
-			logger.info("Status : add1 is not displayed.");
+			logger.info("Status : add1 is not displayed.==FAIL");
+			msg.append("Status : add1 is not displayed.==FAIL" + "/n");
+
 		}
 		// 12. Dept
 		WebElement Dept = Driver.findElement(By.id("txtAddrLine2"));
@@ -214,12 +258,16 @@ public class Courier extends BaseInit {
 			logger.info("Status : Dept is displayed.");
 			if (Dept.getAttribute("readonly").equalsIgnoreCase("false")) {
 				logger.info("Status : Dept is Enabled.==FAIL");
+				msg.append("Status : Dept is Enabled.==FAIL" + "/n");
+
 			} else {
 				logger.info("Status : Dept is Disabled.==PASS");
 
 			}
 		} else {
-			logger.info("Status : Dept is not displayed.");
+			logger.info("Status : Dept is not displayed.==FAIL");
+			msg.append("Status : Dept is not displayed.==FAIL" + "/n");
+
 		}
 
 		// 13. Phone
@@ -229,12 +277,16 @@ public class Courier extends BaseInit {
 			logger.info("Status : Phone is displayed.");
 			if (Phone.getAttribute("readonly").equalsIgnoreCase("false")) {
 				logger.info("Status : Phone is Enabled.==FAIL");
+				msg.append("Status : Phone is Enabled.==FAIL" + "/n");
+
 			} else {
 				logger.info("Status : Phone is Disabled.==PASS");
 
 			}
 		} else {
-			logger.info("Status : Phone is not displayed.");
+			logger.info("Status : Phone is not displayed.==FAIL");
+			msg.append("Status : Phone is not displayed.==FAIL" + "/n");
+
 		}
 
 		WebElement PhoneExt = Driver.findElement(By.xpath(".//*[@name='txtExtensionNum']"));
@@ -243,12 +295,16 @@ public class Courier extends BaseInit {
 			logger.info("Status : PhoneExt is displayed.");
 			if (PhoneExt.getAttribute("readonly").equalsIgnoreCase("false")) {
 				logger.info("Status : PhoneExt is Enabled.==FAIL");
+				msg.append("Status : PhoneExt is Enabled.==FAIL" + "/n");
+
 			} else {
 				logger.info("Status : PhoneExt is Disabled.==PASS");
 
 			}
 		} else {
-			logger.info("Status : PhoneExt is not displayed.");
+			logger.info("Status : PhoneExt is not displayed.==FAIL");
+			msg.append("Status : PhoneExt is not displayed.==FAIL" + "/n");
+
 		}
 
 		// 14. Fax
@@ -258,12 +314,16 @@ public class Courier extends BaseInit {
 			logger.info("Status : Fax is displayed.");
 			if (Fax.getAttribute("readonly").equalsIgnoreCase("false")) {
 				logger.info("Status : Fax is Enabled.==FAIL");
+				msg.append("Status : Fax is Enabled.==FAIL" + "/n");
+
 			} else {
 				logger.info("Status : Fax is Disabled.==PASS");
 
 			}
 		} else {
-			logger.info("Status : Fax is not displayed.");
+			logger.info("Status : Fax is not displayed.==FAIL");
+			msg.append("Status : Fax is not displayed.==FAIL" + "/n");
+
 		}
 
 		// 15. Email
@@ -273,12 +333,16 @@ public class Courier extends BaseInit {
 			logger.info("Status : Email is displayed.");
 			if (Email.getAttribute("readonly").equalsIgnoreCase("false")) {
 				logger.info("Status : Email is Enabled.==FAIL");
+				msg.append("Status : Email is Enabled.==FAIL" + "/n");
+
 			} else {
 				logger.info("Status : Email is Disabled.==PASS");
 
 			}
 		} else {
-			logger.info("Status : Email is not displayed.");
+			logger.info("Status : Email is not displayed.==FAIL");
+			msg.append("Status : Email is not displayed.==FAIL" + "/n");
+
 		}
 
 		// 16. AfterFname
@@ -288,12 +352,16 @@ public class Courier extends BaseInit {
 			logger.info("Status : AfterFname is displayed.");
 			if (AfterFname.getAttribute("readonly").equalsIgnoreCase("false")) {
 				logger.info("Status : AfterFname is Enabled.==FAIL");
+				msg.append("Status : AfterFname is Enabled.==FAIL" + "/n");
+
 			} else {
 				logger.info("Status : AfterFname is Disabled.==PASS");
 
 			}
 		} else {
-			logger.info("Status : AfterFname is not displayed.");
+			logger.info("Status : AfterFname is not displayed.==FAIL");
+			msg.append("Status : AfterFname is not displayed.==FAIL" + "/n");
+
 		}
 
 		// 17. AfterLname
@@ -303,12 +371,16 @@ public class Courier extends BaseInit {
 			logger.info("Status : AfterLname is displayed.");
 			if (AfterLname.getAttribute("readonly").equalsIgnoreCase("false")) {
 				logger.info("Status : AfterLname is Enabled.==FAIL");
+				msg.append("Status : AfterLname is Enabled.==FAIL" + "/n");
+
 			} else {
 				logger.info("Status : AfterLname is Disabled.==PASS");
 
 			}
 		} else {
-			logger.info("Status : AfterLname is not displayed.");
+			logger.info("Status : AfterLname is not displayed.==FAIL");
+			msg.append("Status : AfterLname is not displayed.==FAIL" + "/n");
+
 		}
 
 		// 18. AfterPhone
@@ -318,12 +390,16 @@ public class Courier extends BaseInit {
 			logger.info("Status : AfterPhone is displayed.");
 			if (AfterPhone.getAttribute("readonly").equalsIgnoreCase("false")) {
 				logger.info("Status : AfterPhone is Enabled.==FAIL");
+				msg.append("Status : AfterPhone is Enabled.==FAIL" + "/n");
+
 			} else {
 				logger.info("Status : AfterPhone is Disabled.==PASS");
 
 			}
 		} else {
-			logger.info("Status : AfterPhone is not displayed.");
+			logger.info("Status : AfterPhone is not displayed.==FAIL");
+			msg.append("Status : AfterPhone is not displayed.==FAIL" + "/n");
+
 		}
 
 		WebElement AfterPhoneExt = Driver.findElement(By.id("txtCourierAfterhrExt"));
@@ -332,12 +408,16 @@ public class Courier extends BaseInit {
 			logger.info("Status : AfterPhoneExt is displayed.");
 			if (AfterPhoneExt.getAttribute("readonly").equalsIgnoreCase("false")) {
 				logger.info("Status : AfterPhoneExt is Enabled.==FAIL");
+				msg.append("Status : AfterPhoneExt is Enabled.==FAIL" + "/n");
+
 			} else {
 				logger.info("Status : AfterPhoneExt is Disabled.==PASS");
 
 			}
 		} else {
-			logger.info("Status : AfterPhoneExt is not displayed.");
+			logger.info("Status : AfterPhoneExt is not displayed.==FAIL");
+			msg.append("Status : AfterPhoneExt is not displayed.==FAIL" + "/n");
+
 		}
 
 		// 19. EmrgFname
@@ -347,12 +427,16 @@ public class Courier extends BaseInit {
 			logger.info("Status : EmrgFname is displayed.");
 			if (EmrgFname.getAttribute("readonly").equalsIgnoreCase("false")) {
 				logger.info("Status : EmrgFname is Enabled.==FAIL");
+				msg.append("Status : EmrgFname is Enabled.==FAIL" + "/n");
+
 			} else {
 				logger.info("Status : EmrgFname is Disabled.==PASS");
 
 			}
 		} else {
-			logger.info("Status : EmrgFname is not displayed.");
+			logger.info("Status : EmrgFname is not displayed.==FAIL");
+			msg.append("Status : EmrgFname is not displayed.==FAIL" + "/n");
+
 		}
 		// 20. EmrgLname
 		WebElement EmrgLname = Driver.findElement(By.id("txtEmrgLname"));
@@ -361,12 +445,16 @@ public class Courier extends BaseInit {
 			logger.info("Status : EmrgLname is displayed.");
 			if (EmrgLname.getAttribute("readonly").equalsIgnoreCase("false")) {
 				logger.info("Status : EmrgLname is Enabled.==FAIL");
+				msg.append("Status : EmrgLname is Enabled.==FAIL" + "/n");
+
 			} else {
 				logger.info("Status : EmrgLname is Disabled.==PASS");
 
 			}
 		} else {
-			logger.info("Status : EmrgLname is not displayed.");
+			logger.info("Status : EmrgLname is not displayed.==FAIL");
+			msg.append("Status : EmrgLname is not displayed.==FAIL" + "/n");
+
 		}
 
 		// 21. EmrgPhone
@@ -375,12 +463,16 @@ public class Courier extends BaseInit {
 			logger.info("Status : EmrgPhone is displayed.");
 			if (EmrgPhone.getAttribute("readonly").equalsIgnoreCase("false")) {
 				logger.info("Status : EmrgPhone is Enabled.==FAIL");
+				msg.append("Status : EmrgPhone is Enabled.==FAIL" + "/n");
+
 			} else {
 				logger.info("Status : EmrgPhone is Disabled.==PASS");
 
 			}
 		} else {
-			logger.info("Status : EmrgPhone is not displayed.");
+			logger.info("Status : EmrgPhone is not displayed.==FAIL");
+			msg.append("Status : EmrgPhone is not displayed.==FAIL" + "/n");
+
 		}
 
 		WebElement EmrgPhoneExt = Driver.findElement(By.xpath(".//*[@name='txtCourierEmergExt']"));
@@ -389,12 +481,16 @@ public class Courier extends BaseInit {
 			logger.info("Status : EmrgPhoneExt is displayed.");
 			if (EmrgPhoneExt.getAttribute("readonly").equalsIgnoreCase("false")) {
 				logger.info("Status : EmrgPhoneExt is Enabled.==FAIL");
+				msg.append("Status : EmrgPhoneExt is Enabled.==FAIL" + "/n");
+
 			} else {
 				logger.info("Status : EmrgPhoneExt is Disabled.==PASS");
 
 			}
 		} else {
-			logger.info("Status : EmrgPhoneExt is not displayed.");
+			logger.info("Status : EmrgPhoneExt is not displayed.==FAIL");
+			msg.append("Status : EmrgPhoneExt is not displayed.==FAIL" + "/n");
+
 		}
 
 		// 22. APAcct
@@ -404,12 +500,16 @@ public class Courier extends BaseInit {
 			logger.info("Status : APAcct1 is displayed.");
 			if (APAcct1.getAttribute("readonly").equalsIgnoreCase("false")) {
 				logger.info("Status : APAcct1 is Enabled.==FAIL");
+				msg.append("Status : APAcct1 is Enabled.==FAIL" + "/n");
+
 			} else {
 				logger.info("Status : APAcct1 is Disabled.==PASS");
 
 			}
 		} else {
-			logger.info("Status : APAcct1 is not displayed.");
+			logger.info("Status : APAcct1 is not displayed.==FAIL");
+			msg.append("Status : APAcct1 is not displayed.==FAIL" + "/n");
+
 		}
 
 		WebElement APAcct2 = Driver.findElement(By.xpath(".//*[@name='txtApDeptNo']"));
@@ -418,12 +518,16 @@ public class Courier extends BaseInit {
 			logger.info("Status : APAcct2 is displayed.");
 			if (APAcct2.getAttribute("readonly").equalsIgnoreCase("false")) {
 				logger.info("Status : APAcct2 is Enabled.==FAIL");
+				msg.append("Status : APAcct2 is Enabled.==FAIL" + "/n");
+
 			} else {
 				logger.info("Status : APAcct2 is Disabled.==PASS");
 
 			}
 		} else {
-			logger.info("Status : APAcct2 is not displayed.");
+			logger.info("Status : APAcct2 is not displayed.==FAIL");
+			msg.append("Status : APAcct2 is not displayed.==FAIL" + "/n");
+
 		}
 
 		// 23. CashAcct
@@ -433,12 +537,16 @@ public class Courier extends BaseInit {
 			logger.info("Status : CashAcct1 is displayed.");
 			if (CashAcct1.getAttribute("readonly").equalsIgnoreCase("false")) {
 				logger.info("Status : CashAcct1 is Enabled.==FAIL");
+				msg.append("Status : CashAcct1 is Enabled.==FAIL" + "/n");
+
 			} else {
 				logger.info("Status : CashAcct1 is Disabled.==PASS");
 
 			}
 		} else {
-			logger.info("Status : CashAcct1 is not displayed.");
+			logger.info("Status : CashAcct1 is not displayed.==FAIL");
+			msg.append("Status : CashAcct1 is not displayed.==FAIL" + "/n");
+
 		}
 		WebElement CashAcct2 = Driver.findElement(By.xpath(".//*[@name='txtCashDeptNo']"));
 
@@ -446,12 +554,16 @@ public class Courier extends BaseInit {
 			logger.info("Status : CashAcct2 is displayed.");
 			if (CashAcct2.getAttribute("readonly").equalsIgnoreCase("false")) {
 				logger.info("Status : CashAcct2 is Enabled.==FAIL");
+				msg.append("Status : CashAcct2 is Enabled.==FAIL" + "/n");
+
 			} else {
 				logger.info("Status : CashAcct2 is Disabled.==PASS");
 
 			}
 		} else {
-			logger.info("Status : CashAcct2 is not displayed.");
+			logger.info("Status : CashAcct2 is not displayed.==FAIL");
+			msg.append("Status : CashAcct2 is not displayed.==FAIL" + "/n");
+
 		}
 
 		// 24. ExpAcct
@@ -461,12 +573,16 @@ public class Courier extends BaseInit {
 			logger.info("Status : ExpAcct1 is displayed.");
 			if (ExpAcct1.getAttribute("readonly").equalsIgnoreCase("false")) {
 				logger.info("Status : ExpAcct1 is Enabled.==FAIL");
+				msg.append("Status : ExpAcct1 is Enabled.==FAIL" + "/n");
+
 			} else {
 				logger.info("Status : ExpAcct1 is Disabled.==PASS");
 
 			}
 		} else {
-			logger.info("Status : ExpAcct1 is not displayed.");
+			logger.info("Status : ExpAcct1 is not displayed.==FAIL");
+			msg.append("Status : ExpAcct1 is not displayed.==FAIL" + "/n");
+
 		}
 
 		WebElement ExpAcct2 = Driver.findElement(By.xpath(".//*[@name='txtExpDeptNo']"));
@@ -475,12 +591,16 @@ public class Courier extends BaseInit {
 			logger.info("Status : ExpAcct2 is displayed.");
 			if (ExpAcct2.getAttribute("readonly").equalsIgnoreCase("false")) {
 				logger.info("Status : ExpAcct2 is Enabled.==FAIL");
+				msg.append("Status : ExpAcct2 is Enabled.==FAIL" + "/n");
+
 			} else {
 				logger.info("Status : ExpAcct2 is Disabled.==PASS");
 
 			}
 		} else {
-			logger.info("Status : ExpAcct2 is not displayed.");
+			logger.info("Status : ExpAcct2 is not displayed.==FAIL");
+			msg.append("Status : ExpAcct2 is not displayed.==FAIL" + "/n");
+
 		}
 
 		// 25. Type
@@ -489,12 +609,16 @@ public class Courier extends BaseInit {
 			logger.info("Status : Type is displayed.");
 			if (Type.getAttribute("readonly").equalsIgnoreCase("false")) {
 				logger.info("Status : Type is Enabled.==FAIL");
+				msg.append("Status : Type is Enabled.==FAIL" + "/n");
+
 			} else {
 				logger.info("Status : Type is Disabled.==PASS");
 
 			}
 		} else {
-			logger.info("Status : Type is not displayed.");
+			logger.info("Status : Type is not displayed.==FAIL");
+			msg.append("Status : Type is not displayed.==FAIL" + "/n");
+
 		}
 
 		// 26. BillingPOC
@@ -504,12 +628,16 @@ public class Courier extends BaseInit {
 			logger.info("Status : BillingPOC is displayed.");
 			if (BillingPOC.getAttribute("readonly").equalsIgnoreCase("false")) {
 				logger.info("Status : BillingPOC is Enabled.==FAIL");
+				msg.append("Status : BillingPOC is Enabled.==FAIL" + "/n");
+
 			} else {
 				logger.info("Status : BillingPOC is Disabled.==PASS");
 
 			}
 		} else {
-			logger.info("Status : BillingPOC is not displayed.");
+			logger.info("Status : BillingPOC is not displayed.==FAIL");
+			msg.append("Status : BillingPOC is not displayed.==FAIL" + "/n");
+
 		}
 
 		// 27. OperationsPOC
@@ -519,12 +647,16 @@ public class Courier extends BaseInit {
 			logger.info("Status : OperationsPOC is displayed.");
 			if (OperationsPOC.getAttribute("readonly").equalsIgnoreCase("false")) {
 				logger.info("Status : OperationsPOC is Enabled.==FAIL");
+				msg.append("Status : OperationsPOC is Enabled.==FAIL" + "/n");
+
 			} else {
 				logger.info("Status : OperationsPOC is Disabled.==PASS");
 
 			}
 		} else {
-			logger.info("Status : OperationsPOC is not displayed.");
+			logger.info("Status : OperationsPOC is not displayed.==FAIL");
+			msg.append("Status : OperationsPOC is not displayed.==FAIL" + "/n");
+
 		}
 
 		// 28. ManagementPOC
@@ -534,12 +666,16 @@ public class Courier extends BaseInit {
 			logger.info("Status : MangPOC is displayed.");
 			if (MangPOC.getAttribute("readonly").equalsIgnoreCase("false")) {
 				logger.info("Status : MangPOC is Enabled.==FAIL");
+				msg.append("Status : MangPOC is Enabled.==FAIL" + "/n");
+
 			} else {
 				logger.info("Status : MangPOC is Disabled.==PASS");
 
 			}
 		} else {
-			logger.info("Status : MangPOC is not displayed.");
+			logger.info("Status : MangPOC is not displayed.==FAIL");
+			msg.append("Status : MangPOC is not displayed.==FAIL" + "/n");
+
 		}
 
 		// 29. Compliance POC
@@ -549,12 +685,16 @@ public class Courier extends BaseInit {
 			logger.info("Status : CompPOC is displayed.");
 			if (CompPOC.getAttribute("readonly").equalsIgnoreCase("false")) {
 				logger.info("Status : CompPOC is Enabled.==FAIL");
+				msg.append("Status : CompPOC is Enabled.==FAIL" + "/n");
+
 			} else {
 				logger.info("Status : CompPOC is Disabled.==PASS");
 
 			}
 		} else {
-			logger.info("Status : CompPOC is not displayed.");
+			logger.info("Status : CompPOC is not displayed.==FAIL");
+			msg.append("Status : CompPOC is not displayed.==FAIL" + "/n");
+
 		}
 
 		// 30. Driver Required
@@ -563,11 +703,15 @@ public class Courier extends BaseInit {
 			logger.info("Status : DrvReq is displayed.");
 			if (DrvReq.isEnabled()) {
 				logger.info("Status : RecSerAgr is Enabled.==FAIL");
+				msg.append("Status : RecSerAgr is Enabled.==FAIL" + "/n");
+
 			} else {
 				logger.info("Status : RecSerAgr is Disabled.==PASS");
 			}
 		} else {
-			logger.info("Status : DrvReq is not displayed.");
+			logger.info("Status : DrvReq is not displayed.==FAIL");
+			msg.append("Status : DrvReq is not displayed.==FAIL" + "/n");
+
 		}
 
 		// Miscellaneous Information
@@ -578,12 +722,13 @@ public class Courier extends BaseInit {
 			logger.info("Status : AlertType is displayed.");
 			if (AlertType.getAttribute("readonly").equalsIgnoreCase("false")) {
 				logger.info("Status : AlertType is Enabled.==FAIL");
+				
 			} else {
 				logger.info("Status : AlertType is Disabled.==PASS");
 
 			}
 		} else {
-			logger.info("Status : AlertType is not displayed.");
+			logger.info("Status : AlertType is not displayed.==FAIL");
 		}
 		// 2. ReceivedOn1
 		WebElement ReceivedOn1 = Driver.findElement(By.id("txtRcvdSrvAgrDttm"));
@@ -597,7 +742,7 @@ public class Courier extends BaseInit {
 
 			}
 		} else {
-			logger.info("Status : ReceivedOn1 is not displayed.");
+			logger.info("Status : ReceivedOn1 is not displayed.==FAIL");
 		}
 
 		// 3. ReceivedOn2
@@ -612,7 +757,7 @@ public class Courier extends BaseInit {
 
 			}
 		} else {
-			logger.info("Status : ReceivedOn2 is not displayed.");
+			logger.info("Status : ReceivedOn2 is not displayed.==FAIL");
 		}
 		// 4. GeneralLiability
 		WebElement GenLiab = Driver.findElement(By.id("txtInsrGenExpDttm"));
@@ -626,7 +771,7 @@ public class Courier extends BaseInit {
 
 			}
 		} else {
-			logger.info("Status : GenLiab is not displayed.");
+			logger.info("Status : GenLiab is not displayed.==FAIL");
 		}
 
 		// 5. Auto
@@ -640,7 +785,7 @@ public class Courier extends BaseInit {
 
 			}
 		} else {
-			logger.info("Status : Auto is not displayed.");
+			logger.info("Status : Auto is not displayed.==FAIL");
 		}
 
 		// 6. WareHouse
@@ -655,7 +800,7 @@ public class Courier extends BaseInit {
 
 			}
 		} else {
-			logger.info("Status : WareHouse is not displayed.");
+			logger.info("Status : WareHouse is not displayed.==FAIL");
 		}
 
 		// 7. Cargo
@@ -670,7 +815,7 @@ public class Courier extends BaseInit {
 
 			}
 		} else {
-			logger.info("Status : Cargo is not displayed.");
+			logger.info("Status : Cargo is not displayed.==FAIL");
 		}
 
 		// 8. Worker Compensation
@@ -685,7 +830,7 @@ public class Courier extends BaseInit {
 
 			}
 		} else {
-			logger.info("Status : WorkerCo is not displayed.");
+			logger.info("Status : WorkerCo is not displayed.==FAIL");
 		}
 
 		// 9. ReceivedOn3
@@ -700,7 +845,7 @@ public class Courier extends BaseInit {
 
 			}
 		} else {
-			logger.info("Status : ReceivedOn3 is not displayed.");
+			logger.info("Status : ReceivedOn3 is not displayed.==FAIL");
 		}
 		// 10. ReceivedOn4
 		WebElement ReceivedOn4 = Driver.findElement(By.id("txtRcvdAcknDttm"));
@@ -713,7 +858,7 @@ public class Courier extends BaseInit {
 
 			}
 		} else {
-			logger.info("Status : ReceivedOn4 is not displayed.");
+			logger.info("Status : ReceivedOn4 is not displayed.==FAIL");
 		}
 
 		// 11. After Hr Start
@@ -728,7 +873,7 @@ public class Courier extends BaseInit {
 
 			}
 		} else {
-			logger.info("Status : AftHrStrt is not displayed.");
+			logger.info("Status : AftHrStrt is not displayed.==FAIL");
 		}
 		// 12. After Hr End
 		WebElement AftHrEnd = Driver.findElement(By.id("txtAfHrEndTime"));
@@ -741,7 +886,7 @@ public class Courier extends BaseInit {
 
 			}
 		} else {
-			logger.info("Status : AftHrEnd is not displayed.");
+			logger.info("Status : AftHrEnd is not displayed.==FAIL");
 		}
 
 		// 13. Received Service Agreement
@@ -755,7 +900,7 @@ public class Courier extends BaseInit {
 
 			}
 		} else {
-			logger.info("Status : RecSerAgr is not displayed.");
+			logger.info("Status : RecSerAgr is not displayed.==FAIL");
 		}
 
 		// 14. Received W9
@@ -770,7 +915,7 @@ public class Courier extends BaseInit {
 
 			}
 		} else {
-			logger.info("Status : Rec9 is not displayed.");
+			logger.info("Status : Rec9 is not displayed.==FAIL");
 		}
 
 		// 15. Received Proof of Insurance
@@ -785,7 +930,7 @@ public class Courier extends BaseInit {
 
 			}
 		} else {
-			logger.info("Status : RecPrfIns is not displayed.");
+			logger.info("Status : RecPrfIns is not displayed.==FAIL");
 		}
 
 		// 16. Received TSA Roster
@@ -799,7 +944,7 @@ public class Courier extends BaseInit {
 
 			}
 		} else {
-			logger.info("Status : RecTSARos is not displayed.");
+			logger.info("Status : RecTSARos is not displayed.==FAIL");
 		}
 		// 17. Received TSA Ackn
 		WebElement RecTSAAck = Driver.findElement(By.id("chkRcvdAckn"));
@@ -812,7 +957,7 @@ public class Courier extends BaseInit {
 
 			}
 		} else {
-			logger.info("Status : RecTSAAck is not displayed.");
+			logger.info("Status : RecTSAAck is not displayed.==FAIL");
 		}
 
 		// Other Information
@@ -828,7 +973,7 @@ public class Courier extends BaseInit {
 
 			}
 		} else {
-			logger.info("Status : Note is not displayed.");
+			logger.info("Status : Note is not displayed.==FAIL");
 		}
 		// 2. Company Type
 		WebElement CompType = Driver.findElement(By.id("txtCompanyTypename"));
@@ -842,7 +987,7 @@ public class Courier extends BaseInit {
 
 			}
 		} else {
-			logger.info("Status : CompType is not displayed.");
+			logger.info("Status : CompType is not displayed.==FAIL");
 		}
 
 		// 3. Ship Lable Key
@@ -857,7 +1002,7 @@ public class Courier extends BaseInit {
 
 			}
 		} else {
-			logger.info("Status : ShipLableKey is not displayed.");
+			logger.info("Status : ShipLableKey is not displayed.==FAIL");
 		}
 		// 4. FDX TSA
 		WebElement FDXTSA = Driver.findElement(By.id("chkIsFdxTsa"));
@@ -871,7 +1016,7 @@ public class Courier extends BaseInit {
 
 			}
 		} else {
-			logger.info("Status : FDXTSA is not displayed.");
+			logger.info("Status : FDXTSA is not displayed.==FAIL");
 		}
 
 		// 5. TSA Certified
@@ -885,7 +1030,7 @@ public class Courier extends BaseInit {
 
 			}
 		} else {
-			logger.info("Status : TSACert is not displayed.");
+			logger.info("Status : TSACert is not displayed.==FAIL");
 		}
 		// 6. HAZ Certified
 		WebElement HAZCert = Driver.findElement(By.id("chkIsHAZCertified"));
@@ -899,7 +1044,7 @@ public class Courier extends BaseInit {
 
 			}
 		} else {
-			logger.info("Status : HAZCert is not displayed.");
+			logger.info("Status : HAZCert is not displayed.==FAIL");
 		}
 		// 7. CCFS Trans Certified
 		WebElement CCFS = Driver.findElement(By.id("chkCCSFTransCertified"));
@@ -913,7 +1058,7 @@ public class Courier extends BaseInit {
 
 			}
 		} else {
-			logger.info("Status : CCFS is not displayed.");
+			logger.info("Status : CCFS is not displayed.==FAIL");
 		}
 
 		// 8. Elevated Risk Certified
@@ -927,7 +1072,7 @@ public class Courier extends BaseInit {
 
 			}
 		} else {
-			logger.info("Status : Elev is not displayed.");
+			logger.info("Status : Elev is not displayed.==FAIL");
 		}
 		// 9. 3P Courier
 		WebElement PC = Driver.findElement(By.id("chkIsCourier3p"));
@@ -940,7 +1085,7 @@ public class Courier extends BaseInit {
 
 			}
 		} else {
-			logger.info("Status : PC is not displayed.");
+			logger.info("Status : PC is not displayed.==FAIL");
 		}
 
 		getScreenshot(Driver, "Courier");

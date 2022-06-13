@@ -39,11 +39,16 @@ public class OrderProcessing extends BaseInit {
 		logger.info("total No of Columns=" + colNum);
 
 		// Go To TaskLog
-		wait.until(ExpectedConditions.elementToBeClickable(By.partialLinkText("Operations")));
-		Driver.findElement(By.partialLinkText("Operations")).click();
-		logger.info("Click on Operations");
+		wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//a[@id=\"idOperations\"]")));
+		WebElement OperationMenu = Driver.findElement(By.xpath("//a[@id=\"idOperations\"]"));
+		act.moveToElement(OperationMenu).build().perform();
+		js.executeScript("arguments[0].click();", OperationMenu);
 
-		Driver.findElement(By.linkText("Task Log")).click();
+		logger.info("Click on Operations");
+		wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//a[@id=\"idTask\"]")));
+		WebElement TaskLogMenu = Driver.findElement(By.xpath("//a[@id=\"idTask\"]"));
+		act.moveToElement(TaskLogMenu).build().perform();
+		js.executeScript("arguments[0].click();", TaskLogMenu);
 		wait.until(ExpectedConditions.invisibilityOfElementLocated(By.xpath("//*[@class=\"ajax-loadernew\"]")));
 		wait.until(ExpectedConditions.visibilityOfAllElementsLocatedBy(By.className("panel-body")));
 		logger.info("Click on Task Log");

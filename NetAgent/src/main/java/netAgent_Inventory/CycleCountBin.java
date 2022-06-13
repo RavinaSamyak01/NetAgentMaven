@@ -48,11 +48,17 @@ public class CycleCountBin extends BaseInit {
 		logger.info("Clicked on Start button");
 		wait.until(ExpectedConditions.invisibilityOfElementLocated(By.xpath("//*[@class=\"ajax-loadernew\"]")));
 
-		String SuccMsg = Driver.findElement(By.id("lblSuccessMsg")).getText();
-		System.out.println(SuccMsg);
-		logger.info("Success Message is displayed==" + SuccMsg);
+		try {
+			String SuccMsg = Driver.findElement(By.id("lblSuccessMsg")).getText();
+			System.out.println(SuccMsg);
+			logger.info("Success Message is displayed==" + SuccMsg);
+			logger.info("Success Message is not displayed==PASS");
 
-		getScreenshot(Driver, "CycleCountBIN_Start");
+			getScreenshot(Driver, "CycleCountBIN_Start");
+		} catch (Exception Success) {
+			logger.info("Success Message is not displayed==FAIL");
+
+		}
 
 		Driver.findElement(By.id("btnreset")).click();
 		logger.info("Clicked on Reset button");

@@ -520,6 +520,8 @@ public class CCAttempt extends BaseInit {
 
 							}
 						}
+						logger.info("===CCAttempt Scenario 1 Test End===");
+						msg.append("===CCAttempt Scenario 1 Test End===" + "\n\n");
 
 					} else if (Scenario == 1) {
 						// ===========================CCAttempt 1 Scenario 2======================
@@ -1045,6 +1047,9 @@ public class CCAttempt extends BaseInit {
 								}
 							}
 						}
+						logger.info("===CCAttempt Scenario 2 Test End===");
+						msg.append("===CCAttempt Scenario 2 Test End===" + "\n\n");
+
 					} else if (Scenario == 2) {
 
 						// ===========================CCAttempt 1 Scenario 3=======================
@@ -1411,6 +1416,8 @@ public class CCAttempt extends BaseInit {
 								}
 							}
 						}
+						logger.info("===CCAttempt Scenario 3 Test End===");
+						msg.append("===CCAttempt Scenario 3 Test End===" + "\n\n");
 
 					} else if (Scenario == 3) {
 						// =========================CCAttempt 1 Scenario 4=========================
@@ -1685,6 +1692,8 @@ public class CCAttempt extends BaseInit {
 							logger.info("TaskLog stage is==" + TStage.getText());
 
 						}
+						logger.info("===CCAttempt Scenario 4 Test End===");
+						msg.append("===CCAttempt Scenario 4 Test End===" + "\n\n");
 
 					} else if (Scenario == 4) {
 						// ======================CCAttempt 1 Scenario 5=========================
@@ -1877,6 +1886,9 @@ public class CCAttempt extends BaseInit {
 							logger.info("TaskLog stage is==" + TStage.getText());
 
 						}
+
+						logger.info("===CCAttempt Scenario 5 Test End===");
+						msg.append("===CCAttempt Scenario 5 Test End===" + "\n\n");
 
 					}
 
