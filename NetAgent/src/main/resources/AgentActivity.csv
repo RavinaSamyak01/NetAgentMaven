@@ -1,6 +1,12 @@
 ﻿From_Date,To_Date
-05/31/2022,06/10/2022
+06/04/2022,06/14/2022
 
 CourierId,VoucherNum,Courier_type,pieces,PickupId,VoucherNum2,pAddr1,Paddr21,City_State,Pu_Tm,VoucherNum3,dAddr1,Paddr22,Dcity_Dstate,Del_Tm,Textbox37,Total_Amount
-,,,,,,,,,,,,,,,,           TotalShipment : 0        Total PCS :         Total WT :        
+34769 -  AUTOMATION COURIER,,,,,,,,,,,,,,,,           TotalShipment : 5        Total PCS : 15        Total WT :  112      
+,32436675 / 06/08/2022,PU,PCS : 1     WT : 2.00,PU#   3441911,NOTHING BUNDT CAKES,14101 SEELEY AVE.,,"BLUE ISLAND, IL 60406",PU TM : 6/8/2022 04:16,DALLAS/FT WORTH (DFW),1530 W 18TH ST,,"DALLAS, TX 75261",DEL TM : 6/8/2022 04:17,,           TotalShipment : 5        Total PCS : 15        Total WT :  112      
+,32440247 / 06/10/2022,PU,PCS : 10     WT : 50.00,PU#   3445483,Automation,1525 14th St NW,,"WASHINGTON, DC 20005",PU TM : 6/10/2022 03:47,WASHINGTON NATL (DCA),1 Aviation Cir,,"WASHINGTON, DC 22202",DEL TM : 6/10/2022 07:23,,           TotalShipment : 5        Total PCS : 15        Total WT :  112      
+,32440297 / 06/09/2022,PU,PCS : 1     WT : 20.00,PU#   3445533,AUTOMATION RV (F5505),304 W BAY AREA BLVD.,,"FONDREN, TX 77598",PU TM : 6/10/2022 06:57,AUTO,CHIGACP,,"CHICAGO, IL 60666",DEL TM : 6/10/2022 06:59,,           TotalShipment : 5        Total PCS : 15        Total WT :  112      
+,32440246 / 06/09/2022,PU,PCS : 2     WT : 20.00,PU#   3445482,Automation,612 E Dallas Rd,Ste 200,"GRAPEVINE, TX 76051",PU TM : 6/10/2022 02:40,AutoTest,44 Folly Road,,"Charleston, SC 29407",DEL TM : 6/10/2022 03:41,,           TotalShipment : 5        Total PCS : 15        Total WT :  112      
+,32440249 / 06/09/2022,PU,PCS : 1     WT : 20.00,PU#   3445485,AUTOMATION RV,304 W BAY AREA BLVD.,,"FONDREN, TX 77598",PU TM : 6/10/2022 06:44,AUTOMATION COMPANY,ABHIJIT 1,,"TEXAS CITY, TX 77590",DEL TM : 6/10/2022 07:46,,           TotalShipment : 5        Total PCS : 15        Total WT :  112      
+,,,,,,,,,,,,,,,           Shipment : 5        SubTotal PCS : 15        SubTotal WT :  112      ,           TotalShipment : 5        Total PCS : 15        Total WT :  112      
 
