@@ -272,46 +272,124 @@ public class BaseInit {
 			baseUrl = storage.getProperty("PREProdURL");
 			Driver.get(baseUrl);
 			logger.info("Url opened");
-			wait.until(ExpectedConditions.visibilityOfAllElementsLocatedBy(By.className("login")));
-			wait.until(ExpectedConditions.visibilityOfAllElementsLocatedBy(By.name("loginForm")));
-			getScreenshot(Driver, "LoginPage");
-			String UserName = storage.getProperty("PreProdUserName");
-			String password = storage.getProperty("PreProdPass");
-			// Enter User_name and Password and click on Login
-			isElementPresent("UserName_id").clear();
-			isElementPresent("UserName_id").sendKeys(UserName);
-			isElementPresent("Password_id").clear();
-			isElementPresent("Password_id").sendKeys(password);
+			try {
+				wait.until(ExpectedConditions.visibilityOfAllElementsLocatedBy(By.className("login")));
+				wait.until(ExpectedConditions.visibilityOfAllElementsLocatedBy(By.name("loginForm")));
+				getScreenshot(Driver, "LoginPage");
+				String UserName = storage.getProperty("PreProdUserName");
+				String password = storage.getProperty("PreProdPass");
+				// Enter User_name and Password and click on Login
+				isElementPresent("UserName_id").clear();
+				isElementPresent("UserName_id").sendKeys(UserName);
+				isElementPresent("Password_id").clear();
+				isElementPresent("Password_id").sendKeys(password);
+			} catch (Exception e) {
+				msg.append("URL is not working==FAIL");
+				getScreenshot(Driver, "LoginIssue");
+				Driver.quit();
+				Env = storage.getProperty("Env");
+				String File = ".\\Report\\NA_Screenshot\\LoginIssue.png";
+				String subject = "Selenium Automation Script: " + Env + " NetAgent Portal";
+
+				try {
+//					/kunjan.modi@samyak.com, pgandhi@samyak.com,parth.doshi@samyak.com
+
+					SendEmail.sendMail("ravina.prajapati@samyak.com", subject, msg.toString(), File);
+
+					/*
+					 * SendEmail.
+					 * sendMail("ravina.prajapati@samyak.com, asharma@samyak.com, parth.doshi@samyak.com"
+					 * , subject, msg.toString(), File);
+					 */
+					// SendEmail.sendMail("ravina.prajapati@samyak.com, asharma@samyak.com
+					// ,parth.doshi@samyak.com", subject, msg.toString(), File);
+
+				} catch (Exception ex) {
+					logger.error(ex);
+				}
+			}
+
 		} else if (Env.equalsIgnoreCase("STG")) {
 			baseUrl = storage.getProperty("STGURL");
 			Driver.get(baseUrl);
 			logger.info("Url opened");
-			wait.until(ExpectedConditions.visibilityOfAllElementsLocatedBy(By.className("login")));
-			wait.until(ExpectedConditions.visibilityOfAllElementsLocatedBy(By.name("loginForm")));
-			getScreenshot(Driver, "LoginPage");
-			String UserName = storage.getProperty("STGUserName");
-			String password = storage.getProperty("STGPassword");
-			// Enter User_name and Password and click on Login
-			isElementPresent("UserName_id").clear();
-			isElementPresent("UserName_id").sendKeys(UserName);
-			isElementPresent("Password_id").clear();
-			isElementPresent("Password_id").sendKeys(password);
+			try {
+				wait.until(ExpectedConditions.visibilityOfAllElementsLocatedBy(By.className("login")));
+				wait.until(ExpectedConditions.visibilityOfAllElementsLocatedBy(By.name("loginForm")));
+				getScreenshot(Driver, "LoginPage");
+				String UserName = storage.getProperty("STGUserName");
+				String password = storage.getProperty("STGPassword");
+				// Enter User_name and Password and click on Login
+				isElementPresent("UserName_id").clear();
+				isElementPresent("UserName_id").sendKeys(UserName);
+				isElementPresent("Password_id").clear();
+				isElementPresent("Password_id").sendKeys(password);
+			} catch (Exception e) {
+				msg.append("URL is not working==FAIL");
+				getScreenshot(Driver, "LoginIssue");
+				Driver.quit();
+				Env = storage.getProperty("Env");
+				String File = ".\\Report\\NA_Screenshot\\LoginIssue.png";
+				String subject = "Selenium Automation Script: " + Env + " NetAgent Portal";
+
+				try {
+//					/kunjan.modi@samyak.com, pgandhi@samyak.com,parth.doshi@samyak.com
+
+					SendEmail.sendMail("ravina.prajapati@samyak.com", subject, msg.toString(), File);
+
+					/*
+					 * SendEmail.
+					 * sendMail("ravina.prajapati@samyak.com, asharma@samyak.com, parth.doshi@samyak.com"
+					 * , subject, msg.toString(), File);
+					 */
+					// SendEmail.sendMail("ravina.prajapati@samyak.com, asharma@samyak.com
+					// ,parth.doshi@samyak.com", subject, msg.toString(), File);
+
+				} catch (Exception ex) {
+					logger.error(ex);
+				}
+			}
 
 		} else if (Env.equalsIgnoreCase("DEV")) {
 			baseUrl = storage.getProperty("DEVURL");
 			Driver.get(baseUrl);
 			logger.info("Url opened");
-			wait.until(ExpectedConditions.visibilityOfAllElementsLocatedBy(By.className("login")));
-			wait.until(ExpectedConditions.visibilityOfAllElementsLocatedBy(By.name("loginForm")));
-			getScreenshot(Driver, "LoginPage");
-			String UserName = storage.getProperty("DEVUserName");
-			String password = storage.getProperty("DEVPassword");
-			// Enter User_name and Password and click on Login
-			isElementPresent("UserName_id").clear();
-			isElementPresent("UserName_id").sendKeys(UserName);
-			isElementPresent("Password_id").clear();
-			isElementPresent("Password_id").sendKeys(password);
+			try {
+				wait.until(ExpectedConditions.visibilityOfAllElementsLocatedBy(By.className("login")));
+				wait.until(ExpectedConditions.visibilityOfAllElementsLocatedBy(By.name("loginForm")));
+				getScreenshot(Driver, "LoginPage");
+				String UserName = storage.getProperty("DEVUserName");
+				String password = storage.getProperty("DEVPassword");
+				// Enter User_name and Password and click on Login
+				isElementPresent("UserName_id").clear();
+				isElementPresent("UserName_id").sendKeys(UserName);
+				isElementPresent("Password_id").clear();
+				isElementPresent("Password_id").sendKeys(password);
+			} catch (Exception e) {
+				msg.append("URL is not working==FAIL");
+				getScreenshot(Driver, "LoginIssue");
+				Driver.quit();
+				Env = storage.getProperty("Env");
+				String File = ".\\Report\\NA_Screenshot\\LoginIssue.png";
+				String subject = "Selenium Automation Script: " + Env + " NetAgent Portal";
 
+				try {
+//					/kunjan.modi@samyak.com, pgandhi@samyak.com,parth.doshi@samyak.com
+
+					SendEmail.sendMail("ravina.prajapati@samyak.com", subject, msg.toString(), File);
+
+					/*
+					 * SendEmail.
+					 * sendMail("ravina.prajapati@samyak.com, asharma@samyak.com, parth.doshi@samyak.com"
+					 * , subject, msg.toString(), File);
+					 */
+					// SendEmail.sendMail("ravina.prajapati@samyak.com, asharma@samyak.com
+					// ,parth.doshi@samyak.com", subject, msg.toString(), File);
+
+				} catch (Exception ex) {
+					logger.error(ex);
+				}
+			}
 		}
 		String BaseUrl = baseUrl;
 		msg.append("Process URL : " + BaseUrl + "\n");
