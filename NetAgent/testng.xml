@@ -83,7 +83,8 @@
 			<class name="netAgent_Inventory.ASNLog"></class>
 		</classes>
 	</test>
-	<!-- --><test thread-count="5" name="Agent Activity">
+	<!-- -->
+	<test thread-count="5" name="Agent Activity">
 		<classes>
 			<class name="netAgent_Reports.AgentActivity"></class>
 		</classes>
@@ -161,10 +162,10 @@
 		</classes>
 	</test>
 
-	<test thread-count="5" name="OrderProcessing	">
+	<!-- <test thread-count="5" name="OrderProcessing	">
 		<classes>
 			<class name="netAgent_OperationsTab.OrderProcessing"></class>
 		</classes>
-	</test>
+	</test>-->
 	<!-- NASmoke -->
 </suite> <!-- NASuite -->
