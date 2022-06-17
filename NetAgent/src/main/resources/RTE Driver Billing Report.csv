@@ -1,6 +1,4 @@
 ﻿Textbox1,EndDate,Textbox34
-950654,06/05/2022,06/15/2022
 
 CustCode,CourierId,CourierName,DriverName,OrderDate,OrderDay,SVC,RouteName,RWTrackingNo,RouteOperationID,Shift_Start,Shift_End,TotalTime_mins,Distance_miles
-,,,,,,,,,,,,,
 

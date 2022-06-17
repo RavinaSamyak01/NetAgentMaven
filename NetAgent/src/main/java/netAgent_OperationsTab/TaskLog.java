@@ -288,213 +288,11 @@ public class TaskLog extends BaseInit {
 
 		}
 
-		// --Search by ASN Type--PutAway
-		// --Deselect OrderType
-		Select Ordertype = new Select(isElementPresent("TLADOrderType_id"));
-		Ordertype.selectByVisibleText("(select)");
-		logger.info("Deselected OrderType");
-		System.out.println("Deselected OrderType");
-
-		// ---Remove PickUp
-		isElementPresent("TLPickUp_id").clear();
-		logger.info("Cleared Pickup");
-		System.out.println("Cleared Pickup");
-
-		// --Remove Service
-		isElementPresent("TLService_id").clear();
-		System.out.println("Cleared Service");
-		logger.info("Cleared Service");
-
-		// --Enter Customer
-		isElementPresent("TLCustomer_id").clear();
-		isElementPresent("TLCustomer_id").sendKeys("950682");
-		System.out.println("Enter Customer");
-		logger.info("Enter Customer");
-
-		//// --Remove PickUp
-		isElementPresent("TLPickUp_id").clear();
-		System.out.println("Cleared PickUp");
-		logger.info("Cleared Pickup");
-
-		// --ASNType
-		isElementPresent("TLASNType_id").click();
-		logger.info("Click on ASNType dropdown");
-		Thread.sleep(2000);
-		// -Select All
-		isElementPresent("TLASNReplenish_xpath").click();
-		logger.info("Selected Replenish from ASNType dropdown");
-		isElementPresent("TLASNType_id").click();
-		System.out.println("Close the ASNType dropdown");
-		logger.info("Close the ASNType dropdown");
-
-		// --Click on Search
-		isElementPresent("TLADSearchBTN_id").click();
-		logger.info("Click on Search button of Advance Search");
+		// --Go to Advance Tab
+		isElementPresent("TLAdSearchTab_id").click();
+		logger.info("Click on Advance Search");
 		wait.until(ExpectedConditions.invisibilityOfElementLocated(By.xpath("//*[@class=\"ajax-loadernew\"]")));
-		try {
-			if (NoData.isDisplayed()) {
-				System.out.println("Data is not present related search parameter");
-				logger.info("Data is not present related search parameter");
-			}
-
-		} catch (Exception Nodata) {
-			System.out.println("Data is present related search parameter");
-			logger.info("Data is present related search parameter");
-			String Orderstage = isElementPresent("TLStage_xpath").getText();
-			System.out.println("Current stage of the order is=" + Orderstage);
-			logger.info("Current stage of the order is=" + Orderstage);
-			getScreenshot(Driver, "ReplenishMent_PutAway");
-
-			// --Click on Receive to PutAway
-			isElementPresent("TLRecToPutAway_linkText").click();
-			System.out.println("Clicked on RECEIVE TO PUTAWAY");
-			logger.info("Clicked on RECEIVE TO PUTAWAY");
-			// --Enter Accepted Quantity
-			// --table
-			WebElement parttable = isElementPresent("TLPartTable_xpath");
-			List<WebElement> Partrow = parttable.findElements(By.tagName("tr"));
-			System.out.println("total No of rows in part table are==" + Partrow.size());
-			logger.info("total No of rows in part table are==" + Partrow.size());
-
-			for (int part = 0; part < Partrow.size(); part++) {
-				// --Find SerialNo column
-				try {
-					WebElement SerialNo = Partrow.get(part).findElement(By.id("txtSerialNo"));
-					act.moveToElement(SerialNo).build().perform();
-					logger.info("Moved to SerialNo");
-					wait.until(ExpectedConditions.elementToBeClickable(SerialNo));
-					SerialNo.clear();
-					logger.info("Cleared SerialNo");
-					SerialNo.sendKeys("SerialNo" + part);
-					logger.info("Entered SerialNo" + part);
-					System.out.println("Enetered serial Number in " + part + " part");
-					logger.info("Enetered serial Number in " + part + " part");
-
-					// --Enter Accepted Quantity
-					WebElement AccQty = Partrow.get(part).findElement(By.id("txtReceivedQty"));
-					act.moveToElement(AccQty).build().perform();
-					wait.until(ExpectedConditions.elementToBeClickable(AccQty));
-					AccQty.clear();
-					logger.info("Cleared Accepted Qty");
-					AccQty.sendKeys("1");
-					logger.info("Entered Accepted Qty");
-					AccQty.sendKeys(Keys.TAB);
-					System.out.println("Enetered Accepted Quantity in " + part + " part");
-					logger.info("Enetered Accepted Quantity in " + part + " part");
-					// --Click on Save
-					wait.until(ExpectedConditions.elementToBeClickable(By.id("idsaveicon")));
-					WebElement Save = isElementPresent("TLPTSave_id");
-					act.moveToElement(Save).click().perform();
-					logger.info("Click on Save");
-					System.out.println("Clicked on the Save");
-					wait.until(ExpectedConditions
-							.invisibilityOfElementLocated(By.xpath("//*[@class=\"ajax-loadernew\"]")));
-				} catch (Exception staleelement) {
-					try {
-						WebElement parttable1 = isElementPresent("TLPartTable_xpath");
-						List<WebElement> Partrow1 = parttable1.findElements(By.tagName("tr"));
-						System.out.println("total No of rows in part table are==" + Partrow.size());
-						logger.info("total No of rows in part table are==" + Partrow.size());
-						for (int partR = part; partR < Partrow1.size();) {
-							WebElement SerialNo = Partrow1.get(partR).findElement(By.id("txtSerialNo"));
-							logger.info("Moved to SerialNo");
-							wait.until(ExpectedConditions.elementToBeClickable(SerialNo));
-							SerialNo.clear();
-							logger.info("Cleared SerialNo");
-							SerialNo.sendKeys("SerialNo" + part);
-							logger.info("Entered SerialNo" + part);
-							System.out.println("Enetered serial Number in " + part + " part");
-							logger.info("Enetered serial Number in " + part + " part");
-
-							// --Enter Accepted Quantity
-							WebElement AccQty = Partrow1.get(partR).findElement(By.id("txtReceivedQty"));
-							act.moveToElement(AccQty).build().perform();
-							wait.until(ExpectedConditions.elementToBeClickable(AccQty));
-							AccQty.clear();
-							logger.info("Cleared Accepted Qty");
-							AccQty.sendKeys("1");
-							logger.info("Entered Accepted Qty");
-							AccQty.sendKeys(Keys.TAB);
-							System.out.println("Enetered Accepted Quantity in " + part + " part");
-							logger.info("Enetered Accepted Quantity in " + part + " part");
-							// --Click on Save
-							wait.until(ExpectedConditions.elementToBeClickable(By.id("idsaveicon")));
-							WebElement Save = isElementPresent("TLPTSave_id");
-							act.moveToElement(Save).click().perform();
-							logger.info("Click on Save");
-							System.out.println("Clicked on the Save");
-							wait.until(ExpectedConditions
-									.invisibilityOfElementLocated(By.xpath("//*[@class=\"ajax-loadernew\"]")));
-							break;
-						}
-					} catch (Exception StaleElement) {
-						WebElement parttable1 = isElementPresent("TLPartTable_xpath");
-						List<WebElement> Partrow1 = parttable1.findElements(By.tagName("tr"));
-						System.out.println("total No of rows in part table are==" + Partrow.size());
-						logger.info("total No of rows in part table are==" + Partrow.size());
-						for (int partRw = part; partRw < Partrow1.size();) {
-							WebElement SerialNo = Partrow1.get(partRw).findElement(By.id("txtSerialNo"));
-							logger.info("Moved to SerialNo");
-							wait.until(ExpectedConditions.elementToBeClickable(SerialNo));
-							SerialNo.clear();
-							logger.info("Cleared SerialNo");
-							SerialNo.sendKeys("Entered SerialNo" + part);
-							logger.info("Entered SerialNo" + part);
-							System.out.println("Enetered serial Number in " + part + " part");
-							logger.info("Enetered serial Number in " + part + " part");
-
-							// --Enter Accepted Quantity
-							WebElement AccQty = Partrow1.get(partRw).findElement(By.id("txtReceivedQty"));
-							act.moveToElement(AccQty).build().perform();
-							wait.until(ExpectedConditions.elementToBeClickable(AccQty));
-							AccQty.clear();
-							logger.info("Cleared Accepted Qty");
-							AccQty.sendKeys("1");
-							logger.info("Entered Accepted Qty");
-							AccQty.sendKeys(Keys.TAB);
-							System.out.println("Enetered Accepted Quantity in " + part + " part");
-							logger.info("Enetered Accepted Quantity in " + part + " part");
-							// --Click on Save
-							wait.until(ExpectedConditions.elementToBeClickable(By.id("idsaveicon")));
-							WebElement Save = isElementPresent("TLPTSave_id");
-							act.moveToElement(Save).click().perform();
-							logger.info("Click on Save");
-							System.out.println("Clicked on the Save");
-							wait.until(ExpectedConditions
-									.invisibilityOfElementLocated(By.xpath("//*[@class=\"ajax-loadernew\"]")));
-							break;
-						}
-					}
-				}
-			}
-
-			// --Click on Update
-			wait.until(ExpectedConditions.elementToBeClickable(By.id("idupdateicon")));
-			WebElement update = isElementPresent("TLPTUpdate_id");
-			act.moveToElement(update).click().perform();
-			logger.info("Click on Update");
-			System.out.println("Clicked on the update");
-			wait.until(ExpectedConditions.invisibilityOfElementLocated(By.xpath("//*[@class=\"ajax-loadernew\"]")));
-
-			wait.until(ExpectedConditions.visibilityOfElementLocated(By.id("successid")));
-			String SuccMsg = isElementPresent("TLSuccess_id").getText();
-			System.out.println("Success Message==" + SuccMsg);
-			logger.info("Success Message==" + SuccMsg);
-
-			// --Close button
-			WebElement Close = isElementPresent("TLIconClose_id");
-			act.moveToElement(Close).click().perform();
-			System.out.println("Clicked on the Close");
-			logger.info("Click on Close");
-			wait.until(ExpectedConditions.invisibilityOfElementLocated(By.xpath("//*[@class=\"ajax-loadernew\"]")));
-
-			// --Go to Advance Tab
-			isElementPresent("TLAdSearchTab_id").click();
-			logger.info("Click on Advance Search");
-			wait.until(ExpectedConditions.invisibilityOfElementLocated(By.xpath("//*[@class=\"ajax-loadernew\"]")));
-			wait.until(ExpectedConditions.visibilityOfAllElementsLocatedBy(By.id("AdvancesSearch")));
-
-		}
+		wait.until(ExpectedConditions.visibilityOfAllElementsLocatedBy(By.id("AdvancesSearch")));
 
 		// Deselect ASN Type
 		isElementPresent("TLASNType_id").click();
@@ -566,10 +364,19 @@ public class TaskLog extends BaseInit {
 		// --Quarantine Window
 		isElementPresent("TLQuarn_linkText").click();
 		logger.info("Click on Quarantine link");
+		try {
 		wait.until(ExpectedConditions.invisibilityOfElementLocated(By.xpath("//*[@class=\"ajax-loadernew\"]")));
 		Thread.sleep(2000);
 		wait.until(ExpectedConditions.visibilityOfAllElementsLocatedBy(By.id("idAddQuarantinePopup")));
 		getScreenshot(Driver, "QuarantineWindow");
+		
+		}catch(Exception e) {
+			wait.until(ExpectedConditions.invisibilityOfElementLocated(By.xpath("//*[@class=\"ajax-loadernew\"]")));
+			Thread.sleep(2000);
+			wait.until(ExpectedConditions.visibilityOfAllElementsLocatedBy(By.id("idAddQuarantinePopup")));
+			getScreenshot(Driver, "QuarantineWindow");
+			
+		}
 
 		// --FSL Default selection
 		// boolean FSL = Driver.findElement(By.id("cmbFSL")).isSelected(); //
@@ -642,7 +449,8 @@ public class TaskLog extends BaseInit {
 		logger.info("Entered Notes");
 		// --Upload files
 		// --click on Upload files
-		isElementPresent("UploadBTN_id").click();
+		WebElement upFile = isElementPresent("UploadBTN_id");
+		js.executeScript("arguments[0].click();", upFile);
 		logger.info("Click on Upload button");
 		wait.until(ExpectedConditions.invisibilityOfElementLocated(By.xpath("//*[@class=\"ajax-loadernew\"]")));
 		wait.until(ExpectedConditions.visibilityOfAllElementsLocatedBy(By.xpath("//*[@ng-form=\"DocDetailsForm\"]")));
@@ -737,7 +545,7 @@ public class TaskLog extends BaseInit {
 		// --Search by PU DRV Conf LOC Job
 
 		// --Deselect OrderType
-		Ordertype = new Select(isElementPresent("TLADOrderType_id"));
+		Select Ordertype = new Select(isElementPresent("TLADOrderType_id"));
 		Ordertype.selectByVisibleText("(select)");
 		System.out.println("Deselected OrderType");
 		logger.info("Deselected OrderType");

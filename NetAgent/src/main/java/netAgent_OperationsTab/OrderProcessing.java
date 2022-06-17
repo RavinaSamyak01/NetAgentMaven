@@ -101,16 +101,16 @@ public class OrderProcessing extends BaseInit {
 					getScreenshot(Driver, "OrderEditor_" + PUID);
 				}
 				// --Memo
-				// memo(PUID);
+				memo(PUID);
 
 				// -Notification
-				// notification(PUID);
+				notification(PUID);
 
 				// Upload
-				// upload(PUID);
+				upload(PUID);
 
 				// Map
-				// map(PUID);
+				map(PUID);
 
 				// --Get current stage of the order
 				String Orderstage = Driver.findElement(By.xpath("//strong/span[@class=\"ng-binding\"]")).getText();

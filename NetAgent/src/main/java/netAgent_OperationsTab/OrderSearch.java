@@ -4,7 +4,10 @@ import java.text.DateFormat;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.List;
+import java.util.TimeZone;
+
 import org.openqa.selenium.By;
+import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.ExpectedConditions;
@@ -102,11 +105,18 @@ public class OrderSearch extends BaseInit {
 			logger.info("Cleared PickUp");
 
 			// --OrderRangeFrom
-			Driver.findElement(By.id("orderRangeFrom")).sendKeys("04/03/2022");
+			Driver.findElement(By.id("orderRangeFrom")).sendKeys("01/01/2022");
 			logger.info("Entered OrderRangeFrom");
 
 			// --OrderRangeFrom
-			Driver.findElement(By.id("orderRangeTo")).sendKeys("04/04/2022");
+			WebElement RangeTo = Driver.findElement(By.id("orderRangeTo"));
+			act.moveToElement(RangeTo).build().perform();
+			RangeTo.clear();
+			Date date = new Date();
+			DateFormat dateFormat = new SimpleDateFormat("MM/dd/yyyy");
+			logger.info(dateFormat.format(date));
+			RangeTo.sendKeys(dateFormat.format(date));
+			RangeTo.sendKeys(Keys.TAB);
 			logger.info("Entered OrderRangeTo");
 
 			Driver.findElement(By.id("btnSearch")).click();

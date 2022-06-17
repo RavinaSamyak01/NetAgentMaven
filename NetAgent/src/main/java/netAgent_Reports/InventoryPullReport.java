@@ -58,7 +58,7 @@ public class InventoryPullReport extends BaseInit {
 		JavascriptExecutor js = (JavascriptExecutor) Driver;
 		js.executeScript("window.scrollBy(0,-250)");
 		Thread.sleep(2000);
-		
+
 		// select FSL
 		// Driver.findElement(By.xpath("/html/body/div[2]/section/div[2]/div/div/div[2]/form/div[2]/div[1]/div[1]/div/div/button")).click();
 		wait.until(ExpectedConditions.visibilityOfElementLocated(By.id("btn_ddlfslclass=")));
@@ -68,7 +68,9 @@ public class InventoryPullReport extends BaseInit {
 		Thread.sleep(2000);
 		Driver.findElement(By.xpath("//*[@id=\"ddlfsl\"]//input[@id=\"idcheckboxInput\"]")).click();
 		wait.until(ExpectedConditions.elementToBeClickable(By.id("btn_ddlfslclass=")));
-		Driver.findElement(By.id("btn_ddlfslclass=")).click();
+		WebElement FSLCls = Driver.findElement(By.id("btn_ddlfslclass="));
+		act.moveToElement(FSLCls).build().perform();
+		act.moveToElement(FSLCls).click().perform();
 		logger.info("Selected FSL");
 
 		// select client

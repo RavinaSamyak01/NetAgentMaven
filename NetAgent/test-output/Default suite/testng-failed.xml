@@ -3,15 +3,15 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="netAgent_OperationsTab.OrderProcessing">
+      <class name="netAgent_OperationsTab.CCAttempt">
         <methods>
+          <include name="ccAttempt"/>
           <include name="getResult"/>
           <include name="beforeMethod"/>
-          <include name="orderProcess"/>
           <include name="SendEmail"/>
           <include name="testMethodName"/>
         </methods>
-      </class> <!-- netAgent_OperationsTab.OrderProcessing -->
+      </class> <!-- netAgent_OperationsTab.CCAttempt -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
