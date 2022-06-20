@@ -101,16 +101,16 @@ public class OrderProcessing extends BaseInit {
 					getScreenshot(Driver, "OrderEditor_" + PUID);
 				}
 				// --Memo
-				memo(PUID);
+				//memo(PUID);
 
 				// -Notification
-				notification(PUID);
+				//notification(PUID);
 
 				// Upload
-				upload(PUID);
+				//upload(PUID);
 
 				// Map
-				map(PUID);
+				//map(PUID);
 
 				// --Get current stage of the order
 				String Orderstage = Driver.findElement(By.xpath("//strong/span[@class=\"ng-binding\"]")).getText();
@@ -165,8 +165,7 @@ public class OrderProcessing extends BaseInit {
 						logger.info("Job is moved to PICKUP stage successfully");
 
 						// --Pickup
-						Orderstage = Driver.findElement(By.xpath("//strong/span[contains(@ng-bind,'CurrentStatus')]"))
-								.getText();
+						Orderstage = Driver.findElement(By.xpath("//strong/span[@class=\"ng-binding\"]")).getText();
 						logger.info("Current stage of the order is=" + Orderstage);
 
 						// js.executeScript("document.body.style.zoom = '80%';");
@@ -487,8 +486,7 @@ public class OrderProcessing extends BaseInit {
 					logger.info("Job is moved to PICKUP stage successfully");
 
 					// --Pickup
-					Orderstage = Driver.findElement(By.xpath("//strong/span[contains(@ng-bind,'CurrentStatus')]"))
-							.getText();
+					Orderstage = Driver.findElement(By.xpath("//strong/span[@class=\"ng-binding\"]")).getText();
 					logger.info("Current stage of the order is=" + Orderstage);
 
 					// js.executeScript("document.body.style.zoom = '80%';");

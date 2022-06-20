@@ -52,7 +52,6 @@ import io.github.bonigarcia.wdm.WebDriverManager;
 
 public class BaseInit {
 
-	public static ResourceBundle rb = ResourceBundle.getBundle("config");
 	public static StringBuilder msg = new StringBuilder();
 	public static WebDriver Driver;
 	public static Properties storage = new Properties();
@@ -106,7 +105,7 @@ public class BaseInit {
 			capabilities.setCapability(ChromeOptions.CAPABILITY, options);
 			// options.addArguments("window-size=1032x776");//
 			// options.addArguments("window-size=1936,1056");
-			//options.addArguments("window-size=1036x776");
+			// options.addArguments("window-size=1036x776");
 
 			// 1032X776
 			capabilities.setPlatform(Platform.ANY);

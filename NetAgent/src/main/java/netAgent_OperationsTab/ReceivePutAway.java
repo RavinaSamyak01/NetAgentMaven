@@ -20,7 +20,7 @@ public class ReceivePutAway extends BaseInit {
 	@Test
 	public void receivePutAway() throws IOException, InterruptedException {
 		WebDriverWait wait = new WebDriverWait(Driver, 50);
-		//JavascriptExecutor js = (JavascriptExecutor) Driver;
+		// JavascriptExecutor js = (JavascriptExecutor) Driver;
 		Actions act = new Actions(Driver);
 
 		logger.info("=======Receive To PutAway Test Start=======");
@@ -37,6 +37,12 @@ public class ReceivePutAway extends BaseInit {
 		wait.until(ExpectedConditions.visibilityOfAllElementsLocatedBy(By.className("panel-body")));
 
 		getScreenshot(Driver, "TaskLog_Operations");
+
+		// --Combined Tab
+		wait.until(ExpectedConditions.elementToBeClickable(By.id("combined")));
+		isElementPresent("TLCombinedTab_id").click();
+		logger.info("Click on Combined Tab");
+		wait.until(ExpectedConditions.invisibilityOfElementLocated(By.xpath("//*[@class=\"ajax-loadernew\"]")));
 
 		// --Go to Advance Tab
 		wait.until(ExpectedConditions.invisibilityOfElementLocated(By.xpath("//*[@class=\"ajax-loadernew\"]")));
@@ -264,10 +270,9 @@ public class ReceivePutAway extends BaseInit {
 			System.out.println("Clicked on the Close");
 			logger.info("Click on Close");
 			wait.until(ExpectedConditions.invisibilityOfElementLocated(By.xpath("//*[@class=\"ajax-loadernew\"]")));
-			
+
 			logger.info("=======Receive To PutAway Test End=======");
 			msg.append("=======Receive To PutAway Test End=======" + "\n\n");
-
 
 		}
 
