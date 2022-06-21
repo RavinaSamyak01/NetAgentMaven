@@ -4,9 +4,9 @@ import java.text.DateFormat;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.List;
-import java.util.TimeZone;
 
 import org.openqa.selenium.By;
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
@@ -21,7 +21,7 @@ public class OrderSearch extends BaseInit {
 	@Test
 	public static void orderSearch() throws Exception {
 		WebDriverWait wait = new WebDriverWait(Driver, 50);
-		// JavascriptExecutor js = (JavascriptExecutor) Driver;
+		JavascriptExecutor js = (JavascriptExecutor) Driver;
 		Actions act = new Actions(Driver);
 		logger.info("=======Order Search Test Start=======");
 		msg.append("=======Order Search Test Start=======" + "\n\n");
@@ -32,9 +32,17 @@ public class OrderSearch extends BaseInit {
 		String SPLPickUpID = getData("OrderSearch", 1, 2);
 		// String SPLJobID = formatter.formatCellValue(sh0.getRow(1).getCell(3));
 
-		wait.until(ExpectedConditions.visibilityOfElementLocated(By.id("idOperations")));
-		Driver.findElement(By.id("idOperations")).click();
-		logger.info("Click on Operations");
+		try {
+			wait.until(ExpectedConditions.visibilityOfElementLocated(By.id("idOperations")));
+			Driver.findElement(By.id("idOperations")).click();
+			logger.info("Click on Operations");
+		} catch (Exception e) {
+			wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//a[@id=\"idOperations\"]")));
+			WebElement OperationMenu = Driver.findElement(By.xpath("//a[@id=\"idOperations\"]"));
+			act.moveToElement(OperationMenu).build().perform();
+			js.executeScript("arguments[0].click();", OperationMenu);
+
+		}
 
 		wait.until(ExpectedConditions.elementToBeClickable(By.id("idOrder")));
 		Driver.findElement(By.id("idOrder")).click();

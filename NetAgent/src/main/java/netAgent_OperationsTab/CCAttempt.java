@@ -1903,10 +1903,21 @@ public class CCAttempt extends BaseInit {
 
 	public void cycleCount() {
 		WebDriverWait wait = new WebDriverWait(Driver, 50);
+		JavascriptExecutor js = (JavascriptExecutor) Driver;
+		Actions act = new Actions(Driver);
+
 		// Go to CycleCount screen
-		wait.until(ExpectedConditions.elementToBeClickable(By.id("idOperations")));
-		Driver.findElement(By.id("idOperations")).click();
-		logger.info("Click on Operations");
+		try {
+			wait.until(ExpectedConditions.visibilityOfElementLocated(By.id("idOperations")));
+			Driver.findElement(By.id("idOperations")).click();
+			logger.info("Click on Operations");
+		} catch (Exception e) {
+			wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//a[@id=\"idOperations\"]")));
+			WebElement OperationMenu = Driver.findElement(By.xpath("//a[@id=\"idOperations\"]"));
+			act.moveToElement(OperationMenu).build().perform();
+			js.executeScript("arguments[0].click();", OperationMenu);
+
+		}
 
 		wait.until(ExpectedConditions.elementToBeClickable(By.id("idCycle")));
 		Driver.findElement(By.id("idCycle")).click();

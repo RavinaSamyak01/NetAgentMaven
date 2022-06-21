@@ -1,201 +1,122 @@
-2022-06-20 11:11:25,983 [main] INFO ASNLog - initialization of the properties file is done
-2022-06-20 11:11:26,338 [main] INFO io.github.bonigarcia.wdm.WebDriverManager - Using chromedriver 102.0.5005.61 (since Google Chrome 102 is installed in your machine)
-2022-06-20 11:11:26,360 [main] INFO io.github.bonigarcia.wdm.WebDriverManager - Exporting webdriver.chrome.driver as C:\Users\rprajapati\.m2\repository\webdriver\chromedriver\win32\102.0.5005.61\chromedriver.exe
-2022-06-20 11:11:33,729 [main] INFO ASNLog - Url opened
-2022-06-20 11:11:47,824 [main] INFO ASNLog - =======ASN Log Test Start=======
-2022-06-20 11:11:48,007 [main] INFO ASNLog - Clicked on Inventory
-2022-06-20 11:11:48,235 [main] INFO ASNLog - Clicked on ASN Log
-2022-06-20 11:11:53,085 [main] INFO ASNLog - Enter value in ASN
-2022-06-20 11:11:53,162 [main] INFO ASNLog - Clicked on Search button
-2022-06-20 11:11:55,810 [main] INFO ASNLog - Title of the screen isNetAgent : ASN
-2022-06-20 11:11:55,838 [main] INFO ASNLog - Entered ASN==257844
-2022-06-20 11:11:55,838 [main] INFO ASNLog - Searched ASN==
-2022-06-20 11:11:55,838 [main] INFO ASNLog - ASN Number search result is FAIL
-2022-06-20 11:11:55,897 [main] INFO ASNLog - Expand ASN Detail
-2022-06-20 11:11:57,904 [main] INFO ASNLog - Expand ASN Details==PASS
-2022-06-20 11:11:58,069 [main] INFO ASNLog - Collapse ASN Detail
-2022-06-20 11:12:00,075 [main] INFO ASNLog - Collapse ASN Details==PASS
-2022-06-20 11:12:01,092 [main] INFO ASNLog - Click on Back button
-2022-06-20 11:12:04,642 [main] INFO ASNLog - Cleared ASN
-2022-06-20 11:12:04,723 [main] INFO ASNLog - Click on Search
-2022-06-20 11:12:05,988 [main] INFO ASNLog - Click on ASNType dropdown
-2022-06-20 11:12:08,093 [main] INFO ASNLog - Select all
-2022-06-20 11:12:08,147 [main] INFO ASNLog - Close ASNType dropdown
-2022-06-20 11:12:08,219 [main] INFO ASNLog - Click on Search button
-2022-06-20 11:12:09,450 [main] INFO ASNLog - Click on ASNType dropdown
-2022-06-20 11:12:11,518 [main] INFO ASNLog - Deselect all
-2022-06-20 11:12:11,559 [main] INFO ASNLog - Close ASNType dropdown
-2022-06-20 11:12:11,622 [main] INFO ASNLog - Click on Search button
-2022-06-20 11:12:12,906 [main] INFO ASNLog - Click on ASN Status dropdown
-2022-06-20 11:12:15,015 [main] INFO ASNLog - Select all
-2022-06-20 11:12:15,062 [main] INFO ASNLog - Close ASN Status dropdown
-2022-06-20 11:12:15,134 [main] INFO ASNLog - Click on Search button
-2022-06-20 11:12:16,990 [main] INFO ASNLog - Click on ASN Status dropdown
-2022-06-20 11:12:20,084 [main] INFO ASNLog - Deselect all
-2022-06-20 11:12:20,129 [main] INFO ASNLog - Close ASN Status dropdown
-2022-06-20 11:12:20,188 [main] INFO ASNLog - Click on Search button
-2022-06-20 11:12:22,188 [main] INFO ASNLog - Select Location
-2022-06-20 11:12:24,280 [main] INFO ASNLog - Click on Search button
-2022-06-20 11:12:26,077 [main] INFO ASNLog - Entered Location==
-                                    AUTOMATION-FSL (F5386)                                
-2022-06-20 11:12:26,077 [main] INFO ASNLog - Searched Location==SFO - NCM DIRECT DELIVERY (F1052)
-2022-06-20 11:12:26,077 [main] INFO ASNLog - Location search result is FAIL
-2022-06-20 11:12:26,184 [main] INFO ASNLog - Select Account
-2022-06-20 11:12:28,248 [main] INFO ASNLog - Click on Search button
-2022-06-20 11:12:28,906 [main] INFO ASNLog - Deselect Location
-2022-06-20 11:12:31,070 [main] INFO ASNLog - Click on Search button
-2022-06-20 11:12:32,281 [main] INFO ASNLog - Valid From Date :- 5/21/2022
-2022-06-20 11:12:32,282 [main] INFO ASNLog - Valid To Date :- 5/21/2022
-2022-06-20 11:12:32,453 [main] INFO ASNLog - Enter From Est. Arrival
-2022-06-20 11:12:32,753 [main] INFO ASNLog - Clear ASN
-2022-06-20 11:12:33,116 [main] INFO ASNLog - Click on Search button
-2022-06-20 11:12:34,878 [main] INFO ASNLog - There is no data with enetered date
-2022-06-20 11:12:34,929 [main] INFO ASNLog - Cleared FromESTArrival
-2022-06-20 11:12:34,975 [main] INFO ASNLog - Cleared ToESTArrival
-2022-06-20 11:12:35,062 [main] INFO ASNLog - Click on Search button
-2022-06-20 11:12:36,358 [main] INFO ASNLog - Enter ASNFromDate
-2022-06-20 11:12:36,583 [main] INFO ASNLog - Enter ASNToDate
-2022-06-20 11:12:36,746 [main] INFO ASNLog - Click on Search button
-2022-06-20 11:12:37,359 [main] INFO ASNLog - There is no data with enetered date
-2022-06-20 11:12:37,400 [main] INFO ASNLog - Cleared ASNFromDate
-2022-06-20 11:12:37,444 [main] INFO ASNLog - Cleared ASNToDate
-2022-06-20 11:12:37,516 [main] INFO ASNLog - Click on Search button
-2022-06-20 11:12:38,955 [main] INFO ASNLog - Enter Tracking No
-2022-06-20 11:12:39,006 [main] INFO ASNLog - Click on Search button
-2022-06-20 11:12:39,617 [main] INFO ASNLog - Records==No Records found!
-2022-06-20 11:12:39,662 [main] INFO ASNLog - Cleared Tracking
-2022-06-20 11:12:39,760 [main] INFO ASNLog - Enter WorkOrder
-2022-06-20 11:12:39,822 [main] INFO ASNLog - Click on Search button
-2022-06-20 11:12:40,971 [main] INFO ASNLog - Records==No Records found!
-2022-06-20 11:12:41,006 [main] INFO ASNLog - Clear WorkOrder
-2022-06-20 11:12:41,074 [main] INFO ASNLog - Enter ASN
-2022-06-20 11:12:41,124 [main] INFO ASNLog - Click on Search button
-2022-06-20 11:12:41,729 [main] INFO ASNLog - Records==No Records found!
-2022-06-20 11:12:41,759 [main] INFO ASNLog - Clear ASN
-2022-06-20 11:12:41,844 [main] INFO ASNLog - Enter ASN ref
-2022-06-20 11:12:41,902 [main] INFO ASNLog - Click on Search button
-2022-06-20 11:12:42,500 [main] INFO ASNLog - Records==No Records found!
-2022-06-20 11:12:42,538 [main] INFO ASNLog - Clear ASN Ref
-2022-06-20 11:12:42,567 [main] INFO ASNLog - Cleared FromESTArrival
-2022-06-20 11:12:44,758 [main] INFO ASNLog - Cleared ToESTArrival
-2022-06-20 11:12:44,905 [main] INFO ASNLog - Click on Search button
-2022-06-20 11:12:46,658 [main] INFO ASNLog - Testing Pagination
-2022-06-20 11:13:06,842 [main] INFO ASNLog - Click on ASN No
-2022-06-20 11:13:08,628 [main] INFO ASNLog - ASNNo. field is Non-editable
-2022-06-20 11:13:08,649 [main] INFO ASNLog - ASNType field is Non-editable
-2022-06-20 11:13:08,679 [main] INFO ASNLog - Account Number field is Non-editable
-2022-06-20 11:13:08,706 [main] INFO ASNLog - Location field is Non-editable
-2022-06-20 11:13:08,729 [main] INFO ASNLog - ASN Reference field is Non-editable
-2022-06-20 11:13:08,749 [main] INFO ASNLog - Carrier Name field is Non-editable
-2022-06-20 11:13:08,769 [main] INFO ASNLog - Tracking Number field is Non-editable
-2022-06-20 11:13:08,789 [main] INFO ASNLog - RefURL field is Non-editable
-2022-06-20 11:13:08,811 [main] INFO ASNLog - Note field is Non-editable
-2022-06-20 11:13:09,854 [main] INFO ASNLog - Click on Back button
-2022-06-20 11:13:13,485 [main] INFO ASNLog - Click on next page
-2022-06-20 11:13:14,694 [main] INFO ASNLog - No.Of Records==Page 2 of 7 (158 items)
-2022-06-20 11:13:14,871 [main] INFO ASNLog - Click on Previous Page
-2022-06-20 11:13:16,129 [main] INFO ASNLog - No.Of Records==Page 1 of 7 (158 items)
-2022-06-20 11:13:16,131 [main] INFO ASNLog - File is not exist with Filename==ASN-
-2022-06-20 11:13:16,131 [main] INFO ASNLog - File is not exist with Filename==ASN-
-2022-06-20 11:13:16,132 [main] INFO ASNLog - File is not exist with Filename==ASN-
-2022-06-20 11:13:16,132 [main] INFO ASNLog - File is not exist with Filename==ASN-
-2022-06-20 11:13:16,132 [main] INFO ASNLog - File is not exist with Filename==ASN-
-2022-06-20 11:13:16,132 [main] INFO ASNLog - File is not exist with Filename==ASN-
-2022-06-20 11:13:16,132 [main] INFO ASNLog - File is not exist with Filename==ASN-
-2022-06-20 11:13:16,133 [main] INFO ASNLog - File is not exist with Filename==ASN-
-2022-06-20 11:13:16,133 [main] INFO ASNLog - File is not exist with Filename==ASN-
-2022-06-20 11:13:16,134 [main] INFO ASNLog - File is not exist with Filename==ASN-
-2022-06-20 11:13:16,134 [main] INFO ASNLog - File is not exist with Filename==ASN-
-2022-06-20 11:13:16,134 [main] INFO ASNLog - File is not exist with Filename==ASN-
-2022-06-20 11:13:16,134 [main] INFO ASNLog - File is not exist with Filename==ASN-
-2022-06-20 11:13:16,134 [main] INFO ASNLog - File is not exist with Filename==ASN-
-2022-06-20 11:13:16,134 [main] INFO ASNLog - File is not exist with Filename==ASN-
-2022-06-20 11:13:16,134 [main] INFO ASNLog - File is not exist with Filename==ASN-
-2022-06-20 11:13:16,135 [main] INFO ASNLog - File is exist with FileName==ASN-
-2022-06-20 11:13:16,136 [main] INFO ASNLog - ASN- File is Deleted
-2022-06-20 11:13:16,137 [main] INFO ASNLog - File is not exist with Filename==ASN-
-2022-06-20 11:13:16,137 [main] INFO ASNLog - File is not exist with Filename==ASN-
-2022-06-20 11:13:16,137 [main] INFO ASNLog - File is not exist with Filename==ASN-
-2022-06-20 11:13:16,137 [main] INFO ASNLog - File is not exist with Filename==ASN-
-2022-06-20 11:13:16,137 [main] INFO ASNLog - File is not exist with Filename==ASN-
-2022-06-20 11:13:16,137 [main] INFO ASNLog - File is not exist with Filename==ASN-
-2022-06-20 11:13:16,137 [main] INFO ASNLog - File is not exist with Filename==ASN-
-2022-06-20 11:13:16,138 [main] INFO ASNLog - File is not exist with Filename==ASN-
-2022-06-20 11:13:16,138 [main] INFO ASNLog - File is not exist with Filename==ASN-
-2022-06-20 11:13:16,138 [main] INFO ASNLog - File is not exist with Filename==ASN-
-2022-06-20 11:13:16,138 [main] INFO ASNLog - File is not exist with Filename==ASN-
-2022-06-20 11:13:16,138 [main] INFO ASNLog - File is not exist with Filename==ASN-
-2022-06-20 11:13:16,138 [main] INFO ASNLog - File is not exist with Filename==ASN-
-2022-06-20 11:13:16,138 [main] INFO ASNLog - File is not exist with Filename==ASN-
-2022-06-20 11:13:16,139 [main] INFO ASNLog - File is not exist with Filename==ASN-
-2022-06-20 11:13:16,140 [main] INFO ASNLog - File is not exist with Filename==ASN-
-2022-06-20 11:13:16,140 [main] INFO ASNLog - File is not exist with Filename==ASN-
-2022-06-20 11:13:16,140 [main] INFO ASNLog - File is not exist with Filename==ASN-
-2022-06-20 11:13:16,140 [main] INFO ASNLog - File is not exist with Filename==ASN-
-2022-06-20 11:13:16,140 [main] INFO ASNLog - File is not exist with Filename==ASN-
-2022-06-20 11:13:16,140 [main] INFO ASNLog - File is not exist with Filename==ASN-
-2022-06-20 11:13:16,140 [main] INFO ASNLog - File is not exist with Filename==ASN-
-2022-06-20 11:13:16,140 [main] INFO ASNLog - File is not exist with Filename==ASN-
-2022-06-20 11:13:16,140 [main] INFO ASNLog - File is not exist with Filename==ASN-
-2022-06-20 11:13:16,140 [main] INFO ASNLog - File is not exist with Filename==ASN-
-2022-06-20 11:13:16,140 [main] INFO ASNLog - File is not exist with Filename==ASN-
-2022-06-20 11:13:16,140 [main] INFO ASNLog - File is not exist with Filename==ASN-
-2022-06-20 11:13:16,141 [main] INFO ASNLog - File is not exist with Filename==ASN-
-2022-06-20 11:13:16,141 [main] INFO ASNLog - File is not exist with Filename==ASN-
-2022-06-20 11:13:16,141 [main] INFO ASNLog - File is not exist with Filename==ASN-
-2022-06-20 11:13:16,141 [main] INFO ASNLog - File is not exist with Filename==ASN-
-2022-06-20 11:13:16,141 [main] INFO ASNLog - File is not exist with Filename==ASN-
-2022-06-20 11:13:16,142 [main] INFO ASNLog - File is not exist with Filename==ASN-
-2022-06-20 11:13:16,142 [main] INFO ASNLog - File is not exist with Filename==ASN-
-2022-06-20 11:13:16,142 [main] INFO ASNLog - File is not exist with Filename==ASN-
-2022-06-20 11:13:16,142 [main] INFO ASNLog - File is not exist with Filename==ASN-
-2022-06-20 11:13:16,143 [main] INFO ASNLog - File is not exist with Filename==ASN-
-2022-06-20 11:13:16,143 [main] INFO ASNLog - File is not exist with Filename==ASN-
-2022-06-20 11:13:16,143 [main] INFO ASNLog - File is not exist with Filename==ASN-
-2022-06-20 11:13:16,143 [main] INFO ASNLog - File is not exist with Filename==ASN-
-2022-06-20 11:13:16,144 [main] INFO ASNLog - File is not exist with Filename==ASN-
-2022-06-20 11:13:16,144 [main] INFO ASNLog - File is not exist with Filename==ASN-
-2022-06-20 11:13:16,144 [main] INFO ASNLog - File is not exist with Filename==ASN-
-2022-06-20 11:13:16,144 [main] INFO ASNLog - File is not exist with Filename==ASN-
-2022-06-20 11:13:16,144 [main] INFO ASNLog - File is not exist with Filename==ASN-
-2022-06-20 11:13:16,145 [main] INFO ASNLog - File is not exist with Filename==ASN-
-2022-06-20 11:13:16,145 [main] INFO ASNLog - File is not exist with Filename==ASN-
-2022-06-20 11:13:16,145 [main] INFO ASNLog - File is not exist with Filename==ASN-
-2022-06-20 11:13:16,145 [main] INFO ASNLog - File is not exist with Filename==ASN-
-2022-06-20 11:13:16,146 [main] INFO ASNLog - File is not exist with Filename==ASN-
-2022-06-20 11:13:16,146 [main] INFO ASNLog - File is not exist with Filename==ASN-
-2022-06-20 11:13:16,146 [main] INFO ASNLog - File is not exist with Filename==ASN-
-2022-06-20 11:13:16,146 [main] INFO ASNLog - File is not exist with Filename==ASN-
-2022-06-20 11:13:16,146 [main] INFO ASNLog - File is not exist with Filename==ASN-
-2022-06-20 11:13:16,147 [main] INFO ASNLog - File is not exist with Filename==ASN-
-2022-06-20 11:13:16,147 [main] INFO ASNLog - File is not exist with Filename==ASN-
-2022-06-20 11:13:16,147 [main] INFO ASNLog - File is not exist with Filename==ASN-
-2022-06-20 11:13:16,147 [main] INFO ASNLog - File is not exist with Filename==ASN-
-2022-06-20 11:13:16,147 [main] INFO ASNLog - File is not exist with Filename==ASN-
-2022-06-20 11:13:16,148 [main] INFO ASNLog - File is not exist with Filename==ASN-
-2022-06-20 11:13:16,148 [main] INFO ASNLog - File is not exist with Filename==ASN-
-2022-06-20 11:13:16,148 [main] INFO ASNLog - File is not exist with Filename==ASN-
-2022-06-20 11:13:16,148 [main] INFO ASNLog - File is not exist with Filename==ASN-
-2022-06-20 11:13:16,148 [main] INFO ASNLog - File is not exist with Filename==ASN-
-2022-06-20 11:13:16,149 [main] INFO ASNLog - File is not exist with Filename==ASN-
-2022-06-20 11:13:16,149 [main] INFO ASNLog - File is not exist with Filename==ASN-
-2022-06-20 11:13:16,149 [main] INFO ASNLog - File is not exist with Filename==ASN-
-2022-06-20 11:13:16,149 [main] INFO ASNLog - File is not exist with Filename==ASN-
-2022-06-20 11:13:16,150 [main] INFO ASNLog - File is not exist with Filename==ASN-
-2022-06-20 11:13:16,150 [main] INFO ASNLog - File is not exist with Filename==ASN-
-2022-06-20 11:13:16,150 [main] INFO ASNLog - File is not exist with Filename==ASN-
-2022-06-20 11:13:16,150 [main] INFO ASNLog - File is not exist with Filename==ASN-
-2022-06-20 11:13:16,150 [main] INFO ASNLog - File is not exist with Filename==ASN-
-2022-06-20 11:13:16,151 [main] INFO ASNLog - File is not exist with Filename==ASN-
-2022-06-20 11:13:16,151 [main] INFO ASNLog - File is not exist with Filename==ASN-
-2022-06-20 11:13:16,151 [main] INFO ASNLog - File is not exist with Filename==ASN-
-2022-06-20 11:13:16,151 [main] INFO ASNLog - File is not exist with Filename==ASN-
-2022-06-20 11:13:16,152 [main] INFO ASNLog - File is not exist with Filename==ASN-
-2022-06-20 11:13:16,152 [main] INFO ASNLog - File is not exist with Filename==ASN-
-2022-06-20 11:13:16,152 [main] INFO ASNLog - File is not exist with Filename==ASN-
-2022-06-20 11:13:16,221 [main] INFO ASNLog - Click on Export button
-2022-06-20 11:13:20,765 [main] INFO ASNLog - File is Downloaded successfully:Verified
-2022-06-20 11:13:22,379 [main] INFO ASNLog - Clicked on MNX Logo
-2022-06-20 11:13:23,617 [main] INFO ASNLog - =======ASN Log Test End=======
-2022-06-20 11:13:24,005 [main] INFO ASNLog - Clicked on LogOut
-2022-06-20 11:13:27,487 [main] INFO ASNLog - ====Sending Email=====
+2022-06-21 13:27:46,729 [main] INFO FSLSetUp - initialization of the properties file is done
+2022-06-21 13:27:47,250 [main] INFO io.github.bonigarcia.wdm.WebDriverManager - Using chromedriver 102.0.5005.61 (since Google Chrome 102 is installed in your machine)
+2022-06-21 13:27:47,278 [main] INFO io.github.bonigarcia.wdm.WebDriverManager - Exporting webdriver.chrome.driver as C:\Users\rprajapati\.m2\repository\webdriver\chromedriver\win32\102.0.5005.61\chromedriver.exe
+2022-06-21 13:27:55,008 [main] INFO FSLSetUp - Url opened
+2022-06-21 13:28:07,862 [main] INFO FSLSetUp - =======FSL SetUp Test Start=======
+2022-06-21 13:28:07,990 [main] INFO FSLSetUp - Clicked on Inventory
+2022-06-21 13:28:08,134 [main] INFO FSLSetUp - Clicked on FSL SetUp
+2022-06-21 13:28:10,439 [main] INFO FSLSetUp - Entered Location Code
+2022-06-21 13:28:10,520 [main] INFO FSLSetUp - Clicked on Search button
+2022-06-21 13:28:10,768 [main] INFO FSLSetUp - Clicked on Edit button of DefaultBin
+2022-06-21 13:28:11,353 [main] INFO FSLSetUp - Error: Location Code field is enable==FAIL
+2022-06-21 13:28:11,427 [main] INFO FSLSetUp - Clicked on Save button
+2022-06-21 13:28:11,497 [main] INFO FSLSetUp - Validation message displayed==Default bin cannot be edited.
+2022-06-21 13:28:11,672 [main] INFO FSLSetUp - Clicked on Reset button
+2022-06-21 13:28:11,855 [main] INFO FSLSetUp - Clicked on Refresh button
+2022-06-21 13:28:12,498 [main] INFO FSLSetUp - Entered Location Code
+2022-06-21 13:28:12,589 [main] INFO FSLSetUp - Clicked on Reset button
+2022-06-21 13:28:12,764 [main] INFO FSLSetUp - Records==Page 1 of 1 (19 items)
+2022-06-21 13:28:12,814 [main] INFO FSLSetUp - If page size=1....
+2022-06-21 13:28:12,815 [main] INFO FSLSetUp - Clicked on Reset button
+2022-06-21 13:28:12,971 [main] INFO FSLSetUp - Entered value in Location Code
+2022-06-21 13:28:13,116 [main] INFO FSLSetUp - Clicked on Search button
+2022-06-21 13:28:13,342 [main] INFO FSLSetUp - Send invalid value to Location Code
+2022-06-21 13:28:13,407 [main] INFO FSLSetUp - Clicked on Search button
+2022-06-21 13:28:13,534 [main] INFO FSLSetUp - There is no data with entered Location Code
+2022-06-21 13:28:13,601 [main] INFO FSLSetUp - Clicked on Reset button
+2022-06-21 13:28:13,786 [main] INFO FSLSetUp - Entered Location Code
+2022-06-21 13:28:13,854 [main] INFO FSLSetUp - Clicked on Search button
+2022-06-21 13:28:14,144 [main] INFO FSLSetUp - Select Location Code
+2022-06-21 13:28:15,914 [main] INFO FSLSetUp - Select Length
+2022-06-21 13:28:15,951 [main] INFO FSLSetUp - Enter value in Length
+2022-06-21 13:28:16,020 [main] INFO FSLSetUp - Select Width
+2022-06-21 13:28:16,059 [main] INFO FSLSetUp - Enter Width
+2022-06-21 13:28:16,127 [main] INFO FSLSetUp - Select Height
+2022-06-21 13:28:16,167 [main] INFO FSLSetUp - Enter Height
+2022-06-21 13:28:16,239 [main] INFO FSLSetUp - Clicked on Save button
+2022-06-21 13:28:17,415 [main] INFO FSLSetUp - Success Message==Record Saved Successfully.
+2022-06-21 13:28:17,415 [main] INFO FSLSetUp - Record is Saved==PASS
+2022-06-21 13:28:17,460 [main] INFO FSLSetUp - Clicked on Reset
+2022-06-21 13:28:17,490 [main] INFO FSLSetUp - ==Testing Manage FSL==
+2022-06-21 13:28:17,600 [main] INFO FSLSetUp - Entered Location Code=DEFAULTBIN
+2022-06-21 13:28:17,650 [main] INFO FSLSetUp - Clicked on Search button
+2022-06-21 13:28:17,829 [main] INFO FSLSetUp - Clicked on Manage button
+2022-06-21 13:28:20,149 [main] INFO FSLSetUp - Clicked on Refresh button of Manage FSL page
+2022-06-21 13:28:21,407 [main] INFO FSLSetUp - Enter value in Basic Search
+2022-06-21 13:28:21,523 [main] INFO FSLSetUp - Clicked on Search button
+2022-06-21 13:28:21,770 [main] INFO FSLSetUp - Clicked on Reset button
+2022-06-21 13:28:21,966 [main] INFO FSLSetUp - Enter value in Basic Search
+2022-06-21 13:28:22,032 [main] INFO FSLSetUp - Clicked on Search button
+2022-06-21 13:28:22,269 [main] INFO FSLSetUp - Clicked on Reset button
+2022-06-21 13:28:22,449 [main] INFO FSLSetUp - Enter value in Basic Search
+2022-06-21 13:28:22,514 [main] INFO FSLSetUp - Clicked on Search button
+2022-06-21 13:29:12,734 [main] INFO FSLSetUp - Part is not exist with search parameter
+2022-06-21 13:29:12,852 [main] INFO FSLSetUp - Clicked on Reset button
+2022-06-21 13:29:13,094 [main] INFO FSLSetUp - Enter value in Basic Search
+2022-06-21 13:29:13,191 [main] INFO FSLSetUp - Clicked on Search button
+2022-06-21 13:30:03,361 [main] INFO FSLSetUp - Part is not exist with search parameter
+2022-06-21 13:30:03,458 [main] INFO FSLSetUp - Clicked on Reset button
+2022-06-21 13:30:03,618 [main] INFO FSLSetUp - Enter value in Basic Search
+2022-06-21 13:30:03,691 [main] INFO FSLSetUp - Clicked on Search button
+2022-06-21 13:30:03,850 [main] INFO FSLSetUp - Data is/are exist with  entered value
+2022-06-21 13:30:03,919 [main] INFO FSLSetUp - Clicked on Reset button
+2022-06-21 13:30:04,077 [main] INFO FSLSetUp - Enter value in Basic Search
+2022-06-21 13:30:04,126 [main] INFO FSLSetUp - Clicked on Search button
+2022-06-21 13:30:04,220 [main] INFO FSLSetUp - Data is/are exist with  entered value
+2022-06-21 13:30:04,267 [main] INFO FSLSetUp - Clicked on Reset button
+2022-06-21 13:30:04,423 [main] INFO FSLSetUp - Enter value in Basic Search
+2022-06-21 13:30:04,497 [main] INFO FSLSetUp - Clicked on Search button
+2022-06-21 13:30:04,608 [main] INFO FSLSetUp - Data is/are exist with  entered value
+2022-06-21 13:30:04,654 [main] INFO FSLSetUp - Clicked on Reset button
+2022-06-21 13:30:04,866 [main] INFO FSLSetUp - Enter value in Basic Search
+2022-06-21 13:30:04,926 [main] INFO FSLSetUp - Clicked on Search button
+2022-06-21 13:30:05,048 [main] INFO FSLSetUp - There is no data with entered value
+2022-06-21 13:30:05,102 [main] INFO FSLSetUp - Clicked on Reset button
+2022-06-21 13:30:05,311 [main] INFO FSLSetUp - Enter invalid value in Basic Search
+2022-06-21 13:30:05,363 [main] INFO FSLSetUp - Clicked on Search button
+2022-06-21 13:30:05,488 [main] INFO FSLSetUp - There is no data with entered value
+2022-06-21 13:30:05,538 [main] INFO FSLSetUp - Clicked on Reset button
+2022-06-21 13:30:05,752 [main] INFO FSLSetUp - Clicked on Save 
+2022-06-21 13:30:05,807 [main] INFO FSLSetUp - Validation Messages==To Location Required.
+Please select atleast one part.
+2022-06-21 13:30:06,002 [main] INFO FSLSetUp - Check the checkbox of 1st record
+2022-06-21 13:30:16,343 [main] INFO FSLSetUp - Entered To Location same as current location
+2022-06-21 13:30:16,414 [main] INFO FSLSetUp - Clicked on Save button
+2022-06-21 13:30:23,292 [main] INFO FSLSetUp - Validation is displayed=To Location is required, Please add To Location first to proceed.
+2022-06-21 13:30:23,337 [main] INFO FSLSetUp - Cleared To Location
+2022-06-21 13:30:23,745 [main] INFO FSLSetUp - Entered To Location
+2022-06-21 13:30:23,807 [main] INFO FSLSetUp - Clicked on Add button
+2022-06-21 13:30:35,110 [main] INFO FSLSetUp - Cleared To Location
+2022-06-21 13:30:35,219 [main] INFO FSLSetUp - Clicked on Add button
+2022-06-21 13:30:35,281 [main] INFO FSLSetUp - Validation message is displayed==To Location Required.
+2022-06-21 13:30:35,411 [main] INFO FSLSetUp - Cleared To Location
+2022-06-21 13:30:35,719 [main] INFO FSLSetUp - Entered duplicate To Location
+2022-06-21 13:30:35,780 [main] INFO FSLSetUp - Clicked on Add button
+2022-06-21 13:30:39,115 [main] INFO FSLSetUp - Validation message is displayed==Duplicate Location Code.
+2022-06-21 13:30:39,262 [main] INFO FSLSetUp - Cleared To Location
+2022-06-21 13:30:41,643 [main] INFO FSLSetUp - Entered To Location
+2022-06-21 13:30:41,768 [main] INFO FSLSetUp - Clicked on Save button
+2022-06-21 13:30:44,065 [main] INFO FSLSetUp - Success Message==Part moved successfully.
+2022-06-21 13:30:44,065 [main] INFO FSLSetUp - Record is Saved==PASS
+2022-06-21 13:30:44,158 [main] INFO FSLSetUp - Clicked on Print button of Manage FSL
+2022-06-21 13:30:45,896 [main] INFO FSLSetUp - Switched to Print Label window
+2022-06-21 13:30:46,025 [main] INFO FSLSetUp - Switched to Print Label window
+2022-06-21 13:30:48,672 [main] INFO FSLSetUp - Closed Print Label window
+2022-06-21 13:30:48,761 [main] INFO FSLSetUp - Switched to main window
+2022-06-21 13:30:50,960 [main] INFO FSLSetUp - Clicked on Back button of Manage FSL
+2022-06-21 13:42:06,021 [main] INFO FSLSetUp - Clicked on Add FSL
+2022-06-21 13:42:06,920 [main] INFO FSLSetUp - Cleared Location Code
+2022-06-21 13:42:07,055 [main] INFO FSLSetUp - Enter Location Code
+2022-06-21 13:42:07,196 [main] INFO FSLSetUp - Select Length
+2022-06-21 13:42:07,302 [main] INFO FSLSetUp - Entered Length
+2022-06-21 13:42:07,440 [main] INFO FSLSetUp - Select Width
+2022-06-21 13:42:07,626 [main] INFO FSLSetUp - Entered Width
+2022-06-21 13:42:07,841 [main] INFO FSLSetUp - Select Height
+2022-06-21 13:42:07,945 [main] INFO FSLSetUp - Entered Height
+2022-06-21 13:42:08,105 [main] INFO FSLSetUp - Clicked on Save button
+2022-06-21 13:42:09,447 [main] INFO FSLSetUp - Success Message==Record Saved Successfully.
+2022-06-21 13:42:09,448 [main] INFO FSLSetUp - Record is Saved==PASS
+2022-06-21 13:42:12,162 [main] INFO FSLSetUp - Clicked on MNX Logo
+2022-06-21 13:42:14,755 [main] INFO FSLSetUp - =======FSL SetUp Test End=======
+2022-06-21 13:42:15,335 [main] INFO FSLSetUp - Clicked on LogOut
+2022-06-21 13:42:18,044 [main] INFO FSLSetUp - ====Sending Email=====

@@ -79,16 +79,15 @@ public class ReceivePutAway extends BaseInit {
 		System.out.println("Cleared PickUp");
 		logger.info("Cleared Pickup");
 
-		// --ASNType
-		isElementPresent("TLASNType_id").click();
-		logger.info("Click on ASNType dropdown");
-		Thread.sleep(2000);
-		// -Select All
-		isElementPresent("TLASNReplenish_xpath").click();
-		logger.info("Selected Replenish from ASNType dropdown");
-		isElementPresent("TLASNType_id").click();
-		System.out.println("Close the ASNType dropdown");
-		logger.info("Close the ASNType dropdown");
+		/*
+		 * // --ASNType isElementPresent("TLASNType_id").click();
+		 * logger.info("Click on ASNType dropdown"); Thread.sleep(2000); // -Select All
+		 * isElementPresent("TLASNReplenish_xpath").click();
+		 * logger.info("Selected Replenish from ASNType dropdown"); Thread.sleep(2000);
+		 * isElementPresent("TLASNType_id").click();
+		 * System.out.println("Close the ASNType dropdown");
+		 * logger.info("Close the ASNType dropdown");
+		 */
 
 		// --Click on Search
 		isElementPresent("TLADSearchBTN_id").click();
@@ -103,6 +102,8 @@ public class ReceivePutAway extends BaseInit {
 				System.out.println("Data is not present related search parameter");
 				logger.info("Data is not present related search parameter");
 			}
+			logger.info("=======Receive To PutAway Test End=======");
+			msg.append("=======Receive To PutAway Test End=======" + "\n\n");
 
 		} catch (Exception Nodata) {
 			try {

@@ -1,7 +1,10 @@
 package netAgent_Admin;
 
+import org.apache.struts.action.Action;
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
@@ -13,7 +16,7 @@ public class UserList extends BaseInit {
 	@Test
 	public void userlist() throws Exception {
 		WebDriverWait wait = new WebDriverWait(Driver, 50);
-
+		Actions act = new Actions(Driver);
 		logger.info("=======User List Test Start=======");
 		msg.append("=======User List Test Start=======" + "\n\n");
 
@@ -154,7 +157,9 @@ public class UserList extends BaseInit {
 		logger.info("Enter LoginID");
 
 		wait.until(ExpectedConditions.elementToBeClickable(By.id("btnSearch")));
-		Driver.findElement(By.id("btnSearch")).click();
+		WebElement btnSearch = Driver.findElement(By.id("btnSearch"));
+		act.moveToElement(btnSearch).build().perform();
+		act.moveToElement(btnSearch).click().perform();
 		logger.info("Click on Search button");
 		wait.until(ExpectedConditions.invisibilityOfElementLocated(By.xpath("//*[@class=\"ajax-loadernew\"]")));
 

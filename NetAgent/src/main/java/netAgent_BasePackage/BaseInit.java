@@ -92,7 +92,7 @@ public class BaseInit {
 			options.addArguments("--proxy-bypass-list=*");
 			options.addArguments("--disable-extensions");
 			options.addArguments("--no-sandbox");
-			options.addArguments("--start-maximized");
+			//options.addArguments("--start-maximized");
 			// options.addArguments("--headless");
 			String downloadFilepath = System.getProperty("user.dir") + "\\src\\main\\resources";
 			HashMap<String, Object> chromePrefs = new HashMap<String, Object>();
@@ -103,12 +103,13 @@ public class BaseInit {
 			options.setExperimentalOption("prefs", chromePrefs);
 			capabilities.setCapability(CapabilityType.ACCEPT_SSL_CERTS, true);
 			capabilities.setCapability(ChromeOptions.CAPABILITY, options);
-			// options.addArguments("window-size=1032x776");//
+			capabilities.setPlatform(Platform.ANY);
+
+			options.addArguments("window-size=1032x776");
 			// options.addArguments("window-size=1936,1056");
 			// options.addArguments("window-size=1036x776");
 
 			// 1032X776
-			capabilities.setPlatform(Platform.ANY);
 
 			Driver = new ChromeDriver(options);
 

@@ -398,6 +398,7 @@ public class ASNLog extends BaseInit {
 		Driver.findElement(By.id("txtTracking")).click();
 		Thread.sleep(1000);
 		Driver.findElement(By.id("txtToEstArrival")).clear();
+		Thread.sleep(1000);
 		Driver.findElement(By.id("txtTracking")).click();
 		Thread.sleep(1000);
 

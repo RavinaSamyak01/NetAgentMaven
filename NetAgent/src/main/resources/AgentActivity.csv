@@ -1,5 +1,5 @@
 ﻿From_Date,To_Date
-06/10/2022,06/20/2022
+06/11/2022,06/21/2022
 
 CourierId,VoucherNum,Courier_type,pieces,PickupId,VoucherNum2,pAddr1,Paddr21,City_State,Pu_Tm,VoucherNum3,dAddr1,Paddr22,Dcity_Dstate,Del_Tm,Textbox37,Total_Amount
 34769 -  AUTOMATION COURIER,,,,,,,,,,,,,,,,           TotalShipment : 6        Total PCS : 6        Total WT :  306      
