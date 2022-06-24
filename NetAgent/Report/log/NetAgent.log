@@ -1,122 +1,58 @@
-2022-06-21 13:27:46,729 - FSLSetUp -INFO - initialization of the properties file is done
-2022-06-21 13:27:47,250 - io.github.bonigarcia.wdm.WebDriverManager -INFO - Using chromedriver 102.0.5005.61 (since Google Chrome 102 is installed in your machine)
-2022-06-21 13:27:47,278 - io.github.bonigarcia.wdm.WebDriverManager -INFO - Exporting webdriver.chrome.driver as C:\Users\rprajapati\.m2\repository\webdriver\chromedriver\win32\102.0.5005.61\chromedriver.exe
-2022-06-21 13:27:55,008 - FSLSetUp -INFO - Url opened
-2022-06-21 13:28:07,862 - FSLSetUp -INFO - =======FSL SetUp Test Start=======
-2022-06-21 13:28:07,990 - FSLSetUp -INFO - Clicked on Inventory
-2022-06-21 13:28:08,134 - FSLSetUp -INFO - Clicked on FSL SetUp
-2022-06-21 13:28:10,439 - FSLSetUp -INFO - Entered Location Code
-2022-06-21 13:28:10,520 - FSLSetUp -INFO - Clicked on Search button
-2022-06-21 13:28:10,768 - FSLSetUp -INFO - Clicked on Edit button of DefaultBin
-2022-06-21 13:28:11,353 - FSLSetUp -INFO - Error: Location Code field is enable==FAIL
-2022-06-21 13:28:11,427 - FSLSetUp -INFO - Clicked on Save button
-2022-06-21 13:28:11,497 - FSLSetUp -INFO - Validation message displayed==Default bin cannot be edited.
-2022-06-21 13:28:11,672 - FSLSetUp -INFO - Clicked on Reset button
-2022-06-21 13:28:11,855 - FSLSetUp -INFO - Clicked on Refresh button
-2022-06-21 13:28:12,498 - FSLSetUp -INFO - Entered Location Code
-2022-06-21 13:28:12,589 - FSLSetUp -INFO - Clicked on Reset button
-2022-06-21 13:28:12,764 - FSLSetUp -INFO - Records==Page 1 of 1 (19 items)
-2022-06-21 13:28:12,814 - FSLSetUp -INFO - If page size=1....
-2022-06-21 13:28:12,815 - FSLSetUp -INFO - Clicked on Reset button
-2022-06-21 13:28:12,971 - FSLSetUp -INFO - Entered value in Location Code
-2022-06-21 13:28:13,116 - FSLSetUp -INFO - Clicked on Search button
-2022-06-21 13:28:13,342 - FSLSetUp -INFO - Send invalid value to Location Code
-2022-06-21 13:28:13,407 - FSLSetUp -INFO - Clicked on Search button
-2022-06-21 13:28:13,534 - FSLSetUp -INFO - There is no data with entered Location Code
-2022-06-21 13:28:13,601 - FSLSetUp -INFO - Clicked on Reset button
-2022-06-21 13:28:13,786 - FSLSetUp -INFO - Entered Location Code
-2022-06-21 13:28:13,854 - FSLSetUp -INFO - Clicked on Search button
-2022-06-21 13:28:14,144 - FSLSetUp -INFO - Select Location Code
-2022-06-21 13:28:15,914 - FSLSetUp -INFO - Select Length
-2022-06-21 13:28:15,951 - FSLSetUp -INFO - Enter value in Length
-2022-06-21 13:28:16,020 - FSLSetUp -INFO - Select Width
-2022-06-21 13:28:16,059 - FSLSetUp -INFO - Enter Width
-2022-06-21 13:28:16,127 - FSLSetUp -INFO - Select Height
-2022-06-21 13:28:16,167 - FSLSetUp -INFO - Enter Height
-2022-06-21 13:28:16,239 - FSLSetUp -INFO - Clicked on Save button
-2022-06-21 13:28:17,415 - FSLSetUp -INFO - Success Message==Record Saved Successfully.
-2022-06-21 13:28:17,415 - FSLSetUp -INFO - Record is Saved==PASS
-2022-06-21 13:28:17,460 - FSLSetUp -INFO - Clicked on Reset
-2022-06-21 13:28:17,490 - FSLSetUp -INFO - ==Testing Manage FSL==
-2022-06-21 13:28:17,600 - FSLSetUp -INFO - Entered Location Code=DEFAULTBIN
-2022-06-21 13:28:17,650 - FSLSetUp -INFO - Clicked on Search button
-2022-06-21 13:28:17,829 - FSLSetUp -INFO - Clicked on Manage button
-2022-06-21 13:28:20,149 - FSLSetUp -INFO - Clicked on Refresh button of Manage FSL page
-2022-06-21 13:28:21,407 - FSLSetUp -INFO - Enter value in Basic Search
-2022-06-21 13:28:21,523 - FSLSetUp -INFO - Clicked on Search button
-2022-06-21 13:28:21,770 - FSLSetUp -INFO - Clicked on Reset button
-2022-06-21 13:28:21,966 - FSLSetUp -INFO - Enter value in Basic Search
-2022-06-21 13:28:22,032 - FSLSetUp -INFO - Clicked on Search button
-2022-06-21 13:28:22,269 - FSLSetUp -INFO - Clicked on Reset button
-2022-06-21 13:28:22,449 - FSLSetUp -INFO - Enter value in Basic Search
-2022-06-21 13:28:22,514 - FSLSetUp -INFO - Clicked on Search button
-2022-06-21 13:29:12,734 - FSLSetUp -INFO - Part is not exist with search parameter
-2022-06-21 13:29:12,852 - FSLSetUp -INFO - Clicked on Reset button
-2022-06-21 13:29:13,094 - FSLSetUp -INFO - Enter value in Basic Search
-2022-06-21 13:29:13,191 - FSLSetUp -INFO - Clicked on Search button
-2022-06-21 13:30:03,361 - FSLSetUp -INFO - Part is not exist with search parameter
-2022-06-21 13:30:03,458 - FSLSetUp -INFO - Clicked on Reset button
-2022-06-21 13:30:03,618 - FSLSetUp -INFO - Enter value in Basic Search
-2022-06-21 13:30:03,691 - FSLSetUp -INFO - Clicked on Search button
-2022-06-21 13:30:03,850 - FSLSetUp -INFO - Data is/are exist with  entered value
-2022-06-21 13:30:03,919 - FSLSetUp -INFO - Clicked on Reset button
-2022-06-21 13:30:04,077 - FSLSetUp -INFO - Enter value in Basic Search
-2022-06-21 13:30:04,126 - FSLSetUp -INFO - Clicked on Search button
-2022-06-21 13:30:04,220 - FSLSetUp -INFO - Data is/are exist with  entered value
-2022-06-21 13:30:04,267 - FSLSetUp -INFO - Clicked on Reset button
-2022-06-21 13:30:04,423 - FSLSetUp -INFO - Enter value in Basic Search
-2022-06-21 13:30:04,497 - FSLSetUp -INFO - Clicked on Search button
-2022-06-21 13:30:04,608 - FSLSetUp -INFO - Data is/are exist with  entered value
-2022-06-21 13:30:04,654 - FSLSetUp -INFO - Clicked on Reset button
-2022-06-21 13:30:04,866 - FSLSetUp -INFO - Enter value in Basic Search
-2022-06-21 13:30:04,926 - FSLSetUp -INFO - Clicked on Search button
-2022-06-21 13:30:05,048 - FSLSetUp -INFO - There is no data with entered value
-2022-06-21 13:30:05,102 - FSLSetUp -INFO - Clicked on Reset button
-2022-06-21 13:30:05,311 - FSLSetUp -INFO - Enter invalid value in Basic Search
-2022-06-21 13:30:05,363 - FSLSetUp -INFO - Clicked on Search button
-2022-06-21 13:30:05,488 - FSLSetUp -INFO - There is no data with entered value
-2022-06-21 13:30:05,538 - FSLSetUp -INFO - Clicked on Reset button
-2022-06-21 13:30:05,752 - FSLSetUp -INFO - Clicked on Save 
-2022-06-21 13:30:05,807 - FSLSetUp -INFO - Validation Messages==To Location Required.
-Please select atleast one part.
-2022-06-21 13:30:06,002 - FSLSetUp -INFO - Check the checkbox of 1st record
-2022-06-21 13:30:16,343 - FSLSetUp -INFO - Entered To Location same as current location
-2022-06-21 13:30:16,414 - FSLSetUp -INFO - Clicked on Save button
-2022-06-21 13:30:23,292 - FSLSetUp -INFO - Validation is displayed=To Location is required, Please add To Location first to proceed.
-2022-06-21 13:30:23,337 - FSLSetUp -INFO - Cleared To Location
-2022-06-21 13:30:23,745 - FSLSetUp -INFO - Entered To Location
-2022-06-21 13:30:23,807 - FSLSetUp -INFO - Clicked on Add button
-2022-06-21 13:30:35,110 - FSLSetUp -INFO - Cleared To Location
-2022-06-21 13:30:35,219 - FSLSetUp -INFO - Clicked on Add button
-2022-06-21 13:30:35,281 - FSLSetUp -INFO - Validation message is displayed==To Location Required.
-2022-06-21 13:30:35,411 - FSLSetUp -INFO - Cleared To Location
-2022-06-21 13:30:35,719 - FSLSetUp -INFO - Entered duplicate To Location
-2022-06-21 13:30:35,780 - FSLSetUp -INFO - Clicked on Add button
-2022-06-21 13:30:39,115 - FSLSetUp -INFO - Validation message is displayed==Duplicate Location Code.
-2022-06-21 13:30:39,262 - FSLSetUp -INFO - Cleared To Location
-2022-06-21 13:30:41,643 - FSLSetUp -INFO - Entered To Location
-2022-06-21 13:30:41,768 - FSLSetUp -INFO - Clicked on Save button
-2022-06-21 13:30:44,065 - FSLSetUp -INFO - Success Message==Part moved successfully.
-2022-06-21 13:30:44,065 - FSLSetUp -INFO - Record is Saved==PASS
-2022-06-21 13:30:44,158 - FSLSetUp -INFO - Clicked on Print button of Manage FSL
-2022-06-21 13:30:45,896 - FSLSetUp -INFO - Switched to Print Label window
-2022-06-21 13:30:46,025 - FSLSetUp -INFO - Switched to Print Label window
-2022-06-21 13:30:48,672 - FSLSetUp -INFO - Closed Print Label window
-2022-06-21 13:30:48,761 - FSLSetUp -INFO - Switched to main window
-2022-06-21 13:30:50,960 - FSLSetUp -INFO - Clicked on Back button of Manage FSL
-2022-06-21 13:42:06,021 - FSLSetUp -INFO - Clicked on Add FSL
-2022-06-21 13:42:06,920 - FSLSetUp -INFO - Cleared Location Code
-2022-06-21 13:42:07,055 - FSLSetUp -INFO - Enter Location Code
-2022-06-21 13:42:07,196 - FSLSetUp -INFO - Select Length
-2022-06-21 13:42:07,302 - FSLSetUp -INFO - Entered Length
-2022-06-21 13:42:07,440 - FSLSetUp -INFO - Select Width
-2022-06-21 13:42:07,626 - FSLSetUp -INFO - Entered Width
-2022-06-21 13:42:07,841 - FSLSetUp -INFO - Select Height
-2022-06-21 13:42:07,945 - FSLSetUp -INFO - Entered Height
-2022-06-21 13:42:08,105 - FSLSetUp -INFO - Clicked on Save button
-2022-06-21 13:42:09,447 - FSLSetUp -INFO - Success Message==Record Saved Successfully.
-2022-06-21 13:42:09,448 - FSLSetUp -INFO - Record is Saved==PASS
-2022-06-21 13:42:12,162 - FSLSetUp -INFO - Clicked on MNX Logo
-2022-06-21 13:42:14,755 - FSLSetUp -INFO - =======FSL SetUp Test End=======
-2022-06-21 13:42:15,335 - FSLSetUp -INFO - Clicked on LogOut
-2022-06-21 13:42:18,044 - FSLSetUp -INFO - ====Sending Email=====
+2022-06-24 14:02:35,706 - SD_OrderProcess -INFO - initialization of the properties file is done
+2022-06-24 14:02:36,255 - io.github.bonigarcia.wdm.WebDriverManager -INFO - Using chromedriver 102.0.5005.61 (since Google Chrome 102 is installed in your machine)
+2022-06-24 14:02:36,280 - io.github.bonigarcia.wdm.WebDriverManager -INFO - Exporting webdriver.chrome.driver as C:\Users\rprajapati\.m2\repository\webdriver\chromedriver\win32\102.0.5005.61\chromedriver.exe
+2022-06-24 14:02:46,224 - SD_OrderProcess -INFO - Url opened
+2022-06-24 14:03:02,651 - SD_OrderProcess -INFO - =====SD Order Processing Test Start=====
+2022-06-24 14:03:02,659 - SD_OrderProcess -INFO - total No of Rows=11
+2022-06-24 14:03:02,667 - SD_OrderProcess -INFO - total No of Columns=3
+2022-06-24 14:03:02,982 - SD_OrderProcess -INFO - Click on Operations
+2022-06-24 14:03:07,569 - SD_OrderProcess -INFO - Click on Task Log
+2022-06-24 14:03:07,800 - SD_OrderProcess -INFO - ServiceID is==SD
+2022-06-24 14:03:07,807 - SD_OrderProcess -INFO - PickUpID is==3409889
+2022-06-24 14:03:57,840 - SD_OrderProcess -INFO - Operation tab is not selected
+2022-06-24 14:03:58,439 - SD_OrderProcess -INFO - Click on Operation Tab
+2022-06-24 14:04:03,839 - SD_OrderProcess -INFO - Clear search input
+2022-06-24 14:04:04,052 - SD_OrderProcess -INFO - Enter PickUpID in Search input
+2022-06-24 14:04:04,379 - SD_OrderProcess -INFO - Click on Search button
+2022-06-24 14:04:19,812 - SD_OrderProcess -INFO - Searched Job is displayed in edit mode
+2022-06-24 14:04:20,084 - SD_OrderProcess -INFO - Current stage of the order is=Drop @ Origin
+2022-06-24 14:04:20,085 - SD_OrderProcess -INFO - Job is moved to Drop@Origin stage successfully
+2022-06-24 14:04:20,124 - SD_OrderProcess -INFO - Current stage of the order is=Drop @ Origin
+2022-06-24 14:04:20,238 - SD_OrderProcess -INFO - ZoneID of is==EDT
+2022-06-24 14:04:20,473 - SD_OrderProcess -INFO - 04:34
+2022-06-24 14:05:01,126 - SD_OrderProcess -INFO - Clicked on Drop button
+2022-06-24 14:05:04,424 - SD_OrderProcess -INFO - Message:-The Air Bill is required for DL Airline.
+2022-06-24 14:05:19,369 - SD_OrderProcess -INFO - AirBill editor is opened
+2022-06-24 14:05:20,003 - SD_OrderProcess -INFO - Entered AirBill
+2022-06-24 14:05:20,826 - SD_OrderProcess -INFO - Entered Description
+2022-06-24 14:05:21,407 - SD_OrderProcess -INFO - Entered NoOFPieces
+2022-06-24 14:05:22,108 - SD_OrderProcess -INFO - Entered Total Weight
+2022-06-24 14:05:25,292 - SD_OrderProcess -INFO - Clicked on Track button
+2022-06-24 14:05:25,414 - SD_OrderProcess -INFO - Switched to Track window
+2022-06-24 14:05:34,795 - SD_OrderProcess -INFO - Switched to Track window
+2022-06-24 14:05:40,925 - SD_OrderProcess -INFO - Closed Track window
+2022-06-24 14:05:40,968 - SD_OrderProcess -INFO - Switched to main window
+2022-06-24 14:05:42,396 - SD_OrderProcess -INFO - Clicked on Drop button
+2022-06-24 14:05:54,850 - SD_OrderProcess -INFO - Clear search input
+2022-06-24 14:05:55,032 - SD_OrderProcess -INFO - Enter PickUpID in Search input
+2022-06-24 14:05:55,362 - SD_OrderProcess -INFO - Click on Search button
+2022-06-24 14:06:03,485 - SD_OrderProcess -INFO - Job is moved to Send Del Alert successfully
+2022-06-24 14:06:03,730 - SD_OrderProcess -INFO - ServiceID is==SD
+2022-06-24 14:06:03,968 - SD_OrderProcess -INFO - PickUpID is==3407902
+2022-06-24 14:06:54,434 - SD_OrderProcess -INFO - Operation tab is not selected
+2022-06-24 14:06:57,985 - SD_OrderProcess -INFO - Click on Operation Tab
+2022-06-24 14:07:05,497 - SD_OrderProcess -INFO - Clear search input
+2022-06-24 14:07:05,717 - SD_OrderProcess -INFO - Enter PickUpID in Search input
+2022-06-24 14:07:11,095 - SD_OrderProcess -INFO - Click on Search button
+2022-06-24 14:07:21,840 - SD_OrderProcess -INFO - Searched Job is displayed in edit mode
+2022-06-24 14:07:24,712 - SD_OrderProcess -INFO - Current stage of the order is=Confirm Del Alert
+2022-06-24 14:07:24,805 - SD_OrderProcess -INFO - Current stage of the order is=Confirm Del Alert
+2022-06-24 14:07:25,313 - SD_OrderProcess -INFO - Clicked on CONFIRM button
+2022-06-24 14:07:25,688 - SD_OrderProcess -INFO - Clicked on Close button
+2022-06-24 14:07:34,003 - SD_OrderProcess -INFO - Clear search input
+2022-06-24 14:07:34,229 - SD_OrderProcess -INFO - Enter PickUpID in Search input
+2022-06-24 14:07:34,608 - SD_OrderProcess -INFO - Click on Search button
+2022-06-24 14:08:35,936 - SD_OrderProcess -INFO - Job is moved to ON BOARD stage successfully
+2022-06-24 14:08:35,938 - SD_OrderProcess -INFO - =====SD Order Processing Test End=====
+2022-06-24 14:08:36,811 - SD_OrderProcess -INFO - Clicked on LogOut
+2022-06-24 14:08:44,555 - SD_OrderProcess -INFO - ====Sending Email=====

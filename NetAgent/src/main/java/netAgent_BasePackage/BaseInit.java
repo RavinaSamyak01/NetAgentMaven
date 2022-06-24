@@ -94,7 +94,7 @@ public class BaseInit {
 			options.addArguments("--no-sandbox");
 			//options.addArguments("--start-maximized");
 			// options.addArguments("--headless");
-			String downloadFilepath = System.getProperty("user.dir") + "\\src\\main\\resources";
+			String downloadFilepath = System.getProperty("user.dir") + "\\src\\main\\resources\\Downloads";
 			HashMap<String, Object> chromePrefs = new HashMap<String, Object>();
 			chromePrefs.put("profile.default_content_settings.popups", 0);
 			chromePrefs.put("download.prompt_for_download", "false");

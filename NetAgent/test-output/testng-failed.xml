@@ -1,17 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
-<suite name="Failed suite [NetAgentSmokeTest]" guice-stage="DEVELOPMENT">
-  <test thread-count="5" name="FSL SetUp(failed)">
+<suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
+  <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="netAgent_Inventory.FSLSetUp">
+      <class name="netAgent_OperationsTab.OrderProcessing">
         <methods>
-          <include name="fSLSetup"/>
           <include name="getResult"/>
           <include name="beforeMethod"/>
+          <include name="orderProcess"/>
           <include name="SendEmail"/>
           <include name="testMethodName"/>
         </methods>
-      </class> <!-- netAgent_Inventory.FSLSetUp -->
+      </class> <!-- netAgent_OperationsTab.OrderProcessing -->
     </classes>
-  </test> <!-- FSL SetUp(failed) -->
-</suite> <!-- Failed suite [NetAgentSmokeTest] -->
+  </test> <!-- Default test(failed) -->
+</suite> <!-- Failed suite [Default suite] -->

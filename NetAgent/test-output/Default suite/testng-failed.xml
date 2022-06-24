@@ -3,15 +3,15 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="netAgent_Inventory.ASNLog">
+      <class name="netAgent_OperationsTab.OrderProcessing">
         <methods>
           <include name="getResult"/>
           <include name="beforeMethod"/>
-          <include name="aSNLog"/>
+          <include name="orderProcess"/>
           <include name="SendEmail"/>
           <include name="testMethodName"/>
         </methods>
-      </class> <!-- netAgent_Inventory.ASNLog -->
+      </class> <!-- netAgent_OperationsTab.OrderProcessing -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

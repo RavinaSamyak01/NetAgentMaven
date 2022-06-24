@@ -172,10 +172,11 @@
 		</classes>
 	</test>
 
-	<!-- <test thread-count="5" name="OrderProcessing	">
+	<test thread-count="5" name="OrderProcessing">
 		<classes>
 			<class name="netAgent_OperationsTab.OrderProcessing"></class>
 		</classes>
-	</test>-->
-	<!-- NASmoke -->
+	</test>
+
+	<!--   -->
 </suite> <!-- NASuite -->

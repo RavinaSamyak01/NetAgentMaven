@@ -2,46 +2,46 @@
 <testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2022-06-21T13:28:07 IST" name="Default suite" finished-at="2022-06-21T13:42:14 IST" duration-ms="847129">
+  <suite started-at="2022-06-24T14:03:02 IST" name="Default suite" finished-at="2022-06-24T14:08:36 IST" duration-ms="333604">
     <groups>
     </groups>
-    <test started-at="2022-06-21T13:28:07 IST" name="Default test" finished-at="2022-06-21T13:42:14 IST" duration-ms="847129">
-      <class name="netAgent_Inventory.FSLSetUp">
-        <test-method is-config="true" signature="beforeMethod()[pri:0, instance:netAgent_Inventory.FSLSetUp@7b4c50bc]" started-at="2022-06-21T13:27:46 IST" name="beforeMethod" finished-at="2022-06-21T13:28:07 IST" duration-ms="21457" status="PASS">
+    <test started-at="2022-06-24T14:03:02 IST" name="Default test" finished-at="2022-06-24T14:08:36 IST" duration-ms="333604">
+      <class name="netAgent_OrderProcessing.SD_OrderProcess">
+        <test-method is-config="true" signature="beforeMethod()[pri:0, instance:netAgent_OrderProcessing.SD_OrderProcess@7b4c50bc]" started-at="2022-06-24T14:02:35 IST" name="beforeMethod" finished-at="2022-06-24T14:03:02 IST" duration-ms="27365" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeMethod -->
-        <test-method is-config="true" signature="testMethodName(java.lang.reflect.Method)[pri:0, instance:netAgent_Inventory.FSLSetUp@7b4c50bc]" started-at="2022-06-21T13:28:07 IST" name="testMethodName" finished-at="2022-06-21T13:28:07 IST" duration-ms="6" status="PASS">
+        <test-method is-config="true" signature="testMethodName(java.lang.reflect.Method)[pri:0, instance:netAgent_OrderProcessing.SD_OrderProcess@7b4c50bc]" started-at="2022-06-24T14:03:02 IST" name="testMethodName" finished-at="2022-06-24T14:03:02 IST" duration-ms="11" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[public void netAgent_Inventory.FSLSetUp.fSLSetup() throws java.lang.Exception]]>
+                <![CDATA[public void netAgent_OrderProcessing.SD_OrderProcess.orderProcessSDJOB() throws org.apache.poi.EncryptedDocumentException,org.apache.poi.openxml4j.exceptions.InvalidFormatException,java.io.IOException]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testMethodName -->
-        <test-method signature="fSLSetup()[pri:0, instance:netAgent_Inventory.FSLSetUp@7b4c50bc]" started-at="2022-06-21T13:28:07 IST" name="fSLSetup" finished-at="2022-06-21T13:42:14 IST" duration-ms="846901" status="PASS">
+        <test-method signature="orderProcessSDJOB()[pri:0, instance:netAgent_OrderProcessing.SD_OrderProcess@7b4c50bc]" started-at="2022-06-24T14:03:02 IST" name="orderProcessSDJOB" finished-at="2022-06-24T14:08:35 IST" duration-ms="333309" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- fSLSetup -->
-        <test-method is-config="true" signature="getResult(org.testng.ITestResult)[pri:0, instance:netAgent_Inventory.FSLSetUp@7b4c50bc]" started-at="2022-06-21T13:42:14 IST" name="getResult" finished-at="2022-06-21T13:42:14 IST" duration-ms="180" status="PASS">
+        </test-method> <!-- orderProcessSDJOB -->
+        <test-method is-config="true" signature="getResult(org.testng.ITestResult)[pri:0, instance:netAgent_OrderProcessing.SD_OrderProcess@7b4c50bc]" started-at="2022-06-24T14:08:35 IST" name="getResult" finished-at="2022-06-24T14:08:36 IST" duration-ms="206" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[TestResult name=fSLSetup status=SUCCESS method=FSLSetUp.fSLSetup()[pri:0, instance:netAgent_Inventory.FSLSetUp@7b4c50bc] output={null}]]]>
+                <![CDATA[[TestResult name=orderProcessSDJOB status=SUCCESS method=SD_OrderProcess.orderProcessSDJOB()[pri:0, instance:netAgent_OrderProcessing.SD_OrderProcess@7b4c50bc] output={null}]]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- getResult -->
-        <test-method is-config="true" signature="SendEmail()[pri:0, instance:netAgent_Inventory.FSLSetUp@7b4c50bc]" started-at="2022-06-21T13:42:14 IST" name="SendEmail" finished-at="2022-06-21T13:42:19 IST" duration-ms="4306" status="PASS">
+        <test-method is-config="true" signature="SendEmail()[pri:0, instance:netAgent_OrderProcessing.SD_OrderProcess@7b4c50bc]" started-at="2022-06-24T14:08:36 IST" name="SendEmail" finished-at="2022-06-24T14:08:45 IST" duration-ms="9230" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- SendEmail -->
-      </class> <!-- netAgent_Inventory.FSLSetUp -->
+      </class> <!-- netAgent_OrderProcessing.SD_OrderProcess -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>
