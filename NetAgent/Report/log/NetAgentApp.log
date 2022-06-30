@@ -1,58 +1,108 @@
-2022-06-24 14:02:35,706 [main] INFO SD_OrderProcess - initialization of the properties file is done
-2022-06-24 14:02:36,255 [main] INFO io.github.bonigarcia.wdm.WebDriverManager - Using chromedriver 102.0.5005.61 (since Google Chrome 102 is installed in your machine)
-2022-06-24 14:02:36,280 [main] INFO io.github.bonigarcia.wdm.WebDriverManager - Exporting webdriver.chrome.driver as C:\Users\rprajapati\.m2\repository\webdriver\chromedriver\win32\102.0.5005.61\chromedriver.exe
-2022-06-24 14:02:46,224 [main] INFO SD_OrderProcess - Url opened
-2022-06-24 14:03:02,651 [main] INFO SD_OrderProcess - =====SD Order Processing Test Start=====
-2022-06-24 14:03:02,659 [main] INFO SD_OrderProcess - total No of Rows=11
-2022-06-24 14:03:02,667 [main] INFO SD_OrderProcess - total No of Columns=3
-2022-06-24 14:03:02,982 [main] INFO SD_OrderProcess - Click on Operations
-2022-06-24 14:03:07,569 [main] INFO SD_OrderProcess - Click on Task Log
-2022-06-24 14:03:07,800 [main] INFO SD_OrderProcess - ServiceID is==SD
-2022-06-24 14:03:07,807 [main] INFO SD_OrderProcess - PickUpID is==3409889
-2022-06-24 14:03:57,840 [main] INFO SD_OrderProcess - Operation tab is not selected
-2022-06-24 14:03:58,439 [main] INFO SD_OrderProcess - Click on Operation Tab
-2022-06-24 14:04:03,839 [main] INFO SD_OrderProcess - Clear search input
-2022-06-24 14:04:04,052 [main] INFO SD_OrderProcess - Enter PickUpID in Search input
-2022-06-24 14:04:04,379 [main] INFO SD_OrderProcess - Click on Search button
-2022-06-24 14:04:19,812 [main] INFO SD_OrderProcess - Searched Job is displayed in edit mode
-2022-06-24 14:04:20,084 [main] INFO SD_OrderProcess - Current stage of the order is=Drop @ Origin
-2022-06-24 14:04:20,085 [main] INFO SD_OrderProcess - Job is moved to Drop@Origin stage successfully
-2022-06-24 14:04:20,124 [main] INFO SD_OrderProcess - Current stage of the order is=Drop @ Origin
-2022-06-24 14:04:20,238 [main] INFO SD_OrderProcess - ZoneID of is==EDT
-2022-06-24 14:04:20,473 [main] INFO SD_OrderProcess - 04:34
-2022-06-24 14:05:01,126 [main] INFO SD_OrderProcess - Clicked on Drop button
-2022-06-24 14:05:04,424 [main] INFO SD_OrderProcess - Message:-The Air Bill is required for DL Airline.
-2022-06-24 14:05:19,369 [main] INFO SD_OrderProcess - AirBill editor is opened
-2022-06-24 14:05:20,003 [main] INFO SD_OrderProcess - Entered AirBill
-2022-06-24 14:05:20,826 [main] INFO SD_OrderProcess - Entered Description
-2022-06-24 14:05:21,407 [main] INFO SD_OrderProcess - Entered NoOFPieces
-2022-06-24 14:05:22,108 [main] INFO SD_OrderProcess - Entered Total Weight
-2022-06-24 14:05:25,292 [main] INFO SD_OrderProcess - Clicked on Track button
-2022-06-24 14:05:25,414 [main] INFO SD_OrderProcess - Switched to Track window
-2022-06-24 14:05:34,795 [main] INFO SD_OrderProcess - Switched to Track window
-2022-06-24 14:05:40,925 [main] INFO SD_OrderProcess - Closed Track window
-2022-06-24 14:05:40,968 [main] INFO SD_OrderProcess - Switched to main window
-2022-06-24 14:05:42,396 [main] INFO SD_OrderProcess - Clicked on Drop button
-2022-06-24 14:05:54,850 [main] INFO SD_OrderProcess - Clear search input
-2022-06-24 14:05:55,032 [main] INFO SD_OrderProcess - Enter PickUpID in Search input
-2022-06-24 14:05:55,362 [main] INFO SD_OrderProcess - Click on Search button
-2022-06-24 14:06:03,485 [main] INFO SD_OrderProcess - Job is moved to Send Del Alert successfully
-2022-06-24 14:06:03,730 [main] INFO SD_OrderProcess - ServiceID is==SD
-2022-06-24 14:06:03,968 [main] INFO SD_OrderProcess - PickUpID is==3407902
-2022-06-24 14:06:54,434 [main] INFO SD_OrderProcess - Operation tab is not selected
-2022-06-24 14:06:57,985 [main] INFO SD_OrderProcess - Click on Operation Tab
-2022-06-24 14:07:05,497 [main] INFO SD_OrderProcess - Clear search input
-2022-06-24 14:07:05,717 [main] INFO SD_OrderProcess - Enter PickUpID in Search input
-2022-06-24 14:07:11,095 [main] INFO SD_OrderProcess - Click on Search button
-2022-06-24 14:07:21,840 [main] INFO SD_OrderProcess - Searched Job is displayed in edit mode
-2022-06-24 14:07:24,712 [main] INFO SD_OrderProcess - Current stage of the order is=Confirm Del Alert
-2022-06-24 14:07:24,805 [main] INFO SD_OrderProcess - Current stage of the order is=Confirm Del Alert
-2022-06-24 14:07:25,313 [main] INFO SD_OrderProcess - Clicked on CONFIRM button
-2022-06-24 14:07:25,688 [main] INFO SD_OrderProcess - Clicked on Close button
-2022-06-24 14:07:34,003 [main] INFO SD_OrderProcess - Clear search input
-2022-06-24 14:07:34,229 [main] INFO SD_OrderProcess - Enter PickUpID in Search input
-2022-06-24 14:07:34,608 [main] INFO SD_OrderProcess - Click on Search button
-2022-06-24 14:08:35,936 [main] INFO SD_OrderProcess - Job is moved to ON BOARD stage successfully
-2022-06-24 14:08:35,938 [main] INFO SD_OrderProcess - =====SD Order Processing Test End=====
-2022-06-24 14:08:36,811 [main] INFO SD_OrderProcess - Clicked on LogOut
-2022-06-24 14:08:44,555 [main] INFO SD_OrderProcess - ====Sending Email=====
+2022-06-30 16:24:33,742 [main] INFO OrderProcessing - initialization of the properties file is done
+2022-06-30 16:24:34,084 [main] INFO io.github.bonigarcia.wdm.WebDriverManager - Using chromedriver 103.0.5060.53 (since Google Chrome 103 is installed in your machine)
+2022-06-30 16:24:34,105 [main] INFO io.github.bonigarcia.wdm.WebDriverManager - Exporting webdriver.chrome.driver as C:\Users\rprajapati\.m2\repository\webdriver\chromedriver\win32\103.0.5060.53\chromedriver.exe
+2022-06-30 16:24:41,709 [main] INFO OrderProcessing - Url opened
+2022-06-30 16:24:52,933 [main] INFO OrderProcessing - =====LOC Order Processing Test Start=====
+2022-06-30 16:24:52,936 [main] INFO OrderProcessing - total No of Rows=11
+2022-06-30 16:24:52,939 [main] INFO OrderProcessing - total No of Columns=3
+2022-06-30 16:24:53,170 [main] INFO OrderProcessing - Click on Operations
+2022-06-30 16:24:56,252 [main] INFO OrderProcessing - Click on Task Log
+2022-06-30 16:24:56,402 [main] INFO OrderProcessing - ServiceID is==LOC
+2022-06-30 16:24:56,407 [main] INFO OrderProcessing - PickUpID is==3412397
+2022-06-30 16:25:46,477 [main] INFO OrderProcessing - Operation tab is not selected
+2022-06-30 16:25:46,797 [main] INFO OrderProcessing - Click on Operation Tab
+2022-06-30 16:25:50,658 [main] INFO OrderProcessing - Clear search input
+2022-06-30 16:25:50,739 [main] INFO OrderProcessing - Enter PickUpID in Search input
+2022-06-30 16:25:50,942 [main] INFO OrderProcessing - Click on Search button
+2022-06-30 16:25:55,432 [main] INFO OrderProcessing - Job is not exist with the search parameters
+2022-06-30 16:25:55,433 [main] INFO OrderProcessing - =====LOC Order Processing Test End=====
+2022-06-30 16:25:55,447 [main] INFO OrderProcessing - =====SD Order Processing Test Start=====
+2022-06-30 16:25:55,450 [main] INFO OrderProcessing - total No of Rows=11
+2022-06-30 16:25:55,455 [main] INFO OrderProcessing - total No of Columns=3
+2022-06-30 16:26:00,681 [main] INFO OrderProcessing - Click on Operations
+2022-06-30 16:26:05,996 [main] INFO OrderProcessing - Click on Task Log
+2022-06-30 16:26:06,180 [main] INFO OrderProcessing - ServiceID is==SD
+2022-06-30 16:26:06,183 [main] INFO OrderProcessing - PickUpID is==3412398
+2022-06-30 16:26:06,220 [main] INFO OrderProcessing - Operation tab is already selected
+2022-06-30 16:26:06,287 [main] INFO OrderProcessing - Clear search input
+2022-06-30 16:26:06,355 [main] INFO OrderProcessing - Enter PickUpID in Search input
+2022-06-30 16:26:06,535 [main] INFO OrderProcessing - Click on Search button
+2022-06-30 16:26:16,043 [main] INFO OrderProcessing - Searched Job is displayed in edit mode
+2022-06-30 16:26:16,257 [main] INFO OrderProcessing - Clicked on Memo
+2022-06-30 16:26:17,513 [main] INFO OrderProcessing - Total no of memo is/are=(1)
+2022-06-30 16:26:17,661 [main] INFO OrderProcessing - Entered value in memo
+2022-06-30 16:26:17,735 [main] INFO OrderProcessing - Clicked on Save button
+2022-06-30 16:26:17,767 [main] INFO OrderProcessing - Clicked on Close button of Memo
+2022-06-30 16:26:19,839 [main] INFO OrderProcessing - Clicked on Upload
+2022-06-30 16:26:21,574 [main] INFO OrderProcessing - Click on plus sign
+2022-06-30 16:26:21,786 [main] INFO OrderProcessing - Enter doc name
+2022-06-30 16:26:21,851 [main] INFO OrderProcessing - Click on select file
+2022-06-30 16:26:23,925 [main] INFO OrderProcessing - Enter path of the file
+2022-06-30 16:26:26,002 [main] INFO OrderProcessing - File is uploaded successfully
+2022-06-30 16:26:28,039 [main] INFO OrderProcessing - File is uploaded successfully
+2022-06-30 16:26:30,164 [main] INFO OrderProcessing - Clicked on Map
+2022-06-30 16:26:35,981 [main] INFO OrderProcessing - Clicked on Close button of Map
+2022-06-30 16:26:38,033 [main] INFO OrderProcessing - Current stage of the order is=Pickup
+2022-06-30 16:26:38,033 [main] INFO OrderProcessing - Job is moved to PICKUP stage successfully
+2022-06-30 16:26:38,052 [main] INFO OrderProcessing - Current stage of the order is=Pickup
+2022-06-30 16:26:42,915 [main] INFO OrderProcessing - ZoneID of is==EDT
+2022-06-30 16:26:43,106 [main] INFO OrderProcessing - 06:56
+2022-06-30 16:26:43,534 [main] INFO OrderProcessing - Clicked on PICKUP button
+2022-06-30 16:27:33,685 [main] INFO OrderProcessing - Dialogue is not exist
+2022-06-30 16:27:33,786 [main] INFO OrderProcessing - Clear search input
+2022-06-30 16:27:33,856 [main] INFO OrderProcessing - Enter PickUpID in Search input
+2022-06-30 16:27:34,026 [main] INFO OrderProcessing - Click on Search button
+2022-06-30 16:28:33,548 [main] INFO OrderProcessing - Job is moved to Drop@Origin stage successfully
+2022-06-30 16:28:33,579 [main] INFO OrderProcessing - Current stage of the order is=Drop @ Origin
+2022-06-30 16:28:35,650 [main] INFO OrderProcessing - ZoneID of is==EDT
+2022-06-30 16:28:35,834 [main] INFO OrderProcessing - 06:58
+2022-06-30 16:28:36,100 [main] INFO OrderProcessing - Clicked on Drop button
+2022-06-30 16:28:36,146 [main] INFO OrderProcessing - Message:-The Air Bill is required for AA Airline.
+2022-06-30 16:28:36,267 [main] INFO OrderProcessing - AirBill editor is opened
+2022-06-30 16:28:36,530 [main] INFO OrderProcessing - Entered AirBill
+2022-06-30 16:28:36,845 [main] INFO OrderProcessing - Entered Description
+2022-06-30 16:28:37,078 [main] INFO OrderProcessing - Entered NoOFPieces
+2022-06-30 16:28:37,309 [main] INFO OrderProcessing - Entered Total Weight
+2022-06-30 16:28:37,506 [main] INFO OrderProcessing - Clicked on Track button
+2022-06-30 16:28:37,579 [main] INFO OrderProcessing - Switched to Track window
+2022-06-30 16:28:42,715 [main] INFO OrderProcessing - Switched to Track window
+2022-06-30 16:28:47,872 [main] INFO OrderProcessing - Closed Track window
+2022-06-30 16:28:47,891 [main] INFO OrderProcessing - Switched to main window
+2022-06-30 16:28:48,468 [main] INFO OrderProcessing - Clicked on Drop button
+2022-06-30 16:28:54,352 [main] INFO OrderProcessing - Clear search input
+2022-06-30 16:28:54,427 [main] INFO OrderProcessing - Enter PickUpID in Search input
+2022-06-30 16:28:54,602 [main] INFO OrderProcessing - Click on Search button
+2022-06-30 16:28:59,026 [main] INFO OrderProcessing - Job is moved to Send Del Alert successfully
+2022-06-30 16:28:59,029 [main] INFO OrderProcessing - ServiceID is==SD
+2022-06-30 16:28:59,031 [main] INFO OrderProcessing - PickUpID is==3409920
+2022-06-30 16:29:49,136 [main] INFO OrderProcessing - Operation tab is not selected
+2022-06-30 16:29:49,295 [main] INFO OrderProcessing - Click on Operation Tab
+2022-06-30 16:29:57,010 [main] INFO OrderProcessing - Clear search input
+2022-06-30 16:29:57,077 [main] INFO OrderProcessing - Enter PickUpID in Search input
+2022-06-30 16:29:57,252 [main] INFO OrderProcessing - Click on Search button
+2022-06-30 16:30:05,004 [main] INFO OrderProcessing - Searched Job is displayed in edit mode
+2022-06-30 16:30:05,203 [main] INFO OrderProcessing - Clicked on Memo
+2022-06-30 16:30:05,905 [main] INFO OrderProcessing - Total no of memo is/are=(6)
+2022-06-30 16:30:06,037 [main] INFO OrderProcessing - Entered value in memo
+2022-06-30 16:30:06,109 [main] INFO OrderProcessing - Clicked on Save button
+2022-06-30 16:30:06,143 [main] INFO OrderProcessing - Clicked on Close button of Memo
+2022-06-30 16:30:08,889 [main] INFO OrderProcessing - Clicked on Upload
+2022-06-30 16:30:09,645 [main] INFO OrderProcessing - Click on plus sign
+2022-06-30 16:30:09,771 [main] INFO OrderProcessing - Enter doc name
+2022-06-30 16:30:10,763 [main] INFO OrderProcessing - Click on select file
+2022-06-30 16:30:12,828 [main] INFO OrderProcessing - Enter path of the file
+2022-06-30 16:30:14,911 [main] INFO OrderProcessing - File is uploaded successfully
+2022-06-30 16:30:16,951 [main] INFO OrderProcessing - File is uploaded successfully
+2022-06-30 16:30:19,153 [main] INFO OrderProcessing - Clicked on Map
+2022-06-30 16:30:24,404 [main] INFO OrderProcessing - Clicked on Close button of Map
+2022-06-30 16:30:26,441 [main] INFO OrderProcessing - Current stage of the order is=Confirm Del Alert
+2022-06-30 16:30:26,459 [main] INFO OrderProcessing - Current stage of the order is=Confirm Del Alert
+2022-06-30 16:30:28,697 [main] INFO OrderProcessing - Clicked on CONFIRM button
+2022-06-30 16:30:28,867 [main] INFO OrderProcessing - Clicked on Close button
+2022-06-30 16:30:34,998 [main] INFO OrderProcessing - Clear search input
+2022-06-30 16:30:35,068 [main] INFO OrderProcessing - Enter PickUpID in Search input
+2022-06-30 16:30:35,235 [main] INFO OrderProcessing - Click on Search button
+2022-06-30 16:31:33,840 [main] INFO OrderProcessing - Job is moved to ON BOARD stage successfully
+2022-06-30 16:31:33,842 [main] INFO OrderProcessing - =====SD Order Processing Test End=====
+2022-06-30 16:31:34,294 [main] INFO OrderProcessing - Clicked on LogOut
+2022-06-30 16:31:36,641 [main] INFO OrderProcessing - ====Sending Email=====

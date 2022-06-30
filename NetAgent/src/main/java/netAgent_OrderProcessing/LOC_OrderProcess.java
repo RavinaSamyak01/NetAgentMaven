@@ -236,8 +236,9 @@ public class LOC_OrderProcess extends BaseInit {
 						logger.info("Current stage of the order is=" + Orderstage);
 						msg.append("Stage==" + Orderstage + "\n");
 
-						WebElement DelZone = Driver.findElement(By.id("lblactdltz"));
-						act.moveToElement(DelZone).build().perform();
+						WebElement Deliver = Driver.findElement(By.id("lblAddress"));
+						js.executeScript("arguments[0].scrollIntoView();", Deliver);
+						Thread.sleep(2000);
 
 						// --Deliver Time
 
@@ -395,8 +396,9 @@ public class LOC_OrderProcess extends BaseInit {
 					logger.info("Current stage of the order is=" + Orderstage);
 					msg.append("Stage==" + Orderstage + "\n");
 
-					WebElement DelZone = Driver.findElement(By.id("lblactdltz"));
-					act.moveToElement(DelZone).build().perform();
+					WebElement Deliver = Driver.findElement(By.id("lblAddress"));
+					js.executeScript("arguments[0].scrollIntoView();", Deliver);
+					Thread.sleep(2000);
 
 					// --Deliver Time
 
@@ -456,7 +458,7 @@ public class LOC_OrderProcess extends BaseInit {
 						WebElement NoData = Driver.findElement(By.className("dx-datagrid-nodata"));
 						if (NoData.isDisplayed()) {
 							logger.info("Job is Delivered successfully");
-							msg.append("Moved to Stage==Delivered" + "\n");
+							msg.append("Moved to Stage==Delivered" + "\n\n");
 
 						}
 					} catch (Exception NoData) {
@@ -476,8 +478,9 @@ public class LOC_OrderProcess extends BaseInit {
 				logger.info("Current stage of the order is=" + Orderstage);
 				msg.append("Stage==" + Orderstage + "\n");
 
-				WebElement DelZone = Driver.findElement(By.id("lblactdltz"));
-				act.moveToElement(DelZone).build().perform();
+				WebElement Deliver = Driver.findElement(By.id("lblAddress"));
+				js.executeScript("arguments[0].scrollIntoView();", Deliver);
+				Thread.sleep(2000);
 
 				// --Deliver Time
 
@@ -556,13 +559,16 @@ public class LOC_OrderProcess extends BaseInit {
 				WebElement NoData = Driver.findElement(By.className("dx-datagrid-nodata"));
 				if (NoData.isDisplayed()) {
 					logger.info("Job is not exist with the search parameters");
+					msg.append("Job is not exist with the search parameters" + "\n\n");
 
 				}
 			} catch (Exception OnBoard) {
 
 				String Orderstage = Driver.findElement(By.xpath("//strong/span[@class=\"ng-binding\"]")).getText();
 				logger.info("Current stage of the order is=" + Orderstage);
+				msg.append("Current stage of the order is=" + Orderstage + "\n");
 				logger.info("Issue in Order stage==" + Orderstage);
+				msg.append("Issue in Order stage==" + Orderstage + "\n\n");
 				getScreenshot(Driver, "LOCStageIssue_" + Orderstage);
 
 			}

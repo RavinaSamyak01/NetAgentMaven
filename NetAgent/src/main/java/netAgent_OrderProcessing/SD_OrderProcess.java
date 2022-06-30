@@ -166,8 +166,8 @@ public class SD_OrderProcess extends BaseInit {
 
 						// js.executeScript("document.body.style.zoom = '80%';");
 
-						WebElement DArrtime = Driver.findElement(By.id("lnksave"));
-						act.moveToElement(DArrtime).build().perform();
+						WebElement DArrtime = Driver.findElement(By.id("lblAddress"));
+						js.executeScript("arguments[0].scrollIntoView();", DArrtime);
 						act.moveToElement(DArrtime).build().perform();
 
 						// js.executeScript("arguments[0].scrollIntoView();", DArrtime);
@@ -242,6 +242,7 @@ public class SD_OrderProcess extends BaseInit {
 
 							WebElement DelAtt = Driver.findElement(By.id("lblDeliveryPersonToSee"));
 							js.executeScript("arguments[0].scrollIntoView();", DelAtt);
+							Thread.sleep(2000);
 
 							// --Drop Time
 
@@ -409,8 +410,8 @@ public class SD_OrderProcess extends BaseInit {
 
 					// js.executeScript("document.body.style.zoom = '80%';");
 
-					WebElement DArrtime = Driver.findElement(By.id("lnksave"));
-					act.moveToElement(DArrtime).build().perform();
+					WebElement DArrtime = Driver.findElement(By.id("lblAddress"));
+					js.executeScript("arguments[0].scrollIntoView();", DArrtime);
 					act.moveToElement(DArrtime).build().perform();
 
 					// js.executeScript("arguments[0].scrollIntoView();", DArrtime);
@@ -483,6 +484,7 @@ public class SD_OrderProcess extends BaseInit {
 
 						WebElement DelAtt = Driver.findElement(By.id("lblDeliveryPersonToSee"));
 						js.executeScript("arguments[0].scrollIntoView();", DelAtt);
+						Thread.sleep(2000);
 
 						// --Drop Time
 
@@ -647,6 +649,7 @@ public class SD_OrderProcess extends BaseInit {
 
 					WebElement DelAtt = Driver.findElement(By.id("lblDeliveryPersonToSee"));
 					js.executeScript("arguments[0].scrollIntoView();", DelAtt);
+					Thread.sleep(2000);
 
 					// --Drop Time
 
@@ -806,8 +809,10 @@ public class SD_OrderProcess extends BaseInit {
 					msg.append("Moved to Stage==" + Orderstage + "\n");
 
 					// --Confirm button
+					WebElement Delivery = Driver.findElement(By.id("lblDeliverAddress"));
+					js.executeScript("arguments[0].scrollIntoView();", Delivery);
+					Thread.sleep(2000);
 					WebElement CondirmP = Driver.findElement(By.id("lnkConfPick"));
-					js.executeScript("arguments[0].scrollIntoView();", CondirmP);
 					act.moveToElement(CondirmP).build().perform();
 					js.executeScript("arguments[0].click();", CondirmP);
 					logger.info("Clicked on CONFIRM button");
@@ -864,6 +869,7 @@ public class SD_OrderProcess extends BaseInit {
 					WebElement NoData = Driver.findElement(By.className("dx-datagrid-nodata"));
 					if (NoData.isDisplayed()) {
 						logger.info("Job is not exist with the search parameters");
+						msg.append("Job is not exist with the search parameters" + "\n\n");
 
 					}
 				} catch (Exception OnBoard) {
@@ -881,6 +887,8 @@ public class SD_OrderProcess extends BaseInit {
 								.getText();
 						logger.info("Current stage of the order is=" + Orderstage);
 						logger.info("Issue in Order stage==" + Orderstage);
+						msg.append("Current stage of the order is=" + Orderstage + "\n");
+						msg.append("Issue in Order stage==" + Orderstage + "\n\n");
 						getScreenshot(Driver, "SDStageIssue_" + Orderstage);
 
 					}

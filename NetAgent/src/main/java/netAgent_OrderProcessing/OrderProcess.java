@@ -7223,6 +7223,7 @@ public class OrderProcess extends BaseInit {
 
 	public void upload(String PID) throws IOException, InterruptedException {
 		WebDriverWait wait = new WebDriverWait(Driver, 50);
+		JavascriptExecutor js = (JavascriptExecutor) Driver;
 		Driver.findElement(By.id("hlkUploadDocument")).click();
 		logger.info("Clicked on Upload");
 		wait.until(ExpectedConditions.invisibilityOfElementLocated(By.xpath("//*[@class=\"ajax-loadernew\"]")));
@@ -7260,7 +7261,9 @@ public class OrderProcess extends BaseInit {
 		} catch (Exception e) {
 			logger.info("File is uploaded successfully");
 		}
-		Driver.findElement(By.id("btnOk")).click();
+		WebElement UpLoadOK=Driver.findElement(By.id("btnOk"));
+		js.executeScript("arguments[0].click();", UpLoadOK);
+
 		Thread.sleep(2000);
 
 	}
