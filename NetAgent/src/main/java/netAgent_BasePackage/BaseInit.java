@@ -92,7 +92,7 @@ public class BaseInit {
 			options.addArguments("--proxy-bypass-list=*");
 			options.addArguments("--disable-extensions");
 			options.addArguments("--no-sandbox");
-			//options.addArguments("--start-maximized");
+			// options.addArguments("--start-maximized");
 			// options.addArguments("--headless");
 			String downloadFilepath = System.getProperty("user.dir") + "\\src\\main\\resources\\Downloads";
 			HashMap<String, Object> chromePrefs = new HashMap<String, Object>();
@@ -635,13 +635,12 @@ public class BaseInit {
 		try {
 //			/kunjan.modi@samyak.com, pgandhi@samyak.com,parth.doshi@samyak.com
 
-			SendEmail.sendMail("ravina.prajapati@samyak.com", subject, msg.toString(), File);
+			// SendEmail.sendMail("ravina.prajapati@samyak.com", subject, msg.toString(),
+			// File);
 
-			/*
-			 * SendEmail.
-			 * sendMail("ravina.prajapati@samyak.com, asharma@samyak.com, parth.doshi@samyak.com"
-			 * , subject, msg.toString(), File);
-			 */
+			SendEmail.sendMail("ravina.prajapati@samyak.com, asharma@samyak.com, parth.doshi@samyak.com", subject,
+					msg.toString(), File);
+
 			// SendEmail.sendMail("ravina.prajapati@samyak.com, asharma@samyak.com
 			// ,parth.doshi@samyak.com", subject, msg.toString(), File);
 

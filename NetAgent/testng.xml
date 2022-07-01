@@ -2,7 +2,12 @@
 <suite name="NetAgentSmokeTest">
 
 
-	<!--<test thread-count="5" name="ContactUS">
+	<!--
+	
+	
+	-->
+
+	<test thread-count="5" name="ContactUS">
 		<classes>
 			<class name="netAgent_LogOutDiv.ContactUS"></class>
 		</classes>
@@ -18,7 +23,7 @@
 			<class name="netAgent_LogOutDiv.AgentElevatesRiskTraining"></class>
 		</classes>
 	</test>
-	
+
 	<test thread-count="5" name="TaskLog">
 		<classes>
 			<class name="netAgent_OperationsTab.TaskLog"></class>
@@ -89,7 +94,6 @@
 			<class name="netAgent_Inventory.ASNLog"></class>
 		</classes>
 	</test>
-	
 
 
 	<test thread-count="5" name="Agent Activity">
@@ -168,12 +172,7 @@
 			<class name="netAgent_Preferences.UserPreferences"></class>
 		</classes>
 	</test>
-	
-	
-	-->
 
-
-	
 	<test thread-count="5" name="OrderProcessing">
 		<classes>
 			<class name="netAgent_OperationsTab.OrderProcessing"></class>

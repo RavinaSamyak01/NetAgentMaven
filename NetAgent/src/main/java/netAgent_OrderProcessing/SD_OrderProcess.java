@@ -21,7 +21,8 @@ import netAgent_BasePackage.BaseInit;
 public class SD_OrderProcess extends BaseInit {
 
 	@Test
-	public void orderProcessSDJOB() throws EncryptedDocumentException, InvalidFormatException, IOException {
+	public void orderProcessSDJOB()
+			throws EncryptedDocumentException, InvalidFormatException, IOException, InterruptedException {
 
 		WebDriverWait wait = new WebDriverWait(Driver, 50);
 		JavascriptExecutor js = (JavascriptExecutor) Driver;
@@ -40,9 +41,9 @@ public class SD_OrderProcess extends BaseInit {
 		wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//a[@id=\"idOperations\"]")));
 		WebElement OperationMenu = Driver.findElement(By.xpath("//a[@id=\"idOperations\"]"));
 		act.moveToElement(OperationMenu).build().perform();
-		js.executeScript("arguments[0].click();", OperationMenu);
-
+		act.moveToElement(OperationMenu).click().perform();
 		logger.info("Click on Operations");
+
 		wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//a[@id=\"idTask\"]")));
 		WebElement TaskLogMenu = Driver.findElement(By.xpath("//a[@id=\"idTask\"]"));
 		act.moveToElement(TaskLogMenu).build().perform();
@@ -63,10 +64,10 @@ public class SD_OrderProcess extends BaseInit {
 			String PUID = getData("OrderProcessing", row, 1);
 			logger.info("PickUpID is==" + PUID);
 			msg.append("PickUpID==" + PUID + "\n");
-
+			Thread.sleep(2000);
 			try {
 				wait.until(ExpectedConditions
-						.visibilityOfElementLocated(By.xpath("//*[@id=\"operation\"][contains(@class,'active ')]")));
+						.visibilityOfElementLocated(By.xpath("//*[@id=\"operation\"][contains(@class,'active')]")));
 				logger.info("Operation tab is already selected");
 
 			} catch (Exception Operation) {
@@ -84,6 +85,7 @@ public class SD_OrderProcess extends BaseInit {
 			try {
 				wait.until(ExpectedConditions.visibilityOfElementLocated(By.id("txtBasicSearch2")));
 				Driver.findElement(By.id("txtBasicSearch2")).clear();
+				Driver.findElement(By.id("txtBasicSearch2")).clear();
 				logger.info("Clear search input");
 				Driver.findElement(By.id("txtBasicSearch2")).sendKeys(PUID);
 				logger.info("Enter PickUpID in Search input");
@@ -98,17 +100,22 @@ public class SD_OrderProcess extends BaseInit {
 					getScreenshot(Driver, "SDOrderEditor_" + PUID);
 				}
 
-				// --Memo
-				OrderProcess OP = new OrderProcess();
-				OP.memo(PUID);
+				if (row == 2) {
+					msg.append("\n\n");
+					// --Memo
 
-				// -Notification OP
+					OrderProcess OP = new OrderProcess();
+					OP.memo(PUID);
 
-				// Upload
-				OP.upload(PUID);
+					// -Notification
+					OP.notification(PUID);
 
-				// Map
-				OP.map(PUID);
+					// Upload
+					OP.upload(PUID);
+
+					// Map
+					OP.map(PUID);
+				}
 
 				// --Get current stage of the order
 				String Orderstage = Driver.findElement(By.xpath("//strong/span[@class=\"ng-binding\"]")).getText();
@@ -806,7 +813,7 @@ public class SD_OrderProcess extends BaseInit {
 				} else if (Orderstage.equalsIgnoreCase("Confirm Del Alert")) {
 					Orderstage = Driver.findElement(By.xpath("//strong/span[@class=\"ng-binding\"]")).getText();
 					logger.info("Current stage of the order is=" + Orderstage);
-					msg.append("Moved to Stage==" + Orderstage + "\n");
+					msg.append("Current stage of the order is=" + Orderstage + "\n");
 
 					// --Confirm button
 					WebElement Delivery = Driver.findElement(By.id("lblDeliverAddress"));
@@ -896,6 +903,10 @@ public class SD_OrderProcess extends BaseInit {
 			}
 
 		}
+
+		Driver.findElement(By.id("imgNGLLogo")).click();
+		wait.until(ExpectedConditions.invisibilityOfElementLocated(By.xpath("//*[@class=\"ajax-loadernew\"]")));
+		wait.until(ExpectedConditions.visibilityOfAllElementsLocatedBy(By.className("welcomecontent")));
 
 		logger.info("=====SD Order Processing Test End=====");
 		msg.append("=====SD Order Processing Test End=====" + "\n\n");

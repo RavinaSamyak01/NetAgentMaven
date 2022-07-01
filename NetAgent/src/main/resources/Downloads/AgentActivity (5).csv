@@ -1,0 +1,17 @@
+﻿From_Date,To_Date
+06/21/2022,07/01/2022
+
+CourierId,VoucherNum,Courier_type,pieces,PickupId,VoucherNum2,pAddr1,Paddr21,City_State,Pu_Tm,VoucherNum3,dAddr1,Paddr22,Dcity_Dstate,Del_Tm,Textbox37,Total_Amount
+34769 -  AUTOMATION COURIER,,,,,,,,,,,,,,,,           TotalShipment : 10        Total PCS : 59        Total WT :  335      
+,32402665 / 06/22/2022,PU,PCS : 10     WT : 50.00,PU#   3407902,Automation,1525 14th St NW,,"WASHINGTON, DC 20005",PU TM : 6/23/2022 05:30,WASHINGTON NATL (DCA),1 Aviation Cir,,"WASHINGTON, DC 22202",DEL TM : 6/23/2022 08:12,,           TotalShipment : 10        Total PCS : 59        Total WT :  335      
+,32404652 / 06/24/2022,PU,PCS : 10     WT : 50.00,PU#   3409889,Automation,1525 14th St NW,,"WASHINGTON, DC 20005",PU TM : 6/24/2022 03:26,WASHINGTON NATL (DCA),1 Aviation Cir,,"WASHINGTON, DC 22202",DEL TM : 6/24/2022 04:34,,           TotalShipment : 10        Total PCS : 59        Total WT :  335      
+,32404683 / 06/24/2022,PU,PCS : 10     WT : 50.00,PU#   3409920,Automation,1525 14th St NW,,"WASHINGTON, DC 20005",PU TM : 6/24/2022 05:30,WASHINGTON NATL (DCA),1 Aviation Cir,,"WASHINGTON, DC 22202",DEL TM : 6/30/2022 06:07,,           TotalShipment : 10        Total PCS : 59        Total WT :  335      
+,32407161 / 06/28/2022,PU,PCS : 10     WT : 50.00,PU#   3412398,Automation,1525 14th St NW,,"WASHINGTON, DC 20005",PU TM : 6/30/2022 05:30,WASHINGTON NATL (DCA),1 Aviation Cir,,"WASHINGTON, DC 22202",DEL TM : 6/30/2022 06:58,,           TotalShipment : 10        Total PCS : 59        Total WT :  335      
+,32409008 / 06/30/2022,PU,PCS : 10     WT : 50.00,PU#   3414245,Automation,1525 14th St NW,,"WASHINGTON, DC 20005",PU TM : ,WASHINGTON NATL (DCA),1 Aviation Cir,,"WASHINGTON, DC 22202",DEL TM : ,,           TotalShipment : 10        Total PCS : 59        Total WT :  335      
+,32402663 / 06/22/2022,PU,PCS : 2     WT : 20.00,PU#   3407900,Automation,612 E Dallas Rd,Ste 200,"GRAPEVINE, TX 76051",PU TM : 6/23/2022 05:30,AutoTest,44 Folly Road,,"Charleston, SC 29407",DEL TM : 6/23/2022 08:05,,           TotalShipment : 10        Total PCS : 59        Total WT :  335      
+,32404522 / 06/24/2022,PU,PCS : 1     WT : 5.00,PU#   3409759,RAVINA OZA,ABHIJIT 1,,"PALOS HILLS, IL 60465",PU TM : 6/24/2022 01:04,AUTOMATION DEL,301 E 17TH STREET,,"BLUE ISLAND, IL 60406",DEL TM : 6/24/2022 01:06,,           TotalShipment : 10        Total PCS : 59        Total WT :  335      
+,32404684 / 06/24/2022,PU,PCS : 2     WT : 20.00,PU#   3409921,Automation,612 E Dallas Rd,Ste 200,"GRAPEVINE, TX 76051",PU TM : 6/26/2022 05:30,AutoTest,44 Folly Road,,"Charleston, SC 29407",DEL TM : 6/27/2022 00:53,,           TotalShipment : 10        Total PCS : 59        Total WT :  335      
+,32407160 / 06/27/2022,PU,PCS : 2     WT : 20.00,PU#   3412397,Automation,612 E Dallas Rd,Ste 200,"GRAPEVINE, TX 76051",PU TM : 6/30/2022 05:30,AutoTest,44 Folly Road,,"Charleston, SC 29407",DEL TM : 6/30/2022 06:49,,           TotalShipment : 10        Total PCS : 59        Total WT :  335      
+,32409007 / 06/30/2022,PU,PCS : 2     WT : 20.00,PU#   3414244,Automation,612 E Dallas Rd,Ste 200,"GRAPEVINE, TX 76051",PU TM : 6/30/2022 05:30,AutoTest,44 Folly Road,,"Charleston, SC 29407",DEL TM : 7/1/2022 00:45,,           TotalShipment : 10        Total PCS : 59        Total WT :  335      
+,,,,,,,,,,,,,,,           Shipment : 10        SubTotal PCS : 59        SubTotal WT :  335      ,           TotalShipment : 10        Total PCS : 59        Total WT :  335      
+

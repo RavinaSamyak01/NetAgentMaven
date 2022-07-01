@@ -7,8 +7,8 @@
         <methods>
           <include name="getResult"/>
           <include name="beforeMethod"/>
-          <include name="orderProcess"/>
           <include name="SendEmail"/>
+          <include name="orderProcessing"/>
           <include name="testMethodName"/>
         </methods>
       </class> <!-- netAgent_OperationsTab.OrderProcessing -->

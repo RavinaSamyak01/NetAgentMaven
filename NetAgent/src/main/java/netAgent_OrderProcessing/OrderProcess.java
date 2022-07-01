@@ -2936,7 +2936,7 @@ public class OrderProcess extends BaseInit {
 								wait.until(ExpectedConditions.elementToBeClickable(SerialNo));
 								SerialNo.clear();
 								SerialNo.sendKeys("SerialNo" + part);
-								logger.info("Enetered serial Number in " + part + " part");
+								logger.info("Entered serial Number in " + part + " part");
 
 								// --Enter Accepted Quantity
 								WebElement AccQty = Partrow.get(part).findElement(By.id("txtReceivedQty"));
@@ -2945,7 +2945,7 @@ public class OrderProcess extends BaseInit {
 								AccQty.clear();
 								AccQty.sendKeys("1");
 								AccQty.sendKeys(Keys.TAB);
-								logger.info("Enetered Accepted Quantity in " + part + " part");
+								logger.info("Entered Accepted Quantity in " + part + " part");
 								// --Click on Save
 								wait.until(ExpectedConditions.elementToBeClickable(By.id("idsaveicon")));
 								WebElement Save = Driver.findElement(By.id("idsaveicon"));
@@ -2965,7 +2965,7 @@ public class OrderProcess extends BaseInit {
 										wait.until(ExpectedConditions.elementToBeClickable(SerialNo));
 										SerialNo.clear();
 										SerialNo.sendKeys("SerialNo" + part);
-										logger.info("Enetered serial Number in " + part + " part");
+										logger.info("Entered serial Number in " + part + " part");
 
 										// --Enter Accepted Quantity
 										WebElement AccQty = Partrow1.get(partR).findElement(By.id("txtReceivedQty"));
@@ -2974,7 +2974,7 @@ public class OrderProcess extends BaseInit {
 										AccQty.clear();
 										AccQty.sendKeys("1");
 										AccQty.sendKeys(Keys.TAB);
-										logger.info("Enetered Accepted Quantity in " + part + " part");
+										logger.info("Entered Accepted Quantity in " + part + " part");
 										// --Click on Save
 										wait.until(ExpectedConditions.elementToBeClickable(By.id("idsaveicon")));
 										WebElement Save = Driver.findElement(By.id("idsaveicon"));
@@ -3004,7 +3004,7 @@ public class OrderProcess extends BaseInit {
 										AccQty.clear();
 										AccQty.sendKeys("1");
 										AccQty.sendKeys(Keys.TAB);
-										logger.info("Enetered Accepted Quantity in " + part + " part");
+										logger.info("Entered Accepted Quantity in " + part + " part");
 										// --Click on Save
 										wait.until(ExpectedConditions.elementToBeClickable(By.id("idsaveicon")));
 										WebElement Save = Driver.findElement(By.id("idsaveicon"));
@@ -7180,7 +7180,10 @@ public class OrderProcess extends BaseInit {
 		WebDriverWait wait = new WebDriverWait(Driver, 50);
 		JavascriptExecutor js = (JavascriptExecutor) Driver;
 
-		Driver.findElement(By.id("hlkMemo")).click();
+		logger.info("===Memo Test Start===");
+		msg.append("===Memo Test Start===" + "\n\n");
+
+		Driver.findElement(By.xpath("//*[@id=\"hlkMemo\"][contains(text(),'Memo')]")).click();
 		logger.info("Clicked on Memo");
 		wait.until(ExpectedConditions.invisibilityOfElementLocated(By.xpath("//*[@class=\"ajax-loadernew\"]")));
 		getScreenshot(Driver, "Memo_" + PID);
@@ -7203,11 +7206,17 @@ public class OrderProcess extends BaseInit {
 		js.executeScript("arguments[0].click();", memoClose);
 		logger.info("Clicked on Close button of Memo");
 		Thread.sleep(2000);
+
+		logger.info("===Memo Test End===");
+		msg.append("===Memo Test End===" + "\n\n");
 	}
 
 	public void notification(String PID) throws IOException, InterruptedException {
 		WebDriverWait wait = new WebDriverWait(Driver, 50);
 		JavascriptExecutor js = (JavascriptExecutor) Driver;
+
+		logger.info("===Notification Test Start===");
+		msg.append("===Notification Test Start===" + "\n\n");
 
 		Driver.findElement(By.id("hlkNotification")).click();
 		logger.info("Clicked on Notification");
@@ -7219,11 +7228,18 @@ public class OrderProcess extends BaseInit {
 		js.executeScript("arguments[0].click();", memoClose);
 		logger.info("Clicked on Close button of Notification");
 		Thread.sleep(2000);
+
+		logger.info("===Notification Test End===");
+		msg.append("===Notification Test End===" + "\n\n");
 	}
 
 	public void upload(String PID) throws IOException, InterruptedException {
 		WebDriverWait wait = new WebDriverWait(Driver, 50);
 		JavascriptExecutor js = (JavascriptExecutor) Driver;
+
+		logger.info("===Upload Test Start===");
+		msg.append("===Upload Test Start===" + "\n\n");
+
 		Driver.findElement(By.id("hlkUploadDocument")).click();
 		logger.info("Clicked on Upload");
 		wait.until(ExpectedConditions.invisibilityOfElementLocated(By.xpath("//*[@class=\"ajax-loadernew\"]")));
@@ -7242,12 +7258,16 @@ public class OrderProcess extends BaseInit {
 
 		Thread.sleep(2000);
 
+		wait.until(ExpectedConditions.visibilityOfAllElementsLocatedBy(By.xpath("//*[@ng-form=\"userForm\"]")));
+
+		// --Select File
+		Thread.sleep(2000);
 		String Fpath = "C:\\Users\\rprajapati\\git\\NetAgent\\NetAgentProcess\\Job Upload Doc STG.xls";
 		WebElement InFile = Driver.findElement(By.id("inputfile"));
 		InFile.sendKeys(Fpath);
-		logger.info("Enter path of the file");
-
+		logger.info("Select the file");
 		Thread.sleep(2000);
+
 		// --Click on Upload btn
 		Driver.findElement(By.id("btnUpload")).click();
 		logger.info("File is uploaded successfully");
@@ -7261,16 +7281,22 @@ public class OrderProcess extends BaseInit {
 		} catch (Exception e) {
 			logger.info("File is uploaded successfully");
 		}
-		WebElement UpLoadOK=Driver.findElement(By.id("btnOk"));
+		WebElement UpLoadOK = Driver.findElement(By.id("btnOk"));
 		js.executeScript("arguments[0].click();", UpLoadOK);
 
 		Thread.sleep(2000);
+
+		logger.info("===Upload Test End===");
+		msg.append("===Upload Test End===" + "\n\n");
 
 	}
 
 	public void map(String PID) throws IOException, InterruptedException {
 		WebDriverWait wait = new WebDriverWait(Driver, 50);
 		JavascriptExecutor js = (JavascriptExecutor) Driver;
+
+		logger.info("===Map Test Start===");
+		msg.append("===Map Test Start===" + "\n\n");
 
 		Driver.findElement(By.id("hlkMap")).click();
 		logger.info("Clicked on Map");
@@ -7283,12 +7309,18 @@ public class OrderProcess extends BaseInit {
 		js.executeScript("arguments[0].click();", memoClose);
 		logger.info("Clicked on Close button of Map");
 		Thread.sleep(2000);
+
+		logger.info("===Map Test End===");
+		msg.append("===Map Test End===" + "\n\n");
 	}
 
 	public void addPackage(String PID) throws IOException {
 		WebDriverWait wait = new WebDriverWait(Driver, 50);
 		JavascriptExecutor js = (JavascriptExecutor) Driver;
 		Actions act = new Actions(Driver);
+
+		logger.info("===Add Package Test Start===");
+		msg.append("===Add Package Test Start===" + "\n\n");
 
 		// Get the total package exist in current Job
 		List<WebElement> TotalPackage = Driver.findElements(
@@ -7320,11 +7352,18 @@ public class OrderProcess extends BaseInit {
 		js.executeScript("arguments[0].click();", memoClose);
 		logger.info("Clicked on Close button of Map");
 
+		logger.info("===Add Package Test End===");
+		msg.append("===Add Package Test End===" + "\n\n");
+
 	}
 
 	public void shipLabel(String PickUpID) throws IOException, InterruptedException {
 		WebDriverWait wait = new WebDriverWait(Driver, 50);
 		JavascriptExecutor js = (JavascriptExecutor) Driver;
+
+		logger.info("===ShipLabel Test Start===");
+		msg.append("===ShipLabel Test Start===" + "\n\n");
+
 		// --Ship Label Services
 		Driver.findElement(By.linkText("Ship Label Services")).click();
 		logger.info("Clicked on Ship Label Services");
@@ -7335,7 +7374,7 @@ public class OrderProcess extends BaseInit {
 		try {
 			// --Send Email
 			Driver.findElement(By.id("txtEmailLabelto")).sendKeys("Ravina.prajapati@samyak.com");
-			logger.info("Enetered EmailID");
+			logger.info("Entered EmailID");
 			Driver.findElement(By.id("btnSend")).click();
 			logger.info("Clicked on Send button");
 			// ErrorMsg
@@ -7351,7 +7390,7 @@ public class OrderProcess extends BaseInit {
 				// --Send Email
 				Driver.findElement(By.id("txtEmailLabelto")).clear();
 				Driver.findElement(By.id("txtEmailLabelto")).sendKeys("Ravina.prajapati@samyak.com");
-				logger.info("Enetered EmailID");
+				logger.info("Entered EmailID");
 				Driver.findElement(By.id("btnSend")).click();
 				logger.info("Clicked on Send button");
 				wait.until(ExpectedConditions.invisibilityOfElementLocated(By.xpath("//*[@class=\"ajax-loadernew\"]")));
@@ -7398,10 +7437,18 @@ public class OrderProcess extends BaseInit {
 		js.executeScript("arguments[0].click();", memoClose);
 		logger.info("Clicked on Close button of Memo");
 		Thread.sleep(2000);
+
+		logger.info("===ShipLabel Test End===");
+		msg.append("===ShipLabel Test End===" + "\n\n");
+
 	}
 
 	public void printPull(String PickUpID) throws InterruptedException, IOException {
 		WebDriverWait wait = new WebDriverWait(Driver, 50);
+
+		logger.info("===Print Pull Test Start===");
+		msg.append("===Print Pull Test Start===" + "\n\n");
+
 		// --Print pull Ticket
 		wait.until(ExpectedConditions.visibilityOfElementLocated(By.id("idprintpullticket")));
 		Driver.findElement(By.id("idprintpullticket")).click();
@@ -7421,6 +7468,9 @@ public class OrderProcess extends BaseInit {
 		Driver.switchTo().window(WindowHandlebefore);
 		logger.info("Switched to main window");
 		Thread.sleep(2000);
+
+		logger.info("===Print Pull Test End===");
+		msg.append("===Print Pull Test End===" + "\n\n");
 	}
 
 	public void dbNullError() {

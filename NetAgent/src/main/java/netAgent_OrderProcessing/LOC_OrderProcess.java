@@ -62,7 +62,7 @@ public class LOC_OrderProcess extends BaseInit {
 
 		try {
 			wait.until(ExpectedConditions
-					.visibilityOfElementLocated(By.xpath("//*[@id=\"operation\"][contains(@class,'active ')]")));
+					.visibilityOfElementLocated(By.xpath("//*[@id=\"operation\"][contains(@class,'active')]")));
 			logger.info("Operation tab is already selected");
 
 		} catch (Exception Operation) {
@@ -573,6 +573,10 @@ public class LOC_OrderProcess extends BaseInit {
 
 			}
 		}
+
+		Driver.findElement(By.id("imgNGLLogo")).click();
+		wait.until(ExpectedConditions.invisibilityOfElementLocated(By.xpath("//*[@class=\"ajax-loadernew\"]")));
+		wait.until(ExpectedConditions.visibilityOfAllElementsLocatedBy(By.className("welcomecontent")));
 
 		logger.info("=====LOC Order Processing Test End=====");
 		msg.append("=====LOC Order Processing Test End=====" + "\n\n");
