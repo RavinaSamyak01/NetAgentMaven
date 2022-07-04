@@ -1,6 +1,5 @@
 package netAgent_Admin;
 
-import org.apache.struts.action.Action;
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebElement;
@@ -48,7 +47,9 @@ public class UserList extends BaseInit {
 
 		// --Click on Search
 		wait.until(ExpectedConditions.elementToBeClickable(By.id("btnSearch")));
-		Driver.findElement(By.id("btnSearch")).click();
+		WebElement Search = Driver.findElement(By.id("btnSearch"));
+		act.moveToElement(Search).build().perform();
+		js.executeScript("arguments[0].click();", Search);
 		logger.info("Click on Search button");
 		wait.until(ExpectedConditions.invisibilityOfElementLocated(By.xpath("//*[@class=\"ajax-loadernew\"]")));
 
@@ -80,7 +81,9 @@ public class UserList extends BaseInit {
 
 		Thread.sleep(2000);
 		wait.until(ExpectedConditions.elementToBeClickable(By.id("btnSearch")));
-		Driver.findElement(By.id("btnSearch")).click();
+		Search = Driver.findElement(By.id("btnSearch"));
+		act.moveToElement(Search).build().perform();
+		js.executeScript("arguments[0].click();", Search);
 		logger.info("Click on Search button");
 		wait.until(ExpectedConditions.invisibilityOfElementLocated(By.xpath("//*[@class=\"ajax-loadernew\"]")));
 
@@ -107,7 +110,9 @@ public class UserList extends BaseInit {
 		logger.info("Entered Invalid FirstName");
 
 		wait.until(ExpectedConditions.elementToBeClickable(By.id("btnSearch")));
-		Driver.findElement(By.id("btnSearch")).click();
+		Search = Driver.findElement(By.id("btnSearch"));
+		act.moveToElement(Search).build().perform();
+		js.executeScript("arguments[0].click();", Search);
 		logger.info("Click on Search button");
 		wait.until(ExpectedConditions.invisibilityOfElementLocated(By.xpath("//*[@class=\"ajax-loadernew\"]")));
 
@@ -122,7 +127,9 @@ public class UserList extends BaseInit {
 		logger.info("Entered Invalid LastName");
 
 		wait.until(ExpectedConditions.elementToBeClickable(By.id("btnSearch")));
-		Driver.findElement(By.id("btnSearch")).click();
+		Search = Driver.findElement(By.id("btnSearch"));
+		act.moveToElement(Search).build().perform();
+		js.executeScript("arguments[0].click();", Search);
 		logger.info("Click on Search button");
 		wait.until(ExpectedConditions.invisibilityOfElementLocated(By.xpath("//*[@class=\"ajax-loadernew\"]")));
 
@@ -137,7 +144,9 @@ public class UserList extends BaseInit {
 		logger.info("Enter invalid LoginID");
 
 		wait.until(ExpectedConditions.elementToBeClickable(By.id("btnSearch")));
-		Driver.findElement(By.id("btnSearch")).click();
+		Search = Driver.findElement(By.id("btnSearch"));
+		act.moveToElement(Search).build().perform();
+		js.executeScript("arguments[0].click();", Search);
 		logger.info("Click on Search button");
 		wait.until(ExpectedConditions.invisibilityOfElementLocated(By.xpath("//*[@class=\"ajax-loadernew\"]")));
 

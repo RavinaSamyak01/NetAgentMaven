@@ -316,6 +316,15 @@ public class ASNLog extends BaseInit {
 			wait.until(ExpectedConditions.invisibilityOfElementLocated(By.xpath("//*[@class=\"ajax-loadernew\"]")));
 
 		}
+		try {
+			Driver.findElement(By.id("hlkBackToScreen")).click();
+			logger.info("Click on Back button");
+			wait.until(ExpectedConditions.invisibilityOfElementLocated(By.xpath("//*[@class=\"ajax-loadernew\"]")));
+
+		} catch (Exception e) {
+			System.out.println("There is no data with enetered date");
+			logger.info("There is no data with enetered date");
+		}
 		getScreenshot(Driver, "ASNLog_1");
 
 		Driver.findElement(By.id("txtTracking")).sendKeys("Test1234");

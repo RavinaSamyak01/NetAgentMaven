@@ -10,6 +10,7 @@ import org.apache.poi.EncryptedDocumentException;
 import org.apache.poi.openxml4j.exceptions.InvalidFormatException;
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
+import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.ExpectedConditions;
@@ -199,15 +200,23 @@ public class SD_OrderProcess extends BaseInit {
 						dateFormat.setTimeZone(TimeZone.getTimeZone(ZOneID));
 						logger.info(dateFormat.format(date));
 						PUPTime.sendKeys(dateFormat.format(date));
+						PUPTime.sendKeys(Keys.TAB);
 
 						// Scroll up
 						// js.executeScript("window.scrollBy(0,-250)");
 
 						// PickUp
-						WebElement Save = Driver.findElement(By.id("lnksave"));
-						act.moveToElement(Save).build().perform();
-						js.executeScript("arguments[0].click();", Save);
-						logger.info("Clicked on PICKUP button");
+						try {
+							WebElement Save = Driver.findElement(By.id("lnksave"));
+							act.moveToElement(Save).build().perform();
+							js.executeScript("arguments[0].click();", Save);
+							logger.info("Clicked on PICKUP button");
+						} catch (Exception saveeee) {
+							WebElement Save = Driver.findElement(By.id("lnksave"));
+							act.moveToElement(Save).build().perform();
+							act.moveToElement(Save).click().perform();
+							logger.info("Clicked on PICKUP button");
+						}
 
 						try {
 							wait.until(
@@ -271,10 +280,32 @@ public class SD_OrderProcess extends BaseInit {
 							DelTime.sendKeys(dateFormat.format(date));
 
 							// --Click on Drop
-							WebElement Drop = Driver.findElement(By.id("btnsavedelivery"));
-							act.moveToElement(Drop).build().perform();
-							js.executeScript("arguments[0].click();", Drop);
-							logger.info("Clicked on Drop button");
+
+							try {
+								WebElement Drop = Driver.findElement(By.id("btnsavedelivery"));
+								act.moveToElement(Drop).build().perform();
+								js.executeScript("arguments[0].click();", Drop);
+								logger.info("Clicked on Drop button");
+								wait.until(ExpectedConditions
+										.invisibilityOfElementLocated(By.xpath("//*[@class=\"ajax-loadernew\"]")));
+							} catch (Exception Dropp) {
+								try {
+									WebElement Drop = Driver.findElement(By.id("btnsavedelivery"));
+									wait.until(ExpectedConditions.visibilityOf(Drop));
+									wait.until(ExpectedConditions.elementToBeClickable(Drop));
+									act.moveToElement(Drop).build().perform();
+									act.moveToElement(Drop).click().perform();
+									logger.info("Clicked on Drop button");
+									wait.until(ExpectedConditions
+											.invisibilityOfElementLocated(By.xpath("//*[@class=\"ajax-loadernew\"]")));
+
+								} catch (Exception dropee) {
+									logger.info("Finally Clicked on Drop button");
+									wait.until(ExpectedConditions
+											.invisibilityOfElementLocated(By.xpath("//*[@class=\"ajax-loadernew\"]")));
+								}
+							}
+
 							try {
 								WebElement ErrorID = Driver.findElement(By.id("errorid"));
 								if (ErrorID.getText().contains("The Air Bill is required")) {
@@ -341,14 +372,30 @@ public class SD_OrderProcess extends BaseInit {
 									js.executeScript("window.scrollBy(0,-250)");
 
 									// --Click on Drop
-									Drop = Driver.findElement(By.id("btnsavedelivery"));
-									js.executeScript("arguments[0].scrollIntoView();", Drop);
-									act.moveToElement(Drop).build().perform();
-									act.moveToElement(Drop).build().perform();
-									js.executeScript("arguments[0].click();", Drop);
-									logger.info("Clicked on Drop button");
-									wait.until(ExpectedConditions
-											.invisibilityOfElementLocated(By.xpath("//*[@class=\"ajax-loadernew\"]")));
+									try {
+										WebElement Drop = Driver.findElement(By.id("btnsavedelivery"));
+										act.moveToElement(Drop).build().perform();
+										js.executeScript("arguments[0].click();", Drop);
+										logger.info("Clicked on Drop button");
+										wait.until(ExpectedConditions.invisibilityOfElementLocated(
+												By.xpath("//*[@class=\"ajax-loadernew\"]")));
+									} catch (Exception Dropp) {
+										try {
+											WebElement Drop = Driver.findElement(By.id("btnsavedelivery"));
+											wait.until(ExpectedConditions.visibilityOf(Drop));
+											wait.until(ExpectedConditions.elementToBeClickable(Drop));
+											act.moveToElement(Drop).build().perform();
+											act.moveToElement(Drop).click().perform();
+											logger.info("Clicked on Drop button");
+											wait.until(ExpectedConditions.invisibilityOfElementLocated(
+													By.xpath("//*[@class=\"ajax-loadernew\"]")));
+
+										} catch (Exception dropee) {
+											logger.info("Finally Clicked on Drop button");
+											wait.until(ExpectedConditions.invisibilityOfElementLocated(
+													By.xpath("//*[@class=\"ajax-loadernew\"]")));
+										}
+									}
 
 									wait.until(ExpectedConditions.visibilityOfElementLocated(By.id("txtBasicSearch2")));
 									Driver.findElement(By.id("txtBasicSearch2")).clear();
@@ -443,15 +490,23 @@ public class SD_OrderProcess extends BaseInit {
 					dateFormat.setTimeZone(TimeZone.getTimeZone(ZOneID));
 					logger.info(dateFormat.format(date));
 					PUPTime.sendKeys(dateFormat.format(date));
+					PUPTime.sendKeys(Keys.TAB);
 
 					// Scroll up
 					// js.executeScript("window.scrollBy(0,-250)");
 
 					// PickUp
-					WebElement Save = Driver.findElement(By.id("lnksave"));
-					act.moveToElement(Save).build().perform();
-					js.executeScript("arguments[0].click();", Save);
-					logger.info("Clicked on PICKUP button");
+					try {
+						WebElement Save = Driver.findElement(By.id("lnksave"));
+						act.moveToElement(Save).build().perform();
+						js.executeScript("arguments[0].click();", Save);
+						logger.info("Clicked on PICKUP button");
+					} catch (Exception saveeee) {
+						WebElement Save = Driver.findElement(By.id("lnksave"));
+						act.moveToElement(Save).build().perform();
+						act.moveToElement(Save).click().perform();
+						logger.info("Clicked on PICKUP button");
+					}
 
 					try {
 						wait.until(ExpectedConditions.visibilityOfAllElementsLocatedBy(By.className("modal-dialog")));
@@ -513,10 +568,30 @@ public class SD_OrderProcess extends BaseInit {
 						DelTime.sendKeys(dateFormat.format(date));
 
 						// --Click on Drop
-						WebElement Drop = Driver.findElement(By.id("btnsavedelivery"));
-						act.moveToElement(Drop).build().perform();
-						js.executeScript("arguments[0].click();", Drop);
-						logger.info("Clicked on Drop button");
+						try {
+							WebElement Drop = Driver.findElement(By.id("btnsavedelivery"));
+							act.moveToElement(Drop).build().perform();
+							js.executeScript("arguments[0].click();", Drop);
+							logger.info("Clicked on Drop button");
+							wait.until(ExpectedConditions
+									.invisibilityOfElementLocated(By.xpath("//*[@class=\"ajax-loadernew\"]")));
+						} catch (Exception Dropp) {
+							try {
+								WebElement Drop = Driver.findElement(By.id("btnsavedelivery"));
+								wait.until(ExpectedConditions.visibilityOf(Drop));
+								wait.until(ExpectedConditions.elementToBeClickable(Drop));
+								act.moveToElement(Drop).build().perform();
+								act.moveToElement(Drop).click().perform();
+								logger.info("Clicked on Drop button");
+								wait.until(ExpectedConditions
+										.invisibilityOfElementLocated(By.xpath("//*[@class=\"ajax-loadernew\"]")));
+
+							} catch (Exception dropee) {
+								logger.info("Finally Clicked on Drop button");
+								wait.until(ExpectedConditions
+										.invisibilityOfElementLocated(By.xpath("//*[@class=\"ajax-loadernew\"]")));
+							}
+						}
 						try {
 							WebElement ErrorID = Driver.findElement(By.id("errorid"));
 							if (ErrorID.getText().contains("The Air Bill is required")) {
@@ -583,14 +658,30 @@ public class SD_OrderProcess extends BaseInit {
 								js.executeScript("window.scrollBy(0,-250)");
 
 								// --Click on Drop
-								Drop = Driver.findElement(By.id("btnsavedelivery"));
-								js.executeScript("arguments[0].scrollIntoView();", Drop);
-								act.moveToElement(Drop).build().perform();
-								act.moveToElement(Drop).build().perform();
-								js.executeScript("arguments[0].click();", Drop);
-								logger.info("Clicked on Drop button");
-								wait.until(ExpectedConditions
-										.invisibilityOfElementLocated(By.xpath("//*[@class=\"ajax-loadernew\"]")));
+								try {
+									WebElement Drop = Driver.findElement(By.id("btnsavedelivery"));
+									act.moveToElement(Drop).build().perform();
+									js.executeScript("arguments[0].click();", Drop);
+									logger.info("Clicked on Drop button");
+									wait.until(ExpectedConditions
+											.invisibilityOfElementLocated(By.xpath("//*[@class=\"ajax-loadernew\"]")));
+								} catch (Exception Dropp) {
+									try {
+										WebElement Drop = Driver.findElement(By.id("btnsavedelivery"));
+										wait.until(ExpectedConditions.visibilityOf(Drop));
+										wait.until(ExpectedConditions.elementToBeClickable(Drop));
+										act.moveToElement(Drop).build().perform();
+										act.moveToElement(Drop).click().perform();
+										logger.info("Clicked on Drop button");
+										wait.until(ExpectedConditions.invisibilityOfElementLocated(
+												By.xpath("//*[@class=\"ajax-loadernew\"]")));
+
+									} catch (Exception dropee) {
+										logger.info("Finally Clicked on Drop button");
+										wait.until(ExpectedConditions.invisibilityOfElementLocated(
+												By.xpath("//*[@class=\"ajax-loadernew\"]")));
+									}
+								}
 
 								wait.until(ExpectedConditions.visibilityOfElementLocated(By.id("txtBasicSearch2")));
 								Driver.findElement(By.id("txtBasicSearch2")).clear();
@@ -677,11 +768,30 @@ public class SD_OrderProcess extends BaseInit {
 					logger.info(dateFormat.format(date));
 					DelTime.sendKeys(dateFormat.format(date));
 
-					// --Click on Drop
-					WebElement Drop = Driver.findElement(By.id("btnsavedelivery"));
-					act.moveToElement(Drop).build().perform();
-					js.executeScript("arguments[0].click();", Drop);
-					logger.info("Clicked on Drop button");
+					try {
+						WebElement Drop = Driver.findElement(By.id("btnsavedelivery"));
+						act.moveToElement(Drop).build().perform();
+						js.executeScript("arguments[0].click();", Drop);
+						logger.info("Clicked on Drop button");
+						wait.until(ExpectedConditions
+								.invisibilityOfElementLocated(By.xpath("//*[@class=\"ajax-loadernew\"]")));
+					} catch (Exception Dropp) {
+						try {
+							WebElement Drop = Driver.findElement(By.id("btnsavedelivery"));
+							wait.until(ExpectedConditions.visibilityOf(Drop));
+							wait.until(ExpectedConditions.elementToBeClickable(Drop));
+							act.moveToElement(Drop).build().perform();
+							act.moveToElement(Drop).click().perform();
+							logger.info("Clicked on Drop button");
+							wait.until(ExpectedConditions
+									.invisibilityOfElementLocated(By.xpath("//*[@class=\"ajax-loadernew\"]")));
+
+						} catch (Exception dropee) {
+							logger.info("Finally Clicked on Drop button");
+							wait.until(ExpectedConditions
+									.invisibilityOfElementLocated(By.xpath("//*[@class=\"ajax-loadernew\"]")));
+						}
+					}
 					try {
 						WebElement ErrorID = Driver.findElement(By.id("errorid"));
 						if (ErrorID.getText().contains("The Air Bill is required")) {
@@ -748,14 +858,30 @@ public class SD_OrderProcess extends BaseInit {
 							js.executeScript("window.scrollBy(0,-250)");
 
 							// --Click on Drop
-							Drop = Driver.findElement(By.id("btnsavedelivery"));
-							js.executeScript("arguments[0].scrollIntoView();", Drop);
-							act.moveToElement(Drop).build().perform();
-							act.moveToElement(Drop).build().perform();
-							js.executeScript("arguments[0].click();", Drop);
-							logger.info("Clicked on Drop button");
-							wait.until(ExpectedConditions
-									.invisibilityOfElementLocated(By.xpath("//*[@class=\"ajax-loadernew\"]")));
+							try {
+								WebElement Drop = Driver.findElement(By.id("btnsavedelivery"));
+								act.moveToElement(Drop).build().perform();
+								js.executeScript("arguments[0].click();", Drop);
+								logger.info("Clicked on Drop button");
+								wait.until(ExpectedConditions
+										.invisibilityOfElementLocated(By.xpath("//*[@class=\"ajax-loadernew\"]")));
+							} catch (Exception Dropp) {
+								try {
+									WebElement Drop = Driver.findElement(By.id("btnsavedelivery"));
+									wait.until(ExpectedConditions.visibilityOf(Drop));
+									wait.until(ExpectedConditions.elementToBeClickable(Drop));
+									act.moveToElement(Drop).build().perform();
+									act.moveToElement(Drop).click().perform();
+									logger.info("Clicked on Drop button");
+									wait.until(ExpectedConditions
+											.invisibilityOfElementLocated(By.xpath("//*[@class=\"ajax-loadernew\"]")));
+
+								} catch (Exception dropee) {
+									logger.info("Finally Clicked on Drop button");
+									wait.until(ExpectedConditions
+											.invisibilityOfElementLocated(By.xpath("//*[@class=\"ajax-loadernew\"]")));
+								}
+							}
 
 							wait.until(ExpectedConditions.visibilityOfElementLocated(By.id("txtBasicSearch2")));
 							Driver.findElement(By.id("txtBasicSearch2")).clear();
