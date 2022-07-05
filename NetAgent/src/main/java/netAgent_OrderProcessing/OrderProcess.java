@@ -7444,15 +7444,29 @@ public class OrderProcess extends BaseInit {
 	}
 
 	public void printPull(String PickUpID) throws InterruptedException, IOException {
-		WebDriverWait wait = new WebDriverWait(Driver, 50);
+		WebDriverWait wait = new WebDriverWait(Driver, 30);
 
 		logger.info("===Print Pull Test Start===");
 		msg.append("===Print Pull Test Start===" + "\n\n");
 
 		// --Print pull Ticket
-		wait.until(ExpectedConditions.visibilityOfElementLocated(By.id("idprintpullticket")));
-		Driver.findElement(By.id("idprintpullticket")).click();
-		logger.info("Clicked on Print Pull Ticket");
+		try {
+			wait.until(ExpectedConditions.visibilityOfElementLocated(By.id("idprintpullticket")));
+			Driver.findElement(By.id("idprintpullticket")).click();
+			logger.info("Clicked on Print Pull Ticket");
+		} catch (Exception PrintTicc) {
+			try {
+				wait.until(ExpectedConditions.visibilityOfElementLocated(By.id("idprintpull")));
+				Driver.findElement(By.id("idprintpull")).click();
+				logger.info("Clicked on Print Pull Ticket");
+			} catch (Exception PrintPullT3P) {
+				wait.until(ExpectedConditions.visibilityOfElementLocated(By.id("idprintticket")));
+				Driver.findElement(By.id("idprintticket")).click();
+				logger.info("Clicked on Print Pull Ticket");
+			}
+
+		}
+
 		wait.until(ExpectedConditions.invisibilityOfElementLocated(By.xpath("//*[@class=\"ajax-loadernew\"]")));
 		// Handle pull Print window
 		String WindowHandlebefore = Driver.getWindowHandle();

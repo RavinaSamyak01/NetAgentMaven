@@ -11,6 +11,7 @@ import netAgent_OrderProcessing.D3P_OrderProcess;
 import netAgent_OrderProcessing.H3P_OrderProcess;
 import netAgent_OrderProcessing.LOC_OrderProcess;
 import netAgent_OrderProcessing.SD_OrderProcess;
+import netAgent_OrderProcessing.T3PLAST_OrderProcess;
 
 public class OrderProcessing extends BaseInit {
 
@@ -33,6 +34,10 @@ public class OrderProcessing extends BaseInit {
 		// --D3P
 		D3P_OrderProcess D3P = new D3P_OrderProcess();
 		D3P.orderProcessD3PJOB();
+
+		// --3PLAST
+		T3PLAST_OrderProcess T3PLAST = new T3PLAST_OrderProcess();
+		T3PLAST.orderProcess3PLASTJOB();
 	}
 
 }

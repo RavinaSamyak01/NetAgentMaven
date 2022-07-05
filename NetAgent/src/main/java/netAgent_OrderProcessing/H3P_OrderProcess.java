@@ -1817,9 +1817,25 @@ public class H3P_OrderProcess extends BaseInit {
 			}
 		}
 
-		Driver.findElement(By.id("imgNGLLogo")).click();
-		wait.until(ExpectedConditions.invisibilityOfElementLocated(By.xpath("//*[@class=\"ajax-loadernew\"]")));
-		wait.until(ExpectedConditions.visibilityOfAllElementsLocatedBy(By.className("welcomecontent")));
+
+		try {
+			WebElement NGLLOgo = Driver.findElement(By.id("imgNGLLogo"));
+			wait.until(ExpectedConditions.elementToBeClickable(NGLLOgo));
+			act.moveToElement(NGLLOgo).build().perform();
+			js.executeScript("arguments[0].click();", NGLLOgo);
+			wait.until(ExpectedConditions.invisibilityOfElementLocated(By.xpath("//*[@class=\"ajax-loadernew\"]")));
+			wait.until(ExpectedConditions.visibilityOfAllElementsLocatedBy(By.className("welcomecontent")));
+		} catch (Exception refresh) {
+			WebElement NGLLOgo = Driver.findElement(By.id("aNGLLogo"));
+			wait.until(ExpectedConditions.elementToBeClickable(NGLLOgo));
+			act.moveToElement(NGLLOgo).build().perform();
+			act.moveToElement(NGLLOgo).click().perform();
+			js.executeScript("arguments[0].click();", NGLLOgo);
+			wait.until(ExpectedConditions.invisibilityOfElementLocated(By.xpath("//*[@class=\"ajax-loadernew\"]")));
+			wait.until(ExpectedConditions.visibilityOfAllElementsLocatedBy(By.className("welcomecontent")));
+		}
+
+
 
 		logger.info("=====H3P Order Processing Test End=====");
 		msg.append("=====H3P Order Processing Test End=====" + "\n\n");

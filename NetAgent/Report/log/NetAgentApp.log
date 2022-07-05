@@ -1,4 +1,119 @@
-2022-07-04 17:22:05,933 [main] INFO OrderProcessing - initialization of the properties file is done
-2022-07-04 17:22:06,836 [main] INFO io.github.bonigarcia.wdm.WebDriverManager - Using chromedriver 103.0.5060.53 (since Google Chrome 103 is installed in your machine)
-2022-07-04 17:22:06,866 [main] INFO io.github.bonigarcia.wdm.WebDriverManager - Exporting webdriver.chrome.driver as C:\WINDOWS\system32\config\systemprofile\.m2\repository\webdriver\chromedriver\win32\103.0.5060.53\chromedriver.exe
-2022-07-04 17:22:21,312 [main] INFO OrderProcessing - Url opened
+2022-07-05 17:43:17,410 [main] INFO OrderProcessing - initialization of the properties file is done
+2022-07-05 17:43:17,726 [main] INFO io.github.bonigarcia.wdm.WebDriverManager - Using chromedriver 103.0.5060.53 (since Google Chrome 103 is installed in your machine)
+2022-07-05 17:43:17,742 [main] INFO io.github.bonigarcia.wdm.WebDriverManager - Exporting webdriver.chrome.driver as C:\Users\rprajapati\.m2\repository\webdriver\chromedriver\win32\103.0.5060.53\chromedriver.exe
+2022-07-05 17:43:27,074 [main] INFO OrderProcessing - Url opened
+2022-07-05 17:43:39,963 [main] INFO OrderProcessing - =====LOC Order Processing Test Start=====
+2022-07-05 17:43:39,970 [main] INFO OrderProcessing - total No of Rows=11
+2022-07-05 17:43:39,975 [main] INFO OrderProcessing - total No of Columns=3
+2022-07-05 17:43:40,264 [main] INFO OrderProcessing - Click on Operations
+2022-07-05 17:43:44,610 [main] INFO OrderProcessing - Click on Task Log
+2022-07-05 17:43:44,761 [main] INFO OrderProcessing - ServiceID is==LOC
+2022-07-05 17:43:44,765 [main] INFO OrderProcessing - PickUpID is==3417535
+2022-07-05 17:44:35,078 [main] INFO OrderProcessing - Operation tab is not selected
+2022-07-05 17:44:35,413 [main] INFO OrderProcessing - Click on Operation Tab
+2022-07-05 17:44:40,712 [main] INFO OrderProcessing - Clear search input
+2022-07-05 17:44:40,778 [main] INFO OrderProcessing - Enter PickUpID in Search input
+2022-07-05 17:44:40,963 [main] INFO OrderProcessing - Click on Search button
+2022-07-05 17:44:48,507 [main] INFO OrderProcessing - Job is not exist with the search parameters
+2022-07-05 17:44:50,334 [main] INFO OrderProcessing - =====LOC Order Processing Test End=====
+2022-07-05 17:44:50,339 [main] INFO OrderProcessing - =====SD Order Processing Test Start=====
+2022-07-05 17:44:50,343 [main] INFO OrderProcessing - total No of Rows=11
+2022-07-05 17:44:50,346 [main] INFO OrderProcessing - total No of Columns=3
+2022-07-05 17:44:50,706 [main] INFO OrderProcessing - Click on Operations
+2022-07-05 17:44:55,815 [main] INFO OrderProcessing - Click on Task Log
+2022-07-05 17:44:55,918 [main] INFO OrderProcessing - ServiceID is==SD
+2022-07-05 17:44:55,922 [main] INFO OrderProcessing - PickUpID is==3417536
+2022-07-05 17:44:58,000 [main] INFO OrderProcessing - Operation tab is already selected
+2022-07-05 17:44:58,170 [main] INFO OrderProcessing - Clear search input
+2022-07-05 17:44:58,235 [main] INFO OrderProcessing - Enter PickUpID in Search input
+2022-07-05 17:44:58,435 [main] INFO OrderProcessing - Click on Search button
+2022-07-05 17:45:02,511 [main] INFO OrderProcessing - Job is not exist with the search parameters
+2022-07-05 17:45:02,515 [main] INFO OrderProcessing - ServiceID is==SD
+2022-07-05 17:45:02,519 [main] INFO OrderProcessing - PickUpID is==3401213
+2022-07-05 17:45:04,586 [main] INFO OrderProcessing - Operation tab is already selected
+2022-07-05 17:45:04,741 [main] INFO OrderProcessing - Clear search input
+2022-07-05 17:45:04,794 [main] INFO OrderProcessing - Enter PickUpID in Search input
+2022-07-05 17:45:04,980 [main] INFO OrderProcessing - Click on Search button
+2022-07-05 17:46:05,830 [main] INFO OrderProcessing - SD Job is on OnBoard stage
+2022-07-05 17:46:08,506 [main] INFO OrderProcessing - =====SD Order Processing Test End=====
+2022-07-05 17:46:08,522 [main] INFO OrderProcessing - =====H3P Order Processing Test Start=====
+2022-07-05 17:46:08,527 [main] INFO OrderProcessing - total No of Rows=11
+2022-07-05 17:46:08,530 [main] INFO OrderProcessing - total No of Columns=3
+2022-07-05 17:46:08,752 [main] INFO OrderProcessing - Click on Operations
+2022-07-05 17:46:14,630 [main] INFO OrderProcessing - Click on Task Log
+2022-07-05 17:46:14,734 [main] INFO OrderProcessing - ServiceID is==H3P
+2022-07-05 17:46:14,737 [main] INFO OrderProcessing - PickUpID is==3413534
+2022-07-05 17:46:14,765 [main] INFO OrderProcessing - Operation tab is already selected
+2022-07-05 17:46:14,849 [main] INFO OrderProcessing - Clear search input
+2022-07-05 17:46:14,916 [main] INFO OrderProcessing - Enter PickUpID in Search input
+2022-07-05 17:46:15,100 [main] INFO OrderProcessing - Click on Search button
+2022-07-05 17:46:20,997 [main] INFO OrderProcessing - ===ShipLabel Test Start===
+2022-07-05 17:46:21,069 [main] INFO OrderProcessing - Job is not exist with the search parameters
+2022-07-05 17:46:23,329 [main] INFO OrderProcessing - =====H3P Order Processing Test End=====
+2022-07-05 17:46:23,339 [main] INFO OrderProcessing - =====D3P Order Processing Test Start=====
+2022-07-05 17:46:23,343 [main] INFO OrderProcessing - total No of Rows=11
+2022-07-05 17:46:23,345 [main] INFO OrderProcessing - total No of Columns=3
+2022-07-05 17:46:23,548 [main] INFO OrderProcessing - Click on Operations
+2022-07-05 17:46:28,466 [main] INFO OrderProcessing - Click on Task Log
+2022-07-05 17:46:28,563 [main] INFO OrderProcessing - ServiceID is==D3P
+2022-07-05 17:46:28,565 [main] INFO OrderProcessing - PickUpID is==3407904
+2022-07-05 17:46:28,587 [main] INFO OrderProcessing - Operation tab is already selected
+2022-07-05 17:46:28,655 [main] INFO OrderProcessing - Clear search input
+2022-07-05 17:46:28,718 [main] INFO OrderProcessing - Enter PickUpID in Search input
+2022-07-05 17:46:28,899 [main] INFO OrderProcessing - Click on Search button
+2022-07-05 17:46:32,981 [main] INFO OrderProcessing - Job is not found in Operation Tab
+2022-07-05 17:46:33,125 [main] INFO OrderProcessing - Click on Inventory tab
+2022-07-05 17:46:33,201 [main] INFO OrderProcessing - Clear search input
+2022-07-05 17:46:33,243 [main] INFO OrderProcessing - Enter pickupID in search input
+2022-07-05 17:46:33,496 [main] INFO OrderProcessing - Click on Search button
+2022-07-05 17:46:34,710 [main] INFO OrderProcessing - Job is not exist with the search parameters
+2022-07-05 17:46:37,392 [main] INFO OrderProcessing - =====D3P Order Processing Test End=====
+2022-07-05 17:46:37,453 [main] INFO OrderProcessing - =====3PLAST Order Processing Test Start=====
+2022-07-05 17:46:37,457 [main] INFO OrderProcessing - total No of Rows=11
+2022-07-05 17:46:37,460 [main] INFO OrderProcessing - total No of Columns=3
+2022-07-05 17:46:37,691 [main] INFO OrderProcessing - Click on Operations
+2022-07-05 17:46:56,450 [main] INFO OrderProcessing - Click on Task Log
+2022-07-05 17:47:07,716 [main] INFO OrderProcessing - ServiceID is==3PLAST
+2022-07-05 17:47:27,678 [main] INFO OrderProcessing - PickUpID is==3414667
+2022-07-05 17:47:58,243 [main] INFO OrderProcessing - Operation tab is not selected
+2022-07-05 17:48:00,894 [main] INFO OrderProcessing - Click on Operation Tab
+2022-07-05 17:48:08,969 [main] INFO OrderProcessing - Clear search input
+2022-07-05 17:48:09,049 [main] INFO OrderProcessing - Enter PickUpID in Search input
+2022-07-05 17:48:09,300 [main] INFO OrderProcessing - Click on Search button
+2022-07-05 17:48:18,639 [main] INFO OrderProcessing - ===ShipLabel Test Start===
+2022-07-05 17:48:18,739 [main] INFO OrderProcessing - Clicked on Ship Label Services
+2022-07-05 17:48:25,483 [main] INFO OrderProcessing - Entered EmailID
+2022-07-05 17:48:25,557 [main] INFO OrderProcessing - Clicked on Send button
+2022-07-05 17:48:26,463 [main] INFO OrderProcessing - ErroMsg is Displayed=Please select any one label for send a email.
+2022-07-05 17:48:26,592 [main] INFO OrderProcessing - Checked the shiplabel
+2022-07-05 17:48:28,809 [main] INFO OrderProcessing - Entered EmailID
+2022-07-05 17:48:28,919 [main] INFO OrderProcessing - Clicked on Send button
+2022-07-05 17:48:31,408 [main] INFO OrderProcessing - Tracking No==Your tracking number is :794645534268
+2022-07-05 17:48:31,597 [main] INFO OrderProcessing - Clicked on Print button
+2022-07-05 17:48:33,356 [main] INFO OrderProcessing - Switched to Print window
+2022-07-05 17:48:39,550 [main] INFO OrderProcessing - Switched to Print window
+2022-07-05 17:48:45,948 [main] INFO OrderProcessing - Closed Print window
+2022-07-05 17:48:45,981 [main] INFO OrderProcessing - Switched to main window
+2022-07-05 17:48:46,070 [main] INFO OrderProcessing - Clicked on Close button of Memo
+2022-07-05 17:48:48,074 [main] INFO OrderProcessing - ===ShipLabel Test End===
+2022-07-05 17:48:48,079 [main] INFO OrderProcessing - ===Memo Test Start===
+2022-07-05 17:48:48,184 [main] INFO OrderProcessing - Clicked on Memo
+2022-07-05 17:48:51,463 [main] INFO OrderProcessing - Total no of memo is/are=(3)
+2022-07-05 17:48:51,598 [main] INFO OrderProcessing - Entered value in memo
+2022-07-05 17:48:51,701 [main] INFO OrderProcessing - Clicked on Save button
+2022-07-05 17:48:51,748 [main] INFO OrderProcessing - Clicked on Close button of Memo
+2022-07-05 17:48:53,759 [main] INFO OrderProcessing - ===Memo Test End===
+2022-07-05 17:48:53,763 [main] INFO OrderProcessing - ===Notification Test Start===
+2022-07-05 17:48:53,855 [main] INFO OrderProcessing - Clicked on Notification
+2022-07-05 17:48:57,548 [main] INFO OrderProcessing - Clicked on Close button of Notification
+2022-07-05 17:48:59,566 [main] INFO OrderProcessing - ===Notification Test End===
+2022-07-05 17:48:59,568 [main] INFO OrderProcessing - ===Upload Test Start===
+2022-07-05 17:48:59,644 [main] INFO OrderProcessing - Clicked on Upload
+2022-07-05 17:49:03,756 [main] INFO OrderProcessing - Click on plus sign
+2022-07-05 17:49:04,608 [main] INFO OrderProcessing - Enter doc name
+2022-07-05 17:49:04,683 [main] INFO OrderProcessing - Click on select file
+2022-07-05 17:49:09,483 [main] INFO OrderProcessing - Select the file
+2022-07-05 17:49:11,568 [main] INFO OrderProcessing - File is uploaded successfully
+2022-07-05 17:49:13,649 [main] INFO OrderProcessing - File is uploaded successfully
+2022-07-05 17:49:15,732 [main] INFO OrderProcessing - ===Upload Test End===
+2022-07-05 17:49:15,737 [main] INFO OrderProcessing - ===Print Pull Test Start===
