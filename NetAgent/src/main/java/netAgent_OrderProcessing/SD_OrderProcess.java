@@ -41,14 +41,14 @@ public class SD_OrderProcess extends BaseInit {
 		// Go To TaskLog
 		wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//a[@id=\"idOperations\"]")));
 		WebElement OperationMenu = Driver.findElement(By.xpath("//a[@id=\"idOperations\"]"));
-		act.moveToElement(OperationMenu).build().perform();
+		//act.moveToElement(OperationMenu).build().perform();
 		act.moveToElement(OperationMenu).click().perform();
 		logger.info("Click on Operations");
 
 		wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//a[@id=\"idTask\"]")));
 		WebElement TaskLogMenu = Driver.findElement(By.xpath("//a[@id=\"idTask\"]"));
-		act.moveToElement(TaskLogMenu).build().perform();
-		js.executeScript("arguments[0].click();", TaskLogMenu);
+		act.moveToElement(TaskLogMenu).click().perform();
+		//js.executeScript("arguments[0].click();", TaskLogMenu);
 		wait.until(ExpectedConditions.invisibilityOfElementLocated(By.xpath("//*[@class=\"ajax-loadernew\"]")));
 		wait.until(ExpectedConditions.visibilityOfAllElementsLocatedBy(By.className("panel-body")));
 		logger.info("Click on Task Log");
@@ -95,10 +95,18 @@ public class SD_OrderProcess extends BaseInit {
 				js.executeScript("arguments[0].click();", OPSearch);
 				logger.info("Click on Search button");
 				wait.until(ExpectedConditions.invisibilityOfElementLocated(By.xpath("//*[@class=\"ajax-loadernew\"]")));
-				WebElement PickuPBox = Driver.findElement(By.xpath("//*[contains(@class,'pickupbx')]"));
-				if (PickuPBox.isDisplayed()) {
-					logger.info("Searched Job is displayed in edit mode");
-					getScreenshot(Driver, "SDOrderEditor_" + PUID);
+				try {
+					WebElement PickuPBox = Driver.findElement(By.xpath("//*[contains(@class,'pickupbx')]"));
+					if (PickuPBox.isDisplayed()) {
+						logger.info("Searched Job is displayed in edit mode");
+						getScreenshot(Driver, "SDOrderEditor_" + PUID);
+					}
+				} catch (Exception ee) {
+					WebElement PickuPBox = Driver.findElement(By.xpath("//*[@name=\"ConfPullAlertForm\"]"));
+					if (PickuPBox.isDisplayed()) {
+						logger.info("Searched Job is displayed in edit mode");
+						getScreenshot(Driver, "SDOrderEditor_" + PUID);
+					}
 				}
 
 				if (row == 2) {
@@ -176,8 +184,7 @@ public class SD_OrderProcess extends BaseInit {
 
 						WebElement DArrtime = Driver.findElement(By.id("lblAddress"));
 						js.executeScript("arguments[0].scrollIntoView();", DArrtime);
-						act.moveToElement(DArrtime).build().perform();
-
+						Thread.sleep(2000);
 						// js.executeScript("arguments[0].scrollIntoView();", DArrtime);
 
 						// --Enter PickUp Time
@@ -1029,7 +1036,6 @@ public class SD_OrderProcess extends BaseInit {
 			}
 
 		}
-
 
 		try {
 			WebElement NGLLOgo = Driver.findElement(By.id("imgNGLLogo"));

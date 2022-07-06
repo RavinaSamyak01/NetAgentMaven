@@ -10,6 +10,9 @@ import netAgent_BasePackage.BaseInit;
 import netAgent_OrderProcessing.D3P_OrderProcess;
 import netAgent_OrderProcessing.H3P_OrderProcess;
 import netAgent_OrderProcessing.LOC_OrderProcess;
+import netAgent_OrderProcessing.RETURN_OrderProcess;
+import netAgent_OrderProcessing.RTE_OrderProcess;
+import netAgent_OrderProcessing.Replenish_OrderProcess;
 import netAgent_OrderProcessing.SD_OrderProcess;
 import netAgent_OrderProcessing.T3PLAST_OrderProcess;
 
@@ -38,6 +41,18 @@ public class OrderProcessing extends BaseInit {
 		// --3PLAST
 		T3PLAST_OrderProcess T3PLAST = new T3PLAST_OrderProcess();
 		T3PLAST.orderProcess3PLASTJOB();
+
+		// --RETURN
+		RETURN_OrderProcess RTN = new RETURN_OrderProcess();
+		RTN.orderProcessRETURNJOB();
+
+		// --RTE
+		RTE_OrderProcess RTE = new RTE_OrderProcess();
+		RTE.orderProcessRTEJOB();
+
+		// --Replenish
+		Replenish_OrderProcess Rplsh = new Replenish_OrderProcess();
+		Rplsh.orderProcessReplenishJOB();
 	}
 
 }

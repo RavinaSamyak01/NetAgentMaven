@@ -105,7 +105,7 @@ public class BaseInit {
 			capabilities.setCapability(ChromeOptions.CAPABILITY, options);
 			capabilities.setPlatform(Platform.ANY);
 
-			options.addArguments("window-size=1032x776");
+			options.addArguments("window-size=1036,776");
 			// options.addArguments("window-size=1936,1056");
 			// options.addArguments("window-size=1036x776");
 

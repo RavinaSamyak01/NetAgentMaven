@@ -95,6 +95,10 @@ public class T3PLAST_OrderProcess extends BaseInit {
 				logger.info("Click on Search button");
 				wait.until(ExpectedConditions.invisibilityOfElementLocated(By.xpath("//*[@class=\"ajax-loadernew\"]")));
 
+				// --Checking editor
+				wait.until(ExpectedConditions
+						.visibilityOfElementLocated(By.xpath("//*[@id=\"hlkMemo\"][contains(text(),'Memo')]")));
+
 				// Ship Label
 				OrderProcess OP = new OrderProcess();
 
@@ -306,9 +310,16 @@ public class T3PLAST_OrderProcess extends BaseInit {
 						}
 
 						try {
-							wait.until(
-									ExpectedConditions.visibilityOfElementLocated(By.id("idPartPullDttmValidation")));
-							String ValMsg = Driver.findElement(By.id("idPartPullDttmValidation")).getText();
+							// --Part Pull DateTime is required. Validation
+							wait.until(ExpectedConditions.visibilityOfElementLocated(
+									By.xpath("//li[contains(text(),'Part Pull DateTime is required.')]")));
+							/*
+							 * wait.until( ExpectedConditions.visibilityOfElementLocated(By.id(
+							 * "idPartPullDttmValidation")));
+							 */
+							String ValMsg = Driver
+									.findElement(By.xpath("//li[contains(text(),'Part Pull DateTime is required.')]"))
+									.getText();
 							logger.info("Validation Message=" + ValMsg);
 
 							// --ZoneID
@@ -338,7 +349,6 @@ public class T3PLAST_OrderProcess extends BaseInit {
 							dateFormat = new SimpleDateFormat("HH:mm");
 							dateFormat.setTimeZone(TimeZone.getTimeZone(ZOneID));
 							logger.info(dateFormat.format(date));
-							PartPullTime.sendKeys(dateFormat.format(date));
 							PartPullTime.sendKeys(dateFormat.format(date));
 							PartPullTime.sendKeys(Keys.TAB);
 
@@ -377,35 +387,71 @@ public class T3PLAST_OrderProcess extends BaseInit {
 							}
 
 						} catch (Exception e) {
-							logger.info("Validation Message is not displayed");
+							logger.info("Validation Message is not displayed, Part Pull DateTime is required");
 
 						}
 
 						try {
-							wait.until(ExpectedConditions.visibilityOfElementLocated(
-									By.xpath("//label[contains(@class,'error-messages')]")));
-							logger.info("ErroMsg is Displayed=" + Driver
-									.findElement(By.xpath("//label[contains(@class,'error-messages')]")).getText());
-							Thread.sleep(2000);
-
-							// --Get the serial NO
-							String SerialNo = Driver.findElement(By.xpath("//*[@ng-bind=\"segment.SerialNo\"]"))
-									.getText();
-							logger.info("Serial No of Part is==" + SerialNo + "\n");
-							// enter serial number in scan
-							WebElement SerialNoBar = Driver.findElement(By.id("txtBarcode"));
-							act.moveToElement(SerialNoBar).build().perform();
-							SerialNoBar.clear();
-							Driver.findElement(By.id("txtBarcode")).sendKeys(SerialNo);
-							Driver.findElement(By.id("txtBarcode")).sendKeys(Keys.TAB);
 							wait.until(ExpectedConditions
-									.invisibilityOfElementLocated(By.xpath("//*[@class=\"ajax-loadernew\"]")));
-							logger.info("Entered serial No in scan barcode");
+									.visibilityOfElementLocated(By.xpath("//label[contains(@class,'error-messages')]")));
+							logger.info("ErroMsg is Displayed="
+									+ Driver.findElement(By.xpath("//label[contains(@class,'error-messages')]")).getText());
 
-							/*
-							 * // --Zoom out js.executeScript("document.body.style.zoom='80%';");
-							 * Thread.sleep(2000);
-							 */
+							String ErrorMsg = Driver.findElement(By.xpath("//label[contains(@class,'error-messages')]"))
+									.getText();
+							logger.info("Error Message=" + ErrorMsg);
+
+							if (ErrorMsg.contains("Verify all parts before proceeding")) {
+								logger.info("Error Message is displayed=" + ErrorMsg);
+								// --Get the serial NO
+								String SerialNo = Driver.findElement(By.xpath("//*[@ng-bind=\"segment.SerialNo\"]"))
+										.getText();
+								logger.info("Serial No of Part is==" + SerialNo + "\n");
+								// enter serial number in scan
+								WebElement SerialNoBar = Driver.findElement(By.id("txtBarcode"));
+								act.moveToElement(SerialNoBar).build().perform();
+								SerialNoBar.clear();
+								Driver.findElement(By.id("txtBarcode")).sendKeys(SerialNo);
+								Driver.findElement(By.id("txtBarcode")).sendKeys(Keys.TAB);
+								wait.until(ExpectedConditions
+										.invisibilityOfElementLocated(By.xpath("//*[@class=\"ajax-loadernew\"]")));
+								logger.info("Entered serial No in scan barcode");
+
+							} else if (ErrorMsg.contains("Actual Datetime can not be greater than Current Datetime.")) {
+								logger.info("Error Message is displayed=" + ErrorMsg);
+								// --ZoneID
+								String ZOneID = Driver.findElement(By.xpath("//span[contains(@ng-bind,'TimezoneId')]"))
+										.getText();
+								logger.info("ZoneID of is==" + ZOneID);
+								if (ZOneID.equalsIgnoreCase("EDT")) {
+									ZOneID = "America/New_York";
+								} else if (ZOneID.equalsIgnoreCase("CDT")) {
+									ZOneID = "CST";
+								}
+
+								// --Part Pull Date
+								WebElement PartPullDate = Driver.findElement(By.id("idtxtPartPullDate"));
+								PartPullDate.clear();
+								Date date = new Date();
+								DateFormat dateFormat = new SimpleDateFormat("MM/dd/yyyy");
+								dateFormat.setTimeZone(TimeZone.getTimeZone(ZOneID));
+								logger.info(dateFormat.format(date));
+								PartPullDate.sendKeys(dateFormat.format(date));
+								PartPullDate.sendKeys(Keys.TAB);
+
+								// --Part Pull Time
+								WebElement PartPullTime = Driver.findElement(By.id("txtPartPullTime"));
+								PartPullTime.clear();
+								date = new Date();
+								dateFormat = new SimpleDateFormat("HH:mm");
+								dateFormat.setTimeZone(TimeZone.getTimeZone(ZOneID));
+								logger.info(dateFormat.format(date));
+								PartPullTime.sendKeys(dateFormat.format(date));
+								PartPullTime.sendKeys(Keys.TAB);
+							} else {
+								logger.info("Unexpected validation message displayed, " + ErrorMsg);
+
+							}
 
 							// --Save button
 							try {
@@ -441,58 +487,74 @@ public class T3PLAST_OrderProcess extends BaseInit {
 								}
 							}
 
-						} catch (Exception errmsg) {
-							logger.info("Validation message is not displayed");
+						} catch (Exception e) {
+							logger.info("Error Message is not displayed");
 
 						}
+						
 						try {
-							wait.until(ExpectedConditions.visibilityOfElementLocated(
-									By.xpath("//label[contains(@class,'error-messages')]")));
-							logger.info("ErroMsg is Displayed=" + Driver
-									.findElement(By.xpath("//label[contains(@class,'error-messages')]")).getText());
+							wait.until(ExpectedConditions
+									.visibilityOfElementLocated(By.xpath("//label[contains(@class,'error-messages')]")));
+							logger.info("ErroMsg is Displayed="
+									+ Driver.findElement(By.xpath("//label[contains(@class,'error-messages')]")).getText());
 
-							/*
-							 * // --Zoom In js.executeScript("document.body.style.zoom='100%';");
-							 * Thread.sleep(2000);
-							 */
-
-							// --ZoneID
-							String ZOneID = Driver.findElement(By.xpath("//span[contains(@ng-bind,'TimezoneId')]"))
+							String ErrorMsg = Driver.findElement(By.xpath("//label[contains(@class,'error-messages')]"))
 									.getText();
-							logger.info("ZoneID of is==" + ZOneID);
-							if (ZOneID.equalsIgnoreCase("EDT")) {
-								ZOneID = "America/New_York";
-							} else if (ZOneID.equalsIgnoreCase("CDT")) {
-								ZOneID = "CST";
+							logger.info("Error Message=" + ErrorMsg);
+
+							if (ErrorMsg.contains("Verify all parts before proceeding")) {
+								logger.info("Error Message is displayed=" + ErrorMsg);
+								// --Get the serial NO
+								String SerialNo = Driver.findElement(By.xpath("//*[@ng-bind=\"segment.SerialNo\"]"))
+										.getText();
+								logger.info("Serial No of Part is==" + SerialNo + "\n");
+								// enter serial number in scan
+								WebElement SerialNoBar = Driver.findElement(By.id("txtBarcode"));
+								act.moveToElement(SerialNoBar).build().perform();
+								SerialNoBar.clear();
+								Driver.findElement(By.id("txtBarcode")).sendKeys(SerialNo);
+								Driver.findElement(By.id("txtBarcode")).sendKeys(Keys.TAB);
+								wait.until(ExpectedConditions
+										.invisibilityOfElementLocated(By.xpath("//*[@class=\"ajax-loadernew\"]")));
+								logger.info("Entered serial No in scan barcode");
+
+							} else if (ErrorMsg.contains("Actual Datetime can not be greater than Current Datetime.")) {
+								logger.info("Error Message is displayed=" + ErrorMsg);
+								// --ZoneID
+								String ZOneID = Driver.findElement(By.xpath("//span[contains(@ng-bind,'TimezoneId')]"))
+										.getText();
+								logger.info("ZoneID of is==" + ZOneID);
+								if (ZOneID.equalsIgnoreCase("EDT")) {
+									ZOneID = "America/New_York";
+								} else if (ZOneID.equalsIgnoreCase("CDT")) {
+									ZOneID = "CST";
+								}
+
+								// --Part Pull Date
+								WebElement PartPullDate = Driver.findElement(By.id("idtxtPartPullDate"));
+								PartPullDate.clear();
+								Date date = new Date();
+								DateFormat dateFormat = new SimpleDateFormat("MM/dd/yyyy");
+								dateFormat.setTimeZone(TimeZone.getTimeZone(ZOneID));
+								logger.info(dateFormat.format(date));
+								PartPullDate.sendKeys(dateFormat.format(date));
+								PartPullDate.sendKeys(Keys.TAB);
+
+								// --Part Pull Time
+								WebElement PartPullTime = Driver.findElement(By.id("txtPartPullTime"));
+								PartPullTime.clear();
+								date = new Date();
+								dateFormat = new SimpleDateFormat("HH:mm");
+								dateFormat.setTimeZone(TimeZone.getTimeZone(ZOneID));
+								logger.info(dateFormat.format(date));
+								PartPullTime.sendKeys(dateFormat.format(date));
+								PartPullTime.sendKeys(Keys.TAB);
+							} else {
+								logger.info("Unexpected validation message displayed, " + ErrorMsg);
+
 							}
 
-							// --Part Pull Date
-							WebElement PartPullDate = Driver.findElement(By.id("idtxtPartPullDate"));
-							act.moveToElement(PartPullDate).build().perform();
-							PartPullDate.clear();
-							Date date = new Date();
-							DateFormat dateFormat = new SimpleDateFormat("MM/dd/yyyy");
-							dateFormat.setTimeZone(TimeZone.getTimeZone(ZOneID));
-							logger.info(dateFormat.format(date));
-							PartPullDate.sendKeys(dateFormat.format(date));
-							PartPullDate.sendKeys(Keys.TAB);
-
-							// --Part Pull Time
-							WebElement PartPullTime = Driver.findElement(By.id("txtPartPullTime"));
-							act.moveToElement(PartPullTime).build().perform();
-							PartPullTime.clear();
-							date = new Date();
-							dateFormat = new SimpleDateFormat("HH:mm");
-							dateFormat.setTimeZone(TimeZone.getTimeZone(ZOneID));
-							logger.info(dateFormat.format(date));
-							PartPullTime.sendKeys(dateFormat.format(date));
-							PartPullTime.sendKeys(Keys.TAB);
-
-							/*
-							 * // --Zoom out js.executeScript("document.body.style.zoom='80%';");
-							 * Thread.sleep(2000);
-							 */
-
+							// --Save button
 							try {
 								try {
 									WebElement Accept = Driver.findElement(By.id("idiconsave"));
@@ -525,8 +587,10 @@ public class T3PLAST_OrderProcess extends BaseInit {
 									logger.info("Clicked on Accept button");
 								}
 							}
-						} catch (Exception Time) {
-							logger.info("Time validation is not displayed-Time is as per timeZone");
+
+						} catch (Exception e) {
+							logger.info("Error Message is not displayed");
+
 						}
 
 						wait.until(ExpectedConditions
@@ -544,8 +608,7 @@ public class T3PLAST_OrderProcess extends BaseInit {
 						wait.until(ExpectedConditions
 								.invisibilityOfElementLocated(By.xpath("//*[@class=\"ajax-loadernew\"]")));
 						try {
-							wait.until(
-									ExpectedConditions.visibilityOfElementLocated(By.className("dx-datagrid-nodata")));
+							wait.until(ExpectedConditions.visibilityOfElementLocated(By.className("dx-datagrid-nodata")));
 							WebElement NoData = Driver.findElement(By.className("dx-datagrid-nodata"));
 							if (NoData.isDisplayed()) {
 								logger.info("Job is not moved to TENDER TO 3P stage successfully");
@@ -592,8 +655,8 @@ public class T3PLAST_OrderProcess extends BaseInit {
 							}
 
 							try {
-								wait.until(ExpectedConditions
-										.visibilityOfAllElementsLocatedBy(By.className("modal-content")));
+								wait.until(
+										ExpectedConditions.visibilityOfAllElementsLocatedBy(By.className("modal-content")));
 								WebElement DOK = Driver.findElement(By.id("iddataok"));
 								js.executeScript("arguments[0].click();", DOK);
 								logger.info("Click on OK of Dialogue box");
@@ -676,8 +739,8 @@ public class T3PLAST_OrderProcess extends BaseInit {
 							wait.until(ExpectedConditions
 									.invisibilityOfElementLocated(By.xpath("//*[@class=\"ajax-loadernew\"]")));
 							try {
-								wait.until(ExpectedConditions
-										.visibilityOfElementLocated(By.className("dx-datagrid-nodata")));
+								wait.until(
+										ExpectedConditions.visibilityOfElementLocated(By.className("dx-datagrid-nodata")));
 								WebElement NoData = Driver.findElement(By.className("dx-datagrid-nodata"));
 								if (NoData.isDisplayed()) {
 									logger.info("Job is moved to Send DEL Alert stage successfully");
@@ -765,8 +828,16 @@ public class T3PLAST_OrderProcess extends BaseInit {
 					}
 
 					try {
-						wait.until(ExpectedConditions.visibilityOfElementLocated(By.id("idPartPullDttmValidation")));
-						String ValMsg = Driver.findElement(By.id("idPartPullDttmValidation")).getText();
+						// --Part Pull DateTime is required. Validation
+						wait.until(ExpectedConditions.visibilityOfElementLocated(
+								By.xpath("//li[contains(text(),'Part Pull DateTime is required.')]")));
+						/*
+						 * wait.until( ExpectedConditions.visibilityOfElementLocated(By.id(
+						 * "idPartPullDttmValidation")));
+						 */
+						String ValMsg = Driver
+								.findElement(By.xpath("//li[contains(text(),'Part Pull DateTime is required.')]"))
+								.getText();
 						logger.info("Validation Message=" + ValMsg);
 
 						// --ZoneID
@@ -796,7 +867,6 @@ public class T3PLAST_OrderProcess extends BaseInit {
 						dateFormat = new SimpleDateFormat("HH:mm");
 						dateFormat.setTimeZone(TimeZone.getTimeZone(ZOneID));
 						logger.info(dateFormat.format(date));
-						PartPullTime.sendKeys(dateFormat.format(date));
 						PartPullTime.sendKeys(dateFormat.format(date));
 						PartPullTime.sendKeys(Keys.TAB);
 
@@ -835,7 +905,7 @@ public class T3PLAST_OrderProcess extends BaseInit {
 						}
 
 					} catch (Exception e) {
-						logger.info("Validation Message is not displayed");
+						logger.info("Validation Message is not displayed, Part Pull DateTime is required");
 
 					}
 
@@ -844,25 +914,62 @@ public class T3PLAST_OrderProcess extends BaseInit {
 								.visibilityOfElementLocated(By.xpath("//label[contains(@class,'error-messages')]")));
 						logger.info("ErroMsg is Displayed="
 								+ Driver.findElement(By.xpath("//label[contains(@class,'error-messages')]")).getText());
-						Thread.sleep(2000);
 
-						// --Get the serial NO
-						String SerialNo = Driver.findElement(By.xpath("//*[@ng-bind=\"segment.SerialNo\"]")).getText();
-						logger.info("Serial No of Part is==" + SerialNo + "\n");
-						// enter serial number in scan
-						WebElement SerialNoBar = Driver.findElement(By.id("txtBarcode"));
-						act.moveToElement(SerialNoBar).build().perform();
-						SerialNoBar.clear();
-						Driver.findElement(By.id("txtBarcode")).sendKeys(SerialNo);
-						Driver.findElement(By.id("txtBarcode")).sendKeys(Keys.TAB);
-						wait.until(ExpectedConditions
-								.invisibilityOfElementLocated(By.xpath("//*[@class=\"ajax-loadernew\"]")));
-						logger.info("Entered serial No in scan barcode");
+						String ErrorMsg = Driver.findElement(By.xpath("//label[contains(@class,'error-messages')]"))
+								.getText();
+						logger.info("Error Message=" + ErrorMsg);
 
-						/*
-						 * // --Zoom out js.executeScript("document.body.style.zoom='80%';");
-						 * Thread.sleep(2000);
-						 */
+						if (ErrorMsg.contains("Verify all parts before proceeding")) {
+							logger.info("Error Message is displayed=" + ErrorMsg);
+							// --Get the serial NO
+							String SerialNo = Driver.findElement(By.xpath("//*[@ng-bind=\"segment.SerialNo\"]"))
+									.getText();
+							logger.info("Serial No of Part is==" + SerialNo + "\n");
+							// enter serial number in scan
+							WebElement SerialNoBar = Driver.findElement(By.id("txtBarcode"));
+							act.moveToElement(SerialNoBar).build().perform();
+							SerialNoBar.clear();
+							Driver.findElement(By.id("txtBarcode")).sendKeys(SerialNo);
+							Driver.findElement(By.id("txtBarcode")).sendKeys(Keys.TAB);
+							wait.until(ExpectedConditions
+									.invisibilityOfElementLocated(By.xpath("//*[@class=\"ajax-loadernew\"]")));
+							logger.info("Entered serial No in scan barcode");
+
+						} else if (ErrorMsg.contains("Actual Datetime can not be greater than Current Datetime.")) {
+							logger.info("Error Message is displayed=" + ErrorMsg);
+							// --ZoneID
+							String ZOneID = Driver.findElement(By.xpath("//span[contains(@ng-bind,'TimezoneId')]"))
+									.getText();
+							logger.info("ZoneID of is==" + ZOneID);
+							if (ZOneID.equalsIgnoreCase("EDT")) {
+								ZOneID = "America/New_York";
+							} else if (ZOneID.equalsIgnoreCase("CDT")) {
+								ZOneID = "CST";
+							}
+
+							// --Part Pull Date
+							WebElement PartPullDate = Driver.findElement(By.id("idtxtPartPullDate"));
+							PartPullDate.clear();
+							Date date = new Date();
+							DateFormat dateFormat = new SimpleDateFormat("MM/dd/yyyy");
+							dateFormat.setTimeZone(TimeZone.getTimeZone(ZOneID));
+							logger.info(dateFormat.format(date));
+							PartPullDate.sendKeys(dateFormat.format(date));
+							PartPullDate.sendKeys(Keys.TAB);
+
+							// --Part Pull Time
+							WebElement PartPullTime = Driver.findElement(By.id("txtPartPullTime"));
+							PartPullTime.clear();
+							date = new Date();
+							dateFormat = new SimpleDateFormat("HH:mm");
+							dateFormat.setTimeZone(TimeZone.getTimeZone(ZOneID));
+							logger.info(dateFormat.format(date));
+							PartPullTime.sendKeys(dateFormat.format(date));
+							PartPullTime.sendKeys(Keys.TAB);
+						} else {
+							logger.info("Unexpected validation message displayed, " + ErrorMsg);
+
+						}
 
 						// --Save button
 						try {
@@ -898,58 +1005,74 @@ public class T3PLAST_OrderProcess extends BaseInit {
 							}
 						}
 
-					} catch (Exception errmsg) {
-						logger.info("Validation message is not displayed");
+					} catch (Exception e) {
+						logger.info("Error Message is not displayed");
 
 					}
+					
 					try {
 						wait.until(ExpectedConditions
 								.visibilityOfElementLocated(By.xpath("//label[contains(@class,'error-messages')]")));
 						logger.info("ErroMsg is Displayed="
 								+ Driver.findElement(By.xpath("//label[contains(@class,'error-messages')]")).getText());
 
-						/*
-						 * // --Zoom In js.executeScript("document.body.style.zoom='100%';");
-						 * Thread.sleep(2000);
-						 */
-
-						// --ZoneID
-						String ZOneID = Driver.findElement(By.xpath("//span[contains(@ng-bind,'TimezoneId')]"))
+						String ErrorMsg = Driver.findElement(By.xpath("//label[contains(@class,'error-messages')]"))
 								.getText();
-						logger.info("ZoneID of is==" + ZOneID);
-						if (ZOneID.equalsIgnoreCase("EDT")) {
-							ZOneID = "America/New_York";
-						} else if (ZOneID.equalsIgnoreCase("CDT")) {
-							ZOneID = "CST";
+						logger.info("Error Message=" + ErrorMsg);
+
+						if (ErrorMsg.contains("Verify all parts before proceeding")) {
+							logger.info("Error Message is displayed=" + ErrorMsg);
+							// --Get the serial NO
+							String SerialNo = Driver.findElement(By.xpath("//*[@ng-bind=\"segment.SerialNo\"]"))
+									.getText();
+							logger.info("Serial No of Part is==" + SerialNo + "\n");
+							// enter serial number in scan
+							WebElement SerialNoBar = Driver.findElement(By.id("txtBarcode"));
+							act.moveToElement(SerialNoBar).build().perform();
+							SerialNoBar.clear();
+							Driver.findElement(By.id("txtBarcode")).sendKeys(SerialNo);
+							Driver.findElement(By.id("txtBarcode")).sendKeys(Keys.TAB);
+							wait.until(ExpectedConditions
+									.invisibilityOfElementLocated(By.xpath("//*[@class=\"ajax-loadernew\"]")));
+							logger.info("Entered serial No in scan barcode");
+
+						} else if (ErrorMsg.contains("Actual Datetime can not be greater than Current Datetime.")) {
+							logger.info("Error Message is displayed=" + ErrorMsg);
+							// --ZoneID
+							String ZOneID = Driver.findElement(By.xpath("//span[contains(@ng-bind,'TimezoneId')]"))
+									.getText();
+							logger.info("ZoneID of is==" + ZOneID);
+							if (ZOneID.equalsIgnoreCase("EDT")) {
+								ZOneID = "America/New_York";
+							} else if (ZOneID.equalsIgnoreCase("CDT")) {
+								ZOneID = "CST";
+							}
+
+							// --Part Pull Date
+							WebElement PartPullDate = Driver.findElement(By.id("idtxtPartPullDate"));
+							PartPullDate.clear();
+							Date date = new Date();
+							DateFormat dateFormat = new SimpleDateFormat("MM/dd/yyyy");
+							dateFormat.setTimeZone(TimeZone.getTimeZone(ZOneID));
+							logger.info(dateFormat.format(date));
+							PartPullDate.sendKeys(dateFormat.format(date));
+							PartPullDate.sendKeys(Keys.TAB);
+
+							// --Part Pull Time
+							WebElement PartPullTime = Driver.findElement(By.id("txtPartPullTime"));
+							PartPullTime.clear();
+							date = new Date();
+							dateFormat = new SimpleDateFormat("HH:mm");
+							dateFormat.setTimeZone(TimeZone.getTimeZone(ZOneID));
+							logger.info(dateFormat.format(date));
+							PartPullTime.sendKeys(dateFormat.format(date));
+							PartPullTime.sendKeys(Keys.TAB);
+						} else {
+							logger.info("Unexpected validation message displayed, " + ErrorMsg);
+
 						}
 
-						// --Part Pull Date
-						WebElement PartPullDate = Driver.findElement(By.id("idtxtPartPullDate"));
-						act.moveToElement(PartPullDate).build().perform();
-						PartPullDate.clear();
-						Date date = new Date();
-						DateFormat dateFormat = new SimpleDateFormat("MM/dd/yyyy");
-						dateFormat.setTimeZone(TimeZone.getTimeZone(ZOneID));
-						logger.info(dateFormat.format(date));
-						PartPullDate.sendKeys(dateFormat.format(date));
-						PartPullDate.sendKeys(Keys.TAB);
-
-						// --Part Pull Time
-						WebElement PartPullTime = Driver.findElement(By.id("txtPartPullTime"));
-						act.moveToElement(PartPullTime).build().perform();
-						PartPullTime.clear();
-						date = new Date();
-						dateFormat = new SimpleDateFormat("HH:mm");
-						dateFormat.setTimeZone(TimeZone.getTimeZone(ZOneID));
-						logger.info(dateFormat.format(date));
-						PartPullTime.sendKeys(dateFormat.format(date));
-						PartPullTime.sendKeys(Keys.TAB);
-
-						/*
-						 * // --Zoom out js.executeScript("document.body.style.zoom='80%';");
-						 * Thread.sleep(2000);
-						 */
-
+						// --Save button
 						try {
 							try {
 								WebElement Accept = Driver.findElement(By.id("idiconsave"));
@@ -982,8 +1105,10 @@ public class T3PLAST_OrderProcess extends BaseInit {
 								logger.info("Clicked on Accept button");
 							}
 						}
-					} catch (Exception Time) {
-						logger.info("Time validation is not displayed-Time is as per timeZone");
+
+					} catch (Exception e) {
+						logger.info("Error Message is not displayed");
+
 					}
 
 					wait.until(ExpectedConditions
@@ -1389,7 +1514,6 @@ public class T3PLAST_OrderProcess extends BaseInit {
 
 					}
 				} catch (Exception OnBoard) {
-
 					String Orderstage = Driver.findElement(By.xpath("//strong/span[@class=\"ng-binding\"]")).getText();
 					logger.info("Current stage of the order is=" + Orderstage);
 					msg.append("Current stage of the order is=" + Orderstage + "\n");

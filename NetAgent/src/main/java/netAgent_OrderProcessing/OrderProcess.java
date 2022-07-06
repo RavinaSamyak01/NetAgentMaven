@@ -7180,114 +7180,131 @@ public class OrderProcess extends BaseInit {
 		WebDriverWait wait = new WebDriverWait(Driver, 50);
 		JavascriptExecutor js = (JavascriptExecutor) Driver;
 
-		logger.info("===Memo Test Start===");
-		msg.append("===Memo Test Start===" + "\n\n");
+		try {
+			logger.info("===Memo Test Start===");
+			msg.append("===Memo Test Start===" + "\n\n");
 
-		Driver.findElement(By.xpath("//*[@id=\"hlkMemo\"][contains(text(),'Memo')]")).click();
-		logger.info("Clicked on Memo");
-		wait.until(ExpectedConditions.invisibilityOfElementLocated(By.xpath("//*[@class=\"ajax-loadernew\"]")));
-		getScreenshot(Driver, "Memo_" + PID);
+			Driver.findElement(By.xpath("//*[@id=\"hlkMemo\"][contains(text(),'Memo')]")).click();
+			logger.info("Clicked on Memo");
+			wait.until(ExpectedConditions.invisibilityOfElementLocated(By.xpath("//*[@class=\"ajax-loadernew\"]")));
+			getScreenshot(Driver, "Memo_" + PID);
 
-		// --Total no of existing memo
-		String Memoheader = Driver.findElement(By.xpath("//*[contains(@class,'popupheadeing')]/strong")).getText();
-		String NoOfMemo = Memoheader.split(" ")[1];
+			// --Total no of existing memo
+			String Memoheader = Driver.findElement(By.xpath("//*[contains(@class,'popupheadeing')]/strong")).getText();
+			String NoOfMemo = Memoheader.split(" ")[1];
 
-		logger.info("Total no of memo is/are=" + NoOfMemo);
+			logger.info("Total no of memo is/are=" + NoOfMemo);
 
-		// --Enter value in memo
-		Driver.findElement(By.id("txtMemoNA")).sendKeys("Confirm Pu Alert stage from NetAgent");
-		logger.info("Entered value in memo");
-		// --Save
-		Driver.findElement(By.id("btnAgentMemoNA")).click();
-		logger.info("Clicked on Save button");
+			// --Enter value in memo
+			Driver.findElement(By.id("txtMemoNA")).sendKeys("Confirm Pu Alert stage from NetAgent");
+			logger.info("Entered value in memo");
+			// --Save
+			Driver.findElement(By.id("btnAgentMemoNA")).click();
+			logger.info("Clicked on Save button");
 
-		// --Close
-		WebElement memoClose = Driver.findElement(By.id("idanchorclose"));
-		js.executeScript("arguments[0].click();", memoClose);
-		logger.info("Clicked on Close button of Memo");
-		Thread.sleep(2000);
+			// --Close
+			WebElement memoClose = Driver.findElement(By.id("idanchorclose"));
+			js.executeScript("arguments[0].click();", memoClose);
+			logger.info("Clicked on Close button of Memo");
+			Thread.sleep(2000);
 
-		logger.info("===Memo Test End===");
-		msg.append("===Memo Test End===" + "\n\n");
+			logger.info("===Memo Test End===");
+			msg.append("===Memo Test End===" + "\n\n");
+		} catch (Exception memonotexist) {
+			logger.info("Memo is not exist");
+			msg.append("Memo is not exist" + "\n\n");
+		}
+
 	}
 
 	public void notification(String PID) throws IOException, InterruptedException {
 		WebDriverWait wait = new WebDriverWait(Driver, 50);
 		JavascriptExecutor js = (JavascriptExecutor) Driver;
 
-		logger.info("===Notification Test Start===");
-		msg.append("===Notification Test Start===" + "\n\n");
+		try {
+			logger.info("===Notification Test Start===");
+			msg.append("===Notification Test Start===" + "\n\n");
 
-		Driver.findElement(By.id("hlkNotification")).click();
-		logger.info("Clicked on Notification");
-		wait.until(ExpectedConditions.invisibilityOfElementLocated(By.xpath("//*[@class=\"ajax-loadernew\"]")));
-		getScreenshot(Driver, "Notification_" + PID);
+			Driver.findElement(By.id("hlkNotification")).click();
+			logger.info("Clicked on Notification");
+			wait.until(ExpectedConditions.invisibilityOfElementLocated(By.xpath("//*[@class=\"ajax-loadernew\"]")));
+			getScreenshot(Driver, "Notification_" + PID);
 
-		// --Close
-		WebElement memoClose = Driver.findElement(By.id("idanchorclose"));
-		js.executeScript("arguments[0].click();", memoClose);
-		logger.info("Clicked on Close button of Notification");
-		Thread.sleep(2000);
+			// --Close
+			WebElement memoClose = Driver.findElement(By.id("idanchorclose"));
+			js.executeScript("arguments[0].click();", memoClose);
+			logger.info("Clicked on Close button of Notification");
+			Thread.sleep(2000);
 
-		logger.info("===Notification Test End===");
-		msg.append("===Notification Test End===" + "\n\n");
+			logger.info("===Notification Test End===");
+			msg.append("===Notification Test End===" + "\n\n");
+		} catch (Exception memonotexist) {
+			logger.info("Notification is not exist");
+			msg.append("Notification is not exist" + "\n\n");
+		}
+
 	}
 
 	public void upload(String PID) throws IOException, InterruptedException {
 		WebDriverWait wait = new WebDriverWait(Driver, 50);
 		JavascriptExecutor js = (JavascriptExecutor) Driver;
 
-		logger.info("===Upload Test Start===");
-		msg.append("===Upload Test Start===" + "\n\n");
-
-		Driver.findElement(By.id("hlkUploadDocument")).click();
-		logger.info("Clicked on Upload");
-		wait.until(ExpectedConditions.invisibilityOfElementLocated(By.xpath("//*[@class=\"ajax-loadernew\"]")));
-		getScreenshot(Driver, "Upload_" + PID);
-
-		// --Click on Plus sign
-		Driver.findElement(By.id("hlkaddUpload")).click();
-		logger.info("Click on plus sign");
-		wait.until(ExpectedConditions.visibilityOfElementLocated(By.id("txtDocName")));
-		// --Enter Doc name
-		Driver.findElement(By.id("txtDocName")).sendKeys("AutoDocument");
-		logger.info("Enter doc name");
-
-		Driver.findElement(By.id("btnSelectFile")).click();
-		logger.info("Click on select file");
-
-		Thread.sleep(2000);
-
-		wait.until(ExpectedConditions.visibilityOfAllElementsLocatedBy(By.xpath("//*[@ng-form=\"userForm\"]")));
-
-		// --Select File
-		Thread.sleep(2000);
-		String Fpath = "C:\\Users\\rprajapati\\git\\NetAgent\\NetAgentProcess\\Job Upload Doc STG.xls";
-		WebElement InFile = Driver.findElement(By.id("inputfile"));
-		InFile.sendKeys(Fpath);
-		logger.info("Select the file");
-		Thread.sleep(2000);
-
-		// --Click on Upload btn
-		Driver.findElement(By.id("btnUpload")).click();
-		logger.info("File is uploaded successfully");
-
-		Thread.sleep(2000);
 		try {
-			String ErrorMsg = Driver.findElement(By.xpath("ng-bind=\"RenameFileErrorMsg\"")).getText();
-			if (ErrorMsg.contains("already exists.Your file was saved as")) {
-				logger.info("File already exist in the system");
-			}
-		} catch (Exception e) {
+			logger.info("===Upload Test Start===");
+			msg.append("===Upload Test Start===" + "\n\n");
+
+			Driver.findElement(By.id("hlkUploadDocument")).click();
+			logger.info("Clicked on Upload");
+			wait.until(ExpectedConditions.invisibilityOfElementLocated(By.xpath("//*[@class=\"ajax-loadernew\"]")));
+			getScreenshot(Driver, "Upload_" + PID);
+
+			// --Click on Plus sign
+			Driver.findElement(By.id("hlkaddUpload")).click();
+			logger.info("Click on plus sign");
+			wait.until(ExpectedConditions.visibilityOfElementLocated(By.id("txtDocName")));
+			// --Enter Doc name
+			Driver.findElement(By.id("txtDocName")).sendKeys("AutoDocument");
+			logger.info("Enter doc name");
+
+			Driver.findElement(By.id("btnSelectFile")).click();
+			logger.info("Click on select file");
+
+			Thread.sleep(2000);
+
+			wait.until(ExpectedConditions.visibilityOfAllElementsLocatedBy(By.xpath("//*[@ng-form=\"userForm\"]")));
+
+			// --Select File
+			Thread.sleep(2000);
+			String Fpath = "C:\\Users\\rprajapati\\git\\NetAgent\\NetAgentProcess\\Job Upload Doc STG.xls";
+			WebElement InFile = Driver.findElement(By.id("inputfile"));
+			InFile.sendKeys(Fpath);
+			logger.info("Select the file");
+			Thread.sleep(2000);
+
+			// --Click on Upload btn
+			Driver.findElement(By.id("btnUpload")).click();
 			logger.info("File is uploaded successfully");
+
+			Thread.sleep(2000);
+			try {
+				String ErrorMsg = Driver.findElement(By.xpath("ng-bind=\"RenameFileErrorMsg\"")).getText();
+				if (ErrorMsg.contains("already exists.Your file was saved as")) {
+					logger.info("File already exist in the system");
+				}
+			} catch (Exception e) {
+				logger.info("File is uploaded successfully");
+			}
+			WebElement UpLoadOK = Driver.findElement(By.id("btnOk"));
+			js.executeScript("arguments[0].click();", UpLoadOK);
+
+			Thread.sleep(2000);
+
+			logger.info("===Upload Test End===");
+			msg.append("===Upload Test End===" + "\n\n");
+		} catch (Exception memonotexist) {
+			logger.info("Upload is not exist");
+			msg.append("Upload is not exist" + "\n\n");
 		}
-		WebElement UpLoadOK = Driver.findElement(By.id("btnOk"));
-		js.executeScript("arguments[0].click();", UpLoadOK);
-
-		Thread.sleep(2000);
-
-		logger.info("===Upload Test End===");
-		msg.append("===Upload Test End===" + "\n\n");
 
 	}
 
@@ -7295,23 +7312,29 @@ public class OrderProcess extends BaseInit {
 		WebDriverWait wait = new WebDriverWait(Driver, 50);
 		JavascriptExecutor js = (JavascriptExecutor) Driver;
 
-		logger.info("===Map Test Start===");
-		msg.append("===Map Test Start===" + "\n\n");
+		try {
+			logger.info("===Map Test Start===");
+			msg.append("===Map Test Start===" + "\n\n");
 
-		Driver.findElement(By.id("hlkMap")).click();
-		logger.info("Clicked on Map");
-		wait.until(ExpectedConditions.invisibilityOfElementLocated(By.xpath("//*[@class=\"ajax-loadernew\"]")));
-		Thread.sleep(5000);
-		getScreenshot(Driver, "Map_" + PID);
+			Driver.findElement(By.id("hlkMap")).click();
+			logger.info("Clicked on Map");
+			wait.until(ExpectedConditions.invisibilityOfElementLocated(By.xpath("//*[@class=\"ajax-loadernew\"]")));
+			Thread.sleep(5000);
+			getScreenshot(Driver, "Map_" + PID);
 
-		// --Close
-		WebElement memoClose = Driver.findElement(By.id("idMapClose"));
-		js.executeScript("arguments[0].click();", memoClose);
-		logger.info("Clicked on Close button of Map");
-		Thread.sleep(2000);
+			// --Close
+			WebElement memoClose = Driver.findElement(By.id("idMapClose"));
+			js.executeScript("arguments[0].click();", memoClose);
+			logger.info("Clicked on Close button of Map");
+			Thread.sleep(2000);
 
-		logger.info("===Map Test End===");
-		msg.append("===Map Test End===" + "\n\n");
+			logger.info("===Map Test End===");
+			msg.append("===Map Test End===" + "\n\n");
+		} catch (Exception memonotexist) {
+			logger.info("Map is not exist");
+			msg.append("Map is not exist" + "\n\n");
+		}
+
 	}
 
 	public void addPackage(String PID) throws IOException {
@@ -7361,130 +7384,143 @@ public class OrderProcess extends BaseInit {
 		WebDriverWait wait = new WebDriverWait(Driver, 50);
 		JavascriptExecutor js = (JavascriptExecutor) Driver;
 
-		logger.info("===ShipLabel Test Start===");
-		msg.append("===ShipLabel Test Start===" + "\n\n");
-
-		// --Ship Label Services
-		Driver.findElement(By.linkText("Ship Label Services")).click();
-		logger.info("Clicked on Ship Label Services");
-		wait.until(ExpectedConditions.invisibilityOfElementLocated(By.xpath("//*[@class=\"ajax-loadernew\"]")));
-		wait.until(ExpectedConditions.visibilityOfAllElementsLocatedBy(By.xpath("//*[@ng-form=\"SLForm\"]")));
-		getScreenshot(Driver, "ShipLabelServices_" + PickUpID);
-
 		try {
-			// --Send Email
-			Driver.findElement(By.id("txtEmailLabelto")).sendKeys("Ravina.prajapati@samyak.com");
-			logger.info("Entered EmailID");
-			Driver.findElement(By.id("btnSend")).click();
-			logger.info("Clicked on Send button");
-			// ErrorMsg
-			try {
-				wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//*[@ng-bind=\"ErrorMsg\"]")));
-				logger.info(
-						"ErroMsg is Displayed=" + Driver.findElement(By.xpath("//*[@ng-bind=\"ErrorMsg\"]")).getText());
+			logger.info("===ShipLabel Test Start===");
+			msg.append("===ShipLabel Test Start===" + "\n\n");
 
-				// -- check the checkbox
-				Driver.findElement(By.id("chkbShip_0")).click();
-				logger.info("Checked the shiplabel");
-				Thread.sleep(2000);
+			// --Ship Label Services
+			Driver.findElement(By.linkText("Ship Label Services")).click();
+			logger.info("Clicked on Ship Label Services");
+			wait.until(ExpectedConditions.invisibilityOfElementLocated(By.xpath("//*[@class=\"ajax-loadernew\"]")));
+			wait.until(ExpectedConditions.visibilityOfAllElementsLocatedBy(By.xpath("//*[@ng-form=\"SLForm\"]")));
+			getScreenshot(Driver, "ShipLabelServices_" + PickUpID);
+
+			try {
 				// --Send Email
-				Driver.findElement(By.id("txtEmailLabelto")).clear();
 				Driver.findElement(By.id("txtEmailLabelto")).sendKeys("Ravina.prajapati@samyak.com");
 				logger.info("Entered EmailID");
 				Driver.findElement(By.id("btnSend")).click();
 				logger.info("Clicked on Send button");
+				// ErrorMsg
+				try {
+					wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//*[@ng-bind=\"ErrorMsg\"]")));
+					logger.info("ErroMsg is Displayed="
+							+ Driver.findElement(By.xpath("//*[@ng-bind=\"ErrorMsg\"]")).getText());
+
+					// -- check the checkbox
+					Driver.findElement(By.id("chkbShip_0")).click();
+					logger.info("Checked the shiplabel");
+					Thread.sleep(2000);
+					// --Send Email
+					Driver.findElement(By.id("txtEmailLabelto")).clear();
+					Driver.findElement(By.id("txtEmailLabelto")).sendKeys("Ravina.prajapati@samyak.com");
+					logger.info("Entered EmailID");
+					Driver.findElement(By.id("btnSend")).click();
+					logger.info("Clicked on Send button");
+					wait.until(ExpectedConditions
+							.invisibilityOfElementLocated(By.xpath("//*[@class=\"ajax-loadernew\"]")));
+					wait.until(ExpectedConditions.visibilityOfElementLocated(By.id("success")));
+					System.out
+							.println("Success Message is Displayed=" + Driver.findElement(By.id("success")).getText());
+
+				} catch (Exception e) {
+					logger.info("Error Message is not displayed");
+				}
+				// --Print button
+				wait.until(ExpectedConditions.visibilityOfElementLocated(
+						By.xpath("//*[@id=\"scrollboxIframe\"]//button[@id=\"btnPrint\"]")));
+				String TrackingNo = Driver.findElement(By.xpath("//*[contains(@ng-bind,'Your tracking number is')]"))
+						.getText();
+				logger.info("Tracking No==" + TrackingNo);
+				Driver.findElement(By.xpath("//*[@id=\"scrollboxIframe\"]//button[@id=\"btnPrint\"]")).click();
+				logger.info("Clicked on Print button");
 				wait.until(ExpectedConditions.invisibilityOfElementLocated(By.xpath("//*[@class=\"ajax-loadernew\"]")));
-				wait.until(ExpectedConditions.visibilityOfElementLocated(By.id("success")));
-				System.out.println("Success Message is Displayed=" + Driver.findElement(By.id("success")).getText());
+				wait.until(ExpectedConditions.visibilityOfAllElementsLocatedBy(By.xpath("//*[@ng-form=\"SLForm\"]")));
 
-			} catch (Exception e) {
-				logger.info("Error Message is not displayed");
+				// Handle Print window
+				String WindowHandlebefore = Driver.getWindowHandle();
+				for (String windHandle : Driver.getWindowHandles()) {
+					Driver.switchTo().window(windHandle);
+					logger.info("Switched to Print window");
+					Thread.sleep(5000);
+					getScreenshot(Driver, "PrintShipLabelService");
+				}
+				Driver.close();
+				logger.info("Closed Print window");
+
+				Driver.switchTo().window(WindowHandlebefore);
+				logger.info("Switched to main window");
+
+			} catch (Exception noShipLabel) {
+				logger.info("There is no Ship Label generated");
+				WebElement Label = Driver.findElement(By.xpath("//*[@ng-if=\"ShowTransSection\"]"));
+				logger.info("Label is==" + Label);
+
 			}
-			// --Print button
-			wait.until(ExpectedConditions
-					.visibilityOfElementLocated(By.xpath("//*[@id=\"scrollboxIframe\"]//button[@id=\"btnPrint\"]")));
-			String TrackingNo = Driver.findElement(By.xpath("//*[contains(@ng-bind,'Your tracking number is')]"))
-					.getText();
-			logger.info("Tracking No==" + TrackingNo);
-			Driver.findElement(By.xpath("//*[@id=\"scrollboxIframe\"]//button[@id=\"btnPrint\"]")).click();
-			logger.info("Clicked on Print button");
-			wait.until(ExpectedConditions.invisibilityOfElementLocated(By.xpath("//*[@class=\"ajax-loadernew\"]")));
-			wait.until(ExpectedConditions.visibilityOfAllElementsLocatedBy(By.xpath("//*[@ng-form=\"SLForm\"]")));
 
-			// Handle Print window
-			String WindowHandlebefore = Driver.getWindowHandle();
-			for (String windHandle : Driver.getWindowHandles()) {
-				Driver.switchTo().window(windHandle);
-				logger.info("Switched to Print window");
-				Thread.sleep(5000);
-				getScreenshot(Driver, "PrintShipLabelService");
-			}
-			Driver.close();
-			logger.info("Closed Print window");
+			// --Close Ship Label Service pop up
+			WebElement memoClose = Driver.findElement(By.id("idanchorclose"));
+			js.executeScript("arguments[0].click();", memoClose);
+			logger.info("Clicked on Close button of Memo");
+			Thread.sleep(2000);
 
-			Driver.switchTo().window(WindowHandlebefore);
-			logger.info("Switched to main window");
-
-		} catch (Exception noShipLabel) {
-			logger.info("There is no Ship Label generated");
-			WebElement Label = Driver.findElement(By.xpath("//*[@ng-if=\"ShowTransSection\"]"));
-			logger.info("Label is==" + Label);
-
+			logger.info("===ShipLabel Test End===");
+			msg.append("===ShipLabel Test End===" + "\n\n");
+		} catch (Exception memonotexist) {
+			logger.info("ShipLabel is not exist");
+			msg.append("ShipLabel is not exist" + "\n\n");
 		}
-
-		// --Close Ship Label Service pop up
-		WebElement memoClose = Driver.findElement(By.id("idanchorclose"));
-		js.executeScript("arguments[0].click();", memoClose);
-		logger.info("Clicked on Close button of Memo");
-		Thread.sleep(2000);
-
-		logger.info("===ShipLabel Test End===");
-		msg.append("===ShipLabel Test End===" + "\n\n");
 
 	}
 
 	public void printPull(String PickUpID) throws InterruptedException, IOException {
 		WebDriverWait wait = new WebDriverWait(Driver, 30);
 
-		logger.info("===Print Pull Test Start===");
-		msg.append("===Print Pull Test Start===" + "\n\n");
-
-		// --Print pull Ticket
 		try {
-			wait.until(ExpectedConditions.visibilityOfElementLocated(By.id("idprintpullticket")));
-			Driver.findElement(By.id("idprintpullticket")).click();
-			logger.info("Clicked on Print Pull Ticket");
-		} catch (Exception PrintTicc) {
+			logger.info("===Print Pull Test Start===");
+			msg.append("===Print Pull Test Start===" + "\n\n");
+
+			// --Print pull Ticket
 			try {
-				wait.until(ExpectedConditions.visibilityOfElementLocated(By.id("idprintpull")));
-				Driver.findElement(By.id("idprintpull")).click();
+				wait.until(ExpectedConditions.visibilityOfElementLocated(By.id("idprintpullticket")));
+				Driver.findElement(By.id("idprintpullticket")).click();
 				logger.info("Clicked on Print Pull Ticket");
-			} catch (Exception PrintPullT3P) {
-				wait.until(ExpectedConditions.visibilityOfElementLocated(By.id("idprintticket")));
-				Driver.findElement(By.id("idprintticket")).click();
-				logger.info("Clicked on Print Pull Ticket");
+			} catch (Exception PrintTicc) {
+				try {
+					wait.until(ExpectedConditions.visibilityOfElementLocated(By.id("idprintpull")));
+					Driver.findElement(By.id("idprintpull")).click();
+					logger.info("Clicked on Print Pull Ticket");
+				} catch (Exception PrintPullT3P) {
+					wait.until(ExpectedConditions.visibilityOfElementLocated(By.id("idprintticket")));
+					Driver.findElement(By.id("idprintticket")).click();
+					logger.info("Clicked on Print Pull Ticket");
+				}
+
 			}
 
+			wait.until(ExpectedConditions.invisibilityOfElementLocated(By.xpath("//*[@class=\"ajax-loadernew\"]")));
+			// Handle pull Print window
+			String WindowHandlebefore = Driver.getWindowHandle();
+			for (String windHandle : Driver.getWindowHandles()) {
+				Driver.switchTo().window(windHandle);
+				logger.info("Switched to Print Pull Ticket window");
+				Thread.sleep(5000);
+				getScreenshot(Driver, "PrintPullTicket_" + PickUpID);
+			}
+			Driver.close();
+			logger.info("Closed Print Pull Ticket window");
+
+			Driver.switchTo().window(WindowHandlebefore);
+			logger.info("Switched to main window");
+			Thread.sleep(2000);
+
+			logger.info("===Print Pull Test End===");
+			msg.append("===Print Pull Test End===" + "\n\n");
+		} catch (Exception memonotexist) {
+			logger.info("Print Pull is not exist");
+			msg.append("Print Pull is not exist" + "\n\n");
 		}
 
-		wait.until(ExpectedConditions.invisibilityOfElementLocated(By.xpath("//*[@class=\"ajax-loadernew\"]")));
-		// Handle pull Print window
-		String WindowHandlebefore = Driver.getWindowHandle();
-		for (String windHandle : Driver.getWindowHandles()) {
-			Driver.switchTo().window(windHandle);
-			logger.info("Switched to Print Pull Ticket window");
-			Thread.sleep(5000);
-			getScreenshot(Driver, "PrintPullTicket_" + PickUpID);
-		}
-		Driver.close();
-		logger.info("Closed Print Pull Ticket window");
-
-		Driver.switchTo().window(WindowHandlebefore);
-		logger.info("Switched to main window");
-		Thread.sleep(2000);
-
-		logger.info("===Print Pull Test End===");
-		msg.append("===Print Pull Test End===" + "\n\n");
 	}
 
 	public void dbNullError() {

@@ -89,6 +89,11 @@ public class H3P_OrderProcess extends BaseInit {
 			js.executeScript("arguments[0].click();", OPSearch);
 			logger.info("Click on Search button");
 			wait.until(ExpectedConditions.invisibilityOfElementLocated(By.xpath("//*[@class=\"ajax-loadernew\"]")));
+			
+			//--Checking editor
+			wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//*[@id=\"hlkMemo\"][contains(text(),'Memo')]")));
+
+
 
 			// Ship Label
 			OrderProcess OP = new OrderProcess();
@@ -1794,9 +1799,7 @@ public class H3P_OrderProcess extends BaseInit {
 				msg.append("unknown stage found for H3P service" + "\n\n");
 
 			}
-		} catch (
-
-		Exception NoData1) {
+		} catch (Exception NoData1) {
 			try {
 				wait.until(ExpectedConditions.visibilityOfElementLocated(By.className("dx-datagrid-nodata")));
 				WebElement NoData = Driver.findElement(By.className("dx-datagrid-nodata"));

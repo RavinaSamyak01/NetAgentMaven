@@ -10,6 +10,7 @@ import org.apache.poi.EncryptedDocumentException;
 import org.apache.poi.openxml4j.exceptions.InvalidFormatException;
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
+import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.ExpectedConditions;
@@ -161,11 +162,13 @@ public class LOC_OrderProcess extends BaseInit {
 
 					// js.executeScript("document.body.style.zoom = '80%';");
 
+					WebElement Deliver = Driver.findElement(By.id("lblAddress"));
+					js.executeScript("arguments[0].scrollIntoView();", Deliver);
+					Thread.sleep(2000);
+
 					WebElement Save = Driver.findElement(By.id("lnksave"));
 					js.executeScript("arguments[0].scrollIntoView();", Save);
-					act.moveToElement(Save).build().perform();
-					act.moveToElement(Save).build().perform();
-					act.moveToElement(Save).build().perform();
+					Thread.sleep(2000);
 
 					// --Enter PickUp Time
 
@@ -187,13 +190,14 @@ public class LOC_OrderProcess extends BaseInit {
 					dateFormat.setTimeZone(TimeZone.getTimeZone(ZOneID));
 					logger.info(dateFormat.format(date));
 					PUPTime.sendKeys(dateFormat.format(date));
-
+					PUPTime.sendKeys(Keys.TAB);
 					// Scroll up
 					// js.executeScript("window.scrollBy(0,-250)");
 
 					// PickUp
 					Save = Driver.findElement(By.id("lnksave"));
 					act.moveToElement(Save).build().perform();
+					wait.until(ExpectedConditions.elementToBeClickable(Save));
 					js.executeScript("arguments[0].click();", Save);
 					logger.info("Clicked on PICKUP button");
 
@@ -236,7 +240,7 @@ public class LOC_OrderProcess extends BaseInit {
 						logger.info("Current stage of the order is=" + Orderstage);
 						msg.append("Stage==" + Orderstage + "\n");
 
-						WebElement Deliver = Driver.findElement(By.id("lblAddress"));
+						Deliver = Driver.findElement(By.id("lblAddress"));
 						js.executeScript("arguments[0].scrollIntoView();", Deliver);
 						Thread.sleep(2000);
 
@@ -259,10 +263,12 @@ public class LOC_OrderProcess extends BaseInit {
 						dateFormat.setTimeZone(TimeZone.getTimeZone(ZOneID));
 						logger.info(dateFormat.format(date));
 						DelTime.sendKeys(dateFormat.format(date));
+						DelTime.sendKeys(Keys.TAB);
 
 						// --Signature
 						WebElement Sign = Driver.findElement(By.id("txtSignature"));
 						act.moveToElement(Sign).build().perform();
+						Sign.clear();
 						Sign.sendKeys("Ravina Prajapati");
 
 						logger.info("Entered signature");
@@ -276,8 +282,9 @@ public class LOC_OrderProcess extends BaseInit {
 						try {
 							wait.until(
 									ExpectedConditions.visibilityOfAllElementsLocatedBy(By.className("modal-dialog")));
-							Driver.findElement(By.id("iddataok")).click();
-							logger.info("Clicked on Yes button");
+							WebElement DOK = Driver.findElement(By.id("iddataok"));
+							js.executeScript("arguments[0].click();", DOK);
+							logger.info("Click on OK of Dialogue box");
 
 						} catch (Exception e) {
 							logger.info("Dialogue is not exist");
@@ -322,11 +329,13 @@ public class LOC_OrderProcess extends BaseInit {
 
 				// js.executeScript("document.body.style.zoom = '80%';");
 
+				WebElement Deliver = Driver.findElement(By.id("lblAddress"));
+				js.executeScript("arguments[0].scrollIntoView();", Deliver);
+				Thread.sleep(2000);
+
 				WebElement Save = Driver.findElement(By.id("lnksave"));
 				js.executeScript("arguments[0].scrollIntoView();", Save);
-				act.moveToElement(Save).build().perform();
-				act.moveToElement(Save).build().perform();
-				act.moveToElement(Save).build().perform();
+				Thread.sleep(2000);
 
 				// --Enter PickUp Time
 
@@ -348,13 +357,14 @@ public class LOC_OrderProcess extends BaseInit {
 				dateFormat.setTimeZone(TimeZone.getTimeZone(ZOneID));
 				logger.info(dateFormat.format(date));
 				PUPTime.sendKeys(dateFormat.format(date));
-
+				PUPTime.sendKeys(Keys.TAB);
 				// Scroll up
 				// js.executeScript("window.scrollBy(0,-250)");
 
 				// PickUp
 				Save = Driver.findElement(By.id("lnksave"));
 				act.moveToElement(Save).build().perform();
+				wait.until(ExpectedConditions.elementToBeClickable(Save));
 				js.executeScript("arguments[0].click();", Save);
 				logger.info("Clicked on PICKUP button");
 
@@ -396,7 +406,7 @@ public class LOC_OrderProcess extends BaseInit {
 					logger.info("Current stage of the order is=" + Orderstage);
 					msg.append("Stage==" + Orderstage + "\n");
 
-					WebElement Deliver = Driver.findElement(By.id("lblAddress"));
+					Deliver = Driver.findElement(By.id("lblAddress"));
 					js.executeScript("arguments[0].scrollIntoView();", Deliver);
 					Thread.sleep(2000);
 
@@ -419,10 +429,12 @@ public class LOC_OrderProcess extends BaseInit {
 					dateFormat.setTimeZone(TimeZone.getTimeZone(ZOneID));
 					logger.info(dateFormat.format(date));
 					DelTime.sendKeys(dateFormat.format(date));
+					DelTime.sendKeys(Keys.TAB);
 
 					// --Signature
 					WebElement Sign = Driver.findElement(By.id("txtSignature"));
 					act.moveToElement(Sign).build().perform();
+					Sign.clear();
 					Sign.sendKeys("Ravina Prajapati");
 
 					logger.info("Entered signature");
@@ -435,8 +447,9 @@ public class LOC_OrderProcess extends BaseInit {
 
 					try {
 						wait.until(ExpectedConditions.visibilityOfAllElementsLocatedBy(By.className("modal-dialog")));
-						Driver.findElement(By.id("iddataok")).click();
-						logger.info("Clicked on Yes button");
+						WebElement DOK = Driver.findElement(By.id("iddataok"));
+						js.executeScript("arguments[0].click();", DOK);
+						logger.info("Click on OK of Dialogue box");
 
 					} catch (Exception e) {
 						logger.info("Dialogue is not exist");
@@ -501,10 +514,12 @@ public class LOC_OrderProcess extends BaseInit {
 				dateFormat.setTimeZone(TimeZone.getTimeZone(ZOneID));
 				logger.info(dateFormat.format(date));
 				DelTime.sendKeys(dateFormat.format(date));
+				DelTime.sendKeys(Keys.TAB);
 
 				// --Signature
 				WebElement Sign = Driver.findElement(By.id("txtSignature"));
 				act.moveToElement(Sign).build().perform();
+				Sign.clear();
 				Sign.sendKeys("Ravina Prajapati");
 
 				logger.info("Entered signature");
@@ -517,8 +532,9 @@ public class LOC_OrderProcess extends BaseInit {
 
 				try {
 					wait.until(ExpectedConditions.visibilityOfAllElementsLocatedBy(By.className("modal-dialog")));
-					Driver.findElement(By.id("iddataok")).click();
-					logger.info("Clicked on Yes button");
+					WebElement DOK = Driver.findElement(By.id("iddataok"));
+					js.executeScript("arguments[0].click();", DOK);
+					logger.info("Click on OK of Dialogue box");
 
 				} catch (Exception e) {
 					logger.info("Dialogue is not exist");
@@ -574,7 +590,6 @@ public class LOC_OrderProcess extends BaseInit {
 			}
 		}
 
-
 		try {
 			WebElement NGLLOgo = Driver.findElement(By.id("imgNGLLogo"));
 			wait.until(ExpectedConditions.elementToBeClickable(NGLLOgo));
@@ -591,7 +606,6 @@ public class LOC_OrderProcess extends BaseInit {
 			wait.until(ExpectedConditions.invisibilityOfElementLocated(By.xpath("//*[@class=\"ajax-loadernew\"]")));
 			wait.until(ExpectedConditions.visibilityOfAllElementsLocatedBy(By.className("welcomecontent")));
 		}
-
 
 		logger.info("=====LOC Order Processing Test End=====");
 		msg.append("=====LOC Order Processing Test End=====" + "\n\n");

@@ -105,28 +105,33 @@ public class D3P_OrderProcess extends BaseInit {
 					logger.info("Enter pickupID in search input");
 					WebElement InvSearch = Driver.findElement(By.id("btnSearch2"));
 					wait.until(ExpectedConditions.elementToBeClickable(InvSearch));
-					wait.until(ExpectedConditions.elementToBeClickable(InvSearch));
 					act.moveToElement(InvSearch).build().perform();
 					js.executeScript("arguments[0].click();", InvSearch);
 					logger.info("Click on Search button");
 					wait.until(ExpectedConditions
 							.invisibilityOfElementLocated(By.xpath("//*[@class=\"ajax-loadernew\"]")));
+					// --Checking editor
 				}
 			} catch (Exception Tab) {
-				logger.info("Job is exist");
 
 			}
-			/*
-			 * OrderProcess OP = new OrderProcess(); // Ship Label
-			 * 
-			 * OP.shipLabel(PUID);
-			 * 
-			 * // --Memo OP.memo(PUID);
-			 * 
-			 * // -Notification OP.notification(PUID);
-			 * 
-			 * // Upload OP.upload(PUID);
-			 */
+
+			wait.until(ExpectedConditions
+					.visibilityOfElementLocated(By.xpath("//*[@id=\"hlkMemo\"][contains(text(),'Memo')]")));
+
+			OrderProcess OP = new OrderProcess(); // Ship Label
+
+			OP.shipLabel(PUID);
+
+			// --Memo
+			OP.memo(PUID);
+
+			// -Notification
+			OP.notification(PUID);
+
+			// Upload
+			OP.upload(PUID);
+
 			// --Get current stage of the order
 			String Orderstage = null;
 			try {
@@ -426,7 +431,7 @@ public class D3P_OrderProcess extends BaseInit {
 							dateFormat.setTimeZone(TimeZone.getTimeZone(ZOneID));
 							logger.info(dateFormat.format(date));
 							PartPullTime.sendKeys(dateFormat.format(date));
-
+							PartPullTime.sendKeys(Keys.TAB);
 							// --Save button
 							try {
 								try {
@@ -569,6 +574,7 @@ public class D3P_OrderProcess extends BaseInit {
 							dateFormat.setTimeZone(TimeZone.getTimeZone(ZOneID));
 							logger.info(dateFormat.format(date));
 							PartPullTime.sendKeys(dateFormat.format(date));
+							PartPullTime.sendKeys(Keys.TAB);
 
 							/*
 							 * // --Zoom out js.executeScript("document.body.style.zoom='80%';");
@@ -688,13 +694,26 @@ public class D3P_OrderProcess extends BaseInit {
 							dateFormat.setTimeZone(TimeZone.getTimeZone(ZOneID));
 							logger.info(dateFormat.format(date));
 							PUPTime.sendKeys(dateFormat.format(date));
-							Driver.findElement(By.id("lnksave")).click();
-							logger.info("Clicked on PICKUP button");
-							Thread.sleep(2000);
+							PUPTime.sendKeys(Keys.TAB);
+
+							// --Save
+							try {
+								WebElement Save = Driver.findElement(By.id("lnksave"));
+								act.moveToElement(Save).build().perform();
+								js.executeScript("arguments[0].click();", Save);
+								logger.info("Clicked on PICKUP button");
+							} catch (Exception saveeee) {
+								WebElement Save = Driver.findElement(By.id("lnksave"));
+								act.moveToElement(Save).build().perform();
+								act.moveToElement(Save).click().perform();
+								logger.info("Clicked on PICKUP button");
+							}
+
 							try {
 								wait.until(ExpectedConditions
 										.visibilityOfAllElementsLocatedBy(By.className("modal-dialog")));
-								Driver.findElement(By.id("iddataok")).click();
+								WebElement Dyes = Driver.findElement(By.id("iddataok"));
+								js.executeScript("arguments[0].click();", Dyes);
 								logger.info("Clicked on Yes button");
 
 							} catch (Exception Dialogue) {
@@ -749,6 +768,7 @@ public class D3P_OrderProcess extends BaseInit {
 								dateFormat.setTimeZone(TimeZone.getTimeZone(ZOneID));
 								logger.info(dateFormat.format(date));
 								DropTime.sendKeys(dateFormat.format(date));
+								DropTime.sendKeys(Keys.TAB);
 
 								// --Click on Tender To 3P
 								try {
@@ -799,6 +819,7 @@ public class D3P_OrderProcess extends BaseInit {
 									dateFormat.setTimeZone(TimeZone.getTimeZone(ZOneID));
 									logger.info(dateFormat.format(date));
 									DropTime.sendKeys(dateFormat.format(date));
+									DropTime.sendKeys(Keys.TAB);
 
 									// --Click on Tender To 3P
 									try {
@@ -893,28 +914,92 @@ public class D3P_OrderProcess extends BaseInit {
 
 				// --Confirm Pull Alert
 				String stage = Driver.findElement(By.xpath("//h3[contains(@class,'panel-title')]")).getText();
-				logger.info("stage=" + stage);
+				logger.info("Current stage of the order is=" + stage);
+				msg.append("Current stage of the order is=" + stage + "\n");
 				logger.info("If order stage is Confirm Pull Alert.....");
 				getScreenshot(Driver, "D3P_ConfirmPullAlert_" + PUID);
 
-				// --Click on Accept
-				Driver.findElement(By.id("idiconaccept")).click();
-				logger.info("Clicked on Accept button");
+				try {
+					try {
+						WebElement Accept = Driver.findElement(By.id("idiconaccept"));
+						act.moveToElement(Accept).build().perform();
+						wait.until(ExpectedConditions.elementToBeClickable(Accept));
+						act.moveToElement(Accept).click().perform();
+						logger.info("Clicked on Accept button");
+
+					} catch (Exception saveee) {
+						WebElement Accept = Driver.findElement(By.id("idiconaccept"));
+						act.moveToElement(Accept).build().perform();
+						wait.until(ExpectedConditions.elementToBeClickable(Accept));
+						js.executeScript("arguments[0].click();", Accept);
+						logger.info("Clicked on Accept button");
+
+					}
+				} catch (Exception Saveb) {
+					try {
+						WebElement Accept = Driver.findElement(By.id("lnkcnfpull"));
+						act.moveToElement(Accept).click().perform();
+						wait.until(ExpectedConditions.elementToBeClickable(Accept));
+						act.moveToElement(Accept).click().perform();
+						logger.info("Clicked on Accept button");
+
+					} catch (Exception saveee) {
+						WebElement Accept = Driver.findElement(By.id("lnkcnfpull"));
+						act.moveToElement(Accept).build().perform();
+						wait.until(ExpectedConditions.elementToBeClickable(Accept));
+						js.executeScript("arguments[0].click();", Accept);
+						logger.info("Clicked on Accept button");
+					}
+
+				}
 
 				try {
 					wait.until(
 							ExpectedConditions.visibilityOfElementLocated(By.xpath("//*[@ng-message=\"required\"]")));
 					logger.info("Validation Message is=="
 							+ Driver.findElement(By.xpath("//*[@ng-message=\"required\"]")).getText());
-					// --Spoke with
-					Driver.findElement(By.id("idConfPullAlertForm")).sendKeys("Ravina Oza");
-					logger.info("Entered spoke with");
-					// --Click on Accept
-					Driver.findElement(By.id("idiconaccept")).click();
-					logger.info("Clicked on Accept button");
 
+					// --Spoke with
+					WebElement SpokeWith = Driver.findElement(By.id("idConfPullAlertForm"));
+					act.moveToElement(SpokeWith).build().perform();
+					SpokeWith.sendKeys("Ravina Oza");
+					logger.info("Entered spoke with");
+
+					try {
+						try {
+							WebElement Accept = Driver.findElement(By.id("idiconaccept"));
+							act.moveToElement(Accept).build().perform();
+							wait.until(ExpectedConditions.elementToBeClickable(Accept));
+							act.moveToElement(Accept).click().perform();
+							logger.info("Clicked on Accept button");
+
+						} catch (Exception saveee) {
+							WebElement Accept = Driver.findElement(By.id("idiconaccept"));
+							act.moveToElement(Accept).build().perform();
+							wait.until(ExpectedConditions.elementToBeClickable(Accept));
+							js.executeScript("arguments[0].click();", Accept);
+							logger.info("Clicked on Accept button");
+
+						}
+					} catch (Exception Saveb) {
+						try {
+							WebElement Accept = Driver.findElement(By.id("lnkcnfpull"));
+							act.moveToElement(Accept).click().perform();
+							wait.until(ExpectedConditions.elementToBeClickable(Accept));
+							act.moveToElement(Accept).click().perform();
+							logger.info("Clicked on Accept button");
+
+						} catch (Exception saveee) {
+							WebElement Accept = Driver.findElement(By.id("lnkcnfpull"));
+							act.moveToElement(Accept).build().perform();
+							wait.until(ExpectedConditions.elementToBeClickable(Accept));
+							js.executeScript("arguments[0].click();", Accept);
+							logger.info("Clicked on Accept button");
+						}
+
+					}
 				} catch (Exception e) {
-					logger.info("Validation Message is not displayed");
+					logger.info("Spoke with validation is not displayed");
 
 				}
 
@@ -969,11 +1054,15 @@ public class D3P_OrderProcess extends BaseInit {
 					stage = Driver.findElement(By.xpath("//h3[contains(@class,'panel-title')]")).getText();
 					logger.info("stage=" + stage);
 					getScreenshot(Driver, "D3P_ConfirmPull_" + PUID);
+
 					// --Label generation
-					Driver.findElement(By.id("idiconprint")).click();
+					WebElement LabelG = Driver.findElement(By.id("idiconprint"));
+					act.moveToElement(LabelG).build().perform();
+					js.executeScript("arguments[0].click();", LabelG);
 					logger.info("Clicked on Label Generation");
 					wait.until(ExpectedConditions
 							.invisibilityOfElementLocated(By.xpath("//*[@class=\"ajax-loadernew\"]")));
+
 					// Handle Label Generation window
 					String WindowHandlebefore = Driver.getWindowHandle();
 					for (String windHandle : Driver.getWindowHandles()) {
@@ -989,16 +1078,43 @@ public class D3P_OrderProcess extends BaseInit {
 					logger.info("Switched to main window");
 
 					// --Save button
-					WebElement Save = Driver.findElement(By.id("idiconsave"));
-					act.moveToElement(Save).build().perform();
-					Save.click();
-					logger.info("Clicked on Save button");
-					wait.until(ExpectedConditions
-							.invisibilityOfElementLocated(By.xpath("//*[@class=\"ajax-loadernew\"]")));
+					try {
+						try {
+							WebElement Accept = Driver.findElement(By.id("idiconsave"));
+							act.moveToElement(Accept).build().perform();
+							wait.until(ExpectedConditions.elementToBeClickable(Accept));
+							act.moveToElement(Accept).click().perform();
+							logger.info("Clicked on Accept button");
+
+						} catch (Exception Saveb) {
+							WebElement Accept = Driver.findElement(By.id("idiconsave"));
+							act.moveToElement(Accept).build().perform();
+							wait.until(ExpectedConditions.elementToBeClickable(Accept));
+							js.executeScript("arguments[0].click();", Accept);
+							logger.info("Clicked on Accept button");
+
+						}
+					} catch (Exception Saveee) {
+						try {
+							WebElement Accept = Driver.findElement(By.id("lnkcnfpull"));
+							act.moveToElement(Accept).build().perform();
+							wait.until(ExpectedConditions.elementToBeClickable(Accept));
+							act.moveToElement(Accept).click().perform();
+							logger.info("Clicked on Accept button");
+
+						} catch (Exception Saveb) {
+							WebElement Accept = Driver.findElement(By.id("lnkcnfpull"));
+							act.moveToElement(Accept).build().perform();
+							wait.until(ExpectedConditions.elementToBeClickable(Accept));
+							js.executeScript("arguments[0].click();", Accept);
+							logger.info("Clicked on Accept button");
+						}
+					}
 					try {
 						wait.until(ExpectedConditions.visibilityOfElementLocated(By.id("idPartPullDttmValidation")));
 						String ValMsg = Driver.findElement(By.id("idPartPullDttmValidation")).getText();
 						logger.info("Validation Message=" + ValMsg);
+
 						// --ZoneID
 						String ZOneID = Driver.findElement(By.xpath("//span[contains(@ng-bind,'TimezoneId')]"))
 								.getText();
@@ -1011,6 +1127,7 @@ public class D3P_OrderProcess extends BaseInit {
 
 						// --Part Pull Date
 						WebElement PartPullDate = Driver.findElement(By.id("idtxtPartPullDate"));
+						act.moveToElement(PartPullDate).build().perform();
 						PartPullDate.clear();
 						Date date = new Date();
 						DateFormat dateFormat = new SimpleDateFormat("MM/dd/yyyy");
@@ -1021,20 +1138,48 @@ public class D3P_OrderProcess extends BaseInit {
 
 						// --Part Pull Time
 						WebElement PartPullTime = Driver.findElement(By.id("txtPartPullTime"));
+						act.moveToElement(PartPullTime).build().perform();
 						PartPullTime.clear();
 						date = new Date();
 						dateFormat = new SimpleDateFormat("HH:mm");
 						dateFormat.setTimeZone(TimeZone.getTimeZone(ZOneID));
 						logger.info(dateFormat.format(date));
 						PartPullTime.sendKeys(dateFormat.format(date));
+						PartPullTime.sendKeys(Keys.TAB);
 						// --Save button
-						Save = Driver.findElement(By.id("idiconsave"));
-						act.moveToElement(Save).build().perform();
-						Save.click();
-						logger.info("Clicked on Save button");
-						wait.until(ExpectedConditions
-								.invisibilityOfElementLocated(By.xpath("//*[@class=\"ajax-loadernew\"]")));
-					} catch (Exception eDataB) {
+						try {
+							try {
+								WebElement Accept = Driver.findElement(By.id("idiconsave"));
+								act.moveToElement(Accept).build().perform();
+								wait.until(ExpectedConditions.elementToBeClickable(Accept));
+								act.moveToElement(Accept).click().perform();
+								logger.info("Clicked on Accept button");
+
+							} catch (Exception Saveb) {
+								WebElement Accept = Driver.findElement(By.id("idiconsave"));
+								act.moveToElement(Accept).build().perform();
+								wait.until(ExpectedConditions.elementToBeClickable(Accept));
+								js.executeScript("arguments[0].click();", Accept);
+								logger.info("Clicked on Accept button");
+
+							}
+						} catch (Exception Saveee) {
+							try {
+								WebElement Accept = Driver.findElement(By.id("lnkcnfpull"));
+								act.moveToElement(Accept).build().perform();
+								wait.until(ExpectedConditions.elementToBeClickable(Accept));
+								act.moveToElement(Accept).click().perform();
+								logger.info("Clicked on Accept button");
+
+							} catch (Exception Saveb) {
+								WebElement Accept = Driver.findElement(By.id("lnkcnfpull"));
+								act.moveToElement(Accept).build().perform();
+								wait.until(ExpectedConditions.elementToBeClickable(Accept));
+								js.executeScript("arguments[0].click();", Accept);
+								logger.info("Clicked on Accept button");
+							}
+						}
+					} catch (Exception ev) {
 						logger.info("Validation Message is not displayed");
 					}
 
@@ -1049,27 +1194,69 @@ public class D3P_OrderProcess extends BaseInit {
 						String SerialNo = Driver.findElement(By.xpath("//*[@ng-bind=\"segment.SerialNo\"]")).getText();
 						logger.info("Serial No of Part is==" + SerialNo + "\n");
 						// enter serial number in scan
-						Driver.findElement(By.id("txtBarcode")).clear();
+						WebElement SerialNoBar = Driver.findElement(By.id("txtBarcode"));
+						act.moveToElement(SerialNoBar).build().perform();
+						SerialNoBar.clear();
 						Driver.findElement(By.id("txtBarcode")).sendKeys(SerialNo);
 						Driver.findElement(By.id("txtBarcode")).sendKeys(Keys.TAB);
 						wait.until(ExpectedConditions
 								.invisibilityOfElementLocated(By.xpath("//*[@class=\"ajax-loadernew\"]")));
 						logger.info("Entered serial No in scan barcode");
+
+						/*
+						 * // --Zoom out js.executeScript("document.body.style.zoom='80%';");
+						 * Thread.sleep(2000);
+						 */
+
 						// --Save button
-						Save = Driver.findElement(By.id("idiconsave"));
-						act.moveToElement(Save).build().perform();
-						Save.click();
-						logger.info("Clicked on Save button");
-					} catch (Exception SerialNo) {
-						logger.info("Validation for Serial No is not displayed");
+						try {
+							try {
+								WebElement Accept = Driver.findElement(By.id("idiconsave"));
+								act.moveToElement(Accept).build().perform();
+								wait.until(ExpectedConditions.elementToBeClickable(Accept));
+								act.moveToElement(Accept).click().perform();
+								logger.info("Clicked on Accept button");
+
+							} catch (Exception Saveb) {
+								WebElement Accept = Driver.findElement(By.id("idiconsave"));
+								act.moveToElement(Accept).build().perform();
+								wait.until(ExpectedConditions.elementToBeClickable(Accept));
+								js.executeScript("arguments[0].click();", Accept);
+								logger.info("Clicked on Accept button");
+
+							}
+						} catch (Exception Saveee) {
+							try {
+								WebElement Accept = Driver.findElement(By.id("lnkcnfpull"));
+								act.moveToElement(Accept).build().perform();
+								wait.until(ExpectedConditions.elementToBeClickable(Accept));
+								act.moveToElement(Accept).click().perform();
+								logger.info("Clicked on Accept button");
+
+							} catch (Exception Saveb) {
+								WebElement Accept = Driver.findElement(By.id("lnkcnfpull"));
+								act.moveToElement(Accept).build().perform();
+								wait.until(ExpectedConditions.elementToBeClickable(Accept));
+								js.executeScript("arguments[0].click();", Accept);
+								logger.info("Clicked on Accept button");
+							}
+						}
+
+					} catch (Exception errmsg) {
+						logger.info("Validation message is not displayed");
 
 					}
-
 					try {
 						wait.until(ExpectedConditions
 								.visibilityOfElementLocated(By.xpath("//label[contains(@class,'error-messages')]")));
 						logger.info("ErroMsg is Displayed="
 								+ Driver.findElement(By.xpath("//label[contains(@class,'error-messages')]")).getText());
+
+						/*
+						 * // --Zoom In js.executeScript("document.body.style.zoom='100%';");
+						 * Thread.sleep(2000);
+						 */
+
 						// --ZoneID
 						String ZOneID = Driver.findElement(By.xpath("//span[contains(@ng-bind,'TimezoneId')]"))
 								.getText();
@@ -1082,6 +1269,7 @@ public class D3P_OrderProcess extends BaseInit {
 
 						// --Part Pull Date
 						WebElement PartPullDate = Driver.findElement(By.id("idtxtPartPullDate"));
+						act.moveToElement(PartPullDate).build().perform();
 						PartPullDate.clear();
 						Date date = new Date();
 						DateFormat dateFormat = new SimpleDateFormat("MM/dd/yyyy");
@@ -1092,28 +1280,55 @@ public class D3P_OrderProcess extends BaseInit {
 
 						// --Part Pull Time
 						WebElement PartPullTime = Driver.findElement(By.id("txtPartPullTime"));
+						act.moveToElement(PartPullTime).build().perform();
 						PartPullTime.clear();
 						date = new Date();
 						dateFormat = new SimpleDateFormat("HH:mm");
 						dateFormat.setTimeZone(TimeZone.getTimeZone(ZOneID));
 						logger.info(dateFormat.format(date));
 						PartPullTime.sendKeys(dateFormat.format(date));
+						PartPullTime.sendKeys(Keys.TAB);
 
-						// --Save button
-						Save = Driver.findElement(By.id("idiconsave"));
-						act.moveToElement(Save).build().perform();
-						Save.click();
-						logger.info("Clicked on Save button");
-						wait.until(ExpectedConditions
-								.invisibilityOfElementLocated(By.xpath("//*[@class=\"ajax-loadernew\"]")));
+						/*
+						 * // --Zoom out js.executeScript("document.body.style.zoom='80%';");
+						 * Thread.sleep(2000);
+						 */
 
+						try {
+							try {
+								WebElement Accept = Driver.findElement(By.id("idiconsave"));
+								act.moveToElement(Accept).build().perform();
+								wait.until(ExpectedConditions.elementToBeClickable(Accept));
+								act.moveToElement(Accept).click().perform();
+								logger.info("Clicked on Accept button");
+
+							} catch (Exception Saveb) {
+								WebElement Accept = Driver.findElement(By.id("idiconsave"));
+								act.moveToElement(Accept).build().perform();
+								wait.until(ExpectedConditions.elementToBeClickable(Accept));
+								js.executeScript("arguments[0].click();", Accept);
+								logger.info("Clicked on Accept button");
+
+							}
+						} catch (Exception Saveee) {
+							try {
+								WebElement Accept = Driver.findElement(By.id("lnkcnfpull"));
+								act.moveToElement(Accept).build().perform();
+								wait.until(ExpectedConditions.elementToBeClickable(Accept));
+								act.moveToElement(Accept).click().perform();
+								logger.info("Clicked on Accept button");
+
+							} catch (Exception Saveb) {
+								WebElement Accept = Driver.findElement(By.id("lnkcnfpull"));
+								act.moveToElement(Accept).build().perform();
+								wait.until(ExpectedConditions.elementToBeClickable(Accept));
+								js.executeScript("arguments[0].click();", Accept);
+								logger.info("Clicked on Accept button");
+							}
+						}
 					} catch (Exception Time) {
 						logger.info("Time validation is not displayed-Time is as per timeZone");
 					}
-
-					// --Checking Error issue
-					OrderProcess Op = new OrderProcess();
-					Op.dbNullError();
 
 					// --Search job from Inventory tab
 					wait.until(ExpectedConditions.visibilityOfElementLocated(By.id("txtBasicSearch")));
@@ -1190,13 +1405,26 @@ public class D3P_OrderProcess extends BaseInit {
 						dateFormat.setTimeZone(TimeZone.getTimeZone(ZOneID));
 						logger.info(dateFormat.format(date));
 						PUPTime.sendKeys(dateFormat.format(date));
-						Driver.findElement(By.id("lnksave")).click();
-						logger.info("Clicked on PICKUP button");
-						Thread.sleep(2000);
+						PUPTime.sendKeys(Keys.TAB);
+
+						// --Save
+						try {
+							WebElement Save = Driver.findElement(By.id("lnksave"));
+							act.moveToElement(Save).build().perform();
+							js.executeScript("arguments[0].click();", Save);
+							logger.info("Clicked on PICKUP button");
+						} catch (Exception saveeee) {
+							WebElement Save = Driver.findElement(By.id("lnksave"));
+							act.moveToElement(Save).build().perform();
+							act.moveToElement(Save).click().perform();
+							logger.info("Clicked on PICKUP button");
+						}
+
 						try {
 							wait.until(
 									ExpectedConditions.visibilityOfAllElementsLocatedBy(By.className("modal-dialog")));
-							Driver.findElement(By.id("iddataok")).click();
+							WebElement Dyes = Driver.findElement(By.id("iddataok"));
+							js.executeScript("arguments[0].click();", Dyes);
 							logger.info("Clicked on Yes button");
 
 						} catch (Exception Dialogue) {
@@ -1251,6 +1479,7 @@ public class D3P_OrderProcess extends BaseInit {
 							dateFormat.setTimeZone(TimeZone.getTimeZone(ZOneID));
 							logger.info(dateFormat.format(date));
 							DropTime.sendKeys(dateFormat.format(date));
+							DropTime.sendKeys(Keys.TAB);
 
 							// --Click on Tender To 3P
 							try {
@@ -1301,6 +1530,7 @@ public class D3P_OrderProcess extends BaseInit {
 								dateFormat.setTimeZone(TimeZone.getTimeZone(ZOneID));
 								logger.info(dateFormat.format(date));
 								DropTime.sendKeys(dateFormat.format(date));
+								DropTime.sendKeys(Keys.TAB);
 
 								// --Click on Tender To 3P
 								try {
@@ -1395,10 +1625,14 @@ public class D3P_OrderProcess extends BaseInit {
 				String stage = Driver.findElement(By.xpath("//h3[contains(@class,'panel-title')]")).getText();
 				logger.info("stage=" + stage);
 				getScreenshot(Driver, "D3P_ConfirmPull_" + PUID);
+
 				// --Label generation
-				Driver.findElement(By.id("idiconprint")).click();
+				WebElement LabelG = Driver.findElement(By.id("idiconprint"));
+				act.moveToElement(LabelG).build().perform();
+				js.executeScript("arguments[0].click();", LabelG);
 				logger.info("Clicked on Label Generation");
 				wait.until(ExpectedConditions.invisibilityOfElementLocated(By.xpath("//*[@class=\"ajax-loadernew\"]")));
+
 				// Handle Label Generation window
 				String WindowHandlebefore = Driver.getWindowHandle();
 				for (String windHandle : Driver.getWindowHandles()) {
@@ -1414,15 +1648,43 @@ public class D3P_OrderProcess extends BaseInit {
 				logger.info("Switched to main window");
 
 				// --Save button
-				WebElement Save = Driver.findElement(By.id("idiconsave"));
-				act.moveToElement(Save).build().perform();
-				Save.click();
-				logger.info("Clicked on Save button");
-				wait.until(ExpectedConditions.invisibilityOfElementLocated(By.xpath("//*[@class=\"ajax-loadernew\"]")));
+				try {
+					try {
+						WebElement Accept = Driver.findElement(By.id("idiconsave"));
+						act.moveToElement(Accept).build().perform();
+						wait.until(ExpectedConditions.elementToBeClickable(Accept));
+						act.moveToElement(Accept).click().perform();
+						logger.info("Clicked on Accept button");
+
+					} catch (Exception Saveb) {
+						WebElement Accept = Driver.findElement(By.id("idiconsave"));
+						act.moveToElement(Accept).build().perform();
+						wait.until(ExpectedConditions.elementToBeClickable(Accept));
+						js.executeScript("arguments[0].click();", Accept);
+						logger.info("Clicked on Accept button");
+
+					}
+				} catch (Exception Saveee) {
+					try {
+						WebElement Accept = Driver.findElement(By.id("lnkcnfpull"));
+						act.moveToElement(Accept).build().perform();
+						wait.until(ExpectedConditions.elementToBeClickable(Accept));
+						act.moveToElement(Accept).click().perform();
+						logger.info("Clicked on Accept button");
+
+					} catch (Exception Saveb) {
+						WebElement Accept = Driver.findElement(By.id("lnkcnfpull"));
+						act.moveToElement(Accept).build().perform();
+						wait.until(ExpectedConditions.elementToBeClickable(Accept));
+						js.executeScript("arguments[0].click();", Accept);
+						logger.info("Clicked on Accept button");
+					}
+				}
 				try {
 					wait.until(ExpectedConditions.visibilityOfElementLocated(By.id("idPartPullDttmValidation")));
 					String ValMsg = Driver.findElement(By.id("idPartPullDttmValidation")).getText();
 					logger.info("Validation Message=" + ValMsg);
+
 					// --ZoneID
 					String ZOneID = Driver.findElement(By.xpath("//span[contains(@ng-bind,'TimezoneId')]")).getText();
 					logger.info("ZoneID of is==" + ZOneID);
@@ -1434,6 +1696,7 @@ public class D3P_OrderProcess extends BaseInit {
 
 					// --Part Pull Date
 					WebElement PartPullDate = Driver.findElement(By.id("idtxtPartPullDate"));
+					act.moveToElement(PartPullDate).build().perform();
 					PartPullDate.clear();
 					Date date = new Date();
 					DateFormat dateFormat = new SimpleDateFormat("MM/dd/yyyy");
@@ -1444,20 +1707,48 @@ public class D3P_OrderProcess extends BaseInit {
 
 					// --Part Pull Time
 					WebElement PartPullTime = Driver.findElement(By.id("txtPartPullTime"));
+					act.moveToElement(PartPullTime).build().perform();
 					PartPullTime.clear();
 					date = new Date();
 					dateFormat = new SimpleDateFormat("HH:mm");
 					dateFormat.setTimeZone(TimeZone.getTimeZone(ZOneID));
 					logger.info(dateFormat.format(date));
 					PartPullTime.sendKeys(dateFormat.format(date));
+					PartPullTime.sendKeys(Keys.TAB);
 					// --Save button
-					Save = Driver.findElement(By.id("idiconsave"));
-					act.moveToElement(Save).build().perform();
-					Save.click();
-					logger.info("Clicked on Save button");
-					wait.until(ExpectedConditions
-							.invisibilityOfElementLocated(By.xpath("//*[@class=\"ajax-loadernew\"]")));
-				} catch (Exception eDataB) {
+					try {
+						try {
+							WebElement Accept = Driver.findElement(By.id("idiconsave"));
+							act.moveToElement(Accept).build().perform();
+							wait.until(ExpectedConditions.elementToBeClickable(Accept));
+							act.moveToElement(Accept).click().perform();
+							logger.info("Clicked on Accept button");
+
+						} catch (Exception Saveb) {
+							WebElement Accept = Driver.findElement(By.id("idiconsave"));
+							act.moveToElement(Accept).build().perform();
+							wait.until(ExpectedConditions.elementToBeClickable(Accept));
+							js.executeScript("arguments[0].click();", Accept);
+							logger.info("Clicked on Accept button");
+
+						}
+					} catch (Exception Saveee) {
+						try {
+							WebElement Accept = Driver.findElement(By.id("lnkcnfpull"));
+							act.moveToElement(Accept).build().perform();
+							wait.until(ExpectedConditions.elementToBeClickable(Accept));
+							act.moveToElement(Accept).click().perform();
+							logger.info("Clicked on Accept button");
+
+						} catch (Exception Saveb) {
+							WebElement Accept = Driver.findElement(By.id("lnkcnfpull"));
+							act.moveToElement(Accept).build().perform();
+							wait.until(ExpectedConditions.elementToBeClickable(Accept));
+							js.executeScript("arguments[0].click();", Accept);
+							logger.info("Clicked on Accept button");
+						}
+					}
+				} catch (Exception ev) {
 					logger.info("Validation Message is not displayed");
 				}
 
@@ -1472,27 +1763,69 @@ public class D3P_OrderProcess extends BaseInit {
 					String SerialNo = Driver.findElement(By.xpath("//*[@ng-bind=\"segment.SerialNo\"]")).getText();
 					logger.info("Serial No of Part is==" + SerialNo + "\n");
 					// enter serial number in scan
-					Driver.findElement(By.id("txtBarcode")).clear();
+					WebElement SerialNoBar = Driver.findElement(By.id("txtBarcode"));
+					act.moveToElement(SerialNoBar).build().perform();
+					SerialNoBar.clear();
 					Driver.findElement(By.id("txtBarcode")).sendKeys(SerialNo);
 					Driver.findElement(By.id("txtBarcode")).sendKeys(Keys.TAB);
 					wait.until(ExpectedConditions
 							.invisibilityOfElementLocated(By.xpath("//*[@class=\"ajax-loadernew\"]")));
 					logger.info("Entered serial No in scan barcode");
+
+					/*
+					 * // --Zoom out js.executeScript("document.body.style.zoom='80%';");
+					 * Thread.sleep(2000);
+					 */
+
 					// --Save button
-					Save = Driver.findElement(By.id("idiconsave"));
-					act.moveToElement(Save).build().perform();
-					Save.click();
-					logger.info("Clicked on Save button");
-				} catch (Exception SerialNo) {
-					logger.info("Validation for Serial No is not displayed");
+					try {
+						try {
+							WebElement Accept = Driver.findElement(By.id("idiconsave"));
+							act.moveToElement(Accept).build().perform();
+							wait.until(ExpectedConditions.elementToBeClickable(Accept));
+							act.moveToElement(Accept).click().perform();
+							logger.info("Clicked on Accept button");
+
+						} catch (Exception Saveb) {
+							WebElement Accept = Driver.findElement(By.id("idiconsave"));
+							act.moveToElement(Accept).build().perform();
+							wait.until(ExpectedConditions.elementToBeClickable(Accept));
+							js.executeScript("arguments[0].click();", Accept);
+							logger.info("Clicked on Accept button");
+
+						}
+					} catch (Exception Saveee) {
+						try {
+							WebElement Accept = Driver.findElement(By.id("lnkcnfpull"));
+							act.moveToElement(Accept).build().perform();
+							wait.until(ExpectedConditions.elementToBeClickable(Accept));
+							act.moveToElement(Accept).click().perform();
+							logger.info("Clicked on Accept button");
+
+						} catch (Exception Saveb) {
+							WebElement Accept = Driver.findElement(By.id("lnkcnfpull"));
+							act.moveToElement(Accept).build().perform();
+							wait.until(ExpectedConditions.elementToBeClickable(Accept));
+							js.executeScript("arguments[0].click();", Accept);
+							logger.info("Clicked on Accept button");
+						}
+					}
+
+				} catch (Exception errmsg) {
+					logger.info("Validation message is not displayed");
 
 				}
-
 				try {
 					wait.until(ExpectedConditions
 							.visibilityOfElementLocated(By.xpath("//label[contains(@class,'error-messages')]")));
 					logger.info("ErroMsg is Displayed="
 							+ Driver.findElement(By.xpath("//label[contains(@class,'error-messages')]")).getText());
+
+					/*
+					 * // --Zoom In js.executeScript("document.body.style.zoom='100%';");
+					 * Thread.sleep(2000);
+					 */
+
 					// --ZoneID
 					String ZOneID = Driver.findElement(By.xpath("//span[contains(@ng-bind,'TimezoneId')]")).getText();
 					logger.info("ZoneID of is==" + ZOneID);
@@ -1504,6 +1837,7 @@ public class D3P_OrderProcess extends BaseInit {
 
 					// --Part Pull Date
 					WebElement PartPullDate = Driver.findElement(By.id("idtxtPartPullDate"));
+					act.moveToElement(PartPullDate).build().perform();
 					PartPullDate.clear();
 					Date date = new Date();
 					DateFormat dateFormat = new SimpleDateFormat("MM/dd/yyyy");
@@ -1514,27 +1848,55 @@ public class D3P_OrderProcess extends BaseInit {
 
 					// --Part Pull Time
 					WebElement PartPullTime = Driver.findElement(By.id("txtPartPullTime"));
+					act.moveToElement(PartPullTime).build().perform();
 					PartPullTime.clear();
 					date = new Date();
 					dateFormat = new SimpleDateFormat("HH:mm");
 					dateFormat.setTimeZone(TimeZone.getTimeZone(ZOneID));
 					logger.info(dateFormat.format(date));
 					PartPullTime.sendKeys(dateFormat.format(date));
-					// --Save button
-					Save = Driver.findElement(By.id("idiconsave"));
-					act.moveToElement(Save).build().perform();
-					Save.click();
-					logger.info("Clicked on Save button");
-					wait.until(ExpectedConditions
-							.invisibilityOfElementLocated(By.xpath("//*[@class=\"ajax-loadernew\"]")));
+					PartPullTime.sendKeys(Keys.TAB);
 
+					/*
+					 * // --Zoom out js.executeScript("document.body.style.zoom='80%';");
+					 * Thread.sleep(2000);
+					 */
+
+					try {
+						try {
+							WebElement Accept = Driver.findElement(By.id("idiconsave"));
+							act.moveToElement(Accept).build().perform();
+							wait.until(ExpectedConditions.elementToBeClickable(Accept));
+							act.moveToElement(Accept).click().perform();
+							logger.info("Clicked on Accept button");
+
+						} catch (Exception Saveb) {
+							WebElement Accept = Driver.findElement(By.id("idiconsave"));
+							act.moveToElement(Accept).build().perform();
+							wait.until(ExpectedConditions.elementToBeClickable(Accept));
+							js.executeScript("arguments[0].click();", Accept);
+							logger.info("Clicked on Accept button");
+
+						}
+					} catch (Exception Saveee) {
+						try {
+							WebElement Accept = Driver.findElement(By.id("lnkcnfpull"));
+							act.moveToElement(Accept).build().perform();
+							wait.until(ExpectedConditions.elementToBeClickable(Accept));
+							act.moveToElement(Accept).click().perform();
+							logger.info("Clicked on Accept button");
+
+						} catch (Exception Saveb) {
+							WebElement Accept = Driver.findElement(By.id("lnkcnfpull"));
+							act.moveToElement(Accept).build().perform();
+							wait.until(ExpectedConditions.elementToBeClickable(Accept));
+							js.executeScript("arguments[0].click();", Accept);
+							logger.info("Clicked on Accept button");
+						}
+					}
 				} catch (Exception Time) {
 					logger.info("Time validation is not displayed-Time is as per timeZone");
 				}
-
-				// --Checking Error issue
-				OrderProcess Op = new OrderProcess();
-				Op.dbNullError();
 
 				// --Search job from Inventory tab
 				wait.until(ExpectedConditions.visibilityOfElementLocated(By.id("txtBasicSearch")));
@@ -1610,12 +1972,25 @@ public class D3P_OrderProcess extends BaseInit {
 					dateFormat.setTimeZone(TimeZone.getTimeZone(ZOneID));
 					logger.info(dateFormat.format(date));
 					PUPTime.sendKeys(dateFormat.format(date));
-					Driver.findElement(By.id("lnksave")).click();
-					logger.info("Clicked on PICKUP button");
-					Thread.sleep(2000);
+					PUPTime.sendKeys(Keys.TAB);
+
+					// --Save
+					try {
+						WebElement Save = Driver.findElement(By.id("lnksave"));
+						act.moveToElement(Save).build().perform();
+						js.executeScript("arguments[0].click();", Save);
+						logger.info("Clicked on PICKUP button");
+					} catch (Exception saveeee) {
+						WebElement Save = Driver.findElement(By.id("lnksave"));
+						act.moveToElement(Save).build().perform();
+						act.moveToElement(Save).click().perform();
+						logger.info("Clicked on PICKUP button");
+					}
+
 					try {
 						wait.until(ExpectedConditions.visibilityOfAllElementsLocatedBy(By.className("modal-dialog")));
-						Driver.findElement(By.id("iddataok")).click();
+						WebElement Dyes = Driver.findElement(By.id("iddataok"));
+						js.executeScript("arguments[0].click();", Dyes);
 						logger.info("Clicked on Yes button");
 
 					} catch (Exception Dialogue) {
@@ -1668,6 +2043,7 @@ public class D3P_OrderProcess extends BaseInit {
 						dateFormat.setTimeZone(TimeZone.getTimeZone(ZOneID));
 						logger.info(dateFormat.format(date));
 						DropTime.sendKeys(dateFormat.format(date));
+						DropTime.sendKeys(Keys.TAB);
 
 						// --Click on Tender To 3P
 						try {
@@ -1718,6 +2094,7 @@ public class D3P_OrderProcess extends BaseInit {
 							dateFormat.setTimeZone(TimeZone.getTimeZone(ZOneID));
 							logger.info(dateFormat.format(date));
 							DropTime.sendKeys(dateFormat.format(date));
+							DropTime.sendKeys(Keys.TAB);
 
 							// --Click on Tender To 3P
 							try {
@@ -1834,12 +2211,25 @@ public class D3P_OrderProcess extends BaseInit {
 				dateFormat.setTimeZone(TimeZone.getTimeZone(ZOneID));
 				logger.info(dateFormat.format(date));
 				PUPTime.sendKeys(dateFormat.format(date));
-				Driver.findElement(By.id("lnksave")).click();
-				logger.info("Clicked on PICKUP button");
-				Thread.sleep(2000);
+				PUPTime.sendKeys(Keys.TAB);
+
+				// --Save
+				try {
+					WebElement Save = Driver.findElement(By.id("lnksave"));
+					act.moveToElement(Save).build().perform();
+					js.executeScript("arguments[0].click();", Save);
+					logger.info("Clicked on PICKUP button");
+				} catch (Exception saveeee) {
+					WebElement Save = Driver.findElement(By.id("lnksave"));
+					act.moveToElement(Save).build().perform();
+					act.moveToElement(Save).click().perform();
+					logger.info("Clicked on PICKUP button");
+				}
+
 				try {
 					wait.until(ExpectedConditions.visibilityOfAllElementsLocatedBy(By.className("modal-dialog")));
-					Driver.findElement(By.id("iddataok")).click();
+					WebElement Dyes = Driver.findElement(By.id("iddataok"));
+					js.executeScript("arguments[0].click();", Dyes);
 					logger.info("Clicked on Yes button");
 
 				} catch (Exception Dialogue) {
@@ -1891,6 +2281,7 @@ public class D3P_OrderProcess extends BaseInit {
 					dateFormat.setTimeZone(TimeZone.getTimeZone(ZOneID));
 					logger.info(dateFormat.format(date));
 					DropTime.sendKeys(dateFormat.format(date));
+					DropTime.sendKeys(Keys.TAB);
 
 					// --Click on Tender To 3P
 					try {
@@ -1940,6 +2331,7 @@ public class D3P_OrderProcess extends BaseInit {
 						dateFormat.setTimeZone(TimeZone.getTimeZone(ZOneID));
 						logger.info(dateFormat.format(date));
 						DropTime.sendKeys(dateFormat.format(date));
+						DropTime.sendKeys(Keys.TAB);
 
 						// --Click on Tender To 3P
 						try {
@@ -2050,6 +2442,7 @@ public class D3P_OrderProcess extends BaseInit {
 				dateFormat.setTimeZone(TimeZone.getTimeZone(ZOneID));
 				logger.info(dateFormat.format(date));
 				DropTime.sendKeys(dateFormat.format(date));
+				DropTime.sendKeys(Keys.TAB);
 
 				// --Click on Tender To 3P
 				try {
@@ -2099,6 +2492,7 @@ public class D3P_OrderProcess extends BaseInit {
 					dateFormat.setTimeZone(TimeZone.getTimeZone(ZOneID));
 					logger.info(dateFormat.format(date));
 					DropTime.sendKeys(dateFormat.format(date));
+					DropTime.sendKeys(Keys.TAB);
 
 					// --Click on Tender To 3P
 					try {
