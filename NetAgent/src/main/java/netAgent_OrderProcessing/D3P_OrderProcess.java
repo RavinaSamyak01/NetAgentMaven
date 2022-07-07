@@ -104,8 +104,8 @@ public class D3P_OrderProcess extends BaseInit {
 					Driver.findElement(By.id("txtBasicSearch")).sendKeys(PUID);
 					logger.info("Enter pickupID in search input");
 					WebElement InvSearch = Driver.findElement(By.id("btnSearch2"));
-					wait.until(ExpectedConditions.elementToBeClickable(InvSearch));
 					act.moveToElement(InvSearch).build().perform();
+					wait.until(ExpectedConditions.elementToBeClickable(InvSearch));
 					js.executeScript("arguments[0].click();", InvSearch);
 					logger.info("Click on Search button");
 					wait.until(ExpectedConditions
@@ -183,7 +183,6 @@ public class D3P_OrderProcess extends BaseInit {
 				OPSearch = Driver.findElement(By.id("btnGXNLSearch2"));
 				act.moveToElement(OPSearch).build().perform();
 				js.executeScript("arguments[0].click();", OPSearch);
-
 				logger.info("Click on Search button");
 				wait.until(ExpectedConditions.invisibilityOfElementLocated(By.xpath("//*[@class=\"ajax-loadernew\"]")));
 
@@ -236,6 +235,8 @@ public class D3P_OrderProcess extends BaseInit {
 						}
 
 					}
+					wait.until(ExpectedConditions
+							.invisibilityOfElementLocated(By.xpath("//*[@class=\"ajax-loadernew\"]")));
 
 					try {
 						wait.until(ExpectedConditions
@@ -282,6 +283,9 @@ public class D3P_OrderProcess extends BaseInit {
 							}
 
 						}
+						wait.until(ExpectedConditions
+								.invisibilityOfElementLocated(By.xpath("//*[@class=\"ajax-loadernew\"]")));
+
 					} catch (Exception e) {
 						logger.info("Spoke with validation is not displayed");
 
@@ -296,7 +300,6 @@ public class D3P_OrderProcess extends BaseInit {
 					OPSearch = Driver.findElement(By.id("btnGXNLSearch2"));
 					act.moveToElement(OPSearch).build().perform();
 					js.executeScript("arguments[0].click();", OPSearch);
-
 					logger.info("Click on Search button");
 					wait.until(ExpectedConditions
 							.invisibilityOfElementLocated(By.xpath("//*[@class=\"ajax-loadernew\"]")));
@@ -315,8 +318,8 @@ public class D3P_OrderProcess extends BaseInit {
 							Driver.findElement(By.id("txtBasicSearch")).sendKeys(PUID);
 							logger.info("Enter pickupID in search input");
 							WebElement InvSearch = Driver.findElement(By.id("btnSearch2"));
-							wait.until(ExpectedConditions.elementToBeClickable(InvSearch));
 							act.moveToElement(InvSearch).build().perform();
+							wait.until(ExpectedConditions.elementToBeClickable(InvSearch));
 							js.executeScript("arguments[0].click();", InvSearch);
 							logger.info("Click on Search button");
 							wait.until(ExpectedConditions
@@ -395,6 +398,9 @@ public class D3P_OrderProcess extends BaseInit {
 								logger.info("Clicked on Accept button");
 							}
 						}
+						wait.until(ExpectedConditions
+								.invisibilityOfElementLocated(By.xpath("//*[@class=\"ajax-loadernew\"]")));
+
 						try {
 							wait.until(
 									ExpectedConditions.visibilityOfElementLocated(By.id("idPartPullDttmValidation")));
@@ -465,6 +471,9 @@ public class D3P_OrderProcess extends BaseInit {
 									logger.info("Clicked on Accept button");
 								}
 							}
+							wait.until(ExpectedConditions
+									.invisibilityOfElementLocated(By.xpath("//*[@class=\"ajax-loadernew\"]")));
+
 						} catch (Exception ev) {
 							logger.info("Validation Message is not displayed");
 						}
@@ -528,6 +537,8 @@ public class D3P_OrderProcess extends BaseInit {
 									logger.info("Clicked on Accept button");
 								}
 							}
+							wait.until(ExpectedConditions
+									.invisibilityOfElementLocated(By.xpath("//*[@class=\"ajax-loadernew\"]")));
 
 						} catch (Exception errmsg) {
 							logger.info("Validation message is not displayed");
@@ -613,6 +624,9 @@ public class D3P_OrderProcess extends BaseInit {
 									logger.info("Clicked on Accept button");
 								}
 							}
+							wait.until(ExpectedConditions
+									.invisibilityOfElementLocated(By.xpath("//*[@class=\"ajax-loadernew\"]")));
+
 						} catch (Exception Time) {
 							logger.info("Time validation is not displayed-Time is as per timeZone");
 						}
@@ -625,8 +639,8 @@ public class D3P_OrderProcess extends BaseInit {
 						Driver.findElement(By.id("txtBasicSearch")).sendKeys(PUID);
 						logger.info("Enter pickupID in search input");
 						WebElement InvSearch = Driver.findElement(By.id("btnSearch2"));
-						wait.until(ExpectedConditions.elementToBeClickable(InvSearch));
 						act.moveToElement(InvSearch).build().perform();
+						wait.until(ExpectedConditions.elementToBeClickable(InvSearch));
 						js.executeScript("arguments[0].click();", InvSearch);
 						logger.info("Click on Search button");
 						wait.until(ExpectedConditions
@@ -648,7 +662,6 @@ public class D3P_OrderProcess extends BaseInit {
 								OPSearch = Driver.findElement(By.id("btnGXNLSearch2"));
 								act.moveToElement(OPSearch).build().perform();
 								js.executeScript("arguments[0].click();", OPSearch);
-
 								logger.info("Click on Search button");
 								wait.until(ExpectedConditions
 										.invisibilityOfElementLocated(By.xpath("//*[@class=\"ajax-loadernew\"]")));
@@ -708,6 +721,8 @@ public class D3P_OrderProcess extends BaseInit {
 								act.moveToElement(Save).click().perform();
 								logger.info("Clicked on PICKUP button");
 							}
+							wait.until(ExpectedConditions
+									.invisibilityOfElementLocated(By.xpath("//*[@class=\"ajax-loadernew\"]")));
 
 							try {
 								wait.until(ExpectedConditions
@@ -715,6 +730,8 @@ public class D3P_OrderProcess extends BaseInit {
 								WebElement Dyes = Driver.findElement(By.id("iddataok"));
 								js.executeScript("arguments[0].click();", Dyes);
 								logger.info("Clicked on Yes button");
+								wait.until(ExpectedConditions
+										.invisibilityOfElementLocated(By.xpath("//*[@class=\"ajax-loadernew\"]")));
 
 							} catch (Exception Dialogue) {
 								logger.info("Dialogue is not exist");
@@ -728,7 +745,6 @@ public class D3P_OrderProcess extends BaseInit {
 							OPSearch = Driver.findElement(By.id("btnGXNLSearch2"));
 							act.moveToElement(OPSearch).build().perform();
 							js.executeScript("arguments[0].click();", OPSearch);
-
 							logger.info("Click on Search button");
 							wait.until(ExpectedConditions
 									.invisibilityOfElementLocated(By.xpath("//*[@class=\"ajax-loadernew\"]")));
@@ -784,13 +800,15 @@ public class D3P_OrderProcess extends BaseInit {
 									act.moveToElement(Delivery).click().perform();
 									logger.info("Clicked on Tender to 3P");
 								}
+								wait.until(ExpectedConditions
+										.invisibilityOfElementLocated(By.xpath("//*[@class=\"ajax-loadernew\"]")));
+
 								try {
 									wait.until(ExpectedConditions
 											.visibilityOfAllElementsLocatedBy(By.className("modal-content")));
 									WebElement DOK = Driver.findElement(By.id("iddataok"));
 									js.executeScript("arguments[0].click();", DOK);
 									logger.info("Click on OK of Dialogue box");
-
 									wait.until(ExpectedConditions
 											.invisibilityOfElementLocated(By.xpath("//*[@class=\"ajax-loadernew\"]")));
 
@@ -835,6 +853,8 @@ public class D3P_OrderProcess extends BaseInit {
 										act.moveToElement(Delivery).click().perform();
 										logger.info("Clicked on Tender to 3P");
 									}
+									wait.until(ExpectedConditions
+											.invisibilityOfElementLocated(By.xpath("//*[@class=\"ajax-loadernew\"]")));
 
 									try {
 										wait.until(ExpectedConditions
@@ -952,6 +972,7 @@ public class D3P_OrderProcess extends BaseInit {
 					}
 
 				}
+				wait.until(ExpectedConditions.invisibilityOfElementLocated(By.xpath("//*[@class=\"ajax-loadernew\"]")));
 
 				try {
 					wait.until(
@@ -998,6 +1019,9 @@ public class D3P_OrderProcess extends BaseInit {
 						}
 
 					}
+					wait.until(ExpectedConditions
+							.invisibilityOfElementLocated(By.xpath("//*[@class=\"ajax-loadernew\"]")));
+
 				} catch (Exception e) {
 					logger.info("Spoke with validation is not displayed");
 
@@ -1012,7 +1036,6 @@ public class D3P_OrderProcess extends BaseInit {
 				OPSearch = Driver.findElement(By.id("btnGXNLSearch2"));
 				act.moveToElement(OPSearch).build().perform();
 				js.executeScript("arguments[0].click();", OPSearch);
-
 				logger.info("Click on Search button");
 				wait.until(ExpectedConditions.invisibilityOfElementLocated(By.xpath("//*[@class=\"ajax-loadernew\"]")));
 
@@ -1030,8 +1053,8 @@ public class D3P_OrderProcess extends BaseInit {
 						Driver.findElement(By.id("txtBasicSearch")).sendKeys(PUID);
 						logger.info("Enter pickupID in search input");
 						WebElement InvSearch = Driver.findElement(By.id("btnSearch2"));
-						wait.until(ExpectedConditions.elementToBeClickable(InvSearch));
 						act.moveToElement(InvSearch).build().perform();
+						wait.until(ExpectedConditions.elementToBeClickable(InvSearch));
 						js.executeScript("arguments[0].click();", InvSearch);
 						logger.info("Click on Search button");
 						wait.until(ExpectedConditions
@@ -1110,6 +1133,9 @@ public class D3P_OrderProcess extends BaseInit {
 							logger.info("Clicked on Accept button");
 						}
 					}
+					wait.until(ExpectedConditions
+							.invisibilityOfElementLocated(By.xpath("//*[@class=\"ajax-loadernew\"]")));
+
 					try {
 						wait.until(ExpectedConditions.visibilityOfElementLocated(By.id("idPartPullDttmValidation")));
 						String ValMsg = Driver.findElement(By.id("idPartPullDttmValidation")).getText();
@@ -1179,6 +1205,9 @@ public class D3P_OrderProcess extends BaseInit {
 								logger.info("Clicked on Accept button");
 							}
 						}
+						wait.until(ExpectedConditions
+								.invisibilityOfElementLocated(By.xpath("//*[@class=\"ajax-loadernew\"]")));
+
 					} catch (Exception ev) {
 						logger.info("Validation Message is not displayed");
 					}
@@ -1241,6 +1270,8 @@ public class D3P_OrderProcess extends BaseInit {
 								logger.info("Clicked on Accept button");
 							}
 						}
+						wait.until(ExpectedConditions
+								.invisibilityOfElementLocated(By.xpath("//*[@class=\"ajax-loadernew\"]")));
 
 					} catch (Exception errmsg) {
 						logger.info("Validation message is not displayed");
@@ -1326,6 +1357,9 @@ public class D3P_OrderProcess extends BaseInit {
 								logger.info("Clicked on Accept button");
 							}
 						}
+						wait.until(ExpectedConditions
+								.invisibilityOfElementLocated(By.xpath("//*[@class=\"ajax-loadernew\"]")));
+
 					} catch (Exception Time) {
 						logger.info("Time validation is not displayed-Time is as per timeZone");
 					}
@@ -1338,8 +1372,8 @@ public class D3P_OrderProcess extends BaseInit {
 					Driver.findElement(By.id("txtBasicSearch")).sendKeys(PUID);
 					logger.info("Enter pickupID in search input");
 					WebElement InvSearch = Driver.findElement(By.id("btnSearch2"));
-					wait.until(ExpectedConditions.elementToBeClickable(InvSearch));
 					act.moveToElement(InvSearch).build().perform();
+					wait.until(ExpectedConditions.elementToBeClickable(InvSearch));
 					js.executeScript("arguments[0].click();", InvSearch);
 					logger.info("Click on Search button");
 					wait.until(ExpectedConditions
@@ -1360,7 +1394,6 @@ public class D3P_OrderProcess extends BaseInit {
 							OPSearch = Driver.findElement(By.id("btnGXNLSearch2"));
 							act.moveToElement(OPSearch).build().perform();
 							js.executeScript("arguments[0].click();", OPSearch);
-
 							logger.info("Click on Search button");
 							wait.until(ExpectedConditions
 									.invisibilityOfElementLocated(By.xpath("//*[@class=\"ajax-loadernew\"]")));
@@ -1419,6 +1452,8 @@ public class D3P_OrderProcess extends BaseInit {
 							act.moveToElement(Save).click().perform();
 							logger.info("Clicked on PICKUP button");
 						}
+						wait.until(ExpectedConditions
+								.invisibilityOfElementLocated(By.xpath("//*[@class=\"ajax-loadernew\"]")));
 
 						try {
 							wait.until(
@@ -1426,6 +1461,8 @@ public class D3P_OrderProcess extends BaseInit {
 							WebElement Dyes = Driver.findElement(By.id("iddataok"));
 							js.executeScript("arguments[0].click();", Dyes);
 							logger.info("Clicked on Yes button");
+							wait.until(ExpectedConditions
+									.invisibilityOfElementLocated(By.xpath("//*[@class=\"ajax-loadernew\"]")));
 
 						} catch (Exception Dialogue) {
 							logger.info("Dialogue is not exist");
@@ -1439,7 +1476,6 @@ public class D3P_OrderProcess extends BaseInit {
 						OPSearch = Driver.findElement(By.id("btnGXNLSearch2"));
 						act.moveToElement(OPSearch).build().perform();
 						js.executeScript("arguments[0].click();", OPSearch);
-
 						logger.info("Click on Search button");
 						wait.until(ExpectedConditions
 								.invisibilityOfElementLocated(By.xpath("//*[@class=\"ajax-loadernew\"]")));
@@ -1495,13 +1531,15 @@ public class D3P_OrderProcess extends BaseInit {
 								act.moveToElement(Delivery).click().perform();
 								logger.info("Clicked on Tender to 3P");
 							}
+							wait.until(ExpectedConditions
+									.invisibilityOfElementLocated(By.xpath("//*[@class=\"ajax-loadernew\"]")));
+
 							try {
 								wait.until(ExpectedConditions
 										.visibilityOfAllElementsLocatedBy(By.className("modal-content")));
 								WebElement DOK = Driver.findElement(By.id("iddataok"));
 								js.executeScript("arguments[0].click();", DOK);
 								logger.info("Click on OK of Dialogue box");
-
 								wait.until(ExpectedConditions
 										.invisibilityOfElementLocated(By.xpath("//*[@class=\"ajax-loadernew\"]")));
 
@@ -1546,6 +1584,8 @@ public class D3P_OrderProcess extends BaseInit {
 									act.moveToElement(Delivery).click().perform();
 									logger.info("Clicked on Tender to 3P");
 								}
+								wait.until(ExpectedConditions
+										.invisibilityOfElementLocated(By.xpath("//*[@class=\"ajax-loadernew\"]")));
 
 								try {
 									wait.until(ExpectedConditions
@@ -1680,6 +1720,8 @@ public class D3P_OrderProcess extends BaseInit {
 						logger.info("Clicked on Accept button");
 					}
 				}
+				wait.until(ExpectedConditions.invisibilityOfElementLocated(By.xpath("//*[@class=\"ajax-loadernew\"]")));
+
 				try {
 					wait.until(ExpectedConditions.visibilityOfElementLocated(By.id("idPartPullDttmValidation")));
 					String ValMsg = Driver.findElement(By.id("idPartPullDttmValidation")).getText();
@@ -1748,6 +1790,9 @@ public class D3P_OrderProcess extends BaseInit {
 							logger.info("Clicked on Accept button");
 						}
 					}
+					wait.until(ExpectedConditions
+							.invisibilityOfElementLocated(By.xpath("//*[@class=\"ajax-loadernew\"]")));
+
 				} catch (Exception ev) {
 					logger.info("Validation Message is not displayed");
 				}
@@ -1810,6 +1855,8 @@ public class D3P_OrderProcess extends BaseInit {
 							logger.info("Clicked on Accept button");
 						}
 					}
+					wait.until(ExpectedConditions
+							.invisibilityOfElementLocated(By.xpath("//*[@class=\"ajax-loadernew\"]")));
 
 				} catch (Exception errmsg) {
 					logger.info("Validation message is not displayed");
@@ -1894,6 +1941,9 @@ public class D3P_OrderProcess extends BaseInit {
 							logger.info("Clicked on Accept button");
 						}
 					}
+					wait.until(ExpectedConditions
+							.invisibilityOfElementLocated(By.xpath("//*[@class=\"ajax-loadernew\"]")));
+
 				} catch (Exception Time) {
 					logger.info("Time validation is not displayed-Time is as per timeZone");
 				}
@@ -1906,8 +1956,8 @@ public class D3P_OrderProcess extends BaseInit {
 				Driver.findElement(By.id("txtBasicSearch")).sendKeys(PUID);
 				logger.info("Enter pickupID in search input");
 				WebElement InvSearch = Driver.findElement(By.id("btnSearch2"));
-				wait.until(ExpectedConditions.elementToBeClickable(InvSearch));
 				act.moveToElement(InvSearch).build().perform();
+				wait.until(ExpectedConditions.elementToBeClickable(InvSearch));
 				js.executeScript("arguments[0].click();", InvSearch);
 				logger.info("Click on Search button");
 				wait.until(ExpectedConditions.invisibilityOfElementLocated(By.xpath("//*[@class=\"ajax-loadernew\"]")));
@@ -1927,7 +1977,6 @@ public class D3P_OrderProcess extends BaseInit {
 						OPSearch = Driver.findElement(By.id("btnGXNLSearch2"));
 						act.moveToElement(OPSearch).build().perform();
 						js.executeScript("arguments[0].click();", OPSearch);
-
 						logger.info("Click on Search button");
 						wait.until(ExpectedConditions
 								.invisibilityOfElementLocated(By.xpath("//*[@class=\"ajax-loadernew\"]")));
@@ -1986,12 +2035,16 @@ public class D3P_OrderProcess extends BaseInit {
 						act.moveToElement(Save).click().perform();
 						logger.info("Clicked on PICKUP button");
 					}
+					wait.until(ExpectedConditions
+							.invisibilityOfElementLocated(By.xpath("//*[@class=\"ajax-loadernew\"]")));
 
 					try {
 						wait.until(ExpectedConditions.visibilityOfAllElementsLocatedBy(By.className("modal-dialog")));
 						WebElement Dyes = Driver.findElement(By.id("iddataok"));
 						js.executeScript("arguments[0].click();", Dyes);
 						logger.info("Clicked on Yes button");
+						wait.until(ExpectedConditions
+								.invisibilityOfElementLocated(By.xpath("//*[@class=\"ajax-loadernew\"]")));
 
 					} catch (Exception Dialogue) {
 						logger.info("Dialogue is not exist");
@@ -2005,7 +2058,6 @@ public class D3P_OrderProcess extends BaseInit {
 					OPSearch = Driver.findElement(By.id("btnGXNLSearch2"));
 					act.moveToElement(OPSearch).build().perform();
 					js.executeScript("arguments[0].click();", OPSearch);
-
 					logger.info("Click on Search button");
 					wait.until(ExpectedConditions
 							.invisibilityOfElementLocated(By.xpath("//*[@class=\"ajax-loadernew\"]")));
@@ -2059,13 +2111,15 @@ public class D3P_OrderProcess extends BaseInit {
 							act.moveToElement(Delivery).click().perform();
 							logger.info("Clicked on Tender to 3P");
 						}
+						wait.until(ExpectedConditions
+								.invisibilityOfElementLocated(By.xpath("//*[@class=\"ajax-loadernew\"]")));
+
 						try {
 							wait.until(
 									ExpectedConditions.visibilityOfAllElementsLocatedBy(By.className("modal-content")));
 							WebElement DOK = Driver.findElement(By.id("iddataok"));
 							js.executeScript("arguments[0].click();", DOK);
 							logger.info("Click on OK of Dialogue box");
-
 							wait.until(ExpectedConditions
 									.invisibilityOfElementLocated(By.xpath("//*[@class=\"ajax-loadernew\"]")));
 
@@ -2110,6 +2164,8 @@ public class D3P_OrderProcess extends BaseInit {
 								act.moveToElement(Delivery).click().perform();
 								logger.info("Clicked on Tender to 3P");
 							}
+							wait.until(ExpectedConditions
+									.invisibilityOfElementLocated(By.xpath("//*[@class=\"ajax-loadernew\"]")));
 
 							try {
 								wait.until(ExpectedConditions
@@ -2225,12 +2281,15 @@ public class D3P_OrderProcess extends BaseInit {
 					act.moveToElement(Save).click().perform();
 					logger.info("Clicked on PICKUP button");
 				}
+				wait.until(ExpectedConditions.invisibilityOfElementLocated(By.xpath("//*[@class=\"ajax-loadernew\"]")));
 
 				try {
 					wait.until(ExpectedConditions.visibilityOfAllElementsLocatedBy(By.className("modal-dialog")));
 					WebElement Dyes = Driver.findElement(By.id("iddataok"));
 					js.executeScript("arguments[0].click();", Dyes);
 					logger.info("Clicked on Yes button");
+					wait.until(ExpectedConditions
+							.invisibilityOfElementLocated(By.xpath("//*[@class=\"ajax-loadernew\"]")));
 
 				} catch (Exception Dialogue) {
 					logger.info("Dialogue is not exist");
@@ -2244,7 +2303,6 @@ public class D3P_OrderProcess extends BaseInit {
 				OPSearch = Driver.findElement(By.id("btnGXNLSearch2"));
 				act.moveToElement(OPSearch).build().perform();
 				js.executeScript("arguments[0].click();", OPSearch);
-
 				logger.info("Click on Search button");
 				wait.until(ExpectedConditions.invisibilityOfElementLocated(By.xpath("//*[@class=\"ajax-loadernew\"]")));
 
@@ -2297,12 +2355,14 @@ public class D3P_OrderProcess extends BaseInit {
 						act.moveToElement(Delivery).click().perform();
 						logger.info("Clicked on Tender to 3P");
 					}
+					wait.until(ExpectedConditions
+							.invisibilityOfElementLocated(By.xpath("//*[@class=\"ajax-loadernew\"]")));
+
 					try {
 						wait.until(ExpectedConditions.visibilityOfAllElementsLocatedBy(By.className("modal-content")));
 						WebElement DOK = Driver.findElement(By.id("iddataok"));
 						js.executeScript("arguments[0].click();", DOK);
 						logger.info("Click on OK of Dialogue box");
-
 						wait.until(ExpectedConditions
 								.invisibilityOfElementLocated(By.xpath("//*[@class=\"ajax-loadernew\"]")));
 
@@ -2347,6 +2407,8 @@ public class D3P_OrderProcess extends BaseInit {
 							act.moveToElement(Delivery).click().perform();
 							logger.info("Clicked on Tender to 3P");
 						}
+						wait.until(ExpectedConditions
+								.invisibilityOfElementLocated(By.xpath("//*[@class=\"ajax-loadernew\"]")));
 
 						try {
 							wait.until(
@@ -2458,12 +2520,13 @@ public class D3P_OrderProcess extends BaseInit {
 					act.moveToElement(Delivery).click().perform();
 					logger.info("Clicked on Tender to 3P");
 				}
+				wait.until(ExpectedConditions.invisibilityOfElementLocated(By.xpath("//*[@class=\"ajax-loadernew\"]")));
+
 				try {
 					wait.until(ExpectedConditions.visibilityOfAllElementsLocatedBy(By.className("modal-content")));
 					WebElement DOK = Driver.findElement(By.id("iddataok"));
 					js.executeScript("arguments[0].click();", DOK);
 					logger.info("Click on OK of Dialogue box");
-
 					wait.until(ExpectedConditions
 							.invisibilityOfElementLocated(By.xpath("//*[@class=\"ajax-loadernew\"]")));
 
@@ -2508,6 +2571,8 @@ public class D3P_OrderProcess extends BaseInit {
 						act.moveToElement(Delivery).click().perform();
 						logger.info("Clicked on Tender to 3P");
 					}
+					wait.until(ExpectedConditions
+							.invisibilityOfElementLocated(By.xpath("//*[@class=\"ajax-loadernew\"]")));
 
 					try {
 						wait.until(ExpectedConditions.visibilityOfAllElementsLocatedBy(By.className("modal-content")));

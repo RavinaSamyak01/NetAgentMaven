@@ -41,14 +41,14 @@ public class SD_OrderProcess extends BaseInit {
 		// Go To TaskLog
 		wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//a[@id=\"idOperations\"]")));
 		WebElement OperationMenu = Driver.findElement(By.xpath("//a[@id=\"idOperations\"]"));
-		//act.moveToElement(OperationMenu).build().perform();
+		// act.moveToElement(OperationMenu).build().perform();
 		act.moveToElement(OperationMenu).click().perform();
 		logger.info("Click on Operations");
 
 		wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//a[@id=\"idTask\"]")));
 		WebElement TaskLogMenu = Driver.findElement(By.xpath("//a[@id=\"idTask\"]"));
 		act.moveToElement(TaskLogMenu).click().perform();
-		//js.executeScript("arguments[0].click();", TaskLogMenu);
+		// js.executeScript("arguments[0].click();", TaskLogMenu);
 		wait.until(ExpectedConditions.invisibilityOfElementLocated(By.xpath("//*[@class=\"ajax-loadernew\"]")));
 		wait.until(ExpectedConditions.visibilityOfAllElementsLocatedBy(By.className("panel-body")));
 		logger.info("Click on Task Log");
@@ -58,6 +58,7 @@ public class SD_OrderProcess extends BaseInit {
 		for (int row = 2; row < 4; row++) {
 			if (row == 3) {
 				msg.append("\n\n");
+				msg.append("==Confirm DEL Alert Scenario start=="+"\n");
 			}
 			String ServiceID = getData("OrderProcessing", row, 0);
 			logger.info("ServiceID is==" + ServiceID);
@@ -139,6 +140,8 @@ public class SD_OrderProcess extends BaseInit {
 					act.moveToElement(ConfPU).build().perform();
 					js.executeScript("arguments[0].click();", ConfPU);
 					logger.info("Clicked on CONFIRM button");
+					wait.until(ExpectedConditions
+							.invisibilityOfElementLocated(By.xpath("//*[@class=\"ajax-loadernew\"]")));
 
 					try {
 						// --Click on Close button //
@@ -146,6 +149,9 @@ public class SD_OrderProcess extends BaseInit {
 						act.moveToElement(Closebtn).build().perform();
 						js.executeScript("arguments[0].click();", Closebtn);
 						logger.info("Clicked on Close button");
+						wait.until(ExpectedConditions
+								.invisibilityOfElementLocated(By.xpath("//*[@class=\"ajax-loadernew\"]")));
+
 					} catch (Exception close) {
 						logger.info("Editor is already closed");
 
@@ -224,6 +230,8 @@ public class SD_OrderProcess extends BaseInit {
 							act.moveToElement(Save).click().perform();
 							logger.info("Clicked on PICKUP button");
 						}
+						wait.until(ExpectedConditions
+								.invisibilityOfElementLocated(By.xpath("//*[@class=\"ajax-loadernew\"]")));
 
 						try {
 							wait.until(
@@ -231,6 +239,8 @@ public class SD_OrderProcess extends BaseInit {
 							WebElement Dyes = Driver.findElement(By.id("iddataok"));
 							js.executeScript("arguments[0].click();", Dyes);
 							logger.info("Clicked on Yes button");
+							wait.until(ExpectedConditions
+									.invisibilityOfElementLocated(By.xpath("//*[@class=\"ajax-loadernew\"]")));
 
 						} catch (Exception e) {
 							logger.info("Dialogue is not exist");
@@ -263,7 +273,7 @@ public class SD_OrderProcess extends BaseInit {
 							logger.info("Current stage of the order is=" + Orderstage);
 							msg.append("Moved to Stage==" + Orderstage + "\n");
 
-							WebElement DelAtt = Driver.findElement(By.id("lblDeliveryPersonToSee"));
+							WebElement DelAtt = Driver.findElement(By.id("lblAddress"));
 							js.executeScript("arguments[0].scrollIntoView();", DelAtt);
 							Thread.sleep(2000);
 
@@ -285,6 +295,7 @@ public class SD_OrderProcess extends BaseInit {
 							dateFormat.setTimeZone(TimeZone.getTimeZone(ZOneID));
 							logger.info(dateFormat.format(date));
 							DelTime.sendKeys(dateFormat.format(date));
+							DelTime.sendKeys(Keys.TAB);
 
 							// --Click on Drop
 
@@ -315,6 +326,7 @@ public class SD_OrderProcess extends BaseInit {
 
 							try {
 								WebElement ErrorID = Driver.findElement(By.id("errorid"));
+								wait.until(ExpectedConditions.visibilityOfElementLocated(By.id("errorid")));
 								if (ErrorID.getText().contains("The Air Bill is required")) {
 									logger.info("Message:-" + ErrorID.getText());
 
@@ -473,8 +485,7 @@ public class SD_OrderProcess extends BaseInit {
 
 					WebElement DArrtime = Driver.findElement(By.id("lblAddress"));
 					js.executeScript("arguments[0].scrollIntoView();", DArrtime);
-					act.moveToElement(DArrtime).build().perform();
-
+					Thread.sleep(2000);
 					// js.executeScript("arguments[0].scrollIntoView();", DArrtime);
 
 					// --Enter PickUp Time
@@ -514,12 +525,16 @@ public class SD_OrderProcess extends BaseInit {
 						act.moveToElement(Save).click().perform();
 						logger.info("Clicked on PICKUP button");
 					}
+					wait.until(ExpectedConditions
+							.invisibilityOfElementLocated(By.xpath("//*[@class=\"ajax-loadernew\"]")));
 
 					try {
 						wait.until(ExpectedConditions.visibilityOfAllElementsLocatedBy(By.className("modal-dialog")));
 						WebElement Dyes = Driver.findElement(By.id("iddataok"));
 						js.executeScript("arguments[0].click();", Dyes);
 						logger.info("Clicked on Yes button");
+						wait.until(ExpectedConditions
+								.invisibilityOfElementLocated(By.xpath("//*[@class=\"ajax-loadernew\"]")));
 
 					} catch (Exception e) {
 						logger.info("Dialogue is not exist");
@@ -551,7 +566,7 @@ public class SD_OrderProcess extends BaseInit {
 						logger.info("Current stage of the order is=" + Orderstage);
 						msg.append("Moved to Stage==" + Orderstage + "\n");
 
-						WebElement DelAtt = Driver.findElement(By.id("lblDeliveryPersonToSee"));
+						WebElement DelAtt = Driver.findElement(By.id("lblAddress"));
 						js.executeScript("arguments[0].scrollIntoView();", DelAtt);
 						Thread.sleep(2000);
 
@@ -573,8 +588,10 @@ public class SD_OrderProcess extends BaseInit {
 						dateFormat.setTimeZone(TimeZone.getTimeZone(ZOneID));
 						logger.info(dateFormat.format(date));
 						DelTime.sendKeys(dateFormat.format(date));
+						DelTime.sendKeys(Keys.TAB);
 
 						// --Click on Drop
+
 						try {
 							WebElement Drop = Driver.findElement(By.id("btnsavedelivery"));
 							act.moveToElement(Drop).build().perform();
@@ -599,8 +616,10 @@ public class SD_OrderProcess extends BaseInit {
 										.invisibilityOfElementLocated(By.xpath("//*[@class=\"ajax-loadernew\"]")));
 							}
 						}
+
 						try {
 							WebElement ErrorID = Driver.findElement(By.id("errorid"));
+							wait.until(ExpectedConditions.visibilityOfElementLocated(By.id("errorid")));
 							if (ErrorID.getText().contains("The Air Bill is required")) {
 								logger.info("Message:-" + ErrorID.getText());
 
@@ -752,7 +771,7 @@ public class SD_OrderProcess extends BaseInit {
 					logger.info("Current stage of the order is=" + Orderstage);
 					msg.append("Moved to Stage==" + Orderstage + "\n");
 
-					WebElement DelAtt = Driver.findElement(By.id("lblDeliveryPersonToSee"));
+					WebElement DelAtt = Driver.findElement(By.id("lblAddress"));
 					js.executeScript("arguments[0].scrollIntoView();", DelAtt);
 					Thread.sleep(2000);
 
@@ -774,6 +793,9 @@ public class SD_OrderProcess extends BaseInit {
 					dateFormat.setTimeZone(TimeZone.getTimeZone(ZOneID));
 					logger.info(dateFormat.format(date));
 					DelTime.sendKeys(dateFormat.format(date));
+					DelTime.sendKeys(Keys.TAB);
+
+					// --Click on Drop
 
 					try {
 						WebElement Drop = Driver.findElement(By.id("btnsavedelivery"));
@@ -799,8 +821,10 @@ public class SD_OrderProcess extends BaseInit {
 									.invisibilityOfElementLocated(By.xpath("//*[@class=\"ajax-loadernew\"]")));
 						}
 					}
+
 					try {
 						WebElement ErrorID = Driver.findElement(By.id("errorid"));
+						wait.until(ExpectedConditions.visibilityOfElementLocated(By.id("errorid")));
 						if (ErrorID.getText().contains("The Air Bill is required")) {
 							logger.info("Message:-" + ErrorID.getText());
 
@@ -952,17 +976,21 @@ public class SD_OrderProcess extends BaseInit {
 					WebElement Delivery = Driver.findElement(By.id("lblDeliverAddress"));
 					js.executeScript("arguments[0].scrollIntoView();", Delivery);
 					Thread.sleep(2000);
+
 					WebElement CondirmP = Driver.findElement(By.id("lnkConfPick"));
 					act.moveToElement(CondirmP).build().perform();
 					js.executeScript("arguments[0].click();", CondirmP);
 					logger.info("Clicked on CONFIRM button");
-
+					wait.until(ExpectedConditions
+							.invisibilityOfElementLocated(By.xpath("//*[@class=\"ajax-loadernew\"]")));
 					try {
 						// --Click on Close button //
 						WebElement DelClose = Driver.findElement(By.id("idclosetab"));
 						act.moveToElement(DelClose).build().perform();
 						js.executeScript("arguments[0].click();", DelClose);
 						logger.info("Clicked on Close button");
+						wait.until(ExpectedConditions
+								.invisibilityOfElementLocated(By.xpath("//*[@class=\"ajax-loadernew\"]")));
 					} catch (Exception close) {
 						logger.info("Editor is already closed");
 

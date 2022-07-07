@@ -120,6 +120,7 @@ public class LOC_OrderProcess extends BaseInit {
 				act.moveToElement(ConfPU).build().perform();
 				js.executeScript("arguments[0].click();", ConfPU);
 				logger.info("Clicked on CONFIRM button");
+				wait.until(ExpectedConditions.invisibilityOfElementLocated(By.xpath("//*[@class=\"ajax-loadernew\"]")));
 
 				try {
 					// --Click on Close button //
@@ -127,6 +128,9 @@ public class LOC_OrderProcess extends BaseInit {
 					act.moveToElement(Closebtn).build().perform();
 					js.executeScript("arguments[0].click();", Closebtn);
 					logger.info("Clicked on Close button");
+					wait.until(ExpectedConditions
+							.invisibilityOfElementLocated(By.xpath("//*[@class=\"ajax-loadernew\"]")));
+
 				} catch (Exception close) {
 					logger.info("Editor is already closed");
 
@@ -166,10 +170,6 @@ public class LOC_OrderProcess extends BaseInit {
 					js.executeScript("arguments[0].scrollIntoView();", Deliver);
 					Thread.sleep(2000);
 
-					WebElement Save = Driver.findElement(By.id("lnksave"));
-					js.executeScript("arguments[0].scrollIntoView();", Save);
-					Thread.sleep(2000);
-
 					// --Enter PickUp Time
 
 					String ZOneID = Driver.findElement(By.id("spanTimezoneId")).getText();
@@ -195,17 +195,21 @@ public class LOC_OrderProcess extends BaseInit {
 					// js.executeScript("window.scrollBy(0,-250)");
 
 					// PickUp
-					Save = Driver.findElement(By.id("lnksave"));
+					WebElement Save = Driver.findElement(By.id("lnksave"));
 					act.moveToElement(Save).build().perform();
 					wait.until(ExpectedConditions.elementToBeClickable(Save));
 					js.executeScript("arguments[0].click();", Save);
 					logger.info("Clicked on PICKUP button");
+					wait.until(ExpectedConditions
+							.invisibilityOfElementLocated(By.xpath("//*[@class=\"ajax-loadernew\"]")));
 
 					try {
 						wait.until(ExpectedConditions.visibilityOfAllElementsLocatedBy(By.className("modal-dialog")));
 						WebElement Dyes = Driver.findElement(By.id("iddataok"));
 						js.executeScript("arguments[0].click();", Dyes);
 						logger.info("Clicked on Yes button");
+						wait.until(ExpectedConditions
+								.invisibilityOfElementLocated(By.xpath("//*[@class=\"ajax-loadernew\"]")));
 
 					} catch (Exception e) {
 						logger.info("Dialogue is not exist");
@@ -278,6 +282,8 @@ public class LOC_OrderProcess extends BaseInit {
 						act.moveToElement(Del).build().perform();
 						js.executeScript("arguments[0].click();", Del);
 						logger.info("Clicked on Deliver button");
+						wait.until(ExpectedConditions
+								.invisibilityOfElementLocated(By.xpath("//*[@class=\"ajax-loadernew\"]")));
 
 						try {
 							wait.until(
@@ -285,6 +291,8 @@ public class LOC_OrderProcess extends BaseInit {
 							WebElement DOK = Driver.findElement(By.id("iddataok"));
 							js.executeScript("arguments[0].click();", DOK);
 							logger.info("Click on OK of Dialogue box");
+							wait.until(ExpectedConditions
+									.invisibilityOfElementLocated(By.xpath("//*[@class=\"ajax-loadernew\"]")));
 
 						} catch (Exception e) {
 							logger.info("Dialogue is not exist");
@@ -333,10 +341,6 @@ public class LOC_OrderProcess extends BaseInit {
 				js.executeScript("arguments[0].scrollIntoView();", Deliver);
 				Thread.sleep(2000);
 
-				WebElement Save = Driver.findElement(By.id("lnksave"));
-				js.executeScript("arguments[0].scrollIntoView();", Save);
-				Thread.sleep(2000);
-
 				// --Enter PickUp Time
 
 				String ZOneID = Driver.findElement(By.id("spanTimezoneId")).getText();
@@ -362,17 +366,20 @@ public class LOC_OrderProcess extends BaseInit {
 				// js.executeScript("window.scrollBy(0,-250)");
 
 				// PickUp
-				Save = Driver.findElement(By.id("lnksave"));
+				WebElement Save = Driver.findElement(By.id("lnksave"));
 				act.moveToElement(Save).build().perform();
 				wait.until(ExpectedConditions.elementToBeClickable(Save));
 				js.executeScript("arguments[0].click();", Save);
 				logger.info("Clicked on PICKUP button");
+				wait.until(ExpectedConditions.invisibilityOfElementLocated(By.xpath("//*[@class=\"ajax-loadernew\"]")));
 
 				try {
 					wait.until(ExpectedConditions.visibilityOfAllElementsLocatedBy(By.className("modal-dialog")));
 					WebElement Dyes = Driver.findElement(By.id("iddataok"));
 					js.executeScript("arguments[0].click();", Dyes);
 					logger.info("Clicked on Yes button");
+					wait.until(ExpectedConditions
+							.invisibilityOfElementLocated(By.xpath("//*[@class=\"ajax-loadernew\"]")));
 
 				} catch (Exception e) {
 					logger.info("Dialogue is not exist");
@@ -444,12 +451,16 @@ public class LOC_OrderProcess extends BaseInit {
 					act.moveToElement(Del).build().perform();
 					js.executeScript("arguments[0].click();", Del);
 					logger.info("Clicked on Deliver button");
+					wait.until(ExpectedConditions
+							.invisibilityOfElementLocated(By.xpath("//*[@class=\"ajax-loadernew\"]")));
 
 					try {
 						wait.until(ExpectedConditions.visibilityOfAllElementsLocatedBy(By.className("modal-dialog")));
 						WebElement DOK = Driver.findElement(By.id("iddataok"));
 						js.executeScript("arguments[0].click();", DOK);
 						logger.info("Click on OK of Dialogue box");
+						wait.until(ExpectedConditions
+								.invisibilityOfElementLocated(By.xpath("//*[@class=\"ajax-loadernew\"]")));
 
 					} catch (Exception e) {
 						logger.info("Dialogue is not exist");
@@ -529,12 +540,15 @@ public class LOC_OrderProcess extends BaseInit {
 				act.moveToElement(Del).build().perform();
 				js.executeScript("arguments[0].click();", Del);
 				logger.info("Clicked on Deliver button");
+				wait.until(ExpectedConditions.invisibilityOfElementLocated(By.xpath("//*[@class=\"ajax-loadernew\"]")));
 
 				try {
 					wait.until(ExpectedConditions.visibilityOfAllElementsLocatedBy(By.className("modal-dialog")));
 					WebElement DOK = Driver.findElement(By.id("iddataok"));
 					js.executeScript("arguments[0].click();", DOK);
 					logger.info("Click on OK of Dialogue box");
+					wait.until(ExpectedConditions
+							.invisibilityOfElementLocated(By.xpath("//*[@class=\"ajax-loadernew\"]")));
 
 				} catch (Exception e) {
 					logger.info("Dialogue is not exist");

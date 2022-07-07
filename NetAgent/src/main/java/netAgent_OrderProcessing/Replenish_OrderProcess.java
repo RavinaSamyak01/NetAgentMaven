@@ -1,12 +1,7 @@
 package netAgent_OrderProcessing;
 
 import java.io.IOException;
-import java.text.DateFormat;
-import java.text.SimpleDateFormat;
-import java.util.Date;
 import java.util.List;
-import java.util.TimeZone;
-
 import org.apache.poi.EncryptedDocumentException;
 import org.apache.poi.openxml4j.exceptions.InvalidFormatException;
 import org.openqa.selenium.By;
@@ -71,7 +66,7 @@ public class Replenish_OrderProcess extends BaseInit {
 			Driver.findElement(By.id("inventory")).click();
 			logger.info("Click on Inventory tab");
 			wait.until(ExpectedConditions.visibilityOfElementLocated(By.id("txtBasicSearch")));
-			PUID = getData("OrderProcessing", 5, 1);
+			PUID = getData("OrderProcessing", 10, 1);
 			Driver.findElement(By.id("txtBasicSearch")).clear();
 			logger.info("Clear search input");
 			Driver.findElement(By.id("txtBasicSearch")).sendKeys(PUID);
@@ -133,7 +128,7 @@ public class Replenish_OrderProcess extends BaseInit {
 					act.moveToElement(SerialNo).build().perform();
 					wait.until(ExpectedConditions.elementToBeClickable(SerialNo));
 					SerialNo.clear();
-					SerialNo.sendKeys("SerialNo" + part);
+					SerialNo.sendKeys("SerialNo" + System.currentTimeMillis());
 					logger.info("Entered serial Number in " + part + " part");
 
 					// --Enter Accepted Quantity
@@ -161,7 +156,7 @@ public class Replenish_OrderProcess extends BaseInit {
 							act.moveToElement(SerialNo).build().perform();
 							wait.until(ExpectedConditions.elementToBeClickable(SerialNo));
 							SerialNo.clear();
-							SerialNo.sendKeys("SerialNo" + part);
+							SerialNo.sendKeys("SerialNo" + System.currentTimeMillis());
 							logger.info("Entered serial Number in " + part + " part");
 
 							// --Enter Accepted Quantity
@@ -190,7 +185,7 @@ public class Replenish_OrderProcess extends BaseInit {
 							act.moveToElement(SerialNo).build().perform();
 							wait.until(ExpectedConditions.elementToBeClickable(SerialNo));
 							SerialNo.clear();
-							SerialNo.sendKeys("SerialNo" + part);
+							SerialNo.sendKeys("SerialNo" + System.currentTimeMillis());
 							logger.info("Entered serial Number in " + part + " part");
 
 							// --Enter Accepted Quantity
@@ -272,7 +267,7 @@ public class Replenish_OrderProcess extends BaseInit {
 			}
 			// --Search
 			wait.until(ExpectedConditions.visibilityOfElementLocated(By.id("txtBasicSearch")));
-			PUID = getData("OrderProcessing", 5, 1);
+			PUID = getData("OrderProcessing", 10, 1);
 			Driver.findElement(By.id("txtBasicSearch")).clear();
 			logger.info("Clear search input");
 			Driver.findElement(By.id("txtBasicSearch")).sendKeys(PUID);

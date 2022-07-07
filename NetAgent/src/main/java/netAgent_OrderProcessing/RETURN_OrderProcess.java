@@ -176,6 +176,7 @@ public class RETURN_OrderProcess extends BaseInit {
 						WebElement InvSearch = Driver.findElement(By.id("btnSearch2"));
 						wait.until(ExpectedConditions.elementToBeClickable(InvSearch));
 						act.moveToElement(InvSearch).build().perform();
+						js.executeScript("arguments[0].click();", InvSearch);
 						logger.info("Click on Search button");
 						wait.until(ExpectedConditions
 								.invisibilityOfElementLocated(By.xpath("//*[@class=\"ajax-loadernew\"]")));
@@ -232,6 +233,8 @@ public class RETURN_OrderProcess extends BaseInit {
 						}
 
 					}
+					wait.until(ExpectedConditions
+							.invisibilityOfElementLocated(By.xpath("//*[@class=\"ajax-loadernew\"]")));
 
 					try {
 						wait.until(ExpectedConditions
@@ -276,6 +279,9 @@ public class RETURN_OrderProcess extends BaseInit {
 							}
 
 						}
+						wait.until(ExpectedConditions
+								.invisibilityOfElementLocated(By.xpath("//*[@class=\"ajax-loadernew\"]")));
+
 					} catch (Exception e) {
 						logger.info("Spoke with validation is not displayed");
 
@@ -290,6 +296,7 @@ public class RETURN_OrderProcess extends BaseInit {
 					WebElement InvSearch = Driver.findElement(By.id("btnSearch2"));
 					wait.until(ExpectedConditions.elementToBeClickable(InvSearch));
 					act.moveToElement(InvSearch).build().perform();
+					js.executeScript("arguments[0].click();", InvSearch);
 					logger.info("Click on Search button");
 
 					wait.until(ExpectedConditions
@@ -457,6 +464,8 @@ public class RETURN_OrderProcess extends BaseInit {
 									logger.info("Clicked on Accept button");
 								}
 							}
+							wait.until(ExpectedConditions
+									.invisibilityOfElementLocated(By.xpath("//*[@class=\"ajax-loadernew\"]")));
 						} catch (Exception ev) {
 							logger.info("Validation Message is not displayed");
 						}
@@ -520,6 +529,8 @@ public class RETURN_OrderProcess extends BaseInit {
 									logger.info("Clicked on Accept button");
 								}
 							}
+							wait.until(ExpectedConditions
+									.invisibilityOfElementLocated(By.xpath("//*[@class=\"ajax-loadernew\"]")));
 
 						} catch (Exception errmsg) {
 							logger.info("Validation message is not displayed");
@@ -605,6 +616,8 @@ public class RETURN_OrderProcess extends BaseInit {
 									logger.info("Clicked on Accept button");
 								}
 							}
+							wait.until(ExpectedConditions
+									.invisibilityOfElementLocated(By.xpath("//*[@class=\"ajax-loadernew\"]")));
 						} catch (Exception Time) {
 							logger.info("Time validation is not displayed-Time is as per timeZone");
 						}
@@ -618,6 +631,7 @@ public class RETURN_OrderProcess extends BaseInit {
 						InvSearch = Driver.findElement(By.id("btnSearch2"));
 						wait.until(ExpectedConditions.elementToBeClickable(InvSearch));
 						act.moveToElement(InvSearch).build().perform();
+						js.executeScript("arguments[0].click();", InvSearch);
 						logger.info("Click on Search button");
 						wait.until(ExpectedConditions
 								.invisibilityOfElementLocated(By.xpath("//*[@class=\"ajax-loadernew\"]")));
@@ -663,7 +677,6 @@ public class RETURN_OrderProcess extends BaseInit {
 							msg.append("Current stage of the order is=" + Orderstage + "\n");
 							getScreenshot(Driver, "RETURN_Pickup_" + PUID);
 
-
 							DelAddress = Driver.findElement(By.id("lblAddress"));
 							js.executeScript("arguments[0].scrollIntoView();", DelAddress);
 							Thread.sleep(2000);
@@ -699,14 +712,16 @@ public class RETURN_OrderProcess extends BaseInit {
 								act.moveToElement(Save).click().perform();
 								logger.info("Clicked on PICKUP button");
 							}
-
+							wait.until(ExpectedConditions
+									.invisibilityOfElementLocated(By.xpath("//*[@class=\"ajax-loadernew\"]")));
 							try {
 								wait.until(ExpectedConditions
 										.visibilityOfAllElementsLocatedBy(By.className("modal-dialog")));
 								WebElement Dyes = Driver.findElement(By.id("iddataok"));
 								js.executeScript("arguments[0].click();", Dyes);
 								logger.info("Clicked on Yes button");
-
+								wait.until(ExpectedConditions
+										.invisibilityOfElementLocated(By.xpath("//*[@class=\"ajax-loadernew\"]")));
 							} catch (Exception Dialogue) {
 								logger.info("Dialogue is not exist");
 							}
@@ -760,7 +775,8 @@ public class RETURN_OrderProcess extends BaseInit {
 								act.moveToElement(Del).build().perform();
 								js.executeScript("arguments[0].click();", Del);
 								logger.info("Clicked on Deliver button");
-
+								wait.until(ExpectedConditions
+										.invisibilityOfElementLocated(By.xpath("//*[@class=\"ajax-loadernew\"]")));
 								try {
 									wait.until(ExpectedConditions.visibilityOfElementLocated(By.id("errorid")));
 									WebElement Error = Driver.findElement(By.id("errorid"));
@@ -778,6 +794,8 @@ public class RETURN_OrderProcess extends BaseInit {
 										act.moveToElement(Del).build().perform();
 										js.executeScript("arguments[0].click();", Del);
 										logger.info("Clicked on Deliver button");
+										wait.until(ExpectedConditions.invisibilityOfElementLocated(
+												By.xpath("//*[@class=\"ajax-loadernew\"]")));
 									}
 								} catch (Exception signedby) {
 									logger.info("Validation for SignedBy is not displayed");
@@ -877,6 +895,7 @@ public class RETURN_OrderProcess extends BaseInit {
 					}
 
 				}
+				wait.until(ExpectedConditions.invisibilityOfElementLocated(By.xpath("//*[@class=\"ajax-loadernew\"]")));
 
 				try {
 					wait.until(
@@ -921,6 +940,9 @@ public class RETURN_OrderProcess extends BaseInit {
 						}
 
 					}
+					wait.until(ExpectedConditions
+							.invisibilityOfElementLocated(By.xpath("//*[@class=\"ajax-loadernew\"]")));
+
 				} catch (Exception e) {
 					logger.info("Spoke with validation is not displayed");
 
@@ -935,6 +957,7 @@ public class RETURN_OrderProcess extends BaseInit {
 				WebElement InvSearch = Driver.findElement(By.id("btnSearch2"));
 				wait.until(ExpectedConditions.elementToBeClickable(InvSearch));
 				act.moveToElement(InvSearch).build().perform();
+				js.executeScript("arguments[0].click();", InvSearch);
 				logger.info("Click on Search button");
 
 				wait.until(ExpectedConditions.invisibilityOfElementLocated(By.xpath("//*[@class=\"ajax-loadernew\"]")));
@@ -1100,6 +1123,8 @@ public class RETURN_OrderProcess extends BaseInit {
 								logger.info("Clicked on Accept button");
 							}
 						}
+						wait.until(ExpectedConditions
+								.invisibilityOfElementLocated(By.xpath("//*[@class=\"ajax-loadernew\"]")));
 					} catch (Exception ev) {
 						logger.info("Validation Message is not displayed");
 					}
@@ -1162,6 +1187,8 @@ public class RETURN_OrderProcess extends BaseInit {
 								logger.info("Clicked on Accept button");
 							}
 						}
+						wait.until(ExpectedConditions
+								.invisibilityOfElementLocated(By.xpath("//*[@class=\"ajax-loadernew\"]")));
 
 					} catch (Exception errmsg) {
 						logger.info("Validation message is not displayed");
@@ -1247,6 +1274,8 @@ public class RETURN_OrderProcess extends BaseInit {
 								logger.info("Clicked on Accept button");
 							}
 						}
+						wait.until(ExpectedConditions
+								.invisibilityOfElementLocated(By.xpath("//*[@class=\"ajax-loadernew\"]")));
 					} catch (Exception Time) {
 						logger.info("Time validation is not displayed-Time is as per timeZone");
 					}
@@ -1260,6 +1289,7 @@ public class RETURN_OrderProcess extends BaseInit {
 					InvSearch = Driver.findElement(By.id("btnSearch2"));
 					wait.until(ExpectedConditions.elementToBeClickable(InvSearch));
 					act.moveToElement(InvSearch).build().perform();
+					js.executeScript("arguments[0].click();", InvSearch);
 					logger.info("Click on Search button");
 					wait.until(ExpectedConditions
 							.invisibilityOfElementLocated(By.xpath("//*[@class=\"ajax-loadernew\"]")));
@@ -1302,7 +1332,7 @@ public class RETURN_OrderProcess extends BaseInit {
 						logger.info("Current stage of the order is=" + Orderstage);
 						msg.append("Current stage of the order is=" + Orderstage + "\n");
 						getScreenshot(Driver, "RETURN_Pickup_" + PUID);
-						
+
 						WebElement DelAddress = Driver.findElement(By.id("lblAddress"));
 						js.executeScript("arguments[0].scrollIntoView();", DelAddress);
 						Thread.sleep(2000);
@@ -1338,14 +1368,16 @@ public class RETURN_OrderProcess extends BaseInit {
 							act.moveToElement(Save).click().perform();
 							logger.info("Clicked on PICKUP button");
 						}
-
+						wait.until(ExpectedConditions
+								.invisibilityOfElementLocated(By.xpath("//*[@class=\"ajax-loadernew\"]")));
 						try {
 							wait.until(
 									ExpectedConditions.visibilityOfAllElementsLocatedBy(By.className("modal-dialog")));
 							WebElement Dyes = Driver.findElement(By.id("iddataok"));
 							js.executeScript("arguments[0].click();", Dyes);
 							logger.info("Clicked on Yes button");
-
+							wait.until(ExpectedConditions
+									.invisibilityOfElementLocated(By.xpath("//*[@class=\"ajax-loadernew\"]")));
 						} catch (Exception Dialogue) {
 							logger.info("Dialogue is not exist");
 						}
@@ -1399,7 +1431,8 @@ public class RETURN_OrderProcess extends BaseInit {
 							act.moveToElement(Del).build().perform();
 							js.executeScript("arguments[0].click();", Del);
 							logger.info("Clicked on Deliver button");
-
+							wait.until(ExpectedConditions
+									.invisibilityOfElementLocated(By.xpath("//*[@class=\"ajax-loadernew\"]")));
 							try {
 								wait.until(ExpectedConditions.visibilityOfElementLocated(By.id("errorid")));
 								WebElement Error = Driver.findElement(By.id("errorid"));
@@ -1417,6 +1450,8 @@ public class RETURN_OrderProcess extends BaseInit {
 									act.moveToElement(Del).build().perform();
 									js.executeScript("arguments[0].click();", Del);
 									logger.info("Clicked on Deliver button");
+									wait.until(ExpectedConditions
+											.invisibilityOfElementLocated(By.xpath("//*[@class=\"ajax-loadernew\"]")));
 								}
 							} catch (Exception signedby) {
 								logger.info("Validation for SignedBy is not displayed");
@@ -1599,6 +1634,8 @@ public class RETURN_OrderProcess extends BaseInit {
 							logger.info("Clicked on Accept button");
 						}
 					}
+					wait.until(ExpectedConditions
+							.invisibilityOfElementLocated(By.xpath("//*[@class=\"ajax-loadernew\"]")));
 				} catch (Exception ev) {
 					logger.info("Validation Message is not displayed");
 				}
@@ -1661,6 +1698,8 @@ public class RETURN_OrderProcess extends BaseInit {
 							logger.info("Clicked on Accept button");
 						}
 					}
+					wait.until(ExpectedConditions
+							.invisibilityOfElementLocated(By.xpath("//*[@class=\"ajax-loadernew\"]")));
 
 				} catch (Exception errmsg) {
 					logger.info("Validation message is not displayed");
@@ -1745,6 +1784,8 @@ public class RETURN_OrderProcess extends BaseInit {
 							logger.info("Clicked on Accept button");
 						}
 					}
+					wait.until(ExpectedConditions
+							.invisibilityOfElementLocated(By.xpath("//*[@class=\"ajax-loadernew\"]")));
 				} catch (Exception Time) {
 					logger.info("Time validation is not displayed-Time is as per timeZone");
 				}
@@ -1758,6 +1799,7 @@ public class RETURN_OrderProcess extends BaseInit {
 				WebElement InvSearch = Driver.findElement(By.id("btnSearch2"));
 				wait.until(ExpectedConditions.elementToBeClickable(InvSearch));
 				act.moveToElement(InvSearch).build().perform();
+				js.executeScript("arguments[0].click();", InvSearch);
 				logger.info("Click on Search button");
 				wait.until(ExpectedConditions.invisibilityOfElementLocated(By.xpath("//*[@class=\"ajax-loadernew\"]")));
 				try {
@@ -1799,7 +1841,7 @@ public class RETURN_OrderProcess extends BaseInit {
 					logger.info("Current stage of the order is=" + Orderstage);
 					msg.append("Current stage of the order is=" + Orderstage + "\n");
 					getScreenshot(Driver, "RETURN_Pickup_" + PUID);
-					
+
 					WebElement DelAddress = Driver.findElement(By.id("lblAddress"));
 					js.executeScript("arguments[0].scrollIntoView();", DelAddress);
 					Thread.sleep(2000);
@@ -1835,13 +1877,15 @@ public class RETURN_OrderProcess extends BaseInit {
 						act.moveToElement(Save).click().perform();
 						logger.info("Clicked on PICKUP button");
 					}
-
+					wait.until(ExpectedConditions
+							.invisibilityOfElementLocated(By.xpath("//*[@class=\"ajax-loadernew\"]")));
 					try {
 						wait.until(ExpectedConditions.visibilityOfAllElementsLocatedBy(By.className("modal-dialog")));
 						WebElement Dyes = Driver.findElement(By.id("iddataok"));
 						js.executeScript("arguments[0].click();", Dyes);
 						logger.info("Clicked on Yes button");
-
+						wait.until(ExpectedConditions
+								.invisibilityOfElementLocated(By.xpath("//*[@class=\"ajax-loadernew\"]")));
 					} catch (Exception Dialogue) {
 						logger.info("Dialogue is not exist");
 					}
@@ -1894,7 +1938,8 @@ public class RETURN_OrderProcess extends BaseInit {
 						act.moveToElement(Del).build().perform();
 						js.executeScript("arguments[0].click();", Del);
 						logger.info("Clicked on Deliver button");
-
+						wait.until(ExpectedConditions
+								.invisibilityOfElementLocated(By.xpath("//*[@class=\"ajax-loadernew\"]")));
 						try {
 							wait.until(ExpectedConditions.visibilityOfElementLocated(By.id("errorid")));
 							WebElement Error = Driver.findElement(By.id("errorid"));
@@ -1912,6 +1957,8 @@ public class RETURN_OrderProcess extends BaseInit {
 								act.moveToElement(Del).build().perform();
 								js.executeScript("arguments[0].click();", Del);
 								logger.info("Clicked on Deliver button");
+								wait.until(ExpectedConditions
+										.invisibilityOfElementLocated(By.xpath("//*[@class=\"ajax-loadernew\"]")));
 							}
 						} catch (Exception signedby) {
 							logger.info("Validation for SignedBy is not displayed");
@@ -1973,7 +2020,7 @@ public class RETURN_OrderProcess extends BaseInit {
 				logger.info("Current stage of the order is=" + Orderstage);
 				msg.append("Current stage of the order is=" + Orderstage + "\n");
 				getScreenshot(Driver, "RETURN_Pickup_" + PUID);
-				
+
 				WebElement DelAddress = Driver.findElement(By.id("lblAddress"));
 				js.executeScript("arguments[0].scrollIntoView();", DelAddress);
 				Thread.sleep(2000);
@@ -2009,13 +2056,14 @@ public class RETURN_OrderProcess extends BaseInit {
 					act.moveToElement(Save).click().perform();
 					logger.info("Clicked on PICKUP button");
 				}
-
+				wait.until(ExpectedConditions.invisibilityOfElementLocated(By.xpath("//*[@class=\"ajax-loadernew\"]")));
 				try {
 					wait.until(ExpectedConditions.visibilityOfAllElementsLocatedBy(By.className("modal-dialog")));
 					WebElement Dyes = Driver.findElement(By.id("iddataok"));
 					js.executeScript("arguments[0].click();", Dyes);
 					logger.info("Clicked on Yes button");
-
+					wait.until(ExpectedConditions
+							.invisibilityOfElementLocated(By.xpath("//*[@class=\"ajax-loadernew\"]")));
 				} catch (Exception Dialogue) {
 					logger.info("Dialogue is not exist");
 				}
@@ -2066,7 +2114,8 @@ public class RETURN_OrderProcess extends BaseInit {
 					act.moveToElement(Del).build().perform();
 					js.executeScript("arguments[0].click();", Del);
 					logger.info("Clicked on Deliver button");
-
+					wait.until(ExpectedConditions
+							.invisibilityOfElementLocated(By.xpath("//*[@class=\"ajax-loadernew\"]")));
 					try {
 						wait.until(ExpectedConditions.visibilityOfElementLocated(By.id("errorid")));
 						WebElement Error = Driver.findElement(By.id("errorid"));
@@ -2084,6 +2133,8 @@ public class RETURN_OrderProcess extends BaseInit {
 							act.moveToElement(Del).build().perform();
 							js.executeScript("arguments[0].click();", Del);
 							logger.info("Clicked on Deliver button");
+							wait.until(ExpectedConditions
+									.invisibilityOfElementLocated(By.xpath("//*[@class=\"ajax-loadernew\"]")));
 						}
 					} catch (Exception signedby) {
 						logger.info("Validation for SignedBy is not displayed");
@@ -2165,7 +2216,7 @@ public class RETURN_OrderProcess extends BaseInit {
 				act.moveToElement(Del).build().perform();
 				js.executeScript("arguments[0].click();", Del);
 				logger.info("Clicked on Deliver button");
-
+				wait.until(ExpectedConditions.invisibilityOfElementLocated(By.xpath("//*[@class=\"ajax-loadernew\"]")));
 				try {
 					wait.until(ExpectedConditions.visibilityOfElementLocated(By.id("errorid")));
 					WebElement Error = Driver.findElement(By.id("errorid"));
@@ -2183,6 +2234,8 @@ public class RETURN_OrderProcess extends BaseInit {
 						act.moveToElement(Del).build().perform();
 						js.executeScript("arguments[0].click();", Del);
 						logger.info("Clicked on Deliver button");
+						wait.until(ExpectedConditions
+								.invisibilityOfElementLocated(By.xpath("//*[@class=\"ajax-loadernew\"]")));
 					}
 				} catch (Exception signedby) {
 					logger.info("Validation for SignedBy is not displayed");

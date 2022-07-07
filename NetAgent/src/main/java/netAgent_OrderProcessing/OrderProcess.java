@@ -7179,6 +7179,7 @@ public class OrderProcess extends BaseInit {
 	public void memo(String PID) throws IOException, InterruptedException {
 		WebDriverWait wait = new WebDriverWait(Driver, 50);
 		JavascriptExecutor js = (JavascriptExecutor) Driver;
+		Actions act = new Actions(Driver);
 
 		try {
 			logger.info("===Memo Test Start===");
@@ -7187,6 +7188,7 @@ public class OrderProcess extends BaseInit {
 			Driver.findElement(By.xpath("//*[@id=\"hlkMemo\"][contains(text(),'Memo')]")).click();
 			logger.info("Clicked on Memo");
 			wait.until(ExpectedConditions.invisibilityOfElementLocated(By.xpath("//*[@class=\"ajax-loadernew\"]")));
+			wait.until(ExpectedConditions.visibilityOfAllElementsLocatedBy(By.xpath("//*[@ng-form=\"MemoForm\"]")));
 			getScreenshot(Driver, "Memo_" + PID);
 
 			// --Total no of existing memo
@@ -7201,13 +7203,26 @@ public class OrderProcess extends BaseInit {
 			// --Save
 			Driver.findElement(By.id("btnAgentMemoNA")).click();
 			logger.info("Clicked on Save button");
+			wait.until(ExpectedConditions.invisibilityOfElementLocated(By.xpath("//*[@class=\"ajax-loadernew\"]")));
 
-			// --Close
-			WebElement memoClose = Driver.findElement(By.id("idanchorclose"));
-			js.executeScript("arguments[0].click();", memoClose);
-			logger.info("Clicked on Close button of Memo");
-			Thread.sleep(2000);
+			try {
+				// --Close
+				WebElement memoClose = Driver.findElement(By.id("idanchorclose"));
 
+				js.executeScript("arguments[0].click();", memoClose);
+				logger.info("Clicked on Close button of Memo");
+				wait.until(ExpectedConditions.invisibilityOfElementLocated(By.xpath("//*[@ng-form=\"MemoForm\"]")));
+				Thread.sleep(2000);
+			} catch (Exception CLoseee) {
+				wait.until(ExpectedConditions.visibilityOfAllElementsLocatedBy(By.xpath("//*[@ng-form=\"MemoForm\"]")));
+				// --Close
+				WebElement memoClose = Driver.findElement(By.id("idanchorclose"));
+
+				act.moveToElement(memoClose).build().perform();
+				act.moveToElement(memoClose).click().perform();
+				logger.info("Clicked on Close button of Memo");
+				Thread.sleep(2000);
+			}
 			logger.info("===Memo Test End===");
 			msg.append("===Memo Test End===" + "\n\n");
 		} catch (Exception memonotexist) {
@@ -7220,21 +7235,42 @@ public class OrderProcess extends BaseInit {
 	public void notification(String PID) throws IOException, InterruptedException {
 		WebDriverWait wait = new WebDriverWait(Driver, 50);
 		JavascriptExecutor js = (JavascriptExecutor) Driver;
+		Actions act = new Actions(Driver);
 
 		try {
 			logger.info("===Notification Test Start===");
 			msg.append("===Notification Test Start===" + "\n\n");
 
-			Driver.findElement(By.id("hlkNotification")).click();
+			WebElement Notification = Driver.findElement(By.id("hlkNotification"));
+			act.moveToElement(Notification).build().perform();
+			js.executeScript("arguments[0].click();", Notification);
 			logger.info("Clicked on Notification");
 			wait.until(ExpectedConditions.invisibilityOfElementLocated(By.xpath("//*[@class=\"ajax-loadernew\"]")));
+			wait.until(ExpectedConditions
+					.visibilityOfAllElementsLocatedBy(By.xpath("//*[@ng-form=\"NotificationDetailform\"]")));
+
 			getScreenshot(Driver, "Notification_" + PID);
 
-			// --Close
-			WebElement memoClose = Driver.findElement(By.id("idanchorclose"));
-			js.executeScript("arguments[0].click();", memoClose);
-			logger.info("Clicked on Close button of Notification");
-			Thread.sleep(2000);
+			try {
+				// --Close
+				WebElement memoClose = Driver.findElement(By.id("idanchorclose"));
+
+				js.executeScript("arguments[0].click();", memoClose);
+				logger.info("Clicked on Close button of Notification");
+				wait.until(ExpectedConditions
+						.invisibilityOfElementLocated(By.xpath("//*[@ng-form=\"NotificationDetailform\"]")));
+				Thread.sleep(2000);
+			} catch (Exception CLoseee) {
+				wait.until(ExpectedConditions
+						.visibilityOfAllElementsLocatedBy(By.xpath("//*[@ng-form=\"NotificationDetailform\"]")));
+				// --Close
+				WebElement memoClose = Driver.findElement(By.id("idanchorclose"));
+
+				act.moveToElement(memoClose).build().perform();
+				act.moveToElement(memoClose).click().perform();
+				logger.info("Clicked on Close button of Notification");
+				Thread.sleep(2000);
+			}
 
 			logger.info("===Notification Test End===");
 			msg.append("===Notification Test End===" + "\n\n");
@@ -7248,17 +7284,22 @@ public class OrderProcess extends BaseInit {
 	public void upload(String PID) throws IOException, InterruptedException {
 		WebDriverWait wait = new WebDriverWait(Driver, 50);
 		JavascriptExecutor js = (JavascriptExecutor) Driver;
-
+		Actions act = new Actions(Driver);
 		try {
 			logger.info("===Upload Test Start===");
 			msg.append("===Upload Test Start===" + "\n\n");
 
-			Driver.findElement(By.id("hlkUploadDocument")).click();
+			WebElement Upload = Driver.findElement(By.id("hlkUploadDocument"));
+			act.moveToElement(Upload).build().perform();
+			js.executeScript("arguments[0].click();", Upload);
 			logger.info("Clicked on Upload");
 			wait.until(ExpectedConditions.invisibilityOfElementLocated(By.xpath("//*[@class=\"ajax-loadernew\"]")));
+			wait.until(
+					ExpectedConditions.visibilityOfAllElementsLocatedBy(By.xpath("//*[@ng-form=\"DocDetailsForm\"]")));
 			getScreenshot(Driver, "Upload_" + PID);
 
 			// --Click on Plus sign
+			wait.until(ExpectedConditions.elementToBeClickable(By.id("hlkaddUpload")));
 			Driver.findElement(By.id("hlkaddUpload")).click();
 			logger.info("Click on plus sign");
 			wait.until(ExpectedConditions.visibilityOfElementLocated(By.id("txtDocName")));
@@ -7266,7 +7307,9 @@ public class OrderProcess extends BaseInit {
 			Driver.findElement(By.id("txtDocName")).sendKeys("AutoDocument");
 			logger.info("Enter doc name");
 
-			Driver.findElement(By.id("btnSelectFile")).click();
+			WebElement SelectFile = Driver.findElement(By.id("btnSelectFile"));
+			act.moveToElement(SelectFile).build().perform();
+			js.executeScript("arguments[0].click();", SelectFile);
 			logger.info("Click on select file");
 
 			Thread.sleep(2000);
@@ -7282,7 +7325,9 @@ public class OrderProcess extends BaseInit {
 			Thread.sleep(2000);
 
 			// --Click on Upload btn
-			Driver.findElement(By.id("btnUpload")).click();
+			WebElement BTNUpload = Driver.findElement(By.id("btnUpload"));
+			act.moveToElement(BTNUpload).build().perform();
+			js.executeScript("arguments[0].click();", BTNUpload);
 			logger.info("File is uploaded successfully");
 
 			Thread.sleep(2000);
@@ -7298,6 +7343,32 @@ public class OrderProcess extends BaseInit {
 			js.executeScript("arguments[0].click();", UpLoadOK);
 
 			Thread.sleep(2000);
+			try {
+				// --Close
+				wait.until(
+						ExpectedConditions.invisibilityOfElementLocated(By.xpath("//*[@ng-form=\"DocDetailsForm\"]")));
+			} catch (Exception CLoseee) {
+				try {
+					// --Close
+					WebElement memoClose = Driver.findElement(By.id("idanchorclose"));
+
+					js.executeScript("arguments[0].click();", memoClose);
+					logger.info("Clicked on Close button of Upload");
+					wait.until(ExpectedConditions
+							.invisibilityOfElementLocated(By.xpath("//*[@ng-form=\"DocDetailsForm\"]")));
+					Thread.sleep(2000);
+				} catch (Exception CLosee) {
+					wait.until(ExpectedConditions
+							.visibilityOfAllElementsLocatedBy(By.xpath("//*[@ng-form=\"DocDetailsForm\"]")));
+					// --Close
+					WebElement memoClose = Driver.findElement(By.id("idanchorclose"));
+
+					act.moveToElement(memoClose).build().perform();
+					act.moveToElement(memoClose).click().perform();
+					logger.info("Clicked on Close button of Upload");
+					Thread.sleep(2000);
+				}
+			}
 
 			logger.info("===Upload Test End===");
 			msg.append("===Upload Test End===" + "\n\n");
@@ -7311,6 +7382,7 @@ public class OrderProcess extends BaseInit {
 	public void map(String PID) throws IOException, InterruptedException {
 		WebDriverWait wait = new WebDriverWait(Driver, 50);
 		JavascriptExecutor js = (JavascriptExecutor) Driver;
+		Actions act = new Actions(Driver);
 
 		try {
 			logger.info("===Map Test Start===");
@@ -7320,13 +7392,30 @@ public class OrderProcess extends BaseInit {
 			logger.info("Clicked on Map");
 			wait.until(ExpectedConditions.invisibilityOfElementLocated(By.xpath("//*[@class=\"ajax-loadernew\"]")));
 			Thread.sleep(5000);
+			wait.until(ExpectedConditions.visibilityOfAllElementsLocatedBy(
+					By.xpath("//*[@class=\"panel-title\"]//strong[contains(text(),'Map')]")));
 			getScreenshot(Driver, "Map_" + PID);
 
-			// --Close
-			WebElement memoClose = Driver.findElement(By.id("idMapClose"));
-			js.executeScript("arguments[0].click();", memoClose);
-			logger.info("Clicked on Close button of Map");
-			Thread.sleep(2000);
+			try {
+				// --Close
+				WebElement memoClose = Driver.findElement(By.id("idMapClose"));
+
+				js.executeScript("arguments[0].click();", memoClose);
+				logger.info("Clicked on Close button of Map");
+				wait.until(ExpectedConditions.invisibilityOfElementLocated(
+						By.xpath("//*[@class=\"panel-title\"]//strong[contains(text(),'Map')]")));
+				Thread.sleep(2000);
+			} catch (Exception CLoseee) {
+				wait.until(ExpectedConditions.visibilityOfAllElementsLocatedBy(
+						By.xpath("//*[@class=\"panel-title\"]//strong[contains(text(),'Map')]")));
+				// --Close
+				WebElement memoClose = Driver.findElement(By.id("idMapClose"));
+
+				act.moveToElement(memoClose).build().perform();
+				act.moveToElement(memoClose).click().perform();
+				logger.info("Clicked on Close button of Map");
+				Thread.sleep(2000);
+			}
 
 			logger.info("===Map Test End===");
 			msg.append("===Map Test End===" + "\n\n");
@@ -7383,6 +7472,7 @@ public class OrderProcess extends BaseInit {
 	public void shipLabel(String PickUpID) throws IOException, InterruptedException {
 		WebDriverWait wait = new WebDriverWait(Driver, 50);
 		JavascriptExecutor js = (JavascriptExecutor) Driver;
+		Actions act = new Actions(Driver);
 
 		try {
 			logger.info("===ShipLabel Test Start===");
@@ -7401,6 +7491,7 @@ public class OrderProcess extends BaseInit {
 				logger.info("Entered EmailID");
 				Driver.findElement(By.id("btnSend")).click();
 				logger.info("Clicked on Send button");
+				Thread.sleep(2000);
 				// ErrorMsg
 				try {
 					wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//*[@ng-bind=\"ErrorMsg\"]")));
@@ -7459,10 +7550,26 @@ public class OrderProcess extends BaseInit {
 			}
 
 			// --Close Ship Label Service pop up
-			WebElement memoClose = Driver.findElement(By.id("idanchorclose"));
-			js.executeScript("arguments[0].click();", memoClose);
-			logger.info("Clicked on Close button of Memo");
-			Thread.sleep(2000);
+
+			try {
+				// --Close
+				WebElement memoClose = Driver.findElement(By.id("idanchorclose"));
+				js.executeScript("arguments[0].click();", memoClose);
+				logger.info("Clicked on Close button of ShipLabel");
+				Thread.sleep(2000);
+				wait.until(ExpectedConditions.invisibilityOfElementLocated(By.xpath("//*[@ng-form=\\\"SLForm\\\"]")));
+				Thread.sleep(2000);
+			} catch (Exception CLoseee) {
+				wait.until(ExpectedConditions.visibilityOfAllElementsLocatedBy(By.xpath("//*[@ng-form=\"SLForm\"]")));
+
+				// --Close
+				WebElement memoClose = Driver.findElement(By.id("idanchorclose"));
+
+				act.moveToElement(memoClose).build().perform();
+				act.moveToElement(memoClose).click().perform();
+				logger.info("Clicked on Close button of ShipLabel");
+				Thread.sleep(2000);
+			}
 
 			logger.info("===ShipLabel Test End===");
 			msg.append("===ShipLabel Test End===" + "\n\n");

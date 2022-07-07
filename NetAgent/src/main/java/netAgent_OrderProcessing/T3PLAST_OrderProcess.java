@@ -57,6 +57,7 @@ public class T3PLAST_OrderProcess extends BaseInit {
 		for (int row = 6; row < 8; row++) {
 			if (row == 7) {
 				msg.append("\n\n");
+				msg.append("==Confirm DEL Alert Scenario start=="+"\n");
 			}
 
 			String ServiceID = getData("OrderProcessing", row, 0);
@@ -308,6 +309,8 @@ public class T3PLAST_OrderProcess extends BaseInit {
 								logger.info("Clicked on Accept button");
 							}
 						}
+						wait.until(ExpectedConditions
+								.invisibilityOfElementLocated(By.xpath("//*[@class=\"ajax-loadernew\"]")));
 
 						try {
 							// --Part Pull DateTime is required. Validation
@@ -385,6 +388,8 @@ public class T3PLAST_OrderProcess extends BaseInit {
 									logger.info("Clicked on Accept button");
 								}
 							}
+							wait.until(ExpectedConditions
+									.invisibilityOfElementLocated(By.xpath("//*[@class=\"ajax-loadernew\"]")));
 
 						} catch (Exception e) {
 							logger.info("Validation Message is not displayed, Part Pull DateTime is required");
@@ -392,10 +397,10 @@ public class T3PLAST_OrderProcess extends BaseInit {
 						}
 
 						try {
-							wait.until(ExpectedConditions
-									.visibilityOfElementLocated(By.xpath("//label[contains(@class,'error-messages')]")));
-							logger.info("ErroMsg is Displayed="
-									+ Driver.findElement(By.xpath("//label[contains(@class,'error-messages')]")).getText());
+							wait.until(ExpectedConditions.visibilityOfElementLocated(
+									By.xpath("//label[contains(@class,'error-messages')]")));
+							logger.info("ErroMsg is Displayed=" + Driver
+									.findElement(By.xpath("//label[contains(@class,'error-messages')]")).getText());
 
 							String ErrorMsg = Driver.findElement(By.xpath("//label[contains(@class,'error-messages')]"))
 									.getText();
@@ -485,18 +490,21 @@ public class T3PLAST_OrderProcess extends BaseInit {
 									js.executeScript("arguments[0].click();", Accept);
 									logger.info("Clicked on Accept button");
 								}
+
 							}
+							wait.until(ExpectedConditions
+									.invisibilityOfElementLocated(By.xpath("//*[@class=\"ajax-loadernew\"]")));
 
 						} catch (Exception e) {
 							logger.info("Error Message is not displayed");
 
 						}
-						
+
 						try {
-							wait.until(ExpectedConditions
-									.visibilityOfElementLocated(By.xpath("//label[contains(@class,'error-messages')]")));
-							logger.info("ErroMsg is Displayed="
-									+ Driver.findElement(By.xpath("//label[contains(@class,'error-messages')]")).getText());
+							wait.until(ExpectedConditions.visibilityOfElementLocated(
+									By.xpath("//label[contains(@class,'error-messages')]")));
+							logger.info("ErroMsg is Displayed=" + Driver
+									.findElement(By.xpath("//label[contains(@class,'error-messages')]")).getText());
 
 							String ErrorMsg = Driver.findElement(By.xpath("//label[contains(@class,'error-messages')]"))
 									.getText();
@@ -587,6 +595,8 @@ public class T3PLAST_OrderProcess extends BaseInit {
 									logger.info("Clicked on Accept button");
 								}
 							}
+							wait.until(ExpectedConditions
+									.invisibilityOfElementLocated(By.xpath("//*[@class=\"ajax-loadernew\"]")));
 
 						} catch (Exception e) {
 							logger.info("Error Message is not displayed");
@@ -608,7 +618,8 @@ public class T3PLAST_OrderProcess extends BaseInit {
 						wait.until(ExpectedConditions
 								.invisibilityOfElementLocated(By.xpath("//*[@class=\"ajax-loadernew\"]")));
 						try {
-							wait.until(ExpectedConditions.visibilityOfElementLocated(By.className("dx-datagrid-nodata")));
+							wait.until(
+									ExpectedConditions.visibilityOfElementLocated(By.className("dx-datagrid-nodata")));
 							WebElement NoData = Driver.findElement(By.className("dx-datagrid-nodata"));
 							if (NoData.isDisplayed()) {
 								logger.info("Job is not moved to TENDER TO 3P stage successfully");
@@ -653,10 +664,12 @@ public class T3PLAST_OrderProcess extends BaseInit {
 								act.moveToElement(Delivery).click().perform();
 								logger.info("Clicked on Tender to 3P");
 							}
+							wait.until(ExpectedConditions
+									.invisibilityOfElementLocated(By.xpath("//*[@class=\"ajax-loadernew\"]")));
 
 							try {
-								wait.until(
-										ExpectedConditions.visibilityOfAllElementsLocatedBy(By.className("modal-content")));
+								wait.until(ExpectedConditions
+										.visibilityOfAllElementsLocatedBy(By.className("modal-content")));
 								WebElement DOK = Driver.findElement(By.id("iddataok"));
 								js.executeScript("arguments[0].click();", DOK);
 								logger.info("Click on OK of Dialogue box");
@@ -705,6 +718,8 @@ public class T3PLAST_OrderProcess extends BaseInit {
 									act.moveToElement(Delivery).click().perform();
 									logger.info("Clicked on Tender to 3P");
 								}
+								wait.until(ExpectedConditions
+										.invisibilityOfElementLocated(By.xpath("//*[@class=\"ajax-loadernew\"]")));
 
 								try {
 									wait.until(ExpectedConditions
@@ -739,8 +754,8 @@ public class T3PLAST_OrderProcess extends BaseInit {
 							wait.until(ExpectedConditions
 									.invisibilityOfElementLocated(By.xpath("//*[@class=\"ajax-loadernew\"]")));
 							try {
-								wait.until(
-										ExpectedConditions.visibilityOfElementLocated(By.className("dx-datagrid-nodata")));
+								wait.until(ExpectedConditions
+										.visibilityOfElementLocated(By.className("dx-datagrid-nodata")));
 								WebElement NoData = Driver.findElement(By.className("dx-datagrid-nodata"));
 								if (NoData.isDisplayed()) {
 									logger.info("Job is moved to Send DEL Alert stage successfully");
@@ -826,6 +841,8 @@ public class T3PLAST_OrderProcess extends BaseInit {
 							logger.info("Clicked on Accept button");
 						}
 					}
+					wait.until(ExpectedConditions
+							.invisibilityOfElementLocated(By.xpath("//*[@class=\"ajax-loadernew\"]")));
 
 					try {
 						// --Part Pull DateTime is required. Validation
@@ -903,6 +920,8 @@ public class T3PLAST_OrderProcess extends BaseInit {
 								logger.info("Clicked on Accept button");
 							}
 						}
+						wait.until(ExpectedConditions
+								.invisibilityOfElementLocated(By.xpath("//*[@class=\"ajax-loadernew\"]")));
 
 					} catch (Exception e) {
 						logger.info("Validation Message is not displayed, Part Pull DateTime is required");
@@ -1003,13 +1022,16 @@ public class T3PLAST_OrderProcess extends BaseInit {
 								js.executeScript("arguments[0].click();", Accept);
 								logger.info("Clicked on Accept button");
 							}
+
 						}
+						wait.until(ExpectedConditions
+								.invisibilityOfElementLocated(By.xpath("//*[@class=\"ajax-loadernew\"]")));
 
 					} catch (Exception e) {
 						logger.info("Error Message is not displayed");
 
 					}
-					
+
 					try {
 						wait.until(ExpectedConditions
 								.visibilityOfElementLocated(By.xpath("//label[contains(@class,'error-messages')]")));
@@ -1105,6 +1127,8 @@ public class T3PLAST_OrderProcess extends BaseInit {
 								logger.info("Clicked on Accept button");
 							}
 						}
+						wait.until(ExpectedConditions
+								.invisibilityOfElementLocated(By.xpath("//*[@class=\"ajax-loadernew\"]")));
 
 					} catch (Exception e) {
 						logger.info("Error Message is not displayed");
@@ -1171,6 +1195,8 @@ public class T3PLAST_OrderProcess extends BaseInit {
 							act.moveToElement(Delivery).click().perform();
 							logger.info("Clicked on Tender to 3P");
 						}
+						wait.until(ExpectedConditions
+								.invisibilityOfElementLocated(By.xpath("//*[@class=\"ajax-loadernew\"]")));
 
 						try {
 							wait.until(
@@ -1223,6 +1249,8 @@ public class T3PLAST_OrderProcess extends BaseInit {
 								act.moveToElement(Delivery).click().perform();
 								logger.info("Clicked on Tender to 3P");
 							}
+							wait.until(ExpectedConditions
+									.invisibilityOfElementLocated(By.xpath("//*[@class=\"ajax-loadernew\"]")));
 
 							try {
 								wait.until(ExpectedConditions
@@ -1320,6 +1348,8 @@ public class T3PLAST_OrderProcess extends BaseInit {
 						act.moveToElement(Delivery).click().perform();
 						logger.info("Clicked on Tender to 3P");
 					}
+					wait.until(ExpectedConditions
+							.invisibilityOfElementLocated(By.xpath("//*[@class=\"ajax-loadernew\"]")));
 
 					try {
 						wait.until(ExpectedConditions.visibilityOfAllElementsLocatedBy(By.className("modal-content")));
@@ -1371,6 +1401,8 @@ public class T3PLAST_OrderProcess extends BaseInit {
 							act.moveToElement(Delivery).click().perform();
 							logger.info("Clicked on Tender to 3P");
 						}
+						wait.until(ExpectedConditions
+								.invisibilityOfElementLocated(By.xpath("//*[@class=\"ajax-loadernew\"]")));
 
 						try {
 							wait.until(
@@ -1441,13 +1473,16 @@ public class T3PLAST_OrderProcess extends BaseInit {
 					act.moveToElement(CondirmP).build().perform();
 					js.executeScript("arguments[0].click();", CondirmP);
 					logger.info("Clicked on CONFIRM button");
-
+					wait.until(ExpectedConditions
+							.invisibilityOfElementLocated(By.xpath("//*[@class=\"ajax-loadernew\"]")));
 					try {
 						// --Click on Close button //
 						WebElement DelClose = Driver.findElement(By.id("idclosetab"));
 						act.moveToElement(DelClose).build().perform();
 						js.executeScript("arguments[0].click();", DelClose);
 						logger.info("Clicked on Close button");
+						wait.until(ExpectedConditions
+								.invisibilityOfElementLocated(By.xpath("//*[@class=\"ajax-loadernew\"]")));
 					} catch (Exception close) {
 						logger.info("Editor is already closed");
 
@@ -1487,6 +1522,8 @@ public class T3PLAST_OrderProcess extends BaseInit {
 						wait.until(ExpectedConditions.elementToBeClickable(CLS));
 						js.executeScript("arguments[0].click();", CLS);
 						logger.info("Clicked on Close");
+						wait.until(ExpectedConditions
+								.invisibilityOfElementLocated(By.xpath("//*[@class=\"ajax-loadernew\"]")));
 					}
 
 				} else if (Orderstage.equalsIgnoreCase("3rd Party Delivery")) {
@@ -1501,7 +1538,8 @@ public class T3PLAST_OrderProcess extends BaseInit {
 					wait.until(ExpectedConditions.elementToBeClickable(CLS));
 					js.executeScript("arguments[0].click();", CLS);
 					logger.info("Clicked on Close");
-
+					wait.until(ExpectedConditions
+							.invisibilityOfElementLocated(By.xpath("//*[@class=\"ajax-loadernew\"]")));
 				}
 
 			} catch (Exception NoData1) {

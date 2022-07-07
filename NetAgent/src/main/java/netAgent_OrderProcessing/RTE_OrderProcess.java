@@ -160,6 +160,7 @@ public class RTE_OrderProcess extends BaseInit {
 							wait.until(ExpectedConditions.visibilityOfElementLocated(By.id("errorid")));
 							String Errmsg = Driver.findElement(By.id("errorid")).getText();
 							logger.info("validation message=" + Errmsg);
+
 							// --Enter Actual PickupTime
 							String ZOneID = Driver.findElement(By.xpath("//span[contains(@ng-bind,'PUTimeZone')]"))
 									.getText();
@@ -169,6 +170,7 @@ public class RTE_OrderProcess extends BaseInit {
 							} else if (ZOneID.equalsIgnoreCase("CDT")) {
 								ZOneID = "CST";
 							}
+
 							WebElement ActPUTime = Driver.findElement(By.id("txtActPuTime"));
 							ActPUTime.clear();
 							Date date = new Date();
@@ -176,6 +178,8 @@ public class RTE_OrderProcess extends BaseInit {
 							dateFormat.setTimeZone(TimeZone.getTimeZone(ZOneID));
 							logger.info(dateFormat.format(date));
 							ActPUTime.sendKeys(dateFormat.format(date));
+							ActPUTime.sendKeys(Keys.TAB);
+
 							// --Click on save
 							Save = Driver.findElement(By.id("idiconsave"));
 							act.moveToElement(Save).build().perform();
@@ -394,6 +398,8 @@ public class RTE_OrderProcess extends BaseInit {
 						dateFormat.setTimeZone(TimeZone.getTimeZone(ZOneID));
 						logger.info(dateFormat.format(date));
 						ActPUTime.sendKeys(dateFormat.format(date));
+						ActPUTime.sendKeys(Keys.TAB);
+
 						// --Click on save
 						Save = Driver.findElement(By.id("idiconsave"));
 						act.moveToElement(Save).build().perform();
