@@ -58,7 +58,7 @@ public class SD_OrderProcess extends BaseInit {
 		for (int row = 2; row < 4; row++) {
 			if (row == 3) {
 				msg.append("\n\n");
-				msg.append("==Confirm DEL Alert Scenario start=="+"\n");
+				msg.append("==Confirm DEL Alert Scenario start==" + "\n");
 			}
 			String ServiceID = getData("OrderProcessing", row, 0);
 			logger.info("ServiceID is==" + ServiceID);
@@ -800,8 +800,10 @@ public class SD_OrderProcess extends BaseInit {
 					try {
 						WebElement Drop = Driver.findElement(By.id("btnsavedelivery"));
 						act.moveToElement(Drop).build().perform();
+						wait.until(ExpectedConditions.elementToBeClickable(Drop));
 						js.executeScript("arguments[0].click();", Drop);
 						logger.info("Clicked on Drop button");
+
 						wait.until(ExpectedConditions
 								.invisibilityOfElementLocated(By.xpath("//*[@class=\"ajax-loadernew\"]")));
 					} catch (Exception Dropp) {
@@ -812,6 +814,7 @@ public class SD_OrderProcess extends BaseInit {
 							act.moveToElement(Drop).build().perform();
 							act.moveToElement(Drop).click().perform();
 							logger.info("Clicked on Drop button");
+
 							wait.until(ExpectedConditions
 									.invisibilityOfElementLocated(By.xpath("//*[@class=\"ajax-loadernew\"]")));
 

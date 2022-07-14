@@ -57,7 +57,7 @@ public class T3PLAST_OrderProcess extends BaseInit {
 		for (int row = 6; row < 8; row++) {
 			if (row == 7) {
 				msg.append("\n\n");
-				msg.append("==Confirm DEL Alert Scenario start=="+"\n");
+				msg.append("==Confirm DEL Alert Scenario start==" + "\n");
 			}
 
 			String ServiceID = getData("OrderProcessing", row, 0);
@@ -1461,7 +1461,6 @@ public class T3PLAST_OrderProcess extends BaseInit {
 
 					// --Confirm Del Alert
 					logger.info("Job is moved to Confirm Del Alert stage successfully");
-					msg.append("Current stage of the order is=" + Orderstage + "\n");
 					getScreenshot(Driver, "3PLAST_ConfDelAlert_" + PUID);
 
 					// --Click on Confirm
@@ -1507,14 +1506,18 @@ public class T3PLAST_OrderProcess extends BaseInit {
 						WebElement NoData = Driver.findElement(By.className("dx-datagrid-nodata"));
 						if (NoData.isDisplayed()) {
 							logger.info("Job is not moved to 3rd Party Delivery stage successfully");
+							msg.append("Job is not moved to 3rd Party Delivery stage successfully" + "\n");
 
 						}
 					} catch (Exception Recover) {
 						logger.info("Job is moved to 3rd Party Delivery stage successfully");
+						msg.append("Job is moved to 3rd Party Delivery stage successfully" + "\n");
+
 						// ----3rd Party Delivery stage
 						String StageName = Driver.findElement(By.xpath("//strong/span[@class=\"ng-binding\"]"))
 								.getText();
 						logger.info("Stage is==" + StageName);
+						msg.append("Stage is==" + StageName);
 						getScreenshot(Driver, "3PLAST_3rdPartyDelivery_" + PUID);
 
 						// --Click on Close

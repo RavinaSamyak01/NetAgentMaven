@@ -1,75 +1,620 @@
-2022-07-06 17:44:45,223 - OrderProcessing -INFO - initialization of the properties file is done
-2022-07-06 17:44:46,716 - io.github.bonigarcia.wdm.WebDriverManager -INFO - Using chromedriver 103.0.5060.53 (since Google Chrome 103 is installed in your machine)
-2022-07-06 17:44:46,770 - io.github.bonigarcia.wdm.WebDriverManager -INFO - Exporting webdriver.chrome.driver as C:\Users\rprajapati\.m2\repository\webdriver\chromedriver\win32\103.0.5060.53\chromedriver.exe
-2022-07-06 17:44:58,093 - OrderProcessing -INFO - Url opened
-2022-07-06 17:45:23,918 - OrderProcessing -INFO - =====LOC Order Processing Test Start=====
-2022-07-06 17:45:23,943 - OrderProcessing -INFO - total No of Rows=11
-2022-07-06 17:45:23,952 - OrderProcessing -INFO - total No of Columns=3
-2022-07-06 17:45:24,389 - OrderProcessing -INFO - Click on Operations
-2022-07-06 17:45:34,853 - OrderProcessing -INFO - Click on Task Log
-2022-07-06 17:45:36,504 - OrderProcessing -INFO - ServiceID is==LOC
-2022-07-06 17:45:36,519 - OrderProcessing -INFO - PickUpID is==3414067
-2022-07-06 17:46:26,701 - OrderProcessing -INFO - Operation tab is not selected
-2022-07-06 17:46:27,338 - OrderProcessing -INFO - Click on Operation Tab
-2022-07-06 17:46:31,427 - OrderProcessing -INFO - Clear search input
-2022-07-06 17:46:31,615 - OrderProcessing -INFO - Enter PickUpID in Search input
-2022-07-06 17:46:31,931 - OrderProcessing -INFO - Click on Search button
-2022-07-06 17:46:41,010 - OrderProcessing -INFO - Searched Job is displayed in edit mode
-2022-07-06 17:46:41,415 - OrderProcessing -INFO - ===Memo Test Start===
-2022-07-06 17:46:41,549 - OrderProcessing -INFO - Clicked on Memo
-2022-07-06 17:46:42,955 - OrderProcessing -INFO - Total no of memo is/are=(0)
-2022-07-06 17:46:43,164 - OrderProcessing -INFO - Entered value in memo
-2022-07-06 17:46:43,268 - OrderProcessing -INFO - Clicked on Save button
-2022-07-06 17:46:43,328 - OrderProcessing -INFO - Clicked on Close button of Memo
-2022-07-06 17:46:45,342 - OrderProcessing -INFO - ===Memo Test End===
-2022-07-06 17:46:45,342 - OrderProcessing -INFO - ===Notification Test Start===
-2022-07-06 17:46:45,533 - OrderProcessing -INFO - Clicked on Notification
-2022-07-06 17:46:48,169 - OrderProcessing -INFO - Clicked on Close button of Notification
-2022-07-06 17:46:50,169 - OrderProcessing -INFO - ===Notification Test End===
-2022-07-06 17:46:50,169 - OrderProcessing -INFO - ===Upload Test Start===
-2022-07-06 17:46:50,253 - OrderProcessing -INFO - Clicked on Upload
-2022-07-06 17:46:52,298 - OrderProcessing -INFO - Click on plus sign
-2022-07-06 17:46:52,512 - OrderProcessing -INFO - Enter doc name
-2022-07-06 17:46:52,616 - OrderProcessing -INFO - Click on select file
-2022-07-06 17:47:00,197 - OrderProcessing -INFO - Select the file
-2022-07-06 17:47:02,343 - OrderProcessing -INFO - File is uploaded successfully
-2022-07-06 17:47:04,484 - OrderProcessing -INFO - File is uploaded successfully
-2022-07-06 17:47:06,657 - OrderProcessing -INFO - ===Upload Test End===
-2022-07-06 17:47:06,658 - OrderProcessing -INFO - ===Map Test Start===
-2022-07-06 17:47:06,868 - OrderProcessing -INFO - Clicked on Map
-2022-07-06 17:47:16,571 - OrderProcessing -INFO - Clicked on Close button of Map
-2022-07-06 17:47:18,583 - OrderProcessing -INFO - ===Map Test End===
-2022-07-06 17:47:34,511 - OrderProcessing -INFO - Current stage of the order is=Confirm Pu Alert
-2022-07-06 17:47:40,504 - OrderProcessing -INFO - Clicked on CONFIRM button
-2022-07-06 17:47:46,160 - OrderProcessing -INFO - Editor is already closed
-2022-07-06 17:47:48,504 - OrderProcessing -INFO - Clear search input
-2022-07-06 17:47:48,712 - OrderProcessing -INFO - Enter PickUpID in Search input
-2022-07-06 17:47:49,072 - OrderProcessing -INFO - Click on Search button
-2022-07-06 17:48:54,083 - OrderProcessing -INFO - Job is moved to PICKUP stage successfully
-2022-07-06 17:48:55,494 - OrderProcessing -INFO - Current stage of the order is=Pickup
-2022-07-06 17:49:40,264 - OrderProcessing -INFO - ZoneID of is==CDT
-2022-07-06 17:49:40,652 - OrderProcessing -INFO - 07:19
-2022-07-06 17:49:50,695 - OrderProcessing -INFO - Clicked on PICKUP button
-2022-07-06 17:50:56,453 - OrderProcessing -INFO - Dialogue is not exist
-2022-07-06 17:50:58,014 - OrderProcessing -INFO - Clear search input
-2022-07-06 17:50:58,195 - OrderProcessing -INFO - Enter PickUpID in Search input
-2022-07-06 17:50:58,580 - OrderProcessing -INFO - Click on Search button
-2022-07-06 17:52:13,378 - OrderProcessing -INFO - Job is moved to DELIVER stage successfully
-2022-07-06 17:52:16,807 - OrderProcessing -INFO - Service ID is==LOC
-2022-07-06 17:52:16,894 - OrderProcessing -INFO - Current stage of the order is=Deliver
-2022-07-06 17:52:24,404 - OrderProcessing -INFO - ZoneID of is==CDT
-2022-07-06 17:52:29,835 - OrderProcessing -INFO - 07:22
-2022-07-06 17:52:35,689 - OrderProcessing -INFO - Entered signature
-2022-07-06 17:52:44,209 - OrderProcessing -INFO - Clicked on Deliver button
-2022-07-06 17:53:42,339 - OrderProcessing -INFO - Dialogue is not exist
-2022-07-06 17:53:44,568 - OrderProcessing -INFO - Clear search input
-2022-07-06 17:53:44,756 - OrderProcessing -INFO - Enter PickUpID in Search input
-2022-07-06 17:53:45,101 - OrderProcessing -INFO - Click on Search button
-2022-07-06 17:53:54,809 - OrderProcessing -INFO - Job is Delivered successfully
-2022-07-06 17:54:01,721 - OrderProcessing -INFO - =====LOC Order Processing Test End=====
-2022-07-06 17:54:01,794 - OrderProcessing -INFO - =====SD Order Processing Test Start=====
-2022-07-06 17:54:01,809 - OrderProcessing -INFO - total No of Rows=11
-2022-07-06 17:54:01,817 - OrderProcessing -INFO - total No of Columns=3
-2022-07-06 17:54:02,395 - OrderProcessing -INFO - Click on Operations
-2022-07-06 17:54:54,246 - OrderProcessing -INFO - Clicked on LogOut
-2022-07-06 17:55:02,774 - OrderProcessing -INFO - ====Sending Email=====
+2022-07-14 13:01:46,951 - OrderProcessing -INFO - initialization of the properties file is done
+2022-07-14 13:01:47,463 - io.github.bonigarcia.wdm.WebDriverManager -INFO - Using chromedriver 103.0.5060.53 (since Google Chrome 103 is installed in your machine)
+2022-07-14 13:01:47,492 - io.github.bonigarcia.wdm.WebDriverManager -INFO - Exporting webdriver.chrome.driver as C:\Users\rprajapati\.m2\repository\webdriver\chromedriver\win32\103.0.5060.53\chromedriver.exe
+2022-07-14 13:01:55,697 - OrderProcessing -INFO - Url opened
+2022-07-14 13:02:08,206 - OrderProcessing -INFO - =====LOC Order Processing Test Start=====
+2022-07-14 13:02:08,210 - OrderProcessing -INFO - total No of Rows=11
+2022-07-14 13:02:08,214 - OrderProcessing -INFO - total No of Columns=3
+2022-07-14 13:02:08,449 - OrderProcessing -INFO - Click on Operations
+2022-07-14 13:02:11,679 - OrderProcessing -INFO - Click on Task Log
+2022-07-14 13:02:11,876 - OrderProcessing -INFO - ServiceID is==LOC
+2022-07-14 13:02:11,880 - OrderProcessing -INFO - PickUpID is==3430848
+2022-07-14 13:03:01,934 - OrderProcessing -INFO - Operation tab is not selected
+2022-07-14 13:03:02,165 - OrderProcessing -INFO - Click on Operation Tab
+2022-07-14 13:03:03,953 - OrderProcessing -INFO - Clear search input
+2022-07-14 13:03:04,018 - OrderProcessing -INFO - Enter PickUpID in Search input
+2022-07-14 13:03:04,217 - OrderProcessing -INFO - Click on Search button
+2022-07-14 13:03:05,989 - OrderProcessing -INFO - Job is not exist with the search parameters
+2022-07-14 13:03:07,775 - OrderProcessing -INFO - =====LOC Order Processing Test End=====
+2022-07-14 13:03:07,786 - OrderProcessing -INFO - =====SD Order Processing Test Start=====
+2022-07-14 13:03:07,788 - OrderProcessing -INFO - total No of Rows=11
+2022-07-14 13:03:07,791 - OrderProcessing -INFO - total No of Columns=3
+2022-07-14 13:03:08,000 - OrderProcessing -INFO - Click on Operations
+2022-07-14 13:03:10,689 - OrderProcessing -INFO - Click on Task Log
+2022-07-14 13:03:10,817 - OrderProcessing -INFO - ServiceID is==SD
+2022-07-14 13:03:10,820 - OrderProcessing -INFO - PickUpID is==3421714
+2022-07-14 13:03:12,870 - OrderProcessing -INFO - Operation tab is already selected
+2022-07-14 13:03:12,964 - OrderProcessing -INFO - Clear search input
+2022-07-14 13:03:13,023 - OrderProcessing -INFO - Enter PickUpID in Search input
+2022-07-14 13:03:13,217 - OrderProcessing -INFO - Click on Search button
+2022-07-14 13:03:20,543 - OrderProcessing -INFO - Searched Job is displayed in edit mode
+2022-07-14 13:03:20,669 - OrderProcessing -INFO - ===Memo Test Start===
+2022-07-14 13:03:20,730 - OrderProcessing -INFO - Clicked on Memo
+2022-07-14 13:03:22,024 - OrderProcessing -INFO - Total no of memo is/are=(5)
+2022-07-14 13:03:22,153 - OrderProcessing -INFO - Entered value in memo
+2022-07-14 13:03:22,217 - OrderProcessing -INFO - Clicked on Save button
+2022-07-14 13:03:22,854 - OrderProcessing -INFO - Clicked on Close button of Memo
+2022-07-14 13:03:24,904 - OrderProcessing -INFO - ===Memo Test End===
+2022-07-14 13:03:24,906 - OrderProcessing -INFO - ===Notification Test Start===
+2022-07-14 13:03:25,108 - OrderProcessing -INFO - Clicked on Notification
+2022-07-14 13:03:26,402 - OrderProcessing -INFO - Clicked on Close button of Notification
+2022-07-14 13:03:28,432 - OrderProcessing -INFO - ===Notification Test End===
+2022-07-14 13:03:28,432 - OrderProcessing -INFO - ===Upload Test Start===
+2022-07-14 13:03:28,611 - OrderProcessing -INFO - Clicked on Upload
+2022-07-14 13:03:30,484 - OrderProcessing -INFO - Click on plus sign
+2022-07-14 13:03:30,641 - OrderProcessing -INFO - Enter doc name
+2022-07-14 13:03:30,808 - OrderProcessing -INFO - Click on select file
+2022-07-14 13:03:34,944 - OrderProcessing -INFO - Select the file
+2022-07-14 13:03:37,139 - OrderProcessing -INFO - File is uploaded successfully
+2022-07-14 13:03:39,209 - OrderProcessing -INFO - File is uploaded successfully
+2022-07-14 13:03:41,289 - OrderProcessing -INFO - ===Upload Test End===
+2022-07-14 13:03:41,290 - OrderProcessing -INFO - ===Map Test Start===
+2022-07-14 13:03:41,369 - OrderProcessing -INFO - Clicked on Map
+2022-07-14 13:03:47,220 - OrderProcessing -INFO - Clicked on Close button of Map
+2022-07-14 13:03:49,298 - OrderProcessing -INFO - ===Map Test End===
+2022-07-14 13:03:49,355 - OrderProcessing -INFO - Current stage of the order is=Drop @ Origin
+2022-07-14 13:03:54,534 - OrderProcessing -INFO - Job is moved to Drop@Origin stage successfully
+2022-07-14 13:03:54,559 - OrderProcessing -INFO - Current stage of the order is=Drop @ Origin
+2022-07-14 13:03:56,639 - OrderProcessing -INFO - ZoneID of is==EDT
+2022-07-14 13:03:56,832 - OrderProcessing -INFO - 03:33
+2022-07-14 13:03:57,137 - OrderProcessing -INFO - Clicked on Drop button
+2022-07-14 13:03:57,218 - OrderProcessing -INFO - Message:-The Air Bill is required for AA Airline.
+2022-07-14 13:03:57,306 - OrderProcessing -INFO - AirBill editor is opened
+2022-07-14 13:03:57,572 - OrderProcessing -INFO - Entered AirBill
+2022-07-14 13:03:57,883 - OrderProcessing -INFO - Entered Description
+2022-07-14 13:03:58,134 - OrderProcessing -INFO - Entered NoOFPieces
+2022-07-14 13:03:58,377 - OrderProcessing -INFO - Entered Total Weight
+2022-07-14 13:03:58,548 - OrderProcessing -INFO - Clicked on Track button
+2022-07-14 13:03:58,598 - OrderProcessing -INFO - Switched to Track window
+2022-07-14 13:04:03,736 - OrderProcessing -INFO - Switched to Track window
+2022-07-14 13:04:09,648 - OrderProcessing -INFO - Closed Track window
+2022-07-14 13:04:09,661 - OrderProcessing -INFO - Switched to main window
+2022-07-14 13:04:10,054 - OrderProcessing -INFO - Clicked on Drop button
+2022-07-14 13:04:14,063 - OrderProcessing -INFO - Clear search input
+2022-07-14 13:04:14,122 - OrderProcessing -INFO - Enter PickUpID in Search input
+2022-07-14 13:04:14,300 - OrderProcessing -INFO - Click on Search button
+2022-07-14 13:04:18,285 - OrderProcessing -INFO - Job is moved to Send Del Alert successfully
+2022-07-14 13:04:18,288 - OrderProcessing -INFO - ServiceID is==SD
+2022-07-14 13:04:18,292 - OrderProcessing -INFO - PickUpID is==3419888
+2022-07-14 13:04:20,379 - OrderProcessing -INFO - Operation tab is already selected
+2022-07-14 13:04:20,472 - OrderProcessing -INFO - Clear search input
+2022-07-14 13:04:20,541 - OrderProcessing -INFO - Enter PickUpID in Search input
+2022-07-14 13:04:20,726 - OrderProcessing -INFO - Click on Search button
+2022-07-14 13:04:27,957 - OrderProcessing -INFO - Searched Job is displayed in edit mode
+2022-07-14 13:04:28,097 - OrderProcessing -INFO - Current stage of the order is=Confirm Del Alert
+2022-07-14 13:04:28,114 - OrderProcessing -INFO - Current stage of the order is=Confirm Del Alert
+2022-07-14 13:04:30,363 - OrderProcessing -INFO - Clicked on CONFIRM button
+2022-07-14 13:04:33,601 - OrderProcessing -INFO - Editor is already closed
+2022-07-14 13:04:33,690 - OrderProcessing -INFO - Clear search input
+2022-07-14 13:04:33,757 - OrderProcessing -INFO - Enter PickUpID in Search input
+2022-07-14 13:04:33,932 - OrderProcessing -INFO - Click on Search button
+2022-07-14 13:05:27,871 - OrderProcessing -INFO - Job is moved to ON BOARD stage successfully
+2022-07-14 13:05:29,550 - OrderProcessing -INFO - =====SD Order Processing Test End=====
+2022-07-14 13:05:29,555 - OrderProcessing -INFO - =====H3P Order Processing Test Start=====
+2022-07-14 13:05:29,558 - OrderProcessing -INFO - total No of Rows=11
+2022-07-14 13:05:29,560 - OrderProcessing -INFO - total No of Columns=3
+2022-07-14 13:05:29,777 - OrderProcessing -INFO - Click on Operations
+2022-07-14 13:05:32,413 - OrderProcessing -INFO - Click on Task Log
+2022-07-14 13:05:32,551 - OrderProcessing -INFO - ServiceID is==H3P
+2022-07-14 13:05:32,554 - OrderProcessing -INFO - PickUpID is==3421715
+2022-07-14 13:05:32,582 - OrderProcessing -INFO - Operation tab is already selected
+2022-07-14 13:05:32,656 - OrderProcessing -INFO - Clear search input
+2022-07-14 13:05:32,720 - OrderProcessing -INFO - Enter PickUpID in Search input
+2022-07-14 13:05:32,898 - OrderProcessing -INFO - Click on Search button
+2022-07-14 13:05:35,747 - OrderProcessing -INFO - ===ShipLabel Test Start===
+2022-07-14 13:05:35,838 - OrderProcessing -INFO - Clicked on Ship Label Services
+2022-07-14 13:05:41,710 - OrderProcessing -INFO - Entered EmailID
+2022-07-14 13:05:41,779 - OrderProcessing -INFO - Clicked on Send button
+2022-07-14 13:05:43,848 - OrderProcessing -INFO - ErroMsg is Displayed=Please select any one label for send a email.
+2022-07-14 13:05:43,897 - OrderProcessing -INFO - Checked the shiplabel
+2022-07-14 13:05:46,066 - OrderProcessing -INFO - Entered EmailID
+2022-07-14 13:05:46,156 - OrderProcessing -INFO - Clicked on Send button
+2022-07-14 13:05:46,847 - OrderProcessing -INFO - Tracking No==Your tracking number is :794649312414
+2022-07-14 13:05:46,935 - OrderProcessing -INFO - Clicked on Print button
+2022-07-14 13:05:47,032 - OrderProcessing -INFO - Switched to Print window
+2022-07-14 13:05:52,181 - OrderProcessing -INFO - Switched to Print window
+2022-07-14 13:05:57,382 - OrderProcessing -INFO - Closed Print window
+2022-07-14 13:05:57,395 - OrderProcessing -INFO - Switched to main window
+2022-07-14 13:05:57,434 - OrderProcessing -INFO - Clicked on Close button of ShipLabel
+2022-07-14 13:06:01,485 - OrderProcessing -INFO - ===ShipLabel Test End===
+2022-07-14 13:06:01,487 - OrderProcessing -INFO - ===Memo Test Start===
+2022-07-14 13:06:01,597 - OrderProcessing -INFO - Clicked on Memo
+2022-07-14 13:06:02,345 - OrderProcessing -INFO - Total no of memo is/are=(0)
+2022-07-14 13:06:02,461 - OrderProcessing -INFO - Entered value in memo
+2022-07-14 13:06:02,540 - OrderProcessing -INFO - Clicked on Save button
+2022-07-14 13:06:03,161 - OrderProcessing -INFO - Clicked on Close button of Memo
+2022-07-14 13:06:05,207 - OrderProcessing -INFO - ===Memo Test End===
+2022-07-14 13:06:05,208 - OrderProcessing -INFO - ===Notification Test Start===
+2022-07-14 13:06:05,447 - OrderProcessing -INFO - Clicked on Notification
+2022-07-14 13:06:06,775 - OrderProcessing -INFO - Clicked on Close button of Notification
+2022-07-14 13:06:08,816 - OrderProcessing -INFO - ===Notification Test End===
+2022-07-14 13:06:08,817 - OrderProcessing -INFO - ===Upload Test Start===
+2022-07-14 13:06:09,692 - OrderProcessing -INFO - Clicked on Upload
+2022-07-14 13:06:10,508 - OrderProcessing -INFO - Click on plus sign
+2022-07-14 13:06:10,619 - OrderProcessing -INFO - Enter doc name
+2022-07-14 13:06:11,848 - OrderProcessing -INFO - Click on select file
+2022-07-14 13:06:15,996 - OrderProcessing -INFO - Select the file
+2022-07-14 13:06:18,185 - OrderProcessing -INFO - File is uploaded successfully
+2022-07-14 13:06:20,240 - OrderProcessing -INFO - File is uploaded successfully
+2022-07-14 13:06:22,322 - OrderProcessing -INFO - ===Upload Test End===
+2022-07-14 13:06:22,347 - OrderProcessing -INFO - Current stage of the order is=CONF PULL ALERT
+2022-07-14 13:06:22,473 - OrderProcessing -INFO - Searched Job is displayed in edit mode
+2022-07-14 13:06:22,494 - OrderProcessing -INFO - stage=CONF PULL ALERT
+2022-07-14 13:06:22,934 - OrderProcessing -INFO - Clicked on Accept button
+2022-07-14 13:06:23,021 - OrderProcessing -INFO - Validation Message is==Spoke with Required.
+2022-07-14 13:06:23,276 - OrderProcessing -INFO - Entered spoke with
+2022-07-14 13:06:23,617 - OrderProcessing -INFO - Clicked on Accept button
+2022-07-14 13:06:27,181 - OrderProcessing -INFO - Click on Search button
+2022-07-14 13:07:23,879 - OrderProcessing -INFO - Job is moved to Confirm Pull stage successfully
+2022-07-14 13:07:23,907 - OrderProcessing -INFO - stage=Confirm Pull
+2022-07-14 13:07:24,210 - OrderProcessing -INFO - Clicked on Label Generation
+2022-07-14 13:07:25,389 - OrderProcessing -INFO - Switched to Label generation window
+2022-07-14 13:07:30,539 - OrderProcessing -INFO - Switched to Label generation window
+2022-07-14 13:07:35,721 - OrderProcessing -INFO - Closed Label generation window
+2022-07-14 13:07:35,747 - OrderProcessing -INFO - Switched to main window
+2022-07-14 13:07:36,128 - OrderProcessing -INFO - Clicked on Accept button
+2022-07-14 13:07:36,224 - OrderProcessing -INFO - Validation Message=Part Pull DateTime is required.
+2022-07-14 13:07:36,252 - OrderProcessing -INFO - ZoneID of is==CDT
+2022-07-14 13:07:36,468 - OrderProcessing -INFO - 07/14/2022
+2022-07-14 13:07:36,906 - OrderProcessing -INFO - 02:37
+2022-07-14 13:07:37,373 - OrderProcessing -INFO - Clicked on Accept button
+2022-07-14 13:07:37,462 - OrderProcessing -INFO - ErroMsg is Displayed=Verify all parts before proceeding.
+2022-07-14 13:07:39,503 - OrderProcessing -INFO - Serial No of Part is==X22Y
+
+2022-07-14 13:07:40,510 - OrderProcessing -INFO - Entered serial No in scan barcode
+2022-07-14 13:07:40,929 - OrderProcessing -INFO - Clicked on Accept button
+2022-07-14 13:07:41,553 - OrderProcessing -INFO - ErroMsg is Displayed=Actual Datetime can not be greater than Current Datetime.
+2022-07-14 13:07:41,568 - OrderProcessing -INFO - ZoneID of is==CDT
+2022-07-14 13:07:41,764 - OrderProcessing -INFO - 07/14/2022
+2022-07-14 13:07:42,163 - OrderProcessing -INFO - 02:37
+2022-07-14 13:07:42,693 - OrderProcessing -INFO - Clicked on Accept button
+2022-07-14 13:07:47,123 - OrderProcessing -INFO - Click on Search button
+2022-07-14 13:08:42,648 - OrderProcessing -INFO - Job is moved to TENDER TO 3P stage successfully
+2022-07-14 13:08:42,688 - OrderProcessing -INFO - stage=Tender to 3P
+2022-07-14 13:08:44,915 - OrderProcessing -INFO - ZoneID of is==CDT
+2022-07-14 13:08:45,137 - OrderProcessing -INFO - 02:38
+2022-07-14 13:08:45,467 - OrderProcessing -INFO - Clicked on Tender to 3P
+2022-07-14 13:08:45,750 - OrderProcessing -INFO - Click on OK of Dialogue box
+2022-07-14 13:09:39,117 - OrderProcessing -INFO - Time validation is not displayed-Time is as per timeZone
+2022-07-14 13:10:29,549 - OrderProcessing -INFO - Validation is not displayed for Package Tracking No
+2022-07-14 13:10:29,958 - OrderProcessing -INFO - Click on Search button
+2022-07-14 13:10:31,711 - OrderProcessing -INFO - Job is Delivered successfully
+2022-07-14 13:10:32,889 - OrderProcessing -INFO - =====H3P Order Processing Test End=====
+2022-07-14 13:10:32,900 - OrderProcessing -INFO - =====D3P Order Processing Test Start=====
+2022-07-14 13:10:32,903 - OrderProcessing -INFO - total No of Rows=11
+2022-07-14 13:10:32,905 - OrderProcessing -INFO - total No of Columns=3
+2022-07-14 13:10:33,095 - OrderProcessing -INFO - Click on Operations
+2022-07-14 13:10:36,049 - OrderProcessing -INFO - Click on Task Log
+2022-07-14 13:10:36,141 - OrderProcessing -INFO - ServiceID is==D3P
+2022-07-14 13:10:36,143 - OrderProcessing -INFO - PickUpID is==3421726
+2022-07-14 13:10:36,171 - OrderProcessing -INFO - Operation tab is already selected
+2022-07-14 13:10:36,244 - OrderProcessing -INFO - Clear search input
+2022-07-14 13:10:36,312 - OrderProcessing -INFO - Enter PickUpID in Search input
+2022-07-14 13:10:36,501 - OrderProcessing -INFO - Click on Search button
+2022-07-14 13:11:30,669 - OrderProcessing -INFO - ===ShipLabel Test Start===
+2022-07-14 13:11:30,757 - OrderProcessing -INFO - Clicked on Ship Label Services
+2022-07-14 13:11:35,490 - OrderProcessing -INFO - Entered EmailID
+2022-07-14 13:11:35,543 - OrderProcessing -INFO - Clicked on Send button
+2022-07-14 13:12:28,083 - OrderProcessing -INFO - Error Message is not displayed
+2022-07-14 13:12:28,138 - OrderProcessing -INFO - Tracking No==Your tracking number is :794649315663
+2022-07-14 13:12:28,219 - OrderProcessing -INFO - Clicked on Print button
+2022-07-14 13:12:28,339 - OrderProcessing -INFO - Switched to Print window
+2022-07-14 13:12:33,507 - OrderProcessing -INFO - Switched to Print window
+2022-07-14 13:12:38,717 - OrderProcessing -INFO - Closed Print window
+2022-07-14 13:12:38,731 - OrderProcessing -INFO - Switched to main window
+2022-07-14 13:12:38,767 - OrderProcessing -INFO - Clicked on Close button of ShipLabel
+2022-07-14 13:12:42,814 - OrderProcessing -INFO - ===ShipLabel Test End===
+2022-07-14 13:12:42,815 - OrderProcessing -INFO - ===Memo Test Start===
+2022-07-14 13:12:42,931 - OrderProcessing -INFO - Clicked on Memo
+2022-07-14 13:12:43,672 - OrderProcessing -INFO - Total no of memo is/are=(0)
+2022-07-14 13:12:43,806 - OrderProcessing -INFO - Entered value in memo
+2022-07-14 13:12:43,879 - OrderProcessing -INFO - Clicked on Save button
+2022-07-14 13:12:44,457 - OrderProcessing -INFO - Clicked on Close button of Memo
+2022-07-14 13:12:46,487 - OrderProcessing -INFO - ===Memo Test End===
+2022-07-14 13:12:46,488 - OrderProcessing -INFO - ===Notification Test Start===
+2022-07-14 13:12:46,730 - OrderProcessing -INFO - Clicked on Notification
+2022-07-14 13:12:48,083 - OrderProcessing -INFO - Clicked on Close button of Notification
+2022-07-14 13:12:50,156 - OrderProcessing -INFO - ===Notification Test End===
+2022-07-14 13:12:50,156 - OrderProcessing -INFO - ===Upload Test Start===
+2022-07-14 13:12:50,994 - OrderProcessing -INFO - Clicked on Upload
+2022-07-14 13:12:51,792 - OrderProcessing -INFO - Click on plus sign
+2022-07-14 13:12:51,919 - OrderProcessing -INFO - Enter doc name
+2022-07-14 13:12:53,101 - OrderProcessing -INFO - Click on select file
+2022-07-14 13:12:57,212 - OrderProcessing -INFO - Select the file
+2022-07-14 13:12:59,371 - OrderProcessing -INFO - File is uploaded successfully
+2022-07-14 13:13:01,405 - OrderProcessing -INFO - File is uploaded successfully
+2022-07-14 13:13:03,476 - OrderProcessing -INFO - ===Upload Test End===
+2022-07-14 13:13:03,523 - OrderProcessing -INFO - Current stage of the order is=Confirm Pu Alert
+2022-07-14 13:13:05,852 - OrderProcessing -INFO - Click on CONFIRM button
+2022-07-14 13:13:08,936 - OrderProcessing -INFO - Clear search input
+2022-07-14 13:13:09,004 - OrderProcessing -INFO - Enter PickUpID in Search input
+2022-07-14 13:13:09,166 - OrderProcessing -INFO - Click on Search button
+2022-07-14 13:14:01,379 - OrderProcessing -INFO - Job is moved to Confirm Pull Alert stage successfully
+2022-07-14 13:14:01,407 - OrderProcessing -INFO - Current stage of the order is=CONF PULL ALERT
+2022-07-14 13:14:01,407 - OrderProcessing -INFO - If order stage is Confirm Pull Alert.....
+2022-07-14 13:14:01,826 - OrderProcessing -INFO - Clicked on Accept button
+2022-07-14 13:14:01,914 - OrderProcessing -INFO - Validation Message is==Spoke with Required.
+2022-07-14 13:14:02,142 - OrderProcessing -INFO - Entered spoke with
+2022-07-14 13:14:02,454 - OrderProcessing -INFO - Clicked on Accept button
+2022-07-14 13:14:05,999 - OrderProcessing -INFO - Clear search input
+2022-07-14 13:14:06,061 - OrderProcessing -INFO - Enter PickUpID in Search input
+2022-07-14 13:14:06,233 - OrderProcessing -INFO - Click on Search button
+2022-07-14 13:14:07,929 - OrderProcessing -INFO - Job is not found in Operation Tab
+2022-07-14 13:14:08,098 - OrderProcessing -INFO - Click on Inventory tab
+2022-07-14 13:14:08,179 - OrderProcessing -INFO - Clear search input
+2022-07-14 13:14:08,234 - OrderProcessing -INFO - Enter pickupID in search input
+2022-07-14 13:14:08,441 - OrderProcessing -INFO - Click on Search button
+2022-07-14 13:15:04,853 - OrderProcessing -INFO - Job is moved to Confirm Pull stage successfully
+2022-07-14 13:15:04,882 - OrderProcessing -INFO - stage=Confirm Pull
+2022-07-14 13:15:05,156 - OrderProcessing -INFO - Clicked on Label Generation
+2022-07-14 13:15:06,298 - OrderProcessing -INFO - Switched to Label generation window
+2022-07-14 13:15:11,419 - OrderProcessing -INFO - Switched to Label generation window
+2022-07-14 13:15:16,563 - OrderProcessing -INFO - Closed Label generation window
+2022-07-14 13:15:16,578 - OrderProcessing -INFO - Switched to main window
+2022-07-14 13:15:16,920 - OrderProcessing -INFO - Clicked on Accept button
+2022-07-14 13:15:17,023 - OrderProcessing -INFO - Validation Message=Part Pull DateTime is required.
+2022-07-14 13:15:17,051 - OrderProcessing -INFO - ZoneID of is==CDT
+2022-07-14 13:15:17,255 - OrderProcessing -INFO - 07/14/2022
+2022-07-14 13:15:17,693 - OrderProcessing -INFO - 02:45
+2022-07-14 13:15:18,165 - OrderProcessing -INFO - Clicked on Accept button
+2022-07-14 13:15:18,255 - OrderProcessing -INFO - ErroMsg is Displayed=Verify all parts before proceeding.
+2022-07-14 13:15:20,285 - OrderProcessing -INFO - Serial No of Part is==SERIALNO1657184265048
+
+2022-07-14 13:15:21,416 - OrderProcessing -INFO - Entered serial No in scan barcode
+2022-07-14 13:15:21,833 - OrderProcessing -INFO - Clicked on Accept button
+2022-07-14 13:15:22,442 - OrderProcessing -INFO - ErroMsg is Displayed=Actual Datetime can not be greater than Current Datetime.
+2022-07-14 13:15:22,461 - OrderProcessing -INFO - ZoneID of is==CDT
+2022-07-14 13:15:22,628 - OrderProcessing -INFO - 07/14/2022
+2022-07-14 13:15:22,993 - OrderProcessing -INFO - 02:45
+2022-07-14 13:15:23,546 - OrderProcessing -INFO - Clicked on Accept button
+2022-07-14 13:15:26,196 - OrderProcessing -INFO - Clear search input
+2022-07-14 13:15:26,264 - OrderProcessing -INFO - Enter pickupID in search input
+2022-07-14 13:15:26,469 - OrderProcessing -INFO - Click on Search button
+2022-07-14 13:15:27,097 - OrderProcessing -INFO - Job is not found in Inventory Tab
+2022-07-14 13:15:27,266 - OrderProcessing -INFO - Click on operation tab
+2022-07-14 13:15:27,383 - OrderProcessing -INFO - Clear search input
+2022-07-14 13:15:27,445 - OrderProcessing -INFO - Enter PickUpID in Search input
+2022-07-14 13:15:27,618 - OrderProcessing -INFO - Click on Search button
+2022-07-14 13:16:25,134 - OrderProcessing -INFO - Job is moved to PICKUP stage successfully
+2022-07-14 13:16:25,160 - OrderProcessing -INFO - Current stage of the order is=Pickup
+2022-07-14 13:16:27,212 - OrderProcessing -INFO - ZoneID of is==CDT
+2022-07-14 13:16:27,256 - OrderProcessing -INFO - 02:46
+2022-07-14 13:16:27,605 - OrderProcessing -INFO - Clicked on PICKUP button
+2022-07-14 13:17:21,265 - OrderProcessing -INFO - Dialogue is not exist
+2022-07-14 13:17:21,355 - OrderProcessing -INFO - Clear search input
+2022-07-14 13:17:21,425 - OrderProcessing -INFO - Enter PickUpID in Search input
+2022-07-14 13:17:21,594 - OrderProcessing -INFO - Click on Search button
+2022-07-14 13:18:16,795 - OrderProcessing -INFO - Job is moved to TENDER TO 3P stage successfully
+2022-07-14 13:18:16,823 - OrderProcessing -INFO - stage=Tender to 3P
+2022-07-14 13:18:18,977 - OrderProcessing -INFO - ZoneID of is==CDT
+2022-07-14 13:18:19,020 - OrderProcessing -INFO - 02:48
+2022-07-14 13:18:19,383 - OrderProcessing -INFO - Clicked on Tender to 3P
+2022-07-14 13:19:12,950 - OrderProcessing -INFO - Dialogue is not present
+2022-07-14 13:20:03,439 - OrderProcessing -INFO - Time validation is not displayed-Time is as per timeZone
+2022-07-14 13:20:53,828 - OrderProcessing -INFO - Validation is not displayed for Package Tracking No
+2022-07-14 13:20:55,941 - OrderProcessing -INFO - Job is Delivered successfully
+2022-07-14 13:20:57,625 - OrderProcessing -INFO - =====D3P Order Processing Test End=====
+2022-07-14 13:20:57,631 - OrderProcessing -INFO - =====3PLAST Order Processing Test Start=====
+2022-07-14 13:20:57,633 - OrderProcessing -INFO - total No of Rows=11
+2022-07-14 13:20:57,634 - OrderProcessing -INFO - total No of Columns=3
+2022-07-14 13:20:57,822 - OrderProcessing -INFO - Click on Operations
+2022-07-14 13:21:00,979 - OrderProcessing -INFO - Click on Task Log
+2022-07-14 13:21:01,072 - OrderProcessing -INFO - ServiceID is==3PLAST
+2022-07-14 13:21:01,075 - OrderProcessing -INFO - PickUpID is==3421717
+2022-07-14 13:21:01,106 - OrderProcessing -INFO - Operation tab is already selected
+2022-07-14 13:21:01,179 - OrderProcessing -INFO - Clear search input
+2022-07-14 13:21:01,248 - OrderProcessing -INFO - Enter PickUpID in Search input
+2022-07-14 13:21:01,419 - OrderProcessing -INFO - Click on Search button
+2022-07-14 13:21:03,657 - OrderProcessing -INFO - ===ShipLabel Test Start===
+2022-07-14 13:21:03,774 - OrderProcessing -INFO - Clicked on Ship Label Services
+2022-07-14 13:21:07,310 - OrderProcessing -INFO - Entered EmailID
+2022-07-14 13:21:07,374 - OrderProcessing -INFO - Clicked on Send button
+2022-07-14 13:21:09,431 - OrderProcessing -INFO - ErroMsg is Displayed=Please select any one label for send a email.
+2022-07-14 13:21:09,511 - OrderProcessing -INFO - Checked the shiplabel
+2022-07-14 13:21:11,655 - OrderProcessing -INFO - Entered EmailID
+2022-07-14 13:21:11,737 - OrderProcessing -INFO - Clicked on Send button
+2022-07-14 13:21:12,426 - OrderProcessing -INFO - Tracking No==Your tracking number is :794649312470
+2022-07-14 13:21:12,516 - OrderProcessing -INFO - Clicked on Print button
+2022-07-14 13:21:12,617 - OrderProcessing -INFO - Switched to Print window
+2022-07-14 13:21:17,744 - OrderProcessing -INFO - Switched to Print window
+2022-07-14 13:21:22,895 - OrderProcessing -INFO - Closed Print window
+2022-07-14 13:21:22,911 - OrderProcessing -INFO - Switched to main window
+2022-07-14 13:21:22,945 - OrderProcessing -INFO - Clicked on Close button of ShipLabel
+2022-07-14 13:21:27,010 - OrderProcessing -INFO - ===ShipLabel Test End===
+2022-07-14 13:21:27,010 - OrderProcessing -INFO - ===Memo Test Start===
+2022-07-14 13:21:27,113 - OrderProcessing -INFO - Clicked on Memo
+2022-07-14 13:21:27,888 - OrderProcessing -INFO - Total no of memo is/are=(0)
+2022-07-14 13:21:28,014 - OrderProcessing -INFO - Entered value in memo
+2022-07-14 13:21:28,086 - OrderProcessing -INFO - Clicked on Save button
+2022-07-14 13:21:28,680 - OrderProcessing -INFO - Clicked on Close button of Memo
+2022-07-14 13:21:30,727 - OrderProcessing -INFO - ===Memo Test End===
+2022-07-14 13:21:30,728 - OrderProcessing -INFO - ===Notification Test Start===
+2022-07-14 13:21:30,943 - OrderProcessing -INFO - Clicked on Notification
+2022-07-14 13:21:32,253 - OrderProcessing -INFO - Clicked on Close button of Notification
+2022-07-14 13:21:34,302 - OrderProcessing -INFO - ===Notification Test End===
+2022-07-14 13:21:34,302 - OrderProcessing -INFO - ===Upload Test Start===
+2022-07-14 13:21:35,137 - OrderProcessing -INFO - Clicked on Upload
+2022-07-14 13:21:35,974 - OrderProcessing -INFO - Click on plus sign
+2022-07-14 13:21:36,087 - OrderProcessing -INFO - Enter doc name
+2022-07-14 13:21:37,207 - OrderProcessing -INFO - Click on select file
+2022-07-14 13:21:41,315 - OrderProcessing -INFO - Select the file
+2022-07-14 13:21:43,480 - OrderProcessing -INFO - File is uploaded successfully
+2022-07-14 13:21:45,511 - OrderProcessing -INFO - File is uploaded successfully
+2022-07-14 13:21:47,590 - OrderProcessing -INFO - ===Upload Test End===
+2022-07-14 13:21:47,591 - OrderProcessing -INFO - ===Print Pull Test Start===
+2022-07-14 13:22:17,828 - OrderProcessing -INFO - Clicked on Print Pull Ticket
+2022-07-14 13:22:19,006 - OrderProcessing -INFO - Switched to Print Pull Ticket window
+2022-07-14 13:22:24,137 - OrderProcessing -INFO - Switched to Print Pull Ticket window
+2022-07-14 13:22:29,295 - OrderProcessing -INFO - Closed Print Pull Ticket window
+2022-07-14 13:22:29,309 - OrderProcessing -INFO - Switched to main window
+2022-07-14 13:22:31,311 - OrderProcessing -INFO - ===Print Pull Test End===
+2022-07-14 13:22:31,373 - OrderProcessing -INFO - Current stage of the order is=CONF PULL ALERT
+2022-07-14 13:22:31,373 - OrderProcessing -INFO - Current stage of the order is=CONF PULL ALERT
+2022-07-14 13:22:31,700 - OrderProcessing -INFO - Clicked on Accept button
+2022-07-14 13:22:31,776 - OrderProcessing -INFO - Spoke with validation is displayed==Spoke with Required.
+2022-07-14 13:22:31,858 - OrderProcessing -INFO - Enter Spoke with
+2022-07-14 13:22:32,182 - OrderProcessing -INFO - Clicked on Accept button
+2022-07-14 13:23:12,161 - OrderProcessing -INFO - Job is moved to Confirm Pull stage successfully
+2022-07-14 13:23:12,190 - OrderProcessing -INFO - stage=Confirm Pull
+2022-07-14 13:23:12,191 - OrderProcessing -INFO - If order stage is Confirm Pull.....
+2022-07-14 13:23:12,375 - OrderProcessing -INFO - Clicked on Label Generation
+2022-07-14 13:23:13,531 - OrderProcessing -INFO - Switched to Label generation window
+2022-07-14 13:23:18,642 - OrderProcessing -INFO - Switched to Label generation window
+2022-07-14 13:23:23,781 - OrderProcessing -INFO - Closed Label generation window
+2022-07-14 13:23:23,792 - OrderProcessing -INFO - Switched to main window
+2022-07-14 13:23:24,115 - OrderProcessing -INFO - Clicked on Accept button
+2022-07-14 13:23:24,214 - OrderProcessing -INFO - Validation Message=Part Pull DateTime is required.
+2022-07-14 13:23:24,245 - OrderProcessing -INFO - ZoneID of is==CDT
+2022-07-14 13:23:24,311 - OrderProcessing -INFO - 07/14/2022
+2022-07-14 13:23:24,586 - OrderProcessing -INFO - 02:53
+2022-07-14 13:23:25,044 - OrderProcessing -INFO - Clicked on Accept button
+2022-07-14 13:23:25,135 - OrderProcessing -INFO - ErroMsg is Displayed=Verify all parts before proceeding.
+2022-07-14 13:23:25,157 - OrderProcessing -INFO - Error Message=Verify all parts before proceeding.
+2022-07-14 13:23:25,158 - OrderProcessing -INFO - Error Message is displayed=Verify all parts before proceeding.
+2022-07-14 13:23:25,188 - OrderProcessing -INFO - Serial No of Part is==X24Y
+
+2022-07-14 13:23:26,203 - OrderProcessing -INFO - Entered serial No in scan barcode
+2022-07-14 13:23:26,609 - OrderProcessing -INFO - Clicked on Accept button
+2022-07-14 13:23:27,240 - OrderProcessing -INFO - ErroMsg is Displayed=Actual Datetime can not be greater than Current Datetime.
+2022-07-14 13:23:27,259 - OrderProcessing -INFO - Error Message=Actual Datetime can not be greater than Current Datetime.
+2022-07-14 13:23:27,259 - OrderProcessing -INFO - Error Message is displayed=Actual Datetime can not be greater than Current Datetime.
+2022-07-14 13:23:27,284 - OrderProcessing -INFO - ZoneID of is==CDT
+2022-07-14 13:23:27,334 - OrderProcessing -INFO - 07/14/2022
+2022-07-14 13:23:27,568 - OrderProcessing -INFO - 02:53
+2022-07-14 13:23:28,108 - OrderProcessing -INFO - Clicked on Accept button
+2022-07-14 13:23:32,100 - OrderProcessing -INFO - Cleared search input
+2022-07-14 13:23:32,164 - OrderProcessing -INFO - Enter pickupID in search input
+2022-07-14 13:23:32,339 - OrderProcessing -INFO - Click on Search button
+2022-07-14 13:24:08,296 - OrderProcessing -INFO - Job is moved to TENDER TO 3P stage successfully
+2022-07-14 13:24:10,452 - OrderProcessing -INFO - ZoneID of is==EDT
+2022-07-14 13:24:10,624 - OrderProcessing -INFO - 03:54
+2022-07-14 13:24:11,005 - OrderProcessing -INFO - Clicked on Tender to 3P
+2022-07-14 13:24:45,137 - OrderProcessing -INFO - Dialogue is not present
+2022-07-14 13:25:15,301 - OrderProcessing -INFO - Time validation is not displayed-Time is as per timeZone
+2022-07-14 13:25:15,413 - OrderProcessing -INFO - Cleared search input
+2022-07-14 13:25:15,478 - OrderProcessing -INFO - Enter pickupID in search input
+2022-07-14 13:25:15,688 - OrderProcessing -INFO - Click on Search button
+2022-07-14 13:25:17,438 - OrderProcessing -INFO - Job is moved to Send DEL Alert stage successfully
+2022-07-14 13:25:17,441 - OrderProcessing -INFO - ServiceID is==3PLAST
+2022-07-14 13:25:17,443 - OrderProcessing -INFO - PickUpID is==3419891
+2022-07-14 13:25:17,473 - OrderProcessing -INFO - Operation tab is already selected
+2022-07-14 13:25:17,528 - OrderProcessing -INFO - Clear search input
+2022-07-14 13:25:17,584 - OrderProcessing -INFO - Enter PickUpID in Search input
+2022-07-14 13:25:17,760 - OrderProcessing -INFO - Click on Search button
+2022-07-14 13:25:24,369 - OrderProcessing -INFO - ===ShipLabel Test Start===
+2022-07-14 13:25:24,479 - OrderProcessing -INFO - Clicked on Ship Label Services
+2022-07-14 13:25:28,041 - OrderProcessing -INFO - Entered EmailID
+2022-07-14 13:25:28,111 - OrderProcessing -INFO - Clicked on Send button
+2022-07-14 13:26:20,342 - OrderProcessing -INFO - Error Message is not displayed
+2022-07-14 13:26:20,402 - OrderProcessing -INFO - Tracking No==Your tracking number is :794648935805
+2022-07-14 13:26:20,496 - OrderProcessing -INFO - Clicked on Print button
+2022-07-14 13:26:20,596 - OrderProcessing -INFO - Switched to Print window
+2022-07-14 13:26:25,721 - OrderProcessing -INFO - Switched to Print window
+2022-07-14 13:26:30,895 - OrderProcessing -INFO - Closed Print window
+2022-07-14 13:26:30,910 - OrderProcessing -INFO - Switched to main window
+2022-07-14 13:26:30,944 - OrderProcessing -INFO - Clicked on Close button of ShipLabel
+2022-07-14 13:26:34,979 - OrderProcessing -INFO - ===ShipLabel Test End===
+2022-07-14 13:26:34,980 - OrderProcessing -INFO - ===Memo Test Start===
+2022-07-14 13:26:35,106 - OrderProcessing -INFO - Clicked on Memo
+2022-07-14 13:26:35,882 - OrderProcessing -INFO - Total no of memo is/are=(1)
+2022-07-14 13:26:36,004 - OrderProcessing -INFO - Entered value in memo
+2022-07-14 13:26:36,077 - OrderProcessing -INFO - Clicked on Save button
+2022-07-14 13:26:36,685 - OrderProcessing -INFO - Clicked on Close button of Memo
+2022-07-14 13:26:38,733 - OrderProcessing -INFO - ===Memo Test End===
+2022-07-14 13:26:38,734 - OrderProcessing -INFO - ===Notification Test Start===
+2022-07-14 13:26:38,927 - OrderProcessing -INFO - Clicked on Notification
+2022-07-14 13:26:40,230 - OrderProcessing -INFO - Clicked on Close button of Notification
+2022-07-14 13:26:42,311 - OrderProcessing -INFO - ===Notification Test End===
+2022-07-14 13:26:42,311 - OrderProcessing -INFO - ===Upload Test Start===
+2022-07-14 13:26:43,124 - OrderProcessing -INFO - Clicked on Upload
+2022-07-14 13:26:43,950 - OrderProcessing -INFO - Click on plus sign
+2022-07-14 13:26:44,072 - OrderProcessing -INFO - Enter doc name
+2022-07-14 13:26:45,233 - OrderProcessing -INFO - Click on select file
+2022-07-14 13:26:49,344 - OrderProcessing -INFO - Select the file
+2022-07-14 13:26:51,502 - OrderProcessing -INFO - File is uploaded successfully
+2022-07-14 13:26:53,536 - OrderProcessing -INFO - File is uploaded successfully
+2022-07-14 13:26:55,610 - OrderProcessing -INFO - ===Upload Test End===
+2022-07-14 13:26:55,610 - OrderProcessing -INFO - ===Print Pull Test Start===
+2022-07-14 13:26:55,732 - OrderProcessing -INFO - Clicked on Print Pull Ticket
+2022-07-14 13:26:56,904 - OrderProcessing -INFO - Switched to Print Pull Ticket window
+2022-07-14 13:27:02,017 - OrderProcessing -INFO - Switched to Print Pull Ticket window
+2022-07-14 13:27:07,161 - OrderProcessing -INFO - Closed Print Pull Ticket window
+2022-07-14 13:27:07,176 - OrderProcessing -INFO - Switched to main window
+2022-07-14 13:27:09,186 - OrderProcessing -INFO - ===Print Pull Test End===
+2022-07-14 13:27:09,227 - OrderProcessing -INFO - Current stage of the order is=Confirm Del Alert
+2022-07-14 13:27:09,227 - OrderProcessing -INFO - Job is moved to Confirm Del Alert stage successfully
+2022-07-14 13:27:11,542 - OrderProcessing -INFO - Clicked on CONFIRM button
+2022-07-14 13:27:15,388 - OrderProcessing -INFO - Editor is already closed
+2022-07-14 13:27:15,491 - OrderProcessing -INFO - Cleared search input
+2022-07-14 13:27:15,553 - OrderProcessing -INFO - Enter pickupID in search input
+2022-07-14 13:27:15,729 - OrderProcessing -INFO - Click on Search button
+2022-07-14 13:27:52,343 - OrderProcessing -INFO - Job is moved to 3rd Party Delivery stage successfully
+2022-07-14 13:27:52,384 - OrderProcessing -INFO - Stage is==3rd Party Delivery
+2022-07-14 13:27:52,585 - OrderProcessing -INFO - Clicked on Close
+2022-07-14 13:27:57,872 - OrderProcessing -INFO - =====3PLAST Order Processing Test End=====
+2022-07-14 13:27:57,880 - OrderProcessing -INFO - =====RETURN Order Processing Test Start=====
+2022-07-14 13:27:57,881 - OrderProcessing -INFO - total No of Rows=11
+2022-07-14 13:27:57,882 - OrderProcessing -INFO - total No of Columns=3
+2022-07-14 13:27:58,068 - OrderProcessing -INFO - Click on Operations
+2022-07-14 13:28:01,338 - OrderProcessing -INFO - Click on Task Log
+2022-07-14 13:28:01,433 - OrderProcessing -INFO - ServiceID is==RETURN
+2022-07-14 13:28:01,434 - OrderProcessing -INFO - PickUpID is==3421733
+2022-07-14 13:28:01,467 - OrderProcessing -INFO - Operation tab is already selected
+2022-07-14 13:28:01,542 - OrderProcessing -INFO - Clear search input
+2022-07-14 13:28:01,614 - OrderProcessing -INFO - Enter PickUpID in Search input
+2022-07-14 13:28:01,802 - OrderProcessing -INFO - Click on Search button
+2022-07-14 13:28:05,765 - OrderProcessing -INFO - ===ShipLabel Test Start===
+2022-07-14 13:28:05,868 - OrderProcessing -INFO - Clicked on Ship Label Services
+2022-07-14 13:28:08,811 - OrderProcessing -INFO - There is no Ship Label generated
+2022-07-14 13:28:08,824 - OrderProcessing -INFO - Label is==[[ChromeDriver: chrome on WINDOWS (aff5955baf3db7e5c3bd1b1bfb6744e2)] -> xpath: //*[@ng-if="ShowTransSection"]]
+2022-07-14 13:28:08,845 - OrderProcessing -INFO - Clicked on Close button of ShipLabel
+2022-07-14 13:28:12,921 - OrderProcessing -INFO - ===ShipLabel Test End===
+2022-07-14 13:28:12,922 - OrderProcessing -INFO - ===Memo Test Start===
+2022-07-14 13:28:13,023 - OrderProcessing -INFO - Clicked on Memo
+2022-07-14 13:28:13,830 - OrderProcessing -INFO - Total no of memo is/are=(0)
+2022-07-14 13:28:13,941 - OrderProcessing -INFO - Entered value in memo
+2022-07-14 13:28:14,008 - OrderProcessing -INFO - Clicked on Save button
+2022-07-14 13:28:14,645 - OrderProcessing -INFO - Clicked on Close button of Memo
+2022-07-14 13:28:16,687 - OrderProcessing -INFO - ===Memo Test End===
+2022-07-14 13:28:16,688 - OrderProcessing -INFO - ===Notification Test Start===
+2022-07-14 13:28:16,907 - OrderProcessing -INFO - Clicked on Notification
+2022-07-14 13:28:18,258 - OrderProcessing -INFO - Clicked on Close button of Notification
+2022-07-14 13:28:20,312 - OrderProcessing -INFO - ===Notification Test End===
+2022-07-14 13:28:20,312 - OrderProcessing -INFO - ===Upload Test Start===
+2022-07-14 13:28:21,182 - OrderProcessing -INFO - Clicked on Upload
+2022-07-14 13:28:22,030 - OrderProcessing -INFO - Click on plus sign
+2022-07-14 13:28:22,154 - OrderProcessing -INFO - Enter doc name
+2022-07-14 13:28:23,316 - OrderProcessing -INFO - Click on select file
+2022-07-14 13:28:27,428 - OrderProcessing -INFO - Select the file
+2022-07-14 13:28:29,612 - OrderProcessing -INFO - File is uploaded successfully
+2022-07-14 13:28:31,651 - OrderProcessing -INFO - File is uploaded successfully
+2022-07-14 13:28:33,733 - OrderProcessing -INFO - ===Upload Test End===
+2022-07-14 13:28:33,733 - OrderProcessing -INFO - ===Print Pull Test Start===
+2022-07-14 13:28:33,856 - OrderProcessing -INFO - Clicked on Print Pull Ticket
+2022-07-14 13:28:35,039 - OrderProcessing -INFO - Switched to Print Pull Ticket window
+2022-07-14 13:28:40,154 - OrderProcessing -INFO - Switched to Print Pull Ticket window
+2022-07-14 13:28:45,336 - OrderProcessing -INFO - Closed Print Pull Ticket window
+2022-07-14 13:28:45,353 - OrderProcessing -INFO - Switched to main window
+2022-07-14 13:28:47,360 - OrderProcessing -INFO - ===Print Pull Test End===
+2022-07-14 13:28:47,411 - OrderProcessing -INFO - Current stage of the order is=Confirm Pu Alert
+2022-07-14 13:28:49,683 - OrderProcessing -INFO - Click on CONFIRM button
+2022-07-14 13:28:53,333 - OrderProcessing -INFO - Clear search input
+2022-07-14 13:28:53,389 - OrderProcessing -INFO - Enter PickUpID in Search input
+2022-07-14 13:28:53,577 - OrderProcessing -INFO - Click on Search button
+2022-07-14 13:28:55,378 - OrderProcessing -INFO - Job is not found in Operation Tab
+2022-07-14 13:28:55,538 - OrderProcessing -INFO - Click on Inventory tab
+2022-07-14 13:28:55,622 - OrderProcessing -INFO - Clear search input
+2022-07-14 13:28:55,686 - OrderProcessing -INFO - Enter pickupID in search input
+2022-07-14 13:28:55,890 - OrderProcessing -INFO - Click on Search button
+2022-07-14 13:29:47,692 - OrderProcessing -INFO - Job is moved to Confirm Pull Alert stage successfully
+2022-07-14 13:29:47,733 - OrderProcessing -INFO - stage=CONF PULL ALERT
+2022-07-14 13:29:47,733 - OrderProcessing -INFO - If order stage is Confirm Pull Alert.....
+2022-07-14 13:29:48,168 - OrderProcessing -INFO - Clicked on Accept button
+2022-07-14 13:29:48,283 - OrderProcessing -INFO - Validation Message is==Spoke with Required.
+2022-07-14 13:29:48,380 - OrderProcessing -INFO - Entered spoke with
+2022-07-14 13:29:48,715 - OrderProcessing -INFO - Clicked on Accept button
+2022-07-14 13:29:50,687 - OrderProcessing -INFO - Clear search input
+2022-07-14 13:29:50,748 - OrderProcessing -INFO - Enter pickupID in search input
+2022-07-14 13:29:50,951 - OrderProcessing -INFO - Click on Search button
+2022-07-14 13:30:46,737 - OrderProcessing -INFO - Job is exist
+2022-07-14 13:31:36,782 - OrderProcessing -INFO - Job is moved to Confirm Pull stage successfully
+2022-07-14 13:31:36,815 - OrderProcessing -INFO - stage=Confirm Pull
+2022-07-14 13:31:36,995 - OrderProcessing -INFO - Clicked on Label Generation
+2022-07-14 13:31:38,225 - OrderProcessing -INFO - Switched to Label generation window
+2022-07-14 13:31:43,371 - OrderProcessing -INFO - Switched to Label generation window
+2022-07-14 13:31:48,579 - OrderProcessing -INFO - Closed Label generation window
+2022-07-14 13:31:48,591 - OrderProcessing -INFO - Switched to main window
+2022-07-14 13:31:48,936 - OrderProcessing -INFO - Clicked on Accept button
+2022-07-14 13:31:49,018 - OrderProcessing -INFO - Validation Message=Part Pull DateTime is required.
+2022-07-14 13:31:49,044 - OrderProcessing -INFO - ZoneID of is==CDT
+2022-07-14 13:31:49,265 - OrderProcessing -INFO - 07/14/2022
+2022-07-14 13:31:49,735 - OrderProcessing -INFO - 03:01
+2022-07-14 13:31:50,168 - OrderProcessing -INFO - Clicked on Accept button
+2022-07-14 13:31:50,253 - OrderProcessing -INFO - ErroMsg is Displayed=Verify all parts before proceeding.
+2022-07-14 13:31:52,328 - OrderProcessing -INFO - Serial No of Part is==SERIALNO1657184281497
+
+2022-07-14 13:31:53,464 - OrderProcessing -INFO - Entered serial No in scan barcode
+2022-07-14 13:31:53,888 - OrderProcessing -INFO - Clicked on Accept button
+2022-07-14 13:31:54,522 - OrderProcessing -INFO - ErroMsg is Displayed=Actual Datetime can not be greater than Current Datetime.
+2022-07-14 13:31:54,538 - OrderProcessing -INFO - ZoneID of is==CDT
+2022-07-14 13:31:54,732 - OrderProcessing -INFO - 07/14/2022
+2022-07-14 13:31:55,096 - OrderProcessing -INFO - 03:01
+2022-07-14 13:31:55,599 - OrderProcessing -INFO - Clicked on Accept button
+2022-07-14 13:31:58,152 - OrderProcessing -INFO - Clear search input
+2022-07-14 13:31:58,209 - OrderProcessing -INFO - Enter pickupID in search input
+2022-07-14 13:31:58,399 - OrderProcessing -INFO - Click on Search button
+2022-07-14 13:31:59,034 - OrderProcessing -INFO - Job is not found in Inventory Tab
+2022-07-14 13:31:59,220 - OrderProcessing -INFO - Click on Operation Tab
+2022-07-14 13:32:57,226 - OrderProcessing -INFO - Job is moved to PICKUP stage successfully
+2022-07-14 13:32:57,261 - OrderProcessing -INFO - Current stage of the order is=Pickup
+2022-07-14 13:32:59,423 - OrderProcessing -INFO - ZoneID of is==CDT
+2022-07-14 13:32:59,471 - OrderProcessing -INFO - 03:02
+2022-07-14 13:32:59,822 - OrderProcessing -INFO - Clicked on PICKUP button
+2022-07-14 13:33:54,710 - OrderProcessing -INFO - Dialogue is not exist
+2022-07-14 13:34:51,039 - OrderProcessing -INFO - Job is moved to Deliver stage successfully
+2022-07-14 13:34:53,202 - OrderProcessing -INFO - ZoneID of is==CDT
+2022-07-14 13:34:53,202 - OrderProcessing -INFO - ZoneID of is==CDT
+2022-07-14 13:34:53,244 - OrderProcessing -INFO - 03:04
+2022-07-14 13:34:53,515 - OrderProcessing -INFO - Clicked on Deliver button
+2022-07-14 13:34:53,640 - OrderProcessing -INFO - Validation displayed==Signature is Required.
+2022-07-14 13:34:53,901 - OrderProcessing -INFO - Enter signature
+2022-07-14 13:34:54,140 - OrderProcessing -INFO - Clicked on Deliver button
+2022-07-14 13:35:48,628 - OrderProcessing -INFO - Dialogue is not present
+2022-07-14 13:35:48,730 - OrderProcessing -INFO - Cleared search input
+2022-07-14 13:35:48,787 - OrderProcessing -INFO - Enter pickupID in search input
+2022-07-14 13:35:48,977 - OrderProcessing -INFO - Click on Search button
+2022-07-14 13:35:50,784 - OrderProcessing -INFO - Job is moved to VERIFY CUSTOMER BILL stage successfully
+2022-07-14 13:35:52,002 - OrderProcessing -INFO - =====RETURN Order Processing Test End=====
+2022-07-14 13:35:52,005 - OrderProcessing -INFO - =====RTE Order Processing Test Start=====
+2022-07-14 13:35:52,007 - OrderProcessing -INFO - total No of Rows=11
+2022-07-14 13:35:52,010 - OrderProcessing -INFO - total No of Columns=3
+2022-07-14 13:35:52,206 - OrderProcessing -INFO - Click on Operations
+2022-07-14 13:35:54,962 - OrderProcessing -INFO - Click on Task Log
+2022-07-14 13:35:55,069 - OrderProcessing -INFO - ServiceID is==RTE
+2022-07-14 13:35:55,071 - OrderProcessing -INFO - PickUpID is==3415561
+2022-07-14 13:35:55,396 - OrderProcessing -INFO - Click on RTE Tab
+2022-07-14 13:35:56,961 - OrderProcessing -INFO - Click on Search button
+2022-07-14 13:35:58,180 - OrderProcessing -INFO - Record is not available with search parameters
+2022-07-14 13:35:59,951 - OrderProcessing -INFO - =====RTE Order Processing Test End=====
+2022-07-14 13:35:59,954 - OrderProcessing -INFO - =====Replenish Order Processing Test Start=====
+2022-07-14 13:35:59,956 - OrderProcessing -INFO - total No of Rows=11
+2022-07-14 13:35:59,957 - OrderProcessing -INFO - total No of Columns=3
+2022-07-14 13:36:00,155 - OrderProcessing -INFO - Click on Operations
+2022-07-14 13:36:02,349 - OrderProcessing -INFO - Click on Task Log
+2022-07-14 13:36:02,448 - OrderProcessing -INFO - ServiceID is==Replenish
+2022-07-14 13:36:02,450 - OrderProcessing -INFO - PickUpID is==1691695
+2022-07-14 13:36:53,116 - OrderProcessing -INFO - Click on Inventory tab
+2022-07-14 13:36:53,189 - OrderProcessing -INFO - Clear search input
+2022-07-14 13:36:53,249 - OrderProcessing -INFO - Enter pickupID in search input
+2022-07-14 13:36:53,463 - OrderProcessing -INFO - Click on Search button
+2022-07-14 13:36:57,695 - OrderProcessing -INFO - Record is available with search parameters
+2022-07-14 13:36:57,728 - OrderProcessing -INFO - Current stage of the order is=Confirm Receipt
+2022-07-14 13:36:58,005 - OrderProcessing -INFO - Clicked on the Update
+2022-07-14 13:36:58,083 - OrderProcessing -INFO - Alert is displayed for create sub ASN
+2022-07-14 13:36:58,115 - OrderProcessing -INFO - Click on Close PopUp
+2022-07-14 13:36:58,300 - OrderProcessing -INFO - Clicked on the Save
+2022-07-14 13:36:58,377 - OrderProcessing -INFO - total No of rows in part table are==2
+2022-07-14 13:36:58,713 - OrderProcessing -INFO - Entered serial Number in 0 part
+2022-07-14 13:36:59,012 - OrderProcessing -INFO - Entered Accepted Quantity in 0 part
+2022-07-14 13:36:59,262 - OrderProcessing -INFO - Clicked on the Save
+2022-07-14 13:37:01,650 - OrderProcessing -INFO - total No of rows in part table are==2
+2022-07-14 13:37:01,962 - OrderProcessing -INFO - Entered serial Number in 1 part
+2022-07-14 13:37:02,259 - OrderProcessing -INFO - Entered Accepted Quantity in 1 part
+2022-07-14 13:37:02,503 - OrderProcessing -INFO - Clicked on the Save
+2022-07-14 13:37:04,545 - OrderProcessing -INFO - Clicked on the update
+2022-07-14 13:37:05,722 - OrderProcessing -INFO - Success Message==Data Saved Successfully. You may print label from Print Label icon or click on close to return to Task log.
+2022-07-14 13:37:05,794 - OrderProcessing -INFO - Clicked on BinLess Label
+2022-07-14 13:37:07,053 - OrderProcessing -INFO - Error Message==Inventory not found for binless label generation.
+2022-07-14 13:37:07,149 - OrderProcessing -INFO - Clicked on Print Label
+2022-07-14 13:37:08,319 - OrderProcessing -INFO - Switched to Print Label window
+2022-07-14 13:37:13,473 - OrderProcessing -INFO - Switched to Print Label window
+2022-07-14 13:37:18,633 - OrderProcessing -INFO - Closed Print Label window
+2022-07-14 13:37:18,652 - OrderProcessing -INFO - Switched to main window
+2022-07-14 13:37:18,760 - OrderProcessing -INFO - Clicked on Close button
+2022-07-14 13:37:20,951 - OrderProcessing -INFO - Clear search input
+2022-07-14 13:37:21,011 - OrderProcessing -INFO - Enter pickupID in search input
+2022-07-14 13:37:21,237 - OrderProcessing -INFO - Click on Search button
+2022-07-14 13:37:21,874 - OrderProcessing -INFO - Order is Replenished
+2022-07-14 13:37:23,600 - OrderProcessing -INFO - =====Replenish Order Processing Test End=====
+2022-07-14 13:37:23,985 - OrderProcessing -INFO - Clicked on LogOut
+2022-07-14 13:37:27,037 - OrderProcessing -INFO - ====Sending Email=====
