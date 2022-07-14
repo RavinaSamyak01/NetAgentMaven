@@ -302,6 +302,7 @@ public class SD_OrderProcess extends BaseInit {
 							try {
 								WebElement Drop = Driver.findElement(By.id("btnsavedelivery"));
 								act.moveToElement(Drop).build().perform();
+								wait.until(ExpectedConditions.elementToBeClickable(Drop));
 								js.executeScript("arguments[0].click();", Drop);
 								logger.info("Clicked on Drop button");
 								wait.until(ExpectedConditions
@@ -394,6 +395,7 @@ public class SD_OrderProcess extends BaseInit {
 									try {
 										WebElement Drop = Driver.findElement(By.id("btnsavedelivery"));
 										act.moveToElement(Drop).build().perform();
+										wait.until(ExpectedConditions.elementToBeClickable(Drop));
 										js.executeScript("arguments[0].click();", Drop);
 										logger.info("Clicked on Drop button");
 										wait.until(ExpectedConditions.invisibilityOfElementLocated(
@@ -595,6 +597,7 @@ public class SD_OrderProcess extends BaseInit {
 						try {
 							WebElement Drop = Driver.findElement(By.id("btnsavedelivery"));
 							act.moveToElement(Drop).build().perform();
+							wait.until(ExpectedConditions.elementToBeClickable(Drop));
 							js.executeScript("arguments[0].click();", Drop);
 							logger.info("Clicked on Drop button");
 							wait.until(ExpectedConditions
@@ -687,6 +690,7 @@ public class SD_OrderProcess extends BaseInit {
 								try {
 									WebElement Drop = Driver.findElement(By.id("btnsavedelivery"));
 									act.moveToElement(Drop).build().perform();
+									wait.until(ExpectedConditions.elementToBeClickable(Drop));
 									js.executeScript("arguments[0].click();", Drop);
 									logger.info("Clicked on Drop button");
 									wait.until(ExpectedConditions
@@ -801,6 +805,7 @@ public class SD_OrderProcess extends BaseInit {
 						WebElement Drop = Driver.findElement(By.id("btnsavedelivery"));
 						act.moveToElement(Drop).build().perform();
 						wait.until(ExpectedConditions.elementToBeClickable(Drop));
+						wait.until(ExpectedConditions.elementToBeClickable(Drop));
 						js.executeScript("arguments[0].click();", Drop);
 						logger.info("Clicked on Drop button");
 
@@ -895,6 +900,7 @@ public class SD_OrderProcess extends BaseInit {
 							try {
 								WebElement Drop = Driver.findElement(By.id("btnsavedelivery"));
 								act.moveToElement(Drop).build().perform();
+								wait.until(ExpectedConditions.elementToBeClickable(Drop));
 								js.executeScript("arguments[0].click();", Drop);
 								logger.info("Clicked on Drop button");
 								wait.until(ExpectedConditions
