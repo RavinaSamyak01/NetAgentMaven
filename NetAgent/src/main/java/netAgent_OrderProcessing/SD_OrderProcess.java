@@ -303,6 +303,7 @@ public class SD_OrderProcess extends BaseInit {
 								WebElement Drop = Driver.findElement(By.id("btnsavedelivery"));
 								act.moveToElement(Drop).build().perform();
 								wait.until(ExpectedConditions.elementToBeClickable(Drop));
+								act.moveToElement(Drop).build().perform();
 								js.executeScript("arguments[0].click();", Drop);
 								logger.info("Clicked on Drop button");
 								wait.until(ExpectedConditions
@@ -1067,6 +1068,12 @@ public class SD_OrderProcess extends BaseInit {
 						msg.append("Current stage of the order is=" + Orderstage + "\n");
 						msg.append("Issue in Order stage==" + Orderstage + "\n\n");
 						getScreenshot(Driver, "SDStageIssue_" + Orderstage);
+						// Scroll up
+						js.executeScript("window.scrollBy(0,-250)");
+						Thread.sleep(2000);
+						getScreenshot(Driver, "SDStageIssueScrollUp_" + Orderstage);
+
+						
 
 					}
 				}
