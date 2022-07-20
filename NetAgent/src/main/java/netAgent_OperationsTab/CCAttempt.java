@@ -129,6 +129,7 @@ public class CCAttempt extends BaseInit {
 						}
 
 					} catch (Exception RemoveQty) {
+						logger.error(RemoveQty);
 						logger.info("Checkbox of Remove Zero Stock Parts is not available");
 
 					}
@@ -226,6 +227,7 @@ public class CCAttempt extends BaseInit {
 
 								}
 							} catch (Exception stalelement) {
+								logger.error(stalelement);
 								WebElement PartTableEx = isElementPresent("CCACCATable_xpath");
 								List<WebElement> PartrowEx = PartTableEx.findElements(By.tagName("tr"));
 								logger.info("Total parts are==" + PartrowEx.size());
@@ -280,6 +282,7 @@ public class CCAttempt extends BaseInit {
 
 												logger.info("Entered CC Qty equal to Stock Qty");
 											} catch (Exception NotFoun) {
+												logger.error(NotFoun);
 												WebElement partExTable1 = isElementPresent("CCACCATable_xpath");
 												List<WebElement> partExrowEx1 = partExTable1
 														.findElements(By.tagName("tr"));
@@ -407,6 +410,7 @@ public class CCAttempt extends BaseInit {
 
 										}
 									} catch (Exception Stale) {
+										logger.error(Stale);
 										PartTable = isElementPresent("CCACCATable_xpath");
 										Partrow = PartTable.findElements(By.tagName("tr"));
 										logger.info("Total parts are==" + Partrow.size());
@@ -448,6 +452,8 @@ public class CCAttempt extends BaseInit {
 
 													logger.info("Entered CC Qty equal to Stock Qty");
 												} catch (Exception NotFoun) {
+													logger.error(NotFoun);
+
 													WebElement partTable1 = isElementPresent("CCACCATable_xpath");
 													List<WebElement> partrow1 = partTable1
 															.findElements(By.tagName("tr"));
@@ -498,6 +504,7 @@ public class CCAttempt extends BaseInit {
 											.invisibilityOfElementLocated(By.xpath("//*[@class=\"ajax-loadernew\"]")));
 
 								} catch (Exception NoDialogue) {
+									logger.error(NoDialogue);
 									logger.info("Dialogue is not displayed");
 
 								}
@@ -511,6 +518,7 @@ public class CCAttempt extends BaseInit {
 
 									}
 								} catch (Exception Deliver) {
+									logger.error(Deliver);
 									System.out.println("Cycle is not end");
 									logger.info("Cycle is not end");
 									TStage = Driver.findElement(By.xpath("//div/span[@class=\"pull-left\"]"));
@@ -578,6 +586,8 @@ public class CCAttempt extends BaseInit {
 
 											logger.info("Entered CC Qty equal to Stock Qty");
 										} catch (Exception NotFoun) {
+											logger.error(NotFoun);
+
 											WebElement PartTable1 = isElementPresent("CCACCATable_xpath");
 											List<WebElement> Partrow1 = PartTable1.findElements(By.tagName("tr"));
 											logger.info("Total parts are==" + Partrow1.size());
@@ -604,6 +614,8 @@ public class CCAttempt extends BaseInit {
 
 								}
 							} catch (Exception StaleE) {
+								logger.error(StaleE);
+
 								try {
 									PartTable = isElementPresent("CCACCATable_xpath");
 									Partrow = PartTable.findElements(By.tagName("tr"));
@@ -652,6 +664,8 @@ public class CCAttempt extends BaseInit {
 
 													logger.info("Entered CC Qty equal to Stock Qty");
 												} catch (Exception NotFoun) {
+													logger.error(NotFoun);
+
 													WebElement PartTable1 = isElementPresent("CCACCATable_xpath");
 													List<WebElement> Partrow1 = PartTable1
 															.findElements(By.tagName("tr"));
@@ -681,6 +695,7 @@ public class CCAttempt extends BaseInit {
 										break;
 									}
 								} catch (Exception Part) {
+									logger.error(Part);
 
 									PartTable = isElementPresent("CCACCATable_xpath");
 									Partrow = PartTable.findElements(By.tagName("tr"));
@@ -729,6 +744,7 @@ public class CCAttempt extends BaseInit {
 
 													logger.info("Entered CC Qty equal to Stock Qty");
 												} catch (Exception NotFoun) {
+													logger.error(NotFoun);
 													WebElement PartTable1 = isElementPresent("CCACCATable_xpath");
 													List<WebElement> Partrow1 = PartTable1
 															.findElements(By.tagName("tr"));
@@ -827,6 +843,7 @@ public class CCAttempt extends BaseInit {
 
 													logger.info("Entered CC Qty equal to Stock Qty");
 												} catch (Exception NotFoun) {
+													logger.error(NotFoun);
 													WebElement PartTable1 = isElementPresent("CCACCATable_xpath");
 													List<WebElement> Partrow1 = PartTable1
 															.findElements(By.tagName("tr"));
@@ -898,6 +915,7 @@ public class CCAttempt extends BaseInit {
 
 															logger.info("Entered CC Qty equal to Stock Qty");
 														} catch (Exception NotFoun) {
+															logger.error(NotFoun);
 															WebElement PartTable1 = isElementPresent(
 																	"CCACCATable_xpath");
 															List<WebElement> Partrow1 = PartTable1
@@ -929,6 +947,7 @@ public class CCAttempt extends BaseInit {
 											}
 
 										} catch (Exception PartE) {
+											logger.error(PartE);
 
 											PartTable = isElementPresent("CCACCATable_xpath");
 											Partrow = PartTable.findElements(By.tagName("tr"));
@@ -973,6 +992,7 @@ public class CCAttempt extends BaseInit {
 
 															logger.info("Entered CC Qty equal to Stock Qty");
 														} catch (Exception NotFoun) {
+															logger.error(NotFoun);
 															WebElement PartTable1 = isElementPresent(
 																	"CCACCATable_xpath");
 															List<WebElement> Partrow1 = PartTable1
@@ -1026,6 +1046,7 @@ public class CCAttempt extends BaseInit {
 											.invisibilityOfElementLocated(By.xpath("//*[@class=\"ajax-loadernew\"]")));
 
 								} catch (Exception NoDialogue) {
+									logger.error(NoDialogue);
 									logger.info("Dialogue is not displayed");
 
 								}
@@ -1039,6 +1060,8 @@ public class CCAttempt extends BaseInit {
 
 									}
 								} catch (Exception Deliver) {
+									logger.error(Deliver);
+
 									System.out.println("Cycle is moved to Reconcile stage");
 									logger.info("Cycle is moved to Reconcile stage");
 									TStage = Driver.findElement(By.xpath("//div/span[@class=\"pull-left\"]"));
@@ -1137,6 +1160,8 @@ public class CCAttempt extends BaseInit {
 
 								}
 							} catch (Exception Stale) {
+								logger.error(Stale);
+
 								PartTable = isElementPresent("CCACCATable_xpath");
 								Partrow = PartTable.findElements(By.tagName("tr"));
 								logger.info("Total parts are==" + Partrow.size());
@@ -1184,6 +1209,7 @@ public class CCAttempt extends BaseInit {
 
 												logger.info("Entered CC Qty equal to Stock Qty");
 											} catch (Exception NotFoun) {
+												logger.error(NotFoun);
 												WebElement PartTable1 = isElementPresent("CCACCATable_xpath");
 												List<WebElement> Partrow1 = PartTable1.findElements(By.tagName("tr"));
 												logger.info("Total parts are==" + Partrow1.size());
@@ -1233,6 +1259,7 @@ public class CCAttempt extends BaseInit {
 									.invisibilityOfElementLocated(By.xpath("//*[@class=\"ajax-loadernew\"]")));
 
 						} catch (Exception NoDialogue) {
+							logger.error(NoDialogue);
 							logger.info("Dialogue is not displayed");
 
 						}
@@ -1249,6 +1276,7 @@ public class CCAttempt extends BaseInit {
 								System.out.println("Cycle is not end");
 							}
 						} catch (Exception Deliver) {
+							logger.error(Deliver);
 							System.out.println("Cycle is not end");
 							logger.info("Cycle is not end");
 							WebElement TStage = Driver.findElement(By.xpath("//div/span[@class=\"pull-left\"]"));
@@ -1387,6 +1415,7 @@ public class CCAttempt extends BaseInit {
 												By.xpath("//*[@class=\"ajax-loadernew\"]")));
 
 									} catch (Exception ee) {
+										logger.error(ee);
 										logger.info("Reconciliation stage is proceed");
 
 									}
@@ -1401,6 +1430,7 @@ public class CCAttempt extends BaseInit {
 
 										}
 									} catch (Exception End) {
+										logger.error(End);
 										System.out.println("Cycle is not end");
 										logger.info("Cycle is not end");
 
@@ -1408,6 +1438,7 @@ public class CCAttempt extends BaseInit {
 											TStage = Driver.findElement(By.xpath("//div/span[@class=\"pull-left\"]"));
 											logger.info("TaskLog stage is==" + TStage.getText());
 										} catch (Exception e) {
+											logger.error(e);
 											TStage = Driver.findElement(By.xpath("//*[@class=\"panel-title\"]"));
 											logger.info("TaskLog stage is==" + TStage.getText());
 										}
@@ -1499,6 +1530,8 @@ public class CCAttempt extends BaseInit {
 
 								}
 							} catch (Exception e) {
+								logger.error(e);
+
 								try {
 									PartTable = isElementPresent("CCACCATable_xpath");
 									Partrow = PartTable.findElements(By.tagName("tr"));
@@ -1575,6 +1608,8 @@ public class CCAttempt extends BaseInit {
 									}
 
 								} catch (Exception staleElement) {
+									logger.error(staleElement);
+
 									PartTable = isElementPresent("CCACCATable_xpath");
 									Partrow = PartTable.findElements(By.tagName("tr"));
 									logger.info("Total parts are==" + Partrow.size());
@@ -1621,6 +1656,7 @@ public class CCAttempt extends BaseInit {
 
 												logger.info("Entered CC Qty equal to Stock Qty");
 											} catch (Exception NotFoun) {
+												logger.error(NotFoun);
 												WebElement PartTable1 = isElementPresent("CCACCATable_xpath");
 												List<WebElement> Partrow1 = PartTable1.findElements(By.tagName("tr"));
 												logger.info("Total parts are==" + Partrow1.size());
@@ -1672,6 +1708,7 @@ public class CCAttempt extends BaseInit {
 									.invisibilityOfElementLocated(By.xpath("//*[@class=\"ajax-loadernew\"]")));
 
 						} catch (Exception NoDialogue) {
+							logger.error(NoDialogue);
 							logger.info("Dialogue is not displayed");
 
 						}
@@ -1686,6 +1723,7 @@ public class CCAttempt extends BaseInit {
 
 							}
 						} catch (Exception Deliver) {
+							logger.error(Deliver);
 							System.out.println("Cycle is not end");
 							logger.info("Cycle is not end");
 							WebElement TStage = Driver.findElement(By.xpath("//div/span[@class=\"pull-left\"]"));
@@ -1774,6 +1812,7 @@ public class CCAttempt extends BaseInit {
 
 								}
 							} catch (Exception Stale) {
+								logger.error(Stale);
 								PartTable = isElementPresent("CCACCATable_xpath");
 								Partrow = PartTable.findElements(By.tagName("tr"));
 								logger.info("Total parts are==" + Partrow.size());
@@ -1818,6 +1857,7 @@ public class CCAttempt extends BaseInit {
 
 											logger.info("Entered CC Qty equal to Stock Qty");
 										} catch (Exception NotFoun) {
+											logger.error(NotFoun);
 											WebElement PartTable1 = isElementPresent("CCACCATable_xpath");
 											List<WebElement> Partrow1 = PartTable1.findElements(By.tagName("tr"));
 											logger.info("Total parts are==" + Partrow1.size());
@@ -1866,6 +1906,7 @@ public class CCAttempt extends BaseInit {
 									.invisibilityOfElementLocated(By.xpath("//*[@class=\"ajax-loadernew\"]")));
 
 						} catch (Exception NoDialogue) {
+							logger.error(NoDialogue);
 							logger.info("Dialogue is not displayed");
 
 						}
@@ -1880,6 +1921,7 @@ public class CCAttempt extends BaseInit {
 
 							}
 						} catch (Exception Deliver) {
+							logger.error(Deliver);
 							System.out.println("Cycle is Moved to CCAttempt2 end");
 							logger.info("Cycle is Moved to CCAttempt2 end");
 							WebElement TStage = Driver.findElement(By.xpath("//div/span[@class=\"pull-left\"]"));
@@ -1957,6 +1999,7 @@ public class CCAttempt extends BaseInit {
 				logger.info("Inserted workorderID in excel");
 
 			} catch (Exception Part) {
+				logger.error(Part);
 				WebElement PartError = Driver.findElement(By.id("CycleNoGrid"));
 				if (PartError.isDisplayed()) {
 					logger.info("Part validation is displayed==" + PartError.getText());

@@ -40,6 +40,7 @@ public class ContactUS extends BaseInit {
 
 			}
 		} catch (Exception SUccMsg) {
+			logger.error(SUccMsg);
 			System.out.println("Success Message is not displayed" + "\n\n");
 			logger.info("Success Message is not displayed" + "\n\n");
 			msg.append("Success Message is not displayed" + "\n\n");

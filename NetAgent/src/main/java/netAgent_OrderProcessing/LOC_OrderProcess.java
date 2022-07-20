@@ -584,6 +584,8 @@ public class LOC_OrderProcess extends BaseInit {
 			}
 
 		} catch (Exception NoData1) {
+			logger.error(NoData1);
+
 			try {
 				wait.until(ExpectedConditions.visibilityOfElementLocated(By.className("dx-datagrid-nodata")));
 				WebElement NoData = Driver.findElement(By.className("dx-datagrid-nodata"));
@@ -593,6 +595,7 @@ public class LOC_OrderProcess extends BaseInit {
 
 				}
 			} catch (Exception OnBoard) {
+				logger.error(OnBoard);
 
 				String Orderstage = Driver.findElement(By.xpath("//strong/span[@class=\"ng-binding\"]")).getText();
 				logger.info("Current stage of the order is=" + Orderstage);

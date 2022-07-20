@@ -373,6 +373,7 @@ public class FSLSetUp extends BaseInit {
 			wait.until(ExpectedConditions.invisibilityOfElementLocated(By.xpath("//*[@class=\"ajax-loadernew\"]")));
 
 		} catch (Exception NoFSL) {
+			logger.error(NoFSL);
 			logger.info("Location is not contain any Part");
 			Driver.findElement(By.id("idbtnreset")).click();
 			logger.info("Clicked on Reset");

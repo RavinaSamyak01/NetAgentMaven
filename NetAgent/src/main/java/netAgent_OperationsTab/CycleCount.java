@@ -50,6 +50,7 @@ public class CycleCount extends BaseInit {
 				msg.append("Able to start cycle===PASS" + "\n");
 
 			} catch (Exception Part) {
+				logger.error(Part);
 				WebElement PartError = Driver.findElement(By.id("CycleNoGrid"));
 				if (PartError.isDisplayed()) {
 					logger.info("Part validation is displayed==" + PartError.getText());
@@ -110,6 +111,7 @@ public class CycleCount extends BaseInit {
 						msg.append("Able to start cycle===PASS" + "\n");
 
 					} catch (Exception Part) {
+						logger.error(Part);
 						WebElement PartError = Driver.findElement(By.id("CycleNoGrid"));
 						if (PartError.isDisplayed()) {
 							logger.info("Part validation is displayed==" + PartError.getText());
@@ -124,6 +126,7 @@ public class CycleCount extends BaseInit {
 
 					}
 				} catch (Exception staleelement) {
+					logger.error(staleelement);
 					List<WebElement> multistart1 = Driver
 							.findElements(By.xpath("//a[@class='dx-link' and text()='Start']"));
 					logger.info("Total number of cycles==" + multistart1.size());
@@ -148,6 +151,7 @@ public class CycleCount extends BaseInit {
 							break;
 
 						} catch (Exception Part) {
+							logger.error(Part);
 							WebElement PartError = Driver.findElement(By.id("CycleNoGrid"));
 							if (PartError.isDisplayed()) {
 								logger.info("Part validation is displayed==" + PartError.getText());

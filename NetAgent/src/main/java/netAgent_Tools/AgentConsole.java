@@ -141,6 +141,7 @@ public class AgentConsole extends BaseInit {
 			String FlighVal = Driver.findElement(By.id("lblValidateFlight")).getText();
 			logger.info("Fight validation==" + FlighVal);
 		} catch (Exception NoFlight) {
+			logger.error(NoFlight);
 			String winHandleBefore = Driver.getWindowHandle();
 			System.out.println("Main window title==" + Driver.switchTo().window(winHandleBefore).getTitle());
 

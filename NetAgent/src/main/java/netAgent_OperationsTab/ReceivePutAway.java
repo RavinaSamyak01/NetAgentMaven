@@ -4,7 +4,6 @@ import java.io.IOException;
 import java.util.List;
 
 import org.openqa.selenium.By;
-import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
@@ -106,6 +105,8 @@ public class ReceivePutAway extends BaseInit {
 			msg.append("=======Receive To PutAway Test End=======" + "\n\n");
 
 		} catch (Exception Nodata) {
+			logger.error(Nodata);
+
 			try {
 				System.out.println("Data is present related search parameter");
 				logger.info("Data is present related search parameter");
@@ -114,6 +115,7 @@ public class ReceivePutAway extends BaseInit {
 				logger.info("Current stage of the order is=" + Orderstage);
 				getScreenshot(Driver, "ReplenishMent_PutAway");
 			} catch (Exception multipledata) {
+				logger.error(multipledata);
 				System.out.println("Multiple Data is present related search parameter");
 				logger.info("Multiple Data is present related search parameter");
 				WebElement Repl = Driver
@@ -174,6 +176,8 @@ public class ReceivePutAway extends BaseInit {
 					wait.until(ExpectedConditions
 							.invisibilityOfElementLocated(By.xpath("//*[@class=\"ajax-loadernew\"]")));
 				} catch (Exception staleelement) {
+					logger.error(staleelement);
+
 					try {
 						WebElement parttable1 = isElementPresent("TLPartTable_xpath");
 						List<WebElement> Partrow1 = parttable1.findElements(By.tagName("tr"));
@@ -212,6 +216,7 @@ public class ReceivePutAway extends BaseInit {
 							break;
 						}
 					} catch (Exception StaleElement) {
+						logger.error(staleelement);
 						WebElement parttable1 = isElementPresent("TLPartTable_xpath");
 						List<WebElement> Partrow1 = parttable1.findElements(By.tagName("tr"));
 						System.out.println("total No of rows in part table are==" + Partrow.size());

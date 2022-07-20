@@ -227,6 +227,7 @@ public class OrderSearch extends BaseInit {
 			Thread.sleep(2000);
 
 		} catch (Exception e) {
+			logger.error(e);
 			System.out.println("SPL order is not available");
 			logger.info("SPL order is not available");
 		}

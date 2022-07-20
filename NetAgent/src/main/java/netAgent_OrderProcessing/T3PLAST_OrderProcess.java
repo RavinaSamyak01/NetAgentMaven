@@ -1546,6 +1546,8 @@ public class T3PLAST_OrderProcess extends BaseInit {
 				}
 
 			} catch (Exception NoData1) {
+				logger.error(NoData1);
+
 				try {
 					wait.until(ExpectedConditions.visibilityOfElementLocated(By.className("dx-datagrid-nodata")));
 					WebElement NoData = Driver.findElement(By.className("dx-datagrid-nodata"));
@@ -1555,12 +1557,40 @@ public class T3PLAST_OrderProcess extends BaseInit {
 
 					}
 				} catch (Exception OnBoard) {
-					String Orderstage = Driver.findElement(By.xpath("//strong/span[@class=\"ng-binding\"]")).getText();
-					logger.info("Current stage of the order is=" + Orderstage);
-					msg.append("Current stage of the order is=" + Orderstage + "\n");
-					logger.info("Issue in Order stage==" + Orderstage);
-					msg.append("Issue in Order stage==" + Orderstage + "\n\n");
-					getScreenshot(Driver, "3PLASTStageIssue_" + Orderstage);
+					logger.error(OnBoard);
+
+					try {
+						String Orderstage1 = Driver.findElement(By.xpath("//div/h3[contains(@class,\"ng-binding\")]"))
+								.getText();
+						String Orderstage = Orderstage1;
+						logger.info("Current stage of the order is=" + Orderstage);
+						msg.append("Current stage of the order is=" + Orderstage + "\n");
+						logger.info("Issue in Order stage==" + Orderstage);
+						msg.append("Issue in Order stage==" + Orderstage + "\n\n");
+						getScreenshot(Driver, "3PLASTStageIssue_" + Orderstage);
+					} catch (Exception stage) {
+						logger.error(stage);
+						try {
+							String Orderstage2 = Driver.findElement(By.xpath("//Strong/span[@class=\"ng-binding\"]"))
+									.getText();
+							String Orderstage = Orderstage2;
+							logger.info("Current stage of the order is=" + Orderstage);
+							msg.append("Current stage of the order is=" + Orderstage + "\n");
+							logger.info("Issue in Order stage==" + Orderstage);
+							msg.append("Issue in Order stage==" + Orderstage + "\n\n");
+							getScreenshot(Driver, "3PLASTStageIssue_" + Orderstage);
+						} catch (Exception SName) {
+							logger.error(SName);
+							String StageName = Driver.findElement(By.xpath("//*[@ng-if=\"ConfirmPickupPage\"]"))
+									.getText();
+							String Orderstage = StageName;
+							logger.info("Current stage of the order is=" + Orderstage);
+							msg.append("Current stage of the order is=" + Orderstage + "\n");
+							logger.info("Issue in Order stage==" + Orderstage);
+							msg.append("Issue in Order stage==" + Orderstage + "\n\n");
+							getScreenshot(Driver, "3PLASTStageIssue_" + Orderstage);
+						}
+					}
 
 				}
 			}

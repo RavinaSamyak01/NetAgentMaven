@@ -56,6 +56,8 @@ public class CycleCountBin extends BaseInit {
 
 			getScreenshot(Driver, "CycleCountBIN_Start");
 		} catch (Exception Success) {
+			logger.error(Success);
+
 			logger.info("Success Message is not displayed==FAIL");
 
 		}

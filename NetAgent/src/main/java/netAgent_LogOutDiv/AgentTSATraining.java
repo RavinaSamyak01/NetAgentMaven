@@ -70,6 +70,7 @@ public class AgentTSATraining extends BaseInit {
 				}
 
 			} catch (Exception Dialogue) {
+				logger.error(Dialogue);
 				getScreenshot(Driver, "AnnualTSATraPresentation");
 				System.out.println("There is no Dialogue for Password");
 				logger.info("There is No Dialogue for Password");
@@ -103,6 +104,7 @@ public class AgentTSATraining extends BaseInit {
 				msg.append("Unable to Open Doc, Reason== " + siteCantBeReached.getText() + " Result=FAIL" + "\n\n");
 
 			} catch (Exception SiteCantBeReached) {
+				logger.error(SiteCantBeReached);
 				getScreenshot(Driver, "AnnualTSATest");
 				logger.info("Document is Opened, Result=PASS");
 				msg.append("Document is Opened, Result=PASS" + "\n\n");

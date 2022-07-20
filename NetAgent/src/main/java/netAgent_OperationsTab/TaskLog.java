@@ -10,7 +10,6 @@ import org.apache.poi.EncryptedDocumentException;
 import org.apache.poi.openxml4j.exceptions.InvalidFormatException;
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
-import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.ExpectedConditions;
@@ -116,6 +115,7 @@ public class TaskLog extends BaseInit {
 				}
 
 			} catch (Exception e) {
+				logger.error(e);
 				System.out.println("Data is not exist related search parameters");
 				logger.info("Data is not exist related search parameters");
 
@@ -251,6 +251,7 @@ public class TaskLog extends BaseInit {
 				wait.until(ExpectedConditions.visibilityOfAllElementsLocatedBy(By.id("AdvancesSearch")));
 			}
 		} catch (Exception e) {
+			logger.error(e);
 			System.out.println("Data is not exist related search parameters");
 
 		} // --Search by PickUp
@@ -271,6 +272,7 @@ public class TaskLog extends BaseInit {
 				wait.until(ExpectedConditions.visibilityOfAllElementsLocatedBy(By.id("AdvancesSearch")));
 			}
 		} catch (Exception e) {
+			logger.error(e);
 			try {
 				NoData = isElementPresent("NoData_className");
 				if (NoData.isDisplayed()) {
@@ -282,6 +284,7 @@ public class TaskLog extends BaseInit {
 					logger.info("There is multiple job exist with Search parameter");
 				}
 			} catch (Exception NoData1) {
+				logger.error(NoData1);
 				System.out.println("There is no job exist with Search parameter");
 				logger.info("There is no job exist with Search parameter");
 			}
@@ -365,17 +368,17 @@ public class TaskLog extends BaseInit {
 		isElementPresent("TLQuarn_linkText").click();
 		logger.info("Click on Quarantine link");
 		try {
-		wait.until(ExpectedConditions.invisibilityOfElementLocated(By.xpath("//*[@class=\"ajax-loadernew\"]")));
-		Thread.sleep(2000);
-		wait.until(ExpectedConditions.visibilityOfAllElementsLocatedBy(By.id("idAddQuarantinePopup")));
-		getScreenshot(Driver, "QuarantineWindow");
-		
-		}catch(Exception e) {
 			wait.until(ExpectedConditions.invisibilityOfElementLocated(By.xpath("//*[@class=\"ajax-loadernew\"]")));
 			Thread.sleep(2000);
 			wait.until(ExpectedConditions.visibilityOfAllElementsLocatedBy(By.id("idAddQuarantinePopup")));
 			getScreenshot(Driver, "QuarantineWindow");
-			
+
+		} catch (Exception e) {
+			wait.until(ExpectedConditions.invisibilityOfElementLocated(By.xpath("//*[@class=\"ajax-loadernew\"]")));
+			Thread.sleep(2000);
+			wait.until(ExpectedConditions.visibilityOfAllElementsLocatedBy(By.id("idAddQuarantinePopup")));
+			getScreenshot(Driver, "QuarantineWindow");
+
 		}
 
 		// --FSL Default selection
@@ -644,9 +647,8 @@ public class TaskLog extends BaseInit {
 					Thread.sleep(2000);
 				}
 			}
-		} catch (
-
-		Exception editor) {
+		} catch (Exception editor) {
+			logger.error(editor);
 			System.out.println("There is only 1 record with search parameters");
 			logger.info("There is only 1 record with search parameters");
 			isElementPresent("TLIconCls_id").click();
@@ -884,6 +886,8 @@ public class TaskLog extends BaseInit {
 			}
 
 		} catch (Exception e) {
+			logger.error(e);
+
 			try {
 				WebElement NoData = isElementPresent("NoData_className");
 				if (NoData.isDisplayed()) {
@@ -895,6 +899,7 @@ public class TaskLog extends BaseInit {
 					logger.info("There is multiple job exist with search parameters");
 				}
 			} catch (Exception NoData1) {
+				logger.error(NoData1);
 				System.out.println("There is no job exist with search parameters ");
 				logger.info("There is no job exist with search parameters");
 			}

@@ -60,6 +60,7 @@ public class MNXDocuments extends BaseInit {
 			logger.info("Switched to Main window");
 			wait.until(ExpectedConditions.invisibilityOfElementLocated(By.xpath("//*[@class=\"ajax-loadernew\"]")));
 		} catch (Exception nodoc) {
+			logger.error(nodoc);
 			logger.info("There is no doc with 'Automation' text");
 
 		}

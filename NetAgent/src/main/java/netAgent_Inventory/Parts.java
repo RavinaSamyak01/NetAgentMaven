@@ -111,6 +111,7 @@ public class Parts extends BaseInit {
 				logger.info("Field1 Search Compare is - FAIL");
 			}
 		} catch (Exception Nodata) {
+			logger.error(Nodata);
 			System.out.println("There is no parts with search parameters");
 
 		}
@@ -320,6 +321,7 @@ public class Parts extends BaseInit {
 			}
 			getScreenshot(Driver, "PartswithSelection");
 		} catch (Exception NoData) {
+			logger.error(NoData);
 			logger.info("There is no part with search parameter");
 
 		}

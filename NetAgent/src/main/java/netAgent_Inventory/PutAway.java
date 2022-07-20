@@ -106,6 +106,7 @@ public class PutAway extends BaseInit {
 						}
 
 					} catch (Exception wrong) {
+						logger.error(wrong);
 						List<WebElement> stockIDSNew = Driver
 								.findElements(By.xpath("//*[contains(@aria-label,'Stock ID,')]/span"));
 						System.out.println("Total records are==" + stockIDSNew.size());

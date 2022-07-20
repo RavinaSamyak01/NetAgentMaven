@@ -748,6 +748,7 @@ public class RTE_OrderProcess extends BaseInit {
 			}
 		} catch (Exception NoData1) {
 			try {
+				logger.error(NoData1);
 				wait.until(ExpectedConditions.visibilityOfElementLocated(By.className("dx-datagrid-nodata")));
 				WebElement NoData = Driver.findElement(By.className("dx-datagrid-nodata"));
 				if (NoData.isDisplayed()) {
@@ -756,8 +757,8 @@ public class RTE_OrderProcess extends BaseInit {
 
 				}
 			} catch (Exception OnBoard) {
-
-				String Orderstage = Driver.findElement(By.xpath("//strong/span[@class=\"ng-binding\"]")).getText();
+				logger.error(OnBoard);
+				String Orderstage = Driver.findElement(By.xpath("//h3[contains(@class,'panel-title')]")).getText();
 				logger.info("Current stage of the order is=" + Orderstage);
 				msg.append("Current stage of the order is=" + Orderstage + "\n");
 				logger.info("Issue in Order stage==" + Orderstage);
@@ -775,6 +776,7 @@ public class RTE_OrderProcess extends BaseInit {
 			wait.until(ExpectedConditions.invisibilityOfElementLocated(By.xpath("//*[@class=\"ajax-loadernew\"]")));
 			wait.until(ExpectedConditions.visibilityOfAllElementsLocatedBy(By.className("welcomecontent")));
 		} catch (Exception refresh) {
+			logger.error(refresh);
 			WebElement NGLLOgo = Driver.findElement(By.id("aNGLLogo"));
 			wait.until(ExpectedConditions.elementToBeClickable(NGLLOgo));
 			act.moveToElement(NGLLOgo).build().perform();

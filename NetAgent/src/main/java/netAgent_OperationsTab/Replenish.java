@@ -81,6 +81,7 @@ public class Replenish extends BaseInit {
 			wait.until(ExpectedConditions.invisibilityOfElementLocated(By.xpath("//*[@class=\"ajax-loadernew\"]")));
 
 		} catch (Exception Part) {
+			logger.error(Part);
 			logger.info("Part is not available with search parameters");
 
 		}
