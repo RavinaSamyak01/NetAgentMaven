@@ -22,25 +22,21 @@ public class OrderProcessing extends BaseInit {
 	public void orderProcessing()
 			throws EncryptedDocumentException, InvalidFormatException, IOException, InterruptedException, AWTException {
 
-		// --LOC
-		LOC_OrderProcess LOC = new LOC_OrderProcess();
-		LOC.orderProcessLOCJOB();
-
-		// --SD
-		SD_OrderProcess SD = new SD_OrderProcess();
-		SD.orderProcessSDJOB();
-
-		// --H3P
-		H3P_OrderProcess H3P = new H3P_OrderProcess();
-		H3P.orderProcessH3PJOB();
-
-		// --D3P
-		D3P_OrderProcess D3P = new D3P_OrderProcess();
-		D3P.orderProcessD3PJOB();
-
-		// --3PLAST
-		T3PLAST_OrderProcess T3PLAST = new T3PLAST_OrderProcess();
-		T3PLAST.orderProcess3PLASTJOB();
+		/*
+		 * // --LOC LOC_OrderProcess LOC = new LOC_OrderProcess();
+		 * LOC.orderProcessLOCJOB();
+		 * 
+		 * // --SD SD_OrderProcess SD = new SD_OrderProcess(); SD.orderProcessSDJOB();
+		 * 
+		 * // --H3P H3P_OrderProcess H3P = new H3P_OrderProcess();
+		 * H3P.orderProcessH3PJOB();
+		 * 
+		 * // --D3P D3P_OrderProcess D3P = new D3P_OrderProcess();
+		 * D3P.orderProcessD3PJOB();
+		 * 
+		 * // --3PLAST T3PLAST_OrderProcess T3PLAST = new T3PLAST_OrderProcess();
+		 * T3PLAST.orderProcess3PLASTJOB();
+		 */
 
 		// --RETURN
 		RETURN_OrderProcess RTN = new RETURN_OrderProcess();

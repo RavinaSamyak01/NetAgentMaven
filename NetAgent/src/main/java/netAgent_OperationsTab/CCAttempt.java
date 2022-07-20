@@ -2089,6 +2089,7 @@ public class CCAttempt extends BaseInit {
 		}
 
 		// --Exception View
+		try {
 		WebElement CCEX = isElementPresent("CCAExcepView_id");
 		wait.until(ExpectedConditions.elementToBeClickable(CCEX));
 		js.executeScript("arguments[0].click();", CCEX);
@@ -2168,6 +2169,9 @@ public class CCAttempt extends BaseInit {
 		js.executeScript("arguments[0].click();", EXClose);
 		logger.info("Click on Close button of Exception View");
 		wait.until(ExpectedConditions.invisibilityOfElementLocated(By.xpath("//*[@class=\"ajax-loadernew\"]")));
+		}catch(Exception e) {
+			logger.error(e);
+		}
 	}
 
 }

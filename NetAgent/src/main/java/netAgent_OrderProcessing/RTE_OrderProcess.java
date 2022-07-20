@@ -91,7 +91,7 @@ public class RTE_OrderProcess extends BaseInit {
 				js.executeScript("arguments[0].click();", Record);
 				logger.info("Clicked on the record");
 				wait.until(ExpectedConditions.invisibilityOfElementLocated(By.xpath("//*[@class=\"ajax-loadernew\"]")));
-				wait.until(ExpectedConditions.visibilityOfElementLocated(By.id("lblRWID")));
+				wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//*[@ng-form=\"RouteForm\"]")));
 				String Orderstage = Driver.findElement(By.xpath("//h3[contains(@class,'panel-title')]")).getText();
 				logger.info("Current stage of the order is=" + Orderstage);
 				msg.append("Current stage of the order is=" + Orderstage + "\n");
@@ -144,7 +144,8 @@ public class RTE_OrderProcess extends BaseInit {
 						logger.info("Clicked on the record");
 						wait.until(ExpectedConditions
 								.invisibilityOfElementLocated(By.xpath("//*[@class=\"ajax-loadernew\"]")));
-						wait.until(ExpectedConditions.visibilityOfElementLocated(By.id("lblRWID")));
+						wait.until(
+								ExpectedConditions.visibilityOfElementLocated(By.xpath("//*[@ng-form=\"RouteForm\"]")));
 						Orderstage = Driver.findElement(By.xpath("//h3[contains(@class,'panel-title')]")).getText();
 						logger.info("Current stage of the order is=" + Orderstage);
 						msg.append("Current stage of the order is=" + Orderstage + "\n");
@@ -213,7 +214,8 @@ public class RTE_OrderProcess extends BaseInit {
 							logger.info("Clicked on the record");
 							wait.until(ExpectedConditions
 									.invisibilityOfElementLocated(By.xpath("//*[@class=\"ajax-loadernew\"]")));
-							wait.until(ExpectedConditions.visibilityOfElementLocated(By.id("lblRWID")));
+							wait.until(ExpectedConditions
+									.visibilityOfElementLocated(By.xpath("//*[@ng-form=\"RouteForm\"]")));
 
 							Orderstage = Driver.findElement(By.xpath("//h3[contains(@class,'panel-title')]")).getText();
 							logger.info("Current stage of the order is=" + Orderstage);
@@ -334,35 +336,157 @@ public class RTE_OrderProcess extends BaseInit {
 
 								}
 							} catch (Exception e) {
-								// --Again click on Record
-								Record = Driver.findElement(By.xpath("//*[@id=\"idRTEList\"]//span/strong"));
-								act.moveToElement(Record).build().perform();
-								js.executeScript("arguments[0].click();", Record);
-								logger.info("Clicked on the record");
-
-								wait.until(ExpectedConditions
-										.invisibilityOfElementLocated(By.xpath("//*[@class=\"ajax-loadernew\"]")));
-								wait.until(ExpectedConditions.visibilityOfElementLocated(By.id("lblRWID")));
 								Orderstage = Driver.findElement(By.xpath("//h3[contains(@class,'panel-title')]"))
 										.getText();
 								logger.info("Current stage of the order is=" + Orderstage);
 								msg.append("Current stage of the order is=" + Orderstage + "\n");
+								getScreenshot(Driver, "RTE_" + Orderstage + PUID);
 
-								if (Orderstage.equalsIgnoreCase("Delivered@Stop 2 of 2")) {
-									logger.info("Job is delivered");
-									// --Close button
-									WebElement close = Driver.findElement(By.id("idiconclose"));
-									act.moveToElement(close).build().perform();
-									js.executeScript("arguments[0].click();", close);
-									logger.info("Clicked on Close button");
-									wait.until(ExpectedConditions
-											.invisibilityOfElementLocated(By.xpath("//*[@class=\"ajax-loadernew\"]")));
+								// --Click on save
+								try {
+									WebElement RTESAve = Driver.findElement(By.id("idiconsave"));
+									act.moveToElement(RTESAve).build().perform();
+									wait.until(ExpectedConditions.elementToBeClickable(RTESAve));
+									act.moveToElement(RTESAve).click().perform();
+									logger.info("Clicked on Accept button");
 
-								} else {
-									logger.info("Job is not delivered");
+								} catch (Exception Saveb) {
+									WebElement RTESAve = Driver.findElement(By.id("idiconsave"));
+									act.moveToElement(RTESAve).build().perform();
+									wait.until(ExpectedConditions.elementToBeClickable(RTESAve));
+									js.executeScript("arguments[0].click();", RTESAve);
+									logger.info("Clicked on Accept button");
 
 								}
+								wait.until(ExpectedConditions
+										.invisibilityOfElementLocated(By.xpath("//*[@class=\"ajax-loadernew\"]")));
+								try {
+									wait.until(ExpectedConditions.visibilityOfElementLocated(By.id("errorid")));
+									String Errmsg = Driver.findElement(By.id("errorid")).getText();
+									logger.info("validation message=" + Errmsg);
+									// --Enter Actual DeliverTime
+									String ZOneID = Driver
+											.findElement(By.xpath("//span[contains(@ng-bind,'PUTimeZone')]")).getText();
+									logger.info("ZoneID of is==" + ZOneID);
+									if (ZOneID.equalsIgnoreCase("EDT")) {
+										ZOneID = "America/New_York";
+									} else if (ZOneID.equalsIgnoreCase("CDT")) {
+										ZOneID = "CST";
+									}
+									WebElement ActDelTime = Driver.findElement(By.id("txtActDlTime"));
+									ActDelTime.clear();
+									Date date = new Date();
+									SimpleDateFormat dateFormat = new SimpleDateFormat("HH:mm");
+									dateFormat.setTimeZone(TimeZone.getTimeZone(ZOneID));
+									logger.info(dateFormat.format(date));
+									ActDelTime.sendKeys(dateFormat.format(date));
+									ActDelTime.sendKeys(Keys.TAB);
 
+									// --Click on save
+									try {
+										WebElement RTESAve = Driver.findElement(By.id("idiconsave"));
+										act.moveToElement(RTESAve).build().perform();
+										wait.until(ExpectedConditions.elementToBeClickable(RTESAve));
+										act.moveToElement(RTESAve).click().perform();
+										logger.info("Clicked on Accept button");
+
+									} catch (Exception Saveb) {
+										WebElement RTESAve = Driver.findElement(By.id("idiconsave"));
+										act.moveToElement(RTESAve).build().perform();
+										wait.until(ExpectedConditions.elementToBeClickable(RTESAve));
+										js.executeScript("arguments[0].click();", RTESAve);
+										logger.info("Clicked on Accept button");
+
+									}
+									wait.until(ExpectedConditions
+											.invisibilityOfElementLocated(By.xpath("//*[@class=\"ajax-loadernew\"]")));
+									try {
+										wait.until(ExpectedConditions.visibilityOfElementLocated(By.id("errorid")));
+										Errmsg = Driver.findElement(By.id("errorid")).getText();
+										logger.info("validation message=" + Errmsg);
+
+										// --Enter Signature
+										WebElement Sign = Driver.findElement(By.id("txtsign"));
+										act.moveToElement(Sign).build().perform();
+										Sign.clear();
+										Sign.sendKeys("RV");
+										logger.info("Enter signature");
+
+										// --Click on save
+										try {
+											WebElement RTESAve = Driver.findElement(By.id("idiconsave"));
+											act.moveToElement(RTESAve).build().perform();
+											wait.until(ExpectedConditions.elementToBeClickable(RTESAve));
+											act.moveToElement(RTESAve).click().perform();
+											logger.info("Clicked on Accept button");
+
+										} catch (Exception Saveb) {
+											WebElement RTESAve = Driver.findElement(By.id("idiconsave"));
+											act.moveToElement(RTESAve).build().perform();
+											wait.until(ExpectedConditions.elementToBeClickable(RTESAve));
+											js.executeScript("arguments[0].click();", RTESAve);
+											logger.info("Clicked on Accept button");
+
+										}
+										wait.until(ExpectedConditions.invisibilityOfElementLocated(
+												By.xpath("//*[@class=\"ajax-loadernew\"]")));
+									} catch (Exception eee) {
+										logger.info("validation message is not displayed");
+									}
+								} catch (Exception ee) {
+									logger.info("validation message is not displayed");
+								}
+								// --Search the job
+								wait.until(ExpectedConditions.visibilityOfElementLocated(By.id("txtBasicSearchRTE")));
+								Driver.findElement(By.id("txtBasicSearchRTE")).clear();
+								Driver.findElement(By.id("txtBasicSearchRTE")).sendKeys(PUID);
+								RTESearch = Driver.findElement(By.id("btnRTESearch2"));
+								act.moveToElement(RTESearch).build().perform();
+								js.executeScript("arguments[0].click();", RTESearch);
+								logger.info("Click on Search button");
+								wait.until(ExpectedConditions
+										.invisibilityOfElementLocated(By.xpath("//*[@class=\"ajax-loadernew\"]")));
+								try {
+									wait.until(ExpectedConditions
+											.visibilityOfElementLocated(By.className("dx-datagrid-nodata")));
+									NoData = Driver.findElement(By.className("dx-datagrid-nodata"));
+									if (NoData.isDisplayed()) {
+										logger.info("Job is not Delivered");
+										msg.append("Job is not Delivered" + "\n");
+
+									}
+								} catch (Exception eeee) {
+									// --Again click on Record
+									Record = Driver.findElement(By.xpath("//*[@id=\"idRTEList\"]//span/strong"));
+									act.moveToElement(Record).build().perform();
+									js.executeScript("arguments[0].click();", Record);
+									logger.info("Clicked on the record");
+
+									wait.until(ExpectedConditions
+											.invisibilityOfElementLocated(By.xpath("//*[@class=\"ajax-loadernew\"]")));
+									wait.until(ExpectedConditions
+											.visibilityOfElementLocated(By.xpath("//*[@ng-form=\"RouteForm\"]")));
+									Orderstage = Driver.findElement(By.xpath("//h3[contains(@class,'panel-title')]"))
+											.getText();
+									logger.info("Current stage of the order is=" + Orderstage);
+									msg.append("Current stage of the order is=" + Orderstage + "\n");
+
+									if (Orderstage.equalsIgnoreCase("Delivered@Stop 2 of 2")) {
+										logger.info("Job is delivered");
+										// --Close button
+										WebElement close = Driver.findElement(By.id("idiconclose"));
+										act.moveToElement(close).build().perform();
+										js.executeScript("arguments[0].click();", close);
+										logger.info("Clicked on Close button");
+										wait.until(ExpectedConditions.invisibilityOfElementLocated(
+												By.xpath("//*[@class=\"ajax-loadernew\"]")));
+
+									} else {
+										logger.info("Job is not delivered");
+
+									}
+
+								}
 							}
 						}
 					}
@@ -433,7 +557,8 @@ public class RTE_OrderProcess extends BaseInit {
 						logger.info("Clicked on the record");
 						wait.until(ExpectedConditions
 								.invisibilityOfElementLocated(By.xpath("//*[@class=\"ajax-loadernew\"]")));
-						wait.until(ExpectedConditions.visibilityOfElementLocated(By.id("lblRWID")));
+						wait.until(
+								ExpectedConditions.visibilityOfElementLocated(By.xpath("//*[@ng-form=\"RouteForm\"]")));
 
 						Orderstage = Driver.findElement(By.xpath("//h3[contains(@class,'panel-title')]")).getText();
 						logger.info("Current stage of the order is=" + Orderstage);
@@ -562,7 +687,8 @@ public class RTE_OrderProcess extends BaseInit {
 
 							wait.until(ExpectedConditions
 									.invisibilityOfElementLocated(By.xpath("//*[@class=\"ajax-loadernew\"]")));
-							wait.until(ExpectedConditions.visibilityOfElementLocated(By.id("lblRWID")));
+							wait.until(ExpectedConditions
+									.visibilityOfElementLocated(By.xpath("//*[@ng-form=\"RouteForm\"]")));
 							Orderstage = Driver.findElement(By.xpath("//h3[contains(@class,'panel-title')]")).getText();
 							logger.info("Current stage of the order is=" + Orderstage);
 							msg.append("Current stage of the order is=" + Orderstage + "\n");
@@ -584,7 +710,7 @@ public class RTE_OrderProcess extends BaseInit {
 
 						}
 					}
-				} else if (Orderstage.contains("DEL@Stop 2 of 2")) {
+				} else if (Orderstage.contains("Deliver@Stop 2 of 2")) {
 					Orderstage = Driver.findElement(By.xpath("//h3[contains(@class,'panel-title')]")).getText();
 					logger.info("Current stage of the order is=" + Orderstage);
 					msg.append("Current stage of the order is=" + Orderstage + "\n");
@@ -711,7 +837,8 @@ public class RTE_OrderProcess extends BaseInit {
 
 						wait.until(ExpectedConditions
 								.invisibilityOfElementLocated(By.xpath("//*[@class=\"ajax-loadernew\"]")));
-						wait.until(ExpectedConditions.visibilityOfElementLocated(By.id("lblRWID")));
+						wait.until(
+								ExpectedConditions.visibilityOfElementLocated(By.xpath("//*[@ng-form=\"RouteForm\"]")));
 						Orderstage = Driver.findElement(By.xpath("//h3[contains(@class,'panel-title')]")).getText();
 						logger.info("Current stage of the order is=" + Orderstage);
 						msg.append("Current stage of the order is=" + Orderstage + "\n");

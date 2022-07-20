@@ -745,6 +745,7 @@ public class RETURN_OrderProcess extends BaseInit {
 								}
 							} catch (Exception eNoData) {
 								logger.info("Job is moved to Deliver stage successfully");
+								msg.append("Current stage of the order is=" + Orderstage + "\n");
 								getScreenshot(Driver, "RETURN_Deliver_" + PUID);
 
 								WebElement Deliver = Driver.findElement(By.id("lblAddress"));
@@ -753,7 +754,6 @@ public class RETURN_OrderProcess extends BaseInit {
 
 								// --Enter Drop Time
 								ZOneID = Driver.findElement(By.id("lblactdltz")).getText();
-								logger.info("ZoneID of is==" + ZOneID);
 								logger.info("ZoneID of is==" + ZOneID);
 
 								if (ZOneID.equalsIgnoreCase("EDT")) {
@@ -773,24 +773,37 @@ public class RETURN_OrderProcess extends BaseInit {
 								// --Click on Deliver
 								WebElement Del = Driver.findElement(By.id("btnsavedelivery"));
 								act.moveToElement(Del).build().perform();
+								wait.until(ExpectedConditions.elementToBeClickable(Del));
+								act.moveToElement(Del).build().perform();
 								js.executeScript("arguments[0].click();", Del);
 								logger.info("Clicked on Deliver button");
 								wait.until(ExpectedConditions
 										.invisibilityOfElementLocated(By.xpath("//*[@class=\"ajax-loadernew\"]")));
 								try {
+
+									WebElement ErrorMSG = Driver.findElement(By.id("errorid"));
+									js.executeScript("arguments[0].scrollIntoView(true);", ErrorMSG);
+									Thread.sleep(2000);
 									wait.until(ExpectedConditions.visibilityOfElementLocated(By.id("errorid")));
 									WebElement Error = Driver.findElement(By.id("errorid"));
 									if (Error.isDisplayed()) {
 										logger.info("Validation displayed==" + Error.getText());
+
 										// --Signed For By
+										Deliver = Driver.findElement(By.id("lblAddress"));
+										js.executeScript("arguments[0].scrollIntoView();", Deliver);
+										Thread.sleep(2000);
 										WebElement Sign = Driver.findElement(By.id("txtSignature"));
 										act.moveToElement(Sign).build().perform();
+										wait.until(ExpectedConditions.elementToBeClickable(Sign));
 										Sign.clear();
 										Sign.sendKeys("Ravina Prajapati");
 										logger.info("Enter signature");
 
 										// --Click on DELIVER
 										Del = Driver.findElement(By.id("btnsavedelivery"));
+										act.moveToElement(Del).build().perform();
+										wait.until(ExpectedConditions.elementToBeClickable(Del));
 										act.moveToElement(Del).build().perform();
 										js.executeScript("arguments[0].click();", Del);
 										logger.info("Clicked on Deliver button");
@@ -1429,6 +1442,8 @@ public class RETURN_OrderProcess extends BaseInit {
 							// --Click on Deliver
 							WebElement Del = Driver.findElement(By.id("btnsavedelivery"));
 							act.moveToElement(Del).build().perform();
+							wait.until(ExpectedConditions.elementToBeClickable(Del));
+							act.moveToElement(Del).build().perform();
 							js.executeScript("arguments[0].click();", Del);
 							logger.info("Clicked on Deliver button");
 							wait.until(ExpectedConditions
@@ -1447,6 +1462,8 @@ public class RETURN_OrderProcess extends BaseInit {
 
 									// --Click on DELIVER
 									Del = Driver.findElement(By.id("btnsavedelivery"));
+									act.moveToElement(Del).build().perform();
+									wait.until(ExpectedConditions.elementToBeClickable(Del));
 									act.moveToElement(Del).build().perform();
 									js.executeScript("arguments[0].click();", Del);
 									logger.info("Clicked on Deliver button");
@@ -1936,6 +1953,8 @@ public class RETURN_OrderProcess extends BaseInit {
 						// --Click on Deliver
 						WebElement Del = Driver.findElement(By.id("btnsavedelivery"));
 						act.moveToElement(Del).build().perform();
+						wait.until(ExpectedConditions.elementToBeClickable(Del));
+						act.moveToElement(Del).build().perform();
 						js.executeScript("arguments[0].click();", Del);
 						logger.info("Clicked on Deliver button");
 						wait.until(ExpectedConditions
@@ -1954,6 +1973,8 @@ public class RETURN_OrderProcess extends BaseInit {
 
 								// --Click on DELIVER
 								Del = Driver.findElement(By.id("btnsavedelivery"));
+								act.moveToElement(Del).build().perform();
+								wait.until(ExpectedConditions.elementToBeClickable(Del));
 								act.moveToElement(Del).build().perform();
 								js.executeScript("arguments[0].click();", Del);
 								logger.info("Clicked on Deliver button");
@@ -2112,6 +2133,8 @@ public class RETURN_OrderProcess extends BaseInit {
 					// --Click on Deliver
 					WebElement Del = Driver.findElement(By.id("btnsavedelivery"));
 					act.moveToElement(Del).build().perform();
+					wait.until(ExpectedConditions.elementToBeClickable(Del));
+					act.moveToElement(Del).build().perform();
 					js.executeScript("arguments[0].click();", Del);
 					logger.info("Clicked on Deliver button");
 					wait.until(ExpectedConditions
@@ -2130,6 +2153,8 @@ public class RETURN_OrderProcess extends BaseInit {
 
 							// --Click on DELIVER
 							Del = Driver.findElement(By.id("btnsavedelivery"));
+							act.moveToElement(Del).build().perform();
+							wait.until(ExpectedConditions.elementToBeClickable(Del));
 							act.moveToElement(Del).build().perform();
 							js.executeScript("arguments[0].click();", Del);
 							logger.info("Clicked on Deliver button");
@@ -2195,7 +2220,6 @@ public class RETURN_OrderProcess extends BaseInit {
 				// --Enter Drop Time
 				String ZOneID = Driver.findElement(By.id("lblactdltz")).getText();
 				logger.info("ZoneID of is==" + ZOneID);
-				logger.info("ZoneID of is==" + ZOneID);
 
 				if (ZOneID.equalsIgnoreCase("EDT")) {
 					ZOneID = "America/New_York";
@@ -2214,16 +2238,25 @@ public class RETURN_OrderProcess extends BaseInit {
 				// --Click on Deliver
 				WebElement Del = Driver.findElement(By.id("btnsavedelivery"));
 				act.moveToElement(Del).build().perform();
+				wait.until(ExpectedConditions.elementToBeClickable(Del));
+				act.moveToElement(Del).build().perform();
 				js.executeScript("arguments[0].click();", Del);
 				logger.info("Clicked on Deliver button");
 				wait.until(ExpectedConditions.invisibilityOfElementLocated(By.xpath("//*[@class=\"ajax-loadernew\"]")));
 				try {
+
+					WebElement ErrorMSG = Driver.findElement(By.id("errorid"));
+					js.executeScript("arguments[0].scrollIntoView(true);", ErrorMSG);
+					Thread.sleep(2000);
 					wait.until(ExpectedConditions.visibilityOfElementLocated(By.id("errorid")));
 					WebElement Error = Driver.findElement(By.id("errorid"));
 					if (Error.isDisplayed()) {
 						logger.info("Validation displayed==" + Error.getText());
+
 						// --Signed For By
 						WebElement Sign = Driver.findElement(By.id("txtSignature"));
+						js.executeScript("arguments[0].scrollIntoView(true);", Sign);
+						Thread.sleep(2000);
 						act.moveToElement(Sign).build().perform();
 						Sign.clear();
 						Sign.sendKeys("Ravina Prajapati");
@@ -2231,6 +2264,8 @@ public class RETURN_OrderProcess extends BaseInit {
 
 						// --Click on DELIVER
 						Del = Driver.findElement(By.id("btnsavedelivery"));
+						act.moveToElement(Del).build().perform();
+						wait.until(ExpectedConditions.elementToBeClickable(Del));
 						act.moveToElement(Del).build().perform();
 						js.executeScript("arguments[0].click();", Del);
 						logger.info("Clicked on Deliver button");
